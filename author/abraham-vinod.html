@@ -1,202 +1,191 @@
 <!DOCTYPE html>
-<html lang="english">
+<html lang="english"
+>
 <head>
-        <meta charset="utf-8" />
-        <title>Notes on the margin - Abraham Vinod</title>
-        <link rel="stylesheet" href="/theme/css/main.css" />
+    <title>Articles by Abraham Vinod - Notes on the margin</title>
+    <!-- Using the latest rendering mode for IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <!--[if IE]>
-            <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-        <![endif]-->
+
+
+
+        <meta name="author" content="Abraham" />
+
+    <!-- Open Graph tags -->
+        <meta property="og:site_name" content="Notes on the margin" />
+        <meta property="og:type" content="website"/>
+        <meta property="og:title" content="Notes on the margin"/>
+        <meta property="og:url" content=""/>
+        <meta property="og:description" content="Notes on the margin"/>
+
+
+    <!-- Bootstrap -->
+        <link rel="stylesheet" href="/theme/css/bootstrap.cosmo.min.css" type="text/css"/>
+    <link href="/theme/css/font-awesome.min.css" rel="stylesheet">
+
+    <link href="/theme/css/pygments/monokai.css" rel="stylesheet">
+    <link rel="stylesheet" href="/theme/css/style.css" type="text/css"/>
+
+
 </head>
+<body>
 
-<body id="index" class="home">
-        <header id="banner" class="body">
-                <h1><a href="/">Notes on the margin </a></h1>
-                <nav><ul>
-                    <li><a href="/category/how-to.html">How-To</a></li>
-                    <li><a href="/category/tips.html">Tips</a></li>
-                </ul></nav>
-        </header><!-- /#banner -->
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="/" class="navbar-brand">
+Notes on the margin            </a>
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+                        <li >
+                            <a href="/category/how-to.html">How-to</a>
+                        </li>
+                        <li >
+                            <a href="/category/tips.html">Tips</a>
+                        </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="/archives.html"><i class="fa fa-th-list"></i><span class="icon-label">Archives</span></a></li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+</div> <!-- /.navbar -->
 
-            <aside id="featured" class="body">
-                <article>
-                    <h1 class="entry-title"><a href="/setting-up-this-blog-using-the-pelicancondagithub-pages-framework.html">Setting up this blog using the Pelican+Conda+GitHub Pages framework</a></h1>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-9">
+
+            <article>
+                <h2><a href="/setting-up-this-blog-using-the-pelicancondagithub-pages-framework.html">Setting up this blog using the Pelican+Conda+GitHub Pages framework</a></h2>
+                    <div class="well well-sm">
 <footer class="post-info">
-        <abbr class="published" title="2016-12-23T03:42:00-07:00">
-                Published: Fri 23 December 2016
-        </abbr>
+    <span class="label label-default">Date</span>
+    <span class="published">
+        <i class="fa fa-calendar"></i><time datetime="2016-12-23T03:42:00-07:00"> Fri 23 December 2016</time>
+    </span>
 
-        <address class="vcard author">
-                By                         <a class="url fn" href="/author/abraham-vinod.html">Abraham Vinod</a>
-        </address>
-<p>In <a href="/category/how-to.html">How-To</a>.</p>
-<p>tags: <a href="/tag/pelican.html">Pelican</a> </p>
-</footer><!-- /.post-info --><h1>Prelude</h1>
-<p>I have been postponing my foray into blogging for some time now. Well, this
-holiday season I decided to present myself with the gift of blogging. I had done
-a bit of blogging using <a href="https://www.dokuwiki.org/">DokuWiki</a> back when I was at
-IIT Madras, but my site was hacked due to my neglience of the security settings.
-To make things simple, I am choosing a static website for blogging, and I will
-stick with <a href="https://blog.getpelican.com/">Pelican</a> due to my comfort level with
-Python. </p>
-<p>On reading about the blogs, the norm appears to be to replace the customary
-'Hello World!' post with a post on how one sets up the blog using Pelican. The
-journey definitely is not straight-forward as one would like to hope for.</p>
-<h1>How did I get this blog setup?</h1>
-<h2>Setting up Conda</h2>
-<p>I am working on Windows 10 OS, and I will by using
-<a href="https://git-for-windows.github.io/">msysgit</a><sup id="fnref-1"><a class="footnote-ref" href="#fn-1">1</a></sup> to emulate the Unix terminal
-in my PC. I had already installed conda in Windows, and this is easily
-accessible from msysgit as well. I used <a href="https://github.com/conda/conda">conda</a>
-to create a basic python environment for Pelican.</p>
-<div class="highlight"><pre><span></span>$ conda create -n blog <span class="nv">python</span><span class="o">=</span>3
-</pre></div>
+        <span class="label label-default">Category</span>
+        <a href="/category/how-to.html">How-To</a>
 
 
-<h2>Setting up Pelican</h2>
-<p>I forked the bleeding edge (at the time of writing) of Pelican. Note that
-pelican-quickstart does not work as is with this copy. Unzip the <a href="https://github.com/abyvinod/pelican/archive/master.zip">git
-repository</a> into a
-directory of your choice, say <em>PelicanBase</em>. </p>
-<div class="highlight"><pre><span></span>$ <span class="nb">source</span> activate blog                  <span class="c1"># Activate the conda environment</span>
-$ <span class="nb">cd</span> PelicanBase
-$ python setup.py install               <span class="c1"># Install pelican</span>
-</pre></div>
-
-
-<h2>Setting up the blog</h2>
-<p>At this point, we are now ready to start laying the foundation for the blog.</p>
-<div class="highlight"><pre><span></span>$ mkdir path/to/blog
-$ <span class="nb">cd</span> path/to/blog
-$ pelican-quickstart                    <span class="c1"># Should have worked, but will fail</span>
-</pre></div>
-
-
-<p>You will have to replace the == in the line number given in the error message
-with &gt;=. See <a href="https://github.com/getpelican/pelican/issues/2043#issuecomment-268625132">this
-conversation</a>
-for more details. If all is good, then you will posed with a series of questions
-    that initializes your blog.</p>
-<h2>Rendering the blog</h2>
-<p>I like to automate things. Fabric is a great tool that works with Pelican to
-automate publishing.</p>
-<div class="highlight"><pre><span></span>$ fab regenerate <span class="p">&amp;</span> fab serve <span class="p">&amp;</span>          <span class="c1"># Serves the blog at localhost:8000</span>
-</pre></div>
-
-
-<h2>Creating the first post</h2>
-<p>Create <em>firstPost.md</em> containing a title and date<sup id="fnref-2"><a class="footnote-ref" href="#fn-2">2</a></sup>.</p>
-<div class="highlight"><pre><span></span>$ mkdir content
-$ <span class="nb">echo</span> <span class="s1">&#39;Title: Test content</span>
-<span class="s1">&gt; Date: 2016&#39;</span> &gt; content/firstPost.md      <span class="c1"># The first &gt; is autogenerated when ENTER is pressed.</span>
-</pre></div>
-
-
-<p>The automation renders the new blog when the webpage is refreshed.</p>
-<h2>Updating github pages</h2>
-<p>This problem was solved by going through <a href="http://ntanjerome.org/blog/how-to-setup-github-user-page-with-pelican/">this Hello World
-post</a>.
-Thanks a lot! I had to also follow the advice given
-<a href="https://github.com/getnikola/nikola/issues/2223#issuecomment-174193643">here</a>
-and installed ghp-import via </p>
-<div class="highlight"><pre><span></span>pip install --upgrade git+https://github.com/ionelmc/python-ghp-import
-</pre></div>
-
-
-<p>as opposed to the standard Conda installation. </p>
-<p>To summarize <a href="http://ntanjerome.org/blog/how-to-setup-github-user-page-with-pelican/">that
-post</a>,</p>
-<ol>
-<li>Ensure that you are on the 'source' branch</li>
-<li>Add/commit everything except the <em>output</em> folder </li>
-<li>Create a new branch 'gh-pages'</li>
-<li>Run the following bash script to automate the <em>updation of GitHub pages</em></li>
-</ol>
-<div class="highlight"><pre><span></span><span class="n">commitMSG</span><span class="o">=</span><span class="s2">&quot;$1&quot;</span>
-<span class="n">echo</span> <span class="err">$</span><span class="n">commitMSG</span>
-<span class="n">fab</span> <span class="n">build</span>
-<span class="n">git</span> <span class="n">commit</span> <span class="o">-</span><span class="n">am</span> <span class="s2">&quot;$commitMSG&quot;</span>
-<span class="n">ghp</span><span class="o">-</span><span class="kn">import</span> <span class="nn">output</span>
-<span class="n">git</span> <span class="n">checkout</span> <span class="n">master</span>
-<span class="n">git</span> <span class="n">merge</span> <span class="n">gh</span><span class="o">-</span><span class="n">pages</span> <span class="o">-</span><span class="n">m</span> <span class="s2">&quot;$commitMSG&quot;</span>
-<span class="n">git</span> <span class="n">push</span> <span class="o">-</span><span class="n">u</span> <span class="o">--</span><span class="nb">all</span>
-<span class="n">git</span> <span class="n">checkout</span> <span class="n">source</span>
-</pre></div>
-
-
-<p>Future updates at Github with the local copy is now easy.</p>
-<div class="highlight"><pre><span></span>source bp &quot;Commit Message&quot;
-</pre></div>
-
-
-<div class="footnote">
-<hr>
-<ol>
-<li id="fn-1">
-<p>$ sign denotes bash prompt.&#160;<a class="footnote-backref" href="#fnref-1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
-</li>
-<li id="fn-2">
-<p>Title and date is the minimum requirement for a blog post.&#160;<a class="footnote-backref" href="#fnref-2" title="Jump back to footnote 2 in the text">&#8617;</a></p>
-</li>
-</ol>
-</div>                </article>
-            </aside><!-- /#featured -->
-                <section id="content" class="body">
-                    <h1>Other articles</h1>
-                    <hr />
-                    <ol id="posts-list" class="hfeed">
-
-            <li><article class="hentry">
-                <header>
-                    <h1><a href="/general-tips-regarding-pelican.html" rel="bookmark"
-                           title="Permalink to General tips regarding Pelican">General tips regarding Pelican</a></h1>
-                </header>
-
-                <div class="entry-content">
+<span class="label label-default">Tags</span>
+	<a href="/tag/pelican.html">Pelican</a>
+    
+</footer><!-- /.post-info -->                    </div>
+                <div class="summary"><p>Customary hello world post with Pelican</p>
+                    <a class="btn btn-default btn-xs" href="/setting-up-this-blog-using-the-pelicancondagithub-pages-framework.html">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
+                <h2><a href="/general-tips-regarding-pelican.html">General tips regarding Pelican</a></h2>
+                    <div class="well well-sm">
 <footer class="post-info">
-        <abbr class="published" title="2016-12-23T00:00:00-07:00">
-                Published: Fri 23 December 2016
-        </abbr>
+    <span class="label label-default">Date</span>
+    <span class="published">
+        <i class="fa fa-calendar"></i><time datetime="2016-12-23T00:00:00-07:00"> Fri 23 December 2016</time>
+    </span>
 
-        <address class="vcard author">
-                By                         <a class="url fn" href="/author/abraham-vinod.html">Abraham Vinod</a>
-        </address>
-<p>In <a href="/category/tips.html">Tips</a>.</p>
-<p>tags: <a href="/tag/pelican.html">Pelican</a> </p>
-</footer><!-- /.post-info -->                <p>Some crucial tips</p>
-                <a class="readmore" href="/general-tips-regarding-pelican.html">read more</a>
-                </div><!-- /.entry-content -->
-            </article></li>
-                </ol><!-- /#posts-list -->
-                </section><!-- /#content -->
-        <section id="extras" class="body">
-                <div class="blogroll">
-                        <h2>links</h2>
-                        <ul>
-                            <li><a href="http://getpelican.com/">Pelican</a></li>
-                            <li><a href="http://python.org/">Python.org</a></li>
-                            <li><a href="http://jinja.pocoo.org/">Jinja2</a></li>
-                            <li><a href="#">You can modify those links in your config file</a></li>
-                        </ul>
-                </div><!-- /.blogroll -->
-                <div class="social">
-                        <h2>social</h2>
-                        <ul>
+        <span class="label label-default">Category</span>
+        <a href="/category/tips.html">Tips</a>
 
-                            <li><a href="#">You can add links in your config file</a></li>
-                            <li><a href="#">Another social link</a></li>
-                        </ul>
-                </div><!-- /.social -->
-        </section><!-- /#extras -->
 
-        <footer id="contentinfo" class="body">
-                <address id="about" class="vcard body">
-                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
-                </address><!-- /#about -->
+<span class="label label-default">Tags</span>
+	<a href="/tag/pelican.html">Pelican</a>
+    
+</footer><!-- /.post-info -->                    </div>
+                <div class="summary"><p>Some crucial tips</p>
+                    <a class="btn btn-default btn-xs" href="/general-tips-regarding-pelican.html">more ...</a>
+                </div>
+            </article>
+            <hr/>
 
-                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
-        </footer><!-- /#contentinfo -->
+        </div>
+        <div class="col-sm-3" id="sidebar">
+            <aside>
+<div id="aboutme">
+        <p>
+            <img width="100%" class="img-thumbnail" src="/images/myphoto.png"/>
+        </p>
+    <p>
+        <strong>About Abraham</strong><br/>
+        I'm a PhD student studying at the University of New Mexico. I am working on application of optimization and stochastic processes in dynamical systems. I also enjoy programming, especially coding in Python.
+    </p>
+</div>
+<section class="well well-sm">
+    <ul class="list-group list-group-flush">
+            <li class="list-group-item"><h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Social</span></h4>
+              <ul class="list-group" id="social">
+                <li class="list-group-item"><a href="http://bitbucket.org/abyvinod"><i class="fa fa-bitbucket-square fa-lg"></i> BitBucket</a></li>
+                <li class="list-group-item"><a href="http://linkedin.com/in/abrahampvinod"><i class="fa fa-linkedin-square fa-lg"></i> LinkedIn</a></li>
+                <li class="list-group-item"><a href="http://unm.edu/~abyvinod"><i class="fa fa-academic-webpage-square fa-lg"></i> Academic Webpage</a></li>
+              </ul>
+            </li>
+
+            <li class="list-group-item"><h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Recent Posts</span></h4>
+                <ul class="list-group" id="recentposts">
+                    <li class="list-group-item">
+                        <a href="/setting-up-this-blog-using-the-pelicancondagithub-pages-framework.html">
+                            Setting up this blog using the Pelican+Conda+GitHub Pages framework
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="/general-tips-regarding-pelican.html">
+                            General tips regarding Pelican
+                        </a>
+                    </li>
+                </ul>
+            </li>
+
+
+            <li class="list-group-item"><a href="/"><h4><i class="fa fa-tags fa-lg"></i><span class="icon-label">Tags</span></h4></a>
+                <ul class="list-group " id="tags">
+                </ul>
+            </li>
+    <li class="list-group-item"><h4><i class="fa fa-external-link-square fa-lg"></i><span class="icon-label">Links</span></h4>
+      <ul class="list-group" id="links">
+        <li class="list-group-item">
+            <a href="http://what-if.xkcd.com/" target="_blank">
+                What If?
+            </a>
+        </li>
+      </ul>
+    </li>
+    </ul>
+</section>
+            </aside>
+        </div>
+    </div>
+</div>
+<footer>
+   <div class="container">
+      <hr>
+      <div class="row">
+         <div class="col-xs-10">&copy; 2016 Abraham
+            &middot; Powered by <a href="https://github.com/DandyDev/pelican-bootstrap3" target="_blank">pelican-bootstrap3</a>,
+            <a href="http://docs.getpelican.com/" target="_blank">Pelican</a>,
+            <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>         </div>
+         <div class="col-xs-2"><p class="pull-right"><i class="fa fa-arrow-up"></i> <a href="#">Back to top</a></p></div>
+      </div>
+   </div>
+</footer>
+<script src="/theme/js/jquery.min.js"></script>
+
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="/theme/js/bootstrap.min.js"></script>
+
+<!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+<script src="/theme/js/respond.min.js"></script>
 
 </body>
 </html>
