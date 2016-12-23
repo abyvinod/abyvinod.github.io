@@ -1,4 +1,4 @@
-Title: Setting up this blog using the Pelican+Conda+GitHub Pages framework
+Title: Setting up this blog using the Pelican+Conda+GitHub Pages
 date: 2016-12-23 03:42
 tags: Pelican
 category: How-To
