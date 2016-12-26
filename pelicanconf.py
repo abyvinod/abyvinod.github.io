@@ -64,15 +64,15 @@ DEFAULT_PAGINATION = 10
 # # Generate archive
 # YEAR_ARCHIVE_SAVE_AS = 'posts/{date:%Y}/index.html'
 
-# ################## Add custom css #########################
+################## Add custom css #########################
 # CUSTOM_CSS = 'static/custom.css'
 # STATIC_PATHS = ['images', 'extra/custom.css', 'extra/href_scroll.js', 'extra/jquery.zoom.js']
 # EXTRA_PATH_METADATA = {'extra/custom.css':{'path':'static/custom.css'},
-                    # 'extra/href_scroll.js':{'path':'theme/js/href_scroll.js'},
-                    # 'extra/jquery.zoom.js':{'path':'theme/js/jquery.zoom.js'},
-                       # }
+#                     'extra/href_scroll.js':{'path':'theme/js/href_scroll.js'},
+#                     'extra/jquery.zoom.js':{'path':'theme/js/jquery.zoom.js'},
+#                        }
 # for k in EXTRA_PATH_METADATA.keys(): # Fix backslash paths to resources if on Windows
-    # EXTRA_PATH_METADATA[system_path(k)] = EXTRA_PATH_METADATA.pop(k)
+#     EXTRA_PATH_METADATA[system_path(k)] = EXTRA_PATH_METADATA.pop(k)
 
 
 ###################### Exterior Services ############################
@@ -90,7 +90,7 @@ DEFAULT_PAGINATION = 10
 THEME = 'pelican-bootstrap3'#'html5-dopetrope'
 
 # Pelican Theme-Specific Variables
-BOOTSTRAP_THEME = 'cosmo'#'sandstone'#'lumen'
+BOOTSTRAP_THEME = 'sandstone'#'lumen' 'cosmo'
 SHOW_ARTICLE_CATEGORY = True
 
 #SITELOGO = 'images/logo.png'
