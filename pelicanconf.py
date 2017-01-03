@@ -50,9 +50,8 @@ SOCIAL = (('BitBucket', 'http://bitbucket.org/abyvinod'),
 
 DEFAULT_PAGINATION = 10
 
-# Uncomment following line if you want document-relative URLs when developing
-#RELATIVE_URLS = True
-
+# Do not generate these files
+IGNORE_FILES = ['toDo.md']
 # ARTICLE_URL = '{category}/{slug}/'
 # ARTICLE_SAVE_AS = '{category}/{slug}/index.html'
 # PAGE_URL = '{slug}.html'
