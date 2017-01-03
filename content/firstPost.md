@@ -33,7 +33,7 @@ in my PC. I had already installed conda in Windows, and this is easily
 accessible from msysgit as well. I used [conda](https://github.com/conda/conda)
 to create a basic python environment for Pelican.   
 ~~~
-$ conda create -n blog python=3
+$ conda create -n blog python=2
 ~~~
 Note that pelican-quickstart does not work as is
 with this copy. You will have to fork the bleeding edge (at the time of
@@ -44,6 +44,7 @@ directory of your choice, say *PelicanBase*.
 $ source activate blog                  # Activate the conda environment
 $ cd PelicanBase
 $ python setup.py install               # Install pelican
+$ conda install markdown                # Install markdown
 ~~~
 This installs pelican and fab.
 
@@ -65,7 +66,9 @@ for more details. If all is good, then you will posed with a series of questions
 I like to automate things. Fabric is a great tool that works with Pelican to
 automate publishing.
 ~~~
-$ fab regenerate & fab serve &          # Serves the blog at localhost:8000
+$ conda install fabric                  # Install fabric
+$ fab build                             # Builds the blog
+$ fab regenerate & fab serve &          # Serves the blog at localhost:8000 while freeing the terminal
 ~~~
     
 ## Creating the first post
