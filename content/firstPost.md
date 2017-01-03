@@ -108,6 +108,7 @@ git commit -am "$commitMSG"
 ghp-import output
 git checkout master
 git merge gh-pages -m "$commitMSG"
+git pull
 git push -u --all
 git checkout source
 ```
