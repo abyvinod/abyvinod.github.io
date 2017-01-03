@@ -108,27 +108,28 @@ especially thank the "Hello World" posts from Mr. Hartley's
 <a href="http://algorithmshop.com/20131212-starting-a-blog.html/">blog</a>, and Mr.
 Jerome's <a href="http://ntanjerome.org/blog/how-to-setup-github-user-page-with-pelican/">blog</a>.</p>
 <h1>How did I get my blog setup?</h1>
-<h2>Setting up Conda</h2>
+<h2>Setting up Conda and Pelican</h2>
 <p>I am working on Windows 10 OS, and I will by using
 <a href="https://git-for-windows.github.io/">msysgit</a><sup id="fnref-1"><a class="footnote-ref" href="#fn-1">1</a></sup> to emulate the Unix terminal
 in my PC. I had already installed conda in Windows, and this is easily
 accessible from msysgit as well. I used <a href="https://github.com/conda/conda">conda</a>
-to create a basic python environment for Pelican.</p>
+to create a basic python environment for Pelican.   </p>
 <div class="highlight"><pre><span></span>$ conda create -n blog <span class="nv">python</span><span class="o">=</span>3
 </pre></div>
 
 
-<h2>Setting up Pelican</h2>
-<p>I forked the bleeding edge (at the time of writing) of Pelican. Note that
-pelican-quickstart does not work as is with this copy. Unzip the <a href="https://github.com/abyvinod/pelican/archive/master.zip">git
+<p>Note that pelican-quickstart does not work as is
+with this copy. You will have to fork the bleeding edge (at the time of
+writing) of Pelican and not using the conda's default Pelican.  Unzip the <a href="https://github.com/abyvinod/pelican/archive/master.zip">git
 repository</a> into a
-directory of your choice, say <em>PelicanBase</em>. </p>
+directory of your choice, say <em>PelicanBase</em>.</p>
 <div class="highlight"><pre><span></span>$ <span class="nb">source</span> activate blog                  <span class="c1"># Activate the conda environment</span>
 $ <span class="nb">cd</span> PelicanBase
 $ python setup.py install               <span class="c1"># Install pelican</span>
 </pre></div>
 
 
+<p>This installs pelican and fab.</p>
 <h2>Setting up the blog</h2>
 <p>At this point, we are now ready to start laying the foundation for the blog.</p>
 <div class="highlight"><pre><span></span>$ mkdir path/to/blog
