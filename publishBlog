@@ -1,0 +1,13 @@
+source activate blog
+commitMSG="$1"
+echo $commitMSG
+fab build
+git commit -am "$commitMSG"
+git pull
+git push
+ghp-import output
+git checkout master
+git merge gh-pages -m "$commitMSG"
+git pull
+git push
+git checkout source
