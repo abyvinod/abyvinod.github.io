@@ -65,7 +65,8 @@ IGNORE_FILES = ['toDo.md']
 
 ################## Add custom css #########################
 # CUSTOM_CSS = 'static/custom.css'
-# STATIC_PATHS = ['images', 'extra/custom.css', 'extra/href_scroll.js', 'extra/jquery.zoom.js']
+STATIC_PATHS = ['images','stuff']
+#'extra/custom.css', 'extra/href_scroll.js', 'extra/jquery.zoom.js']
 # EXTRA_PATH_METADATA = {'extra/custom.css':{'path':'static/custom.css'},
 #                     'extra/href_scroll.js':{'path':'theme/js/href_scroll.js'},
 #                     'extra/jquery.zoom.js':{'path':'theme/js/jquery.zoom.js'},

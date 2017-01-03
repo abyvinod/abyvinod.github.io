@@ -25,27 +25,27 @@ Jerome's [blog](http://ntanjerome.org/blog/how-to-setup-github-user-page-with-pe
 
 # How did I get my blog setup?
 
-## Setting up Conda
+## Setting up Conda and Pelican
 
 I am working on Windows 10 OS, and I will by using
 [msysgit](https://git-for-windows.github.io/)[^1] to emulate the Unix terminal
 in my PC. I had already installed conda in Windows, and this is easily
 accessible from msysgit as well. I used [conda](https://github.com/conda/conda)
-to create a basic python environment for Pelican.
+to create a basic python environment for Pelican.   
 ~~~
 $ conda create -n blog python=3
 ~~~
-
-## Setting up Pelican
-I forked the bleeding edge (at the time of writing) of Pelican. Note that
-pelican-quickstart does not work as is with this copy. Unzip the [git
+Note that pelican-quickstart does not work as is
+with this copy. You will have to fork the bleeding edge (at the time of
+writing) of Pelican and not using the conda's default Pelican.  Unzip the [git
 repository](https://github.com/abyvinod/pelican/archive/master.zip) into a
-directory of your choice, say *PelicanBase*. 
+directory of your choice, say *PelicanBase*.
 ~~~
 $ source activate blog                  # Activate the conda environment
 $ cd PelicanBase
 $ python setup.py install               # Install pelican
 ~~~
+This installs pelican and fab.
 
 ## Setting up the blog
 At this point, we are now ready to start laying the foundation for the blog.
@@ -112,7 +112,6 @@ Future updates at Github with the local copy is now easy.
 ~~~
 source bp "Commit Message"
 ~~~
-
 
 [^1]: $ sign denotes bash prompt.
 [^2]: Title and date is the minimum requirement for a blog post.
