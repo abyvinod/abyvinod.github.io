@@ -1,4 +1,5 @@
 source activate blog
+git checkout source
 git pull
 commitMSG="$1"
 echo $commitMSG
