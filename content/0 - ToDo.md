@@ -17,7 +17,6 @@ Status: draft
 + Rendering on a mobile and an ipad
 + [Search capabilities](http://moparx.com/2014/04/adding-search-capabilities-within-your-pelican-powered-site-using-tipue-search/)
 + Useful plugins --- Discus
-+ http://www.stevenmaude.co.uk/posts/hiding-draft-articles-in-pelican
 
 # Done
 
