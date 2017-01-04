@@ -155,10 +155,12 @@ Include in your `pelicanconf.py`, the following lines
 # Private sandbox
 IGNORE_FILES = ['0PRIVATE*']  # Pelican does not generate html pages for md files starting with 0Private
 ~~~
-Another option is to use `Status: draft` in the markdown article header to ask
-Pelican to put the generated htmls in a separate folder `drafts/`. Remember to
-add this to `.gitignore` of the master branch to ensure it doesn't get pushed
-to the outside world.
+Another
+[option](http://www.stevenmaude.co.uk/posts/hiding-draft-articles-in-pelican)is
+to use `Status: draft` in the markdown article header to ask Pelican to put the
+generated htmls in a separate folder `drafts/`. Remember to add this to
+`.gitignore` of the master branch to ensure it doesn't get pushed to the
+outside world.
 
 ### Pelican-Bootstrap3
 
