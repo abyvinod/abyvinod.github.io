@@ -4,15 +4,6 @@
 from __future__ import unicode_literals
 import platform
 
-def is_windows():
-    if platform.system() == 'Windows': return True
-    else: return False
-
-def system_path(path):
-    """Return path with forward or backwards slashes as necessary based on OS"""
-    if is_windows(): return path.replace('/', '\\')
-    else: return path.replace('\\', '/')
-
 ########################### General Settings ###################################
 
 AUTHOR = 'Abraham'
@@ -32,28 +23,29 @@ USE_FOLDER_AS_CATEGORY = True
 DEFAULT_DATE_FORMAT = '%a %d %B %Y'
 DEFAULT_DATE = 'fs'
 
-# Feed generation is usually not desired when developing
+# Feed generation
 FEED_ALL_RSS = 'feeds/all.rss'
 FEED_ALL_ATOM = None
 CATEGORY_FEED_ATOM = None #'feeds/%s.atom.xml'
 TRANSLATION_FEED_ATOM = None
 
-# Blogroll
-LINKS = (
-        ('What If?', 'http://what-if.xkcd.com/'),
-         )
+## Blogroll
+#LINKS = (
+#        ('What If?', 'http://what-if.xkcd.com/'),
+#         )
+LINKS =()
 
 # Social widget
-SOCIAL = (('BitBucket', 'http://bitbucket.org/abyvinod'),
+SOCIAL = (('RSS', 'http://abyvinod.github.io/feeds/all.rss'),
+        ('BitBucket', 'http://bitbucket.org/abyvinod'),
          ('LinkedIn', 'http://linkedin.com/in/abrahampvinod'),
           ('Academic Webpage', 'http://unm.edu/~abyvinod'),
           )
-
 DEFAULT_PAGINATION = 10
 
-# Do not generate these files
-## Name files with Private
-IGNORE_FILES = ['0PRIVATE*']
+# Do not generate the files starting with 0Private
+#IGNORE_FILES = ['0PRIVATE*']
+IGNORE_FILES = ['']
 
 # ARTICLE_URL = '{category}/{slug}/'
 # ARTICLE_SAVE_AS = '{category}/{slug}/index.html'
@@ -69,6 +61,16 @@ IGNORE_FILES = ['0PRIVATE*']
 ################## Add custom css #########################
 # CUSTOM_CSS = 'static/custom.css'
 STATIC_PATHS = ['images','stuff']
+
+def is_windows():
+    if platform.system() == 'Windows': return True
+    else: return False
+
+def system_path(path):
+    """Return path with forward or backwards slashes as necessary based on OS"""
+    if is_windows(): return path.replace('/', '\\')
+    else: return path.replace('\\', '/')
+
 #'extra/custom.css', 'extra/href_scroll.js', 'extra/jquery.zoom.js']
 # EXTRA_PATH_METADATA = {'extra/custom.css':{'path':'static/custom.css'},
 #                     'extra/href_scroll.js':{'path':'theme/js/href_scroll.js'},
@@ -90,7 +92,7 @@ STATIC_PATHS = ['images','stuff']
 
 
 ####################### Theme-Specific Settings #########################
-THEME = 'pelican-bootstrap3'#'html5-dopetrope'
+THEME = 'pelican-bootstrap3'        #'html5-dopetrope'
 
 # Pelican Theme-Specific Variables
 BOOTSTRAP_THEME = 'sandstone'#'lumen' 'cosmo'
@@ -103,22 +105,59 @@ SHOW_ARTICLE_CATEGORY = True
 ABOUT_ME = "I'm a PhD student studying at the University of New Mexico. I am working on application of optimization and stochastic processes in dynamical systems. I also enjoy programming, especially coding in Python."
 
 AVATAR = "/images/myphoto.png"
-
 #BANNER = "/images/banner.png"
 
 DISPLAY_ARTICLE_INFO_ON_INDEX = True
-DISPLAY_RECENT_POSTS_ON_SIDEBAR = True
+DISPLAY_TAGS_ON_SIDEBAR = True
 SHOW_ARTICLE_CATEGORY = True
 TAG_CLOUD_MAX_ITEMS = 8
+DISPLAY_RECENT_POSTS_ON_SIDEBAR = False
 
 PYGMENTS_STYLE = 'monokai'
 
 ############################ Plugins ######################################
 PLUGIN_PATHS = ['pelican-plugins']
-PLUGINS = ['simple_footnotes', 'extract_toc', 'feed_summary']
-FEED_USE_SUMMARY = True
-SUMMARY_MAX_LENGTH = 100
 
-MD_EXTENSIONS = ['toc', 'fenced_code', 'codehilite(css_class=highlight)', 'extra']
+PLUGINS = ['pelican-toc']#['extract_toc',"tag_cloud","simple_footnotes", "feed_summary"]
+TOC = {
+    'TOC_HEADERS' : '^h[1-6]',  # What headers should be included in the generated toc
+                                # Expected format is a regular expression
+
+    'TOC_RUN'     : 'true'      # Default value for toc generation, if it does not evaluate
+                                # to 'true' no toc will be generated
+}
+#PLUGINS=['sitemap']
+#
+#SITEMAP = {
+#    'format': 'xml',
+#    'priorities': {
+#        'articles': 0.5,
+#        'indexes': 0.5,
+#        'pages': 0.5
+#    },
+#    'changefreqs': {
+#        'articles': 'monthly',
+#        'indexes': 'daily',
+#        'pages': 'monthly'
+#    }
+#}
+#FEED_USE_SUMMARY = True
+#SUMMARY_MAX_LENGTH = 100
+
+## Not working
+#MD_EXTENSIONS = ['codehilite','extra','smarty', 'toc']
+#MD_EXTENSIONS = (['toc', 'fenced_code', 'codehilite', 'extra'])
+#MD_EXTENSIONS = ['toc','codehilite','extra']
 #MD_EXTENSIONS = ['codehilite(css_class=highlight)', 'extra']
+#MATH_JAX = {'color':'blue'}
+#MARKDOWN = {
+#    'extension_configs': {
+#        'markdown.extensions.toc': {},
+#        #'markdown.extensions.fenced_code': {},
+#        'markdown.extensions.codehilite': {'css_class': 'highlight'},
+#        'markdown.extensions.extra': {},
+#        #'markdown.extensions.meta': {},
+#    },
+#    'output_format': 'html5',
+#}
 

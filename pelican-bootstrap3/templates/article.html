@@ -83,6 +83,14 @@
                         {% include "includes/article_info.html" %}
                     </div>
                 </div>
+                {% if article.toc %}
+                    <div style="border-style: solid;background:lightgrey">
+                        <h3 style="text-align:center"> Table of contents</h3>
+                            <nav class="toc">
+                            {{ article.toc }}
+                            </nav>
+                    </div>
+                {% endif %}
                 {{ article.content }}
             </div>
             <!-- /.entry-content -->
