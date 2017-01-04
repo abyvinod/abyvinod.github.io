@@ -117,7 +117,5 @@ Future updates at Github with the local copy is now easy.
 source bp "Commit Message"
 ~~~
 
-TestMe1
-
 [^1]: $ sign denotes bash prompt.
 [^2]: Title and date is the minimum requirement for a blog post.
