@@ -47,6 +47,9 @@ Notes on the margin            </a>
                             <a href="/category/how-to.html">How-to</a>
                         </li>
                         <li >
+                            <a href="/category/private.html">Private</a>
+                        </li>
+                        <li >
                             <a href="/category/tips.html">Tips</a>
                         </li>
             </ul>
@@ -108,25 +111,33 @@ especially thank the "Hello World" posts from Mr. Hartley's
 <a href="http://algorithmshop.com/20131212-starting-a-blog.html/">blog</a>, and Mr.
 Jerome's <a href="http://ntanjerome.org/blog/how-to-setup-github-user-page-with-pelican/">blog</a>.</p>
 <h1>How did I get my blog setup?</h1>
-<h2>Setting up Conda and Pelican</h2>
-<p>I am working on Windows 10 OS, and I will by using
-<a href="https://git-for-windows.github.io/">msysgit</a><sup id="fnref-1"><a class="footnote-ref" href="#fn-1">1</a></sup> to emulate the Unix terminal
-in my PC. I had already installed conda in Windows, and this is easily
-accessible from msysgit as well. I used <a href="https://github.com/conda/conda">conda</a>
-to create a basic python environment for Pelican.   </p>
-<div class="highlight"><pre><span></span>$ conda create -n blog <span class="nv">python</span><span class="o">=</span>2
+<h2>Setting up Conda and Pelican in Windows</h2>
+<p>Requirements:</p>
+<ol>
+<li><a href="https://git-for-windows.github.io/">msysgit</a><sup id="fnref-1"><a class="footnote-ref" href="#fn-1">1</a></sup> to emulate the Unix terminal in my PC. </li>
+<li><a href="https://github.com/conda/conda">conda</a> for easy python package handling</li>
+</ol>
+<p>The following steps create a virtual environment in conda for Pelican,</p>
+<div class="highlight"><pre><span></span>$ conda create -n blog <span class="nv">python</span><span class="o">=</span>3.5       <span class="c1"># Creates a conda environment blog with Python 3.5</span>
+$ conda install markdown                <span class="c1"># Install markdown</span>
 </pre></div>
 
 
-<p>Note that pelican-quickstart does not work as is
-with this copy. You will have to fork the bleeding edge (at the time of
-writing) of Pelican and not using the conda's default Pelican.  Unzip the <a href="https://github.com/abyvinod/pelican/archive/master.zip">git
+<p>or download the following environment file <a href="stuff/blog.yml">blog</a>, and do</p>
+<div class="highlight"><pre><span></span>$ conda env create -f blog.yml
+</pre></div>
+
+
+<p>Note that pelican-quickstart of pelican (available through the conda-forge
+<a href="https://anaconda.org/conda-forge/pelican">channel</a>) does not work. It does
+compile an existing pelican blog without any problems. </p>
+<p>To solve this, I fork the bleeding edge (at the time of writing, Pelican
+3.7.0.dev0) of Pelican instead.  Unzip the <a href="https://github.com/getpelican/pelican/archive/master.zip">git
 repository</a> into a
 directory of your choice, say <em>PelicanBase</em>.</p>
 <div class="highlight"><pre><span></span>$ <span class="nb">source</span> activate blog                  <span class="c1"># Activate the conda environment</span>
 $ <span class="nb">cd</span> PelicanBase
 $ python setup.py install               <span class="c1"># Install pelican</span>
-$ conda install markdown                <span class="c1"># Install markdown</span>
 </pre></div>
 
 
@@ -135,24 +146,20 @@ $ conda install markdown                <span class="c1"># Install markdown</spa
 <p>At this point, we are now ready to start laying the foundation for the blog.</p>
 <div class="highlight"><pre><span></span>$ mkdir path/to/blog
 $ <span class="nb">cd</span> path/to/blog
-$ pelican-quickstart                    <span class="c1"># Should have worked, but will fail</span>
+$ pelican-quickstart                    
 </pre></div>
 
 
-<p>You will have to replace the == in the line number given in the error message
-with &gt;=. See <a href="https://github.com/getpelican/pelican/issues/2043#issuecomment-268625132">this
-conversation</a>
-for more details. If all is good, then you will posed with a series of questions
-    that initializes your blog.</p>
-<h2>Rendering the blog</h2>
-<p>I like to automate things. Fabric is a great tool that works with Pelican to
-automate publishing.</p>
-<div class="highlight"><pre><span></span>$ conda install fabric                  <span class="c1"># Install fabric</span>
-$ fab build                             <span class="c1"># Builds the blog</span>
-$ fab regenerate <span class="p">&amp;</span> fab serve <span class="p">&amp;</span>          <span class="c1"># Serves the blog at localhost:8000 while freeing the terminal</span>
-</pre></div>
+<!-- 
+# Should have worked, but will fail
+You will have to replace the == in the line number given in the error message
+with >=. See [this
+conversation](https://github.com/getpelican/pelican/issues/2043#issuecomment-268625132)
+for more details. 
+-->
 
-
+<p><em>pelican-quickstart</em> will pose a series of questions that initializes
+your blog.</p>
 <h2>Creating the first post</h2>
 <p>Create <em>firstPost.md</em> containing a title and date<sup id="fnref-2"><a class="footnote-ref" href="#fn-2">2</a></sup>.</p>
 <div class="highlight"><pre><span></span>$ mkdir content
@@ -161,26 +168,39 @@ $ <span class="nb">echo</span> <span class="s1">&#39;Title: Test content</span>
 </pre></div>
 
 
-<p>The automation renders the new blog when the webpage is refreshed.</p>
+<h2>Rendering the blog</h2>
+<p>Fabric is a great tool that works with Pelican to automate publishing.</p>
+<div class="highlight"><pre><span></span>$ fab build                             <span class="c1"># Builds the blog</span>
+$ fab serve                             <span class="c1"># Serves the blog at localhost:8000 while holding up the terminal</span>
+$ fab regenerate <span class="p">&amp;</span> fab serve <span class="p">&amp;</span>          <span class="c1"># Serves the blog at localhost:8000 while freeing the terminal</span>
+</pre></div>
+
+
+<p>I use the third command to work with my blog while typing. The automation
+renders the new blog when the webpage is refreshed. To further automate the
+refreshing (preview style), you can look into plugins for your favorite
+browser. In Firefox, AutoReload is a good add-on.</p>
 <h2>Updating github pages</h2>
-<p>This problem was solved by going through <a href="http://ntanjerome.org/blog/how-to-setup-github-user-page-with-pelican/">this Hello World
+<p>I have used the approach highlighted in <a href="http://ntanjerome.org/blog/how-to-setup-github-user-page-with-pelican/">this Hello World
 post</a>.
-Thanks a lot! I had to also follow the advice given
+To summarize <a href="http://ntanjerome.org/blog/how-to-setup-github-user-page-with-pelican/">that
+post</a>,</p>
+<ol>
+<li>Ensure that you are on the 'source' branch (Create a new one using <em>git
+checkout -b source</em> if you haven't already)</li>
+<li>Add/commit everything except the <em>output</em> folder </li>
+<li>Create a new branch 'gh-pages'</li>
+<li>Run the following bash script to automate the <em>updation of GitHub pages</em></li>
+</ol>
+<p>I had to also follow the advice given
 <a href="https://github.com/getnikola/nikola/issues/2223#issuecomment-174193643">here</a>
-and installed ghp-import via </p>
+to install ghp-import via </p>
 <div class="highlight"><pre><span></span>pip install --upgrade git+https://github.com/ionelmc/python-ghp-import
 </pre></div>
 
 
 <p>as opposed to the standard Conda installation. </p>
-<p>To summarize <a href="http://ntanjerome.org/blog/how-to-setup-github-user-page-with-pelican/">that
-post</a>,</p>
-<ol>
-<li>Ensure that you are on the 'source' branch</li>
-<li>Add/commit everything except the <em>output</em> folder </li>
-<li>Create a new branch 'gh-pages'</li>
-<li>Run the following bash script to automate the <em>updation of GitHub pages</em></li>
-</ol>
+<p>Once ghp-import is properly installed, I use the following script to </p>
 <div class="highlight"><pre><span></span><span class="n">commitMSG</span><span class="o">=</span><span class="s2">&quot;$1&quot;</span>
 <span class="n">echo</span> <span class="err">$</span><span class="n">commitMSG</span>
 <span class="n">fab</span> <span class="n">build</span>
@@ -240,6 +260,11 @@ post</a>,</p>
             <li class="list-group-item"><h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Recent Posts</span></h4>
                 <ul class="list-group" id="recentposts">
                     <li class="list-group-item">
+                        <a href="/other-things-on-my-to-do-list.html">
+                            Other things on my to-do list
+                        </a>
+                    </li>
+                    <li class="list-group-item">
                         <a href="/setting-up-this-blog-using-the-pelicancondagithub-pages.html">
                             Setting up this blog using the Pelican+Conda+GitHub Pages
                         </a>
@@ -276,7 +301,7 @@ post</a>,</p>
    <div class="container">
       <hr>
       <div class="row">
-         <div class="col-xs-10">&copy; 2016 Abraham
+         <div class="col-xs-10">&copy; 2017 Abraham
             &middot; Powered by <a href="https://github.com/DandyDev/pelican-bootstrap3" target="_blank">pelican-bootstrap3</a>,
             <a href="http://docs.getpelican.com/" target="_blank">Pelican</a>,
             <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>         </div>
