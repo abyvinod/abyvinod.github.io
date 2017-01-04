@@ -1,37 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Notes on the margin - Abraham Vinod</title><link href="/" rel="alternate"></link><link href="/feeds/abraham-vinod.atom.xml" rel="self"></link><id>/</id><updated>2017-01-03T00:00:00-07:00</updated><entry><title>Other things on my to-do list</title><link href="/other-things-on-my-to-do-list.html" rel="alternate"></link><published>2017-01-03T00:00:00-07:00</published><updated>2017-01-03T00:00:00-07:00</updated><author><name>Abraham Vinod</name></author><id>tag:None,2017-01-03:/other-things-on-my-to-do-list.html</id><summary type="html">&lt;p&gt;To-do list&lt;/p&gt;</summary><content type="html">&lt;h1 id="to-do"&gt;To Do&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;Create articles summarizing my work on different projects --- 500 words on the DAESR project.&lt;/li&gt;
-&lt;li&gt;Carry forward my wiki articles&lt;/li&gt;
-&lt;li&gt;Visitor count&lt;/li&gt;
-&lt;li&gt;Editing the CSS files &lt;a href="http://beneathdata.com/how-to/how-i-built-this-website/"&gt;Source1&lt;/a&gt;,
-&lt;a href="http://algorithmshop.com/20131212-starting-a-blog.html"&gt;Source2&lt;/a&gt;,&lt;a href="https://spapas.github.io/2013/10/07/pelican-static-windows/"&gt;Source3&lt;/a&gt;:&lt;ul&gt;
-&lt;li&gt;Academic webpage icon Scholar hat&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Rendering on a mobile and an ipad&lt;/li&gt;
-&lt;li&gt;&lt;a href="http://moparx.com/2014/04/adding-search-capabilities-within-your-pelican-powered-site-using-tipue-search/"&gt;Search capabilities&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Useful plugins --- Discus&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h1 id="done"&gt;Done&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;Create index&lt;/li&gt;
-&lt;li&gt;Math rendering&lt;/li&gt;
-&lt;li&gt;Tag cloud&lt;/li&gt;
-&lt;li&gt;Private articles (IGNORE_FILES in pelicanconf)&lt;ul&gt;
-&lt;li&gt;Generate in localhost but not in the global&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;RSS feed --- Feedly compatible&lt;/li&gt;
-&lt;li&gt;Editing the CSS files &lt;a href="http://beneathdata.com/how-to/how-i-built-this-website/"&gt;Source1&lt;/a&gt;,
-&lt;a href="http://algorithmshop.com/20131212-starting-a-blog.html"&gt;Source2&lt;/a&gt;,&lt;a href="https://spapas.github.io/2013/10/07/pelican-static-windows/"&gt;Source3&lt;/a&gt;:&lt;ul&gt;
-&lt;li&gt;for the powered by (and other goodies)&lt;/li&gt;
-&lt;li&gt;Links&lt;/li&gt;
-&lt;li&gt;Description below&lt;/li&gt;
-&lt;li&gt;Recent posts limit --- Removed it&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;</content><category term="Pelican"></category></entry><entry><title>Setting up this blog using the Pelican+Conda+GitHub Pages</title><link href="/setting-up-this-blog-using-the-pelicancondagithub-pages.html" rel="alternate"></link><published>2016-12-23T03:42:00-07:00</published><updated>2016-12-23T03:42:00-07:00</updated><author><name>Abraham Vinod</name></author><id>tag:None,2016-12-23:/setting-up-this-blog-using-the-pelicancondagithub-pages.html</id><summary type="html">&lt;p&gt;Customary hello world post with Pelican&lt;/p&gt;</summary><content type="html">&lt;h2 id="prelude"&gt;Prelude&lt;/h2&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Notes on the margin - Abraham Vinod</title><link href="/" rel="alternate"></link><link href="/feeds/abraham-vinod.atom.xml" rel="self"></link><id>/</id><updated>2016-12-23T03:42:00-07:00</updated><entry><title>Setting up this blog using the Pelican+Conda+GitHub Pages</title><link href="/setting-up-this-blog-using-the-pelicancondagithub-pages.html" rel="alternate"></link><published>2016-12-23T03:42:00-07:00</published><updated>2016-12-23T03:42:00-07:00</updated><author><name>Abraham Vinod</name></author><id>tag:None,2016-12-23:/setting-up-this-blog-using-the-pelicancondagithub-pages.html</id><summary type="html">&lt;p&gt;Customary hello world post with Pelican&lt;/p&gt;</summary><content type="html">&lt;h2 id="prelude"&gt;Prelude&lt;/h2&gt;
 &lt;p&gt;I have been postponing my foray into blogging for some time now. Well, this
 holiday season I decided to present myself with the gift of blogging. I had done
 a bit of blogging using &lt;a href="https://www.dokuwiki.org/"&gt;DokuWiki&lt;/a&gt; back when I was at
