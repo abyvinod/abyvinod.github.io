@@ -1,19 +1,19 @@
 source activate blog
 git pull
 pubKill
-echo ""
-echo "Did you make your drafts private?"
-echo ""
-git checkout source
+# echo ""
+# echo "Did you make your drafts private?"
+# echo ""
+git checkout -q source
 commitMSG="$1"
 echo $commitMSG
 fab build
 git commit -am "$commitMSG"
 git push
 ghp-import output
-git checkout master
+git checkout -q master
 git pull
 git merge gh-pages -m "$commitMSG"
 git push
-git checkout source
+git checkout -q source
 pubLH
