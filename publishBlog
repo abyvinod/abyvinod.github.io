@@ -1,6 +1,10 @@
 source activate blog
-git checkout source
 git pull
+pubKill
+echo ""
+echo "Did you make your drafts private?"
+echo ""
+git checkout source
 commitMSG="$1"
 echo $commitMSG
 fab build
@@ -12,3 +16,4 @@ git pull
 git merge gh-pages -m "$commitMSG"
 git push
 git checkout source
+pubLH
