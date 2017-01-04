@@ -44,8 +44,9 @@ SOCIAL = (('RSS', 'http://abyvinod.github.io/feeds/all.rss'),
 DEFAULT_PAGINATION = 10
 
 # Do not generate the files starting with 0Private
-IGNORE_FILES = ['0PRIVATE*']
-# IGNORE_FILES = ['']
+# IGNORE_FILES = ['0PRIVATE*']
+IGNORE_FILES = ['']
+## I am using Status: drafts instead
 
 # ARTICLE_URL = '{category}/{slug}/'
 # ARTICLE_SAVE_AS = '{category}/{slug}/index.html'
