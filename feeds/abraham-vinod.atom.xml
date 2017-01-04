@@ -1,2 +1,260 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Notes on the margin - Abraham Vinod</title><link href="/" rel="alternate"></link><link href="/feeds/abraham-vinod.atom.xml" rel="self"></link><id>/</id><updated>2016-12-23T03:42:00-07:00</updated><entry><title>Setting up this blog using the Pelican+Conda+GitHub Pages</title><link href="/setting-up-this-blog-using-the-pelicancondagithub-pages.html" rel="alternate"></link><published>2016-12-23T03:42:00-07:00</published><updated>2016-12-23T03:42:00-07:00</updated><author><name>Abraham Vinod</name></author><id>tag:,2016-12-23:setting-up-this-blog-using-the-pelicancondagithub-pages.html</id><summary type="html">&lt;p&gt;Customary hello world post with Pelican&lt;/p&gt;</summary><category term="Pelican"></category></entry><entry><title>General tips regarding Pelican</title><link href="/general-tips-regarding-pelican.html" rel="alternate"></link><published>2016-12-23T00:00:00-07:00</published><updated>2016-12-23T00:00:00-07:00</updated><author><name>Abraham Vinod</name></author><id>tag:,2016-12-23:general-tips-regarding-pelican.html</id><summary type="html">&lt;p&gt;Some crucial tips&lt;/p&gt;</summary><category term="Pelican"></category></entry></feed>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Notes on the margin - Abraham Vinod</title><link href="/" rel="alternate"></link><link href="/feeds/abraham-vinod.atom.xml" rel="self"></link><id>/</id><updated>2017-01-03T00:00:00-07:00</updated><entry><title>Other things on my to-do list</title><link href="/other-things-on-my-to-do-list.html" rel="alternate"></link><published>2017-01-03T00:00:00-07:00</published><updated>2017-01-03T00:00:00-07:00</updated><author><name>Abraham Vinod</name></author><id>tag:None,2017-01-03:/other-things-on-my-to-do-list.html</id><summary type="html">&lt;p&gt;To-do list&lt;/p&gt;</summary><content type="html">&lt;h1 id="to-do"&gt;To Do&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Create articles summarizing my work on different projects --- 500 words on the DAESR project.&lt;/li&gt;
+&lt;li&gt;Carry forward my wiki articles&lt;/li&gt;
+&lt;li&gt;Visitor count&lt;/li&gt;
+&lt;li&gt;Editing the CSS files &lt;a href="http://beneathdata.com/how-to/how-i-built-this-website/"&gt;Source1&lt;/a&gt;,
+&lt;a href="http://algorithmshop.com/20131212-starting-a-blog.html"&gt;Source2&lt;/a&gt;,&lt;a href="https://spapas.github.io/2013/10/07/pelican-static-windows/"&gt;Source3&lt;/a&gt;:&lt;ul&gt;
+&lt;li&gt;Academic webpage icon Scholar hat&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Rendering on a mobile and an ipad&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://moparx.com/2014/04/adding-search-capabilities-within-your-pelican-powered-site-using-tipue-search/"&gt;Search capabilities&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Useful plugins --- Discus&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id="done"&gt;Done&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Create index&lt;/li&gt;
+&lt;li&gt;Math rendering&lt;/li&gt;
+&lt;li&gt;Tag cloud&lt;/li&gt;
+&lt;li&gt;Private articles (IGNORE_FILES in pelicanconf)&lt;ul&gt;
+&lt;li&gt;Generate in localhost but not in the global&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;RSS feed --- Feedly compatible&lt;/li&gt;
+&lt;li&gt;Editing the CSS files &lt;a href="http://beneathdata.com/how-to/how-i-built-this-website/"&gt;Source1&lt;/a&gt;,
+&lt;a href="http://algorithmshop.com/20131212-starting-a-blog.html"&gt;Source2&lt;/a&gt;,&lt;a href="https://spapas.github.io/2013/10/07/pelican-static-windows/"&gt;Source3&lt;/a&gt;:&lt;ul&gt;
+&lt;li&gt;for the powered by (and other goodies)&lt;/li&gt;
+&lt;li&gt;Links&lt;/li&gt;
+&lt;li&gt;Description below&lt;/li&gt;
+&lt;li&gt;Recent posts limit --- Removed it&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</content><category term="Pelican"></category></entry><entry><title>Setting up this blog using the Pelican+Conda+GitHub Pages</title><link href="/setting-up-this-blog-using-the-pelicancondagithub-pages.html" rel="alternate"></link><published>2016-12-23T03:42:00-07:00</published><updated>2016-12-23T03:42:00-07:00</updated><author><name>Abraham Vinod</name></author><id>tag:None,2016-12-23:/setting-up-this-blog-using-the-pelicancondagithub-pages.html</id><summary type="html">&lt;p&gt;Customary hello world post with Pelican&lt;/p&gt;</summary><content type="html">&lt;h2 id="prelude"&gt;Prelude&lt;/h2&gt;
+&lt;p&gt;I have been postponing my foray into blogging for some time now. Well, this
+holiday season I decided to present myself with the gift of blogging. I had done
+a bit of blogging using &lt;a href="https://www.dokuwiki.org/"&gt;DokuWiki&lt;/a&gt; back when I was at
+IIT Madras, but my site was hacked due to my neglience of the security settings.
+To make things simple, I am choosing a static website for blogging this time. I will
+stick with &lt;a href="https://blog.getpelican.com/"&gt;Pelican&lt;/a&gt; due to my comfort level with
+Python. &lt;/p&gt;
+&lt;p&gt;On reading about Pelican, I discovered that the norm appears to be to replace the customary
+"Hello World" post with a post on how one sets up the blog using Pelican.
+The journey on understanding Pelican definitely is not straight-forward as one would like to hope for.
+However, among the numerous posts I read on the internet, I would like to
+especially thank the "Hello World" posts from Mr. Hartley's
+&lt;a href="http://beneathdata.com/how-to/how-i-built-this-website"&gt;blog&lt;/a&gt;, Mr. Vincent's
+&lt;a href="http://algorithmshop.com/20131212-starting-a-blog.html/"&gt;blog&lt;/a&gt;, and Mr.
+Jerome's &lt;a href="http://ntanjerome.org/blog/how-to-setup-github-user-page-with-pelican/"&gt;blog&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id="how-did-i-get-my-blog-setup"&gt;How did I get my blog setup?&lt;/h2&gt;
+&lt;h3 id="setting-up-conda-and-pelican-in-windows"&gt;Setting up Conda and Pelican in Windows&lt;/h3&gt;
+&lt;p&gt;Requirements:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href="https://git-for-windows.github.io/"&gt;msysgit&lt;/a&gt;&lt;sup id="fnref-1"&gt;&lt;a class="footnote-ref" href="#fn-1"&gt;1&lt;/a&gt;&lt;/sup&gt; to emulate the Unix terminal in my PC. &lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/conda/conda"&gt;conda&lt;/a&gt; for easy python package handling&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;The following steps create a virtual environment in conda for Pelican,&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ conda create -n blog &lt;span class="nv"&gt;python&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;3.5       &lt;span class="c1"&gt;# Creates a conda environment blog with Python 3.5&lt;/span&gt;
+$ conda install markdown                &lt;span class="c1"&gt;# Install markdown&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;or download the following environment file &lt;a href="stuff/blog.yml"&gt;blog&lt;/a&gt;, and do&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ conda env create -f blog.yml
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Note that pelican-quickstart of pelican (available through the conda-forge
+&lt;a href="https://anaconda.org/conda-forge/pelican"&gt;channel&lt;/a&gt;) does not work. It does
+compile an existing pelican blog without any problems. &lt;/p&gt;
+&lt;p&gt;To solve this, I fork the bleeding edge (at the time of writing, Pelican
+3.7.0.dev0) of Pelican instead.  Unzip the &lt;a href="https://github.com/getpelican/pelican/archive/master.zip"&gt;git
+repository&lt;/a&gt; into a
+directory of your choice, say &lt;code&gt;PelicanBase&lt;/code&gt;.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ &lt;span class="nb"&gt;source&lt;/span&gt; activate blog                  &lt;span class="c1"&gt;# Activate the conda environment&lt;/span&gt;
+$ &lt;span class="nb"&gt;cd&lt;/span&gt; PelicanBase
+$ python setup.py install               &lt;span class="c1"&gt;# Install pelican&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;This installs pelican and fab.&lt;/p&gt;
+&lt;h3 id="setting-up-the-blog"&gt;Setting up the blog&lt;/h3&gt;
+&lt;p&gt;At this point, we are now ready to start laying the foundation for the blog.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ mkdir path/to/blog
+$ &lt;span class="nb"&gt;cd&lt;/span&gt; path/to/blog
+$ pelican-quickstart                    
+&lt;/pre&gt;&lt;/div&gt;
+&lt;!-- 
+# Should have worked, but will fail
+You will have to replace the == in the line number given in the error message
+with &gt;=. See [this
+conversation](https://github.com/getpelican/pelican/issues/2043#issuecomment-268625132)
+for more details. 
+--&gt;
+&lt;p&gt;&lt;code&gt;pelican-quickstart&lt;/code&gt; will pose a series of questions that initializes
+your blog.&lt;/p&gt;
+&lt;h3 id="creating-the-first-post"&gt;Creating the first post&lt;/h3&gt;
+&lt;p&gt;Create &lt;code&gt;firstPost.md&lt;/code&gt; containing a title and date&lt;sup id="fnref-2"&gt;&lt;a class="footnote-ref" href="#fn-2"&gt;2&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ mkdir content
+$ &lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s1"&gt;'Title: Test content&lt;/span&gt;
+&lt;span class="s1"&gt;&amp;gt; Date: 2016'&lt;/span&gt; &amp;gt; content/firstPost.md      &lt;span class="c1"&gt;# '&amp;gt;' is autogenerated when ENTER is pressed.&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;h3 id="rendering-the-blog"&gt;Rendering the blog&lt;/h3&gt;
+&lt;p&gt;Fabric is a great tool that works with Pelican to automate publishing.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ fab build                             &lt;span class="c1"&gt;# Builds the blog&lt;/span&gt;
+$ fab serve                             &lt;span class="c1"&gt;# Serves the blog at localhost:8000 while holding up the terminal&lt;/span&gt;
+$ fab regenerate &lt;span class="p"&gt;&amp;amp;&lt;/span&gt; fab serve &lt;span class="p"&gt;&amp;amp;&lt;/span&gt;          &lt;span class="c1"&gt;# Serves the blog at localhost:8000 while freeing the terminal&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;I use the third command to work with my blog while typing. The automation
+renders the new blog when the webpage is refreshed. To further automate the
+refreshing (preview style), you can look into plugins for your favorite
+browser. In Firefox, AutoReload is a good add-on.&lt;/p&gt;
+&lt;h3 id="updating-github-pages"&gt;Updating github pages&lt;/h3&gt;
+&lt;p&gt;I have used the approach highlighted in &lt;a href="http://ntanjerome.org/blog/how-to-setup-github-user-page-with-pelican/"&gt;this Hello World
+post&lt;/a&gt;.
+To summarize &lt;a href="http://ntanjerome.org/blog/how-to-setup-github-user-page-with-pelican/"&gt;that
+post&lt;/a&gt;,&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Ensure that you are on the 'source' branch (Create a new one using &lt;code&gt;git
+checkout -b source&lt;/code&gt; if you haven't already)&lt;/li&gt;
+&lt;li&gt;Add/commit everything except the &lt;code&gt;output&lt;/code&gt; folder &lt;/li&gt;
+&lt;li&gt;Create a new branch 'gh-pages'&lt;/li&gt;
+&lt;li&gt;Run the following bash script to automate the &lt;em&gt;updation of GitHub pages&lt;/em&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;I had to also follow the advice given
+&lt;a href="https://github.com/getnikola/nikola/issues/2223#issuecomment-174193643"&gt;here&lt;/a&gt;
+to install ghp-import via &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;pip install --upgrade git+https://github.com/ionelmc/python-ghp-import
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;as opposed to the standard Conda installation. &lt;/p&gt;
+&lt;p&gt;Once ghp-import is properly installed, I use the following script to &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nv"&gt;commitMSG&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="nv"&gt;$1&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;
+&lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="nv"&gt;$commitMSG&lt;/span&gt;
+fab build
+git commit -am &lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="nv"&gt;$commitMSG&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;
+ghp-import output
+git checkout master
+git merge gh-pages -m &lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="nv"&gt;$commitMSG&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;
+git pull
+git push -u --all
+git checkout &lt;span class="nb"&gt;source&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Future updates at Github with the local copy is now easy.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nb"&gt;source&lt;/span&gt; bp &lt;span class="s2"&gt;"Commit Message"&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;h2 id="other-tweaks_1"&gt;Other tweaks&lt;/h2&gt;
+&lt;h3 id="adding-rss"&gt;Adding RSS&lt;/h3&gt;
+&lt;p&gt;Include in your &lt;code&gt;pelicanconf.py&lt;/code&gt;, the following lines&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# Feed generation&lt;/span&gt;
+&lt;span class="n"&gt;FEED_ALL_RSS&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;'feeds/all.rss'&lt;/span&gt;
+&lt;span class="n"&gt;FEED_ALL_ATOM&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="bp"&gt;None&lt;/span&gt;
+&lt;span class="n"&gt;CATEGORY_FEED_ATOM&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="bp"&gt;None&lt;/span&gt; &lt;span class="c1"&gt;#'feeds/%s.atom.xml'&lt;/span&gt;
+&lt;span class="n"&gt;TRANSLATION_FEED_ATOM&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="bp"&gt;None&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;h3 id="ignoring-drafts"&gt;Ignoring drafts&lt;/h3&gt;
+&lt;p&gt;Include in your &lt;code&gt;pelicanconf.py&lt;/code&gt;, the following lines&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# Private sandbox&lt;/span&gt;
+&lt;span class="n"&gt;IGNORE_FILES&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;'0PRIVATE*'&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;  &lt;span class="c1"&gt;# Pelican does not generate html pages for md files starting with 0Private&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;h3 id="pelican-bootstrap3"&gt;Pelican-Bootstrap3&lt;/h3&gt;
+&lt;p&gt;Clone &lt;code&gt;pelican-bootstrap3&lt;/code&gt; into the root folder of the blog.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;####################### Theme-Specific Settings #########################&lt;/span&gt;
+&lt;span class="n"&gt;THEME&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;'pelican-bootstrap3'&lt;/span&gt;        &lt;span class="c1"&gt;#'html5-dopetrope'&lt;/span&gt;
+
+&lt;span class="c1"&gt;# Pelican Theme-Specific Variables&lt;/span&gt;
+&lt;span class="n"&gt;BOOTSTRAP_THEME&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;'sandstone'&lt;/span&gt;       &lt;span class="c1"&gt;#'lumen' 'cosmo'&lt;/span&gt;
+&lt;span class="n"&gt;SHOW_ARTICLE_CATEGORY&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="bp"&gt;True&lt;/span&gt;
+
+&lt;span class="n"&gt;ABOUT_ME&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;"Blah blah blah"&lt;/span&gt;
+
+&lt;span class="n"&gt;AVATAR&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;"/images/myphoto.png"&lt;/span&gt;
+
+&lt;span class="n"&gt;DISPLAY_ARTICLE_INFO_ON_INDEX&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="bp"&gt;True&lt;/span&gt;
+&lt;span class="n"&gt;DISPLAY_RECENT_POSTS_ON_SIDEBAR&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="bp"&gt;False&lt;/span&gt;
+&lt;span class="n"&gt;DISPLAY_TAGS_ON_SIDEBAR&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="bp"&gt;True&lt;/span&gt;
+&lt;span class="n"&gt;SHOW_ARTICLE_CATEGORY&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="bp"&gt;True&lt;/span&gt;
+
+&lt;span class="n"&gt;PYGMENTS_STYLE&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;'monokai'&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;!---
+#BANNER = "/images/banner.png"
+#SITELOGO = 'images/logo.png'
+#SITELOGO_SIZE = 32
+#FAVICON = 'images/favicon.png'
+---&gt;
+&lt;h3 id="math-support"&gt;Math support&lt;/h3&gt;
+&lt;p&gt;I could not get the &lt;code&gt;render_math&lt;/code&gt; plugin to work. I just incorporated MathJax
+into the &lt;code&gt;pelican-bootstrap3\templates\base.html&lt;/code&gt; of my template based on the &lt;a href="http://docs.mathjax.org/en/latest/start.html#tex-and-latex-input"&gt;MathJax
+documentation&lt;/a&gt;.
+Insert the following snippet before the &lt;code&gt;&amp;lt;/head&amp;gt;&lt;/code&gt; tag in &lt;code&gt;base.html&lt;/code&gt;.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;script&lt;/span&gt; &lt;span class="na"&gt;type&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;"text/x-mathjax-config"&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class="nx"&gt;MathJax&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;Hub&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;Config&lt;/span&gt;&lt;span class="p"&gt;({&lt;/span&gt;&lt;span class="nx"&gt;tex2jax&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="nx"&gt;inlineMath&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="p"&gt;[[&lt;/span&gt;&lt;span class="s1"&gt;'$'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s1"&gt;'$'&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;'\\('&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s1"&gt;'\\)'&lt;/span&gt;&lt;span class="p"&gt;]]}});&lt;/span&gt;
+&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;script&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;script&lt;/span&gt; &lt;span class="na"&gt;type&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;"text/javascript"&lt;/span&gt; &lt;span class="na"&gt;async&lt;/span&gt;
+  &lt;span class="na"&gt;src&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;"https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML"&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;script&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;This will produce beautiful math like $x^2$ and $$A_B.$$ &lt;/p&gt;
+&lt;h3 id="plugins"&gt;Plugins&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;############################ Plugins ######################################&lt;/span&gt;
+&lt;span class="n"&gt;PLUGIN_PATHS&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;'pelican-plugins'&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;span class="n"&gt;PLUGINS&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;'pelican-toc'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s1"&gt;'tag_cloud'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s1"&gt;'simple_footnotes'&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;  &lt;span class="c1"&gt;# 'extract_toc', 'feed_summary'&lt;/span&gt;
+&lt;span class="n"&gt;FEED_USE_SUMMARY&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="bp"&gt;True&lt;/span&gt;
+&lt;span class="n"&gt;SUMMARY_MAX_LENGTH&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;100&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;!-- #MD_EXTENSIONS = ['toc', 'fenced_code', 'codehilite(css_class=highlight)',
+'extra'] --&gt;
+&lt;h4 id="table-of-contents"&gt;Table of contents&lt;/h4&gt;
+&lt;p&gt;Insert this block in &lt;code&gt;pelican-bootstrap3\templates\base.html&lt;/code&gt; just above the
+&lt;code&gt;{{article.content}}&lt;/code&gt;.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt; &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;article&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;toc&lt;/span&gt; &lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+    &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;div&lt;/span&gt; &lt;span class="n"&gt;style&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"border-style: solid;background:lightgrey"&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
+        &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;h3&lt;/span&gt; &lt;span class="n"&gt;style&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"text-align:center"&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;Table&lt;/span&gt; &lt;span class="n"&gt;of&lt;/span&gt; &lt;span class="n"&gt;contents&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="n"&gt;h3&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
+            &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;nav&lt;/span&gt; &lt;span class="n"&gt;class&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"toc"&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
+            &lt;span class="p"&gt;{{&lt;/span&gt; &lt;span class="n"&gt;article&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;toc&lt;/span&gt; &lt;span class="p"&gt;}}&lt;/span&gt;
+            &lt;span class="o"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="n"&gt;nav&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class="o"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="n"&gt;div&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt; &lt;span class="n"&gt;endif&lt;/span&gt; &lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;h3 id="changing-footer_1"&gt;Changing footer&lt;/h3&gt;
+&lt;p&gt;Updated &lt;code&gt;blog/pelican-bootstrap3/templates/includes/footer.html&lt;/code&gt; with&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;footer&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+   &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;div&lt;/span&gt; &lt;span class="na"&gt;class&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;"container"&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+      &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;hr&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+      &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;div&lt;/span&gt; &lt;span class="na"&gt;class&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;"row"&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+         {% if articles %}
+            {% set copy_date = articles[0].date.strftime('%Y') %}
+         {% else %}
+            {% set copy_date = '' %}
+         {% endif %}
+         &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;div&lt;/span&gt; &lt;span class="na"&gt;class&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;"col-xs-10"&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;&lt;span class="ni"&gt;&amp;amp;copy;&lt;/span&gt; {{ copy_date }} {{ AUTHOR }}
+            &lt;span class="ni"&gt;&amp;amp;middot;&lt;/span&gt; Powered by &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;a&lt;/span&gt; &lt;span class="na"&gt;href&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;"http://docs.getpelican.com/"&lt;/span&gt;
+                &lt;span class="na"&gt;target&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;"_blank"&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;Pelican&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;a&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt; and other  &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;a&lt;/span&gt;
+            &lt;span class="na"&gt;href&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;"http://abyvinod.github.io/setting-up-this-blog-using-the-pelicancondagithub-pages.html"&lt;/span&gt;
+                &lt;span class="na"&gt;target&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;"_blank"&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;goodies&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;a&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;.
+         &lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;div&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+         &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;div&lt;/span&gt; &lt;span class="na"&gt;class&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;"col-xs-2"&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;p&lt;/span&gt; &lt;span class="na"&gt;class&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;"pull-right"&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;i&lt;/span&gt; &lt;span class="na"&gt;class&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;"fa fa-arrow-up"&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;i&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;a&lt;/span&gt; &lt;span class="na"&gt;href&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;"#"&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;Back to top&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;a&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;p&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;div&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+      &lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;div&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+   &lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;div&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;footer&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;div class="footnote"&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li id="fn-1"&gt;
+&lt;p&gt;$ sign denotes bash prompt.&amp;nbsp;&lt;a class="footnote-backref" href="#fnref-1" title="Jump back to footnote 1 in the text"&gt;↩&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn-2"&gt;
+&lt;p&gt;Title and date is the minimum requirement for a blog post.&amp;nbsp;&lt;a class="footnote-backref" href="#fnref-2" title="Jump back to footnote 2 in the text"&gt;↩&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/hr&gt;&lt;/div&gt;</content><category term="Pelican"></category></entry><entry><title>General tips regarding Pelican</title><link href="/general-tips-regarding-pelican.html" rel="alternate"></link><published>2016-12-23T00:00:00-07:00</published><updated>2016-12-23T00:00:00-07:00</updated><author><name>Abraham Vinod</name></author><id>tag:None,2016-12-23:/general-tips-regarding-pelican.html</id><summary type="html">&lt;p&gt;Some crucial tips&lt;/p&gt;</summary><content type="html">&lt;ul&gt;
+&lt;li&gt;Markdown syntax can be found at 
+  &lt;a href="https://sourceforge.net/p/pelican-edt/wiki/markdown_syntax/#md_ex_lists"&gt;SourceForge&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;For commenting, use the standard HTML comments. (See this &lt;a href="http://stackoverflow.com/a/4829998/1846549"&gt;SO
+  answer&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;Code highlighting for a particular language can be done by
+writing the language name after the code block command.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;~~~python
+# Feed generation
+~~~
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;generates&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# Feed generation&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;</content><category term="Pelican"></category></entry></feed>
