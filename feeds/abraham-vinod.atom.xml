@@ -119,6 +119,10 @@ git checkout &lt;span class="nb"&gt;source&lt;/span&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# Private sandbox&lt;/span&gt;
 &lt;span class="n"&gt;IGNORE_FILES&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;'0PRIVATE*'&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;  &lt;span class="c1"&gt;# Pelican does not generate html pages for md files starting with 0Private&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Another option is to use &lt;code&gt;Status: draft&lt;/code&gt; in the markdown article header to ask
+Pelican to put the generated htmls in a separate folder &lt;code&gt;drafts/&lt;/code&gt;. Remember to
+add this to &lt;code&gt;.gitignore&lt;/code&gt; of the master branch to ensure it doesn't get pushed
+to the outside world.&lt;/p&gt;
 &lt;h3 id="pelican-bootstrap3"&gt;Pelican-Bootstrap3&lt;/h3&gt;
 &lt;p&gt;Clone &lt;code&gt;pelican-bootstrap3&lt;/code&gt; into the root folder of the blog.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;####################### Theme-Specific Settings #########################&lt;/span&gt;
