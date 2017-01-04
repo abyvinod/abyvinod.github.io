@@ -51,7 +51,9 @@ SOCIAL = (('BitBucket', 'http://bitbucket.org/abyvinod'),
 DEFAULT_PAGINATION = 10
 
 # Do not generate these files
-IGNORE_FILES = ['toDo.md']
+## Name files with Private
+IGNORE_FILES = ['0PRIVATE*']
+
 # ARTICLE_URL = '{category}/{slug}/'
 # ARTICLE_SAVE_AS = '{category}/{slug}/index.html'
 # PAGE_URL = '{slug}.html'
