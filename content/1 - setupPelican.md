@@ -1,9 +1,9 @@
-Title: Setting up this blog using the Pelican+Conda+GitHub Pages
+Title: Blogging using Pelican + Conda + GitHub Pages
 date: 2016-12-23 03:42
 tags: Pelican
 category: How-To
 author: Abraham Vinod
-summary: Customary hello world post with Pelican
+summary: All the tweaks I did to get my Pelican blog running.
 
 ## Prelude ##
 

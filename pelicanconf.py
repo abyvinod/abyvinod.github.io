@@ -118,7 +118,7 @@ PYGMENTS_STYLE = 'monokai'
 ############################ Plugins ######################################
 PLUGIN_PATHS = ['pelican-plugins']
 
-PLUGINS = ['pelican-toc']#['extract_toc',"tag_cloud","simple_footnotes", "feed_summary"]
+PLUGINS = ['pelican-toc','tag_cloud']#"simple_footnotes", "feed_summary"]
 TOC = {
     'TOC_HEADERS' : '^h[1-6]',  # What headers should be included in the generated toc
                                 # Expected format is a regular expression
