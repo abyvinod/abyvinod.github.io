@@ -235,7 +235,9 @@ Insert this block in `pelican-bootstrap3\templates\base.html` just above the
 
 ### Changing footer
 
-Updated `blog/pelican-bootstrap3/templates/includes/footer.html` with
+Based on this
+[article](http://mygeekdaddy.net/2015/01/09/never-change-your-pelican-footer-again/),
+I updated `blog/pelican-bootstrap3/templates/includes/footer.html` with
 ~~~html
 <footer>
    <div class="container">

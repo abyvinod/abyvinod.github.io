@@ -17,7 +17,7 @@ Status: draft
 + Rendering on a mobile and an ipad
 + [Search capabilities](http://moparx.com/2014/04/adding-search-capabilities-within-your-pelican-powered-site-using-tipue-search/)
 + Useful plugins --- Discus
-
++ http://terriyu.info/blog/posts/2013/07/pelican-setup/
 # Done
 
 + Create index
