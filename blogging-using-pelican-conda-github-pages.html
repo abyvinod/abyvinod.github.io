@@ -225,10 +225,12 @@ git checkout <span class="nb">source</span>
 <div class="highlight"><pre><span></span><span class="c1"># Private sandbox</span>
 <span class="n">IGNORE_FILES</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'0PRIVATE*'</span><span class="p">]</span>  <span class="c1"># Pelican does not generate html pages for md files starting with 0Private</span>
 </pre></div>
-<p>Another option is to use <code>Status: draft</code> in the markdown article header to ask
-Pelican to put the generated htmls in a separate folder <code>drafts/</code>. Remember to
-add this to <code>.gitignore</code> of the master branch to ensure it doesn't get pushed
-to the outside world.</p>
+<p>Another
+<a href="http://www.stevenmaude.co.uk/posts/hiding-draft-articles-in-pelican">option</a>is
+to use <code>Status: draft</code> in the markdown article header to ask Pelican to put the
+generated htmls in a separate folder <code>drafts/</code>. Remember to add this to
+<code>.gitignore</code> of the master branch to ensure it doesn't get pushed to the
+outside world.</p>
 <h3 id="pelican-bootstrap3">Pelican-Bootstrap3</h3>
 <p>Clone <code>pelican-bootstrap3</code> into the root folder of the blog.</p>
 <div class="highlight"><pre><span></span><span class="c1">####################### Theme-Specific Settings #########################</span>
