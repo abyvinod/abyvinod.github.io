@@ -186,7 +186,9 @@ Insert the following snippet before the &lt;code&gt;&amp;lt;/head&amp;gt;&lt;/co
 &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt; &lt;span class="n"&gt;endif&lt;/span&gt; &lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;h3 id="changing-footer_1"&gt;Changing footer&lt;/h3&gt;
-&lt;p&gt;Updated &lt;code&gt;blog/pelican-bootstrap3/templates/includes/footer.html&lt;/code&gt; with&lt;/p&gt;
+&lt;p&gt;Based on this
+&lt;a href="http://mygeekdaddy.net/2015/01/09/never-change-your-pelican-footer-again/"&gt;article&lt;/a&gt;,
+I updated &lt;code&gt;blog/pelican-bootstrap3/templates/includes/footer.html&lt;/code&gt; with&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;footer&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
    &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;div&lt;/span&gt; &lt;span class="na"&gt;class&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;"container"&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
       &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;hr&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
