@@ -20,3 +20,7 @@ generates
 ~~~python
 # Feed generation
 ~~~
+- For internal linking, use
+```Markdown
+[specifically]({filename}4 - Verification.md)
+```

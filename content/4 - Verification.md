@@ -1,5 +1,5 @@
 title: What is verification?
-date: 2017-1-9
+date: 2017-1-8
 tags: Verification
 category: Control Theory
 author: Abraham Vinod
@@ -59,6 +59,11 @@ as the states in hybrid systems are uncountable[^LinBook2000]. The researchers
 in this camp tackle the problem by modeling the hybrid system as a finite state
 automation using abstraction techniques.
 
+<!--
+[^MitchellLvlSet]: [https://www.cs.ubc.ca/~mitchell/ToolboxLS/](https://www.cs.ubc.ca/~mitchell/ToolboxLS/)
+For deterministic continuous-time systems, the reach-avoid problem can solved
+using Level set toolbox methods[^MitchellLvlSet]. -->
+
 [^EdwardIEEE1997]: [Proceedings of IEEE 1997, Edward et.  al](ieeexplore.ieee.org/document/558710)
 [^SummersAutomatica2010]: [Automatica 2010, Summers et.
 al](http://linkinghub.elsevier.com/retrieve/pii/S0005109810003547)
@@ -66,8 +71,3 @@ al](http://linkinghub.elsevier.com/retrieve/pii/S0005109810003547)
 [^ClarkeBook1999]: [Model checking by Clarke et. al, 1999](dl.acm.org/citation.cfm?id=332656)
 [^KaufmannBook2000]: [Computer Aided Reasoning: An Approach by Kaufmann et.  al.](http://dl.acm.org/citation.cfm?id=555902)
 [^LinBook2000]: [Hybrid Dynamical Systems: An Introduction to Control and Verification, Lin et.  al](www.nowpublishers.com/article/Details/SYS-001)
-<!--
-[^MitchellLvlSet]:
-[https://www.cs.ubc.ca/~mitchell/ToolboxLS/](https://www.cs.ubc.ca/~mitchell/ToolboxLS/)
-For deterministic continuous-time systems, the reach-avoid problem can solved
-using Level set toolbox methods[^MitchellLvlSet]. -->
