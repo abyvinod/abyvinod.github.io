@@ -2,7 +2,7 @@
 <html lang="english"
 >
 <head>
-    <title>Other things on my to-do list - Notes on the margin</title>
+    <title>What is verification? - Notes on the margin</title>
     <!-- Using the latest rendering mode for IE -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
@@ -10,11 +10,11 @@
 
 
 
-<link rel="canonical" href="/drafts/other-things-on-my-to-do-list.html">
+<link rel="canonical" href="/what-is-verification.html">
 
         <meta name="author" content="Abraham Vinod" />
-        <meta name="keywords" content="Pelican" />
-        <meta name="description" content="To-do list" />
+        <meta name="keywords" content="Verification" />
+        <meta name="description" content="Discussing the two view points in verification --- the computer science view point and the controls view point" />
 
 
 
@@ -51,7 +51,7 @@ Notes on the margin            </a>
         </div>
         <div class="collapse navbar-collapse navbar-ex1-collapse">
             <ul class="nav navbar-nav">
-                        <li >
+                        <li class="active">
                             <a href="/category/control-theory.html">Control theory</a>
                         </li>
                         <li >
@@ -77,10 +77,10 @@ Notes on the margin            </a>
         <article>
             <header class="page-header">
                 <h1>
-                    <a href="/drafts/other-things-on-my-to-do-list.html"
+                    <a href="/what-is-verification.html"
                        rel="bookmark"
-                       title="Permalink to Other things on my to-do list">
-                        Other things on my to-do list
+                       title="Permalink to What is verification?">
+                        What is verification?
                     </a>
                 </h1>
             </header>
@@ -90,58 +90,86 @@ Notes on the margin            </a>
 <footer class="post-info">
     <span class="label label-default">Date</span>
     <span class="published">
-        <i class="fa fa-calendar"></i><time datetime="2017-01-03T00:00:00-07:00"> Tue 03 January 2017</time>
+        <i class="fa fa-calendar"></i><time datetime="2017-01-09T00:00:00-07:00"> Mon 09 January 2017</time>
     </span>
 
         <span class="label label-default">Category</span>
-        <a href="/category/private.html">Private</a>
+        <a href="/category/control-theory.html">Control Theory</a>
 
 
 <span class="label label-default">Tags</span>
-	<a href="/tag/pelican.html">Pelican</a>
+	<a href="/tag/verification.html">Verification</a>
     
 </footer><!-- /.post-info -->                    </div>
                 </div>
                     <div style="border-style: solid;background:lightgrey">
                         <h3 style="text-align:center"> Table of contents</h3>
                             <nav class="toc">
-                            <div id="toc"><ul><li><a class="toc-href" href="#" title="Other things on my to-do list">Other things on my to-do list</a><ul><li><a class="toc-href" href="#to-do" title="To Do">To Do</a></li><li><a class="toc-href" href="#done" title="Done">Done</a></li></ul></li></ul></div>
+                            <div id="toc"><ul><li><a class="toc-href" href="#" title="What is verification?">What is verification?</a><ul><li><a class="toc-href" href="#verification" title="Verification">Verification</a><ul><li><a class="toc-href" href="#control-theory-point-of-view-i-work-on-this-approach" title="Control theory point of view  (I work on this approach)">Control theory point of view  (I work on this approach)</a></li><li><a class="toc-href" href="#computer-science-point-of-view" title="Computer science point of view">Computer science point of view</a></li></ul></li></ul></li></ul></div>
                             </nav>
                     </div>
-                <h1 id="to-do">To Do</h1>
-<ul>
-<li>Create articles summarizing my work on different projects --- 500 words on the DAESR project.</li>
-<li>Carry forward my wiki articles</li>
-<li>Visitor count</li>
-<li>Editing the CSS files <a href="http://beneathdata.com/how-to/how-i-built-this-website/">Source1</a>,
-<a href="http://algorithmshop.com/20131212-starting-a-blog.html">Source2</a>,<a href="https://spapas.github.io/2013/10/07/pelican-static-windows/">Source3</a>:<ul>
-<li>Academic webpage icon Scholar hat</li>
-</ul>
+                <h2 id="verification">Verification</h2>
+<p>Formal verification is the process of mathematically checking that the behavior
+of a system, described using a formal model, satisfies a given property, also
+described using a formal model. The two models may or may not be the same, but
+must share a common semantic interpretation. The ability to carry out formal
+verification is strongly affected by the model of computation, which determines
+decidability and complexity bounds<sup id="fnref-EdwardIEEE1997"><a class="footnote-ref" href="#fn-EdwardIEEE1997">1</a></sup>.</p>
+<p>Loosely, verification is meant to provide guarantees of safety (nothing bad will
+happen), liveness (task completion --- eventually something good will happen)
+for safety critical systems and other systems that need guarantees of their
+    proper operations. These are generally embedded systems which have
+    components that evolve continuously in time and discrete in time. Therefore,
+    researchers generally use hybrid dynamical systems framework to model the
+    system. For hybrid systems, it is not straightforward to apply traditional
+    formal methods for verification, such as model checking<sup id="fnref-ClarkeBook1999"><a class="footnote-ref" href="#fn-ClarkeBook1999">2</a></sup> and deductive
+    verification<sup id="fnref-KaufmannBook2000"><a class="footnote-ref" href="#fn-KaufmannBook2000">3</a></sup>, to hybrid systems since
+    these methods were originally developed for circuits and communication
+    protocols and usually require extensive search of all reachable states.
+    However, this is not possible as the states in hybrid systems are
+    uncountable<sup id="fnref-LinBook2000"><a class="footnote-ref" href="#fn-LinBook2000">4</a></sup>.</p>
+<p>Historically, there has been two approaches in dealing with the problem of
+verification.</p>
+<h3 id="control-theory-point-of-view-i-work-on-this-approach">Control theory point of view  (I work on this approach)</h3>
+<p>Verification is posed as a reach avoid problem where the objective is identify
+the initial conditions and the corresponding control policies that will hit a
+target set while avoiding an unsafe set over a finite time horizon. For
+stochastic systems, the control policies try to maximize the probability of
+achieving the reach avoid objective<sup id="fnref-SummersAutomatica2010"><a class="footnote-ref" href="#fn-SummersAutomatica2010">5</a></sup>.</p>
+<p>The researchers treat the problem as a Markov decision process and use dynamic
+programming to identify the initial conditions and the optimal control policies.
+However, due to the curse of dimensionality, the application of verification is
+mostly limited to low dimensional systems. Active research is being done on
+developing approximations and exact methods to do verification of
+high-dimensional systems.</p>
+<h3 id="computer-science-point-of-view">Computer science point of view</h3>
+<p>Disclaimer: I have only seen the research from this point of view from the
+sidelines. In other words, I am no expert on this point of view.</p>
+<p>Due to the immense amount of research that has been done in model checking for
+finite state automation and deductive verification, the researchers in this
+camp tackle the problem by modeling the hybrid system as a finite state
+automation using abstraction techniques.</p>
+<div class="footnote">
+<hr>
+<ol>
+<li id="fn-EdwardIEEE1997">
+<p><a href="ieeexplore.ieee.org/document/558710">Proceedings of IEEE 1997, Edward et.  al</a>&nbsp;<a class="footnote-backref" href="#fnref-EdwardIEEE1997" title="Jump back to footnote 1 in the text">↩</a></p>
 </li>
-<li>Rendering on a mobile and an ipad</li>
-<li><a href="http://moparx.com/2014/04/adding-search-capabilities-within-your-pelican-powered-site-using-tipue-search/">Search capabilities</a></li>
-<li>Useful plugins --- Discus</li>
-<li>http://terriyu.info/blog/posts/2013/07/pelican-setup/</li>
-</ul>
-<h1 id="done">Done</h1>
-<ul>
-<li>Create index</li>
-<li>Math rendering</li>
-<li>Tag cloud</li>
-<li>Private articles (IGNORE_FILES in pelicanconf)<ul>
-<li>Generate in localhost but not in the global</li>
-</ul>
+<li id="fn-ClarkeBook1999">
+<p><a href="dl.acm.org/citation.cfm?id=332656">Model checking by Clarke et. al, 1999</a>&nbsp;<a class="footnote-backref" href="#fnref-ClarkeBook1999" title="Jump back to footnote 2 in the text">↩</a></p>
 </li>
-<li>RSS feed --- Feedly compatible</li>
-<li>Editing the CSS files <a href="http://beneathdata.com/how-to/how-i-built-this-website/">Source1</a>,
-<a href="http://algorithmshop.com/20131212-starting-a-blog.html">Source2</a>,<a href="https://spapas.github.io/2013/10/07/pelican-static-windows/">Source3</a>:<ul>
-<li>for the powered by (and other goodies)</li>
-<li>Links</li>
-<li>Description below</li>
-<li>Recent posts limit --- Removed it</li>
-</ul>
+<li id="fn-KaufmannBook2000">
+<p><a href="http://dl.acm.org/citation.cfm?id=555902">Computer Aided Reasoning: An Approach by Kaufmann et.  al.</a>&nbsp;<a class="footnote-backref" href="#fnref-KaufmannBook2000" title="Jump back to footnote 3 in the text">↩</a></p>
 </li>
-</ul>
+<li id="fn-LinBook2000">
+<p><a href="www.nowpublishers.com/article/Details/SYS-001">Hybrid Dynamical Systems: An Introduction to Control and Verification, Lin et.  al</a>&nbsp;<a class="footnote-backref" href="#fnref-LinBook2000" title="Jump back to footnote 4 in the text">↩</a></p>
+</li>
+<li id="fn-SummersAutomatica2010">
+<p><a href="http://linkinghub.elsevier.com/retrieve/pii/S0005109810003547">Automatica 2010, Summers et.
+al</a>&nbsp;<a class="footnote-backref" href="#fnref-SummersAutomatica2010" title="Jump back to footnote 5 in the text">↩</a></p>
+</li>
+</ol>
+</hr></div>
             </div>
             <!-- /.entry-content -->
         </article>
