@@ -41,14 +41,16 @@ for safety critical systems and other systems that need guarantees of their
     system. &lt;/p&gt;
 &lt;p&gt;Historically, there has been two approaches in dealing with the problem of
 verification.&lt;/p&gt;
-&lt;h3 id="control-theory-point-of-view-i-work-on-this-approach"&gt;Control theory point of view  (I work on this approach)&lt;/h3&gt;
+&lt;h3 id="control-theory-point-of-view"&gt;Control theory point of view&lt;/h3&gt;
 &lt;p&gt;Verification is posed as a reach avoid problem where the objective is identify
 the initial conditions and the corresponding control policies under which the
 hybrid system will hit a target set while avoiding an unsafe set over a finite
-time horizon. For stochastic hybrid systems, the control policies try to
-maximize the probability of achieving the reach avoid
-objective&lt;sup id="fnref-SummersAutomatica2010"&gt;&lt;a class="footnote-ref" href="#fn-SummersAutomatica2010"&gt;5&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
-&lt;p&gt;The researchers treat the problem as a Markov decision process and use dynamic
+time horizon. The problem also depends on whether the hybrid system is
+stochastic/deterministic and continuous-/discrete-time system. For discrete-time
+stochastic hybrid systems&lt;sup id="fnref-myInterest"&gt;&lt;a class="footnote-ref" href="#fn-myInterest"&gt;3&lt;/a&gt;&lt;/sup&gt;, the control policies try to maximize the probability
+of achieving the reach avoid objective&lt;sup id="fnref-SummersAutomatica2010"&gt;&lt;a class="footnote-ref" href="#fn-SummersAutomatica2010"&gt;2&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+&lt;p&gt;For stochastic hybrid
+systems, the problem is posed as a Markov decision process and use dynamic
 programming to identify the initial conditions and the optimal control policies.
 However, due to the curse of dimensionality, the application of verification is
 mostly limited to low dimensional systems. Active research is being done on
@@ -58,11 +60,11 @@ high-dimensional systems.&lt;/p&gt;
 &lt;p&gt;Disclaimer: I have only seen the research from this point of view from the
 sidelines. In other words, I am no expert on this point of view.&lt;/p&gt;
 &lt;p&gt;For hybrid systems, it is not straightforward to apply traditional formal
-methods for verification, such as model checking&lt;sup id="fnref-ClarkeBook1999"&gt;&lt;a class="footnote-ref" href="#fn-ClarkeBook1999"&gt;2&lt;/a&gt;&lt;/sup&gt; and deductive
-verification&lt;sup id="fnref-KaufmannBook2000"&gt;&lt;a class="footnote-ref" href="#fn-KaufmannBook2000"&gt;3&lt;/a&gt;&lt;/sup&gt;, to hybrid systems since these methods were
+methods for verification, such as model checking&lt;sup id="fnref-ClarkeBook1999"&gt;&lt;a class="footnote-ref" href="#fn-ClarkeBook1999"&gt;4&lt;/a&gt;&lt;/sup&gt; and deductive
+verification&lt;sup id="fnref-KaufmannBook2000"&gt;&lt;a class="footnote-ref" href="#fn-KaufmannBook2000"&gt;5&lt;/a&gt;&lt;/sup&gt;, to hybrid systems since these methods were
 originally developed for circuits and communication protocols and usually
 require extensive search of all reachable states.  However, this is not possible
-as the states in hybrid systems are uncountable&lt;sup id="fnref-LinBook2000"&gt;&lt;a class="footnote-ref" href="#fn-LinBook2000"&gt;4&lt;/a&gt;&lt;/sup&gt;. The researchers
+as the states in hybrid systems are uncountable&lt;sup id="fnref-LinBook2000"&gt;&lt;a class="footnote-ref" href="#fn-LinBook2000"&gt;6&lt;/a&gt;&lt;/sup&gt;. The researchers
 in this camp tackle the problem by modeling the hybrid system as a finite state
 automation using abstraction techniques.&lt;/p&gt;
 &lt;div class="footnote"&gt;
@@ -71,18 +73,27 @@ automation using abstraction techniques.&lt;/p&gt;
 &lt;li id="fn-EdwardIEEE1997"&gt;
 &lt;p&gt;&lt;a href="ieeexplore.ieee.org/document/558710"&gt;Proceedings of IEEE 1997, Edward et.  al&lt;/a&gt;&amp;nbsp;&lt;a class="footnote-backref" href="#fnref-EdwardIEEE1997" title="Jump back to footnote 1 in the text"&gt;↩&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
-&lt;li id="fn-ClarkeBook1999"&gt;
-&lt;p&gt;&lt;a href="dl.acm.org/citation.cfm?id=332656"&gt;Model checking by Clarke et. al, 1999&lt;/a&gt;&amp;nbsp;&lt;a class="footnote-backref" href="#fnref-ClarkeBook1999" title="Jump back to footnote 2 in the text"&gt;↩&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li id="fn-KaufmannBook2000"&gt;
-&lt;p&gt;&lt;a href="http://dl.acm.org/citation.cfm?id=555902"&gt;Computer Aided Reasoning: An Approach by Kaufmann et.  al.&lt;/a&gt;&amp;nbsp;&lt;a class="footnote-backref" href="#fnref-KaufmannBook2000" title="Jump back to footnote 3 in the text"&gt;↩&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li id="fn-LinBook2000"&gt;
-&lt;p&gt;&lt;a href="www.nowpublishers.com/article/Details/SYS-001"&gt;Hybrid Dynamical Systems: An Introduction to Control and Verification, Lin et.  al&lt;/a&gt;&amp;nbsp;&lt;a class="footnote-backref" href="#fnref-LinBook2000" title="Jump back to footnote 4 in the text"&gt;↩&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
 &lt;li id="fn-SummersAutomatica2010"&gt;
 &lt;p&gt;&lt;a href="http://linkinghub.elsevier.com/retrieve/pii/S0005109810003547"&gt;Automatica 2010, Summers et.
-al&lt;/a&gt;&amp;nbsp;&lt;a class="footnote-backref" href="#fnref-SummersAutomatica2010" title="Jump back to footnote 5 in the text"&gt;↩&lt;/a&gt;&lt;/p&gt;
+al&lt;/a&gt;&amp;nbsp;&lt;a class="footnote-backref" href="#fnref-SummersAutomatica2010" title="Jump back to footnote 2 in the text"&gt;↩&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn-myInterest"&gt;
+&lt;p&gt;This is the type of systems I work with.&amp;nbsp;&lt;a class="footnote-backref" href="#fnref-myInterest" title="Jump back to footnote 3 in the text"&gt;↩&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn-ClarkeBook1999"&gt;
+&lt;p&gt;&lt;a href="dl.acm.org/citation.cfm?id=332656"&gt;Model checking by Clarke et. al, 1999&lt;/a&gt;&amp;nbsp;&lt;a class="footnote-backref" href="#fnref-ClarkeBook1999" title="Jump back to footnote 4 in the text"&gt;↩&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn-KaufmannBook2000"&gt;
+&lt;p&gt;&lt;a href="http://dl.acm.org/citation.cfm?id=555902"&gt;Computer Aided Reasoning: An Approach by Kaufmann et.  al.&lt;/a&gt;&amp;nbsp;&lt;a class="footnote-backref" href="#fnref-KaufmannBook2000" title="Jump back to footnote 5 in the text"&gt;↩&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn-LinBook2000"&gt;
+&lt;p&gt;&lt;a href="www.nowpublishers.com/article/Details/SYS-001"&gt;Hybrid Dynamical Systems: An Introduction to Control and Verification, Lin et.  al&lt;/a&gt;
+&amp;lt;!--&amp;nbsp;&lt;a class="footnote-backref" href="#fnref-LinBook2000" title="Jump back to footnote 6 in the text"&gt;↩&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn-MitchellLvlSet"&gt;
+&lt;p&gt;&lt;a href="https://www.cs.ubc.ca/~mitchell/ToolboxLS/"&gt;https://www.cs.ubc.ca/~mitchell/ToolboxLS/&lt;/a&gt;
+For deterministic continuous-time systems, the reach-avoid problem can solved
+using Level set toolbox methods&lt;sup id="fnref-MitchellLvlSet"&gt;&lt;a class="footnote-ref" href="#fn-MitchellLvlSet"&gt;7&lt;/a&gt;&lt;/sup&gt;. --&amp;gt;&amp;nbsp;&lt;a class="footnote-backref" href="#fnref-MitchellLvlSet" title="Jump back to footnote 7 in the text"&gt;↩&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;/hr&gt;&lt;/div&gt;</content><category term="Verification"></category></entry><entry><title>Blogging using Pelican + Conda + GitHub Pages</title><link href="/blogging-using-pelican-conda-github-pages.html" rel="alternate"></link><published>2016-12-23T03:42:00-07:00</published><updated>2016-12-23T03:42:00-07:00</updated><author><name>Abraham Vinod</name></author><id>tag:None,2016-12-23:/blogging-using-pelican-conda-github-pages.html</id><summary type="html">&lt;p&gt;All the tweaks I did to get my Pelican blog running.&lt;/p&gt;</summary><content type="html">&lt;h2 id="prelude"&gt;Prelude&lt;/h2&gt;
