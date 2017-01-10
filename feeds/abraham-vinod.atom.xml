@@ -38,21 +38,16 @@ for safety critical systems and other systems that need guarantees of their
     proper operations. These are generally embedded systems which have
     components that evolve continuously in time and discrete in time. Therefore,
     researchers generally use hybrid dynamical systems framework to model the
-    system. For hybrid systems, it is not straightforward to apply traditional
-    formal methods for verification, such as model checking&lt;sup id="fnref-ClarkeBook1999"&gt;&lt;a class="footnote-ref" href="#fn-ClarkeBook1999"&gt;2&lt;/a&gt;&lt;/sup&gt; and deductive
-    verification&lt;sup id="fnref-KaufmannBook2000"&gt;&lt;a class="footnote-ref" href="#fn-KaufmannBook2000"&gt;3&lt;/a&gt;&lt;/sup&gt;, to hybrid systems since
-    these methods were originally developed for circuits and communication
-    protocols and usually require extensive search of all reachable states.
-    However, this is not possible as the states in hybrid systems are
-    uncountable&lt;sup id="fnref-LinBook2000"&gt;&lt;a class="footnote-ref" href="#fn-LinBook2000"&gt;4&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+    system. &lt;/p&gt;
 &lt;p&gt;Historically, there has been two approaches in dealing with the problem of
 verification.&lt;/p&gt;
 &lt;h3 id="control-theory-point-of-view-i-work-on-this-approach"&gt;Control theory point of view  (I work on this approach)&lt;/h3&gt;
 &lt;p&gt;Verification is posed as a reach avoid problem where the objective is identify
-the initial conditions and the corresponding control policies that will hit a
-target set while avoiding an unsafe set over a finite time horizon. For
-stochastic systems, the control policies try to maximize the probability of
-achieving the reach avoid objective&lt;sup id="fnref-SummersAutomatica2010"&gt;&lt;a class="footnote-ref" href="#fn-SummersAutomatica2010"&gt;5&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+the initial conditions and the corresponding control policies under which the
+hybrid system will hit a target set while avoiding an unsafe set over a finite
+time horizon. For stochastic hybrid systems, the control policies try to
+maximize the probability of achieving the reach avoid
+objective&lt;sup id="fnref-SummersAutomatica2010"&gt;&lt;a class="footnote-ref" href="#fn-SummersAutomatica2010"&gt;5&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
 &lt;p&gt;The researchers treat the problem as a Markov decision process and use dynamic
 programming to identify the initial conditions and the optimal control policies.
 However, due to the curse of dimensionality, the application of verification is
@@ -62,9 +57,13 @@ high-dimensional systems.&lt;/p&gt;
 &lt;h3 id="computer-science-point-of-view"&gt;Computer science point of view&lt;/h3&gt;
 &lt;p&gt;Disclaimer: I have only seen the research from this point of view from the
 sidelines. In other words, I am no expert on this point of view.&lt;/p&gt;
-&lt;p&gt;Due to the immense amount of research that has been done in model checking for
-finite state automation and deductive verification, the researchers in this
-camp tackle the problem by modeling the hybrid system as a finite state
+&lt;p&gt;For hybrid systems, it is not straightforward to apply traditional formal
+methods for verification, such as model checking&lt;sup id="fnref-ClarkeBook1999"&gt;&lt;a class="footnote-ref" href="#fn-ClarkeBook1999"&gt;2&lt;/a&gt;&lt;/sup&gt; and deductive
+verification&lt;sup id="fnref-KaufmannBook2000"&gt;&lt;a class="footnote-ref" href="#fn-KaufmannBook2000"&gt;3&lt;/a&gt;&lt;/sup&gt;, to hybrid systems since these methods were
+originally developed for circuits and communication protocols and usually
+require extensive search of all reachable states.  However, this is not possible
+as the states in hybrid systems are uncountable&lt;sup id="fnref-LinBook2000"&gt;&lt;a class="footnote-ref" href="#fn-LinBook2000"&gt;4&lt;/a&gt;&lt;/sup&gt;. The researchers
+in this camp tackle the problem by modeling the hybrid system as a finite state
 automation using abstraction techniques.&lt;/p&gt;
 &lt;div class="footnote"&gt;
 &lt;hr&gt;
