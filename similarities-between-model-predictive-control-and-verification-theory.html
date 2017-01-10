@@ -113,9 +113,7 @@ for a given dynamical system which can be driven such that the state reaches a
     certificate of task completion and/or safety is required.</p>
 <p>As always, I thought (wrongly) this field was insular in the sense that it is a
 unique problem worked on only by my peers.</p>
-<p>The other day, I was reading an <a href="http://www.sciencedirect.com/science/article/pii/S0005109806000021">Automatica 2006
-paper</a> by
-Goulart and others. This well-written paper in the robust MPC literature
+<p>The other day, I was reading an . This well-written paper in the robust MPC literature
 discusses optimal control problems on linear systems with disturbance with a
 reach-avoid like objective (Polytopic target and safe sets).
 <!--- Some interesting results (at least I was not aware of it):
@@ -124,13 +122,27 @@ reach-avoid like objective (Polytopic target and safe sets).
 + ADFP is equivalent to ASFP and the resulting optimal control formulation is actually convex (and tractable).
 + Guarantees of constraint satisfaction for MPC based on open loop control in a receding time horizon requires invariance conditions on the terminal set --- Assumption 1 in the paper.
 --></p>
-<p>On the other hand, a similar effort was done in the verification side (<a href="./4 - Verification.md">controls
-side, specifically</a>) is the
-<a href="http://ieeexplore.ieee.org/document/1463302/">Transactions on Automatic Control, 2005</a>
-paper by Mitchell and others. This paper proposes a time-dependent
-differential game setup to answer the question of reach-avoid objective.</p>
+<p>On the other hand, a similar effort was done in the verification
+side<sup id="fnref-verificationBlogPost"><a class="footnote-ref" href="#fn-verificationBlogPost">3</a></sup> which proposed a time-dependent differential game
+setup to answer the question of reach-avoid objective<sup id="fnref-MitchellTAC2005"><a class="footnote-ref" href="#fn-MitchellTAC2005">2</a></sup>.</p>
 <p>It is interesting to see totally different takes on essentially the same
 problem.</p>
+<div class="footnote">
+<hr>
+<ol>
+<li id="fn-GoulartAutomatica2006">
+<p><a href="http://www.sciencedirect.com/science/article/pii/S0005109806000021">Automatica 2006, Goulart et. al
+</a>&nbsp;<a class="footnote-backref" href="#fnref-GoulartAutomatica2006" title="Jump back to footnote 1 in the text">↩</a></p>
+</li>
+<li id="fn-MitchellTAC2005">
+<p><a href="http://ieeexplore.ieee.org/document/1463302/">Transactions on Automatic Control 2005, Mitchell et. al</a>&nbsp;<a class="footnote-backref" href="#fnref-MitchellTAC2005" title="Jump back to footnote 2 in the text">↩</a></p>
+</li>
+<li id="fn-verificationBlogPost">
+<p>My familiarity is on <a href="/what-is-verification.html">verification from control theory
+point of view</a>.&nbsp;<a class="footnote-backref" href="#fnref-verificationBlogPost" title="Jump back to footnote 3 in the text">↩</a></p>
+</li>
+</ol>
+</hr></div>
             </div>
             <!-- /.entry-content -->
         </article>
@@ -164,13 +176,13 @@ problem.</p>
             <li class="list-group-item"><a href="/"><h4><i class="fa fa-tags fa-lg"></i><span class="icon-label">Tags</span></h4></a>
                 <ul class="list-group " id="tags">
                     <li class="list-group-item tag-1">
-                        <a href="/tag/verification.html">
-                            Verification
+                        <a href="/tag/pelican.html">
+                            Pelican
                         </a>
                     </li>
                     <li class="list-group-item tag-1">
-                        <a href="/tag/pelican.html">
-                            Pelican
+                        <a href="/tag/verification.html">
+                            Verification
                         </a>
                     </li>
                     <li class="list-group-item tag-4">
