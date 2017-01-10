@@ -1,5 +1,92 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Notes on the margin - Abraham Vinod</title><link href="/" rel="alternate"></link><link href="/feeds/abraham-vinod.atom.xml" rel="self"></link><id>/</id><updated>2016-12-23T03:42:00-07:00</updated><entry><title>Blogging using Pelican + Conda + GitHub Pages</title><link href="/blogging-using-pelican-conda-github-pages.html" rel="alternate"></link><published>2016-12-23T03:42:00-07:00</published><updated>2016-12-23T03:42:00-07:00</updated><author><name>Abraham Vinod</name></author><id>tag:None,2016-12-23:/blogging-using-pelican-conda-github-pages.html</id><summary type="html">&lt;p&gt;All the tweaks I did to get my Pelican blog running.&lt;/p&gt;</summary><content type="html">&lt;h2 id="prelude"&gt;Prelude&lt;/h2&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Notes on the margin - Abraham Vinod</title><link href="/" rel="alternate"></link><link href="/feeds/abraham-vinod.atom.xml" rel="self"></link><id>/</id><updated>2017-01-09T00:00:00-07:00</updated><entry><title>Similarities between model predictive control and verification theory</title><link href="/similarities-between-model-predictive-control-and-verification-theory.html" rel="alternate"></link><published>2017-01-09T00:00:00-07:00</published><updated>2017-01-09T00:00:00-07:00</updated><author><name>Abraham Vinod</name></author><id>tag:None,2017-01-09:/similarities-between-model-predictive-control-and-verification-theory.html</id><summary type="html">&lt;p&gt;Surprising overlap between two subfields of control theory&lt;/p&gt;</summary><content type="html">&lt;p&gt;One of major research projects is on verification of dynamical systems.
+Specifically, I am interested in characterizing the set of initial conditions
+for a given dynamical system which can be driven such that the state reaches a
+    certain target subset of the state space while avoiding certain unsafe
+    subsets of the state space --- the reach-avoid objective. Needless to say,
+    solving this problem manifests in a lot of real-world challenges where a
+    certificate of task completion and/or safety is required.&lt;/p&gt;
+&lt;p&gt;As always, I thought (wrongly) this field was insular in the sense that it is a
+unique problem worked on only by my peers.&lt;/p&gt;
+&lt;p&gt;The other day, I was reading an &lt;a href="http://www.sciencedirect.com/science/article/pii/S0005109806000021"&gt;Automatica 2006
+paper&lt;/a&gt; by
+Goulart and others. This well-written paper in the robust MPC literature
+discusses optimal control problems on linear systems with disturbance with a
+reach-avoid like objective (Polytopic target and safe sets).
+&lt;!--- Some interesting results (at least I was not aware of it):
++ Two parameterizations of the control policies discussed--- Affine state-feedback parameterization (ASFP) and affine disturbance feedback parameterization (ADFP)
++ ASFP is desired, but the resulting optimal control formulation is generally nonconvex
++ ADFP is equivalent to ASFP and the resulting optimal control formulation is actually convex (and tractable).
++ Guarantees of constraint satisfaction for MPC based on open loop control in a receding time horizon requires invariance conditions on the terminal set --- Assumption 1 in the paper.
+--&gt;&lt;/p&gt;
+&lt;p&gt;On the other hand, a similar effort was done in the verification side (&lt;a href="./4 - Verification.md"&gt;controls
+side, specifically&lt;/a&gt;) is the
+&lt;a href="http://ieeexplore.ieee.org/document/1463302/"&gt;Transactions on Automatic Control, 2005&lt;/a&gt;
+paper by Mitchell and others. This paper proposes a time-dependent
+differential game setup to answer the question of reach-avoid objective.&lt;/p&gt;
+&lt;p&gt;It is interesting to see totally different takes on essentially the same
+problem.&lt;/p&gt;</content><category term="Verification"></category><category term="Model Predictive Control"></category></entry><entry><title>What is verification?</title><link href="/what-is-verification.html" rel="alternate"></link><published>2017-01-09T00:00:00-07:00</published><updated>2017-01-09T00:00:00-07:00</updated><author><name>Abraham Vinod</name></author><id>tag:None,2017-01-09:/what-is-verification.html</id><summary type="html">&lt;p&gt;Discussing the two view points in verification --- the computer science view point and the controls view point&lt;/p&gt;</summary><content type="html">&lt;h2 id="verification"&gt;Verification&lt;/h2&gt;
+&lt;p&gt;Formal verification is the process of mathematically checking that the behavior
+of a system, described using a formal model, satisfies a given property, also
+described using a formal model. The two models may or may not be the same, but
+must share a common semantic interpretation. The ability to carry out formal
+verification is strongly affected by the model of computation, which determines
+decidability and complexity bounds&lt;sup id="fnref-EdwardIEEE1997"&gt;&lt;a class="footnote-ref" href="#fn-EdwardIEEE1997"&gt;1&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+&lt;p&gt;Loosely, verification is meant to provide guarantees of safety (nothing bad will
+happen), liveness (task completion --- eventually something good will happen)
+for safety critical systems and other systems that need guarantees of their
+    proper operations. These are generally embedded systems which have
+    components that evolve continuously in time and discrete in time. Therefore,
+    researchers generally use hybrid dynamical systems framework to model the
+    system. For hybrid systems, it is not straightforward to apply traditional
+    formal methods for verification, such as model checking&lt;sup id="fnref-ClarkeBook1999"&gt;&lt;a class="footnote-ref" href="#fn-ClarkeBook1999"&gt;2&lt;/a&gt;&lt;/sup&gt; and deductive
+    verification&lt;sup id="fnref-KaufmannBook2000"&gt;&lt;a class="footnote-ref" href="#fn-KaufmannBook2000"&gt;3&lt;/a&gt;&lt;/sup&gt;, to hybrid systems since
+    these methods were originally developed for circuits and communication
+    protocols and usually require extensive search of all reachable states.
+    However, this is not possible as the states in hybrid systems are
+    uncountable&lt;sup id="fnref-LinBook2000"&gt;&lt;a class="footnote-ref" href="#fn-LinBook2000"&gt;4&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+&lt;p&gt;Historically, there has been two approaches in dealing with the problem of
+verification.&lt;/p&gt;
+&lt;h3 id="control-theory-point-of-view-i-work-on-this-approach"&gt;Control theory point of view  (I work on this approach)&lt;/h3&gt;
+&lt;p&gt;Verification is posed as a reach avoid problem where the objective is identify
+the initial conditions and the corresponding control policies that will hit a
+target set while avoiding an unsafe set over a finite time horizon. For
+stochastic systems, the control policies try to maximize the probability of
+achieving the reach avoid objective&lt;sup id="fnref-SummersAutomatica2010"&gt;&lt;a class="footnote-ref" href="#fn-SummersAutomatica2010"&gt;5&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+&lt;p&gt;The researchers treat the problem as a Markov decision process and use dynamic
+programming to identify the initial conditions and the optimal control policies.
+However, due to the curse of dimensionality, the application of verification is
+mostly limited to low dimensional systems. Active research is being done on
+developing approximations and exact methods to do verification of
+high-dimensional systems.&lt;/p&gt;
+&lt;h3 id="computer-science-point-of-view"&gt;Computer science point of view&lt;/h3&gt;
+&lt;p&gt;Disclaimer: I have only seen the research from this point of view from the
+sidelines. In other words, I am no expert on this point of view.&lt;/p&gt;
+&lt;p&gt;Due to the immense amount of research that has been done in model checking for
+finite state automation and deductive verification, the researchers in this
+camp tackle the problem by modeling the hybrid system as a finite state
+automation using abstraction techniques.&lt;/p&gt;
+&lt;div class="footnote"&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li id="fn-EdwardIEEE1997"&gt;
+&lt;p&gt;&lt;a href="ieeexplore.ieee.org/document/558710"&gt;Proceedings of IEEE 1997, Edward et.  al&lt;/a&gt;&amp;nbsp;&lt;a class="footnote-backref" href="#fnref-EdwardIEEE1997" title="Jump back to footnote 1 in the text"&gt;↩&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn-ClarkeBook1999"&gt;
+&lt;p&gt;&lt;a href="dl.acm.org/citation.cfm?id=332656"&gt;Model checking by Clarke et. al, 1999&lt;/a&gt;&amp;nbsp;&lt;a class="footnote-backref" href="#fnref-ClarkeBook1999" title="Jump back to footnote 2 in the text"&gt;↩&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn-KaufmannBook2000"&gt;
+&lt;p&gt;&lt;a href="http://dl.acm.org/citation.cfm?id=555902"&gt;Computer Aided Reasoning: An Approach by Kaufmann et.  al.&lt;/a&gt;&amp;nbsp;&lt;a class="footnote-backref" href="#fnref-KaufmannBook2000" title="Jump back to footnote 3 in the text"&gt;↩&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn-LinBook2000"&gt;
+&lt;p&gt;&lt;a href="www.nowpublishers.com/article/Details/SYS-001"&gt;Hybrid Dynamical Systems: An Introduction to Control and Verification, Lin et.  al&lt;/a&gt;&amp;nbsp;&lt;a class="footnote-backref" href="#fnref-LinBook2000" title="Jump back to footnote 4 in the text"&gt;↩&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn-SummersAutomatica2010"&gt;
+&lt;p&gt;&lt;a href="http://linkinghub.elsevier.com/retrieve/pii/S0005109810003547"&gt;Automatica 2010, Summers et.
+al&lt;/a&gt;&amp;nbsp;&lt;a class="footnote-backref" href="#fnref-SummersAutomatica2010" title="Jump back to footnote 5 in the text"&gt;↩&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/hr&gt;&lt;/div&gt;</content><category term="Verification"></category></entry><entry><title>Blogging using Pelican + Conda + GitHub Pages</title><link href="/blogging-using-pelican-conda-github-pages.html" rel="alternate"></link><published>2016-12-23T03:42:00-07:00</published><updated>2016-12-23T03:42:00-07:00</updated><author><name>Abraham Vinod</name></author><id>tag:None,2016-12-23:/blogging-using-pelican-conda-github-pages.html</id><summary type="html">&lt;p&gt;All the tweaks I did to get my Pelican blog running.&lt;/p&gt;</summary><content type="html">&lt;h2 id="prelude"&gt;Prelude&lt;/h2&gt;
 &lt;p&gt;I have been postponing my foray into blogging for some time now. Well, this
 holiday season I decided to present myself with the gift of blogging. I had done
 a bit of blogging using &lt;a href="https://www.dokuwiki.org/"&gt;DokuWiki&lt;/a&gt; back when I was at
