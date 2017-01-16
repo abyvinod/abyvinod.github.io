@@ -24,3 +24,5 @@ generates
 ```Markdown
 [specifically]({filename}4 - Verification.md)
 ```
+- For lists, skip a line and use `1.` for numbered and `+` or `-` for bulleted
+  lists.
