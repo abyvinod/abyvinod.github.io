@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Notes on the margin - Abraham Vinod</title><link href="/" rel="alternate"></link><link href="/feeds/abraham-vinod.atom.xml" rel="self"></link><id>/</id><updated>2017-01-09T00:00:00-07:00</updated><entry><title>Similarities between model predictive control and verification theory</title><link href="/similarities-between-model-predictive-control-and-verification-theory.html" rel="alternate"></link><published>2017-01-09T00:00:00-07:00</published><updated>2017-01-09T00:00:00-07:00</updated><author><name>Abraham Vinod</name></author><id>tag:None,2017-01-09:/similarities-between-model-predictive-control-and-verification-theory.html</id><summary type="html">&lt;p&gt;Surprising overlap between two subfields of control theory&lt;/p&gt;</summary><content type="html">&lt;p&gt;One of major research projects is on verification of dynamical systems.
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Notes on the margin - Abraham Vinod</title><link href="/" rel="alternate"></link><link href="/feeds/abraham-vinod.atom.xml" rel="self"></link><id>/</id><updated>2017-01-15T00:00:00-07:00</updated><entry><title>Tips for learning online</title><link href="/tips-for-learning-online.html" rel="alternate"></link><published>2017-01-15T00:00:00-07:00</published><updated>2017-01-15T00:00:00-07:00</updated><author><name>Abraham Vinod</name></author><id>tag:None,2017-01-15:/tips-for-learning-online.html</id><summary type="html">&lt;p&gt;Some tips I found useful for MOOC based learning&lt;/p&gt;</summary><content type="html">&lt;p&gt;I have used internet to learn several new tools and concepts --- &lt;a href="http://online.stanford.edu/course/convex-optimization-winter-2014"&gt;convex
+optimization&lt;/a&gt;,
+&lt;a href="https://www.coursera.org/learn/machine-learning"&gt;machine learning&lt;/a&gt; to name a
+few. More often than not, I like to keep download the videos and other materials
+for future use. I want to mention couple of tools I use:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href="https://github.com/coursera-dl/coursera-dl"&gt;coursera-dl&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://rg3.github.io/youtube-dl/download.html"&gt;youtube-dl&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.downthemall.net/"&gt;DownThemAll&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;</content><category term="MOOC"></category></entry><entry><title>Similarities between model predictive control and verification theory</title><link href="/similarities-between-model-predictive-control-and-verification-theory.html" rel="alternate"></link><published>2017-01-09T00:00:00-07:00</published><updated>2017-01-09T00:00:00-07:00</updated><author><name>Abraham Vinod</name></author><id>tag:None,2017-01-09:/similarities-between-model-predictive-control-and-verification-theory.html</id><summary type="html">&lt;p&gt;Surprising overlap between two subfields of control theory&lt;/p&gt;</summary><content type="html">&lt;p&gt;One of major research projects is on verification of dynamical systems.
 Specifically, I am interested in characterizing the set of initial conditions
 for a given dynamical system which can be driven such that the state reaches a
     certain target subset of the state space while avoiding certain unsafe
@@ -27,17 +36,17 @@ problem.&lt;/p&gt;
 &lt;ol&gt;
 &lt;li id="fn-GoulartAutomatica2006"&gt;
 &lt;p&gt;&lt;a href="http://www.sciencedirect.com/science/article/pii/S0005109806000021"&gt;Automatica 2006, Goulart et. al
-&lt;/a&gt;&amp;nbsp;&lt;a class="footnote-backref" href="#fnref-GoulartAutomatica2006" title="Jump back to footnote 1 in the text"&gt;↩&lt;/a&gt;&lt;/p&gt;
+&lt;/a&gt;&amp;#160;&lt;a class="footnote-backref" href="#fnref-GoulartAutomatica2006" title="Jump back to footnote 1 in the text"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li id="fn-MitchellTAC2005"&gt;
-&lt;p&gt;&lt;a href="http://ieeexplore.ieee.org/document/1463302/"&gt;Transactions on Automatic Control 2005, Mitchell et. al&lt;/a&gt;&amp;nbsp;&lt;a class="footnote-backref" href="#fnref-MitchellTAC2005" title="Jump back to footnote 2 in the text"&gt;↩&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://ieeexplore.ieee.org/document/1463302/"&gt;Transactions on Automatic Control 2005, Mitchell et. al&lt;/a&gt;&amp;#160;&lt;a class="footnote-backref" href="#fnref-MitchellTAC2005" title="Jump back to footnote 2 in the text"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li id="fn-verificationBlogPost"&gt;
 &lt;p&gt;My familiarity is on &lt;a href="/what-is-verification.html"&gt;verification from control theory
-point of view&lt;/a&gt;.&amp;nbsp;&lt;a class="footnote-backref" href="#fnref-verificationBlogPost" title="Jump back to footnote 3 in the text"&gt;↩&lt;/a&gt;&lt;/p&gt;
+point of view&lt;/a&gt;.&amp;#160;&lt;a class="footnote-backref" href="#fnref-verificationBlogPost" title="Jump back to footnote 3 in the text"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;/hr&gt;&lt;/div&gt;</content><category term="Verification"></category><category term="Model Predictive Control"></category></entry><entry><title>What is verification?</title><link href="/what-is-verification.html" rel="alternate"></link><published>2017-01-08T00:00:00-07:00</published><updated>2017-01-08T00:00:00-07:00</updated><author><name>Abraham Vinod</name></author><id>tag:None,2017-01-08:/what-is-verification.html</id><summary type="html">&lt;p&gt;Discussing the two view points in verification --- the computer science view point and the controls view point&lt;/p&gt;</summary><content type="html">&lt;h2 id="verification"&gt;Verification&lt;/h2&gt;
+&lt;/div&gt;</content><category term="Verification"></category><category term="Model Predictive Control"></category></entry><entry><title>What is verification?</title><link href="/what-is-verification.html" rel="alternate"></link><published>2017-01-08T00:00:00-07:00</published><updated>2017-01-08T00:00:00-07:00</updated><author><name>Abraham Vinod</name></author><id>tag:None,2017-01-08:/what-is-verification.html</id><summary type="html">&lt;p&gt;Discussing the two view points in verification --- the computer science view point and the controls view point&lt;/p&gt;</summary><content type="html">&lt;h2&gt;Verification&lt;/h2&gt;
 &lt;p&gt;Formal verification is the process of mathematically checking that the behavior
 of a system, described using a formal model, satisfies a given property, also
 described using a formal model. The two models may or may not be the same, but
@@ -53,7 +62,7 @@ for safety critical systems and other systems that need guarantees of their
     system. &lt;/p&gt;
 &lt;p&gt;Historically, there has been two approaches in dealing with the problem of
 verification.&lt;/p&gt;
-&lt;h3 id="control-theory-point-of-view"&gt;Control theory point of view&lt;/h3&gt;
+&lt;h3&gt;Control theory point of view&lt;/h3&gt;
 &lt;p&gt;Verification is posed as a reach avoid problem where the objective is identify
 the initial conditions and the corresponding control policies under which the
 hybrid system will hit a target set while avoiding an unsafe set over a finite
@@ -68,7 +77,7 @@ However, due to the curse of dimensionality, the application of verification is
 mostly limited to low dimensional systems. Active research is being done on
 developing approximations and exact methods to do verification of
 high-dimensional systems.&lt;/p&gt;
-&lt;h3 id="computer-science-point-of-view"&gt;Computer science point of view&lt;/h3&gt;
+&lt;h3&gt;Computer science point of view&lt;/h3&gt;
 &lt;p&gt;Disclaimer: I have only seen the research from this point of view from the
 sidelines. In other words, I am no expert on this point of view.&lt;/p&gt;
 &lt;p&gt;For hybrid systems, it is not straightforward to apply traditional formal
@@ -83,30 +92,31 @@ automation using abstraction techniques.&lt;/p&gt;
 [^MitchellLvlSet]: [https://www.cs.ubc.ca/~mitchell/ToolboxLS/](https://www.cs.ubc.ca/~mitchell/ToolboxLS/)
 For deterministic continuous-time systems, the reach-avoid problem can solved
 using Level set toolbox methods[^MitchellLvlSet]. --&gt;
+
 &lt;div class="footnote"&gt;
 &lt;hr&gt;
 &lt;ol&gt;
 &lt;li id="fn-EdwardIEEE1997"&gt;
-&lt;p&gt;&lt;a href="ieeexplore.ieee.org/document/558710"&gt;Proceedings of IEEE 1997, Edward et.  al&lt;/a&gt;&amp;nbsp;&lt;a class="footnote-backref" href="#fnref-EdwardIEEE1997" title="Jump back to footnote 1 in the text"&gt;↩&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="ieeexplore.ieee.org/document/558710"&gt;Proceedings of IEEE 1997, Edward et.  al&lt;/a&gt;&amp;#160;&lt;a class="footnote-backref" href="#fnref-EdwardIEEE1997" title="Jump back to footnote 1 in the text"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li id="fn-SummersAutomatica2010"&gt;
 &lt;p&gt;&lt;a href="http://linkinghub.elsevier.com/retrieve/pii/S0005109810003547"&gt;Automatica 2010, Summers et.
-al&lt;/a&gt;&amp;nbsp;&lt;a class="footnote-backref" href="#fnref-SummersAutomatica2010" title="Jump back to footnote 2 in the text"&gt;↩&lt;/a&gt;&lt;/p&gt;
+al&lt;/a&gt;&amp;#160;&lt;a class="footnote-backref" href="#fnref-SummersAutomatica2010" title="Jump back to footnote 2 in the text"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li id="fn-myInterest"&gt;
-&lt;p&gt;This is the type of systems I work with.&amp;nbsp;&lt;a class="footnote-backref" href="#fnref-myInterest" title="Jump back to footnote 3 in the text"&gt;↩&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;This is the type of systems I work with.&amp;#160;&lt;a class="footnote-backref" href="#fnref-myInterest" title="Jump back to footnote 3 in the text"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li id="fn-ClarkeBook1999"&gt;
-&lt;p&gt;&lt;a href="dl.acm.org/citation.cfm?id=332656"&gt;Model checking by Clarke et. al, 1999&lt;/a&gt;&amp;nbsp;&lt;a class="footnote-backref" href="#fnref-ClarkeBook1999" title="Jump back to footnote 4 in the text"&gt;↩&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="dl.acm.org/citation.cfm?id=332656"&gt;Model checking by Clarke et. al, 1999&lt;/a&gt;&amp;#160;&lt;a class="footnote-backref" href="#fnref-ClarkeBook1999" title="Jump back to footnote 4 in the text"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li id="fn-KaufmannBook2000"&gt;
-&lt;p&gt;&lt;a href="http://dl.acm.org/citation.cfm?id=555902"&gt;Computer Aided Reasoning: An Approach by Kaufmann et.  al.&lt;/a&gt;&amp;nbsp;&lt;a class="footnote-backref" href="#fnref-KaufmannBook2000" title="Jump back to footnote 5 in the text"&gt;↩&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://dl.acm.org/citation.cfm?id=555902"&gt;Computer Aided Reasoning: An Approach by Kaufmann et.  al.&lt;/a&gt;&amp;#160;&lt;a class="footnote-backref" href="#fnref-KaufmannBook2000" title="Jump back to footnote 5 in the text"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li id="fn-LinBook2000"&gt;
-&lt;p&gt;&lt;a href="www.nowpublishers.com/article/Details/SYS-001"&gt;Hybrid Dynamical Systems: An Introduction to Control and Verification, Lin et.  al&lt;/a&gt;&amp;nbsp;&lt;a class="footnote-backref" href="#fnref-LinBook2000" title="Jump back to footnote 6 in the text"&gt;↩&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="www.nowpublishers.com/article/Details/SYS-001"&gt;Hybrid Dynamical Systems: An Introduction to Control and Verification, Lin et.  al&lt;/a&gt;&amp;#160;&lt;a class="footnote-backref" href="#fnref-LinBook2000" title="Jump back to footnote 6 in the text"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;/hr&gt;&lt;/div&gt;</content><category term="Verification"></category></entry><entry><title>Blogging using Pelican + Conda + GitHub Pages</title><link href="/blogging-using-pelican-conda-github-pages.html" rel="alternate"></link><published>2016-12-23T03:42:00-07:00</published><updated>2016-12-23T03:42:00-07:00</updated><author><name>Abraham Vinod</name></author><id>tag:None,2016-12-23:/blogging-using-pelican-conda-github-pages.html</id><summary type="html">&lt;p&gt;All the tweaks I did to get my Pelican blog running.&lt;/p&gt;</summary><content type="html">&lt;h2 id="prelude"&gt;Prelude&lt;/h2&gt;
+&lt;/div&gt;</content><category term="Verification"></category></entry><entry><title>Blogging using Pelican + Conda + GitHub Pages</title><link href="/blogging-using-pelican-conda-github-pages.html" rel="alternate"></link><published>2016-12-23T03:42:00-07:00</published><updated>2016-12-23T03:42:00-07:00</updated><author><name>Abraham Vinod</name></author><id>tag:None,2016-12-23:/blogging-using-pelican-conda-github-pages.html</id><summary type="html">&lt;p&gt;All the tweaks I did to get my Pelican blog running.&lt;/p&gt;</summary><content type="html">&lt;h2&gt;Prelude&lt;/h2&gt;
 &lt;p&gt;I have been postponing my foray into blogging for some time now. Well, this
 holiday season I decided to present myself with the gift of blogging. I had done
 a bit of blogging using &lt;a href="https://www.dokuwiki.org/"&gt;DokuWiki&lt;/a&gt; back when I was at
@@ -122,8 +132,8 @@ especially thank the "Hello World" posts from Mr. Hartley's
 &lt;a href="http://beneathdata.com/how-to/how-i-built-this-website"&gt;blog&lt;/a&gt;, Mr. Vincent's
 &lt;a href="http://algorithmshop.com/20131212-starting-a-blog.html/"&gt;blog&lt;/a&gt;, and Mr.
 Jerome's &lt;a href="http://ntanjerome.org/blog/how-to-setup-github-user-page-with-pelican/"&gt;blog&lt;/a&gt;.&lt;/p&gt;
-&lt;h2 id="how-did-i-get-my-blog-setup"&gt;How did I get my blog setup?&lt;/h2&gt;
-&lt;h3 id="setting-up-conda-and-pelican-in-windows"&gt;Setting up Conda and Pelican in Windows&lt;/h3&gt;
+&lt;h2&gt;How did I get my blog setup?&lt;/h2&gt;
+&lt;h3&gt;Setting up Conda and Pelican in Windows&lt;/h3&gt;
 &lt;p&gt;Requirements:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;a href="https://git-for-windows.github.io/"&gt;msysgit&lt;/a&gt;&lt;sup id="fnref-1"&gt;&lt;a class="footnote-ref" href="#fn-1"&gt;1&lt;/a&gt;&lt;/sup&gt; to emulate the Unix terminal in my PC. &lt;/li&gt;
@@ -133,9 +143,13 @@ Jerome's &lt;a href="http://ntanjerome.org/blog/how-to-setup-github-user-page-wi
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ conda create -n blog &lt;span class="nv"&gt;python&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;3.5       &lt;span class="c1"&gt;# Creates a conda environment blog with Python 3.5&lt;/span&gt;
 $ conda install markdown                &lt;span class="c1"&gt;# Install markdown&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
+
+
 &lt;p&gt;or download the following environment file &lt;a href="stuff/blog.yml"&gt;blog&lt;/a&gt;, and do&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ conda env create -f blog.yml
 &lt;/pre&gt;&lt;/div&gt;
+
+
 &lt;p&gt;Note that pelican-quickstart of pelican (available through the conda-forge
 &lt;a href="https://anaconda.org/conda-forge/pelican"&gt;channel&lt;/a&gt;) does not work. It does
 compile an existing pelican blog without any problems. &lt;/p&gt;
@@ -147,13 +161,17 @@ directory of your choice, say &lt;code&gt;PelicanBase&lt;/code&gt;.&lt;/p&gt;
 $ &lt;span class="nb"&gt;cd&lt;/span&gt; PelicanBase
 $ python setup.py install               &lt;span class="c1"&gt;# Install pelican&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
+
+
 &lt;p&gt;This installs pelican and fab.&lt;/p&gt;
-&lt;h3 id="setting-up-the-blog"&gt;Setting up the blog&lt;/h3&gt;
+&lt;h3&gt;Setting up the blog&lt;/h3&gt;
 &lt;p&gt;At this point, we are now ready to start laying the foundation for the blog.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ mkdir path/to/blog
 $ &lt;span class="nb"&gt;cd&lt;/span&gt; path/to/blog
 $ pelican-quickstart                    
 &lt;/pre&gt;&lt;/div&gt;
+
+
 &lt;!-- 
 # Should have worked, but will fail
 You will have to replace the == in the line number given in the error message
@@ -161,25 +179,30 @@ with &gt;=. See [this
 conversation](https://github.com/getpelican/pelican/issues/2043#issuecomment-268625132)
 for more details. 
 --&gt;
+
 &lt;p&gt;&lt;code&gt;pelican-quickstart&lt;/code&gt; will pose a series of questions that initializes
 your blog.&lt;/p&gt;
-&lt;h3 id="creating-the-first-post"&gt;Creating the first post&lt;/h3&gt;
+&lt;h3&gt;Creating the first post&lt;/h3&gt;
 &lt;p&gt;Create &lt;code&gt;firstPost.md&lt;/code&gt; containing a title and date&lt;sup id="fnref-2"&gt;&lt;a class="footnote-ref" href="#fn-2"&gt;2&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ mkdir content
-$ &lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s1"&gt;'Title: Test content&lt;/span&gt;
-&lt;span class="s1"&gt;&amp;gt; Date: 2016'&lt;/span&gt; &amp;gt; content/firstPost.md      &lt;span class="c1"&gt;# '&amp;gt;' is autogenerated when ENTER is pressed.&lt;/span&gt;
+$ &lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;Title: Test content&lt;/span&gt;
+&lt;span class="s1"&gt;&amp;gt; Date: 2016&amp;#39;&lt;/span&gt; &amp;gt; content/firstPost.md      &lt;span class="c1"&gt;# &amp;#39;&amp;gt;&amp;#39; is autogenerated when ENTER is pressed.&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
-&lt;h3 id="rendering-the-blog"&gt;Rendering the blog&lt;/h3&gt;
+
+
+&lt;h3&gt;Rendering the blog&lt;/h3&gt;
 &lt;p&gt;Fabric is a great tool that works with Pelican to automate publishing.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ fab build                             &lt;span class="c1"&gt;# Builds the blog&lt;/span&gt;
 $ fab serve                             &lt;span class="c1"&gt;# Serves the blog at localhost:8000 while holding up the terminal&lt;/span&gt;
 $ fab regenerate &lt;span class="p"&gt;&amp;amp;&lt;/span&gt; fab serve &lt;span class="p"&gt;&amp;amp;&lt;/span&gt;          &lt;span class="c1"&gt;# Serves the blog at localhost:8000 while freeing the terminal&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
+
+
 &lt;p&gt;I use the third command to work with my blog while typing. The automation
 renders the new blog when the webpage is refreshed. To further automate the
 refreshing (preview style), you can look into plugins for your favorite
 browser. In Firefox, AutoReload is a good add-on.&lt;/p&gt;
-&lt;h3 id="updating-github-pages"&gt;Updating github pages&lt;/h3&gt;
+&lt;h3&gt;Updating github pages&lt;/h3&gt;
 &lt;p&gt;I have used the approach highlighted in &lt;a href="http://ntanjerome.org/blog/how-to-setup-github-user-page-with-pelican/"&gt;this Hello World
 post&lt;/a&gt;.
 To summarize &lt;a href="http://ntanjerome.org/blog/how-to-setup-github-user-page-with-pelican/"&gt;that
@@ -196,137 +219,159 @@ checkout -b source&lt;/code&gt; if you haven't already)&lt;/li&gt;
 to install ghp-import via &lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;pip install --upgrade git+https://github.com/ionelmc/python-ghp-import
 &lt;/pre&gt;&lt;/div&gt;
+
+
 &lt;p&gt;as opposed to the standard Conda installation. &lt;/p&gt;
 &lt;p&gt;Once ghp-import is properly installed, I use the following script to &lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nv"&gt;commitMSG&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="nv"&gt;$1&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nv"&gt;commitMSG&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="nv"&gt;$1&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;
 &lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="nv"&gt;$commitMSG&lt;/span&gt;
 fab build
-git commit -am &lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="nv"&gt;$commitMSG&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;
+git commit -am &lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="nv"&gt;$commitMSG&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;
 ghp-import output
 git checkout master
-git merge gh-pages -m &lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="nv"&gt;$commitMSG&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;
+git merge gh-pages -m &lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="nv"&gt;$commitMSG&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;
 git pull
 git push -u --all
 git checkout &lt;span class="nb"&gt;source&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
+
+
 &lt;p&gt;Future updates at Github with the local copy is now easy.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nb"&gt;source&lt;/span&gt; bp &lt;span class="s2"&gt;"Commit Message"&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nb"&gt;source&lt;/span&gt; bp &lt;span class="s2"&gt;&amp;quot;Commit Message&amp;quot;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
-&lt;h2 id="other-tweaks_1"&gt;Other tweaks&lt;/h2&gt;
-&lt;h3 id="adding-rss"&gt;Adding RSS&lt;/h3&gt;
+
+
+&lt;h2&gt;Other tweaks&lt;/h2&gt;
+&lt;h3&gt;Adding RSS&lt;/h3&gt;
 &lt;p&gt;Include in your &lt;code&gt;pelicanconf.py&lt;/code&gt;, the following lines&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# Feed generation&lt;/span&gt;
-&lt;span class="n"&gt;FEED_ALL_RSS&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;'feeds/all.rss'&lt;/span&gt;
+&lt;span class="n"&gt;FEED_ALL_RSS&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;feeds/all.rss&amp;#39;&lt;/span&gt;
 &lt;span class="n"&gt;FEED_ALL_ATOM&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="bp"&gt;None&lt;/span&gt;
-&lt;span class="n"&gt;CATEGORY_FEED_ATOM&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="bp"&gt;None&lt;/span&gt; &lt;span class="c1"&gt;#'feeds/%s.atom.xml'&lt;/span&gt;
+&lt;span class="n"&gt;CATEGORY_FEED_ATOM&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="bp"&gt;None&lt;/span&gt; &lt;span class="c1"&gt;#&amp;#39;feeds/%s.atom.xml&amp;#39;&lt;/span&gt;
 &lt;span class="n"&gt;TRANSLATION_FEED_ATOM&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="bp"&gt;None&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
-&lt;h3 id="ignoring-drafts"&gt;Ignoring drafts&lt;/h3&gt;
+
+
+&lt;h3&gt;Ignoring drafts&lt;/h3&gt;
 &lt;p&gt;Include in your &lt;code&gt;pelicanconf.py&lt;/code&gt;, the following lines&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# Private sandbox&lt;/span&gt;
-&lt;span class="n"&gt;IGNORE_FILES&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;'0PRIVATE*'&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;  &lt;span class="c1"&gt;# Pelican does not generate html pages for md files starting with 0Private&lt;/span&gt;
+&lt;span class="n"&gt;IGNORE_FILES&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;0PRIVATE*&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;  &lt;span class="c1"&gt;# Pelican does not generate html pages for md files starting with 0Private&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
+
+
 &lt;p&gt;Another
 &lt;a href="http://www.stevenmaude.co.uk/posts/hiding-draft-articles-in-pelican"&gt;option&lt;/a&gt;is
 to use &lt;code&gt;Status: draft&lt;/code&gt; in the markdown article header to ask Pelican to put the
 generated htmls in a separate folder &lt;code&gt;drafts/&lt;/code&gt;. Remember to add this to
 &lt;code&gt;.gitignore&lt;/code&gt; of the master branch to ensure it doesn't get pushed to the
 outside world.&lt;/p&gt;
-&lt;h3 id="pelican-bootstrap3"&gt;Pelican-Bootstrap3&lt;/h3&gt;
+&lt;h3&gt;Pelican-Bootstrap3&lt;/h3&gt;
 &lt;p&gt;Clone &lt;code&gt;pelican-bootstrap3&lt;/code&gt; into the root folder of the blog.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;####################### Theme-Specific Settings #########################&lt;/span&gt;
-&lt;span class="n"&gt;THEME&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;'pelican-bootstrap3'&lt;/span&gt;        &lt;span class="c1"&gt;#'html5-dopetrope'&lt;/span&gt;
+&lt;span class="n"&gt;THEME&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;pelican-bootstrap3&amp;#39;&lt;/span&gt;        &lt;span class="c1"&gt;#&amp;#39;html5-dopetrope&amp;#39;&lt;/span&gt;
 
 &lt;span class="c1"&gt;# Pelican Theme-Specific Variables&lt;/span&gt;
-&lt;span class="n"&gt;BOOTSTRAP_THEME&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;'sandstone'&lt;/span&gt;       &lt;span class="c1"&gt;#'lumen' 'cosmo'&lt;/span&gt;
+&lt;span class="n"&gt;BOOTSTRAP_THEME&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;sandstone&amp;#39;&lt;/span&gt;       &lt;span class="c1"&gt;#&amp;#39;lumen&amp;#39; &amp;#39;cosmo&amp;#39;&lt;/span&gt;
 &lt;span class="n"&gt;SHOW_ARTICLE_CATEGORY&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="bp"&gt;True&lt;/span&gt;
 
-&lt;span class="n"&gt;ABOUT_ME&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;"Blah blah blah"&lt;/span&gt;
+&lt;span class="n"&gt;ABOUT_ME&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Blah blah blah&amp;quot;&lt;/span&gt;
 
-&lt;span class="n"&gt;AVATAR&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;"/images/myphoto.png"&lt;/span&gt;
+&lt;span class="n"&gt;AVATAR&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;/images/myphoto.png&amp;quot;&lt;/span&gt;
 
 &lt;span class="n"&gt;DISPLAY_ARTICLE_INFO_ON_INDEX&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="bp"&gt;True&lt;/span&gt;
 &lt;span class="n"&gt;DISPLAY_RECENT_POSTS_ON_SIDEBAR&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="bp"&gt;False&lt;/span&gt;
 &lt;span class="n"&gt;DISPLAY_TAGS_ON_SIDEBAR&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="bp"&gt;True&lt;/span&gt;
 &lt;span class="n"&gt;SHOW_ARTICLE_CATEGORY&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="bp"&gt;True&lt;/span&gt;
 
-&lt;span class="n"&gt;PYGMENTS_STYLE&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;'monokai'&lt;/span&gt;
+&lt;span class="n"&gt;PYGMENTS_STYLE&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;monokai&amp;#39;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
+
+
 &lt;!---
 #BANNER = "/images/banner.png"
 #SITELOGO = 'images/logo.png'
 #SITELOGO_SIZE = 32
 #FAVICON = 'images/favicon.png'
 ---&gt;
-&lt;h3 id="math-support"&gt;Math support&lt;/h3&gt;
+
+&lt;h3&gt;Math support&lt;/h3&gt;
 &lt;p&gt;I could not get the &lt;code&gt;render_math&lt;/code&gt; plugin to work. I just incorporated MathJax
 into the &lt;code&gt;pelican-bootstrap3\templates\base.html&lt;/code&gt; of my template based on the &lt;a href="http://docs.mathjax.org/en/latest/start.html#tex-and-latex-input"&gt;MathJax
 documentation&lt;/a&gt;.
 Insert the following snippet before the &lt;code&gt;&amp;lt;/head&amp;gt;&lt;/code&gt; tag in &lt;code&gt;base.html&lt;/code&gt;.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;script&lt;/span&gt; &lt;span class="na"&gt;type&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;"text/x-mathjax-config"&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
-  &lt;span class="nx"&gt;MathJax&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;Hub&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;Config&lt;/span&gt;&lt;span class="p"&gt;({&lt;/span&gt;&lt;span class="nx"&gt;tex2jax&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="nx"&gt;inlineMath&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="p"&gt;[[&lt;/span&gt;&lt;span class="s1"&gt;'$'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s1"&gt;'$'&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;'\\('&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s1"&gt;'\\)'&lt;/span&gt;&lt;span class="p"&gt;]]}});&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;script&lt;/span&gt; &lt;span class="na"&gt;type&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;text/x-mathjax-config&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class="nx"&gt;MathJax&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;Hub&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;Config&lt;/span&gt;&lt;span class="p"&gt;({&lt;/span&gt;&lt;span class="nx"&gt;tex2jax&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="nx"&gt;inlineMath&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="p"&gt;[[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;$&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;$&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;\\(&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;\\)&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]]}});&lt;/span&gt;
 &lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;script&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
-&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;script&lt;/span&gt; &lt;span class="na"&gt;type&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;"text/javascript"&lt;/span&gt; &lt;span class="na"&gt;async&lt;/span&gt;
-  &lt;span class="na"&gt;src&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;"https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML"&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;script&lt;/span&gt; &lt;span class="na"&gt;type&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;text/javascript&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;async&lt;/span&gt;
+  &lt;span class="na"&gt;src&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
 &lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;script&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
+
+
 &lt;p&gt;This will produce beautiful math like $x^2$ and $$A_B.$$ &lt;/p&gt;
-&lt;h3 id="plugins"&gt;Plugins&lt;/h3&gt;
+&lt;h3&gt;Plugins&lt;/h3&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;############################ Plugins ######################################&lt;/span&gt;
-&lt;span class="n"&gt;PLUGIN_PATHS&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;'pelican-plugins'&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
-&lt;span class="n"&gt;PLUGINS&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;'pelican-toc'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s1"&gt;'tag_cloud'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s1"&gt;'simple_footnotes'&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;  &lt;span class="c1"&gt;# 'extract_toc', 'feed_summary'&lt;/span&gt;
+&lt;span class="n"&gt;PLUGIN_PATHS&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;pelican-plugins&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;span class="n"&gt;PLUGINS&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;pelican-toc&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;tag_cloud&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;simple_footnotes&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;  &lt;span class="c1"&gt;# &amp;#39;extract_toc&amp;#39;, &amp;#39;feed_summary&amp;#39;&lt;/span&gt;
 &lt;span class="n"&gt;FEED_USE_SUMMARY&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="bp"&gt;True&lt;/span&gt;
 &lt;span class="n"&gt;SUMMARY_MAX_LENGTH&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;100&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
+
+
 &lt;!-- #MD_EXTENSIONS = ['toc', 'fenced_code', 'codehilite(css_class=highlight)',
 'extra'] --&gt;
-&lt;h4 id="table-of-contents"&gt;Table of contents&lt;/h4&gt;
+
+&lt;h4&gt;Table of contents&lt;/h4&gt;
 &lt;p&gt;Insert this block in &lt;code&gt;pelican-bootstrap3\templates\base.html&lt;/code&gt; just above the
 &lt;code&gt;{{article.content}}&lt;/code&gt;.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt; &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;article&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;toc&lt;/span&gt; &lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
-    &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;div&lt;/span&gt; &lt;span class="n"&gt;style&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"border-style: solid;background:lightgrey"&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
-        &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;h3&lt;/span&gt; &lt;span class="n"&gt;style&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"text-align:center"&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;Table&lt;/span&gt; &lt;span class="n"&gt;of&lt;/span&gt; &lt;span class="n"&gt;contents&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="n"&gt;h3&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
-            &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;nav&lt;/span&gt; &lt;span class="n"&gt;class&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"toc"&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;div&lt;/span&gt; &lt;span class="n"&gt;style&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;border-style: solid;background:lightgrey&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
+        &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;h3&lt;/span&gt; &lt;span class="n"&gt;style&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;text-align:center&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;Table&lt;/span&gt; &lt;span class="n"&gt;of&lt;/span&gt; &lt;span class="n"&gt;contents&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="n"&gt;h3&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
+            &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;nav&lt;/span&gt; &lt;span class="n"&gt;class&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;toc&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
             &lt;span class="p"&gt;{{&lt;/span&gt; &lt;span class="n"&gt;article&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;toc&lt;/span&gt; &lt;span class="p"&gt;}}&lt;/span&gt;
             &lt;span class="o"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="n"&gt;nav&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
     &lt;span class="o"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="n"&gt;div&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
 &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt; &lt;span class="n"&gt;endif&lt;/span&gt; &lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
-&lt;h3 id="changing-footer_1"&gt;Changing footer&lt;/h3&gt;
+
+
+&lt;h3&gt;Changing footer&lt;/h3&gt;
 &lt;p&gt;Based on this
 &lt;a href="http://mygeekdaddy.net/2015/01/09/never-change-your-pelican-footer-again/"&gt;article&lt;/a&gt;,
 I updated &lt;code&gt;blog/pelican-bootstrap3/templates/includes/footer.html&lt;/code&gt; with&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;footer&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
-   &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;div&lt;/span&gt; &lt;span class="na"&gt;class&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;"container"&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+   &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;div&lt;/span&gt; &lt;span class="na"&gt;class&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;container&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
       &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;hr&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
-      &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;div&lt;/span&gt; &lt;span class="na"&gt;class&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;"row"&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+      &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;div&lt;/span&gt; &lt;span class="na"&gt;class&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;row&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
          {% if articles %}
-            {% set copy_date = articles[0].date.strftime('%Y') %}
+            {% set copy_date = articles[0].date.strftime(&amp;#39;%Y&amp;#39;) %}
          {% else %}
-            {% set copy_date = '' %}
+            {% set copy_date = &amp;#39;&amp;#39; %}
          {% endif %}
-         &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;div&lt;/span&gt; &lt;span class="na"&gt;class&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;"col-xs-10"&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;&lt;span class="ni"&gt;&amp;amp;copy;&lt;/span&gt; {{ copy_date }} {{ AUTHOR }}
-            &lt;span class="ni"&gt;&amp;amp;middot;&lt;/span&gt; Powered by &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;a&lt;/span&gt; &lt;span class="na"&gt;href&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;"http://docs.getpelican.com/"&lt;/span&gt;
-                &lt;span class="na"&gt;target&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;"_blank"&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;Pelican&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;a&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt; and other  &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;a&lt;/span&gt;
-            &lt;span class="na"&gt;href&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;"http://abyvinod.github.io/setting-up-this-blog-using-the-pelicancondagithub-pages.html"&lt;/span&gt;
-                &lt;span class="na"&gt;target&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;"_blank"&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;goodies&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;a&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;.
+         &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;div&lt;/span&gt; &lt;span class="na"&gt;class&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;col-xs-10&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;&lt;span class="ni"&gt;&amp;amp;copy;&lt;/span&gt; {{ copy_date }} {{ AUTHOR }}
+            &lt;span class="ni"&gt;&amp;amp;middot;&lt;/span&gt; Powered by &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;a&lt;/span&gt; &lt;span class="na"&gt;href&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;http://docs.getpelican.com/&amp;quot;&lt;/span&gt;
+                &lt;span class="na"&gt;target&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;_blank&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;Pelican&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;a&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt; and other  &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;a&lt;/span&gt;
+            &lt;span class="na"&gt;href&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;http://abyvinod.github.io/setting-up-this-blog-using-the-pelicancondagithub-pages.html&amp;quot;&lt;/span&gt;
+                &lt;span class="na"&gt;target&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;_blank&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;goodies&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;a&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;.
          &lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;div&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
-         &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;div&lt;/span&gt; &lt;span class="na"&gt;class&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;"col-xs-2"&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;p&lt;/span&gt; &lt;span class="na"&gt;class&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;"pull-right"&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;i&lt;/span&gt; &lt;span class="na"&gt;class&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;"fa fa-arrow-up"&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;i&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;a&lt;/span&gt; &lt;span class="na"&gt;href&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;"#"&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;Back to top&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;a&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;p&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;div&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+         &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;div&lt;/span&gt; &lt;span class="na"&gt;class&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;col-xs-2&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;p&lt;/span&gt; &lt;span class="na"&gt;class&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;pull-right&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;i&lt;/span&gt; &lt;span class="na"&gt;class&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;fa fa-arrow-up&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;i&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;a&lt;/span&gt; &lt;span class="na"&gt;href&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;#&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;Back to top&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;a&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;p&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;div&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
       &lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;div&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
    &lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;div&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
 &lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;footer&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
+
+
 &lt;div class="footnote"&gt;
 &lt;hr&gt;
 &lt;ol&gt;
 &lt;li id="fn-1"&gt;
-&lt;p&gt;$ sign denotes bash prompt.&amp;nbsp;&lt;a class="footnote-backref" href="#fnref-1" title="Jump back to footnote 1 in the text"&gt;↩&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;$ sign denotes bash prompt.&amp;#160;&lt;a class="footnote-backref" href="#fnref-1" title="Jump back to footnote 1 in the text"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li id="fn-2"&gt;
-&lt;p&gt;Title and date is the minimum requirement for a blog post.&amp;nbsp;&lt;a class="footnote-backref" href="#fnref-2" title="Jump back to footnote 2 in the text"&gt;↩&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Title and date is the minimum requirement for a blog post.&amp;#160;&lt;a class="footnote-backref" href="#fnref-2" title="Jump back to footnote 2 in the text"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;/hr&gt;&lt;/div&gt;</content><category term="Pelican"></category></entry><entry><title>General tips regarding Pelican</title><link href="/general-tips-regarding-pelican.html" rel="alternate"></link><published>2016-12-23T00:00:00-07:00</published><updated>2016-12-23T00:00:00-07:00</updated><author><name>Abraham Vinod</name></author><id>tag:None,2016-12-23:/general-tips-regarding-pelican.html</id><summary type="html">&lt;p&gt;Notes on the margin for using Pelican.&lt;/p&gt;</summary><content type="html">&lt;ul&gt;
+&lt;/div&gt;</content><category term="Pelican"></category></entry><entry><title>General tips regarding Pelican</title><link href="/general-tips-regarding-pelican.html" rel="alternate"></link><published>2016-12-23T00:00:00-07:00</published><updated>2016-12-23T00:00:00-07:00</updated><author><name>Abraham Vinod</name></author><id>tag:None,2016-12-23:/general-tips-regarding-pelican.html</id><summary type="html">&lt;p&gt;Notes on the margin for using Pelican.&lt;/p&gt;</summary><content type="html">&lt;ul&gt;
 &lt;li&gt;Markdown syntax can be found at 
   &lt;a href="https://sourceforge.net/p/pelican-edt/wiki/markdown_syntax/#md_ex_lists"&gt;SourceForge&lt;/a&gt;.&lt;/li&gt;
 &lt;li&gt;For commenting, use the standard HTML comments. (See this &lt;a href="http://stackoverflow.com/a/4829998/1846549"&gt;SO
@@ -338,11 +383,21 @@ writing the language name after the code block command.&lt;/li&gt;
 # Feed generation
 ~~~
 &lt;/pre&gt;&lt;/div&gt;
+
+
 &lt;p&gt;generates&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# Feed generation&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
+
+
 &lt;ul&gt;
 &lt;li&gt;For internal linking, use&lt;/li&gt;
 &lt;/ul&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;[specifically]({filename}4 - Verification.md)
-&lt;/pre&gt;&lt;/div&gt;</content><category term="Pelican"></category></entry></feed>
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;ul&gt;
+&lt;li&gt;For lists, skip a line and use &lt;code&gt;1.&lt;/code&gt; for numbered and &lt;code&gt;+&lt;/code&gt; or &lt;code&gt;-&lt;/code&gt; for bulleted
+  lists.&lt;/li&gt;
+&lt;/ul&gt;</content><category term="Pelican"></category></entry></feed>
