@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Notes on the margin - Abraham Vinod</title><link href="/" rel="alternate"></link><link href="/feeds/abraham-vinod.atom.xml" rel="self"></link><id>/</id><updated>2017-01-09T00:00:00-07:00</updated><entry><title>Similarities between model predictive control and verification theory</title><link href="/similarities-between-model-predictive-control-and-verification-theory.html" rel="alternate"></link><published>2017-01-09T00:00:00-07:00</published><updated>2017-01-09T00:00:00-07:00</updated><author><name>Abraham Vinod</name></author><id>tag:None,2017-01-09:/similarities-between-model-predictive-control-and-verification-theory.html</id><summary type="html">&lt;p&gt;Surprising overlap between two subfields of control theory&lt;/p&gt;</summary><content type="html">&lt;p&gt;One of major research projects is on verification of dynamical systems.
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Notes on the margin - Abraham Vinod</title><link href="/" rel="alternate"></link><link href="/feeds/abraham-vinod.atom.xml" rel="self"></link><id>/</id><updated>2017-01-15T00:00:00-07:00</updated><entry><title>Tips for learning online</title><link href="/tips-for-learning-online.html" rel="alternate"></link><published>2017-01-15T00:00:00-07:00</published><updated>2017-01-15T00:00:00-07:00</updated><author><name>Abraham Vinod</name></author><id>tag:None,2017-01-15:/tips-for-learning-online.html</id><summary type="html">&lt;p&gt;Some tips I found useful for MOOC based learning&lt;/p&gt;</summary><content type="html">&lt;p&gt;I have used internet to learn several new tools and concepts --- &lt;a href="http://online.stanford.edu/course/convex-optimization-winter-2014"&gt;convex
+optimization&lt;/a&gt;,
+&lt;a href="https://www.coursera.org/learn/machine-learning"&gt;machine learning&lt;/a&gt; to name a
+few. More often than not, I like to keep download the videos and other materials
+for future use. I want to mention couple of tools I use:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href="https://github.com/coursera-dl/coursera-dl"&gt;coursera-dl&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://rg3.github.io/youtube-dl/download.html"&gt;youtube-dl&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.downthemall.net/"&gt;DownThemAll&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;</content><category term="MOOC"></category></entry><entry><title>Similarities between model predictive control and verification theory</title><link href="/similarities-between-model-predictive-control-and-verification-theory.html" rel="alternate"></link><published>2017-01-09T00:00:00-07:00</published><updated>2017-01-09T00:00:00-07:00</updated><author><name>Abraham Vinod</name></author><id>tag:None,2017-01-09:/similarities-between-model-predictive-control-and-verification-theory.html</id><summary type="html">&lt;p&gt;Surprising overlap between two subfields of control theory&lt;/p&gt;</summary><content type="html">&lt;p&gt;One of major research projects is on verification of dynamical systems.
 Specifically, I am interested in characterizing the set of initial conditions
 for a given dynamical system which can be driven such that the state reaches a
     certain target subset of the state space while avoiding certain unsafe
@@ -345,4 +354,8 @@ writing the language name after the code block command.&lt;/li&gt;
 &lt;li&gt;For internal linking, use&lt;/li&gt;
 &lt;/ul&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;[specifically]({filename}4 - Verification.md)
-&lt;/pre&gt;&lt;/div&gt;</content><category term="Pelican"></category></entry></feed>
+&lt;/pre&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;For lists, skip a line and use &lt;code&gt;1.&lt;/code&gt; for numbered and &lt;code&gt;+&lt;/code&gt; or &lt;code&gt;-&lt;/code&gt; for bulleted
+  lists.&lt;/li&gt;
+&lt;/ul&gt;</content><category term="Pelican"></category></entry></feed>
