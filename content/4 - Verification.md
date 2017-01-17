@@ -48,16 +48,35 @@ high-dimensional systems.
 
 
 Disclaimer: I have only seen the research from this point of view from the
-sidelines. In other words, I am no expert on this point of view.
+sidelines. In other words, I am no expert on this point of view. I would like to
+acknowledge Sumanth for helping improve this section. More feedback is
+appreciated.
 
 For hybrid systems, it is not straightforward to apply traditional formal
 methods for verification, such as model checking[^ClarkeBook1999] and deductive
 verification[^KaufmannBook2000], to hybrid systems since these methods were
-originally developed for circuits and communication protocols and usually
-require extensive search of all reachable states.  However, this is not possible
-as the states in hybrid systems are uncountable[^LinBook2000]. The researchers
-in this camp tackle the problem by modeling the hybrid system as a finite state
-automation using abstraction techniques.
+originally developed for circuits, and communication protocols
+and usually require extensive search of all reachable states.  However, this is
+not possible as the states in hybrid systems are uncountable[^LinBook2000]. One
+approach used in this camp tackle the problem by modeling the hybrid system as a
+finite state automation using abstraction techniques. Other approaches include
+using SMT solvers and probabilistic model checkers[^Caution]. Do check out these
+interesting links ---
+[Distinguishing Decision Procedure vs SMT solver vs Theorem prover vs Constraint
+solver](http://cs.stackexchange.com/questions/14946/distinguish-decision-procedure-vs-smt-solver-vs-theorem-prover-vs-constraint-sol)
+and [dReach](http://dreal.github.io/dReach/). Some good books in these topics
+are [Klaus Schneider's Verification of reactive
+systems](http://www.springer.com/us/book/9783540002963), [Gerard J. Holzmann's
+Design And Validation Of Computer
+Protocols](https://www.amazon.com/Design-Validation-Computer-Protocols-Holzmann/dp/0135399254),
+and [Amir Pneuli's books](http://cs.nyu.edu/cs/faculty/pnueli/books.html).
+
+## Conclusion
+
+Irrespective of the approach, the goal of these two research camps are the same
+--- provide concrete proof that our intuition-based designs/heuristics will
+actually be safe.
+
 
 <!--
 [^MitchellLvlSet]: [https://www.cs.ubc.ca/~mitchell/ToolboxLS/](https://www.cs.ubc.ca/~mitchell/ToolboxLS/)
@@ -71,3 +90,4 @@ al](http://linkinghub.elsevier.com/retrieve/pii/S0005109810003547)
 [^ClarkeBook1999]: [Model checking by Clarke et. al, 1999](dl.acm.org/citation.cfm?id=332656)
 [^KaufmannBook2000]: [Computer Aided Reasoning: An Approach by Kaufmann et.  al.](http://dl.acm.org/citation.cfm?id=555902)
 [^LinBook2000]: [Hybrid Dynamical Systems: An Introduction to Control and Verification, Lin et.  al](www.nowpublishers.com/article/Details/SYS-001)
+[^Caution]: At this point, I am really out of my depth. 
