@@ -80,8 +80,7 @@ high-dimensional systems.&lt;/p&gt;
 &lt;h3 id="computer-science-point-of-view"&gt;Computer science point of view&lt;/h3&gt;
 &lt;p&gt;Disclaimer: I have only seen the research from this point of view from the
 sidelines. In other words, I am no expert on this point of view. I would like to
-acknowledge Sumanth for helping improve this section. More feedback is
-appreciated.&lt;/p&gt;
+acknowledge Sumanth's contributions for helping improve this section. &lt;/p&gt;
 &lt;p&gt;For hybrid systems, it is not straightforward to apply traditional formal
 methods for verification, such as model checking&lt;sup id="fnref-ClarkeBook1999"&gt;&lt;a class="footnote-ref" href="#fn-ClarkeBook1999"&gt;4&lt;/a&gt;&lt;/sup&gt; and deductive
 verification&lt;sup id="fnref-KaufmannBook2000"&gt;&lt;a class="footnote-ref" href="#fn-KaufmannBook2000"&gt;5&lt;/a&gt;&lt;/sup&gt;, to hybrid systems since these methods were
