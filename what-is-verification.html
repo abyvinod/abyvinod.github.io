@@ -105,7 +105,7 @@ Notes on the margin            </a>
                     <div style="border-style: solid;background:lightgrey">
                         <h3 style="text-align:center"> Table of contents</h3>
                             <nav class="toc">
-                            <div id="toc"><ul><li><a class="toc-href" href="#" title="What is verification?">What is verification?</a><ul><li><a class="toc-href" href="#verification" title="Verification">Verification</a><ul><li><a class="toc-href" href="#control-theory-point-of-view" title="Control theory point of view">Control theory point of view</a></li><li><a class="toc-href" href="#computer-science-point-of-view" title="Computer science point of view">Computer science point of view</a></li></ul></li></ul></li></ul></div>
+                            <div id="toc"><ul><li><a class="toc-href" href="#" title="What is verification?">What is verification?</a><ul><li><a class="toc-href" href="#verification" title="Verification">Verification</a><ul><li><a class="toc-href" href="#control-theory-point-of-view" title="Control theory point of view">Control theory point of view</a></li><li><a class="toc-href" href="#computer-science-point-of-view" title="Computer science point of view">Computer science point of view</a></li></ul></li><li><a class="toc-href" href="#conclusion_1" title="Conclusion">Conclusion</a></li></ul></li></ul></div>
                             </nav>
                     </div>
                 <h2 id="verification">Verification</h2>
@@ -141,15 +141,31 @@ developing approximations and exact methods to do verification of
 high-dimensional systems.</p>
 <h3 id="computer-science-point-of-view">Computer science point of view</h3>
 <p>Disclaimer: I have only seen the research from this point of view from the
-sidelines. In other words, I am no expert on this point of view.</p>
+sidelines. In other words, I am no expert on this point of view. I would like to
+acknowledge Sumanth for helping improve this section. More feedback is
+appreciated.</p>
 <p>For hybrid systems, it is not straightforward to apply traditional formal
 methods for verification, such as model checking<sup id="fnref-ClarkeBook1999"><a class="footnote-ref" href="#fn-ClarkeBook1999">4</a></sup> and deductive
 verification<sup id="fnref-KaufmannBook2000"><a class="footnote-ref" href="#fn-KaufmannBook2000">5</a></sup>, to hybrid systems since these methods were
-originally developed for circuits and communication protocols and usually
-require extensive search of all reachable states.  However, this is not possible
-as the states in hybrid systems are uncountable<sup id="fnref-LinBook2000"><a class="footnote-ref" href="#fn-LinBook2000">6</a></sup>. The researchers
-in this camp tackle the problem by modeling the hybrid system as a finite state
-automation using abstraction techniques.</p>
+originally developed for circuits, and communication protocols
+and usually require extensive search of all reachable states.  However, this is
+not possible as the states in hybrid systems are uncountable<sup id="fnref-LinBook2000"><a class="footnote-ref" href="#fn-LinBook2000">6</a></sup>. One
+approach used in this camp tackle the problem by modeling the hybrid system as a
+finite state automation using abstraction techniques. Other approaches include
+using SMT solvers and probabilistic model checkers<sup id="fnref-Caution"><a class="footnote-ref" href="#fn-Caution">7</a></sup>. Do check out these
+interesting links ---
+<a href="http://cs.stackexchange.com/questions/14946/distinguish-decision-procedure-vs-smt-solver-vs-theorem-prover-vs-constraint-sol">Distinguishing Decision Procedure vs SMT solver vs Theorem prover vs Constraint
+solver</a>
+and <a href="http://dreal.github.io/dReach/">dReach</a>. Some good books in these topics
+are <a href="http://www.springer.com/us/book/9783540002963">Klaus Schneider's Verification of reactive
+systems</a>, <a href="https://www.amazon.com/Design-Validation-Computer-Protocols-Holzmann/dp/0135399254">Gerard J. Holzmann's
+Design And Validation Of Computer
+Protocols</a>,
+and <a href="http://cs.nyu.edu/cs/faculty/pnueli/books.html">Amir Pneuli's books</a>.</p>
+<h2 id="conclusion_1">Conclusion</h2>
+<p>Irrespective of the approach, the goal of these two research camps are the same
+--- provide concrete proof that our intuition-based designs/heuristics will
+actually be safe.</p>
 <!--
 [^MitchellLvlSet]: [https://www.cs.ubc.ca/~mitchell/ToolboxLS/](https://www.cs.ubc.ca/~mitchell/ToolboxLS/)
 For deterministic continuous-time systems, the reach-avoid problem can solved
@@ -175,6 +191,9 @@ al</a>&nbsp;<a class="footnote-backref" href="#fnref-SummersAutomatica2010" titl
 </li>
 <li id="fn-LinBook2000">
 <p><a href="www.nowpublishers.com/article/Details/SYS-001">Hybrid Dynamical Systems: An Introduction to Control and Verification, Lin et.  al</a>&nbsp;<a class="footnote-backref" href="#fnref-LinBook2000" title="Jump back to footnote 6 in the text">↩</a></p>
+</li>
+<li id="fn-Caution">
+<p>At this point, I am really out of my depth. &nbsp;<a class="footnote-backref" href="#fnref-Caution" title="Jump back to footnote 7 in the text">↩</a></p>
 </li>
 </ol>
 </hr></div>
@@ -211,23 +230,23 @@ al</a>&nbsp;<a class="footnote-backref" href="#fnref-SummersAutomatica2010" titl
             <li class="list-group-item"><a href="/"><h4><i class="fa fa-tags fa-lg"></i><span class="icon-label">Tags</span></h4></a>
                 <ul class="list-group " id="tags">
                     <li class="list-group-item tag-1">
-                        <a href="/tag/pelican.html">
-                            Pelican
-                        </a>
-                    </li>
-                    <li class="list-group-item tag-1">
                         <a href="/tag/verification.html">
                             Verification
                         </a>
                     </li>
-                    <li class="list-group-item tag-4">
-                        <a href="/tag/model-predictive-control.html">
-                            Model Predictive Control
+                    <li class="list-group-item tag-1">
+                        <a href="/tag/pelican.html">
+                            Pelican
                         </a>
                     </li>
                     <li class="list-group-item tag-4">
                         <a href="/tag/mooc.html">
                             MOOC
+                        </a>
+                    </li>
+                    <li class="list-group-item tag-4">
+                        <a href="/tag/model-predictive-control.html">
+                            Model Predictive Control
                         </a>
                     </li>
                 </ul>

@@ -79,15 +79,31 @@ developing approximations and exact methods to do verification of
 high-dimensional systems.&lt;/p&gt;
 &lt;h3 id="computer-science-point-of-view"&gt;Computer science point of view&lt;/h3&gt;
 &lt;p&gt;Disclaimer: I have only seen the research from this point of view from the
-sidelines. In other words, I am no expert on this point of view.&lt;/p&gt;
+sidelines. In other words, I am no expert on this point of view. I would like to
+acknowledge Sumanth for helping improve this section. More feedback is
+appreciated.&lt;/p&gt;
 &lt;p&gt;For hybrid systems, it is not straightforward to apply traditional formal
 methods for verification, such as model checking&lt;sup id="fnref-ClarkeBook1999"&gt;&lt;a class="footnote-ref" href="#fn-ClarkeBook1999"&gt;4&lt;/a&gt;&lt;/sup&gt; and deductive
 verification&lt;sup id="fnref-KaufmannBook2000"&gt;&lt;a class="footnote-ref" href="#fn-KaufmannBook2000"&gt;5&lt;/a&gt;&lt;/sup&gt;, to hybrid systems since these methods were
-originally developed for circuits and communication protocols and usually
-require extensive search of all reachable states.  However, this is not possible
-as the states in hybrid systems are uncountable&lt;sup id="fnref-LinBook2000"&gt;&lt;a class="footnote-ref" href="#fn-LinBook2000"&gt;6&lt;/a&gt;&lt;/sup&gt;. The researchers
-in this camp tackle the problem by modeling the hybrid system as a finite state
-automation using abstraction techniques.&lt;/p&gt;
+originally developed for circuits, and communication protocols
+and usually require extensive search of all reachable states.  However, this is
+not possible as the states in hybrid systems are uncountable&lt;sup id="fnref-LinBook2000"&gt;&lt;a class="footnote-ref" href="#fn-LinBook2000"&gt;6&lt;/a&gt;&lt;/sup&gt;. One
+approach used in this camp tackle the problem by modeling the hybrid system as a
+finite state automation using abstraction techniques. Other approaches include
+using SMT solvers and probabilistic model checkers&lt;sup id="fnref-Caution"&gt;&lt;a class="footnote-ref" href="#fn-Caution"&gt;7&lt;/a&gt;&lt;/sup&gt;. Do check out these
+interesting links ---
+&lt;a href="http://cs.stackexchange.com/questions/14946/distinguish-decision-procedure-vs-smt-solver-vs-theorem-prover-vs-constraint-sol"&gt;Distinguishing Decision Procedure vs SMT solver vs Theorem prover vs Constraint
+solver&lt;/a&gt;
+and &lt;a href="http://dreal.github.io/dReach/"&gt;dReach&lt;/a&gt;. Some good books in these topics
+are &lt;a href="http://www.springer.com/us/book/9783540002963"&gt;Klaus Schneider's Verification of reactive
+systems&lt;/a&gt;, &lt;a href="https://www.amazon.com/Design-Validation-Computer-Protocols-Holzmann/dp/0135399254"&gt;Gerard J. Holzmann's
+Design And Validation Of Computer
+Protocols&lt;/a&gt;,
+and &lt;a href="http://cs.nyu.edu/cs/faculty/pnueli/books.html"&gt;Amir Pneuli's books&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id="conclusion_1"&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;Irrespective of the approach, the goal of these two research camps are the same
+--- provide concrete proof that our intuition-based designs/heuristics will
+actually be safe.&lt;/p&gt;
 &lt;!--
 [^MitchellLvlSet]: [https://www.cs.ubc.ca/~mitchell/ToolboxLS/](https://www.cs.ubc.ca/~mitchell/ToolboxLS/)
 For deterministic continuous-time systems, the reach-avoid problem can solved
@@ -113,6 +129,9 @@ al&lt;/a&gt;&amp;nbsp;&lt;a class="footnote-backref" href="#fnref-SummersAutomat
 &lt;/li&gt;
 &lt;li id="fn-LinBook2000"&gt;
 &lt;p&gt;&lt;a href="www.nowpublishers.com/article/Details/SYS-001"&gt;Hybrid Dynamical Systems: An Introduction to Control and Verification, Lin et.  al&lt;/a&gt;&amp;nbsp;&lt;a class="footnote-backref" href="#fnref-LinBook2000" title="Jump back to footnote 6 in the text"&gt;↩&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn-Caution"&gt;
+&lt;p&gt;At this point, I am really out of my depth. &amp;nbsp;&lt;a class="footnote-backref" href="#fnref-Caution" title="Jump back to footnote 7 in the text"&gt;↩&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;/hr&gt;&lt;/div&gt;</content><category term="Verification"></category></entry><entry><title>Blogging using Pelican + Conda + GitHub Pages</title><link href="/blogging-using-pelican-conda-github-pages.html" rel="alternate"></link><published>2016-12-23T03:42:00-07:00</published><updated>2016-12-23T03:42:00-07:00</updated><author><name>Abraham Vinod</name></author><id>tag:None,2016-12-23:/blogging-using-pelican-conda-github-pages.html</id><summary type="html">&lt;p&gt;All the tweaks I did to get my Pelican blog running.&lt;/p&gt;</summary><content type="html">&lt;h2 id="prelude"&gt;Prelude&lt;/h2&gt;
