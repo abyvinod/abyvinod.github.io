@@ -49,8 +49,7 @@ high-dimensional systems.
 
 Disclaimer: I have only seen the research from this point of view from the
 sidelines. In other words, I am no expert on this point of view. I would like to
-acknowledge Sumanth for helping improve this section. More feedback is
-appreciated.
+acknowledge Sumanth's contributions for helping improve this section. 
 
 For hybrid systems, it is not straightforward to apply traditional formal
 methods for verification, such as model checking[^ClarkeBook1999] and deductive
