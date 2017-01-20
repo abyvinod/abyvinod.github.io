@@ -2,7 +2,7 @@
 <html lang="english"
 >
 <head>
-    <title>Similarities between model predictive control and verification theory - Notes on the margin</title>
+    <title>Create bookmarks when including pdfs using pdflatex - Notes on the margin</title>
     <!-- Using the latest rendering mode for IE -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
@@ -10,11 +10,11 @@
 
 
 
-<link rel="canonical" href="/similarities-between-model-predictive-control-and-verification-theory.html">
+<link rel="canonical" href="/create-bookmarks-when-including-pdfs-using-pdflatex.html">
 
         <meta name="author" content="Abraham Vinod" />
-        <meta name="keywords" content="Verification,Model Predictive Control" />
-        <meta name="description" content="Surprising overlap between two subfields of control theory" />
+        <meta name="keywords" content="Latex,Python" />
+        <meta name="description" content="Python code to create bookmarks for latex" />
 
 
 
@@ -51,10 +51,10 @@ Notes on the margin            </a>
         </div>
         <div class="collapse navbar-collapse navbar-ex1-collapse">
             <ul class="nav navbar-nav">
-                        <li class="active">
+                        <li >
                             <a href="/category/control-theory.html">Control theory</a>
                         </li>
-                        <li >
+                        <li class="active">
                             <a href="/category/how-to.html">How to</a>
                         </li>
                         <li >
@@ -77,10 +77,10 @@ Notes on the margin            </a>
         <article>
             <header class="page-header">
                 <h1>
-                    <a href="/similarities-between-model-predictive-control-and-verification-theory.html"
+                    <a href="/create-bookmarks-when-including-pdfs-using-pdflatex.html"
                        rel="bookmark"
-                       title="Permalink to Similarities between model predictive control and verification theory">
-                        Similarities between model predictive control and verification theory
+                       title="Permalink to Create bookmarks when including pdfs using pdflatex">
+                        Create bookmarks when including pdfs using pdflatex
                     </a>
                 </h1>
             </header>
@@ -90,59 +90,69 @@ Notes on the margin            </a>
 <footer class="post-info">
     <span class="label label-default">Date</span>
     <span class="published">
-        <i class="fa fa-calendar"></i><time datetime="2017-01-09T00:00:00-07:00"> Mon 09 January 2017</time>
+        <i class="fa fa-calendar"></i><time datetime="2017-01-20T00:00:00-07:00"> Fri 20 January 2017</time>
     </span>
 
         <span class="label label-default">Category</span>
-        <a href="/category/control-theory.html">Control Theory</a>
+        <a href="/category/how-to.html">How To</a>
 
 
 <span class="label label-default">Tags</span>
-	<a href="/tag/verification.html">Verification</a>
+	<a href="/tag/latex.html">Latex</a>
         /
-	<a href="/tag/model-predictive-control.html">Model Predictive Control</a>
+	<a href="/tag/python.html">Python</a>
     
 </footer><!-- /.post-info -->                    </div>
                 </div>
-                <p>One of major research projects is on verification of dynamical systems.
-Specifically, I am interested in characterizing the set of initial conditions
-for a given dynamical system which can be driven such that the state reaches a
-    certain target subset of the state space while avoiding certain unsafe
-    subsets of the state space --- the reach-avoid objective. Needless to say,
-    solving this problem manifests in a lot of real-world challenges where a
-    certificate of task completion and/or safety is required.</p>
-<p>As always, I thought (wrongly) this field was insular in the sense that it is a
-unique problem worked on only by my peers.</p>
-<p>The other day, I was reading an . This well-written paper in the robust MPC literature
-discusses optimal control problems on linear systems with disturbance with a
-reach-avoid like objective (Polytopic target and safe sets).
-<!--- Some interesting results (at least I was not aware of it):
-+ Two parameterizations of the control policies discussed--- Affine state-feedback parameterization (ASFP) and affine disturbance feedback parameterization (ADFP)
-+ ASFP is desired, but the resulting optimal control formulation is generally nonconvex
-+ ADFP is equivalent to ASFP and the resulting optimal control formulation is actually convex (and tractable).
-+ Guarantees of constraint satisfaction for MPC based on open loop control in a receding time horizon requires invariance conditions on the terminal set --- Assumption 1 in the paper.
---></p>
-<p>On the other hand, a similar effort was done in the verification
-side<sup id="fnref-verificationBlogPost"><a class="footnote-ref" href="#fn-verificationBlogPost">3</a></sup> which proposed a time-dependent differential game
-setup to answer the question of reach-avoid objective<sup id="fnref-MitchellTAC2005"><a class="footnote-ref" href="#fn-MitchellTAC2005">2</a></sup>.</p>
-<p>It is interesting to see totally different takes on essentially the same
-problem.</p>
-<div class="footnote">
-<hr>
-<ol>
-<li id="fn-GoulartAutomatica2006">
-<p><a href="http://www.sciencedirect.com/science/article/pii/S0005109806000021">Automatica 2006, Goulart et. al
-</a>&nbsp;<a class="footnote-backref" href="#fnref-GoulartAutomatica2006" title="Jump back to footnote 1 in the text">↩</a></p>
+                    <div style="border-style: solid;background:lightgrey">
+                        <h3 style="text-align:center"> Table of contents</h3>
+                            <nav class="toc">
+                            <div id="toc"><ul><li><a class="toc-href" href="#" title="Create bookmarks when including pdfs using pdflatex">Create bookmarks when including pdfs using pdflatex</a><ul><li><a class="toc-href" href="#problem" title="Problem">Problem</a></li><li><a class="toc-href" href="#solution" title="Solution">Solution</a></li><li><a class="toc-href" href="#how-do-i-get-set-up" title="How do I get set up?">How do I get set up?</a></li><li><a class="toc-href" href="#how-do-i-run-the-code" title="How do I run the code?">How do I run the code?</a></li><li><a class="toc-href" href="#who-do-i-talk-to" title="Who do I talk to?">Who do I talk to?</a></li></ul></li></ul></div>
+                            </nav>
+                    </div>
+                <p>This is the README file from my <a href="https://bitbucket.org/abyvinod/createbookmarkincludepdf">Bitbucket
+repository</a> for the
+code. Do check it out!</p>
+<h3 id="problem">Problem</h3>
+<p>Extract bookmarks from a pdf that has to be included as is into another pdf
+created using pdflatex. Includepdf package ignores pdf annotations.</p>
+<h3 id="solution">Solution</h3>
+<p>Use pdftk to fetch the annotations, python to parse through these annotations,
+and bookmark package to feed it back to pdflatex.</p>
+<h3 id="how-do-i-get-set-up">How do I get set up?</h3>
+<ul>
+<li>Tested on Python 3.5 and TexLive 2015 with bookmark package installed</li>
+<li>Requires:<ul>
+<li>re, os, subprocess</li>
+<li>pdftk</li>
+</ul>
 </li>
-<li id="fn-MitchellTAC2005">
-<p><a href="http://ieeexplore.ieee.org/document/1463302/">Transactions on Automatic Control 2005, Mitchell et. al</a>&nbsp;<a class="footnote-backref" href="#fnref-MitchellTAC2005" title="Jump back to footnote 2 in the text">↩</a></p>
+</ul>
+<h3 id="how-do-i-run-the-code">How do I run the code?</h3>
+<ul>
+<li>Copy the python script into the folder where the parent tex file resides.</li>
+<li>Edit three variables:<ul>
+<li>filename --- Relative path from the parent tex file to the pdf to be
+  included (without the .pdf extension)</li>
+<li>parentLevel --- Bookmark level at which the pdf is to be included</li>
+<li>createBookmarkForWholePDF --- Flag for setting a bookmark to the
+  to-be-included pdf</li>
+</ul>
 </li>
-<li id="fn-verificationBlogPost">
-<p>My familiarity is on <a href="/what-is-verification.html">verification from control theory
-point of view</a>.&nbsp;<a class="footnote-backref" href="#fnref-verificationBlogPost" title="Jump back to footnote 3 in the text">↩</a></p>
+<li>Run the script
+<code>python createBookmarkIncludePdf.py</code></li>
+<li>The script creates in the folder where the to-be-included-pdf resides two
+  files:<ul>
+<li>filename_Pdfannot.txt --- Annotations as given by the pdftk software</li>
+<li>filename_TexCommands.tex --- Tex commands that is to be included into the
+  parent tex file</li>
+</ul>
 </li>
-</ol>
-</hr></div>
+</ul>
+<h3 id="who-do-i-talk-to">Who do I talk to?</h3>
+<ul>
+<li>Abraham Vinod (aby[dot]vinod[at]gmail[dot]com)</li>
+</ul>
             </div>
             <!-- /.entry-content -->
         </article>
