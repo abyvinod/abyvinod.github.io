@@ -1,6 +1,6 @@
 Title: Blogging using Pelican + Conda + GitHub Pages
 date: 2016-12-23 03:42
-tags: Pelican
+tags: Pelican, Python
 category: How-To
 author: Abraham Vinod
 summary: All the tweaks I did to get my Pelican blog running.

@@ -20,6 +20,9 @@ Status: draft
 + http://terriyu.info/blog/posts/2013/07/pelican-setup/
 # Done
 
++ Fix git problems:
+    + [http://mathamy.com/migrating-to-github-pages-using-pelican.html](http://mathamy.com/migrating-to-github-pages-using-pelican.html)
+    + [https://fedoramagazine.org/make-github-pages-blog-with-pelican/](https://fedoramagazine.org/make-github-pages-blog-with-pelican/)
 + Create index
 + Math rendering
 + Tag cloud
