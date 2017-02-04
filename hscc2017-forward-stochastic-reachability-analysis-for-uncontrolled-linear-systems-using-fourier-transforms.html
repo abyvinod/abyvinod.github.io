@@ -53,13 +53,26 @@ Notes on the margin            </a>
             <ul class="nav navbar-nav">
                     <!-- Addition of My research tag into the header-->
                     <li>
-                        <a href="/pages/about-me.html">About Me</a>
+                        <a href="/pages/about-me.html"><i
+                                class="fa fa-user"></i> About Me</a>
                     </li>
                     <li>
-                        <a href="/tags/my-research.html">My
-                            Research</a>
+                        <a href="/tags/my-research.html"><i
+                                class="fa fa-flask fa-lg"></i> My Research</a>
                     </li>
-                        <li class="active">
+                    <!-- Addition of All tags into the header-->
+                    <li>
+                        <a href="/categories.html"><i
+                                class="fa fa-bookmark fa-lg"></i> Categories</a>
+                    </li>
+                    <li>
+                        <a href="/tags.html"><i class="fa fa-tags
+                                fa-lg"></i> Tags</a>
+                    </li>
+                    <li>
+                        <a href="/feeds/all.rss"><i class="fa fa-rss-square fa-lg"></i> RSS</a>
+                    </li>
+                    <!--                        <li class="active">
                             <a href="/category/control-theory.html">Control theory</a>
                         </li>
                         <li >
@@ -68,10 +81,7 @@ Notes on the margin            </a>
                         <li >
                             <a href="/category/tips.html">Tips</a>
                         </li>
-                    <!-- Addition of All tags into the header-->
-                    <li>
-                        <a href="/tags.html">All tags</a>
-                    </li>
+-->
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="/archives.html"><i class="fa fa-th-list"></i><span class="icon-label">Archives</span></a></li>
@@ -206,7 +216,12 @@ final position for capture.</p>
 discrete-time bivariate Gaussian random process. For Gaussians, the mode and the
 mean coincide. The optimization problem provides the optimal capture position
 while satisfying the constraints.</p>
-<p><img alt="A GIF should have appeared here." src="/images/HSCC2017Gauss.gif"/></p>
+<div class="container">
+<div class="col-md-4"></div>
+<div class="col-md-4" style="padding-left: 0px;  padding-right: 0px;">
+<img class="img-responsive" src="images/HSCC2017Gauss.gif">
+</img></div>
+</div>
 <p>Snapshots<sup id="fnref-GIF"><a class="footnote-ref" href="#fn-GIF">5</a></sup> of optimal capture positions $x_R^\ast[\tau]$ over the time horizon</p>
 <ul>
 <li>The black line shows the mean position trajectory of robot G, </li>
@@ -222,7 +237,12 @@ discrete-time bivariate exponential random process. For exponential random
 vectors, the mode and the mean do not coincide to begin with, making this a
 nontrivial problem. The optimization problem provides the optimal capture
 position while satisfying the constraints.</p>
-<p><img alt="A GIF should have appeared here." src="/images/HSCC2017Exp.gif"/></p>
+<div class="container">
+<div class="col-md-4"></div>
+<div class="col-md-4" style="padding-left: 0px;  padding-right: 0px;">
+<img alt="A GIF should have appeared here." class="img-responsive" src="/images/HSCC2017Exp.gif">
+</img></div>
+</div>
 <p>Snapshots<sup id="fnref-GIF"><a class="footnote-ref" href="#fn-GIF">5</a></sup> of optimal capture positions $x_R^\ast[\tau]$ over the time horizon</p>
 <ul>
 <li>The black line shows the mean position trajectory of robot G, </li>

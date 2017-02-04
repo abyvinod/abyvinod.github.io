@@ -109,7 +109,12 @@ final position for capture.&lt;/p&gt;
 discrete-time bivariate Gaussian random process. For Gaussians, the mode and the
 mean coincide. The optimization problem provides the optimal capture position
 while satisfying the constraints.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="A GIF should have appeared here." src="/images/HSCC2017Gauss.gif"/&gt;&lt;/p&gt;
+&lt;div class="container"&gt;
+&lt;div class="col-md-4"&gt;&lt;/div&gt;
+&lt;div class="col-md-4" style="padding-left: 0px;  padding-right: 0px;"&gt;
+&lt;img class="img-responsive" src="images/HSCC2017Gauss.gif"&gt;
+&lt;/img&gt;&lt;/div&gt;
+&lt;/div&gt;
 &lt;p&gt;Snapshots&lt;sup id="fnref-GIF"&gt;&lt;a class="footnote-ref" href="#fn-GIF"&gt;5&lt;/a&gt;&lt;/sup&gt; of optimal capture positions $x_R^\ast[\tau]$ over the time horizon&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;The black line shows the mean position trajectory of robot G, &lt;/li&gt;
@@ -125,7 +130,12 @@ discrete-time bivariate exponential random process. For exponential random
 vectors, the mode and the mean do not coincide to begin with, making this a
 nontrivial problem. The optimization problem provides the optimal capture
 position while satisfying the constraints.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="A GIF should have appeared here." src="/images/HSCC2017Exp.gif"/&gt;&lt;/p&gt;
+&lt;div class="container"&gt;
+&lt;div class="col-md-4"&gt;&lt;/div&gt;
+&lt;div class="col-md-4" style="padding-left: 0px;  padding-right: 0px;"&gt;
+&lt;img alt="A GIF should have appeared here." class="img-responsive" src="/images/HSCC2017Exp.gif"&gt;
+&lt;/img&gt;&lt;/div&gt;
+&lt;/div&gt;
 &lt;p&gt;Snapshots&lt;sup id="fnref-GIF"&gt;&lt;a class="footnote-ref" href="#fn-GIF"&gt;5&lt;/a&gt;&lt;/sup&gt; of optimal capture positions $x_R^\ast[\tau]$ over the time horizon&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;The black line shows the mean position trajectory of robot G, &lt;/li&gt;
@@ -490,6 +500,7 @@ are not archived and are treated as "static pages".&lt;/p&gt;
 &lt;span class="c1"&gt;# Below commands will generate SITEURL/tags.html which will have the list of tags&lt;/span&gt;
 &lt;span class="n"&gt;TAG_SAVE_AS&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;'tags/{slug}.html'&lt;/span&gt;
 &lt;span class="n"&gt;TAGS_SAVE_AS&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;'tags.html'&lt;/span&gt;
+&lt;span class="n"&gt;CATEGORIES_SAVE_AS&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;'categories.html'&lt;/span&gt;
 &lt;span class="n"&gt;DIRECT_TEMPLATES&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;'index'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s1"&gt;'tags'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s1"&gt;'categories'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s1"&gt;'archives'&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;!---
@@ -501,19 +512,30 @@ are not archived and are treated as "static pages".&lt;/p&gt;
 #FAVICON = 'images/favicon.png'
 ---&gt;
 &lt;h3 id="reducing-the-figure-size"&gt;Reducing the figure size&lt;/h3&gt;
+&lt;h4 id="option-1-not-preferred-but-requires-less-editing-with-existing-images"&gt;Option 1 (Not preferred; but requires less editing with existing images)&lt;/h4&gt;
 &lt;p&gt;Edit the &lt;code&gt;.entry-content img&lt;/code&gt; in &lt;code&gt;pelican-bootstrap3/static/css/style.css&lt;/code&gt; to
-have a &lt;code&gt;max-width&lt;/code&gt; of 80%. This ensures my MATLAB generated files are not
-displayed very big (See &lt;a href="/hscc2017-forward-stochastic-reachability-analysis-for-uncontrolled-linear-systems-using-fourier-transforms.html"&gt;this blog post&lt;/a&gt;).&lt;/p&gt;
-&lt;h3 id="custom-header-bar"&gt;Custom header bar&lt;/h3&gt;
+have a &lt;code&gt;max-width&lt;/code&gt; of 80%. 
+&lt;!--This ensures my MATLAB generated files are not
+displayed very big (See &lt;a href="/hscc2017-forward-stochastic-reachability-analysis-for-uncontrolled-linear-systems-using-fourier-transforms.html"&gt;this blog post&lt;/a&gt;).--&gt;&lt;/p&gt;
+&lt;h4 id="option-2-preferred"&gt;Option 2 (Preferred)&lt;/h4&gt;
+&lt;p&gt;Include images using the following HTML code directly into your Markdown file.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;div&lt;/span&gt; &lt;span class="na"&gt;class&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;"container"&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;div&lt;/span&gt; &lt;span class="na"&gt;class&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;"col-md-4"&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;div&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;div&lt;/span&gt; &lt;span class="na"&gt;class&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;"col-md-4"&lt;/span&gt; &lt;span class="na"&gt;style&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;"padding-left: 0px;  padding-right: 0px;"&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+        &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;img&lt;/span&gt; &lt;span class="na"&gt;alt&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;"ALT text."&lt;/span&gt; &lt;span class="na"&gt;src&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;"/path/to/image"&lt;/span&gt; &lt;span class="na"&gt;class&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;"img-responsive"&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;div&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;div&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;h3 id="custom-header-bar_1"&gt;Custom header bar&lt;/h3&gt;
 &lt;p&gt;Add the following block within the if loop but just above the code 
 &lt;code&gt;{% for cat, null in categories %}&lt;/code&gt; in &lt;code&gt;pelican-bootstrap3/templates/base.html&lt;/code&gt;.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c"&gt;&amp;lt;!-- Addition of My research tag into the header--&amp;gt;&lt;/span&gt;
-&lt;span class="nt"&gt;&amp;lt;li&amp;gt;&lt;/span&gt;
-    &lt;span class="nt"&gt;&amp;lt;a&lt;/span&gt; &lt;span class="na"&gt;href=&lt;/span&gt;&lt;span class="s"&gt;"&lt;/span&gt;&lt;span class="cp"&gt;{{&lt;/span&gt; &lt;span class="nv"&gt;SITEURL&lt;/span&gt; &lt;span class="cp"&gt;}}&lt;/span&gt;&lt;span class="s"&gt;/tags/my-research.html"&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;My
-        Research&lt;span class="nt"&gt;&amp;lt;/a&amp;gt;&lt;/span&gt;
-&lt;span class="nt"&gt;&amp;lt;/li&amp;gt;&lt;/span&gt;
+&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;li&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;a&lt;/span&gt; &lt;span class="na"&gt;href&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;"{{ SITEURL }}/tags/my-research.html"&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;i&lt;/span&gt;
+            &lt;span class="na"&gt;class&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;"fa fa-flask fa-lg"&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;i&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt; My Research&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;a&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;li&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;The &lt;code&gt;About Me&lt;/code&gt; page and the page of all tags are also added to the custom header.&lt;/p&gt;
+&lt;p&gt;The &lt;code&gt;About Me&lt;/code&gt; page, tags list, categories list, and RSS feed were also added to the custom header.&lt;/p&gt;
 &lt;h3 id="custom-icons-in-social"&gt;Custom icons in social&lt;/h3&gt;
 &lt;p&gt;Check for the unicode of the desired icon in
 &lt;a href="http://fontawesome.io"&gt;http://fontawesome.io&lt;/a&gt;. If you would like to add this
