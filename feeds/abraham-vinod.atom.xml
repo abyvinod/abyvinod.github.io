@@ -6,12 +6,12 @@ hscc2017.md"&gt;here&lt;/a&gt; .&lt;/p&gt;
 the Arxiv's wizard. It is there on their FAQs.&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;Arxiv does not accept &lt;code&gt;.bib&lt;/code&gt; files. Instead, we have to upload the &lt;code&gt;.bbl&lt;/code&gt;
-fle. &lt;sup id="fnref-bbl"&gt;&lt;a class="footnote-ref" href="#fn-bbl"&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/li&gt;
+file. &lt;sup id="fnref-bbl"&gt;&lt;a class="footnote-ref" href="#fn-bbl"&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/li&gt;
 &lt;li&gt;Arxiv does not accept &lt;code&gt;.pdf&lt;/code&gt; files when generated using TeX. We have to
 upload the tex files, necessary figures, style files, and the &lt;code&gt;.bbl&lt;/code&gt; file.
 &lt;sup id="fnref-thingsneeded"&gt;&lt;a class="footnote-ref" href="#fn-thingsneeded"&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/li&gt;
 &lt;li&gt;Adding multiple items on Arxiv is a pain. The best way to accomplish this is
-to &lt;code&gt;zip&lt;/code&gt; all the required files, and then upload the zip. Arxiv can process
+to &lt;code&gt;zip&lt;/code&gt; all the required files and then upload the zip. Arxiv can process
 &lt;code&gt;zip&lt;/code&gt; and &lt;code&gt;tar.gz&lt;/code&gt;.&lt;sup id="fnref-zipping"&gt;&lt;a class="footnote-ref" href="#fn-zipping"&gt;3&lt;/a&gt;&lt;/sup&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;div class="footnote"&gt;
@@ -56,10 +56,10 @@ capture of a non-adversarial uncontrolled target (with stochastic dynamics) by a
 controlled robot (with deterministic dynamics).&lt;/p&gt;
 &lt;h1 id="what-is-so-great-about-this-work"&gt;What is so great about this work?&lt;/h1&gt;
 &lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;Not an Eulerian method (not a grid based method)&lt;/strong&gt;: This implies that we
+&lt;li&gt;&lt;strong&gt;Not a Eulerian method (not a grid-based method)&lt;/strong&gt;: This implies that we
 can mitigate the &lt;a href="https://en.wikipedia.org/wiki/Curse_of_dimensionality"&gt;curse of
 dimensionality&lt;/a&gt;. Existing
-approaches of performing forward stochastic reachability analysis is through
+approaches of performing forward stochastic reachability analysis are through
 dynamic programming&lt;sup id="fnref-SummersAutomatica2010"&gt;&lt;a class="footnote-ref" href="#fn-SummersAutomatica2010"&gt;3&lt;/a&gt;&lt;/sup&gt; and inverted dynamics. Dynamic
 programming can not be applied to dimensions higher than 5.&lt;/li&gt;
 &lt;li&gt;Can handle &lt;strong&gt;unbounded stochastic disturbances&lt;/strong&gt; and is &lt;strong&gt;not restricted to
@@ -70,7 +70,7 @@ provided&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Convex optimization formulation&lt;/strong&gt; for non-adversarial stochastically moving
 target problem&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Applications&lt;/strong&gt;: Usefulness demonstrated for stochastic motion planning
-problems. We also anticipate application of this method in obstacle avoidance,
+problems. We also anticipate the application of this method in obstacle avoidance,
 aircraft trajectory planning, and other venues.&lt;/li&gt;
 &lt;/ol&gt;
 &lt;h1 id="where-are-some-beautiful-plots"&gt;Where are some beautiful plots?&lt;/h1&gt;
@@ -122,7 +122,7 @@ capture corresponding to $x_R^\ast[\tau]$.&lt;/li&gt;
 &lt;h2 id="case-2-robot-g-has-double-integrator-dynamics-and-exponential-perturbed-dynamics"&gt;Case 2: Robot G has double integrator dynamics and exponential perturbed dynamics&lt;/h2&gt;
 &lt;p&gt;Robot G has double integrator dynamics discretized in time with 'inputs' as a
 discrete-time bivariate exponential random process. For exponential random
-vectors, the mode and the mean does not coincide to begin with, making this a
+vectors, the mode and the mean do not coincide to begin with, making this a
 nontrivial problem. The optimization problem provides the optimal capture
 position while satisfying the constraints.&lt;/p&gt;
 &lt;p&gt;&lt;img alt="A GIF should have appeared here." src="/images/HSCC2017Exp.gif"/&gt;&lt;/p&gt;
@@ -142,7 +142,7 @@ find the MATLAB code for generating these figures on my &lt;a href=""&gt;webpage
 &lt;hr&gt;
 &lt;ol&gt;
 &lt;li id="fn-systems"&gt;
-&lt;p&gt;This class of systems include affine noise perturbed LTI
+&lt;p&gt;This class of systems includes affine noise perturbed LTI
 discrete-time systems with known state feedback. The work is also applicable to
 affine noise perturbed LTI discrete-time systems with open loop controllers
 after some minor modifications.&amp;nbsp;&lt;a class="footnote-backref" href="#fnref-systems" title="Jump back to footnote 1 in the text"&gt;↩&lt;/a&gt;&lt;/p&gt;
@@ -157,7 +157,7 @@ al&lt;/a&gt;&amp;nbsp;&lt;a class="footnote-backref" href="#fnref-SummersAutomat
 &lt;/li&gt;
 &lt;li id="fn-robotG"&gt;
 &lt;p&gt;Here, open-loop controller refers to the fact that the control
-actions taken by robot R is independent of the actual current position of robot
+actions taken by robot R are independent of the actual current position of robot
 G, which is a realization of the random process $x_G[\cdot]$.&amp;nbsp;&lt;a class="footnote-backref" href="#fnref-robotG" title="Jump back to footnote 4 in the text"&gt;↩&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li id="fn-GIF"&gt;
@@ -207,16 +207,16 @@ and bookmark package to feed it back to pdflatex.&lt;/p&gt;
 &lt;h2 id="who-do-i-talk-to"&gt;Who do I talk to?&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;Abraham Vinod (aby[dot]vinod[at]gmail[dot]com)&lt;/li&gt;
-&lt;/ul&gt;</content><category term="Latex"></category><category term="Python"></category></entry><entry><title>Tips for learning online</title><link href="/tips-for-learning-online.html" rel="alternate"></link><published>2017-01-15T00:00:00-07:00</published><updated>2017-01-15T00:00:00-07:00</updated><author><name>Abraham Vinod</name></author><id>tag:None,2017-01-15:/tips-for-learning-online.html</id><summary type="html">&lt;p&gt;Some tips I found useful for MOOC based learning&lt;/p&gt;</summary><content type="html">&lt;p&gt;I have used internet to learn several new tools and concepts --- &lt;a href="http://online.stanford.edu/course/convex-optimization-winter-2014"&gt;convex
+&lt;/ul&gt;</content><category term="Latex"></category><category term="Python"></category></entry><entry><title>Tips for learning online</title><link href="/tips-for-learning-online.html" rel="alternate"></link><published>2017-01-15T00:00:00-07:00</published><updated>2017-01-15T00:00:00-07:00</updated><author><name>Abraham Vinod</name></author><id>tag:None,2017-01-15:/tips-for-learning-online.html</id><summary type="html">&lt;p&gt;Some tips I found useful for MOOC-based learning&lt;/p&gt;</summary><content type="html">&lt;p&gt;I have used the internet to learn several new tools and concepts --- &lt;a href="http://online.stanford.edu/course/convex-optimization-winter-2014"&gt;convex
 optimization&lt;/a&gt;,
 &lt;a href="https://www.coursera.org/learn/machine-learning"&gt;machine learning&lt;/a&gt; to name a
 few. More often than not, I like to keep download the videos and other materials
-for future use. I want to mention couple of tools I use:&lt;/p&gt;
+for future use. I want to mention a couple of tools I use:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;a href="https://github.com/coursera-dl/coursera-dl"&gt;coursera-dl&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://rg3.github.io/youtube-dl/download.html"&gt;youtube-dl&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://www.downthemall.net/"&gt;DownThemAll&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;</content><category term="MOOC"></category></entry><entry><title>Similarities between model predictive control and verification theory</title><link href="/similarities-between-model-predictive-control-and-verification-theory.html" rel="alternate"></link><published>2017-01-09T00:00:00-07:00</published><updated>2017-01-09T00:00:00-07:00</updated><author><name>Abraham Vinod</name></author><id>tag:None,2017-01-09:/similarities-between-model-predictive-control-and-verification-theory.html</id><summary type="html">&lt;p&gt;Surprising overlap between two subfields of control theory&lt;/p&gt;</summary><content type="html">&lt;p&gt;One of major research projects is on verification of dynamical systems.
+&lt;/ol&gt;</content><category term="MOOC"></category></entry><entry><title>Similarities between model predictive control and verification theory</title><link href="/similarities-between-model-predictive-control-and-verification-theory.html" rel="alternate"></link><published>2017-01-09T00:00:00-07:00</published><updated>2017-01-09T00:00:00-07:00</updated><author><name>Abraham Vinod</name></author><id>tag:None,2017-01-09:/similarities-between-model-predictive-control-and-verification-theory.html</id><summary type="html">&lt;p&gt;Surprising overlap between two subfields of control theory&lt;/p&gt;</summary><content type="html">&lt;p&gt;One of my major research projects is on verification of dynamical systems.
 Specifically, I am interested in characterizing the set of initial conditions
 for a given dynamical system which can be driven such that the state reaches a
     certain target subset of the state space while avoiding certain unsafe
@@ -225,7 +225,7 @@ for a given dynamical system which can be driven such that the state reaches a
     certificate of task completion and/or safety is required.&lt;/p&gt;
 &lt;p&gt;As always, I thought (wrongly) this field was insular in the sense that it is a
 unique problem worked on only by my peers.&lt;/p&gt;
-&lt;p&gt;The other day, I was reading an . This well-written paper in the robust MPC literature
+&lt;p&gt;The other day, I was reading an Automatica paper&lt;sup id="fnref-GoulartAutomatica2006"&gt;&lt;a class="footnote-ref" href="#fn-GoulartAutomatica2006"&gt;1&lt;/a&gt;&lt;/sup&gt;. This well-written paper in the robust MPC literature
 discusses optimal control problems on linear systems with disturbance with a
 reach-avoid like objective (Polytopic target and safe sets).
 &lt;!--- Some interesting results (at least I was not aware of it):
@@ -254,7 +254,7 @@ problem.&lt;/p&gt;
 point of view&lt;/a&gt;.&amp;nbsp;&lt;a class="footnote-backref" href="#fnref-verificationBlogPost" title="Jump back to footnote 3 in the text"&gt;↩&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;/hr&gt;&lt;/div&gt;</content><category term="Verification"></category><category term="Model Predictive Control"></category></entry><entry><title>What is verification?</title><link href="/what-is-verification.html" rel="alternate"></link><published>2017-01-08T00:00:00-07:00</published><updated>2017-01-08T00:00:00-07:00</updated><author><name>Abraham Vinod</name></author><id>tag:None,2017-01-08:/what-is-verification.html</id><summary type="html">&lt;p&gt;Discussing the two view points in verification --- the computer science view point and the controls view point&lt;/p&gt;</summary><content type="html">&lt;h1 id="verification"&gt;Verification&lt;/h1&gt;
+&lt;/hr&gt;&lt;/div&gt;</content><category term="Verification"></category><category term="Model Predictive Control"></category></entry><entry><title>What is verification?</title><link href="/what-is-verification.html" rel="alternate"></link><published>2017-01-08T00:00:00-07:00</published><updated>2017-01-08T00:00:00-07:00</updated><author><name>Abraham Vinod</name></author><id>tag:None,2017-01-08:/what-is-verification.html</id><summary type="html">&lt;p&gt;Discussing the two viewpoints in verification --- the computer science viewpoint and the controls viewpoint&lt;/p&gt;</summary><content type="html">&lt;h1 id="verification"&gt;Verification&lt;/h1&gt;
 &lt;p&gt;Formal verification is the process of mathematically checking that the behavior
 of a system, described using a formal model, satisfies a given property, also
 described using a formal model. The two models may or may not be the same, but
@@ -271,7 +271,7 @@ for safety critical systems and other systems that need guarantees of their
 &lt;p&gt;Historically, there has been two approaches in dealing with the problem of
 verification.&lt;/p&gt;
 &lt;h2 id="control-theory-point-of-view"&gt;Control theory point of view&lt;/h2&gt;
-&lt;p&gt;Verification is posed as a reach avoid problem where the objective is identify
+&lt;p&gt;Verification is posed as a reach avoid problem where the objective is to identify
 the initial conditions and the corresponding control policies under which the
 hybrid system will hit a target set while avoiding an unsafe set over a finite
 time horizon. The problem also depends on whether the hybrid system is
@@ -292,16 +292,16 @@ acknowledge Sumanth's contributions for helping improve this section. &lt;/p&gt;
 &lt;p&gt;For hybrid systems, it is not straightforward to apply traditional formal
 methods for verification, such as model checking&lt;sup id="fnref-ClarkeBook1999"&gt;&lt;a class="footnote-ref" href="#fn-ClarkeBook1999"&gt;4&lt;/a&gt;&lt;/sup&gt; and deductive
 verification&lt;sup id="fnref-KaufmannBook2000"&gt;&lt;a class="footnote-ref" href="#fn-KaufmannBook2000"&gt;5&lt;/a&gt;&lt;/sup&gt;, to hybrid systems since these methods were
-originally developed for circuits, and communication protocols
-and usually require extensive search of all reachable states.  However, this is
-not possible as the states in hybrid systems are uncountable&lt;sup id="fnref-LinBook2000"&gt;&lt;a class="footnote-ref" href="#fn-LinBook2000"&gt;6&lt;/a&gt;&lt;/sup&gt;. One
+originally developed for circuits and communication protocols
+and usually require an extensive search of all reachable states.  However, this is
+not possible as the states in hybrid systems are uncountable&lt;sup id="fnref-LinBook2000"&gt;&lt;a class="footnote-ref" href="#fn-LinBook2000"&gt;6&lt;/a&gt;&lt;/sup&gt;. An
 approach used in this camp tackle the problem by modeling the hybrid system as a
 finite state automation using abstraction techniques. Other approaches include
 using SMT solvers and probabilistic model checkers&lt;sup id="fnref-Caution"&gt;&lt;a class="footnote-ref" href="#fn-Caution"&gt;7&lt;/a&gt;&lt;/sup&gt;. Do check out these
 interesting links ---
 &lt;a href="http://cs.stackexchange.com/questions/14946/distinguish-decision-procedure-vs-smt-solver-vs-theorem-prover-vs-constraint-sol"&gt;Distinguishing Decision Procedure vs SMT solver vs Theorem prover vs Constraint
 solver&lt;/a&gt;
-and &lt;a href="http://dreal.github.io/dReach/"&gt;dReach&lt;/a&gt;. Some good books in these topics
+and &lt;a href="http://dreal.github.io/dReach/"&gt;dReach&lt;/a&gt;. Some good books on these topics
 are &lt;a href="http://www.springer.com/us/book/9783540002963"&gt;Klaus Schneider's Verification of reactive
 systems&lt;/a&gt;, &lt;a href="https://www.amazon.com/Design-Validation-Computer-Protocols-Holzmann/dp/0135399254"&gt;Gerard J. Holzmann's
 Design And Validation Of Computer
@@ -345,14 +345,14 @@ al&lt;/a&gt;&amp;nbsp;&lt;a class="footnote-backref" href="#fnref-SummersAutomat
 &lt;p&gt;I have been postponing my foray into blogging for some time now. Well, this
 holiday season I decided to present myself with the gift of blogging. I had done
 a bit of blogging using &lt;a href="https://www.dokuwiki.org/"&gt;DokuWiki&lt;/a&gt; back when I was at
-IIT Madras, but my site was hacked due to my neglience of the security settings.
+IIT Madras, but my site was hacked due to my negligence of the security settings.
 To make things simple, I am choosing a static website for blogging this time. I will
 stick with &lt;a href="https://blog.getpelican.com/"&gt;Pelican&lt;/a&gt; due to my comfort level with
 Python. &lt;/p&gt;
 &lt;p&gt;On reading about Pelican, I discovered that the norm appears to be to replace the customary
 "Hello World" post with a post on how one sets up the blog using Pelican.
-The journey on understanding Pelican definitely is not straight-forward as one would like to hope for.
-However, among the numerous posts I read on the internet, I would like to
+The journey of understanding Pelican definitely is not straight-forward as one would like to hope for.
+However, among the numerous posts, I read on the internet, I would like to
 especially thank the "Hello World" posts from Mr. Hartley's
 &lt;a href="http://beneathdata.com/how-to/how-i-built-this-website"&gt;blog&lt;/a&gt;, Mr. Vincent's
 &lt;a href="http://algorithmshop.com/20131212-starting-a-blog.html/"&gt;blog&lt;/a&gt;, and Mr.
@@ -361,7 +361,7 @@ Jerome's &lt;a href="http://ntanjerome.org/blog/how-to-setup-github-user-page-wi
 &lt;h2 id="setting-up-conda-and-pelican-in-windows"&gt;Setting up Conda and Pelican in Windows&lt;/h2&gt;
 &lt;p&gt;Requirements:&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;&lt;a href="https://git-for-windows.github.io/"&gt;msysgit&lt;/a&gt;&lt;sup id="fnref-1"&gt;&lt;a class="footnote-ref" href="#fn-1"&gt;1&lt;/a&gt;&lt;/sup&gt; to emulate the Unix terminal in my PC. &lt;/li&gt;
+&lt;li&gt;&lt;a href="https://git-for-windows.github.io/"&gt;msysgit&lt;/a&gt;&lt;sup id="fnref-1"&gt;&lt;a class="footnote-ref" href="#fn-1"&gt;1&lt;/a&gt;&lt;/sup&gt; to emulate the Unix terminal on my PC. &lt;/li&gt;
 &lt;li&gt;&lt;a href="https://github.com/conda/conda"&gt;conda&lt;/a&gt; for easy python package handling&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;The following steps create a virtual environment in conda for Pelican,&lt;/p&gt;
@@ -390,7 +390,7 @@ $ &lt;span class="nb"&gt;cd&lt;/span&gt; path/to/blog
 $ pelican-quickstart                    
 &lt;/pre&gt;&lt;/div&gt;
 &lt;!-- 
-# Should have worked, but will fail
+# Should have worked but will fail
 You will have to replace the == in the line number given in the error message
 with &gt;=. See [this
 conversation](https://github.com/getpelican/pelican/issues/2043#issuecomment-268625132)
@@ -424,7 +424,7 @@ post&lt;/a&gt;,&lt;/p&gt;
 checkout -b source&lt;/code&gt; if you haven't already)&lt;/li&gt;
 &lt;li&gt;Add/commit everything except the &lt;code&gt;output&lt;/code&gt; folder &lt;/li&gt;
 &lt;li&gt;Create a new branch 'gh-pages'&lt;/li&gt;
-&lt;li&gt;Run the following bash script to automate the &lt;em&gt;updation of GitHub pages&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;Run the following bash script to automate the &lt;em&gt;update of GitHub pages&lt;/em&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;I had to also follow the advice given
 &lt;a href="https://github.com/getnikola/nikola/issues/2223#issuecomment-174193643"&gt;here&lt;/a&gt;
@@ -579,7 +579,7 @@ I updated &lt;code&gt;blog/pelican-bootstrap3/templates/includes/footer.html&lt;
 &lt;p&gt;$ sign denotes bash prompt.&amp;nbsp;&lt;a class="footnote-backref" href="#fnref-1" title="Jump back to footnote 1 in the text"&gt;↩&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li id="fn-2"&gt;
-&lt;p&gt;Title and date is the minimum requirement for a blog post.&amp;nbsp;&lt;a class="footnote-backref" href="#fnref-2" title="Jump back to footnote 2 in the text"&gt;↩&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Title and date are the minimum requirement for a blog post.&amp;nbsp;&lt;a class="footnote-backref" href="#fnref-2" title="Jump back to footnote 2 in the text"&gt;↩&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;/hr&gt;&lt;/div&gt;</content><category term="Pelican"></category><category term="Python"></category></entry><entry><title>General tips regarding Pelican</title><link href="/general-tips-regarding-pelican.html" rel="alternate"></link><published>2016-12-23T00:00:00-07:00</published><updated>2016-12-23T00:00:00-07:00</updated><author><name>Abraham Vinod</name></author><id>tag:None,2016-12-23:/general-tips-regarding-pelican.html</id><summary type="html">&lt;p&gt;Notes on the margin for using Pelican.&lt;/p&gt;</summary><content type="html">&lt;ul&gt;

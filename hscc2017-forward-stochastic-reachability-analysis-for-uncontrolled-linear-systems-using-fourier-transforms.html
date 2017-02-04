@@ -150,10 +150,10 @@ capture of a non-adversarial uncontrolled target (with stochastic dynamics) by a
 controlled robot (with deterministic dynamics).</p>
 <h1 id="what-is-so-great-about-this-work">What is so great about this work?</h1>
 <ol>
-<li><strong>Not an Eulerian method (not a grid based method)</strong>: This implies that we
+<li><strong>Not a Eulerian method (not a grid-based method)</strong>: This implies that we
 can mitigate the <a href="https://en.wikipedia.org/wiki/Curse_of_dimensionality">curse of
 dimensionality</a>. Existing
-approaches of performing forward stochastic reachability analysis is through
+approaches of performing forward stochastic reachability analysis are through
 dynamic programming<sup id="fnref-SummersAutomatica2010"><a class="footnote-ref" href="#fn-SummersAutomatica2010">3</a></sup> and inverted dynamics. Dynamic
 programming can not be applied to dimensions higher than 5.</li>
 <li>Can handle <strong>unbounded stochastic disturbances</strong> and is <strong>not restricted to
@@ -164,7 +164,7 @@ provided</li>
 <li><strong>Convex optimization formulation</strong> for non-adversarial stochastically moving
 target problem</li>
 <li><strong>Applications</strong>: Usefulness demonstrated for stochastic motion planning
-problems. We also anticipate application of this method in obstacle avoidance,
+problems. We also anticipate the application of this method in obstacle avoidance,
 aircraft trajectory planning, and other venues.</li>
 </ol>
 <h1 id="where-are-some-beautiful-plots">Where are some beautiful plots?</h1>
@@ -216,7 +216,7 @@ capture corresponding to $x_R^\ast[\tau]$.</li>
 <h2 id="case-2-robot-g-has-double-integrator-dynamics-and-exponential-perturbed-dynamics">Case 2: Robot G has double integrator dynamics and exponential perturbed dynamics</h2>
 <p>Robot G has double integrator dynamics discretized in time with 'inputs' as a
 discrete-time bivariate exponential random process. For exponential random
-vectors, the mode and the mean does not coincide to begin with, making this a
+vectors, the mode and the mean do not coincide to begin with, making this a
 nontrivial problem. The optimization problem provides the optimal capture
 position while satisfying the constraints.</p>
 <p><img alt="A GIF should have appeared here." src="/images/HSCC2017Exp.gif"/></p>
@@ -236,7 +236,7 @@ find the MATLAB code for generating these figures on my <a href="">webpage</a>.<
 <hr>
 <ol>
 <li id="fn-systems">
-<p>This class of systems include affine noise perturbed LTI
+<p>This class of systems includes affine noise perturbed LTI
 discrete-time systems with known state feedback. The work is also applicable to
 affine noise perturbed LTI discrete-time systems with open loop controllers
 after some minor modifications.&nbsp;<a class="footnote-backref" href="#fnref-systems" title="Jump back to footnote 1 in the text">↩</a></p>
@@ -251,7 +251,7 @@ al</a>&nbsp;<a class="footnote-backref" href="#fnref-SummersAutomatica2010" titl
 </li>
 <li id="fn-robotG">
 <p>Here, open-loop controller refers to the fact that the control
-actions taken by robot R is independent of the actual current position of robot
+actions taken by robot R are independent of the actual current position of robot
 G, which is a realization of the random process $x_G[\cdot]$.&nbsp;<a class="footnote-backref" href="#fnref-robotG" title="Jump back to footnote 4 in the text">↩</a></p>
 </li>
 <li id="fn-GIF">
