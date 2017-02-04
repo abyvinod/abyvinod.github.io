@@ -132,7 +132,7 @@
                     <div style="border-style: solid;background:lightgrey">
                         <h3 style="text-align:center"> Table of contents</h3>
                             <nav class="toc">
-                            <div id="toc"><ul><li><a class="toc-href" href="#" title="HSCC2017: Forward Stochastic Reachability Analysis for Uncontrolled Linear Systems using Fourier Transforms">HSCC2017: Forward Stochastic Reachability Analysis for Uncontrolled Linear Systems using Fourier Transforms</a><ul><li><a class="toc-href" href="#what-is-this-paper-about" title="What is this paper about?">What is this paper about?</a></li><li><a class="toc-href" href="#what-is-so-great-about-this-work" title="What is so great about this work?">What is so great about this work?</a></li><li><a class="toc-href" href="#where-are-some-beautiful-plots" title="Where are some beautiful plots?">Where are some beautiful plots?</a><ul><li><a class="toc-href" href="#what-is-the-information-provided-for-this-problem" title="What is the information provided for this problem?">What is the information provided for this problem?</a></li><li><a class="toc-href" href="#what-should-be-computed-for-this-problem" title="What should be computed for this problem?">What should be computed for this problem?</a></li><li><a class="toc-href" href="#case-1-robot-g-has-point-mass-dynamics-and-gaussian-perturbed-dynamics" title="Case 1: Robot G has point mass dynamics and Gaussian perturbed dynamics">Case 1: Robot G has point mass dynamics and Gaussian perturbed dynamics</a></li><li><a class="toc-href" href="#case-2-robot-g-has-double-integrator-dynamics-and-exponential-perturbed-dynamics" title="Case 2: Robot G has double integrator dynamics and exponential perturbed dynamics">Case 2: Robot G has double integrator dynamics and exponential perturbed dynamics</a></li></ul></li><li><a class="toc-href" href="#where-do-i-get-more-details_1" title="Where do I get more details?">Where do I get more details?</a></li></ul></li></ul></div>
+                            <div id="toc"><ul><li><a class="toc-href" href="#" title="HSCC2017: Forward Stochastic Reachability Analysis for Uncontrolled Linear Systems using Fourier Transforms">HSCC2017: Forward Stochastic Reachability Analysis for Uncontrolled Linear Systems using Fourier Transforms</a><ul><li><a class="toc-href" href="#what-is-this-paper-about" title="What is this paper about?">What is this paper about?</a><ul><li><a class="toc-href" href="#high-level-description" title="High-level description">High-level description</a></li><li><a class="toc-href" href="#a-more-technical-description" title="A more technical description">A more technical description</a></li></ul></li><li><a class="toc-href" href="#what-is-so-great-about-this-work_1" title="What is so great about this work?">What is so great about this work?</a></li><li><a class="toc-href" href="#can-you-give-me-an-example-for-application-of-this-method" title="Can you give me an example for application of this method?">Can you give me an example for application of this method?</a><ul><li><a class="toc-href" href="#relating-this-problem-to-the-high-level-description" title="Relating this problem to the high-level description">Relating this problem to the high-level description</a></li><li><a class="toc-href" href="#what-is-the-information-provided-for-this-problem" title="What is the information provided for this problem?">What is the information provided for this problem?</a></li><li><a class="toc-href" href="#what-should-be-computed-for-this-problem" title="What should be computed for this problem?">What should be computed for this problem?</a></li><li><a class="toc-href" href="#case-1-robot-g-has-point-mass-dynamics-and-gaussian-perturbed-dynamics" title="Case 1: Robot G has point mass dynamics and Gaussian perturbed dynamics">Case 1: Robot G has point mass dynamics and Gaussian perturbed dynamics</a></li><li><a class="toc-href" href="#case-2-robot-g-has-double-integrator-dynamics-and-exponential-perturbed-dynamics" title="Case 2: Robot G has double integrator dynamics and exponential perturbed dynamics">Case 2: Robot G has double integrator dynamics and exponential perturbed dynamics</a></li></ul></li><li><a class="toc-href" href="#where-do-i-get-more-details_1" title="Where do I get more details?">Where do I get more details?</a></li></ul></li></ul></div>
                             </nav>
                     </div>
                 <p><br/>
@@ -142,6 +142,22 @@ Analysis for Uncontrolled Linear Systems using Fourier Transforms</strong> publi
 Hybrid Systems: Computation and Control 2017. The conference will happen on
 April 18-20th, 2017 at Pittsburg, PA, USA.</p>
 <h1 id="what-is-this-paper-about">What is this paper about?</h1>
+<h2 id="high-level-description">High-level description</h2>
+<p>Imagine we have a boat facing a crisis drifting in the ocean. Let us say we have a model
+of the ocean current. This model will help us predict <em>exactly</em> where the boat will drift
+to if the only force acting on it is the ocean current. However, we know that
+the boat can be subjected to our forces like wind, waves which will be pretty
+difficult to model. We account for these forces in form of a disturbance to our
+model, and this disturbance will <em>corrupt</em> our predictions. Assuming we have
+some information about the likelihood of the disturbance's actions, a
+natural question to ask is --- <strong>can we predict with some likelihood where the
+boat will drift to and what is the smallest set that covers all possible locations where
+the boat can drift to?</strong> Answering this question can help a rescuer ship, say
+the coast guard, act swiftly and increase the likelihood of success when
+searching a vast ocean for the boat. This paper provides a mathematical
+structure to this problem and proposes an efficient way to compute the
+likelihood as well as the set.</p>
+<h2 id="a-more-technical-description">A more technical description</h2>
 <p>We look at discrete-time uncontrolled linear systems<sup id="fnref-systems"><a class="footnote-ref" href="#fn-systems">1</a></sup> perturbed by a
 disturbance<sup id="fnref-dist"><a class="footnote-ref" href="#fn-dist">2</a></sup> whose stochastics (say probability density function) is known. We
 are interested in performing the <strong>forward stochastic reachability analysis</strong>, that
@@ -158,11 +174,12 @@ associated with the state, an absolutely continuous random vector.</li>
 <p>Moreover, we provide sufficient conditions for FSRPD to be <strong>logconcave</strong>.
 Logconcavity ensures that <strong>convexity</strong> of the constraints and objective
 functions created using forward stochastic reachability analysis. Convex
-optimization problems are generally tractable.</p>
+optimization problems are sought after since they are tractable and can
+generally be solved very efficiently.</p>
 <p>We discuss one application of this analysis --- maximizing the probability of
 capture of a non-adversarial uncontrolled target (with stochastic dynamics) by a
 controlled robot (with deterministic dynamics).</p>
-<h1 id="what-is-so-great-about-this-work">What is so great about this work?</h1>
+<h1 id="what-is-so-great-about-this-work_1">What is so great about this work?</h1>
 <ol>
 <li><strong>Not a Eulerian method (not a grid-based method)</strong>: This implies that we
 can mitigate the <a href="https://en.wikipedia.org/wiki/Curse_of_dimensionality">curse of
@@ -181,10 +198,16 @@ target problem</li>
 problems. We also anticipate the application of this method in obstacle avoidance,
 aircraft trajectory planning, and other venues.</li>
 </ol>
-<h1 id="where-are-some-beautiful-plots">Where are some beautiful plots?</h1>
+<h1 id="can-you-give-me-an-example-for-application-of-this-method">Can you give me an example for application of this method?</h1>
 <p>In this paper, we analyze the problem of capture of a non-adversarial target
 (robot G) with stochastic dynamics using a robot (robot R) with deterministic
-dynamics.</p>
+dynamics. </p>
+<h2 id="relating-this-problem-to-the-high-level-description">Relating this problem to the high-level description</h2>
+<p>Think of robot G as a boat facing a mayday and robot R as
+the rescuer ship coming to its rescue. Using the results of this paper, we can
+compute when and where can the rescuer ship meet the boat-in-distress. We
+also provide the actions the rescuer ship must take to reach the desired meeting
+point.</p>
 <h2 id="what-is-the-information-provided-for-this-problem">What is the information provided for this problem?</h2>
 <ol>
 <li>the initial position of the robots R and G,</li>
@@ -211,7 +234,7 @@ given initial position to the optimal position of capture</li>
 <p>Robot R is assumed to have point mass dynamics discretized in time with bounded
 control authority. This implies that robot R need not cover the entire state
 space within a given time horizon, and the reachable states constraint the
-final position for capture.</p>
+positions available for capture.</p>
 <h2 id="case-1-robot-g-has-point-mass-dynamics-and-gaussian-perturbed-dynamics">Case 1: Robot G has point mass dynamics and Gaussian perturbed dynamics</h2>
 <p>Robot G has point mass dynamics discretized in time with 'inputs' as a
 discrete-time bivariate Gaussian random process. For Gaussians, the mode and the
@@ -220,7 +243,7 @@ while satisfying the constraints.</p>
 <div class="container">
 <div class="col-md-4"></div>
 <div class="col-md-4" style="padding-left: 0px;  padding-right: 0px;">
-<img class="img-responsive" src="images/HSCC2017Gauss.gif">
+<img alt="A GIF should have appeared here." class="img-responsive" src="images/HSCC2017Gauss.gif">
 </img></div>
 </div>
 <p>Snapshots<sup id="fnref-GIF"><a class="footnote-ref" href="#fn-GIF">5</a></sup> of optimal capture positions $x_R^\ast[\tau]$ over the time horizon</p>
