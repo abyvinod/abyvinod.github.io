@@ -136,8 +136,11 @@ position while satisfying the constraints.&lt;/p&gt;
 capture corresponding to $x_R^\ast[\tau]$.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h1 id="nice-job-where-do-i-get-more-details_1"&gt;Nice job!!! Where do I get more details?&lt;/h1&gt;
-&lt;p&gt;You can find the paper on &lt;a href="https://arxiv.org/abs/1610.04550"&gt;Arxiv&lt;/a&gt;. You can
-find the MATLAB code for generating these figures on my &lt;a href=""&gt;webpage&lt;/a&gt;.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Paper is uploaded on &lt;a href="https://arxiv.org/abs/1610.04550"&gt;Arxiv&lt;/a&gt;.  More details about the paper can be found at my &lt;a href="http://unm.edu/~abyvinod"&gt;webpage&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;MATLAB code for generating these figures can be downloaded from &lt;a href="http://unm.edu/~abyvinod/files/HSCC2017.zip"&gt;here&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Questions/bugs can be sent to &lt;code&gt;aby[dot]vinod[at]gmail[dot]com&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
 &lt;div class="footnote"&gt;
 &lt;hr&gt;
 &lt;ol&gt;
@@ -468,7 +471,8 @@ generated htmls in a separate folder &lt;code&gt;drafts/&lt;/code&gt;. Remember 
 &lt;code&gt;.gitignore&lt;/code&gt; of the master branch to ensure it doesn't get pushed to the
 outside world.&lt;/p&gt;
 &lt;h2 id="pelican-bootstrap3"&gt;Pelican-Bootstrap3&lt;/h2&gt;
-&lt;p&gt;Clone &lt;code&gt;pelican-bootstrap3&lt;/code&gt; into the root folder of the blog.&lt;/p&gt;
+&lt;p&gt;Clone &lt;code&gt;pelican-bootstrap3&lt;/code&gt; into the root folder of the blog. I hid the sidebar
+and have an &lt;code&gt;About Me&lt;/code&gt; page in &lt;code&gt;content/pages&lt;/code&gt;. &lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;####################### Theme-Specific Settings #########################&lt;/span&gt;
 &lt;span class="n"&gt;THEME&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;'pelican-bootstrap3'&lt;/span&gt;        &lt;span class="c1"&gt;#'html5-dopetrope'&lt;/span&gt;
 
@@ -477,13 +481,10 @@ outside world.&lt;/p&gt;
 &lt;span class="n"&gt;PYGMENTS_STYLE&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;'monokai'&lt;/span&gt;
 &lt;span class="n"&gt;SHOW_ARTICLE_CATEGORY&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="bp"&gt;True&lt;/span&gt;
 
-&lt;span class="n"&gt;ABOUT_ME&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;"blah blah blah"&lt;/span&gt;
-
-&lt;span class="n"&gt;AVATAR&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;"/images/myphoto.png"&lt;/span&gt;
-
 &lt;span class="n"&gt;DISPLAY_ARTICLE_INFO_ON_INDEX&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="bp"&gt;True&lt;/span&gt;
-&lt;span class="n"&gt;DISPLAY_TAGS_ON_SIDEBAR&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="bp"&gt;False&lt;/span&gt;
 &lt;span class="n"&gt;SHOW_ARTICLE_CATEGORY&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="bp"&gt;True&lt;/span&gt;
+&lt;span class="n"&gt;HIDE_SIDEBAR&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="bp"&gt;True&lt;/span&gt;
+&lt;span class="n"&gt;DISPLAY_TAGS_ON_SIDEBAR&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="bp"&gt;False&lt;/span&gt;
 &lt;span class="n"&gt;DISPLAY_RECENT_POSTS_ON_SIDEBAR&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="bp"&gt;False&lt;/span&gt;
 &lt;span class="c1"&gt;# Below commands will generate SITEURL/tags.html which will have the list of tags&lt;/span&gt;
 &lt;span class="n"&gt;TAG_SAVE_AS&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;'tags/{slug}.html'&lt;/span&gt;
@@ -491,6 +492,8 @@ outside world.&lt;/p&gt;
 &lt;span class="n"&gt;DIRECT_TEMPLATES&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;'index'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s1"&gt;'tags'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s1"&gt;'categories'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s1"&gt;'archives'&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;!---
+#ABOUT_ME = "blah blah blah"
+#AVATAR = "/images/myphoto.png"
 #BANNER = "/images/banner.png"
 #SITELOGO = 'images/logo.png'
 #SITELOGO_SIZE = 32
@@ -508,6 +511,14 @@ displayed very big (See &lt;a href="/hscc2017-forward-stochastic-reachability-an
     &lt;span class="nt"&gt;&amp;lt;a&lt;/span&gt; &lt;span class="na"&gt;href=&lt;/span&gt;&lt;span class="s"&gt;"&lt;/span&gt;&lt;span class="cp"&gt;{{&lt;/span&gt; &lt;span class="nv"&gt;SITEURL&lt;/span&gt; &lt;span class="cp"&gt;}}&lt;/span&gt;&lt;span class="s"&gt;/tags/my-research.html"&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;My
         Research&lt;span class="nt"&gt;&amp;lt;/a&amp;gt;&lt;/span&gt;
 &lt;span class="nt"&gt;&amp;lt;/li&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;The &lt;code&gt;About Me&lt;/code&gt; page and the page of all tags are also added to the custom header.&lt;/p&gt;
+&lt;h3 id="custom-icons-in-social"&gt;Custom icons in social&lt;/h3&gt;
+&lt;p&gt;Check for the unicode of the desired icon in
+&lt;a href="http://fontawesome.io"&gt;http://fontawesome.io&lt;/a&gt;. If you would like to add this
+icon to your social link XYZ ABC, then add to
+&lt;code&gt;pelican-bootstrap3\static\css\font-awesome.min.css&lt;/code&gt; the following lines:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nl"&gt;.fa-xyz-abc-square:&lt;/span&gt;&lt;span class="nf"&gt;before&lt;/span&gt; &lt;span class="err"&gt;{&lt;/span&gt; &lt;span class="no"&gt;content&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="err"&gt;"&lt;/span&gt;&lt;span class="no"&gt;UNICODE_COMES_HERE&lt;/span&gt;&lt;span class="err"&gt;";&lt;/span&gt; &lt;span class="err"&gt;}&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;h2 id="math-support_1"&gt;Math support&lt;/h2&gt;
 &lt;p&gt;I could not get the &lt;code&gt;render_math&lt;/code&gt; plugin to work. I just incorporated MathJax
