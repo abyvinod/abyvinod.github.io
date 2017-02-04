@@ -36,10 +36,10 @@ TRANSLATION_FEED_ATOM = None
 LINKS =()
 
 # Social widget
-SOCIAL = (('RSS', 'http://abyvinod.github.io/feeds/all.rss'),
+SOCIAL = (('Academic Webpage', 'http://unm.edu/~abyvinod'),
+        ('RSS', 'http://abyvinod.github.io/feeds/all.rss'),
         ('BitBucket', 'http://bitbucket.org/abyvinod'),
          ('LinkedIn', 'http://linkedin.com/in/abrahampvinod'),
-          ('Academic Webpage', 'http://unm.edu/~abyvinod'),
           )
 DEFAULT_PAGINATION = 10
 
@@ -96,14 +96,17 @@ SHOW_ARTICLE_CATEGORY = True
 #SITELOGO_SIZE = 32
 #FAVICON = 'images/favicon.png'
 
-ABOUT_ME = "I'm a PhD student studying at the University of New Mexico. I am working on application of optimization and stochastic processes in dynamical systems. I also enjoy programming, especially coding in Python."
+ABOUT_ME = ""
+#ABOUT_ME = "I'm a PhD student studying at the University of New Mexico. I am working on application of optimization and stochastic processes in dynamical systems. I also enjoy programming, especially coding in Python."
 
-AVATAR = "/images/myphoto.png"
+AVATAR = ""
+#AVATAR = "/images/myphoto.png"
 #BANNER = "/images/banner.png"
 
 DISPLAY_ARTICLE_INFO_ON_INDEX = True
-DISPLAY_TAGS_ON_SIDEBAR = False
 SHOW_ARTICLE_CATEGORY = True
+HIDE_SIDEBAR=True
+DISPLAY_TAGS_ON_SIDEBAR = False
 DISPLAY_RECENT_POSTS_ON_SIDEBAR = False
 # Below commands will generate SITEURL/tags.html which will have the list of tags
 TAG_SAVE_AS = 'tags/{slug}.html'

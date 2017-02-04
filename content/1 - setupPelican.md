@@ -164,7 +164,8 @@ outside world.
 
 ## Pelican-Bootstrap3
 
-Clone `pelican-bootstrap3` into the root folder of the blog.
+Clone `pelican-bootstrap3` into the root folder of the blog. I hid the sidebar
+and have an `About Me` page in `content/pages`. 
 ```python
 ####################### Theme-Specific Settings #########################
 THEME = 'pelican-bootstrap3'        #'html5-dopetrope'
@@ -174,13 +175,10 @@ BOOTSTRAP_THEME = 'cosmo'
 PYGMENTS_STYLE = 'monokai'
 SHOW_ARTICLE_CATEGORY = True
 
-ABOUT_ME = "blah blah blah"
-
-AVATAR = "/images/myphoto.png"
-
 DISPLAY_ARTICLE_INFO_ON_INDEX = True
-DISPLAY_TAGS_ON_SIDEBAR = False
 SHOW_ARTICLE_CATEGORY = True
+HIDE_SIDEBAR=True
+DISPLAY_TAGS_ON_SIDEBAR = False
 DISPLAY_RECENT_POSTS_ON_SIDEBAR = False
 # Below commands will generate SITEURL/tags.html which will have the list of tags
 TAG_SAVE_AS = 'tags/{slug}.html'
@@ -189,6 +187,8 @@ DIRECT_TEMPLATES=['index','tags','categories','archives']
 
 ```
 <!---
+#ABOUT_ME = "blah blah blah"
+#AVATAR = "/images/myphoto.png"
 #BANNER = "/images/banner.png"
 #SITELOGO = 'images/logo.png'
 #SITELOGO_SIZE = 32
@@ -211,6 +211,17 @@ Add the following block within the if loop but just above the code
     <a href="{{ SITEURL }}/tags/my-research.html">My
         Research</a>
 </li>
+```
+The `About Me` page and the page of all tags are also added to the custom header.
+
+### Custom icons in social
+
+Check for the unicode of the desired icon in
+[http://fontawesome.io](http://fontawesome.io). If you would like to add this
+icon to your social link XYZ ABC, then add to
+`pelican-bootstrap3\static\css\font-awesome.min.css` the following lines:
+```
+.fa-xyz-abc-square:before { content: "UNICODE_COMES_HERE"; }
 ```
 ## Math support
 
@@ -258,6 +269,7 @@ Insert this block in `pelican-bootstrap3\templates\base.html` just above the
     </div>
 {% endif %}
 ~~~
+
 
 ## Changing footer
 
