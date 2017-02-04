@@ -14,7 +14,7 @@
 
         <meta name="author" content="Abraham Vinod" />
         <meta name="keywords" content="Verification" />
-        <meta name="description" content="Discussing the two view points in verification --- the computer science view point and the controls view point" />
+        <meta name="description" content="Discussing the two viewpoints in verification --- the computer science viewpoint and the controls viewpoint" />
 
 
 
@@ -134,7 +134,7 @@ for safety critical systems and other systems that need guarantees of their
 <p>Historically, there has been two approaches in dealing with the problem of
 verification.</p>
 <h2 id="control-theory-point-of-view">Control theory point of view</h2>
-<p>Verification is posed as a reach avoid problem where the objective is identify
+<p>Verification is posed as a reach avoid problem where the objective is to identify
 the initial conditions and the corresponding control policies under which the
 hybrid system will hit a target set while avoiding an unsafe set over a finite
 time horizon. The problem also depends on whether the hybrid system is
@@ -155,16 +155,16 @@ acknowledge Sumanth's contributions for helping improve this section. </p>
 <p>For hybrid systems, it is not straightforward to apply traditional formal
 methods for verification, such as model checking<sup id="fnref-ClarkeBook1999"><a class="footnote-ref" href="#fn-ClarkeBook1999">4</a></sup> and deductive
 verification<sup id="fnref-KaufmannBook2000"><a class="footnote-ref" href="#fn-KaufmannBook2000">5</a></sup>, to hybrid systems since these methods were
-originally developed for circuits, and communication protocols
-and usually require extensive search of all reachable states.  However, this is
-not possible as the states in hybrid systems are uncountable<sup id="fnref-LinBook2000"><a class="footnote-ref" href="#fn-LinBook2000">6</a></sup>. One
+originally developed for circuits and communication protocols
+and usually require an extensive search of all reachable states.  However, this is
+not possible as the states in hybrid systems are uncountable<sup id="fnref-LinBook2000"><a class="footnote-ref" href="#fn-LinBook2000">6</a></sup>. An
 approach used in this camp tackle the problem by modeling the hybrid system as a
 finite state automation using abstraction techniques. Other approaches include
 using SMT solvers and probabilistic model checkers<sup id="fnref-Caution"><a class="footnote-ref" href="#fn-Caution">7</a></sup>. Do check out these
 interesting links ---
 <a href="http://cs.stackexchange.com/questions/14946/distinguish-decision-procedure-vs-smt-solver-vs-theorem-prover-vs-constraint-sol">Distinguishing Decision Procedure vs SMT solver vs Theorem prover vs Constraint
 solver</a>
-and <a href="http://dreal.github.io/dReach/">dReach</a>. Some good books in these topics
+and <a href="http://dreal.github.io/dReach/">dReach</a>. Some good books on these topics
 are <a href="http://www.springer.com/us/book/9783540002963">Klaus Schneider's Verification of reactive
 systems</a>, <a href="https://www.amazon.com/Design-Validation-Computer-Protocols-Holzmann/dp/0135399254">Gerard J. Holzmann's
 Design And Validation Of Computer
