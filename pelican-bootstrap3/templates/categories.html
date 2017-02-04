@@ -12,7 +12,8 @@
 
 {% block content %}
     <section id="categories">
-        <h1>All Categories for {{ SITENAME }}</h1>
+        <h1>Categories</h1>
+        <p> A collapsed list of all articles sorted by category. </p>
         <div class="panel-group" id="accordion">
             {% for category, articles in categories %}
             <div class="panel panel-default">

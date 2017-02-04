@@ -184,6 +184,7 @@ DISPLAY_RECENT_POSTS_ON_SIDEBAR = False
 # Below commands will generate SITEURL/tags.html which will have the list of tags
 TAG_SAVE_AS = 'tags/{slug}.html'
 TAGS_SAVE_AS = 'tags.html'
+CATEGORIES_SAVE_AS = 'categories.html'
 DIRECT_TEMPLATES=['index','tags','categories','archives']
 
 ```
@@ -198,22 +199,36 @@ DIRECT_TEMPLATES=['index','tags','categories','archives']
 
 ### Reducing the figure size
 
+#### Option 1 (Not preferred; but requires less editing with existing images)
 Edit the `.entry-content img` in `pelican-bootstrap3/static/css/style.css` to
-have a `max-width` of 80%. This ensures my MATLAB generated files are not
-displayed very big (See [this blog post]({filename}8 - hscc2017.md)).
+have a `max-width` of 80%. 
+<!--This ensures my MATLAB generated files are not
+displayed very big (See [this blog post]({filename}8 - hscc2017.md)).-->
+
+#### Option 2 (Preferred)
+Include images using the following HTML code directly into your Markdown file.
+
+~~~HTML
+<div class="container">
+    <div class="col-md-4"></div>
+    <div class="col-md-4" style="padding-left: 0px;  padding-right: 0px;">
+        <img alt="ALT text." src="/path/to/image" class="img-responsive">
+    </div>
+</div>
+~~~
 
 ### Custom header bar
 
 Add the following block within the if loop but just above the code 
 `{% for cat, null in categories %}` in `pelican-bootstrap3/templates/base.html`.
-```
+~~~HTML
 <!-- Addition of My research tag into the header-->
 <li>
-    <a href="{{ SITEURL }}/tags/my-research.html">My
-        Research</a>
+    <a href="{{ SITEURL }}/tags/my-research.html"><i
+            class="fa fa-flask fa-lg"></i> My Research</a>
 </li>
-```
-The `About Me` page and the page of all tags are also added to the custom header.
+~~~
+The `About Me` page, tags list, categories list, and RSS feed were also added to the custom header.
 
 ### Custom icons in social
 

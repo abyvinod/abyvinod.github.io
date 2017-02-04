@@ -111,6 +111,7 @@ DISPLAY_RECENT_POSTS_ON_SIDEBAR = False
 # Below commands will generate SITEURL/tags.html which will have the list of tags
 TAG_SAVE_AS = 'tags/{slug}.html'
 TAGS_SAVE_AS = 'tags.html'
+CATEGORIES_SAVE_AS = 'categories.html'
 DIRECT_TEMPLATES=['index','tags','categories','archives']
 
 ############################ Plugins ######################################

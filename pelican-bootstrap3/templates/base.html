@@ -123,21 +123,30 @@
                 {% if DISPLAY_CATEGORIES_ON_MENU %}
                     <!-- Addition of My research tag into the header-->
                     <li>
-                        <a href="{{ SITEURL }}/pages/about-me.html">About Me</a>
+                        <a href="{{ SITEURL }}/pages/about-me.html"><i
+                                class="fa fa-user"></i> About Me</a>
                     </li>
                     <li>
-                        <a href="{{ SITEURL }}/tags/my-research.html">My
-                            Research</a>
+                        <a href="{{ SITEURL }}/tags/my-research.html"><i
+                                class="fa fa-flask fa-lg"></i> My Research</a>
                     </li>
-                    {% for cat, null in categories %}
+                    <!-- Addition of All tags into the header-->
+                    <li>
+                        <a href="{{ SITEURL }}/categories.html"><i
+                                class="fa fa-bookmark fa-lg"></i> Categories</a>
+                    </li>
+                    <li>
+                        <a href="{{ SITEURL }}/tags.html"><i class="fa fa-tags
+                                fa-lg"></i> Tags</a>
+                    </li>
+                    <li>
+                        <a href="{{ SITEURL }}/feeds/all.rss"><i class="fa fa-rss-square fa-lg"></i> RSS</a>
+                    </li>
+                    <!--{% for cat, null in categories %}
                         <li {% if cat == category %}class="active"{% endif %}>
                             <a href="{{ SITEURL }}/{{ cat.url }}">{{ cat | capitalize }}</a>
                         </li>
-                    {% endfor %}
-                    <!-- Addition of All tags into the header-->
-                    <li>
-                        <a href="{{ SITEURL }}/tags.html">All tags</a>
-                    </li>
+                    {% endfor %}-->
                 {% endif %}
             </ul>
             <ul class="nav navbar-nav navbar-right">

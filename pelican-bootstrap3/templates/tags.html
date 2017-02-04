@@ -13,7 +13,8 @@
 
 {% block content %}
     <section id="tags">
-        <h1>Tags for {{ SITENAME }}</h1>
+        <h1>Tags</h1>
+        <p> A collapsed list of all articles sorted by tag. </p>
         <div class="panel-group" id="accordion">
             {%- for tag, articles in tags|sort %}
             <div class="panel panel-default">
