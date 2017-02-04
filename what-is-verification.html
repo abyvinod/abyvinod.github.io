@@ -19,7 +19,7 @@
 
 
     <!-- Bootstrap -->
-        <link rel="stylesheet" href="/theme/css/bootstrap.sandstone.min.css" type="text/css"/>
+        <link rel="stylesheet" href="/theme/css/bootstrap.cosmo.min.css" type="text/css"/>
     <link href="/theme/css/font-awesome.min.css" rel="stylesheet">
 
     <link href="/theme/css/pygments/monokai.css" rel="stylesheet">
@@ -51,6 +51,11 @@ Notes on the margin            </a>
         </div>
         <div class="collapse navbar-collapse navbar-ex1-collapse">
             <ul class="nav navbar-nav">
+                    <!-- Addition of My research tag into the header-->
+                    <li>
+                        <a href="/tags/my-research.html">My
+                            Research</a>
+                    </li>
                         <li class="active">
                             <a href="/category/control-theory.html">Control theory</a>
                         </li>
@@ -60,6 +65,10 @@ Notes on the margin            </a>
                         <li >
                             <a href="/category/tips.html">Tips</a>
                         </li>
+                    <!-- Addition of All tags into the header-->
+                    <li>
+                        <a href="/tags.html">All tags</a>
+                    </li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="/archives.html"><i class="fa fa-th-list"></i><span class="icon-label">Archives</span></a></li>
@@ -94,7 +103,7 @@ Notes on the margin            </a>
     </span>
 
         <span class="label label-default">Category</span>
-        <a href="/category/control-theory.html">Control Theory</a>
+        <a href="/category/control-theory.html">Control theory</a>
 
 
 <span class="label label-default">Tags</span>
@@ -108,7 +117,7 @@ Notes on the margin            </a>
                             <div id="toc"><ul><li><a class="toc-href" href="#" title="What is verification?">What is verification?</a><ul><li><a class="toc-href" href="#verification" title="Verification">Verification</a><ul><li><a class="toc-href" href="#control-theory-point-of-view" title="Control theory point of view">Control theory point of view</a></li><li><a class="toc-href" href="#computer-science-point-of-view" title="Computer science point of view">Computer science point of view</a></li></ul></li><li><a class="toc-href" href="#conclusion_1" title="Conclusion">Conclusion</a></li></ul></li></ul></div>
                             </nav>
                     </div>
-                <h2 id="verification">Verification</h2>
+                <h1 id="verification">Verification</h1>
 <p>Formal verification is the process of mathematically checking that the behavior
 of a system, described using a formal model, satisfies a given property, also
 described using a formal model. The two models may or may not be the same, but
@@ -124,7 +133,7 @@ for safety critical systems and other systems that need guarantees of their
     system. </p>
 <p>Historically, there has been two approaches in dealing with the problem of
 verification.</p>
-<h3 id="control-theory-point-of-view">Control theory point of view</h3>
+<h2 id="control-theory-point-of-view">Control theory point of view</h2>
 <p>Verification is posed as a reach avoid problem where the objective is identify
 the initial conditions and the corresponding control policies under which the
 hybrid system will hit a target set while avoiding an unsafe set over a finite
@@ -139,7 +148,7 @@ However, due to the curse of dimensionality, the application of verification is
 mostly limited to low dimensional systems. Active research is being done on
 developing approximations and exact methods to do verification of
 high-dimensional systems.</p>
-<h3 id="computer-science-point-of-view">Computer science point of view</h3>
+<h2 id="computer-science-point-of-view">Computer science point of view</h2>
 <p>Disclaimer: I have only seen the research from this point of view from the
 sidelines. In other words, I am no expert on this point of view. I would like to
 acknowledge Sumanth's contributions for helping improve this section. </p>
@@ -161,7 +170,7 @@ systems</a>, <a href="https://www.amazon.com/Design-Validation-Computer-Protocol
 Design And Validation Of Computer
 Protocols</a>,
 and <a href="http://cs.nyu.edu/cs/faculty/pnueli/books.html">Amir Pneuli's books</a>.</p>
-<h2 id="conclusion_1">Conclusion</h2>
+<h1 id="conclusion_1">Conclusion</h1>
 <p>Irrespective of the approach, the goal of these two research camps are the same
 --- provide concrete proof that our intuition-based designs/heuristics will
 actually be safe.</p>
@@ -226,40 +235,6 @@ al</a>&nbsp;<a class="footnote-backref" href="#fnref-SummersAutomatica2010" titl
 
 
 
-            <li class="list-group-item"><a href="/"><h4><i class="fa fa-tags fa-lg"></i><span class="icon-label">Tags</span></h4></a>
-                <ul class="list-group " id="tags">
-                    <li class="list-group-item tag-1">
-                        <a href="/tag/verification.html">
-                            Verification
-                        </a>
-                    </li>
-                    <li class="list-group-item tag-1">
-                        <a href="/tag/pelican.html">
-                            Pelican
-                        </a>
-                    </li>
-                    <li class="list-group-item tag-1">
-                        <a href="/tag/python.html">
-                            Python
-                        </a>
-                    </li>
-                    <li class="list-group-item tag-4">
-                        <a href="/tag/mooc.html">
-                            MOOC
-                        </a>
-                    </li>
-                    <li class="list-group-item tag-4">
-                        <a href="/tag/model-predictive-control.html">
-                            Model Predictive Control
-                        </a>
-                    </li>
-                    <li class="list-group-item tag-4">
-                        <a href="/tag/latex.html">
-                            Latex
-                        </a>
-                    </li>
-                </ul>
-            </li>
     </ul>
 </section>
             </aside>

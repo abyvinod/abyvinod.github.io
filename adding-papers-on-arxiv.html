@@ -2,7 +2,7 @@
 <html lang="english"
 >
 <head>
-    <title>Other things on my to-do list - Notes on the margin</title>
+    <title>Adding papers on Arxiv - Notes on the margin</title>
     <!-- Using the latest rendering mode for IE -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
@@ -10,11 +10,11 @@
 
 
 
-<link rel="canonical" href="/drafts/other-things-on-my-to-do-list.html">
+<link rel="canonical" href="/adding-papers-on-arxiv.html">
 
         <meta name="author" content="Abraham Vinod" />
-        <meta name="keywords" content="Pelican" />
-        <meta name="description" content="To-do list" />
+        <meta name="keywords" content="Arxiv" />
+        <meta name="description" content="Some tips on adding TeX generated papers to Arxiv" />
 
 
 
@@ -59,7 +59,7 @@ Notes on the margin            </a>
                         <li >
                             <a href="/category/control-theory.html">Control theory</a>
                         </li>
-                        <li >
+                        <li class="active">
                             <a href="/category/how-to.html">How to</a>
                         </li>
                         <li >
@@ -86,10 +86,10 @@ Notes on the margin            </a>
         <article>
             <header class="page-header">
                 <h1>
-                    <a href="/drafts/other-things-on-my-to-do-list.html"
+                    <a href="/adding-papers-on-arxiv.html"
                        rel="bookmark"
-                       title="Permalink to Other things on my to-do list">
-                        Other things on my to-do list
+                       title="Permalink to Adding papers on Arxiv">
+                        Adding papers on Arxiv
                     </a>
                 </h1>
             </header>
@@ -99,63 +99,47 @@ Notes on the margin            </a>
 <footer class="post-info">
     <span class="label label-default">Date</span>
     <span class="published">
-        <i class="fa fa-calendar"></i><time datetime="2017-01-03T00:00:00-07:00"> Tue 03 January 2017</time>
+        <i class="fa fa-calendar"></i><time datetime="2017-02-03T00:00:00-07:00"> Fri 03 February 2017</time>
     </span>
 
         <span class="label label-default">Category</span>
-        <a href="/category/private.html">Private</a>
+        <a href="/category/how-to.html">How To</a>
 
 
 <span class="label label-default">Tags</span>
-	<a href="/tag/pelican.html">Pelican</a>
+	<a href="/tag/arxiv.html">Arxiv</a>
     
 </footer><!-- /.post-info -->                    </div>
                 </div>
-                    <div style="border-style: solid;background:lightgrey">
-                        <h3 style="text-align:center"> Table of contents</h3>
-                            <nav class="toc">
-                            <div id="toc"><ul><li><a class="toc-href" href="#" title="Other things on my to-do list">Other things on my to-do list</a><ul><li><a class="toc-href" href="#to-do" title="To Do">To Do</a></li><li><a class="toc-href" href="#done" title="Done">Done</a></li></ul></li></ul></div>
-                            </nav>
-                    </div>
-                <h1 id="to-do">To Do</h1>
-<ul>
-<li>Create articles summarizing my work on different projects --- 500 words on the DAESR project.</li>
-<li>Carry forward my wiki articles</li>
-<li>Visitor count</li>
-<li>Editing the CSS files <a href="http://beneathdata.com/how-to/how-i-built-this-website/">Source1</a>,
-<a href="http://algorithmshop.com/20131212-starting-a-blog.html">Source2</a>,<a href="https://spapas.github.io/2013/10/07/pelican-static-windows/">Source3</a>:<ul>
-<li>Academic webpage icon Scholar hat</li>
-</ul>
+                <p>Recently, I published one of my <a href="https://arxiv.org/abs/1610.04550">papers</a> to
+Arxiv. You can find an informal discussion on this paper <a href="{filename}8 -
+hscc2017.md">here</a> .</p>
+<p>There were a couple of things which I found relevant and omitted in
+the Arxiv's wizard. It is there on their FAQs.</p>
+<ol>
+<li>Arxiv does not accept <code>.bib</code> files. Instead, we have to upload the <code>.bbl</code>
+fle. <sup id="fnref-bbl"><a class="footnote-ref" href="#fn-bbl">1</a></sup></li>
+<li>Arxiv does not accept <code>.pdf</code> files when generated using TeX. We have to
+upload the tex files, necessary figures, style files, and the <code>.bbl</code> file.
+<sup id="fnref-thingsneeded"><a class="footnote-ref" href="#fn-thingsneeded">2</a></sup></li>
+<li>Adding multiple items on Arxiv is a pain. The best way to accomplish this is
+to <code>zip</code> all the required files, and then upload the zip. Arxiv can process
+<code>zip</code> and <code>tar.gz</code>.<sup id="fnref-zipping"><a class="footnote-ref" href="#fn-zipping">3</a></sup></li>
+</ol>
+<div class="footnote">
+<hr>
+<ol>
+<li id="fn-bbl">
+<p><a href="https://arxiv.org/help/submit_tex#bibtex">https://arxiv.org/help/submit_tex#bibtex</a>&nbsp;<a class="footnote-backref" href="#fnref-bbl" title="Jump back to footnote 1 in the text">↩</a></p>
 </li>
-<li>Rendering on a mobile and an ipad</li>
-<li><a href="http://moparx.com/2014/04/adding-search-capabilities-within-your-pelican-powered-site-using-tipue-search/">Search capabilities</a></li>
-<li>Useful plugins --- Discus</li>
-<li>http://terriyu.info/blog/posts/2013/07/pelican-setup/</li>
-</ul>
-<h1 id="done">Done</h1>
-<ul>
-<li>Fix git problems:<ul>
-<li><a href="http://mathamy.com/migrating-to-github-pages-using-pelican.html">http://mathamy.com/migrating-to-github-pages-using-pelican.html</a></li>
-<li><a href="https://fedoramagazine.org/make-github-pages-blog-with-pelican/">https://fedoramagazine.org/make-github-pages-blog-with-pelican/</a></li>
-</ul>
+<li id="fn-thingsneeded">
+<p><a href="https://arxiv.org/help/submit_tex#wegotem">https://arxiv.org/help/submit_tex#wegotem</a>&nbsp;<a class="footnote-backref" href="#fnref-thingsneeded" title="Jump back to footnote 2 in the text">↩</a></p>
 </li>
-<li>Create index</li>
-<li>Math rendering</li>
-<li>Tag cloud</li>
-<li>Private articles (IGNORE_FILES in pelicanconf)<ul>
-<li>Generate in localhost but not in the global</li>
-</ul>
+<li id="fn-zipping">
+<p><a href="https://arxiv.org/help/tar">https://arxiv.org/help/tar</a>&nbsp;<a class="footnote-backref" href="#fnref-zipping" title="Jump back to footnote 3 in the text">↩</a></p>
 </li>
-<li>RSS feed --- Feedly compatible</li>
-<li>Editing the CSS files <a href="http://beneathdata.com/how-to/how-i-built-this-website/">Source1</a>,
-<a href="http://algorithmshop.com/20131212-starting-a-blog.html">Source2</a>,<a href="https://spapas.github.io/2013/10/07/pelican-static-windows/">Source3</a>:<ul>
-<li>for the powered by (and other goodies)</li>
-<li>Links</li>
-<li>Description below</li>
-<li>Recent posts limit --- Removed it</li>
-</ul>
-</li>
-</ul>
+</ol>
+</hr></div>
             </div>
             <!-- /.entry-content -->
         </article>

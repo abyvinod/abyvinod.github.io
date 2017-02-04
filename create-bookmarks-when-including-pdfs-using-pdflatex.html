@@ -19,7 +19,7 @@
 
 
     <!-- Bootstrap -->
-        <link rel="stylesheet" href="/theme/css/bootstrap.sandstone.min.css" type="text/css"/>
+        <link rel="stylesheet" href="/theme/css/bootstrap.cosmo.min.css" type="text/css"/>
     <link href="/theme/css/font-awesome.min.css" rel="stylesheet">
 
     <link href="/theme/css/pygments/monokai.css" rel="stylesheet">
@@ -51,6 +51,11 @@ Notes on the margin            </a>
         </div>
         <div class="collapse navbar-collapse navbar-ex1-collapse">
             <ul class="nav navbar-nav">
+                    <!-- Addition of My research tag into the header-->
+                    <li>
+                        <a href="/tags/my-research.html">My
+                            Research</a>
+                    </li>
                         <li >
                             <a href="/category/control-theory.html">Control theory</a>
                         </li>
@@ -60,6 +65,10 @@ Notes on the margin            </a>
                         <li >
                             <a href="/category/tips.html">Tips</a>
                         </li>
+                    <!-- Addition of All tags into the header-->
+                    <li>
+                        <a href="/tags.html">All tags</a>
+                    </li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="/archives.html"><i class="fa fa-th-list"></i><span class="icon-label">Archives</span></a></li>
@@ -113,13 +122,13 @@ Notes on the margin            </a>
                 <p>This is the README file from my <a href="https://bitbucket.org/abyvinod/createbookmarkincludepdf">Bitbucket
 repository</a> for the
 code. Do check it out!</p>
-<h3 id="problem">Problem</h3>
+<h2 id="problem">Problem</h2>
 <p>Extract bookmarks from a pdf that has to be included as is into another pdf
 created using pdflatex. Includepdf package ignores pdf annotations.</p>
-<h3 id="solution">Solution</h3>
+<h2 id="solution">Solution</h2>
 <p>Use pdftk to fetch the annotations, python to parse through these annotations,
 and bookmark package to feed it back to pdflatex.</p>
-<h3 id="how-do-i-get-set-up">How do I get set up?</h3>
+<h2 id="how-do-i-get-set-up">How do I get set up?</h2>
 <ul>
 <li>Tested on Python 3.5 and TexLive 2015 with bookmark package installed</li>
 <li>Requires:<ul>
@@ -128,7 +137,7 @@ and bookmark package to feed it back to pdflatex.</p>
 </ul>
 </li>
 </ul>
-<h3 id="how-do-i-run-the-code">How do I run the code?</h3>
+<h2 id="how-do-i-run-the-code">How do I run the code?</h2>
 <ul>
 <li>Copy the python script into the folder where the parent tex file resides.</li>
 <li>Edit three variables:<ul>
@@ -149,7 +158,7 @@ and bookmark package to feed it back to pdflatex.</p>
 </ul>
 </li>
 </ul>
-<h3 id="who-do-i-talk-to">Who do I talk to?</h3>
+<h2 id="who-do-i-talk-to">Who do I talk to?</h2>
 <ul>
 <li>Abraham Vinod (aby[dot]vinod[at]gmail[dot]com)</li>
 </ul>
@@ -183,40 +192,6 @@ and bookmark package to feed it back to pdflatex.</p>
 
 
 
-            <li class="list-group-item"><a href="/"><h4><i class="fa fa-tags fa-lg"></i><span class="icon-label">Tags</span></h4></a>
-                <ul class="list-group " id="tags">
-                    <li class="list-group-item tag-1">
-                        <a href="/tag/verification.html">
-                            Verification
-                        </a>
-                    </li>
-                    <li class="list-group-item tag-1">
-                        <a href="/tag/pelican.html">
-                            Pelican
-                        </a>
-                    </li>
-                    <li class="list-group-item tag-1">
-                        <a href="/tag/python.html">
-                            Python
-                        </a>
-                    </li>
-                    <li class="list-group-item tag-4">
-                        <a href="/tag/mooc.html">
-                            MOOC
-                        </a>
-                    </li>
-                    <li class="list-group-item tag-4">
-                        <a href="/tag/model-predictive-control.html">
-                            Model Predictive Control
-                        </a>
-                    </li>
-                    <li class="list-group-item tag-4">
-                        <a href="/tag/latex.html">
-                            Latex
-                        </a>
-                    </li>
-                </ul>
-            </li>
     </ul>
 </section>
             </aside>
