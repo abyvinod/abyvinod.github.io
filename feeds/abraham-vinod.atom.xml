@@ -34,6 +34,22 @@ Analysis for Uncontrolled Linear Systems using Fourier Transforms&lt;/strong&gt;
 Hybrid Systems: Computation and Control 2017. The conference will happen on
 April 18-20th, 2017 at Pittsburg, PA, USA.&lt;/p&gt;
 &lt;h1 id="what-is-this-paper-about"&gt;What is this paper about?&lt;/h1&gt;
+&lt;h2 id="high-level-description"&gt;High-level description&lt;/h2&gt;
+&lt;p&gt;Imagine we have a boat facing a crisis drifting in the ocean. Let us say we have a model
+of the ocean current. This model will help us predict &lt;em&gt;exactly&lt;/em&gt; where the boat will drift
+to if the only force acting on it is the ocean current. However, we know that
+the boat can be subjected to our forces like wind, waves which will be pretty
+difficult to model. We account for these forces in form of a disturbance to our
+model, and this disturbance will &lt;em&gt;corrupt&lt;/em&gt; our predictions. Assuming we have
+some information about the likelihood of the disturbance's actions, a
+natural question to ask is --- &lt;strong&gt;can we predict with some likelihood where the
+boat will drift to and what is the smallest set that covers all possible locations where
+the boat can drift to?&lt;/strong&gt; Answering this question can help a rescuer ship, say
+the coast guard, act swiftly and increase the likelihood of success when
+searching a vast ocean for the boat. This paper provides a mathematical
+structure to this problem and proposes an efficient way to compute the
+likelihood as well as the set.&lt;/p&gt;
+&lt;h2 id="a-more-technical-description"&gt;A more technical description&lt;/h2&gt;
 &lt;p&gt;We look at discrete-time uncontrolled linear systems&lt;sup id="fnref-systems"&gt;&lt;a class="footnote-ref" href="#fn-systems"&gt;1&lt;/a&gt;&lt;/sup&gt; perturbed by a
 disturbance&lt;sup id="fnref-dist"&gt;&lt;a class="footnote-ref" href="#fn-dist"&gt;2&lt;/a&gt;&lt;/sup&gt; whose stochastics (say probability density function) is known. We
 are interested in performing the &lt;strong&gt;forward stochastic reachability analysis&lt;/strong&gt;, that
@@ -50,11 +66,12 @@ associated with the state, an absolutely continuous random vector.&lt;/li&gt;
 &lt;p&gt;Moreover, we provide sufficient conditions for FSRPD to be &lt;strong&gt;logconcave&lt;/strong&gt;.
 Logconcavity ensures that &lt;strong&gt;convexity&lt;/strong&gt; of the constraints and objective
 functions created using forward stochastic reachability analysis. Convex
-optimization problems are generally tractable.&lt;/p&gt;
+optimization problems are sought after since they are tractable and can
+generally be solved very efficiently.&lt;/p&gt;
 &lt;p&gt;We discuss one application of this analysis --- maximizing the probability of
 capture of a non-adversarial uncontrolled target (with stochastic dynamics) by a
 controlled robot (with deterministic dynamics).&lt;/p&gt;
-&lt;h1 id="what-is-so-great-about-this-work"&gt;What is so great about this work?&lt;/h1&gt;
+&lt;h1 id="what-is-so-great-about-this-work_1"&gt;What is so great about this work?&lt;/h1&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;strong&gt;Not a Eulerian method (not a grid-based method)&lt;/strong&gt;: This implies that we
 can mitigate the &lt;a href="https://en.wikipedia.org/wiki/Curse_of_dimensionality"&gt;curse of
@@ -73,10 +90,16 @@ target problem&lt;/li&gt;
 problems. We also anticipate the application of this method in obstacle avoidance,
 aircraft trajectory planning, and other venues.&lt;/li&gt;
 &lt;/ol&gt;
-&lt;h1 id="where-are-some-beautiful-plots"&gt;Where are some beautiful plots?&lt;/h1&gt;
+&lt;h1 id="can-you-give-me-an-example-for-application-of-this-method"&gt;Can you give me an example for application of this method?&lt;/h1&gt;
 &lt;p&gt;In this paper, we analyze the problem of capture of a non-adversarial target
 (robot G) with stochastic dynamics using a robot (robot R) with deterministic
-dynamics.&lt;/p&gt;
+dynamics. &lt;/p&gt;
+&lt;h2 id="relating-this-problem-to-the-high-level-description"&gt;Relating this problem to the high-level description&lt;/h2&gt;
+&lt;p&gt;Think of robot G as a boat facing a mayday and robot R as
+the rescuer ship coming to its rescue. Using the results of this paper, we can
+compute when and where can the rescuer ship meet the boat-in-distress. We
+also provide the actions the rescuer ship must take to reach the desired meeting
+point.&lt;/p&gt;
 &lt;h2 id="what-is-the-information-provided-for-this-problem"&gt;What is the information provided for this problem?&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;the initial position of the robots R and G,&lt;/li&gt;
@@ -103,7 +126,7 @@ given initial position to the optimal position of capture&lt;/li&gt;
 &lt;p&gt;Robot R is assumed to have point mass dynamics discretized in time with bounded
 control authority. This implies that robot R need not cover the entire state
 space within a given time horizon, and the reachable states constraint the
-final position for capture.&lt;/p&gt;
+positions available for capture.&lt;/p&gt;
 &lt;h2 id="case-1-robot-g-has-point-mass-dynamics-and-gaussian-perturbed-dynamics"&gt;Case 1: Robot G has point mass dynamics and Gaussian perturbed dynamics&lt;/h2&gt;
 &lt;p&gt;Robot G has point mass dynamics discretized in time with 'inputs' as a
 discrete-time bivariate Gaussian random process. For Gaussians, the mode and the
@@ -112,7 +135,7 @@ while satisfying the constraints.&lt;/p&gt;
 &lt;div class="container"&gt;
 &lt;div class="col-md-4"&gt;&lt;/div&gt;
 &lt;div class="col-md-4" style="padding-left: 0px;  padding-right: 0px;"&gt;
-&lt;img class="img-responsive" src="images/HSCC2017Gauss.gif"&gt;
+&lt;img alt="A GIF should have appeared here." class="img-responsive" src="images/HSCC2017Gauss.gif"&gt;
 &lt;/img&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;p&gt;Snapshots&lt;sup id="fnref-GIF"&gt;&lt;a class="footnote-ref" href="#fn-GIF"&gt;5&lt;/a&gt;&lt;/sup&gt; of optimal capture positions $x_R^\ast[\tau]$ over the time horizon&lt;/p&gt;
