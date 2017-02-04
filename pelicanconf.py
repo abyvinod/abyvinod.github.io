@@ -92,9 +92,9 @@ BOOTSTRAP_THEME = 'cosmo'#'lumen' 'cosmo'
 PYGMENTS_STYLE = 'monokai'
 SHOW_ARTICLE_CATEGORY = True
 
-#SITELOGO = 'images/logo.png'
-#SITELOGO_SIZE = 32
-#FAVICON = 'images/favicon.png'
+SITELOGO = 'images/favicon_white.ico'
+SITELOGO_SIZE = 20
+FAVICON = 'images/favicon.ico'
 
 ABOUT_ME = ""
 #ABOUT_ME = "I'm a PhD student studying at the University of New Mexico. I am working on application of optimization and stochastic processes in dynamical systems. I also enjoy programming, especially coding in Python."

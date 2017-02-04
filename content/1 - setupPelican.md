@@ -162,6 +162,18 @@ generated htmls in a separate folder `drafts/`. Remember to add this to
 `.gitignore` of the master branch to ensure it doesn't get pushed to the
 outside world.
 
+## Site logo and favicon
+
+Include in your `pelicanconf.py`, the following lines
+```python
+SITELOGO = 'images/SITELOGO' 
+SITELOGO_SIZE = 20
+FAVICON = 'images/FAVICON'
+```
+For my blog, I am using [Font Awesome's](http://fontawesome.io) sticky note
+icon as my site logo. The favicon was generated using
+[http://paulferrett.com/fontawesome-favicon/](http://paulferrett.com/fontawesome-favicon/).
+
 ## Pelican-Bootstrap3
 
 Clone `pelican-bootstrap3` into the root folder of the blog. I hid the sidebar
@@ -169,7 +181,7 @@ and have an `About Me` page in `content/pages`. Blog posts in  `content/pages`
 are not archived and are treated as "static pages".
 ```python
 ####################### Theme-Specific Settings #########################
-THEME = 'pelican-bootstrap3'        #'html5-dopetrope'
+THEME = 'pelican-bootstrap3'
 
 # Pelican Theme-Specific Variables
 BOOTSTRAP_THEME = 'cosmo'
@@ -192,9 +204,6 @@ DIRECT_TEMPLATES=['index','tags','categories','archives']
 #ABOUT_ME = "blah blah blah"
 #AVATAR = "/images/myphoto.png"
 #BANNER = "/images/banner.png"
-#SITELOGO = 'images/logo.png'
-#SITELOGO_SIZE = 32
-#FAVICON = 'images/favicon.png'
 --->
 
 ### Reducing the figure size
@@ -210,7 +219,7 @@ Include images using the following HTML code directly into your Markdown file.
 
 ~~~HTML
 <div class="container">
-    <div class="col-md-4"></div>
+    <div class="col-md-4"></div> <!--For an empty div to left for centering-->
     <div class="col-md-4" style="padding-left: 0px;  padding-right: 0px;">
         <img alt="ALT text." src="/path/to/image" class="img-responsive">
     </div>
