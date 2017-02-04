@@ -14,12 +14,12 @@ the Arxiv's wizard. It is there on their FAQs.
 
 
 1. Arxiv does not accept `.bib` files. Instead, we have to upload the `.bbl`
-fle. [^bbl]
+file. [^bbl]
 1. Arxiv does not accept `.pdf` files when generated using TeX. We have to
 upload the tex files, necessary figures, style files, and the `.bbl` file.
 [^thingsneeded]
 1. Adding multiple items on Arxiv is a pain. The best way to accomplish this is
-to `zip` all the required files, and then upload the zip. Arxiv can process
+to `zip` all the required files and then upload the zip. Arxiv can process
 `zip` and `tar.gz`.[^zipping]
 
 [^bbl]: [https://arxiv.org/help/submit_tex#bibtex](https://arxiv.org/help/submit_tex#bibtex)

@@ -10,15 +10,15 @@ summary: All the tweaks I did to get my Pelican blog running.
 I have been postponing my foray into blogging for some time now. Well, this
 holiday season I decided to present myself with the gift of blogging. I had done
 a bit of blogging using [DokuWiki](https://www.dokuwiki.org/) back when I was at
-IIT Madras, but my site was hacked due to my neglience of the security settings.
+IIT Madras, but my site was hacked due to my negligence of the security settings.
 To make things simple, I am choosing a static website for blogging this time. I will
 stick with [Pelican](https://blog.getpelican.com/) due to my comfort level with
 Python. 
 
 On reading about Pelican, I discovered that the norm appears to be to replace the customary
 "Hello World" post with a post on how one sets up the blog using Pelican.
-The journey on understanding Pelican definitely is not straight-forward as one would like to hope for.
-However, among the numerous posts I read on the internet, I would like to
+The journey of understanding Pelican definitely is not straight-forward as one would like to hope for.
+However, among the numerous posts, I read on the internet, I would like to
 especially thank the "Hello World" posts from Mr. Hartley's
 [blog](http://beneathdata.com/how-to/how-i-built-this-website), Mr. Vincent's
 [blog](http://algorithmshop.com/20131212-starting-a-blog.html/), and Mr.
@@ -30,7 +30,7 @@ Jerome's [blog](http://ntanjerome.org/blog/how-to-setup-github-user-page-with-pe
 
 Requirements:
 
-1. [msysgit](https://git-for-windows.github.io/)[^1] to emulate the Unix terminal in my PC. 
+1. [msysgit](https://git-for-windows.github.io/)[^1] to emulate the Unix terminal on my PC. 
 1. [conda](https://github.com/conda/conda) for easy python package handling
 
 The following steps create a virtual environment in conda for Pelican,
@@ -65,7 +65,7 @@ $ cd path/to/blog
 $ pelican-quickstart                    
 ~~~
 <!-- 
-# Should have worked, but will fail
+# Should have worked but will fail
 You will have to replace the == in the line number given in the error message
 with >=. See [this
 conversation](https://github.com/getpelican/pelican/issues/2043#issuecomment-268625132)
@@ -107,7 +107,7 @@ post](http://ntanjerome.org/blog/how-to-setup-github-user-page-with-pelican/),
 checkout -b source` if you haven't already)
 + Add/commit everything except the `output` folder 
 + Create a new branch 'gh-pages'
-+ Run the following bash script to automate the *updation of GitHub pages*
++ Run the following bash script to automate the *update of GitHub pages*
 
 I had to also follow the advice given
 [here](https://github.com/getnikola/nikola/issues/2223#issuecomment-174193643)
@@ -288,4 +288,4 @@ I updated `blog/pelican-bootstrap3/templates/includes/footer.html` with
 ~~~
 
 [^1]: $ sign denotes bash prompt.
-[^2]: Title and date is the minimum requirement for a blog post.
+[^2]: Title and date are the minimum requirement for a blog post.

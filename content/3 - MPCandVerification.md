@@ -5,7 +5,7 @@ category: Control Theory
 author: Abraham Vinod
 summary: Surprising overlap between two subfields of control theory
 
-One of major research projects is on verification of dynamical systems.
+One of my major research projects is on verification of dynamical systems.
 Specifically, I am interested in characterizing the set of initial conditions
 for a given dynamical system which can be driven such that the state reaches a
     certain target subset of the state space while avoiding certain unsafe
@@ -16,7 +16,7 @@ for a given dynamical system which can be driven such that the state reaches a
 As always, I thought (wrongly) this field was insular in the sense that it is a
 unique problem worked on only by my peers.
 
-The other day, I was reading an . This well-written paper in the robust MPC literature
+The other day, I was reading an Automatica paper[^GoulartAutomatica2006]. This well-written paper in the robust MPC literature
 discusses optimal control problems on linear systems with disturbance with a
 reach-avoid like objective (Polytopic target and safe sets).
 <!--- Some interesting results (at least I was not aware of it):

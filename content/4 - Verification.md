@@ -3,7 +3,7 @@ date: 2017-1-8
 tags: Verification
 category: Control theory 
 author: Abraham Vinod
-summary: Discussing the two view points in verification --- the computer science view point and the controls view point
+summary: Discussing the two viewpoints in verification --- the computer science viewpoint and the controls viewpoint
 
 # Verification 
 
@@ -27,7 +27,7 @@ verification.
 
 ## Control theory point of view
 
-Verification is posed as a reach avoid problem where the objective is identify
+Verification is posed as a reach avoid problem where the objective is to identify
 the initial conditions and the corresponding control policies under which the
 hybrid system will hit a target set while avoiding an unsafe set over a finite
 time horizon. The problem also depends on whether the hybrid system is
@@ -54,16 +54,16 @@ acknowledge Sumanth's contributions for helping improve this section.
 For hybrid systems, it is not straightforward to apply traditional formal
 methods for verification, such as model checking[^ClarkeBook1999] and deductive
 verification[^KaufmannBook2000], to hybrid systems since these methods were
-originally developed for circuits, and communication protocols
-and usually require extensive search of all reachable states.  However, this is
-not possible as the states in hybrid systems are uncountable[^LinBook2000]. One
+originally developed for circuits and communication protocols
+and usually require an extensive search of all reachable states.  However, this is
+not possible as the states in hybrid systems are uncountable[^LinBook2000]. An
 approach used in this camp tackle the problem by modeling the hybrid system as a
 finite state automation using abstraction techniques. Other approaches include
 using SMT solvers and probabilistic model checkers[^Caution]. Do check out these
 interesting links ---
 [Distinguishing Decision Procedure vs SMT solver vs Theorem prover vs Constraint
 solver](http://cs.stackexchange.com/questions/14946/distinguish-decision-procedure-vs-smt-solver-vs-theorem-prover-vs-constraint-sol)
-and [dReach](http://dreal.github.io/dReach/). Some good books in these topics
+and [dReach](http://dreal.github.io/dReach/). Some good books on these topics
 are [Klaus Schneider's Verification of reactive
 systems](http://www.springer.com/us/book/9783540002963), [Gerard J. Holzmann's
 Design And Validation Of Computer
