@@ -472,7 +472,8 @@ generated htmls in a separate folder &lt;code&gt;drafts/&lt;/code&gt;. Remember 
 outside world.&lt;/p&gt;
 &lt;h2 id="pelican-bootstrap3"&gt;Pelican-Bootstrap3&lt;/h2&gt;
 &lt;p&gt;Clone &lt;code&gt;pelican-bootstrap3&lt;/code&gt; into the root folder of the blog. I hid the sidebar
-and have an &lt;code&gt;About Me&lt;/code&gt; page in &lt;code&gt;content/pages&lt;/code&gt;. &lt;/p&gt;
+and have an &lt;code&gt;About Me&lt;/code&gt; page in &lt;code&gt;content/pages&lt;/code&gt;. Blog posts in  &lt;code&gt;content/pages&lt;/code&gt;
+are not archived and are treated as "static pages".&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;####################### Theme-Specific Settings #########################&lt;/span&gt;
 &lt;span class="n"&gt;THEME&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;'pelican-bootstrap3'&lt;/span&gt;        &lt;span class="c1"&gt;#'html5-dopetrope'&lt;/span&gt;
 
