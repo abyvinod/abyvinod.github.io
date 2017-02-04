@@ -1,14 +1,180 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Notes on the margin - Abraham Vinod</title><link href="/" rel="alternate"></link><link href="/feeds/abraham-vinod.atom.xml" rel="self"></link><id>/</id><updated>2017-01-20T00:00:00-07:00</updated><entry><title>Create bookmarks when including pdfs using pdflatex</title><link href="/create-bookmarks-when-including-pdfs-using-pdflatex.html" rel="alternate"></link><published>2017-01-20T00:00:00-07:00</published><updated>2017-01-20T00:00:00-07:00</updated><author><name>Abraham Vinod</name></author><id>tag:None,2017-01-20:/create-bookmarks-when-including-pdfs-using-pdflatex.html</id><summary type="html">&lt;p&gt;Python code to create bookmarks for latex&lt;/p&gt;</summary><content type="html">&lt;p&gt;This is the README file from my &lt;a href="https://bitbucket.org/abyvinod/createbookmarkincludepdf"&gt;Bitbucket
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Notes on the margin - Abraham Vinod</title><link href="/" rel="alternate"></link><link href="/feeds/abraham-vinod.atom.xml" rel="self"></link><id>/</id><updated>2017-02-03T00:00:00-07:00</updated><entry><title>Adding papers on Arxiv</title><link href="/adding-papers-on-arxiv.html" rel="alternate"></link><published>2017-02-03T00:00:00-07:00</published><updated>2017-02-03T00:00:00-07:00</updated><author><name>Abraham Vinod</name></author><id>tag:None,2017-02-03:/adding-papers-on-arxiv.html</id><summary type="html">&lt;p&gt;Some tips on adding TeX generated papers to Arxiv&lt;/p&gt;</summary><content type="html">&lt;p&gt;Recently, I published one of my &lt;a href="https://arxiv.org/abs/1610.04550"&gt;papers&lt;/a&gt; to
+Arxiv. You can find an informal discussion on this paper &lt;a href="{filename}8 -
+hscc2017.md"&gt;here&lt;/a&gt; .&lt;/p&gt;
+&lt;p&gt;There were a couple of things which I found relevant and omitted in
+the Arxiv's wizard. It is there on their FAQs.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Arxiv does not accept &lt;code&gt;.bib&lt;/code&gt; files. Instead, we have to upload the &lt;code&gt;.bbl&lt;/code&gt;
+fle. &lt;sup id="fnref-bbl"&gt;&lt;a class="footnote-ref" href="#fn-bbl"&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/li&gt;
+&lt;li&gt;Arxiv does not accept &lt;code&gt;.pdf&lt;/code&gt; files when generated using TeX. We have to
+upload the tex files, necessary figures, style files, and the &lt;code&gt;.bbl&lt;/code&gt; file.
+&lt;sup id="fnref-thingsneeded"&gt;&lt;a class="footnote-ref" href="#fn-thingsneeded"&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/li&gt;
+&lt;li&gt;Adding multiple items on Arxiv is a pain. The best way to accomplish this is
+to &lt;code&gt;zip&lt;/code&gt; all the required files, and then upload the zip. Arxiv can process
+&lt;code&gt;zip&lt;/code&gt; and &lt;code&gt;tar.gz&lt;/code&gt;.&lt;sup id="fnref-zipping"&gt;&lt;a class="footnote-ref" href="#fn-zipping"&gt;3&lt;/a&gt;&lt;/sup&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="footnote"&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li id="fn-bbl"&gt;
+&lt;p&gt;&lt;a href="https://arxiv.org/help/submit_tex#bibtex"&gt;https://arxiv.org/help/submit_tex#bibtex&lt;/a&gt;&amp;nbsp;&lt;a class="footnote-backref" href="#fnref-bbl" title="Jump back to footnote 1 in the text"&gt;↩&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn-thingsneeded"&gt;
+&lt;p&gt;&lt;a href="https://arxiv.org/help/submit_tex#wegotem"&gt;https://arxiv.org/help/submit_tex#wegotem&lt;/a&gt;&amp;nbsp;&lt;a class="footnote-backref" href="#fnref-thingsneeded" title="Jump back to footnote 2 in the text"&gt;↩&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn-zipping"&gt;
+&lt;p&gt;&lt;a href="https://arxiv.org/help/tar"&gt;https://arxiv.org/help/tar&lt;/a&gt;&amp;nbsp;&lt;a class="footnote-backref" href="#fnref-zipping" title="Jump back to footnote 3 in the text"&gt;↩&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/hr&gt;&lt;/div&gt;</content><category term="Arxiv"></category></entry><entry><title>HSCC2017: Forward Stochastic Reachability Analysis for Uncontrolled Linear Systems using Fourier Transforms</title><link href="/hscc2017-forward-stochastic-reachability-analysis-for-uncontrolled-linear-systems-using-fourier-transforms.html" rel="alternate"></link><published>2017-02-03T00:00:00-07:00</published><updated>2017-02-03T00:00:00-07:00</updated><author><name>Abraham Vinod</name></author><id>tag:None,2017-02-03:/hscc2017-forward-stochastic-reachability-analysis-for-uncontrolled-linear-systems-using-fourier-transforms.html</id><summary type="html">&lt;p&gt;Summary of the HSCC 2017 paper&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;br/&gt;
+&lt;br/&gt;
+This blog post will summarize my paper &lt;strong&gt;Forward Stochastic Reachability
+Analysis for Uncontrolled Linear Systems using Fourier Transforms&lt;/strong&gt; published at
+Hybrid Systems: Computation and Control 2017. The conference will happen on
+April 18-20th, 2017 at Pittsburg, PA, USA.&lt;/p&gt;
+&lt;h1 id="what-is-this-paper-about"&gt;What is this paper about?&lt;/h1&gt;
+&lt;p&gt;We look at discrete-time uncontrolled linear systems&lt;sup id="fnref-systems"&gt;&lt;a class="footnote-ref" href="#fn-systems"&gt;1&lt;/a&gt;&lt;/sup&gt; perturbed by a
+disturbance&lt;sup id="fnref-dist"&gt;&lt;a class="footnote-ref" href="#fn-dist"&gt;2&lt;/a&gt;&lt;/sup&gt; whose stochastics (say probability density function) is known. We
+are interested in performing the &lt;strong&gt;forward stochastic reachability analysis&lt;/strong&gt;, that
+is, characterize the stochasticity of the state of a system at some point of
+time in future when the system is initialized at a known initial condition.  For
+any given point of time in future, we propose an &lt;strong&gt;analytical formulation&lt;/strong&gt;
+for computing via Fourier transforms:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;forward stochastic reach set (FSR set) --- the smallest closed subset of the state
+space that occurs almost surely.&lt;/li&gt;
+&lt;li&gt;forward stochastic reach probability density  (FSRPD) --- the probability density
+associated with the state, an absolutely continuous random vector.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Moreover, we provide sufficient conditions for FSRPD to be &lt;strong&gt;logconcave&lt;/strong&gt;.
+Logconcavity ensures that &lt;strong&gt;convexity&lt;/strong&gt; of the constraints and objective
+functions created using forward stochastic reachability analysis. Convex
+optimization problems are generally tractable.&lt;/p&gt;
+&lt;p&gt;We discuss one application of this analysis --- maximizing the probability of
+capture of a non-adversarial uncontrolled target (with stochastic dynamics) by a
+controlled robot (with deterministic dynamics).&lt;/p&gt;
+&lt;h1 id="what-is-so-great-about-this-work"&gt;What is so great about this work?&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Not an Eulerian method (not a grid based method)&lt;/strong&gt;: This implies that we
+can mitigate the &lt;a href="https://en.wikipedia.org/wiki/Curse_of_dimensionality"&gt;curse of
+dimensionality&lt;/a&gt;. Existing
+approaches of performing forward stochastic reachability analysis is through
+dynamic programming&lt;sup id="fnref-SummersAutomatica2010"&gt;&lt;a class="footnote-ref" href="#fn-SummersAutomatica2010"&gt;3&lt;/a&gt;&lt;/sup&gt; and inverted dynamics. Dynamic
+programming can not be applied to dimensions higher than 5.&lt;/li&gt;
+&lt;li&gt;Can handle &lt;strong&gt;unbounded stochastic disturbances&lt;/strong&gt; and is &lt;strong&gt;not restricted to
+Gaussians&lt;/strong&gt;: We demonstrate our method to an exponential disturbance as
+well.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Sufficient conditions for the convexity&lt;/strong&gt; of the FSR set and the FSRPD
+provided&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Convex optimization formulation&lt;/strong&gt; for non-adversarial stochastically moving
+target problem&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Applications&lt;/strong&gt;: Usefulness demonstrated for stochastic motion planning
+problems. We also anticipate application of this method in obstacle avoidance,
+aircraft trajectory planning, and other venues.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id="where-are-some-beautiful-plots"&gt;Where are some beautiful plots?&lt;/h1&gt;
+&lt;p&gt;In this paper, we analyze the problem of capture of a non-adversarial target
+(robot G) with stochastic dynamics using a robot (robot R) with deterministic
+dynamics.&lt;/p&gt;
+&lt;h2 id="what-is-the-information-provided-for-this-problem"&gt;What is the information provided for this problem?&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;the initial position of the robots R and G,&lt;/li&gt;
+&lt;li&gt;the deterministic LTI dynamics of the robot R,&lt;/li&gt;
+&lt;li&gt;the disturbed (stochastic) LTI dynamics of the robot G, and&lt;/li&gt;
+&lt;li&gt;the probability density function of the disturbance affecting the dynamics of
+robot G.
+&lt;!--
+--- $x_R[0]$ and $x_G[0]$
+--- $ x_R[t+1]=A_R x_R[t]+B_R u_R[t]$
+--- $ x_G[t+1]=A_G x_G[t]+B_G w_G[t]$
+--- $w_G[t]\sim \psi_w$ 
+ $\pi_{\mathrm{open}}$--&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="what-should-be-computed-for-this-problem"&gt;What should be computed for this problem?&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;the (optimal) time instant of capture which results in maximum probability of
+capture $\tau^\ast$&lt;/li&gt;
+&lt;li&gt;the (optimal) position for robot R that maximizes the probability of capture
+at this instant $x_R^\ast[\tau^\ast]$&lt;/li&gt;
+&lt;li&gt;the open-loop controller&lt;sup id="fnref-robotG"&gt;&lt;a class="footnote-ref" href="#fn-robotG"&gt;4&lt;/a&gt;&lt;/sup&gt; input sequence that drives robot R from the
+given initial position to the optimal position of capture&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Robot R is assumed to have point mass dynamics discretized in time with bounded
+control authority. This implies that robot R need not cover the entire state
+space within a given time horizon, and the reachable states constraint the
+final position for capture.&lt;/p&gt;
+&lt;h2 id="case-1-robot-g-has-point-mass-dynamics-and-gaussian-perturbed-dynamics"&gt;Case 1: Robot G has point mass dynamics and Gaussian perturbed dynamics&lt;/h2&gt;
+&lt;p&gt;Robot G has point mass dynamics discretized in time with 'inputs' as a
+discrete-time bivariate Gaussian random process. For Gaussians, the mode and the
+mean coincide. The optimization problem provides the optimal capture position
+while satisfying the constraints.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="A GIF should have appeared here." src="/images/HSCC2017Gauss.gif"/&gt;&lt;/p&gt;
+&lt;p&gt;Snapshots&lt;sup id="fnref-GIF"&gt;&lt;a class="footnote-ref" href="#fn-GIF"&gt;5&lt;/a&gt;&lt;/sup&gt; of optimal capture positions $x_R^\ast[\tau]$ over the time horizon&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The black line shows the mean position trajectory of robot G, &lt;/li&gt;
+&lt;li&gt;The contour plot characterizes the FSRPD of the state of robot G, &lt;/li&gt;
+&lt;li&gt;The blue box shows the set of states reachable by robot R at the time of interest, and &lt;/li&gt;
+&lt;li&gt;The red box shows the capture region centered at the current position of robot R (robot G is captured if it lies inside the red box).&lt;/li&gt;
+&lt;li&gt;The annotation box shows the time of interest $\tau$ as well as the probability of
+capture corresponding to $x_R^\ast[\tau]$.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="case-2-robot-g-has-double-integrator-dynamics-and-exponential-perturbed-dynamics"&gt;Case 2: Robot G has double integrator dynamics and exponential perturbed dynamics&lt;/h2&gt;
+&lt;p&gt;Robot G has double integrator dynamics discretized in time with 'inputs' as a
+discrete-time bivariate exponential random process. For exponential random
+vectors, the mode and the mean does not coincide to begin with, making this a
+nontrivial problem. The optimization problem provides the optimal capture
+position while satisfying the constraints.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="A GIF should have appeared here." src="/images/HSCC2017Exp.gif"/&gt;&lt;/p&gt;
+&lt;p&gt;Snapshots&lt;sup id="fnref-GIF"&gt;&lt;a class="footnote-ref" href="#fn-GIF"&gt;5&lt;/a&gt;&lt;/sup&gt; of optimal capture positions $x_R^\ast[\tau]$ over the time horizon&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The black line shows the mean position trajectory of robot G, &lt;/li&gt;
+&lt;li&gt;The contour plot characterizes the FSRPD of the state of robot G, &lt;/li&gt;
+&lt;li&gt;The blue box shows the set of states reachable by robot R at the time of interest, and &lt;/li&gt;
+&lt;li&gt;The red box shows the capture region centered at the current position of robot R (robot G is captured if it lies inside the red box).&lt;/li&gt;
+&lt;li&gt;The annotation box shows the time of interest $\tau$ as well as the probability of
+capture corresponding to $x_R^\ast[\tau]$.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id="nice-job-where-do-i-get-more-details_1"&gt;Nice job!!! Where do I get more details?&lt;/h1&gt;
+&lt;p&gt;You can find the paper on &lt;a href="https://arxiv.org/abs/1610.04550"&gt;Arxiv&lt;/a&gt;. You can
+find the MATLAB code for generating these figures on my &lt;a href=""&gt;webpage&lt;/a&gt;.&lt;/p&gt;
+&lt;div class="footnote"&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li id="fn-systems"&gt;
+&lt;p&gt;This class of systems include affine noise perturbed LTI
+discrete-time systems with known state feedback. The work is also applicable to
+affine noise perturbed LTI discrete-time systems with open loop controllers
+after some minor modifications.&amp;nbsp;&lt;a class="footnote-backref" href="#fnref-systems" title="Jump back to footnote 1 in the text"&gt;↩&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn-dist"&gt;
+&lt;p&gt;The disturbance is assumed to be an IID random process, but we can
+relax the identical assumption if needed.&amp;nbsp;&lt;a class="footnote-backref" href="#fnref-dist" title="Jump back to footnote 2 in the text"&gt;↩&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn-SummersAutomatica2010"&gt;
+&lt;p&gt;&lt;a href="http://linkinghub.elsevier.com/retrieve/pii/S0005109810003547"&gt;Automatica 2010, Summers et.
+al&lt;/a&gt;&amp;nbsp;&lt;a class="footnote-backref" href="#fnref-SummersAutomatica2010" title="Jump back to footnote 3 in the text"&gt;↩&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn-robotG"&gt;
+&lt;p&gt;Here, open-loop controller refers to the fact that the control
+actions taken by robot R is independent of the actual current position of robot
+G, which is a realization of the random process $x_G[\cdot]$.&amp;nbsp;&lt;a class="footnote-backref" href="#fnref-robotG" title="Jump back to footnote 4 in the text"&gt;↩&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn-GIF"&gt;
+&lt;p&gt;The GIFs were created using
+&lt;a href="http://gifcreator.me/"&gt;http://gifcreator.me/&lt;/a&gt;.&amp;nbsp;&lt;a class="footnote-backref" href="#fnref-GIF" title="Jump back to footnote 5 in the text"&gt;↩&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/hr&gt;&lt;/div&gt;</content><category term="My Research"></category><category term="Stochastic Reachability"></category><category term="Convex Optimization"></category></entry><entry><title>Create bookmarks when including pdfs using pdflatex</title><link href="/create-bookmarks-when-including-pdfs-using-pdflatex.html" rel="alternate"></link><published>2017-01-20T00:00:00-07:00</published><updated>2017-01-20T00:00:00-07:00</updated><author><name>Abraham Vinod</name></author><id>tag:None,2017-01-20:/create-bookmarks-when-including-pdfs-using-pdflatex.html</id><summary type="html">&lt;p&gt;Python code to create bookmarks for latex&lt;/p&gt;</summary><content type="html">&lt;p&gt;This is the README file from my &lt;a href="https://bitbucket.org/abyvinod/createbookmarkincludepdf"&gt;Bitbucket
 repository&lt;/a&gt; for the
 code. Do check it out!&lt;/p&gt;
-&lt;h3 id="problem"&gt;Problem&lt;/h3&gt;
+&lt;h2 id="problem"&gt;Problem&lt;/h2&gt;
 &lt;p&gt;Extract bookmarks from a pdf that has to be included as is into another pdf
 created using pdflatex. Includepdf package ignores pdf annotations.&lt;/p&gt;
-&lt;h3 id="solution"&gt;Solution&lt;/h3&gt;
+&lt;h2 id="solution"&gt;Solution&lt;/h2&gt;
 &lt;p&gt;Use pdftk to fetch the annotations, python to parse through these annotations,
 and bookmark package to feed it back to pdflatex.&lt;/p&gt;
-&lt;h3 id="how-do-i-get-set-up"&gt;How do I get set up?&lt;/h3&gt;
+&lt;h2 id="how-do-i-get-set-up"&gt;How do I get set up?&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;Tested on Python 3.5 and TexLive 2015 with bookmark package installed&lt;/li&gt;
 &lt;li&gt;Requires:&lt;ul&gt;
@@ -17,7 +183,7 @@ and bookmark package to feed it back to pdflatex.&lt;/p&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id="how-do-i-run-the-code"&gt;How do I run the code?&lt;/h3&gt;
+&lt;h2 id="how-do-i-run-the-code"&gt;How do I run the code?&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;Copy the python script into the folder where the parent tex file resides.&lt;/li&gt;
 &lt;li&gt;Edit three variables:&lt;ul&gt;
@@ -38,7 +204,7 @@ and bookmark package to feed it back to pdflatex.&lt;/p&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id="who-do-i-talk-to"&gt;Who do I talk to?&lt;/h3&gt;
+&lt;h2 id="who-do-i-talk-to"&gt;Who do I talk to?&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;Abraham Vinod (aby[dot]vinod[at]gmail[dot]com)&lt;/li&gt;
 &lt;/ul&gt;</content><category term="Latex"></category><category term="Python"></category></entry><entry><title>Tips for learning online</title><link href="/tips-for-learning-online.html" rel="alternate"></link><published>2017-01-15T00:00:00-07:00</published><updated>2017-01-15T00:00:00-07:00</updated><author><name>Abraham Vinod</name></author><id>tag:None,2017-01-15:/tips-for-learning-online.html</id><summary type="html">&lt;p&gt;Some tips I found useful for MOOC based learning&lt;/p&gt;</summary><content type="html">&lt;p&gt;I have used internet to learn several new tools and concepts --- &lt;a href="http://online.stanford.edu/course/convex-optimization-winter-2014"&gt;convex
@@ -88,7 +254,7 @@ problem.&lt;/p&gt;
 point of view&lt;/a&gt;.&amp;nbsp;&lt;a class="footnote-backref" href="#fnref-verificationBlogPost" title="Jump back to footnote 3 in the text"&gt;↩&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;/hr&gt;&lt;/div&gt;</content><category term="Verification"></category><category term="Model Predictive Control"></category></entry><entry><title>What is verification?</title><link href="/what-is-verification.html" rel="alternate"></link><published>2017-01-08T00:00:00-07:00</published><updated>2017-01-08T00:00:00-07:00</updated><author><name>Abraham Vinod</name></author><id>tag:None,2017-01-08:/what-is-verification.html</id><summary type="html">&lt;p&gt;Discussing the two view points in verification --- the computer science view point and the controls view point&lt;/p&gt;</summary><content type="html">&lt;h2 id="verification"&gt;Verification&lt;/h2&gt;
+&lt;/hr&gt;&lt;/div&gt;</content><category term="Verification"></category><category term="Model Predictive Control"></category></entry><entry><title>What is verification?</title><link href="/what-is-verification.html" rel="alternate"></link><published>2017-01-08T00:00:00-07:00</published><updated>2017-01-08T00:00:00-07:00</updated><author><name>Abraham Vinod</name></author><id>tag:None,2017-01-08:/what-is-verification.html</id><summary type="html">&lt;p&gt;Discussing the two view points in verification --- the computer science view point and the controls view point&lt;/p&gt;</summary><content type="html">&lt;h1 id="verification"&gt;Verification&lt;/h1&gt;
 &lt;p&gt;Formal verification is the process of mathematically checking that the behavior
 of a system, described using a formal model, satisfies a given property, also
 described using a formal model. The two models may or may not be the same, but
@@ -104,7 +270,7 @@ for safety critical systems and other systems that need guarantees of their
     system. &lt;/p&gt;
 &lt;p&gt;Historically, there has been two approaches in dealing with the problem of
 verification.&lt;/p&gt;
-&lt;h3 id="control-theory-point-of-view"&gt;Control theory point of view&lt;/h3&gt;
+&lt;h2 id="control-theory-point-of-view"&gt;Control theory point of view&lt;/h2&gt;
 &lt;p&gt;Verification is posed as a reach avoid problem where the objective is identify
 the initial conditions and the corresponding control policies under which the
 hybrid system will hit a target set while avoiding an unsafe set over a finite
@@ -119,7 +285,7 @@ However, due to the curse of dimensionality, the application of verification is
 mostly limited to low dimensional systems. Active research is being done on
 developing approximations and exact methods to do verification of
 high-dimensional systems.&lt;/p&gt;
-&lt;h3 id="computer-science-point-of-view"&gt;Computer science point of view&lt;/h3&gt;
+&lt;h2 id="computer-science-point-of-view"&gt;Computer science point of view&lt;/h2&gt;
 &lt;p&gt;Disclaimer: I have only seen the research from this point of view from the
 sidelines. In other words, I am no expert on this point of view. I would like to
 acknowledge Sumanth's contributions for helping improve this section. &lt;/p&gt;
@@ -141,7 +307,7 @@ systems&lt;/a&gt;, &lt;a href="https://www.amazon.com/Design-Validation-Computer
 Design And Validation Of Computer
 Protocols&lt;/a&gt;,
 and &lt;a href="http://cs.nyu.edu/cs/faculty/pnueli/books.html"&gt;Amir Pneuli's books&lt;/a&gt;.&lt;/p&gt;
-&lt;h2 id="conclusion_1"&gt;Conclusion&lt;/h2&gt;
+&lt;h1 id="conclusion_1"&gt;Conclusion&lt;/h1&gt;
 &lt;p&gt;Irrespective of the approach, the goal of these two research camps are the same
 --- provide concrete proof that our intuition-based designs/heuristics will
 actually be safe.&lt;/p&gt;
@@ -175,7 +341,7 @@ al&lt;/a&gt;&amp;nbsp;&lt;a class="footnote-backref" href="#fnref-SummersAutomat
 &lt;p&gt;At this point, I am really out of my depth. &amp;nbsp;&lt;a class="footnote-backref" href="#fnref-Caution" title="Jump back to footnote 7 in the text"&gt;↩&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;/hr&gt;&lt;/div&gt;</content><category term="Verification"></category></entry><entry><title>Blogging using Pelican + Conda + GitHub Pages</title><link href="/blogging-using-pelican-conda-github-pages.html" rel="alternate"></link><published>2016-12-23T03:42:00-07:00</published><updated>2016-12-23T03:42:00-07:00</updated><author><name>Abraham Vinod</name></author><id>tag:None,2016-12-23:/blogging-using-pelican-conda-github-pages.html</id><summary type="html">&lt;p&gt;All the tweaks I did to get my Pelican blog running.&lt;/p&gt;</summary><content type="html">&lt;h2 id="prelude"&gt;Prelude&lt;/h2&gt;
+&lt;/hr&gt;&lt;/div&gt;</content><category term="Verification"></category></entry><entry><title>Blogging using Pelican + Conda + GitHub Pages</title><link href="/blogging-using-pelican-conda-github-pages.html" rel="alternate"></link><published>2016-12-23T03:42:00-07:00</published><updated>2016-12-23T03:42:00-07:00</updated><author><name>Abraham Vinod</name></author><id>tag:None,2016-12-23:/blogging-using-pelican-conda-github-pages.html</id><summary type="html">&lt;p&gt;All the tweaks I did to get my Pelican blog running.&lt;/p&gt;</summary><content type="html">&lt;h1 id="prelude"&gt;Prelude&lt;/h1&gt;
 &lt;p&gt;I have been postponing my foray into blogging for some time now. Well, this
 holiday season I decided to present myself with the gift of blogging. I had done
 a bit of blogging using &lt;a href="https://www.dokuwiki.org/"&gt;DokuWiki&lt;/a&gt; back when I was at
@@ -191,8 +357,8 @@ especially thank the "Hello World" posts from Mr. Hartley's
 &lt;a href="http://beneathdata.com/how-to/how-i-built-this-website"&gt;blog&lt;/a&gt;, Mr. Vincent's
 &lt;a href="http://algorithmshop.com/20131212-starting-a-blog.html/"&gt;blog&lt;/a&gt;, and Mr.
 Jerome's &lt;a href="http://ntanjerome.org/blog/how-to-setup-github-user-page-with-pelican/"&gt;blog&lt;/a&gt;.&lt;/p&gt;
-&lt;h2 id="how-did-i-get-my-blog-setup"&gt;How did I get my blog setup?&lt;/h2&gt;
-&lt;h3 id="setting-up-conda-and-pelican-in-windows"&gt;Setting up Conda and Pelican in Windows&lt;/h3&gt;
+&lt;h1 id="how-did-i-get-my-blog-setup"&gt;How did I get my blog setup?&lt;/h1&gt;
+&lt;h2 id="setting-up-conda-and-pelican-in-windows"&gt;Setting up Conda and Pelican in Windows&lt;/h2&gt;
 &lt;p&gt;Requirements:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;a href="https://git-for-windows.github.io/"&gt;msysgit&lt;/a&gt;&lt;sup id="fnref-1"&gt;&lt;a class="footnote-ref" href="#fn-1"&gt;1&lt;/a&gt;&lt;/sup&gt; to emulate the Unix terminal in my PC. &lt;/li&gt;
@@ -217,7 +383,7 @@ $ &lt;span class="nb"&gt;cd&lt;/span&gt; PelicanBase
 $ python setup.py install               &lt;span class="c1"&gt;# Install pelican&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;This installs pelican and fab.&lt;/p&gt;
-&lt;h3 id="setting-up-the-blog"&gt;Setting up the blog&lt;/h3&gt;
+&lt;h2 id="setting-up-the-blog"&gt;Setting up the blog&lt;/h2&gt;
 &lt;p&gt;At this point, we are now ready to start laying the foundation for the blog.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ mkdir path/to/blog
 $ &lt;span class="nb"&gt;cd&lt;/span&gt; path/to/blog
@@ -232,13 +398,13 @@ for more details.
 --&gt;
 &lt;p&gt;&lt;code&gt;pelican-quickstart&lt;/code&gt; will pose a series of questions that initializes
 your blog.&lt;/p&gt;
-&lt;h3 id="creating-the-first-post"&gt;Creating the first post&lt;/h3&gt;
+&lt;h2 id="creating-the-first-post"&gt;Creating the first post&lt;/h2&gt;
 &lt;p&gt;Create &lt;code&gt;firstPost.md&lt;/code&gt; containing a title and date&lt;sup id="fnref-2"&gt;&lt;a class="footnote-ref" href="#fn-2"&gt;2&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ mkdir content
 $ &lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s1"&gt;'Title: Test content&lt;/span&gt;
 &lt;span class="s1"&gt;&amp;gt; Date: 2016'&lt;/span&gt; &amp;gt; content/firstPost.md      &lt;span class="c1"&gt;# '&amp;gt;' is autogenerated when ENTER is pressed.&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
-&lt;h3 id="rendering-the-blog"&gt;Rendering the blog&lt;/h3&gt;
+&lt;h2 id="rendering-the-blog"&gt;Rendering the blog&lt;/h2&gt;
 &lt;p&gt;Fabric is a great tool that works with Pelican to automate publishing.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ fab build                             &lt;span class="c1"&gt;# Builds the blog&lt;/span&gt;
 $ fab serve                             &lt;span class="c1"&gt;# Serves the blog at localhost:8000 while holding up the terminal&lt;/span&gt;
@@ -248,7 +414,7 @@ $ fab regenerate &lt;span class="p"&gt;&amp;amp;&lt;/span&gt; fab serve &lt;span
 renders the new blog when the webpage is refreshed. To further automate the
 refreshing (preview style), you can look into plugins for your favorite
 browser. In Firefox, AutoReload is a good add-on.&lt;/p&gt;
-&lt;h3 id="updating-github-pages"&gt;Updating github pages&lt;/h3&gt;
+&lt;h2 id="updating-github-pages"&gt;Updating github pages&lt;/h2&gt;
 &lt;p&gt;I have used the approach highlighted in &lt;a href="http://ntanjerome.org/blog/how-to-setup-github-user-page-with-pelican/"&gt;this Hello World
 post&lt;/a&gt;.
 To summarize &lt;a href="http://ntanjerome.org/blog/how-to-setup-github-user-page-with-pelican/"&gt;that
@@ -281,8 +447,8 @@ git checkout &lt;span class="nb"&gt;source&lt;/span&gt;
 &lt;p&gt;Future updates at Github with the local copy is now easy.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nb"&gt;source&lt;/span&gt; bp &lt;span class="s2"&gt;"Commit Message"&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
-&lt;h2 id="other-tweaks_1"&gt;Other tweaks&lt;/h2&gt;
-&lt;h3 id="adding-rss"&gt;Adding RSS&lt;/h3&gt;
+&lt;h1 id="other-tweaks_1"&gt;Other tweaks&lt;/h1&gt;
+&lt;h2 id="adding-rss"&gt;Adding RSS&lt;/h2&gt;
 &lt;p&gt;Include in your &lt;code&gt;pelicanconf.py&lt;/code&gt;, the following lines&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# Feed generation&lt;/span&gt;
 &lt;span class="n"&gt;FEED_ALL_RSS&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;'feeds/all.rss'&lt;/span&gt;
@@ -290,7 +456,7 @@ git checkout &lt;span class="nb"&gt;source&lt;/span&gt;
 &lt;span class="n"&gt;CATEGORY_FEED_ATOM&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="bp"&gt;None&lt;/span&gt; &lt;span class="c1"&gt;#'feeds/%s.atom.xml'&lt;/span&gt;
 &lt;span class="n"&gt;TRANSLATION_FEED_ATOM&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="bp"&gt;None&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
-&lt;h3 id="ignoring-drafts"&gt;Ignoring drafts&lt;/h3&gt;
+&lt;h2 id="ignoring-drafts"&gt;Ignoring drafts&lt;/h2&gt;
 &lt;p&gt;Include in your &lt;code&gt;pelicanconf.py&lt;/code&gt;, the following lines&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# Private sandbox&lt;/span&gt;
 &lt;span class="n"&gt;IGNORE_FILES&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;'0PRIVATE*'&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;  &lt;span class="c1"&gt;# Pelican does not generate html pages for md files starting with 0Private&lt;/span&gt;
@@ -301,25 +467,28 @@ to use &lt;code&gt;Status: draft&lt;/code&gt; in the markdown article header to 
 generated htmls in a separate folder &lt;code&gt;drafts/&lt;/code&gt;. Remember to add this to
 &lt;code&gt;.gitignore&lt;/code&gt; of the master branch to ensure it doesn't get pushed to the
 outside world.&lt;/p&gt;
-&lt;h3 id="pelican-bootstrap3"&gt;Pelican-Bootstrap3&lt;/h3&gt;
+&lt;h2 id="pelican-bootstrap3"&gt;Pelican-Bootstrap3&lt;/h2&gt;
 &lt;p&gt;Clone &lt;code&gt;pelican-bootstrap3&lt;/code&gt; into the root folder of the blog.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;####################### Theme-Specific Settings #########################&lt;/span&gt;
 &lt;span class="n"&gt;THEME&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;'pelican-bootstrap3'&lt;/span&gt;        &lt;span class="c1"&gt;#'html5-dopetrope'&lt;/span&gt;
 
 &lt;span class="c1"&gt;# Pelican Theme-Specific Variables&lt;/span&gt;
-&lt;span class="n"&gt;BOOTSTRAP_THEME&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;'sandstone'&lt;/span&gt;       &lt;span class="c1"&gt;#'lumen' 'cosmo'&lt;/span&gt;
+&lt;span class="n"&gt;BOOTSTRAP_THEME&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;'cosmo'&lt;/span&gt;
+&lt;span class="n"&gt;PYGMENTS_STYLE&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;'monokai'&lt;/span&gt;
 &lt;span class="n"&gt;SHOW_ARTICLE_CATEGORY&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="bp"&gt;True&lt;/span&gt;
 
-&lt;span class="n"&gt;ABOUT_ME&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;"Blah blah blah"&lt;/span&gt;
+&lt;span class="n"&gt;ABOUT_ME&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;"blah blah blah"&lt;/span&gt;
 
 &lt;span class="n"&gt;AVATAR&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;"/images/myphoto.png"&lt;/span&gt;
 
 &lt;span class="n"&gt;DISPLAY_ARTICLE_INFO_ON_INDEX&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="bp"&gt;True&lt;/span&gt;
-&lt;span class="n"&gt;DISPLAY_RECENT_POSTS_ON_SIDEBAR&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="bp"&gt;False&lt;/span&gt;
-&lt;span class="n"&gt;DISPLAY_TAGS_ON_SIDEBAR&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="bp"&gt;True&lt;/span&gt;
+&lt;span class="n"&gt;DISPLAY_TAGS_ON_SIDEBAR&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="bp"&gt;False&lt;/span&gt;
 &lt;span class="n"&gt;SHOW_ARTICLE_CATEGORY&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="bp"&gt;True&lt;/span&gt;
-
-&lt;span class="n"&gt;PYGMENTS_STYLE&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;'monokai'&lt;/span&gt;
+&lt;span class="n"&gt;DISPLAY_RECENT_POSTS_ON_SIDEBAR&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="bp"&gt;False&lt;/span&gt;
+&lt;span class="c1"&gt;# Below commands will generate SITEURL/tags.html which will have the list of tags&lt;/span&gt;
+&lt;span class="n"&gt;TAG_SAVE_AS&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;'tags/{slug}.html'&lt;/span&gt;
+&lt;span class="n"&gt;TAGS_SAVE_AS&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;'tags.html'&lt;/span&gt;
+&lt;span class="n"&gt;DIRECT_TEMPLATES&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;'index'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s1"&gt;'tags'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s1"&gt;'categories'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s1"&gt;'archives'&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;!---
 #BANNER = "/images/banner.png"
@@ -327,7 +496,20 @@ outside world.&lt;/p&gt;
 #SITELOGO_SIZE = 32
 #FAVICON = 'images/favicon.png'
 ---&gt;
-&lt;h3 id="math-support"&gt;Math support&lt;/h3&gt;
+&lt;h3 id="reducing-the-figure-size"&gt;Reducing the figure size&lt;/h3&gt;
+&lt;p&gt;Edit the &lt;code&gt;.entry-content img&lt;/code&gt; in &lt;code&gt;pelican-bootstrap3/static/css/style.css&lt;/code&gt; to
+have a &lt;code&gt;max-width&lt;/code&gt; of 80%. This ensures my MATLAB generated files are not
+displayed very big (See &lt;a href="/hscc2017-forward-stochastic-reachability-analysis-for-uncontrolled-linear-systems-using-fourier-transforms.html"&gt;this blog post&lt;/a&gt;).&lt;/p&gt;
+&lt;h3 id="custom-header-bar"&gt;Custom header bar&lt;/h3&gt;
+&lt;p&gt;Add the following block within the if loop but just above the code 
+&lt;code&gt;{% for cat, null in categories %}&lt;/code&gt; in &lt;code&gt;pelican-bootstrap3/templates/base.html&lt;/code&gt;.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c"&gt;&amp;lt;!-- Addition of My research tag into the header--&amp;gt;&lt;/span&gt;
+&lt;span class="nt"&gt;&amp;lt;li&amp;gt;&lt;/span&gt;
+    &lt;span class="nt"&gt;&amp;lt;a&lt;/span&gt; &lt;span class="na"&gt;href=&lt;/span&gt;&lt;span class="s"&gt;"&lt;/span&gt;&lt;span class="cp"&gt;{{&lt;/span&gt; &lt;span class="nv"&gt;SITEURL&lt;/span&gt; &lt;span class="cp"&gt;}}&lt;/span&gt;&lt;span class="s"&gt;/tags/my-research.html"&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;My
+        Research&lt;span class="nt"&gt;&amp;lt;/a&amp;gt;&lt;/span&gt;
+&lt;span class="nt"&gt;&amp;lt;/li&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;h2 id="math-support_1"&gt;Math support&lt;/h2&gt;
 &lt;p&gt;I could not get the &lt;code&gt;render_math&lt;/code&gt; plugin to work. I just incorporated MathJax
 into the &lt;code&gt;pelican-bootstrap3\templates\base.html&lt;/code&gt; of my template based on the &lt;a href="http://docs.mathjax.org/en/latest/start.html#tex-and-latex-input"&gt;MathJax
 documentation&lt;/a&gt;.
@@ -340,16 +522,21 @@ Insert the following snippet before the &lt;code&gt;&amp;lt;/head&amp;gt;&lt;/co
 &lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;script&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;This will produce beautiful math like $x^2$ and $$A_B.$$ &lt;/p&gt;
-&lt;h3 id="plugins"&gt;Plugins&lt;/h3&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;############################ Plugins ######################################&lt;/span&gt;
-&lt;span class="n"&gt;PLUGIN_PATHS&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;'pelican-plugins'&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
-&lt;span class="n"&gt;PLUGINS&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;'pelican-toc'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s1"&gt;'tag_cloud'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s1"&gt;'simple_footnotes'&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;  &lt;span class="c1"&gt;# 'extract_toc', 'feed_summary'&lt;/span&gt;
-&lt;span class="n"&gt;FEED_USE_SUMMARY&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="bp"&gt;True&lt;/span&gt;
-&lt;span class="n"&gt;SUMMARY_MAX_LENGTH&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;100&lt;/span&gt;
+&lt;h2 id="plugins"&gt;Plugins&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;PLUGIN_PATHS&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;'pelican-plugins'&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+
+&lt;span class="n"&gt;PLUGINS&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;'pelican-toc'&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;span class="n"&gt;TOC&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="s1"&gt;'TOC_HEADERS'&lt;/span&gt; &lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;'^h[1-6]'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;  &lt;span class="c1"&gt;# What headers should be included in the generated toc&lt;/span&gt;
+                                &lt;span class="c1"&gt;# Expected format is a regular expression&lt;/span&gt;
+
+    &lt;span class="s1"&gt;'TOC_RUN'&lt;/span&gt;     &lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;'true'&lt;/span&gt;      &lt;span class="c1"&gt;# Default value for toc generation, if it does not evaluate&lt;/span&gt;
+                                &lt;span class="c1"&gt;# to 'true' no toc will be generated&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;!-- #MD_EXTENSIONS = ['toc', 'fenced_code', 'codehilite(css_class=highlight)',
 'extra'] --&gt;
-&lt;h4 id="table-of-contents"&gt;Table of contents&lt;/h4&gt;
+&lt;h3 id="table-of-contents"&gt;Table of contents&lt;/h3&gt;
 &lt;p&gt;Insert this block in &lt;code&gt;pelican-bootstrap3\templates\base.html&lt;/code&gt; just above the
 &lt;code&gt;{{article.content}}&lt;/code&gt;.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt; &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;article&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;toc&lt;/span&gt; &lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
@@ -361,7 +548,7 @@ Insert the following snippet before the &lt;code&gt;&amp;lt;/head&amp;gt;&lt;/co
     &lt;span class="o"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="n"&gt;div&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
 &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt; &lt;span class="n"&gt;endif&lt;/span&gt; &lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
-&lt;h3 id="changing-footer_1"&gt;Changing footer&lt;/h3&gt;
+&lt;h2 id="changing-footer_1"&gt;Changing footer&lt;/h2&gt;
 &lt;p&gt;Based on this
 &lt;a href="http://mygeekdaddy.net/2015/01/09/never-change-your-pelican-footer-again/"&gt;article&lt;/a&gt;,
 I updated &lt;code&gt;blog/pelican-bootstrap3/templates/includes/footer.html&lt;/code&gt; with&lt;/p&gt;

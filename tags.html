@@ -22,7 +22,7 @@
 
 
     <!-- Bootstrap -->
-        <link rel="stylesheet" href="/theme/css/bootstrap.sandstone.min.css" type="text/css"/>
+        <link rel="stylesheet" href="/theme/css/bootstrap.cosmo.min.css" type="text/css"/>
     <link href="/theme/css/font-awesome.min.css" rel="stylesheet">
 
     <link href="/theme/css/pygments/monokai.css" rel="stylesheet">
@@ -54,6 +54,11 @@ Notes on the margin            </a>
         </div>
         <div class="collapse navbar-collapse navbar-ex1-collapse">
             <ul class="nav navbar-nav">
+                    <!-- Addition of My research tag into the header-->
+                    <li>
+                        <a href="/tags/my-research.html">My
+                            Research</a>
+                    </li>
                         <li >
                             <a href="/category/control-theory.html">Control theory</a>
                         </li>
@@ -63,6 +68,10 @@ Notes on the margin            </a>
                         <li >
                             <a href="/category/tips.html">Tips</a>
                         </li>
+                    <!-- Addition of All tags into the header-->
+                    <li>
+                        <a href="/tags.html">All tags</a>
+                    </li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="/archives.html"><i class="fa fa-th-list"></i><span class="icon-label">Archives</span></a></li>
@@ -79,6 +88,30 @@ Notes on the margin            </a>
     <section id="tags">
         <h1>Tags for Notes on the margin</h1>
         <div class="panel-group" id="accordion">            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse-arxiv">Arxiv <span class="badge pull-right">1</span></a>
+                    </h4>
+                </div>
+                <div id="collapse-arxiv" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <p><span class="categories-timestamp"><time datetime="2017-02-03T00:00:00-07:00">Fri 03 February 2017</time></span> <a href="/adding-papers-on-arxiv.html">Adding papers on Arxiv</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse-convex-optimization">Convex Optimization <span class="badge pull-right">1</span></a>
+                    </h4>
+                </div>
+                <div id="collapse-convex-optimization" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <p><span class="categories-timestamp"><time datetime="2017-02-03T00:00:00-07:00">Fri 03 February 2017</time></span> <a href="/hscc2017-forward-stochastic-reachability-analysis-for-uncontrolled-linear-systems-using-fourier-transforms.html">HSCC2017: Forward Stochastic Reachability Analysis for Uncontrolled Linear Systems using Fourier Transforms</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
                 <div class="panel-heading">
                     <h4 class="panel-title">
                         <a data-toggle="collapse" data-parent="#accordion" href="#collapse-latex">Latex <span class="badge pull-right">1</span></a>
@@ -117,6 +150,18 @@ Notes on the margin            </a>
             <div class="panel panel-default">
                 <div class="panel-heading">
                     <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse-my-research">My Research <span class="badge pull-right">1</span></a>
+                    </h4>
+                </div>
+                <div id="collapse-my-research" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <p><span class="categories-timestamp"><time datetime="2017-02-03T00:00:00-07:00">Fri 03 February 2017</time></span> <a href="/hscc2017-forward-stochastic-reachability-analysis-for-uncontrolled-linear-systems-using-fourier-transforms.html">HSCC2017: Forward Stochastic Reachability Analysis for Uncontrolled Linear Systems using Fourier Transforms</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
                         <a data-toggle="collapse" data-parent="#accordion" href="#collapse-pelican">Pelican <span class="badge pull-right">2</span></a>
                     </h4>
                 </div>
@@ -137,6 +182,18 @@ Notes on the margin            </a>
                     <div class="panel-body">
                         <p><span class="categories-timestamp"><time datetime="2017-01-20T00:00:00-07:00">Fri 20 January 2017</time></span> <a href="/create-bookmarks-when-including-pdfs-using-pdflatex.html">Create bookmarks when including pdfs using pdflatex</a></p>
                         <p><span class="categories-timestamp"><time datetime="2016-12-23T03:42:00-07:00">Fri 23 December 2016</time></span> <a href="/blogging-using-pelican-conda-github-pages.html">Blogging using Pelican + Conda + GitHub Pages</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse-stochastic-reachability">Stochastic Reachability <span class="badge pull-right">1</span></a>
+                    </h4>
+                </div>
+                <div id="collapse-stochastic-reachability" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <p><span class="categories-timestamp"><time datetime="2017-02-03T00:00:00-07:00">Fri 03 February 2017</time></span> <a href="/hscc2017-forward-stochastic-reachability-analysis-for-uncontrolled-linear-systems-using-fourier-transforms.html">HSCC2017: Forward Stochastic Reachability Analysis for Uncontrolled Linear Systems using Fourier Transforms</a></p>
                     </div>
                 </div>
             </div>
@@ -181,40 +238,6 @@ Notes on the margin            </a>
 
 
 
-            <li class="list-group-item"><a href="/"><h4><i class="fa fa-tags fa-lg"></i><span class="icon-label">Tags</span></h4></a>
-                <ul class="list-group " id="tags">
-                    <li class="list-group-item tag-1">
-                        <a href="/tag/verification.html">
-                            Verification
-                        </a>
-                    </li>
-                    <li class="list-group-item tag-1">
-                        <a href="/tag/pelican.html">
-                            Pelican
-                        </a>
-                    </li>
-                    <li class="list-group-item tag-1">
-                        <a href="/tag/python.html">
-                            Python
-                        </a>
-                    </li>
-                    <li class="list-group-item tag-4">
-                        <a href="/tag/mooc.html">
-                            MOOC
-                        </a>
-                    </li>
-                    <li class="list-group-item tag-4">
-                        <a href="/tag/model-predictive-control.html">
-                            Model Predictive Control
-                        </a>
-                    </li>
-                    <li class="list-group-item tag-4">
-                        <a href="/tag/latex.html">
-                            Latex
-                        </a>
-                    </li>
-                </ul>
-            </li>
     </ul>
 </section>
             </aside>

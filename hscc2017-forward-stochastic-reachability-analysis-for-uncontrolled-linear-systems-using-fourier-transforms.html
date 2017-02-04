@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="english"
+>
+<head>
+    <title>HSCC2017: Forward Stochastic Reachability Analysis for Uncontrolled Linear Systems using Fourier Transforms - Notes on the margin</title>
+    <!-- Using the latest rendering mode for IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+<link rel="canonical" href="/hscc2017-forward-stochastic-reachability-analysis-for-uncontrolled-linear-systems-using-fourier-transforms.html">
+
+        <meta name="author" content="Abraham Vinod" />
+        <meta name="keywords" content="My Research,Stochastic Reachability,Convex Optimization" />
+        <meta name="description" content="Summary of the HSCC 2017 paper" />
+
+
+
+    <!-- Bootstrap -->
+        <link rel="stylesheet" href="/theme/css/bootstrap.cosmo.min.css" type="text/css"/>
+    <link href="/theme/css/font-awesome.min.css" rel="stylesheet">
+
+    <link href="/theme/css/pygments/monokai.css" rel="stylesheet">
+    <link rel="stylesheet" href="/theme/css/style.css" type="text/css"/>
+
+        <link href="/feeds/all.rss" type="application/rss+xml" rel="alternate"
+              title="Notes on the margin RSS Feed"/>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+<script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML">
+</script>
+</head>
+<body>
+
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="/" class="navbar-brand">
+Notes on the margin            </a>
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+                    <!-- Addition of My research tag into the header-->
+                    <li>
+                        <a href="/tags/my-research.html">My
+                            Research</a>
+                    </li>
+                        <li class="active">
+                            <a href="/category/control-theory.html">Control theory</a>
+                        </li>
+                        <li >
+                            <a href="/category/how-to.html">How to</a>
+                        </li>
+                        <li >
+                            <a href="/category/tips.html">Tips</a>
+                        </li>
+                    <!-- Addition of All tags into the header-->
+                    <li>
+                        <a href="/tags.html">All tags</a>
+                    </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="/archives.html"><i class="fa fa-th-list"></i><span class="icon-label">Archives</span></a></li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+</div> <!-- /.navbar -->
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-9">
+
+    <section id="content">
+        <article>
+            <header class="page-header">
+                <h1>
+                    <a href="/hscc2017-forward-stochastic-reachability-analysis-for-uncontrolled-linear-systems-using-fourier-transforms.html"
+                       rel="bookmark"
+                       title="Permalink to HSCC2017: Forward Stochastic Reachability Analysis for Uncontrolled Linear Systems using Fourier Transforms">
+                        HSCC2017: Forward Stochastic Reachability Analysis for Uncontrolled Linear Systems using Fourier Transforms
+                    </a>
+                </h1>
+            </header>
+            <div class="entry-content">
+                <div class="panel">
+                    <div class="panel-body">
+<footer class="post-info">
+    <span class="label label-default">Date</span>
+    <span class="published">
+        <i class="fa fa-calendar"></i><time datetime="2017-02-03T00:00:00-07:00"> Fri 03 February 2017</time>
+    </span>
+
+        <span class="label label-default">Category</span>
+        <a href="/category/control-theory.html">Control theory</a>
+
+
+<span class="label label-default">Tags</span>
+	<a href="/tag/my-research.html">My Research</a>
+        /
+	<a href="/tag/stochastic-reachability.html">Stochastic Reachability</a>
+        /
+	<a href="/tag/convex-optimization.html">Convex Optimization</a>
+    
+</footer><!-- /.post-info -->                    </div>
+                </div>
+                    <div style="border-style: solid;background:lightgrey">
+                        <h3 style="text-align:center"> Table of contents</h3>
+                            <nav class="toc">
+                            <div id="toc"><ul><li><a class="toc-href" href="#" title="HSCC2017: Forward Stochastic Reachability Analysis for Uncontrolled Linear Systems using Fourier Transforms">HSCC2017: Forward Stochastic Reachability Analysis for Uncontrolled Linear Systems using Fourier Transforms</a><ul><li><a class="toc-href" href="#what-is-this-paper-about" title="What is this paper about?">What is this paper about?</a></li><li><a class="toc-href" href="#what-is-so-great-about-this-work" title="What is so great about this work?">What is so great about this work?</a></li><li><a class="toc-href" href="#where-are-some-beautiful-plots" title="Where are some beautiful plots?">Where are some beautiful plots?</a><ul><li><a class="toc-href" href="#what-is-the-information-provided-for-this-problem" title="What is the information provided for this problem?">What is the information provided for this problem?</a></li><li><a class="toc-href" href="#what-should-be-computed-for-this-problem" title="What should be computed for this problem?">What should be computed for this problem?</a></li><li><a class="toc-href" href="#case-1-robot-g-has-point-mass-dynamics-and-gaussian-perturbed-dynamics" title="Case 1: Robot G has point mass dynamics and Gaussian perturbed dynamics">Case 1: Robot G has point mass dynamics and Gaussian perturbed dynamics</a></li><li><a class="toc-href" href="#case-2-robot-g-has-double-integrator-dynamics-and-exponential-perturbed-dynamics" title="Case 2: Robot G has double integrator dynamics and exponential perturbed dynamics">Case 2: Robot G has double integrator dynamics and exponential perturbed dynamics</a></li></ul></li><li><a class="toc-href" href="#nice-job-where-do-i-get-more-details_1" title="Nice job!!! Where do I get more details?">Nice job!!! Where do I get more details?</a></li></ul></li></ul></div>
+                            </nav>
+                    </div>
+                <p><br/>
+<br/>
+This blog post will summarize my paper <strong>Forward Stochastic Reachability
+Analysis for Uncontrolled Linear Systems using Fourier Transforms</strong> published at
+Hybrid Systems: Computation and Control 2017. The conference will happen on
+April 18-20th, 2017 at Pittsburg, PA, USA.</p>
+<h1 id="what-is-this-paper-about">What is this paper about?</h1>
+<p>We look at discrete-time uncontrolled linear systems<sup id="fnref-systems"><a class="footnote-ref" href="#fn-systems">1</a></sup> perturbed by a
+disturbance<sup id="fnref-dist"><a class="footnote-ref" href="#fn-dist">2</a></sup> whose stochastics (say probability density function) is known. We
+are interested in performing the <strong>forward stochastic reachability analysis</strong>, that
+is, characterize the stochasticity of the state of a system at some point of
+time in future when the system is initialized at a known initial condition.  For
+any given point of time in future, we propose an <strong>analytical formulation</strong>
+for computing via Fourier transforms:</p>
+<ol>
+<li>forward stochastic reach set (FSR set) --- the smallest closed subset of the state
+space that occurs almost surely.</li>
+<li>forward stochastic reach probability density  (FSRPD) --- the probability density
+associated with the state, an absolutely continuous random vector.</li>
+</ol>
+<p>Moreover, we provide sufficient conditions for FSRPD to be <strong>logconcave</strong>.
+Logconcavity ensures that <strong>convexity</strong> of the constraints and objective
+functions created using forward stochastic reachability analysis. Convex
+optimization problems are generally tractable.</p>
+<p>We discuss one application of this analysis --- maximizing the probability of
+capture of a non-adversarial uncontrolled target (with stochastic dynamics) by a
+controlled robot (with deterministic dynamics).</p>
+<h1 id="what-is-so-great-about-this-work">What is so great about this work?</h1>
+<ol>
+<li><strong>Not an Eulerian method (not a grid based method)</strong>: This implies that we
+can mitigate the <a href="https://en.wikipedia.org/wiki/Curse_of_dimensionality">curse of
+dimensionality</a>. Existing
+approaches of performing forward stochastic reachability analysis is through
+dynamic programming<sup id="fnref-SummersAutomatica2010"><a class="footnote-ref" href="#fn-SummersAutomatica2010">3</a></sup> and inverted dynamics. Dynamic
+programming can not be applied to dimensions higher than 5.</li>
+<li>Can handle <strong>unbounded stochastic disturbances</strong> and is <strong>not restricted to
+Gaussians</strong>: We demonstrate our method to an exponential disturbance as
+well.</li>
+<li><strong>Sufficient conditions for the convexity</strong> of the FSR set and the FSRPD
+provided</li>
+<li><strong>Convex optimization formulation</strong> for non-adversarial stochastically moving
+target problem</li>
+<li><strong>Applications</strong>: Usefulness demonstrated for stochastic motion planning
+problems. We also anticipate application of this method in obstacle avoidance,
+aircraft trajectory planning, and other venues.</li>
+</ol>
+<h1 id="where-are-some-beautiful-plots">Where are some beautiful plots?</h1>
+<p>In this paper, we analyze the problem of capture of a non-adversarial target
+(robot G) with stochastic dynamics using a robot (robot R) with deterministic
+dynamics.</p>
+<h2 id="what-is-the-information-provided-for-this-problem">What is the information provided for this problem?</h2>
+<ol>
+<li>the initial position of the robots R and G,</li>
+<li>the deterministic LTI dynamics of the robot R,</li>
+<li>the disturbed (stochastic) LTI dynamics of the robot G, and</li>
+<li>the probability density function of the disturbance affecting the dynamics of
+robot G.
+<!--
+--- $x_R[0]$ and $x_G[0]$
+--- $ x_R[t+1]=A_R x_R[t]+B_R u_R[t]$
+--- $ x_G[t+1]=A_G x_G[t]+B_G w_G[t]$
+--- $w_G[t]\sim \psi_w$ 
+ $\pi_{\mathrm{open}}$--></li>
+</ol>
+<h2 id="what-should-be-computed-for-this-problem">What should be computed for this problem?</h2>
+<ol>
+<li>the (optimal) time instant of capture which results in maximum probability of
+capture $\tau^\ast$</li>
+<li>the (optimal) position for robot R that maximizes the probability of capture
+at this instant $x_R^\ast[\tau^\ast]$</li>
+<li>the open-loop controller<sup id="fnref-robotG"><a class="footnote-ref" href="#fn-robotG">4</a></sup> input sequence that drives robot R from the
+given initial position to the optimal position of capture</li>
+</ol>
+<p>Robot R is assumed to have point mass dynamics discretized in time with bounded
+control authority. This implies that robot R need not cover the entire state
+space within a given time horizon, and the reachable states constraint the
+final position for capture.</p>
+<h2 id="case-1-robot-g-has-point-mass-dynamics-and-gaussian-perturbed-dynamics">Case 1: Robot G has point mass dynamics and Gaussian perturbed dynamics</h2>
+<p>Robot G has point mass dynamics discretized in time with 'inputs' as a
+discrete-time bivariate Gaussian random process. For Gaussians, the mode and the
+mean coincide. The optimization problem provides the optimal capture position
+while satisfying the constraints.</p>
+<p><img alt="A GIF should have appeared here." src="/images/HSCC2017Gauss.gif"/></p>
+<p>Snapshots<sup id="fnref-GIF"><a class="footnote-ref" href="#fn-GIF">5</a></sup> of optimal capture positions $x_R^\ast[\tau]$ over the time horizon</p>
+<ul>
+<li>The black line shows the mean position trajectory of robot G, </li>
+<li>The contour plot characterizes the FSRPD of the state of robot G, </li>
+<li>The blue box shows the set of states reachable by robot R at the time of interest, and </li>
+<li>The red box shows the capture region centered at the current position of robot R (robot G is captured if it lies inside the red box).</li>
+<li>The annotation box shows the time of interest $\tau$ as well as the probability of
+capture corresponding to $x_R^\ast[\tau]$.</li>
+</ul>
+<h2 id="case-2-robot-g-has-double-integrator-dynamics-and-exponential-perturbed-dynamics">Case 2: Robot G has double integrator dynamics and exponential perturbed dynamics</h2>
+<p>Robot G has double integrator dynamics discretized in time with 'inputs' as a
+discrete-time bivariate exponential random process. For exponential random
+vectors, the mode and the mean does not coincide to begin with, making this a
+nontrivial problem. The optimization problem provides the optimal capture
+position while satisfying the constraints.</p>
+<p><img alt="A GIF should have appeared here." src="/images/HSCC2017Exp.gif"/></p>
+<p>Snapshots<sup id="fnref-GIF"><a class="footnote-ref" href="#fn-GIF">5</a></sup> of optimal capture positions $x_R^\ast[\tau]$ over the time horizon</p>
+<ul>
+<li>The black line shows the mean position trajectory of robot G, </li>
+<li>The contour plot characterizes the FSRPD of the state of robot G, </li>
+<li>The blue box shows the set of states reachable by robot R at the time of interest, and </li>
+<li>The red box shows the capture region centered at the current position of robot R (robot G is captured if it lies inside the red box).</li>
+<li>The annotation box shows the time of interest $\tau$ as well as the probability of
+capture corresponding to $x_R^\ast[\tau]$.</li>
+</ul>
+<h1 id="nice-job-where-do-i-get-more-details_1">Nice job!!! Where do I get more details?</h1>
+<p>You can find the paper on <a href="https://arxiv.org/abs/1610.04550">Arxiv</a>. You can
+find the MATLAB code for generating these figures on my <a href="">webpage</a>.</p>
+<div class="footnote">
+<hr>
+<ol>
+<li id="fn-systems">
+<p>This class of systems include affine noise perturbed LTI
+discrete-time systems with known state feedback. The work is also applicable to
+affine noise perturbed LTI discrete-time systems with open loop controllers
+after some minor modifications.&nbsp;<a class="footnote-backref" href="#fnref-systems" title="Jump back to footnote 1 in the text">↩</a></p>
+</li>
+<li id="fn-dist">
+<p>The disturbance is assumed to be an IID random process, but we can
+relax the identical assumption if needed.&nbsp;<a class="footnote-backref" href="#fnref-dist" title="Jump back to footnote 2 in the text">↩</a></p>
+</li>
+<li id="fn-SummersAutomatica2010">
+<p><a href="http://linkinghub.elsevier.com/retrieve/pii/S0005109810003547">Automatica 2010, Summers et.
+al</a>&nbsp;<a class="footnote-backref" href="#fnref-SummersAutomatica2010" title="Jump back to footnote 3 in the text">↩</a></p>
+</li>
+<li id="fn-robotG">
+<p>Here, open-loop controller refers to the fact that the control
+actions taken by robot R is independent of the actual current position of robot
+G, which is a realization of the random process $x_G[\cdot]$.&nbsp;<a class="footnote-backref" href="#fnref-robotG" title="Jump back to footnote 4 in the text">↩</a></p>
+</li>
+<li id="fn-GIF">
+<p>The GIFs were created using
+<a href="http://gifcreator.me/">http://gifcreator.me/</a>.&nbsp;<a class="footnote-backref" href="#fnref-GIF" title="Jump back to footnote 5 in the text">↩</a></p>
+</li>
+</ol>
+</hr></div>
+            </div>
+            <!-- /.entry-content -->
+        </article>
+    </section>
+
+        </div>
+        <div class="col-sm-3" id="sidebar">
+            <aside>
+<div id="aboutme">
+        <p>
+            <img width="100%" class="img-thumbnail" src="/images/myphoto.png"/>
+        </p>
+    <p>
+        <strong>About Abraham</strong><br/>
+        I'm a PhD student studying at the University of New Mexico. I am working on application of optimization and stochastic processes in dynamical systems. I also enjoy programming, especially coding in Python.
+    </p>
+</div>
+<section class="well well-sm">
+    <ul class="list-group list-group-flush">
+            <li class="list-group-item"><h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Social</span></h4>
+              <ul class="list-group" id="social">
+                <li class="list-group-item"><a href="http://abyvinod.github.io/feeds/all.rss"><i class="fa fa-rss-square fa-lg"></i> RSS</a></li>
+                <li class="list-group-item"><a href="http://bitbucket.org/abyvinod"><i class="fa fa-bitbucket-square fa-lg"></i> BitBucket</a></li>
+                <li class="list-group-item"><a href="http://linkedin.com/in/abrahampvinod"><i class="fa fa-linkedin-square fa-lg"></i> LinkedIn</a></li>
+                <li class="list-group-item"><a href="http://unm.edu/~abyvinod"><i class="fa fa-academic-webpage-square fa-lg"></i> Academic Webpage</a></li>
+              </ul>
+            </li>
+
+
+
+    </ul>
+</section>
+            </aside>
+        </div>
+    </div>
+</div>
+<footer>
+   <div class="container">
+      <hr>
+      <div class="row">
+         <div class="col-xs-10">&copy; 2017 Abraham
+            &middot; Powered by <a href="http://docs.getpelican.com/"
+                target="_blank">Pelican</a> and other  <a
+            href="http://abyvinod.github.io/setting-up-this-blog-using-the-pelicancondagithub-pages.html"
+                target="_blank">goodies</a>.
+         </div>
+         <div class="col-xs-2"><p class="pull-right"><i class="fa fa-arrow-up"></i> <a href="#">Back to top</a></p></div>
+      </div>
+   </div>
+</footer>
+<script src="/theme/js/jquery.min.js"></script>
+
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="/theme/js/bootstrap.min.js"></script>
+
+<!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+<script src="/theme/js/respond.min.js"></script>
+
+</body>
+</html>
