@@ -480,12 +480,21 @@ to use &lt;code&gt;Status: draft&lt;/code&gt; in the markdown article header to 
 generated htmls in a separate folder &lt;code&gt;drafts/&lt;/code&gt;. Remember to add this to
 &lt;code&gt;.gitignore&lt;/code&gt; of the master branch to ensure it doesn't get pushed to the
 outside world.&lt;/p&gt;
+&lt;h2 id="site-logo-and-favicon"&gt;Site logo and favicon&lt;/h2&gt;
+&lt;p&gt;Include in your &lt;code&gt;pelicanconf.py&lt;/code&gt;, the following lines&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;SITELOGO&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;'images/SITELOGO'&lt;/span&gt; 
+&lt;span class="n"&gt;SITELOGO_SIZE&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;20&lt;/span&gt;
+&lt;span class="n"&gt;FAVICON&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;'images/FAVICON'&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;For my blog, I am using &lt;a href="http://fontawesome.io"&gt;Font Awesome's&lt;/a&gt; sticky note
+icon as my site logo. The favicon was generated using
+&lt;a href="http://paulferrett.com/fontawesome-favicon/"&gt;http://paulferrett.com/fontawesome-favicon/&lt;/a&gt;.&lt;/p&gt;
 &lt;h2 id="pelican-bootstrap3"&gt;Pelican-Bootstrap3&lt;/h2&gt;
 &lt;p&gt;Clone &lt;code&gt;pelican-bootstrap3&lt;/code&gt; into the root folder of the blog. I hid the sidebar
 and have an &lt;code&gt;About Me&lt;/code&gt; page in &lt;code&gt;content/pages&lt;/code&gt;. Blog posts in  &lt;code&gt;content/pages&lt;/code&gt;
 are not archived and are treated as "static pages".&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;####################### Theme-Specific Settings #########################&lt;/span&gt;
-&lt;span class="n"&gt;THEME&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;'pelican-bootstrap3'&lt;/span&gt;        &lt;span class="c1"&gt;#'html5-dopetrope'&lt;/span&gt;
+&lt;span class="n"&gt;THEME&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;'pelican-bootstrap3'&lt;/span&gt;
 
 &lt;span class="c1"&gt;# Pelican Theme-Specific Variables&lt;/span&gt;
 &lt;span class="n"&gt;BOOTSTRAP_THEME&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;'cosmo'&lt;/span&gt;
@@ -507,9 +516,6 @@ are not archived and are treated as "static pages".&lt;/p&gt;
 #ABOUT_ME = "blah blah blah"
 #AVATAR = "/images/myphoto.png"
 #BANNER = "/images/banner.png"
-#SITELOGO = 'images/logo.png'
-#SITELOGO_SIZE = 32
-#FAVICON = 'images/favicon.png'
 ---&gt;
 &lt;h3 id="reducing-the-figure-size"&gt;Reducing the figure size&lt;/h3&gt;
 &lt;h4 id="option-1-not-preferred-but-requires-less-editing-with-existing-images"&gt;Option 1 (Not preferred; but requires less editing with existing images)&lt;/h4&gt;
@@ -520,7 +526,7 @@ displayed very big (See &lt;a href="/hscc2017-forward-stochastic-reachability-an
 &lt;h4 id="option-2-preferred"&gt;Option 2 (Preferred)&lt;/h4&gt;
 &lt;p&gt;Include images using the following HTML code directly into your Markdown file.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;div&lt;/span&gt; &lt;span class="na"&gt;class&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;"container"&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
-    &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;div&lt;/span&gt; &lt;span class="na"&gt;class&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;"col-md-4"&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;div&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;div&lt;/span&gt; &lt;span class="na"&gt;class&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;"col-md-4"&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;div&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt; &lt;span class="c"&gt;&amp;lt;!--For an empty div to left for centering--&amp;gt;&lt;/span&gt;
     &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;div&lt;/span&gt; &lt;span class="na"&gt;class&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;"col-md-4"&lt;/span&gt; &lt;span class="na"&gt;style&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;"padding-left: 0px;  padding-right: 0px;"&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
         &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;img&lt;/span&gt; &lt;span class="na"&gt;alt&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;"ALT text."&lt;/span&gt; &lt;span class="na"&gt;src&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;"/path/to/image"&lt;/span&gt; &lt;span class="na"&gt;class&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;"img-responsive"&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
     &lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;div&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
