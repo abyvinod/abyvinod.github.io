@@ -165,7 +165,8 @@ outside world.
 ## Pelican-Bootstrap3
 
 Clone `pelican-bootstrap3` into the root folder of the blog. I hid the sidebar
-and have an `About Me` page in `content/pages`. 
+and have an `About Me` page in `content/pages`. Blog posts in  `content/pages`
+are not archived and are treated as "static pages".
 ```python
 ####################### Theme-Specific Settings #########################
 THEME = 'pelican-bootstrap3'        #'html5-dopetrope'
