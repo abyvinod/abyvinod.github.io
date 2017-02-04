@@ -25,7 +25,7 @@ Date:2017-02-04
                <li class="list-group-item"><a href="http://bitbucket.org/abyvinod"><i class="fa fa-bitbucket-square fa-lg"></i> BitBucket</a></li>
                <li class="list-group-item"><a href="http://linkedin.com/in/abrahampvinod"><i class="fa fa-linkedin-square fa-lg"></i> LinkedIn</a></li>
                <li class="list-group-item"><a href="https://www.researchgate.net/profile/Abraham_P_Vinod"><i class="ai ai-researchgate-square ai-lg"></i> ResearchGate</a></li>
-               <li class="list-group-item"><a href="arxiv.org/a/vinod_a_1"><i class="ai ai-arxiv ai-lg"></i> arXiv</a></li>
+               <li class="list-group-item"><a href="https://arxiv.org/a/vinod_a_1"><i class="ai ai-arxiv ai-lg"></i> arXiv</a></li>
                <li class="list-group-item"><a
                href="https://scholar.google.com/citations?user=yb5Z7AwAAAAJ&hl=en"><i
                class="ai ai-google-scholar ai-lg"></i> Google Scholar</a></li>
