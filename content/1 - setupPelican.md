@@ -248,7 +248,11 @@ icon to your social link XYZ ABC, then add to
 ```
 .fa-xyz-abc-square:before { content: "UNICODE_COMES_HERE"; }
 ```
-## Math support
+I also have used [Academicons](http://jpswalsh.github.io/academicons/) in my
+`About Me` page. Note that you will have to add the font files and the css files
+to the bootstrap files. Also, call the css file in the `pelican-bootstrap3/templates/base.html`.
+
+## Math support 
 
 I could not get the `render_math` plugin to work. I just incorporated MathJax
 into the `pelican-bootstrap3\templates\base.html` of my template based on the [MathJax

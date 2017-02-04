@@ -11,18 +11,18 @@ Status: draft
 + Create articles summarizing my work on different projects --- 500 words on the DAESR project.
 + Carry forward my wiki articles
 + Visitor count
-+ Rendering on a mobile and an ipad
 + [Search capabilities](http://moparx.com/2014/04/adding-search-capabilities-within-your-pelican-powered-site-using-tipue-search/)
-+ Useful plugins --- Discus
++ Useful plugins --- Disqus
 + http://terriyu.info/blog/posts/2013/07/pelican-setup/
-
-# Done
 + Editing the CSS files [Source1](http://beneathdata.com/how-to/how-i-built-this-website/),
 [Source2](http://algorithmshop.com/20131212-starting-a-blog.html),[Source3](https://spapas.github.io/2013/10/07/pelican-static-windows/):
-    + Academic webpage icon Scholar hat
 + Fix git problems:
     + [http://mathamy.com/migrating-to-github-pages-using-pelican.html](http://mathamy.com/migrating-to-github-pages-using-pelican.html)
     + [https://fedoramagazine.org/make-github-pages-blog-with-pelican/](https://fedoramagazine.org/make-github-pages-blog-with-pelican/)
+
+# Done
++ Rendering on a mobile and an ipad
++ Academic webpage icon Scholar hat
 + Create index
 + Math rendering
 + Tag cloud
