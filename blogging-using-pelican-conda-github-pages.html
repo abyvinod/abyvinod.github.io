@@ -53,6 +53,9 @@ Notes on the margin            </a>
             <ul class="nav navbar-nav">
                     <!-- Addition of My research tag into the header-->
                     <li>
+                        <a href="/pages/about-me.html">About Me</a>
+                    </li>
+                    <li>
                         <a href="/tags/my-research.html">My
                             Research</a>
                     </li>
@@ -80,7 +83,7 @@ Notes on the margin            </a>
 
 <div class="container">
     <div class="row">
-        <div class="col-sm-9">
+        <div class="col-lg-12">
 
     <section id="content">
         <article>
@@ -116,7 +119,7 @@ Notes on the margin            </a>
                     <div style="border-style: solid;background:lightgrey">
                         <h3 style="text-align:center"> Table of contents</h3>
                             <nav class="toc">
-                            <div id="toc"><ul><li><a class="toc-href" href="#" title="Blogging using Pelican + Conda + GitHub Pages">Blogging using Pelican + Conda + GitHub Pages</a><ul><li><a class="toc-href" href="#prelude" title="Prelude">Prelude</a></li><li><a class="toc-href" href="#how-did-i-get-my-blog-setup" title="How did I get my blog setup?">How did I get my blog setup?</a><ul><li><a class="toc-href" href="#setting-up-conda-and-pelican-in-windows" title="Setting up Conda and Pelican in Windows">Setting up Conda and Pelican in Windows</a></li><li><a class="toc-href" href="#setting-up-the-blog" title="Setting up the blog">Setting up the blog</a></li><li><a class="toc-href" href="#creating-the-first-post" title="Creating the first post">Creating the first post</a></li><li><a class="toc-href" href="#rendering-the-blog" title="Rendering the blog">Rendering the blog</a></li><li><a class="toc-href" href="#updating-github-pages" title="Updating github pages">Updating github pages</a></li></ul></li><li><a class="toc-href" href="#other-tweaks_1" title="Other tweaks">Other tweaks</a><ul><li><a class="toc-href" href="#adding-rss" title="Adding RSS">Adding RSS</a></li><li><a class="toc-href" href="#ignoring-drafts" title="Ignoring drafts">Ignoring drafts</a></li><li><a class="toc-href" href="#pelican-bootstrap3" title="Pelican-Bootstrap3">Pelican-Bootstrap3</a><ul><li><a class="toc-href" href="#reducing-the-figure-size" title="Reducing the figure size">Reducing the figure size</a></li><li><a class="toc-href" href="#custom-header-bar" title="Custom header bar">Custom header bar</a></li></ul></li><li><a class="toc-href" href="#math-support_1" title="Math support">Math support</a></li><li><a class="toc-href" href="#plugins" title="Plugins">Plugins</a><ul><li><a class="toc-href" href="#table-of-contents" title="Table of contents">Table of contents</a></li></ul></li><li><a class="toc-href" href="#changing-footer_1" title="Changing footer">Changing footer</a></li></ul></li></ul></li></ul></div>
+                            <div id="toc"><ul><li><a class="toc-href" href="#" title="Blogging using Pelican + Conda + GitHub Pages">Blogging using Pelican + Conda + GitHub Pages</a><ul><li><a class="toc-href" href="#prelude" title="Prelude">Prelude</a></li><li><a class="toc-href" href="#how-did-i-get-my-blog-setup" title="How did I get my blog setup?">How did I get my blog setup?</a><ul><li><a class="toc-href" href="#setting-up-conda-and-pelican-in-windows" title="Setting up Conda and Pelican in Windows">Setting up Conda and Pelican in Windows</a></li><li><a class="toc-href" href="#setting-up-the-blog" title="Setting up the blog">Setting up the blog</a></li><li><a class="toc-href" href="#creating-the-first-post" title="Creating the first post">Creating the first post</a></li><li><a class="toc-href" href="#rendering-the-blog" title="Rendering the blog">Rendering the blog</a></li><li><a class="toc-href" href="#updating-github-pages" title="Updating github pages">Updating github pages</a></li></ul></li><li><a class="toc-href" href="#other-tweaks_1" title="Other tweaks">Other tweaks</a><ul><li><a class="toc-href" href="#adding-rss" title="Adding RSS">Adding RSS</a></li><li><a class="toc-href" href="#ignoring-drafts" title="Ignoring drafts">Ignoring drafts</a></li><li><a class="toc-href" href="#pelican-bootstrap3" title="Pelican-Bootstrap3">Pelican-Bootstrap3</a><ul><li><a class="toc-href" href="#reducing-the-figure-size" title="Reducing the figure size">Reducing the figure size</a></li><li><a class="toc-href" href="#custom-header-bar" title="Custom header bar">Custom header bar</a></li><li><a class="toc-href" href="#custom-icons-in-social" title="Custom icons in social">Custom icons in social</a></li></ul></li><li><a class="toc-href" href="#math-support_1" title="Math support">Math support</a></li><li><a class="toc-href" href="#plugins" title="Plugins">Plugins</a><ul><li><a class="toc-href" href="#table-of-contents" title="Table of contents">Table of contents</a></li></ul></li><li><a class="toc-href" href="#changing-footer_1" title="Changing footer">Changing footer</a></li></ul></li></ul></li></ul></div>
                             </nav>
                     </div>
                 <h1 id="prelude">Prelude</h1>
@@ -246,7 +249,8 @@ generated htmls in a separate folder <code>drafts/</code>. Remember to add this 
 <code>.gitignore</code> of the master branch to ensure it doesn't get pushed to the
 outside world.</p>
 <h2 id="pelican-bootstrap3">Pelican-Bootstrap3</h2>
-<p>Clone <code>pelican-bootstrap3</code> into the root folder of the blog.</p>
+<p>Clone <code>pelican-bootstrap3</code> into the root folder of the blog. I hid the sidebar
+and have an <code>About Me</code> page in <code>content/pages</code>. </p>
 <div class="highlight"><pre><span></span><span class="c1">####################### Theme-Specific Settings #########################</span>
 <span class="n">THEME</span> <span class="o">=</span> <span class="s1">'pelican-bootstrap3'</span>        <span class="c1">#'html5-dopetrope'</span>
 
@@ -255,13 +259,10 @@ outside world.</p>
 <span class="n">PYGMENTS_STYLE</span> <span class="o">=</span> <span class="s1">'monokai'</span>
 <span class="n">SHOW_ARTICLE_CATEGORY</span> <span class="o">=</span> <span class="bp">True</span>
 
-<span class="n">ABOUT_ME</span> <span class="o">=</span> <span class="s2">"blah blah blah"</span>
-
-<span class="n">AVATAR</span> <span class="o">=</span> <span class="s2">"/images/myphoto.png"</span>
-
 <span class="n">DISPLAY_ARTICLE_INFO_ON_INDEX</span> <span class="o">=</span> <span class="bp">True</span>
-<span class="n">DISPLAY_TAGS_ON_SIDEBAR</span> <span class="o">=</span> <span class="bp">False</span>
 <span class="n">SHOW_ARTICLE_CATEGORY</span> <span class="o">=</span> <span class="bp">True</span>
+<span class="n">HIDE_SIDEBAR</span><span class="o">=</span><span class="bp">True</span>
+<span class="n">DISPLAY_TAGS_ON_SIDEBAR</span> <span class="o">=</span> <span class="bp">False</span>
 <span class="n">DISPLAY_RECENT_POSTS_ON_SIDEBAR</span> <span class="o">=</span> <span class="bp">False</span>
 <span class="c1"># Below commands will generate SITEURL/tags.html which will have the list of tags</span>
 <span class="n">TAG_SAVE_AS</span> <span class="o">=</span> <span class="s1">'tags/{slug}.html'</span>
@@ -269,6 +270,8 @@ outside world.</p>
 <span class="n">DIRECT_TEMPLATES</span><span class="o">=</span><span class="p">[</span><span class="s1">'index'</span><span class="p">,</span><span class="s1">'tags'</span><span class="p">,</span><span class="s1">'categories'</span><span class="p">,</span><span class="s1">'archives'</span><span class="p">]</span>
 </pre></div>
 <!---
+#ABOUT_ME = "blah blah blah"
+#AVATAR = "/images/myphoto.png"
 #BANNER = "/images/banner.png"
 #SITELOGO = 'images/logo.png'
 #SITELOGO_SIZE = 32
@@ -286,6 +289,14 @@ displayed very big (See <a href="/hscc2017-forward-stochastic-reachability-analy
     <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"</span><span class="cp">{{</span> <span class="nv">SITEURL</span> <span class="cp">}}</span><span class="s">/tags/my-research.html"</span><span class="nt">&gt;</span>My
         Research<span class="nt">&lt;/a&gt;</span>
 <span class="nt">&lt;/li&gt;</span>
+</pre></div>
+<p>The <code>About Me</code> page and the page of all tags are also added to the custom header.</p>
+<h3 id="custom-icons-in-social">Custom icons in social</h3>
+<p>Check for the unicode of the desired icon in
+<a href="http://fontawesome.io">http://fontawesome.io</a>. If you would like to add this
+icon to your social link XYZ ABC, then add to
+<code>pelican-bootstrap3\static\css\font-awesome.min.css</code> the following lines:</p>
+<div class="highlight"><pre><span></span><span class="nl">.fa-xyz-abc-square:</span><span class="nf">before</span> <span class="err">{</span> <span class="no">content</span><span class="p">:</span> <span class="err">"</span><span class="no">UNICODE_COMES_HERE</span><span class="err">";</span> <span class="err">}</span>
 </pre></div>
 <h2 id="math-support_1">Math support</h2>
 <p>I could not get the <code>render_math</code> plugin to work. I just incorporated MathJax
@@ -366,34 +377,6 @@ I updated <code>blog/pelican-bootstrap3/templates/includes/footer.html</code> wi
         </article>
     </section>
 
-        </div>
-        <div class="col-sm-3" id="sidebar">
-            <aside>
-<div id="aboutme">
-        <p>
-            <img width="100%" class="img-thumbnail" src="/images/myphoto.png"/>
-        </p>
-    <p>
-        <strong>About Abraham</strong><br/>
-        I'm a PhD student studying at the University of New Mexico. I am working on application of optimization and stochastic processes in dynamical systems. I also enjoy programming, especially coding in Python.
-    </p>
-</div>
-<section class="well well-sm">
-    <ul class="list-group list-group-flush">
-            <li class="list-group-item"><h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Social</span></h4>
-              <ul class="list-group" id="social">
-                <li class="list-group-item"><a href="http://abyvinod.github.io/feeds/all.rss"><i class="fa fa-rss-square fa-lg"></i> RSS</a></li>
-                <li class="list-group-item"><a href="http://bitbucket.org/abyvinod"><i class="fa fa-bitbucket-square fa-lg"></i> BitBucket</a></li>
-                <li class="list-group-item"><a href="http://linkedin.com/in/abrahampvinod"><i class="fa fa-linkedin-square fa-lg"></i> LinkedIn</a></li>
-                <li class="list-group-item"><a href="http://unm.edu/~abyvinod"><i class="fa fa-academic-webpage-square fa-lg"></i> Academic Webpage</a></li>
-              </ul>
-            </li>
-
-
-
-    </ul>
-</section>
-            </aside>
         </div>
     </div>
 </div>
