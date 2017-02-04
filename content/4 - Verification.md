@@ -1,11 +1,11 @@
 title: What is verification?
 date: 2017-1-8
 tags: Verification
-category: Control Theory
+category: Control theory 
 author: Abraham Vinod
 summary: Discussing the two view points in verification --- the computer science view point and the controls view point
 
-## Verification 
+# Verification 
 
 Formal verification is the process of mathematically checking that the behavior
 of a system, described using a formal model, satisfies a given property, also
@@ -25,7 +25,7 @@ for safety critical systems and other systems that need guarantees of their
 Historically, there has been two approaches in dealing with the problem of
 verification.
 
-### Control theory point of view
+## Control theory point of view
 
 Verification is posed as a reach avoid problem where the objective is identify
 the initial conditions and the corresponding control policies under which the
@@ -44,7 +44,7 @@ developing approximations and exact methods to do verification of
 high-dimensional systems.
 
 
-### Computer science point of view  
+## Computer science point of view  
 
 
 Disclaimer: I have only seen the research from this point of view from the
@@ -70,7 +70,7 @@ Design And Validation Of Computer
 Protocols](https://www.amazon.com/Design-Validation-Computer-Protocols-Holzmann/dp/0135399254),
 and [Amir Pneuli's books](http://cs.nyu.edu/cs/faculty/pnueli/books.html).
 
-## Conclusion
+# Conclusion
 
 Irrespective of the approach, the goal of these two research camps are the same
 --- provide concrete proof that our intuition-based designs/heuristics will

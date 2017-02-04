@@ -9,22 +9,22 @@ This is the README file from my [Bitbucket
 repository](https://bitbucket.org/abyvinod/createbookmarkincludepdf) for the
 code. Do check it out!
 
-### Problem ###
+## Problem ##
 Extract bookmarks from a pdf that has to be included as is into another pdf
 created using pdflatex. Includepdf package ignores pdf annotations.
 
-### Solution ###
+## Solution ##
 Use pdftk to fetch the annotations, python to parse through these annotations,
 and bookmark package to feed it back to pdflatex.
 
-### How do I get set up? ###
+## How do I get set up? ##
 
 * Tested on Python 3.5 and TexLive 2015 with bookmark package installed
 * Requires:
 	* re, os, subprocess
 	* pdftk
 
-### How do I run the code? ###
+## How do I run the code? ##
 
 * Copy the python script into the folder where the parent tex file resides.
 * Edit three variables:
@@ -41,6 +41,6 @@ and bookmark package to feed it back to pdflatex.
     * filename_TexCommands.tex --- Tex commands that is to be included into the
       parent tex file
 
-### Who do I talk to? ###
+## Who do I talk to? ##
 
 * Abraham Vinod (aby[dot]vinod[at]gmail[dot]com)

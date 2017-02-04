@@ -48,14 +48,6 @@ DEFAULT_PAGINATION = 10
 IGNORE_FILES = ['']
 ## I am using Status: drafts instead
 
-# ARTICLE_URL = '{category}/{slug}/'
-# ARTICLE_SAVE_AS = '{category}/{slug}/index.html'
-# PAGE_URL = '{slug}.html'
-# PAGE_SAVE_AS = '{slug}.html'
-# TAG_URL = 'tags/{slug}.html'
-# TAG_SAVE_AS = 'tags/{slug}.html'
-# TAGS_URL = 'tags.html'
-
 # # Generate archive
 # YEAR_ARCHIVE_SAVE_AS = 'posts/{date:%Y}/index.html'
 
@@ -96,7 +88,8 @@ def system_path(path):
 THEME = 'pelican-bootstrap3'        #'html5-dopetrope'
 
 # Pelican Theme-Specific Variables
-BOOTSTRAP_THEME = 'sandstone'#'lumen' 'cosmo'
+BOOTSTRAP_THEME = 'cosmo'#'lumen' 'cosmo'
+PYGMENTS_STYLE = 'monokai'
 SHOW_ARTICLE_CATEGORY = True
 
 #SITELOGO = 'images/logo.png'
@@ -109,17 +102,18 @@ AVATAR = "/images/myphoto.png"
 #BANNER = "/images/banner.png"
 
 DISPLAY_ARTICLE_INFO_ON_INDEX = True
-DISPLAY_TAGS_ON_SIDEBAR = True
+DISPLAY_TAGS_ON_SIDEBAR = False
 SHOW_ARTICLE_CATEGORY = True
-TAG_CLOUD_MAX_ITEMS = 8
 DISPLAY_RECENT_POSTS_ON_SIDEBAR = False
-
-PYGMENTS_STYLE = 'monokai'
+# Below commands will generate SITEURL/tags.html which will have the list of tags
+TAG_SAVE_AS = 'tags/{slug}.html'
+TAGS_SAVE_AS = 'tags.html'
+DIRECT_TEMPLATES=['index','tags','categories','archives']
 
 ############################ Plugins ######################################
 PLUGIN_PATHS = ['pelican-plugins']
 
-PLUGINS = ['pelican-toc','tag_cloud']#"simple_footnotes", "feed_summary"]
+PLUGINS = ['pelican-toc']#,'tag_cloud'"simple_footnotes", "feed_summary"]
 TOC = {
     'TOC_HEADERS' : '^h[1-6]',  # What headers should be included in the generated toc
                                 # Expected format is a regular expression
