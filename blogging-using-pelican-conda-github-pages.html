@@ -22,7 +22,7 @@
     <!-- Bootstrap -->
         <link rel="stylesheet" href="/theme/css/bootstrap.cosmo.min.css" type="text/css"/>
     <link href="/theme/css/font-awesome.min.css" rel="stylesheet">
-
+    <link href="/theme/css/academicons.min.css" rel="stylesheet" />
     <link href="/theme/css/pygments/monokai.css" rel="stylesheet">
     <link rel="stylesheet" href="/theme/css/style.css" type="text/css"/>
 
@@ -328,6 +328,9 @@ icon to your social link XYZ ABC, then add to
 <code>pelican-bootstrap3\static\css\font-awesome.min.css</code> the following lines:</p>
 <div class="highlight"><pre><span></span><span class="nl">.fa-xyz-abc-square:</span><span class="nf">before</span> <span class="err">{</span> <span class="no">content</span><span class="p">:</span> <span class="err">"</span><span class="no">UNICODE_COMES_HERE</span><span class="err">";</span> <span class="err">}</span>
 </pre></div>
+<p>I also have used <a href="http://jpswalsh.github.io/academicons/">Academicons</a> in my
+<code>About Me</code> page. Note that you will have to add the font files and the css files
+to the bootstrap files. Also, call the css file in the <code>pelican-bootstrap3/templates/base.html</code>.</p>
 <h2 id="math-support_1">Math support</h2>
 <p>I could not get the <code>render_math</code> plugin to work. I just incorporated MathJax
 into the <code>pelican-bootstrap3\templates\base.html</code> of my template based on the <a href="http://docs.mathjax.org/en/latest/start.html#tex-and-latex-input">MathJax

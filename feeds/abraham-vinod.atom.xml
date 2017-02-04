@@ -549,6 +549,9 @@ icon to your social link XYZ ABC, then add to
 &lt;code&gt;pelican-bootstrap3\static\css\font-awesome.min.css&lt;/code&gt; the following lines:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nl"&gt;.fa-xyz-abc-square:&lt;/span&gt;&lt;span class="nf"&gt;before&lt;/span&gt; &lt;span class="err"&gt;{&lt;/span&gt; &lt;span class="no"&gt;content&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="err"&gt;"&lt;/span&gt;&lt;span class="no"&gt;UNICODE_COMES_HERE&lt;/span&gt;&lt;span class="err"&gt;";&lt;/span&gt; &lt;span class="err"&gt;}&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;I also have used &lt;a href="http://jpswalsh.github.io/academicons/"&gt;Academicons&lt;/a&gt; in my
+&lt;code&gt;About Me&lt;/code&gt; page. Note that you will have to add the font files and the css files
+to the bootstrap files. Also, call the css file in the &lt;code&gt;pelican-bootstrap3/templates/base.html&lt;/code&gt;.&lt;/p&gt;
 &lt;h2 id="math-support_1"&gt;Math support&lt;/h2&gt;
 &lt;p&gt;I could not get the &lt;code&gt;render_math&lt;/code&gt; plugin to work. I just incorporated MathJax
 into the &lt;code&gt;pelican-bootstrap3\templates\base.html&lt;/code&gt; of my template based on the &lt;a href="http://docs.mathjax.org/en/latest/start.html#tex-and-latex-input"&gt;MathJax
