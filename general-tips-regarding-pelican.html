@@ -128,10 +128,14 @@
                 <ul>
 <li>Markdown syntax can be found at 
   <a href="https://sourceforge.net/p/pelican-edt/wiki/markdown_syntax/#md_ex_lists">SourceForge</a>.</li>
-<li>For commenting, use the standard HTML comments. (See this <a href="http://stackoverflow.com/a/4829998/1846549">SO
-  answer</a>)</li>
-<li>Code highlighting for a particular language can be done by
-writing the language name after the code block command.</li>
+<li>Commenting:<ul>
+<li>Use the standard HTML comments <code>&lt;!-- COMMENT_GOES_HERE --&gt;</code>. (See this <a href="http://stackoverflow.com/a/4829998/1846549">SO answer</a>)</li>
+<li>Use <code>{# COMMENT_GOES_HERE #}</code> for commenting lines inside the template.</li>
+</ul>
+</li>
+<li>Code highlighting for a particular language can be done by writing the
+  language name after the code block command. The first block was created by
+  encapsulating the code you see in ``` instead of ~~~.</li>
 </ul>
 <div class="highlight"><pre><span></span>~~~python
 # Feed generation
@@ -141,13 +145,21 @@ writing the language name after the code block command.</li>
 <div class="highlight"><pre><span></span><span class="c1"># Feed generation</span>
 </pre></div>
 <ul>
-<li>For internal linking, use</li>
+<li>Links:<ul>
+<li>For internal linking, use <code>[specifically]({filename}4 - Verification.md)</code>.</li>
+<li>Create HTML tags for navigation within a file as <code>&lt;a
+  name="NAME_YOUR_TAG"&gt;&lt;/a&gt;</code>, and then navigate to it via this markdown
+  code snippet <code>[GO_THERE](#NAME_YOUR_TAG)</code>.</li>
 </ul>
-<div class="highlight"><pre><span></span>[specifically]({filename}4 - Verification.md)
-</pre></div>
-<ul>
-<li>For lists, skip a line and use <code>1.</code> for numbered and <code>+</code> or <code>-</code> for bulleted
-  lists.</li>
+</li>
+<li>Lists:<ul>
+<li>Skip a line</li>
+<li>Use <code>1.</code> for numbered</li>
+<li>Use <code>+</code> or <code>-</code> for bulleted lists.</li>
+</ul>
+</li>
+<li>Use <code>grep -rnw '/path/to/somewhere/' -e "pattern"</code> to identify any trouble
+  some components inside the template.</li>
 </ul>
             </div>
             <!-- /.entry-content -->
@@ -158,14 +170,18 @@ writing the language name after the code block command.</li>
     </div>
 </div>
 <footer>
-   <div class="container">
+      <div class="container entry-content">
+      <p>Please send me your questions/comments via <a
+          href="mailto:aby.vinod@gmail.com">email</a> ---
+      <code>aby[dot]vinod[at]gmail[dot]com</code>.</p>
+      </div>
+    </br>
       <hr>
       <div class="row">
          <div class="col-xs-10">&copy; 2017 Abraham
-            &middot; Powered by <a href="http://docs.getpelican.com/"
-                target="_blank">Pelican</a> and other  <a
-            href="/blogging-using-pelican-conda-github-pages.html"
-                target="_blank">goodies</a>.
+            &middot; Powered by <a
+                href="http://docs.getpelican.com/">Pelican</a> and other  <a
+            href="/blogging-using-pelican-conda-github-pages.html">goodies</a>.
          </div>
          <div class="col-xs-2"><p class="pull-right"><i class="fa fa-arrow-up"></i> <a href="#">Back to top</a></p></div>
       </div>

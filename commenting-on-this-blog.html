@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="english"
+>
+<head>
+    <title>Commenting on this blog - Notes on the margin</title>
+    <!-- Using the latest rendering mode for IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <link href="/images/favicon.ico" rel="icon">
+
+<link rel="canonical" href="/commenting-on-this-blog.html">
+
+        <meta name="author" content="Abraham Vinod" />
+        <meta name="keywords" content="Pelican" />
+        <meta name="description" content="I have chosen not to implement a commenting system. You can instead email me your comments. I also describe how to print a custom message based on article title." />
+
+
+
+    <!-- Bootstrap -->
+        <link rel="stylesheet" href="/theme/css/bootstrap.cosmo.min.css" type="text/css"/>
+    <link href="/theme/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/theme/css/academicons.min.css" rel="stylesheet" />
+    <link href="/theme/css/pygments/monokai.css" rel="stylesheet">
+    <link rel="stylesheet" href="/theme/css/style.css" type="text/css"/>
+
+        <link href="/feeds/all.rss" type="application/rss+xml" rel="alternate"
+              title="Notes on the margin RSS Feed"/>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+<script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML">
+</script>
+</head>
+<body>
+
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="/" class="navbar-brand">
+<img src="/images/favicon_white.ico" width="20"/> Notes on the margin            </a>
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+                    <!-- Addition of My research tag into the header-->
+                    <li>
+                        <a href="/pages/about-me.html"><i
+                                class="fa fa-user"></i> About Me</a>
+                    </li>
+                    <li>
+                        <a href="/tags/my-research.html"><i
+                                class="fa fa-flask fa-lg"></i> My Research</a>
+                    </li>
+                    <!-- Addition of All tags into the header-->
+                    <li>
+                        <a href="/categories.html"><i
+                                class="fa fa-bookmark fa-lg"></i> Categories</a>
+                    </li>
+                    <li>
+                        <a href="/tags.html"><i class="fa fa-tags
+                                fa-lg"></i> Tags</a>
+                    </li>
+                    <li>
+                        <a href="/feeds/all.rss"><i class="fa fa-rss-square fa-lg"></i> RSS</a>
+                    </li>
+                    <!--                        <li >
+                            <a href="/category/control-theory.html">Control theory</a>
+                        </li>
+                        <li class="active">
+                            <a href="/category/how-to.html">How to</a>
+                        </li>
+                        <li >
+                            <a href="/category/tips.html">Tips</a>
+                        </li>
+-->
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="/archives.html"><i class="fa fa-th-list"></i><span class="icon-label">Archives</span></a></li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+</div> <!-- /.navbar -->
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+
+    <section id="content">
+        <article>
+            <header class="page-header">
+                <h1>
+                    <a href="/commenting-on-this-blog.html"
+                       rel="bookmark"
+                       title="Permalink to Commenting on this blog">
+                        Commenting on this blog
+                    </a>
+                </h1>
+            </header>
+            <div class="entry-content">
+                <div class="panel">
+                    <div class="panel-body">
+<footer class="post-info">
+    <span class="label label-default">Date</span>
+    <span class="published">
+        <i class="fa fa-calendar"></i><time datetime="2017-02-05T00:00:00-07:00"> Sun 05 February 2017</time>
+    </span>
+
+        <span class="label label-default">Category</span>
+        <a href="/category/how-to.html">How To</a>
+
+
+<span class="label label-default">Tags</span>
+	<a href="/tag/pelican.html">Pelican</a>
+    
+</footer><!-- /.post-info -->                    </div>
+                </div>
+                <p>Static website generators are good in the sense that they are quick and cheap
+to develop<sup id="fnref-wiki"><a class="footnote-ref" href="#fn-wiki">1</a></sup> and robust when it comes to trolls, spambots, and hackers<sup id="fnref-hacking"><a class="footnote-ref" href="#fn-hacking">2</a></sup>
+(in general). However, my blog lacked one feature --- commenting.
+Since the purpose of this blog is to disseminate my research work and other
+ideas that may/may not be useful to the world, I definitely want to open up this blog posts for discussion. However, after much
+thought, I have decided to leave out the commenting feature on this
+blog<sup id="fnref-popsci"><a class="footnote-ref" href="#fn-popsci">3</a></sup>. </p>
+<p>I removed Disqus, however, by commenting the line having
+<code>includes/disqus_script.html</code> in <code>pelican-bootstrap3/templates/base.html</code> and
+the line having <code>includes/comments.html</code> in
+<code>pelican-bootstrap3/templates/article.html</code> and
+<code>pelican-bootstrap3/templates/page.html</code>.</p>
+<p>To still allow for discussion, I wanted to remind the readers that they can
+always contact me via email. I wanted this message to appear only on webpages
+which I thought deserved commenting. So, I added the following code in
+<code>pelican-bootstrap3/templates/includes/footer.html</code>. The if-condition ensures
+that the message is skipped for webpages where I do not want to display this
+message. The variable <code>output_file</code> is generated by Pelican and contains the
+relative path for every webpage from the site URL.</p>
+<div class="highlight"><pre><span></span><span class="p">{</span><span class="o">%</span> <span class="k">if</span> <span class="n">output_file</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">'index.html'</span><span class="p">,</span><span class="s1">'categories.html'</span><span class="p">,</span><span class="s1">'tags.html'</span><span class="p">,</span><span class="s1">'archives.html'</span><span class="p">]</span> <span class="ow">or</span> <span class="n">output_file</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">5</span><span class="p">]</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">'pages'</span><span class="p">]</span> <span class="ow">or</span> <span class="n">output_file</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">4</span><span class="p">]</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">'tags'</span><span class="p">]</span> <span class="ow">or</span> <span class="n">output_file</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">8</span><span class="p">]</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">'category'</span><span class="p">]</span> <span class="ow">or</span> <span class="n">output_file</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">6</span><span class="p">]</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">'author'</span><span class="p">]</span> <span class="o">%</span><span class="p">}</span>
+<span class="o">&lt;</span><span class="err">!</span><span class="o">--</span> <span class="n">Files</span> <span class="n">that</span> <span class="n">need</span> <span class="n">to</span> <span class="n">be</span> <span class="n">skipped</span><span class="o">.</span> <span class="n">Use</span> <span class="p">{{</span> <span class="n">output_file</span> <span class="p">}}</span> <span class="n">to</span> <span class="n">know</span> <span class="n">the</span> <span class="n">title</span> <span class="n">of</span> <span class="n">the</span> <span class="n">page</span><span class="o">.--&gt;</span>
+<span class="p">{</span><span class="o">%</span> <span class="k">else</span> <span class="o">%</span><span class="p">}</span>
+    <span class="o">&lt;</span><span class="n">div</span> <span class="n">class</span><span class="o">=</span><span class="s2">"container entry-content"</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="n">Please</span> <span class="n">send</span> <span class="n">me</span> <span class="n">your</span> <span class="n">questions</span><span class="o">/</span><span class="n">comments</span> <span class="n">via</span> <span class="o">&lt;</span><span class="n">a</span> <span class="n">href</span><span class="o">=</span><span class="s2">"mailto:YOUR_EMAIL"</span><span class="o">&gt;</span><span class="n">email</span><span class="o">&lt;/</span><span class="n">a</span><span class="o">&gt;</span> <span class="o">---</span> <span class="o">&lt;</span><span class="n">code</span><span class="o">&gt;</span><span class="n">YOUR_EMAIL</span><span class="o">&lt;/</span><span class="n">code</span><span class="o">&gt;.&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+    <span class="o">&lt;/</span><span class="n">div</span><span class="o">&gt;</span>
+    <span class="o">&lt;/</span><span class="n">br</span><span class="o">&gt;</span>
+<span class="p">{</span><span class="o">%</span> <span class="n">endif</span> <span class="o">%</span><span class="p">}</span>
+</pre></div>
+<p>Ideally, I would like the message appear here (above the bar separating the
+footnotes) but I am still figuring out how Pelican generates footnotes.</p>
+<div class="footnote">
+<hr>
+<ol>
+<li id="fn-wiki">
+<p>https://en.wikipedia.org/wiki/Static_web_page&nbsp;<a class="footnote-backref" href="#fnref-wiki" title="Jump back to footnote 1 in the text">↩</a></p>
+</li>
+<li id="fn-hacking">
+<p>https://www.bassi.io/articles/2014/07/18/building-a-website-with-pelican/&nbsp;<a class="footnote-backref" href="#fnref-hacking" title="Jump back to footnote 2 in the text">↩</a></p>
+</li>
+<li id="fn-popsci">
+<p>http://www.popsci.com/science/article/2013-09/why-were-shutting-our-comments&nbsp;<a class="footnote-backref" href="#fnref-popsci" title="Jump back to footnote 3 in the text">↩</a></p>
+</li>
+</ol>
+</hr></div>
+            </div>
+            <!-- /.entry-content -->
+        </article>
+    </section>
+
+        </div>
+    </div>
+</div>
+<footer>
+      <div class="container entry-content">
+      <p>Please send me your questions/comments via <a
+          href="mailto:aby.vinod@gmail.com">email</a> ---
+      <code>aby[dot]vinod[at]gmail[dot]com</code>.</p>
+      </div>
+    </br>
+      <hr>
+      <div class="row">
+         <div class="col-xs-10">&copy; 2017 Abraham
+            &middot; Powered by <a
+                href="http://docs.getpelican.com/">Pelican</a> and other  <a
+            href="/blogging-using-pelican-conda-github-pages.html">goodies</a>.
+         </div>
+         <div class="col-xs-2"><p class="pull-right"><i class="fa fa-arrow-up"></i> <a href="#">Back to top</a></p></div>
+      </div>
+   </div>
+</footer>
+<script src="/theme/js/jquery.min.js"></script>
+
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="/theme/js/bootstrap.min.js"></script>
+
+<!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+<script src="/theme/js/respond.min.js"></script>
+
+</body>
+</html>
