@@ -18,7 +18,7 @@ TIMEZONE = 'America/Denver'
 DEFAULT_LANG = 'English'
 DELETE_OUTPUT_DIRECTORY = True
 
-
+LOAD_CONTENT_CACHE = True # Set this to False if you want to regenerate the files
 USE_FOLDER_AS_CATEGORY = True
 DEFAULT_DATE_FORMAT = '%a %d %B %Y'
 DEFAULT_DATE = 'fs'
@@ -33,14 +33,16 @@ TRANSLATION_FEED_ATOM = None
 #LINKS = (
 #        ('What If?', 'http://what-if.xkcd.com/'),
 #         )
-LINKS =()
-
-# Social widget
-SOCIAL = (('Academic Webpage', 'http://unm.edu/~abyvinod'),
-        ('RSS', 'http://abyvinod.github.io/feeds/all.rss'),
-        ('BitBucket', 'http://bitbucket.org/abyvinod'),
-         ('LinkedIn', 'http://linkedin.com/in/abrahampvinod'),
-          )
+#LINKS =()
+#
+## Social widget
+#SOCIAL = (('Academic Webpage', 'http://unm.edu/~abyvinod'),
+#        ('RSS', 'http://abyvinod.github.io/feeds/all.rss'),
+#        ('BitBucket', 'http://bitbucket.org/abyvinod'),
+#         ('LinkedIn', 'http://linkedin.com/in/abrahampvinod'),
+#          )
+LINKS = ()
+SOCIAL = ()
 DEFAULT_PAGINATION = 10
 
 # Do not generate the files starting with 0Private

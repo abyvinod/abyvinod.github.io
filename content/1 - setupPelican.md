@@ -252,6 +252,11 @@ I also have used [Academicons](http://jpswalsh.github.io/academicons/) in my
 `About Me` page. Note that you will have to add the font files and the css files
 to the bootstrap files. Also, call the css file in the `pelican-bootstrap3/templates/base.html`.
 
+### Comment message
+
+See [this blog post]({filename}/9 - Commenting.md) to know how and why I have
+implemented this approach to obtaining comments on this blog.
+
 ## Math support 
 
 I could not get the `render_math` plugin to work. I just incorporated MathJax

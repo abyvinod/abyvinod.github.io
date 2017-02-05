@@ -8,6 +8,8 @@ Status: draft
 
 # To Do
 
++ Comment message should appear above the footnote.
++ Navigation tags are covered by the header.
 + [https://developers.google.com/speed/pagespeed/insights/?url=www.unm.edu%2F~abyvinod&tab=desktop](https://developers.google.com/speed/pagespeed/insights/?url=www.unm.edu%2F~abyvinod&tab=desktop)
 + Create articles summarizing my work on different projects --- 500 words on the DAESR project.
 + Carry forward my wiki articles
