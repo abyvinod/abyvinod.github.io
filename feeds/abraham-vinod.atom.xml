@@ -11,20 +11,24 @@ for publication at American Control Conference (ACC), 2017. The conference will
 &lt;h1 id="what-is-this-paper-about"&gt;What is this paper about?&lt;/h1&gt;
 &lt;h2 id="high-level-description"&gt;High-level description&lt;/h2&gt;
 &lt;p&gt;The next five years looks poised to make autonomous transportation a reality
---- both in our cities&lt;sup id="fnref-selfdriving"&gt;&lt;a class="footnote-ref" href="#fn-selfdriving"&gt;1&lt;/a&gt;&lt;/sup&gt; and in our oceans&lt;sup id="fnref-selfship"&gt;&lt;a class="footnote-ref" href="#fn-selfship"&gt;2&lt;/a&gt;&lt;/sup&gt;.  A major
-component of autonomous transportation is obstacle avoidance, which in itself,
-is a complex task involving sensing, planning, and execution. This paper
-focuses on the planning component.&lt;/p&gt;
-&lt;p&gt;Imagine a self-driving car trying to avoid hitting a pedestrian&lt;sup id="fnref-Chris"&gt;&lt;a class="footnote-ref" href="#fn-Chris"&gt;3&lt;/a&gt;&lt;/sup&gt;.
-Clearly, it is impossible to predict exactly what the pedestrian is going to do
-at any given time. Obstacle avoidance can be performed using machine
-learning, and the most of the industry uses this approach to design solutions
-that can be tuned/trained to perform in a desired manner.  However, this
-approach lacks the guarantee of safety, something that would be crucial for
-making this dream a reality.&lt;/p&gt;
-&lt;p&gt;Control theory can be used to provide guarantees of safety. We account for the
-pedestrian's action into the model as a disturbance. There are two approaches
-in control to provide safety guarantees in the presence of disturbance:&lt;/p&gt;
+--- both in our cities&lt;sup id="fnref-selfdriving"&gt;&lt;a class="footnote-ref" href="#fn-selfdriving"&gt;1&lt;/a&gt;&lt;/sup&gt; and in our oceans&lt;sup id="fnref-selfship"&gt;&lt;a class="footnote-ref" href="#fn-selfship"&gt;2&lt;/a&gt;&lt;/sup&gt;, and
+researchers around the world are looking at different aspects of autonomous
+transportations. A major component of autonomous transportation is avoiding
+obstacles, which in itself, is a complex task involving sensing, planning, and
+execution. This paper focuses on the planning component.&lt;/p&gt;
+&lt;p&gt;Imagine the scenario where a self-driving car is attempting to avoid hitting a
+pedestrian&lt;sup id="fnref-Chris"&gt;&lt;a class="footnote-ref" href="#fn-Chris"&gt;3&lt;/a&gt;&lt;/sup&gt;.  Clearly, it is impossible to predict exactly what the
+pedestrian is going to do at any given time making this problem really hard.
+While most of the software and algorithms are proprietary, the approach taken
+by the industry has been to use several of the available well-tested software
+and hardware solutions, put them together, and tune/train learning algorithms
+to perform in a desired manner&lt;sup id="fnref-MUO"&gt;&lt;a class="footnote-ref" href="#fn-MUO"&gt;4&lt;/a&gt;&lt;/sup&gt;.  However, this approach lacks the
+guarantee of safety, something that would be crucial for making the dream of
+autonomous transportation a reality&lt;sup id="fnref-NYT"&gt;&lt;a class="footnote-ref" href="#fn-NYT"&gt;5&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+&lt;p&gt;We believe control theory can be leveraged to provide the required guarantees
+of safety.  We account for the pedestrian's action into the model as a
+disturbance. There are two approaches in control to provide safety guarantees
+in the presence of disturbance:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;strong&gt;Absolute guarantee&lt;/strong&gt;: a conservative approach where the control
 actions are designed by treating the disturbance as an adversary, and&lt;/li&gt;
@@ -44,7 +48,7 @@ move on to the &lt;a href="#application"&gt;section&lt;/a&gt; where we compare h
 approach a robot avoids all the obstacles, and successfully reaches a goal state.&lt;/p&gt;
 &lt;h2 id="a-more-technical-description"&gt;A more technical description&lt;/h2&gt;
 &lt;p&gt;In this paper, we consider uncontrolled discrete-time nonlinear systems perturbed by
-an affine discrete disturbance&lt;sup id="fnref-systems"&gt;&lt;a class="footnote-ref" href="#fn-systems"&gt;4&lt;/a&gt;&lt;/sup&gt;. We assume that the disturbance has a
+an affine discrete disturbance&lt;sup id="fnref-systems"&gt;&lt;a class="footnote-ref" href="#fn-systems"&gt;6&lt;/a&gt;&lt;/sup&gt;. We assume that the disturbance has a
 finite support, and its stochastics (probability mass function) is known.  We
 are interested in performing the &lt;strong&gt;forward stochastic reachability analysis&lt;/strong&gt;,
 that is, characterize the stochasticity of the state of a system at some point
@@ -60,18 +64,19 @@ mass function associated with the state, a discrete random vector.&lt;/li&gt;
 &lt;p&gt;We utilize the forward reachability analysis to avoid rigid body obstacles in a
 stochastic environment via an &lt;strong&gt;occupancy function&lt;/strong&gt;. The occupancy function
 provides the probability of finding an obstacle at a given point in the state
-space. We show that to achieve a desired safety level, avoiding a corresponding
-super-level set of the occupancy function is sufficient. We also analyze the
-convexity properties of the occupancy function, and these results ensure that
-the problem can be solved very efficiently. We leverage existing work on
-avoiding dynamic obstacles using a mixed-integer programming framework&lt;sup id="fnref-IP"&gt;&lt;a class="footnote-ref" href="#fn-IP"&gt;6&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+space. We show that to achieve a desired probabilistic safety, avoiding a
+corresponding super-level set of the occupancy function is sufficient. We also
+analyze the convexity properties of the occupancy function, and these results
+ensure that the obstacle avoidance problem can be solved very efficiently. We
+leverage existing work on avoiding dynamic obstacles using a mixed-integer
+programming framework&lt;sup id="fnref-IP"&gt;&lt;a class="footnote-ref" href="#fn-IP"&gt;8&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
 &lt;h1 id="what-is-so-great-about-this-paper_1"&gt;What is so great about this paper?&lt;/h1&gt;
 &lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;Iterative formulation&lt;/strong&gt; for forward stochastic reachability analysis: We
-decouple the stochastic and deterministic elements of the computation and
-leverages existing tools for deterministic reachability analysis.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Occupancy function&lt;/strong&gt;: We define this function using forward reachability
-analysis and analyze its convexity properties.  &lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Decoupled analysis&lt;/strong&gt; for forward stochastic reachability analysis: The
+proposed iterative formulation allows for leveraging existing tools for
+deterministic reachability analysis.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Occupancy function&lt;/strong&gt;: We define the occupancy function using forward
+reachability analysis and analyze its convexity properties.  &lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Stochastically moving obstacle avoidance&lt;/strong&gt; using occupancy function: We
 demonstrate the utility of the occupancy function in formulating a convex
 optimization problem for obstacle avoidance.  &lt;/li&gt;
@@ -112,7 +117,7 @@ are constrained to move in straight lines.
 &lt;img alt="A GIF should have appeared here." class="img-responsive" src="images/ACC2017.gif"&gt;
 &lt;/img&gt;&lt;/div&gt;
 &lt;/div&gt;
-Snapshots&lt;sup id="fnref-GIF"&gt;&lt;a class="footnote-ref" href="#fn-GIF"&gt;7&lt;/a&gt;&lt;/sup&gt; of the environment with the robot R controlled using different
+Snapshots&lt;sup id="fnref-GIF"&gt;&lt;a class="footnote-ref" href="#fn-GIF"&gt;9&lt;/a&gt;&lt;/sup&gt; of the environment with the robot R controlled using different
 approaches: &lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;The goal position for the robots is denoted by green circle,&lt;/li&gt;
@@ -128,7 +133,7 @@ given threshold as desired.&lt;/p&gt;
 &lt;h1 id="where-do-i-get-more-details_1"&gt;Where do I get more details?&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;Paper is available on &lt;a href="https://arxiv.org/abs/1610.03472v1"&gt;Arxiv&lt;/a&gt;.  &lt;/li&gt;
-&lt;li&gt;More details about the paper can be found at my &lt;a href="http://unm.edu/~abyvinod"&gt;webpage&lt;/a&gt;.
+&lt;li&gt;Project details can be found at my &lt;a href="http://unm.edu/~abyvinod/projects.html#reach"&gt;academic website&lt;/a&gt;.
 &lt;!--* MATLAB code for generating these figures can be downloaded from
 &lt;a href="http://unm.edu/~abyvinod/files/HSCC2017.zip"&gt;here&lt;/a&gt;.--&gt;&lt;/li&gt;
 &lt;/ul&gt;
@@ -146,21 +151,27 @@ given threshold as desired.&lt;/p&gt;
 (now Waymo), talks about this in a TED talk
 &lt;a href="https://www.youtube.com/watch?v=tiwVMrTLUWg&amp;amp;feature=youtu.be&amp;amp;t=7m11s"&gt;https://www.youtube.com/watch?v=tiwVMrTLUWg&amp;amp;feature=youtu.be&amp;amp;t=7m11s&lt;/a&gt;&amp;nbsp;&lt;a class="footnote-backref" href="#fnref-Chris" title="Jump back to footnote 3 in the text"&gt;↩&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
+&lt;li id="fn-MUO"&gt;
+&lt;p&gt;&lt;a href="http://www.makeuseof.com/tag/how-self-driving-cars-work-the-nuts-and-bolts-behind-googles-autonomous-car-program/"&gt;http://www.makeuseof.com/tag/how-self-driving-cars-work-the-nuts-and-bolts-behind-googles-autonomous-car-program/&lt;/a&gt;&amp;nbsp;&lt;a class="footnote-backref" href="#fnref-MUO" title="Jump back to footnote 4 in the text"&gt;↩&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn-NYT"&gt;
+&lt;p&gt;&lt;a href="https://www.nytimes.com/interactive/2016/12/14/technology/how-self-driving-cars-work.html?_r=0"&gt;https://www.nytimes.com/interactive/2016/12/14/technology/how-self-driving-cars-work.html?_r=0&lt;/a&gt;&amp;nbsp;&lt;a class="footnote-backref" href="#fnref-NYT" title="Jump back to footnote 5 in the text"&gt;↩&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
 &lt;li id="fn-systems"&gt;
 &lt;p&gt;This class of systems includes affine noise perturbed LTI
 discrete-time systems with known state feedback. The work is also applicable to
 affine noise perturbed LTI discrete-time systems with open loop controllers
-after some minor modifications.&amp;nbsp;&lt;a class="footnote-backref" href="#fnref-systems" title="Jump back to footnote 4 in the text"&gt;↩&lt;/a&gt;&lt;/p&gt;
+after some minor modifications.&amp;nbsp;&lt;a class="footnote-backref" href="#fnref-systems" title="Jump back to footnote 6 in the text"&gt;↩&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li id="fn-dist"&gt;
 &lt;p&gt;The disturbance is assumed to be an IID random process, but we can
-relax the identical assumption if needed.&amp;nbsp;&lt;a class="footnote-backref" href="#fnref-dist" title="Jump back to footnote 5 in the text"&gt;↩&lt;/a&gt;&lt;/p&gt;
+relax the identical assumption if needed.&amp;nbsp;&lt;a class="footnote-backref" href="#fnref-dist" title="Jump back to footnote 7 in the text"&gt;↩&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li id="fn-IP"&gt;
-&lt;p&gt;&lt;a href="http://ieeexplore.ieee.org/abstract/document/1384742/"&gt;Tom Schouwenaars, Jonathan How, and Eric Feron. "Receding horizon path planning with implicit safety guarantees." In &lt;em&gt;American Control Conference&lt;/em&gt;, vol. 6, pp. 5576-5581. IEEE, 2004.&lt;/a&gt;.&amp;nbsp;&lt;a class="footnote-backref" href="#fnref-IP" title="Jump back to footnote 6 in the text"&gt;↩&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://ieeexplore.ieee.org/abstract/document/1384742/"&gt;Tom Schouwenaars, Jonathan How, and Eric Feron. "Receding horizon path planning with implicit safety guarantees." In &lt;em&gt;American Control Conference&lt;/em&gt;, vol. 6, pp. 5576-5581. IEEE, 2004.&lt;/a&gt;.&amp;nbsp;&lt;a class="footnote-backref" href="#fnref-IP" title="Jump back to footnote 8 in the text"&gt;↩&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li id="fn-GIF"&gt;
-&lt;p&gt;The GIFs were created using &lt;a href="http://gifcreator.me/"&gt;http://gifcreator.me/&lt;/a&gt; and &lt;a href="http://resizeimage.net/"&gt;http://resizeimage.net/&lt;/a&gt;.&amp;nbsp;&lt;a class="footnote-backref" href="#fnref-GIF" title="Jump back to footnote 7 in the text"&gt;↩&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;The GIFs were created using &lt;a href="http://gifcreator.me/"&gt;http://gifcreator.me/&lt;/a&gt; and &lt;a href="http://resizeimage.net/"&gt;http://resizeimage.net/&lt;/a&gt;.&amp;nbsp;&lt;a class="footnote-backref" href="#fnref-GIF" title="Jump back to footnote 9 in the text"&gt;↩&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;/hr&gt;&lt;/div&gt;</content><category term="My Research"></category><category term="Stochastic Reachability"></category><category term="Obstacle Avoidance"></category><category term="Model Predictive Control"></category></entry><entry><title>Commenting on this blog</title><link href="/comments_in_blog.html" rel="alternate"></link><published>2017-02-05T00:00:00-07:00</published><updated>2017-02-05T00:00:00-07:00</updated><author><name>Abraham Vinod</name></author><id>tag:None,2017-02-05:/comments_in_blog.html</id><summary type="html">&lt;p&gt;I have chosen not to implement a commenting system. You can instead email me your comments. I also describe how to print a custom message based on article title.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Static website generators are good in the sense that they are quick and cheap
@@ -383,7 +394,7 @@ capture corresponding to $x_R^\ast[\tau]$.&lt;/li&gt;
 &lt;h1 id="where-do-i-get-more-details_1"&gt;Where do I get more details?&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;Paper is available on &lt;a href="https://arxiv.org/abs/1610.04550"&gt;Arxiv&lt;/a&gt;.  &lt;/li&gt;
-&lt;li&gt;More details about the paper can be found at my &lt;a href="http://unm.edu/~abyvinod"&gt;webpage&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Project details can be found at my &lt;a href="http://unm.edu/~abyvinod/projects.html#reach"&gt;academic website&lt;/a&gt;.&lt;/li&gt;
 &lt;li&gt;MATLAB code for generating these figures can be downloaded from &lt;a href="http://unm.edu/~abyvinod/files/HSCC2017.zip"&gt;here&lt;/a&gt;.
 &lt;!--* Questions/bugs can be sent to &lt;code&gt;aby[dot]vinod[at]gmail[dot]com&lt;/code&gt;. --&gt;&lt;/li&gt;
 &lt;/ul&gt;
