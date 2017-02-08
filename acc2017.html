@@ -150,15 +150,16 @@ for publication at American Control Conference (ACC), 2017. The conference will
 <h2 id="high-level-description">High-level description</h2>
 <p>The next five years looks poised to make autonomous transportation a reality
 --- both in our cities<sup id="fnref-selfdriving"><a class="footnote-ref" href="#fn-selfdriving">1</a></sup> and in our oceans<sup id="fnref-selfship"><a class="footnote-ref" href="#fn-selfship">2</a></sup>.  A major
-component in autonomous transportation is obstacle avoidance. Obstacle
-avoidance, in itself, is a complex task involving sensing, planning, and
-execution. This paper focuses on the planning component.</p>
-<p>Imagine a self-driving car trying to avoid
-hitting a pedestrian<sup id="fnref-Chris"><a class="footnote-ref" href="#fn-Chris">3</a></sup>. We can not predict exactly what the pedestrian is
-going to do. Most of the industries look at this problem using machine learning
-and design solutions that can be tuned/trained to perform in a desired manner.
-However, such approaches lack the guarantee of safety, something that would be
-crucial for making this dream a reality.</p>
+component of autonomous transportation is obstacle avoidance, which in itself,
+is a complex task involving sensing, planning, and execution. This paper
+focuses on the planning component.</p>
+<p>Imagine a self-driving car trying to avoid hitting a pedestrian<sup id="fnref-Chris"><a class="footnote-ref" href="#fn-Chris">3</a></sup>.
+Clearly, it is impossible to predict exactly what the pedestrian is going to do
+at any given time. Obstacle avoidance can be performed using machine
+learning, and the most of the industry uses this approach to design solutions
+that can be tuned/trained to perform in a desired manner.  However, this
+approach lacks the guarantee of safety, something that would be crucial for
+making this dream a reality.</p>
 <p>Control theory can be used to provide guarantees of safety. We account for the
 pedestrian's action into the model as a disturbance. There are two approaches
 in control to provide safety guarantees in the presence of disturbance:</p>
@@ -169,15 +170,18 @@ actions are designed by treating the disturbance as an adversary, and</li>
 are designed by respecting the likelihood of the disturbance taking different
 actions.</li>
 </ol>
-<p>Both the approaches have their pros and cons. Due to the absolute safety
+<p>Both of these approaches have their pros and cons. Due to the absolute safety
 requirement, the conservative approaches may fail in complex environments.  The
 stochastic approach can find control actions even in complex environments but
 requires additional information (likelihoods of the disturbance taking
-different actions). If you like to skip the technical details, you may directly
+different actions). Nevertheless, both of these approaches can be used to
+design the control actions that needs to be taken to ensure that the desired
+safety levels are achieved. </p>
+<p>If you like to skip the technical details, you may directly
 move on to the <a href="#application">section</a> where we compare how using the stochastic
 approach a robot avoids all the obstacles, and successfully reaches a goal state.</p>
 <h2 id="a-more-technical-description">A more technical description</h2>
-<p>We look at uncontrolled discrete-time nonlinear systems perturbed by
+<p>In this paper, we consider uncontrolled discrete-time nonlinear systems perturbed by
 an affine discrete disturbance<sup id="fnref-systems"><a class="footnote-ref" href="#fn-systems">4</a></sup>. We assume that the disturbance has a
 finite support, and its stochastics (probability mass function) is known.  We
 are interested in performing the <strong>forward stochastic reachability analysis</strong>,
@@ -191,20 +195,24 @@ reach with non-zero likelihood.</li>
 <li>forward stochastic reach probability measure  (FSRPM) --- the probability
 mass function associated with the state, a discrete random vector.</li>
 </ol>
-<p>We extend the proposed iterative formulation to handle rigid body obstacles
-using an ''occupancy function''. We also analyze the convexity properties of
-the occupancy function.  Finally, we formulate the problem of providing
-probabilistic safety guarantees as avoiding specific superlevel sets of the
-occupancy function. The convexity results we propose ensures that the problem
-can be solved very efficiently. We leverage existing work on avoiding dynamic
-obstacles using a mixed-integer programming framework<sup id="fnref-IP"><a class="footnote-ref" href="#fn-IP">6</a></sup>.</p>
+<p>We utilize the forward reachability analysis to avoid rigid body obstacles in a
+stochastic environment via an <strong>occupancy function</strong>. The occupancy function
+provides the probability of finding an obstacle at a given point in the state
+space. We show that to achieve a desired safety level, avoiding a corresponding
+super-level set of the occupancy function is sufficient. We also analyze the
+convexity properties of the occupancy function, and these results ensure that
+the problem can be solved very efficiently. We leverage existing work on
+avoiding dynamic obstacles using a mixed-integer programming framework<sup id="fnref-IP"><a class="footnote-ref" href="#fn-IP">6</a></sup>.</p>
 <h1 id="what-is-so-great-about-this-paper_1">What is so great about this paper?</h1>
 <ol>
 <li><strong>Iterative formulation</strong> for forward stochastic reachability analysis: We
 decouple the stochastic and deterministic elements of the computation and
 leverages existing tools for deterministic reachability analysis.</li>
-<li><strong>Occupancy function</strong>: We demonstrate the utility of this function in
-obstacle avoidance problems and its convexity properties were studied.  </li>
+<li><strong>Occupancy function</strong>: We define this function using forward reachability
+analysis and analyze its convexity properties.  </li>
+<li><strong>Stochastically moving obstacle avoidance</strong> using occupancy function: We
+demonstrate the utility of the occupancy function in formulating a convex
+optimization problem for obstacle avoidance.  </li>
 <li><strong>Comparison of the conservative and the stochastic approaches</strong> for
 obstacle avoidance problems: We discuss how the stochastic approach prevails in
 complex situations where more information is available.</li>
@@ -212,10 +220,7 @@ complex situations where more information is available.</li>
 <p><a name="application"></a></p>
 <h1 id="can-you-give-me-an-example-of-the-application-of-this-method">Can you give me an example of the application of this method?</h1>
 <p>We now consider the specific problem of robot navigation in an environment with
-rigid body obstacles moving in straight lines with stochastic velocities. We
-would like to drive the robot R to the desired goal in finite time while
-ensuring a probabilistic guarantee of safety. We presume that robot and
-obstacle positions are known at each instant.</p>
+rigid body obstacles moving in straight lines with stochastic velocities. </p>
 <h2 id="relating-this-problem-to-the-high-level-description">Relating this problem to the high-level description</h2>
 <p>The robot here can be thought of as the self-driving car, and the rigid body
 obstacles as the pedestrians with their associated 'safety bubbles'.</p>
@@ -229,13 +234,13 @@ obstacles as the pedestrians with their associated 'safety bubbles'.</p>
 <li>the probability mass function of the stochastic velocities of the obstacles.</li>
 </ol>
 <h2 id="what-should-be-computed-for-this-problem">What should be computed for this problem?</h2>
-<p>A receding horizon controller input sequence that drives robot R from the
-given initial position to the goal while achieving the desired probability of
-safety.</p>
+<p>We would like to drive the robot R to the desired goal in finite time while
+ensuring a probabilistic guarantee of safety. We compute a receding horizon
+controller input sequence that achieves the desired result.</p>
 <h2 id="results">Results</h2>
 <p>We consider the control strategies given by both the approaches for robot R.
-The <strong>red robot</strong> seeks a probabilistic guarantee of safety, and the <strong>pink
-robot</strong> seeks an absolute guarantee of safety.  The red and pink robots are
+The <strong>red robot</strong> seeks a <em>probabilistic guarantee</em> of safety, and the <strong>pink
+robot</strong> seeks an <em>absolute guarantee</em> of safety.  The red and pink robots are
 assumed to have point mass dynamics discretized in time with bounded control
 authority forcing it to always move forward in the $y$-direction. The obstacles
 are constrained to move in straight lines. 
@@ -253,13 +258,15 @@ approaches: </p>
 <li>The pink robot's trajectory is indicated by the cyan line, and</li>
 <li>The blue boxes indicate the obstacles.</li>
 </ul>
-<p>While the simulation (shown above) is just a single trial, the red robot can
-also collide with the obstacles in some trials.  However, in an experiment
-involving a fixed number of trials, the average number of trials ending in a
-collision is guaranteed to be less than a given threshold as desired.</p>
+<p>While the simulation (shown above) is just a single trial, the red robot can also
+collide with the obstacles in some of the trials due to the stochasticity in the
+environment.  However, in an experiment involving a fixed number of trials, the
+average number of trials ending in a collision is guaranteed to be less than a
+given threshold as desired.</p>
 <h1 id="where-do-i-get-more-details_1">Where do I get more details?</h1>
 <ul>
-<li>Paper is uploaded on <a href="https://arxiv.org/abs/1610.03472v1">Arxiv</a>.  More details about the paper can be found at my <a href="http://unm.edu/~abyvinod">webpage</a>.
+<li>Paper is available on <a href="https://arxiv.org/abs/1610.03472v1">Arxiv</a>.  </li>
+<li>More details about the paper can be found at my <a href="http://unm.edu/~abyvinod">webpage</a>.
 <!--* MATLAB code for generating these figures can be downloaded from
 <a href="http://unm.edu/~abyvinod/files/HSCC2017.zip">here</a>.--></li>
 </ul>
