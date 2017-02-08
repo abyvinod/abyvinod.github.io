@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="english"
+>
+<head>
+    <title>Computation of forward stochastic reach sets: Application to dynamic obstacle avoidance - Notes on the margin</title>
+    <!-- Using the latest rendering mode for IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <link href="/images/favicon.ico" rel="icon">
+
+<link rel="canonical" href="/acc2017.html">
+
+        <meta name="author" content="Abraham Vinod" />
+        <meta name="keywords" content="My Research,Stochastic Reachability,Obstacle Avoidance,Model Predictive Control" />
+        <meta name="description" content="Summary of the ACC 2017 paper" />
+
+
+
+    <!-- Bootstrap -->
+        <link rel="stylesheet" href="/theme/css/bootstrap.cosmo.min.css" type="text/css"/>
+    <link href="/theme/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/theme/css/academicons.min.css" rel="stylesheet" />
+    <link href="/theme/css/pygments/monokai.css" rel="stylesheet">
+    <link rel="stylesheet" href="/theme/css/style.css" type="text/css"/>
+
+        <link href="/feeds/all.rss" type="application/rss+xml" rel="alternate"
+              title="Notes on the margin RSS Feed"/>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+<script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML">
+</script>
+</head>
+<body>
+
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="/" class="navbar-brand">
+<img src="/images/favicon_white.ico" width="20"/> Notes on the margin            </a>
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+                    <!-- Addition of My research tag into the header-->
+                    <li>
+                        <a href="/pages/about-me.html"><i
+                                class="fa fa-user"></i> About Me</a>
+                    </li>
+                    <li>
+                        <a href="/tag/my-research.html"><i
+                                class="fa fa-flask fa-lg"></i> My Research</a>
+                    </li>
+                    <!-- Addition of All tags into the header-->
+                    <li>
+                        <a href="/categories.html"><i
+                                class="fa fa-bookmark fa-lg"></i> Categories</a>
+                    </li>
+                    <li>
+                        <a href="/tags.html"><i class="fa fa-tags
+                                fa-lg"></i> Tags</a>
+                    </li>
+                    <li>
+                        <a href="/feeds/all.rss"><i class="fa fa-rss-square fa-lg"></i> RSS</a>
+                    </li>
+                    <!--                        <li class="active">
+                            <a href="/category/control-theory.html">Control theory</a>
+                        </li>
+                        <li >
+                            <a href="/category/how-to.html">How to</a>
+                        </li>
+                        <li >
+                            <a href="/category/tips.html">Tips</a>
+                        </li>
+-->
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="/archives.html"><i class="fa fa-th-list"></i><span class="icon-label">Archives</span></a></li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+</div> <!-- /.navbar -->
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+
+    <section id="content">
+        <article>
+            <header class="page-header">
+                <h1>
+                    <a href="/acc2017.html"
+                       rel="bookmark"
+                       title="Permalink to Computation of forward stochastic reach sets: Application to dynamic obstacle avoidance">
+                        Computation of forward stochastic reach sets: Application to dynamic obstacle avoidance
+                    </a>
+                </h1>
+            </header>
+            <div class="entry-content">
+                <div class="panel">
+                    <div class="panel-body">
+<footer class="post-info">
+    <span class="label label-default">Date</span>
+    <span class="published">
+        <i class="fa fa-calendar"></i><time datetime="2017-02-08T00:00:00-07:00"> Wed 08 February 2017</time>
+    </span>
+
+        <span class="label label-default">Category</span>
+        <a href="/category/control-theory.html">Control theory</a>
+
+
+<span class="label label-default">Tags</span>
+	<a href="/tag/my-research.html">My Research</a>
+        /
+	<a href="/tag/stochastic-reachability.html">Stochastic Reachability</a>
+        /
+	<a href="/tag/obstacle-avoidance.html">Obstacle Avoidance</a>
+        /
+	<a href="/tag/model-predictive-control.html">Model Predictive Control</a>
+    
+</footer><!-- /.post-info -->                    </div>
+                </div>
+                    <div style="border-style: solid;background:lightgrey">
+                        <h3 style="text-align:center"> Table of contents</h3>
+                            <nav class="toc">
+                            <div id="toc"><ul><li><a class="toc-href" href="#" title="Computation of forward stochastic reach sets: Application to dynamic obstacle avoidance">Computation of forward stochastic reach sets: Application to dynamic obstacle avoidance</a><ul><li><a class="toc-href" href="#what-is-this-paper-about" title="What is this paper about?">What is this paper about?</a><ul><li><a class="toc-href" href="#high-level-description" title="High-level description">High-level description</a></li><li><a class="toc-href" href="#a-more-technical-description" title="A more technical description">A more technical description</a></li></ul></li><li><a class="toc-href" href="#what-is-so-great-about-this-paper_1" title="What is so great about this paper?">What is so great about this paper?</a></li><li><a class="toc-href" href="#can-you-give-me-an-example-of-the-application-of-this-method" title="Can you give me an example of the application of this method?">Can you give me an example of the application of this method?</a><ul><li><a class="toc-href" href="#relating-this-problem-to-the-high-level-description" title="Relating this problem to the high-level description">Relating this problem to the high-level description</a></li><li><a class="toc-href" href="#what-is-the-information-provided-for-this-problem" title="What is the information provided for this problem?">What is the information provided for this problem?</a></li><li><a class="toc-href" href="#what-should-be-computed-for-this-problem" title="What should be computed for this problem?">What should be computed for this problem?</a></li><li><a class="toc-href" href="#results" title="Results">Results</a></li></ul></li><li><a class="toc-href" href="#where-do-i-get-more-details_1" title="Where do I get more details?">Where do I get more details?</a></li></ul></li></ul></div>
+                            </nav>
+                    </div>
+                <p><br/>
+<br/>
+This blog post will summarize my paper <strong>Computation of forward stochastic
+reach sets: Application to stochastic, dynamic obstacle avoidance</strong> accepted
+for publication at American Control Conference (ACC), 2017. The conference will
+    happen on May 24-26, 2017 at Seattle, WA, USA. This work was done in
+    collaboration with <a href="http://www.cs.unm.edu/amprg/People/baisravan/">Dr. Baisravan
+    HomChaudhuri</a> and <a href="http://www.unm.edu/~oishi">Prof.
+    Meeko Oishi</a>.</p>
+<h1 id="what-is-this-paper-about">What is this paper about?</h1>
+<h2 id="high-level-description">High-level description</h2>
+<p>The next five years looks poised to make autonomous transportation a reality
+--- both in our cities<sup id="fnref-selfdriving"><a class="footnote-ref" href="#fn-selfdriving">1</a></sup> and in our oceans<sup id="fnref-selfship"><a class="footnote-ref" href="#fn-selfship">2</a></sup>.  A major
+component in autonomous transportation is obstacle avoidance. Obstacle
+avoidance, in itself, is a complex task involving sensing, planning, and
+execution. This paper focuses on the planning component.</p>
+<p>Imagine a self-driving car trying to avoid
+hitting a pedestrian<sup id="fnref-Chris"><a class="footnote-ref" href="#fn-Chris">3</a></sup>. We can not predict exactly what the pedestrian is
+going to do. Most of the industries look at this problem using machine learning
+and design solutions that can be tuned/trained to perform in a desired manner.
+However, such approaches lack the guarantee of safety, something that would be
+crucial for making this dream a reality.</p>
+<p>Control theory can be used to provide guarantees of safety. We account for the
+pedestrian's action into the model as a disturbance. There are two approaches
+in control to provide safety guarantees in the presence of disturbance:</p>
+<ol>
+<li><strong>Absolute guarantee</strong>: a conservative approach where the control
+actions are designed by treating the disturbance as an adversary, and</li>
+<li><strong>Probabilistic guarantee</strong>: a stochastic approach where the control actions
+are designed by respecting the likelihood of the disturbance taking different
+actions.</li>
+</ol>
+<p>Both the approaches have their pros and cons. Due to the absolute safety
+requirement, the conservative approaches may fail in complex environments.  The
+stochastic approach can find control actions even in complex environments but
+requires additional information (likelihoods of the disturbance taking
+different actions). If you like to skip the technical details, you may directly
+move on to the <a href="#application">section</a> where we compare how using the stochastic
+approach a robot avoids all the obstacles, and successfully reaches a goal state.</p>
+<h2 id="a-more-technical-description">A more technical description</h2>
+<p>We look at uncontrolled discrete-time nonlinear systems perturbed by
+an affine discrete disturbance<sup id="fnref-systems"><a class="footnote-ref" href="#fn-systems">4</a></sup>. We assume that the disturbance has a
+finite support, and its stochastics (probability mass function) is known.  We
+are interested in performing the <strong>forward stochastic reachability analysis</strong>,
+that is, characterize the stochasticity of the state of a system at some point
+of time in future when the system is initialized at a known initial condition.
+For any given point of time in future, we propose an <strong>iterative formulation</strong>
+for computing:</p>
+<ol>
+<li>forward stochastic reach set (FSR set) --- the states which the system can
+reach with non-zero likelihood.</li>
+<li>forward stochastic reach probability measure  (FSRPM) --- the probability
+mass function associated with the state, a discrete random vector.</li>
+</ol>
+<p>We extend the proposed iterative formulation to handle rigid body obstacles
+using an ''occupancy function''. We also analyze the convexity properties of
+the occupancy function.  Finally, we formulate the problem of providing
+probabilistic safety guarantees as avoiding specific superlevel sets of the
+occupancy function. The convexity results we propose ensures that the problem
+can be solved very efficiently. We leverage existing work on avoiding dynamic
+obstacles using a mixed-integer programming framework<sup id="fnref-IP"><a class="footnote-ref" href="#fn-IP">6</a></sup>.</p>
+<h1 id="what-is-so-great-about-this-paper_1">What is so great about this paper?</h1>
+<ol>
+<li><strong>Iterative formulation for forward stochastic reachability analysis</strong>: We
+decouple the stochastic and deterministic elements of the computation and
+leverages existing tools for deterministic reachability analysis.</li>
+<li><strong>Occupancy function</strong>: We demonstrate the utility of this function in
+obstacle avoidance problems and its convexity properties were studied.  </li>
+<li><strong>Comparison of the conservative and the stochastic approaches</strong> for
+obstacle avoidance problems: We discuss how the stochastic approach prevails in
+complex situations where more information is available.</li>
+</ol>
+<p><a name="application"></a></p>
+<h1 id="can-you-give-me-an-example-of-the-application-of-this-method">Can you give me an example of the application of this method?</h1>
+<p>We now consider the specific problem of robot navigation in an environment with
+rigid body obstacles moving in straight lines with stochastic velocities. We
+would like to drive the robot R to the desired goal in finite time while
+ensuring a probabilistic guarantee of safety. We presume that robot and
+obstacle positions are known at each instant.</p>
+<h2 id="relating-this-problem-to-the-high-level-description">Relating this problem to the high-level description</h2>
+<p>The robot here can be thought of as the self-driving car, and the rigid body
+obstacles as the pedestrians with their associated 'safety bubbles'.</p>
+<h2 id="what-is-the-information-provided-for-this-problem">What is the information provided for this problem?</h2>
+<ol>
+<li>the initial position of the robots R and the obstacles,</li>
+<li>the goal position for the robot R,</li>
+<li>the desired guarantee of probabilistic safety,</li>
+<li>the deterministic LTI dynamics of the robot R,</li>
+<li>the disturbed (stochastic) LTI dynamics of the obstacles, and</li>
+<li>the probability mass function of the stochastic velocities of the obstacles.</li>
+</ol>
+<h2 id="what-should-be-computed-for-this-problem">What should be computed for this problem?</h2>
+<p>A receding horizon controller input sequence that drives robot R from the
+given initial position to the goal while achieving the desired probability of
+safety.</p>
+<h2 id="results">Results</h2>
+<p>We consider the control strategies given by both the approaches for robot R.
+The <strong>red robot</strong> seeks a probabilistic guarantee of safety, and the <strong>pink
+robot</strong> seeks an absolute guarantee of safety.  The red and pink robots are
+assumed to have point mass dynamics discretized in time with bounded control
+authority forcing it to always move forward in the $y$-direction. The obstacles
+are constrained to move in straight lines. 
+<div class="container">
+<div class="col-md-4"></div>
+<div class="col-md-4" style="padding-left: 0px;  padding-right: 0px;">
+<img alt="A GIF should have appeared here." class="img-responsive" src="images/ACC2017.gif">
+</img></div>
+</div>
+Snapshots<sup id="fnref-GIF"><a class="footnote-ref" href="#fn-GIF">7</a></sup> of the environment with the robot R controlled using different
+approaches: </p>
+<ul>
+<li>The goal position for the robots is denoted by green circle,</li>
+<li>The red robot's trajectory is indicated by the blue line, </li>
+<li>The pink robot's trajectory is indicated by the cyan line, and</li>
+<li>The blue boxes indicate the obstacles.</li>
+</ul>
+<p>While the simulation (shown above) is just a single trial, the red robot can
+also collide with the obstacles in some trials.  However, in an experiment
+involving a fixed number of trials, the average number of trials ending in a
+collision is guaranteed to be less than a given threshold as desired.</p>
+<h1 id="where-do-i-get-more-details_1">Where do I get more details?</h1>
+<ul>
+<li>Paper is uploaded on <a href="https://arxiv.org/abs/1610.03472v1">Arxiv</a>.  More details about the paper can be found at my <a href="http://unm.edu/~abyvinod">webpage</a>.
+<!--* MATLAB code for generating these figures can be downloaded from
+<a href="http://unm.edu/~abyvinod/files/HSCC2017.zip">here</a>.--></li>
+</ul>
+<div class="footnote">
+<hr>
+<ol>
+<li id="fn-selfdriving">
+<p><a href="http://spectrum.ieee.org/transportation/advanced-cars/2017-the-year-of-selfdriving-cars-and-trucks">http://spectrum.ieee.org/transportation/advanced-cars/2017-the-year-of-selfdriving-cars-and-trucks</a>&nbsp;<a class="footnote-backref" href="#fnref-selfdriving" title="Jump back to footnote 1 in the text">↩</a></p>
+</li>
+<li id="fn-selfship">
+<p><a href="http://spectrum.ieee.org/transportation/marine/forget-autonomous-cars-autonomous-ships-are-almost-here">http://spectrum.ieee.org/transportation/marine/forget-autonomous-cars-autonomous-ships-are-almost-here</a>&nbsp;<a class="footnote-backref" href="#fnref-selfship" title="Jump back to footnote 2 in the text">↩</a></p>
+</li>
+<li id="fn-Chris">
+<p>Chris Urmson, the former CTO of Google's self-driving car project
+(now Waymo), talks about this in a TED talk
+<a href="https://www.youtube.com/watch?v=tiwVMrTLUWg&amp;feature=youtu.be&amp;t=7m11s">https://www.youtube.com/watch?v=tiwVMrTLUWg&amp;feature=youtu.be&amp;t=7m11s</a>&nbsp;<a class="footnote-backref" href="#fnref-Chris" title="Jump back to footnote 3 in the text">↩</a></p>
+</li>
+<li id="fn-systems">
+<p>This class of systems includes affine noise perturbed LTI
+discrete-time systems with known state feedback. The work is also applicable to
+affine noise perturbed LTI discrete-time systems with open loop controllers
+after some minor modifications.&nbsp;<a class="footnote-backref" href="#fnref-systems" title="Jump back to footnote 4 in the text">↩</a></p>
+</li>
+<li id="fn-dist">
+<p>The disturbance is assumed to be an IID random process, but we can
+relax the identical assumption if needed.&nbsp;<a class="footnote-backref" href="#fnref-dist" title="Jump back to footnote 5 in the text">↩</a></p>
+</li>
+<li id="fn-IP">
+<p><a href="http://ieeexplore.ieee.org/abstract/document/1384742/">Tom Schouwenaars, Jonathan How, and Eric Feron. "Receding horizon path planning with implicit safety guarantees." In <em>American Control Conference</em>, vol. 6, pp. 5576-5581. IEEE, 2004.</a>.&nbsp;<a class="footnote-backref" href="#fnref-IP" title="Jump back to footnote 6 in the text">↩</a></p>
+</li>
+<li id="fn-GIF">
+<p>The GIFs were created using <a href="http://gifcreator.me/">http://gifcreator.me/</a> and <a href="http://resizeimage.net/">http://resizeimage.net/</a>.&nbsp;<a class="footnote-backref" href="#fnref-GIF" title="Jump back to footnote 7 in the text">↩</a></p>
+</li>
+</ol>
+</hr></div>
+            </div>
+            <!-- /.entry-content -->
+        </article>
+    </section>
+
+        </div>
+    </div>
+</div>
+<footer>
+      <div class="container entry-content">
+      <p>Please send me your questions/comments via <a
+          href="mailto:aby.vinod@gmail.com">email</a> ---
+      <code>aby[dot]vinod[at]gmail[dot]com</code>.</p>
+      </div>
+    </br>
+      <div class="entry-content">
+         <hr>
+         <div class="col-xs-10">&copy; 2017 Abraham
+            &middot; Powered by <a
+                href="http://docs.getpelican.com/">Pelican</a> and other  <a
+            href="/setMeup.html">goodies</a>.
+         </div>
+         <div class="col-xs-2"><p class="pull-right"><i class="fa fa-arrow-up"></i> <a href="#">Back to top</a></p></div>
+      </div>
+   </div>
+</footer>
+<script src="/theme/js/jquery.min.js"></script>
+
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="/theme/js/bootstrap.min.js"></script>
+
+<!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+<script src="/theme/js/respond.min.js"></script>
+
+</body>
+</html>

@@ -1,5 +1,162 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Notes on the margin - Abraham Vinod</title><link href="/" rel="alternate"></link><link href="/feeds/abraham-vinod.atom.xml" rel="self"></link><id>/</id><updated>2017-02-05T00:00:00-07:00</updated><entry><title>Commenting on this blog</title><link href="/comments_in_blog.html" rel="alternate"></link><published>2017-02-05T00:00:00-07:00</published><updated>2017-02-05T00:00:00-07:00</updated><author><name>Abraham Vinod</name></author><id>tag:None,2017-02-05:/comments_in_blog.html</id><summary type="html">&lt;p&gt;I have chosen not to implement a commenting system. You can instead email me your comments. I also describe how to print a custom message based on article title.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Static website generators are good in the sense that they are quick and cheap
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Notes on the margin - Abraham Vinod</title><link href="/" rel="alternate"></link><link href="/feeds/abraham-vinod.atom.xml" rel="self"></link><id>/</id><updated>2017-02-08T00:00:00-07:00</updated><entry><title>Computation of forward stochastic reach sets: Application to dynamic obstacle avoidance</title><link href="/acc2017.html" rel="alternate"></link><published>2017-02-08T00:00:00-07:00</published><updated>2017-02-08T00:00:00-07:00</updated><author><name>Abraham Vinod</name></author><id>tag:None,2017-02-08:/acc2017.html</id><summary type="html">&lt;p&gt;Summary of the ACC 2017 paper&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;br/&gt;
+&lt;br/&gt;
+This blog post will summarize my paper &lt;strong&gt;Computation of forward stochastic
+reach sets: Application to stochastic, dynamic obstacle avoidance&lt;/strong&gt; accepted
+for publication at American Control Conference (ACC), 2017. The conference will
+    happen on May 24-26, 2017 at Seattle, WA, USA. This work was done in
+    collaboration with &lt;a href="http://www.cs.unm.edu/amprg/People/baisravan/"&gt;Dr. Baisravan
+    HomChaudhuri&lt;/a&gt; and &lt;a href="http://www.unm.edu/~oishi"&gt;Prof.
+    Meeko Oishi&lt;/a&gt;.&lt;/p&gt;
+&lt;h1 id="what-is-this-paper-about"&gt;What is this paper about?&lt;/h1&gt;
+&lt;h2 id="high-level-description"&gt;High-level description&lt;/h2&gt;
+&lt;p&gt;The next five years looks poised to make autonomous transportation a reality
+--- both in our cities&lt;sup id="fnref-selfdriving"&gt;&lt;a class="footnote-ref" href="#fn-selfdriving"&gt;1&lt;/a&gt;&lt;/sup&gt; and in our oceans&lt;sup id="fnref-selfship"&gt;&lt;a class="footnote-ref" href="#fn-selfship"&gt;2&lt;/a&gt;&lt;/sup&gt;.  A major
+component in autonomous transportation is obstacle avoidance. Obstacle
+avoidance, in itself, is a complex task involving sensing, planning, and
+execution. This paper focuses on the planning component.&lt;/p&gt;
+&lt;p&gt;Imagine a self-driving car trying to avoid
+hitting a pedestrian&lt;sup id="fnref-Chris"&gt;&lt;a class="footnote-ref" href="#fn-Chris"&gt;3&lt;/a&gt;&lt;/sup&gt;. We can not predict exactly what the pedestrian is
+going to do. Most of the industries look at this problem using machine learning
+and design solutions that can be tuned/trained to perform in a desired manner.
+However, such approaches lack the guarantee of safety, something that would be
+crucial for making this dream a reality.&lt;/p&gt;
+&lt;p&gt;Control theory can be used to provide guarantees of safety. We account for the
+pedestrian's action into the model as a disturbance. There are two approaches
+in control to provide safety guarantees in the presence of disturbance:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Absolute guarantee&lt;/strong&gt;: a conservative approach where the control
+actions are designed by treating the disturbance as an adversary, and&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Probabilistic guarantee&lt;/strong&gt;: a stochastic approach where the control actions
+are designed by respecting the likelihood of the disturbance taking different
+actions.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Both the approaches have their pros and cons. Due to the absolute safety
+requirement, the conservative approaches may fail in complex environments.  The
+stochastic approach can find control actions even in complex environments but
+requires additional information (likelihoods of the disturbance taking
+different actions). If you like to skip the technical details, you may directly
+move on to the &lt;a href="#application"&gt;section&lt;/a&gt; where we compare how using the stochastic
+approach a robot avoids all the obstacles, and successfully reaches a goal state.&lt;/p&gt;
+&lt;h2 id="a-more-technical-description"&gt;A more technical description&lt;/h2&gt;
+&lt;p&gt;We look at uncontrolled discrete-time nonlinear systems perturbed by
+an affine discrete disturbance&lt;sup id="fnref-systems"&gt;&lt;a class="footnote-ref" href="#fn-systems"&gt;4&lt;/a&gt;&lt;/sup&gt;. We assume that the disturbance has a
+finite support, and its stochastics (probability mass function) is known.  We
+are interested in performing the &lt;strong&gt;forward stochastic reachability analysis&lt;/strong&gt;,
+that is, characterize the stochasticity of the state of a system at some point
+of time in future when the system is initialized at a known initial condition.
+For any given point of time in future, we propose an &lt;strong&gt;iterative formulation&lt;/strong&gt;
+for computing:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;forward stochastic reach set (FSR set) --- the states which the system can
+reach with non-zero likelihood.&lt;/li&gt;
+&lt;li&gt;forward stochastic reach probability measure  (FSRPM) --- the probability
+mass function associated with the state, a discrete random vector.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;We extend the proposed iterative formulation to handle rigid body obstacles
+using an ''occupancy function''. We also analyze the convexity properties of
+the occupancy function.  Finally, we formulate the problem of providing
+probabilistic safety guarantees as avoiding specific superlevel sets of the
+occupancy function. The convexity results we propose ensures that the problem
+can be solved very efficiently. We leverage existing work on avoiding dynamic
+obstacles using a mixed-integer programming framework&lt;sup id="fnref-IP"&gt;&lt;a class="footnote-ref" href="#fn-IP"&gt;6&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+&lt;h1 id="what-is-so-great-about-this-paper_1"&gt;What is so great about this paper?&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Iterative formulation for forward stochastic reachability analysis&lt;/strong&gt;: We
+decouple the stochastic and deterministic elements of the computation and
+leverages existing tools for deterministic reachability analysis.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Occupancy function&lt;/strong&gt;: We demonstrate the utility of this function in
+obstacle avoidance problems and its convexity properties were studied.  &lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Comparison of the conservative and the stochastic approaches&lt;/strong&gt; for
+obstacle avoidance problems: We discuss how the stochastic approach prevails in
+complex situations where more information is available.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;a name="application"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id="can-you-give-me-an-example-of-the-application-of-this-method"&gt;Can you give me an example of the application of this method?&lt;/h1&gt;
+&lt;p&gt;We now consider the specific problem of robot navigation in an environment with
+rigid body obstacles moving in straight lines with stochastic velocities. We
+would like to drive the robot R to the desired goal in finite time while
+ensuring a probabilistic guarantee of safety. We presume that robot and
+obstacle positions are known at each instant.&lt;/p&gt;
+&lt;h2 id="relating-this-problem-to-the-high-level-description"&gt;Relating this problem to the high-level description&lt;/h2&gt;
+&lt;p&gt;The robot here can be thought of as the self-driving car, and the rigid body
+obstacles as the pedestrians with their associated 'safety bubbles'.&lt;/p&gt;
+&lt;h2 id="what-is-the-information-provided-for-this-problem"&gt;What is the information provided for this problem?&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;the initial position of the robots R and the obstacles,&lt;/li&gt;
+&lt;li&gt;the goal position for the robot R,&lt;/li&gt;
+&lt;li&gt;the desired guarantee of probabilistic safety,&lt;/li&gt;
+&lt;li&gt;the deterministic LTI dynamics of the robot R,&lt;/li&gt;
+&lt;li&gt;the disturbed (stochastic) LTI dynamics of the obstacles, and&lt;/li&gt;
+&lt;li&gt;the probability mass function of the stochastic velocities of the obstacles.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="what-should-be-computed-for-this-problem"&gt;What should be computed for this problem?&lt;/h2&gt;
+&lt;p&gt;A receding horizon controller input sequence that drives robot R from the
+given initial position to the goal while achieving the desired probability of
+safety.&lt;/p&gt;
+&lt;h2 id="results"&gt;Results&lt;/h2&gt;
+&lt;p&gt;We consider the control strategies given by both the approaches for robot R.
+The &lt;strong&gt;red robot&lt;/strong&gt; seeks a probabilistic guarantee of safety, and the &lt;strong&gt;pink
+robot&lt;/strong&gt; seeks an absolute guarantee of safety.  The red and pink robots are
+assumed to have point mass dynamics discretized in time with bounded control
+authority forcing it to always move forward in the $y$-direction. The obstacles
+are constrained to move in straight lines. 
+&lt;div class="container"&gt;
+&lt;div class="col-md-4"&gt;&lt;/div&gt;
+&lt;div class="col-md-4" style="padding-left: 0px;  padding-right: 0px;"&gt;
+&lt;img alt="A GIF should have appeared here." class="img-responsive" src="images/ACC2017.gif"&gt;
+&lt;/img&gt;&lt;/div&gt;
+&lt;/div&gt;
+Snapshots&lt;sup id="fnref-GIF"&gt;&lt;a class="footnote-ref" href="#fn-GIF"&gt;7&lt;/a&gt;&lt;/sup&gt; of the environment with the robot R controlled using different
+approaches: &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The goal position for the robots is denoted by green circle,&lt;/li&gt;
+&lt;li&gt;The red robot's trajectory is indicated by the blue line, &lt;/li&gt;
+&lt;li&gt;The pink robot's trajectory is indicated by the cyan line, and&lt;/li&gt;
+&lt;li&gt;The blue boxes indicate the obstacles.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;While the simulation (shown above) is just a single trial, the red robot can
+also collide with the obstacles in some trials.  However, in an experiment
+involving a fixed number of trials, the average number of trials ending in a
+collision is guaranteed to be less than a given threshold as desired.&lt;/p&gt;
+&lt;h1 id="where-do-i-get-more-details_1"&gt;Where do I get more details?&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Paper is uploaded on &lt;a href="https://arxiv.org/abs/1610.03472v1"&gt;Arxiv&lt;/a&gt;.  More details about the paper can be found at my &lt;a href="http://unm.edu/~abyvinod"&gt;webpage&lt;/a&gt;.
+&lt;!--* MATLAB code for generating these figures can be downloaded from
+&lt;a href="http://unm.edu/~abyvinod/files/HSCC2017.zip"&gt;here&lt;/a&gt;.--&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="footnote"&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li id="fn-selfdriving"&gt;
+&lt;p&gt;&lt;a href="http://spectrum.ieee.org/transportation/advanced-cars/2017-the-year-of-selfdriving-cars-and-trucks"&gt;http://spectrum.ieee.org/transportation/advanced-cars/2017-the-year-of-selfdriving-cars-and-trucks&lt;/a&gt;&amp;nbsp;&lt;a class="footnote-backref" href="#fnref-selfdriving" title="Jump back to footnote 1 in the text"&gt;↩&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn-selfship"&gt;
+&lt;p&gt;&lt;a href="http://spectrum.ieee.org/transportation/marine/forget-autonomous-cars-autonomous-ships-are-almost-here"&gt;http://spectrum.ieee.org/transportation/marine/forget-autonomous-cars-autonomous-ships-are-almost-here&lt;/a&gt;&amp;nbsp;&lt;a class="footnote-backref" href="#fnref-selfship" title="Jump back to footnote 2 in the text"&gt;↩&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn-Chris"&gt;
+&lt;p&gt;Chris Urmson, the former CTO of Google's self-driving car project
+(now Waymo), talks about this in a TED talk
+&lt;a href="https://www.youtube.com/watch?v=tiwVMrTLUWg&amp;amp;feature=youtu.be&amp;amp;t=7m11s"&gt;https://www.youtube.com/watch?v=tiwVMrTLUWg&amp;amp;feature=youtu.be&amp;amp;t=7m11s&lt;/a&gt;&amp;nbsp;&lt;a class="footnote-backref" href="#fnref-Chris" title="Jump back to footnote 3 in the text"&gt;↩&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn-systems"&gt;
+&lt;p&gt;This class of systems includes affine noise perturbed LTI
+discrete-time systems with known state feedback. The work is also applicable to
+affine noise perturbed LTI discrete-time systems with open loop controllers
+after some minor modifications.&amp;nbsp;&lt;a class="footnote-backref" href="#fnref-systems" title="Jump back to footnote 4 in the text"&gt;↩&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn-dist"&gt;
+&lt;p&gt;The disturbance is assumed to be an IID random process, but we can
+relax the identical assumption if needed.&amp;nbsp;&lt;a class="footnote-backref" href="#fnref-dist" title="Jump back to footnote 5 in the text"&gt;↩&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn-IP"&gt;
+&lt;p&gt;&lt;a href="http://ieeexplore.ieee.org/abstract/document/1384742/"&gt;Tom Schouwenaars, Jonathan How, and Eric Feron. "Receding horizon path planning with implicit safety guarantees." In &lt;em&gt;American Control Conference&lt;/em&gt;, vol. 6, pp. 5576-5581. IEEE, 2004.&lt;/a&gt;.&amp;nbsp;&lt;a class="footnote-backref" href="#fnref-IP" title="Jump back to footnote 6 in the text"&gt;↩&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn-GIF"&gt;
+&lt;p&gt;The GIFs were created using &lt;a href="http://gifcreator.me/"&gt;http://gifcreator.me/&lt;/a&gt; and &lt;a href="http://resizeimage.net/"&gt;http://resizeimage.net/&lt;/a&gt;.&amp;nbsp;&lt;a class="footnote-backref" href="#fnref-GIF" title="Jump back to footnote 7 in the text"&gt;↩&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/hr&gt;&lt;/div&gt;</content><category term="My Research"></category><category term="Stochastic Reachability"></category><category term="Obstacle Avoidance"></category><category term="Model Predictive Control"></category></entry><entry><title>Commenting on this blog</title><link href="/comments_in_blog.html" rel="alternate"></link><published>2017-02-05T00:00:00-07:00</published><updated>2017-02-05T00:00:00-07:00</updated><author><name>Abraham Vinod</name></author><id>tag:None,2017-02-05:/comments_in_blog.html</id><summary type="html">&lt;p&gt;I have chosen not to implement a commenting system. You can instead email me your comments. I also describe how to print a custom message based on article title.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Static website generators are good in the sense that they are quick and cheap
 to develop&lt;sup id="fnref-wiki"&gt;&lt;a class="footnote-ref" href="#fn-wiki"&gt;1&lt;/a&gt;&lt;/sup&gt; and robust when it comes to trolls, spambots, and hackers&lt;sup id="fnref-hacking"&gt;&lt;a class="footnote-ref" href="#fn-hacking"&gt;2&lt;/a&gt;&lt;/sup&gt;
 (in general). However, my blog lacked one feature --- commenting.
 Since the purpose of this blog is to disseminate my research work and other
@@ -75,7 +232,9 @@ to &lt;code&gt;zip&lt;/code&gt; all the required files and then upload the zip. 
 This blog post will summarize my paper &lt;strong&gt;Forward Stochastic Reachability
 Analysis for Uncontrolled Linear Systems using Fourier Transforms&lt;/strong&gt; published at
 Hybrid Systems: Computation and Control 2017. The conference will happen on
-April 18-20th, 2017 at Pittsburg, PA, USA.&lt;/p&gt;
+April 18-20th, 2017 at Pittsburg, PA, USA. This work was done in collaboration
+with &lt;a href="http://www.cs.unm.edu/amprg/People/baisravan/"&gt;Dr. Baisravan HomChaudhuri&lt;/a&gt;
+and &lt;a href="http://www.unm.edu/~oishi"&gt;Prof. Meeko Oishi&lt;/a&gt;.&lt;/p&gt;
 &lt;h1 id="what-is-this-paper-about"&gt;What is this paper about?&lt;/h1&gt;
 &lt;h2 id="high-level-description"&gt;High-level description&lt;/h2&gt;
 &lt;p&gt;Imagine we have a boat facing a crisis drifting in the ocean. Let us say we have a model
@@ -136,7 +295,7 @@ problems. We also anticipate the application of this method in obstacle avoidanc
 aircraft trajectory planning, and other venues.
 &lt;a name="application"&gt;&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
-&lt;h1 id="can-you-give-me-an-example-for-application-of-this-method"&gt;Can you give me an example for application of this method?&lt;/h1&gt;
+&lt;h1 id="can-you-give-me-an-example-of-the-application-of-this-method"&gt;Can you give me an example of the application of this method?&lt;/h1&gt;
 &lt;p&gt;In this paper, we analyze the problem of capture of a non-adversarial target
 (robot G) with stochastic dynamics using a robot (robot R) with deterministic
 dynamics. &lt;/p&gt;
@@ -196,7 +355,7 @@ capture corresponding to $x_R^\ast[\tau]$.&lt;/li&gt;
 &lt;h2 id="case-2-robot-g-has-double-integrator-dynamics-and-exponential-perturbed-dynamics"&gt;Case 2: Robot G has double integrator dynamics and exponential perturbed dynamics&lt;/h2&gt;
 &lt;p&gt;Robot G has double integrator dynamics discretized in time with 'inputs' as a
 discrete-time bivariate exponential random process. For exponential random
-vectors, the mode and the mean do not coincide to begin with, making this a
+vectors, the mode and the mean do not coincide, to begin with, making this a
 nontrivial problem. The optimization problem provides the optimal capture
 position while satisfying the constraints.&lt;/p&gt;
 &lt;div class="container"&gt;
