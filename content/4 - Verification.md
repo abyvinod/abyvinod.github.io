@@ -4,6 +4,8 @@ tags: Verification
 category: Control theory 
 author: Abraham Vinod
 summary: Discussing the two viewpoints in verification --- the computer science viewpoint and the controls viewpoint
+URL: verificationWhat.html
+save_as: verificationWhat.html
 
 # Verification 
 

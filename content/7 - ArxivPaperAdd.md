@@ -4,6 +4,8 @@ tags: Arxiv
 category: How To
 author: Abraham Vinod
 summary: Some tips on adding TeX generated papers to Arxiv
+URL: arxivAdd.html
+save_as: arxivAdd.html
 
 Recently, I published one of my [papers](https://arxiv.org/abs/1610.04550) to
 Arxiv. You can find an informal discussion on this paper [here]({filename}8 -

@@ -4,6 +4,8 @@ tags: Pelican
 category: Tips
 author: Abraham Vinod
 summary: Notes on the margin for using Pelican.
+URL: syntax.html
+save_as: syntax.html
 
 - Markdown syntax can be found at 
   [SourceForge](https://sourceforge.net/p/pelican-edt/wiki/markdown_syntax/#md_ex_lists).

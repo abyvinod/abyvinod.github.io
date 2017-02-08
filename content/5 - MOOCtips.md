@@ -4,6 +4,8 @@ tags: MOOC
 category: Tips
 author: Abraham Vinod
 summary: Some tips I found useful for MOOC-based learning
+URL: MOOCtips.html
+save_as: MOOCtips.html
 
 I have used the internet to learn several new tools and concepts --- [convex
 optimization](http://online.stanford.edu/course/convex-optimization-winter-2014),

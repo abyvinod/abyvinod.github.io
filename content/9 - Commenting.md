@@ -4,6 +4,8 @@ tags: Pelican
 category: How To
 author: Abraham Vinod
 summary: I have chosen not to implement a commenting system. You can instead email me your comments. I also describe how to print a custom message based on article title.
+URL: comments_in_blog.html
+save_as: comments_in_blog.html
 
 Static website generators are good in the sense that they are quick and cheap
 to develop[^wiki] and robust when it comes to trolls, spambots, and hackers[^hacking]

@@ -4,6 +4,8 @@ tags: Verification, Model Predictive Control
 category: Control Theory
 author: Abraham Vinod
 summary: Surprising overlap between two subfields of control theory
+URL: MPCandVerification.html
+save_as: MPCandVerification.html
 
 One of my major research projects is on verification of dynamical systems.
 Specifically, I am interested in characterizing the set of initial conditions

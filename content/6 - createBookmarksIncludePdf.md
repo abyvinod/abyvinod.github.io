@@ -4,6 +4,8 @@ tags: Latex, Python
 category: How To
 author: Abraham Vinod
 summary: Python code to create bookmarks for latex
+URL: bookmarkPDFinclude.html
+save_as: bookmarkPDFinclude.html
 
 This is the README file from my [Bitbucket
 repository](https://bitbucket.org/abyvinod/createbookmarkincludepdf) for the

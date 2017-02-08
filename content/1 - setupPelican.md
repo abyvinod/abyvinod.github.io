@@ -4,6 +4,8 @@ tags: Pelican, Python
 category: How-To
 author: Abraham Vinod
 summary: All the tweaks I did to get my Pelican blog running.
+URL: setMeup.html
+save_as: setMeup.html
 
 # Prelude
 

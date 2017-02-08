@@ -12,8 +12,8 @@
       </div>
     </br>
       {% endif %}
-      <hr>
-      <div class="row">
+      <div class="entry-content">
+         <hr>
          {% if articles %}
             {% set copy_date = articles[0].date.strftime('%Y') %}
          {% else %}
@@ -23,7 +23,7 @@
             &middot; Powered by <a
                 href="http://docs.getpelican.com/">Pelican</a> and other  <a
             href="{{ SITEURL
-        }}/blogging-using-pelican-conda-github-pages.html">goodies</a>.
+        }}/setMeup.html">goodies</a>.
          </div>
          <div class="col-xs-2"><p class="pull-right"><i class="fa fa-arrow-up"></i> <a href="#">Back to top</a></p></div>
       </div>

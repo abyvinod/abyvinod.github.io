@@ -18,7 +18,7 @@ TIMEZONE = 'America/Denver'
 DEFAULT_LANG = 'English'
 DELETE_OUTPUT_DIRECTORY = True
 
-LOAD_CONTENT_CACHE = True # Set this to False if you want to regenerate the files
+LOAD_CONTENT_CACHE = False # Set this to False if you want to regenerate the files
 USE_FOLDER_AS_CATEGORY = True
 DEFAULT_DATE_FORMAT = '%a %d %B %Y'
 DEFAULT_DATE = 'fs'
@@ -111,7 +111,7 @@ HIDE_SIDEBAR=True
 DISPLAY_TAGS_ON_SIDEBAR = False
 DISPLAY_RECENT_POSTS_ON_SIDEBAR = False
 # Below commands will generate SITEURL/tags.html which will have the list of tags
-TAG_SAVE_AS = 'tags/{slug}.html'
+TAG_SAVE_AS = 'tag/{slug}.html'
 TAGS_SAVE_AS = 'tags.html'
 CATEGORIES_SAVE_AS = 'categories.html'
 DIRECT_TEMPLATES=['index','tags','categories','archives']
