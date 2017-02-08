@@ -2,7 +2,7 @@
 <html lang="english"
 >
 <head>
-    <title>MOOC - Notes on the margin</title>
+    <title>Adding papers on Arxiv - Notes on the margin</title>
     <!-- Using the latest rendering mode for IE -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
@@ -11,16 +11,12 @@
 
     <link href="/images/favicon.ico" rel="icon">
 
+<link rel="canonical" href="/arxivAdd.html">
 
-    <meta name="author" content="Abraham" />
-    <meta name="keywords" content="MOOC" />
+        <meta name="author" content="Abraham Vinod" />
+        <meta name="keywords" content="Arxiv" />
+        <meta name="description" content="Some tips on adding TeX generated papers to Arxiv" />
 
-    <!-- Open Graph tags -->
-        <meta property="og:site_name" content="Notes on the margin" />
-        <meta property="og:type" content="website"/>
-        <meta property="og:title" content="Notes on the margin"/>
-        <meta property="og:url" content=""/>
-        <meta property="og:description" content="Notes on the margin"/>
 
 
     <!-- Bootstrap -->
@@ -62,7 +58,7 @@
                                 class="fa fa-user"></i> About Me</a>
                     </li>
                     <li>
-                        <a href="/tags/my-research.html"><i
+                        <a href="/tag/my-research.html"><i
                                 class="fa fa-flask fa-lg"></i> My Research</a>
                     </li>
                     <!-- Addition of All tags into the header-->
@@ -80,7 +76,7 @@
                     <!--                        <li >
                             <a href="/category/control-theory.html">Control theory</a>
                         </li>
-                        <li >
+                        <li class="active">
                             <a href="/category/how-to.html">How to</a>
                         </li>
                         <li >
@@ -100,40 +96,85 @@
     <div class="row">
         <div class="col-lg-12">
 
-            <article>
-                <h2><a href="/tips-for-learning-online.html">Tips for learning online</a></h2>
-                    <div class="well well-sm">
+    <section id="content">
+        <article>
+            <header class="page-header">
+                <h1>
+                    <a href="/arxivAdd.html"
+                       rel="bookmark"
+                       title="Permalink to Adding papers on Arxiv">
+                        Adding papers on Arxiv
+                    </a>
+                </h1>
+            </header>
+            <div class="entry-content">
+                <div class="panel">
+                    <div class="panel-body">
 <footer class="post-info">
     <span class="label label-default">Date</span>
     <span class="published">
-        <i class="fa fa-calendar"></i><time datetime="2017-01-15T00:00:00-07:00"> Sun 15 January 2017</time>
+        <i class="fa fa-calendar"></i><time datetime="2017-02-03T00:00:00-07:00"> Fri 03 February 2017</time>
     </span>
 
         <span class="label label-default">Category</span>
-        <a href="/category/tips.html">Tips</a>
+        <a href="/category/how-to.html">How To</a>
 
 
 <span class="label label-default">Tags</span>
-	<a href="/tag/mooc.html">MOOC</a>
+	<a href="/tag/arxiv.html">Arxiv</a>
     
 </footer><!-- /.post-info -->                    </div>
-                <div class="summary"><p>Some tips I found useful for MOOC-based learning</p>
-                    <a class="btn btn-default btn-xs" href="/tips-for-learning-online.html">more ...</a>
                 </div>
-            </article>
-            <hr/>
+                <p>Recently, I published one of my <a href="https://arxiv.org/abs/1610.04550">papers</a> to
+Arxiv. You can find an informal discussion on this paper <a href="{filename}8 -
+hscc2017.md">here</a> .</p>
+<p>There were a couple of things which I found relevant and omitted in
+the Arxiv's wizard. It is there on their FAQs.</p>
+<ol>
+<li>Arxiv does not accept <code>.bib</code> files. Instead, we have to upload the <code>.bbl</code>
+file. <sup id="fnref-bbl"><a class="footnote-ref" href="#fn-bbl">1</a></sup></li>
+<li>Arxiv does not accept <code>.pdf</code> files when generated using TeX. We have to
+upload the tex files, necessary figures, style files, and the <code>.bbl</code> file.
+<sup id="fnref-thingsneeded"><a class="footnote-ref" href="#fn-thingsneeded">2</a></sup></li>
+<li>Adding multiple items on Arxiv is a pain. The best way to accomplish this is
+to <code>zip</code> all the required files and then upload the zip. Arxiv can process
+<code>zip</code> and <code>tar.gz</code>.<sup id="fnref-zipping"><a class="footnote-ref" href="#fn-zipping">3</a></sup></li>
+</ol>
+<div class="footnote">
+<hr>
+<ol>
+<li id="fn-bbl">
+<p><a href="https://arxiv.org/help/submit_tex#bibtex">https://arxiv.org/help/submit_tex#bibtex</a>&nbsp;<a class="footnote-backref" href="#fnref-bbl" title="Jump back to footnote 1 in the text">↩</a></p>
+</li>
+<li id="fn-thingsneeded">
+<p><a href="https://arxiv.org/help/submit_tex#wegotem">https://arxiv.org/help/submit_tex#wegotem</a>&nbsp;<a class="footnote-backref" href="#fnref-thingsneeded" title="Jump back to footnote 2 in the text">↩</a></p>
+</li>
+<li id="fn-zipping">
+<p><a href="https://arxiv.org/help/tar">https://arxiv.org/help/tar</a>&nbsp;<a class="footnote-backref" href="#fnref-zipping" title="Jump back to footnote 3 in the text">↩</a></p>
+</li>
+</ol>
+</hr></div>
+            </div>
+            <!-- /.entry-content -->
+        </article>
+    </section>
 
         </div>
     </div>
 </div>
 <footer>
-      <!-- Use tags/mooc.html to know the title of the page.-->
-      <hr>
-      <div class="row">
+      <div class="container entry-content">
+      <p>Please send me your questions/comments via <a
+          href="mailto:aby.vinod@gmail.com">email</a> ---
+      <code>aby[dot]vinod[at]gmail[dot]com</code>.</p>
+      </div>
+    </br>
+      <div class="entry-content">
+         <hr>
          <div class="col-xs-10">&copy; 2017 Abraham
             &middot; Powered by <a
                 href="http://docs.getpelican.com/">Pelican</a> and other  <a
-            href="/blogging-using-pelican-conda-github-pages.html">goodies</a>.
+            href="/setMeup.html">goodies</a>.
          </div>
          <div class="col-xs-2"><p class="pull-right"><i class="fa fa-arrow-up"></i> <a href="#">Back to top</a></p></div>
       </div>

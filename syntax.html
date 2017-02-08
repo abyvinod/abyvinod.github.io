@@ -2,7 +2,7 @@
 <html lang="english"
 >
 <head>
-    <title>Model Predictive Control - Notes on the margin</title>
+    <title>General tips regarding Pelican - Notes on the margin</title>
     <!-- Using the latest rendering mode for IE -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
@@ -11,16 +11,12 @@
 
     <link href="/images/favicon.ico" rel="icon">
 
+<link rel="canonical" href="/syntax.html">
 
-    <meta name="author" content="Abraham" />
-    <meta name="keywords" content="Model Predictive Control" />
+        <meta name="author" content="Abraham Vinod" />
+        <meta name="keywords" content="Pelican" />
+        <meta name="description" content="Notes on the margin for using Pelican." />
 
-    <!-- Open Graph tags -->
-        <meta property="og:site_name" content="Notes on the margin" />
-        <meta property="og:type" content="website"/>
-        <meta property="og:title" content="Notes on the margin"/>
-        <meta property="og:url" content=""/>
-        <meta property="og:description" content="Notes on the margin"/>
 
 
     <!-- Bootstrap -->
@@ -62,7 +58,7 @@
                                 class="fa fa-user"></i> About Me</a>
                     </li>
                     <li>
-                        <a href="/tags/my-research.html"><i
+                        <a href="/tag/my-research.html"><i
                                 class="fa fa-flask fa-lg"></i> My Research</a>
                     </li>
                     <!-- Addition of All tags into the header-->
@@ -83,7 +79,7 @@
                         <li >
                             <a href="/category/how-to.html">How to</a>
                         </li>
-                        <li >
+                        <li class="active">
                             <a href="/category/tips.html">Tips</a>
                         </li>
 -->
@@ -100,42 +96,92 @@
     <div class="row">
         <div class="col-lg-12">
 
-            <article>
-                <h2><a href="/similarities-between-model-predictive-control-and-verification-theory.html">Similarities between model predictive control and verification theory</a></h2>
-                    <div class="well well-sm">
+    <section id="content">
+        <article>
+            <header class="page-header">
+                <h1>
+                    <a href="/syntax.html"
+                       rel="bookmark"
+                       title="Permalink to General tips regarding Pelican">
+                        General tips regarding Pelican
+                    </a>
+                </h1>
+            </header>
+            <div class="entry-content">
+                <div class="panel">
+                    <div class="panel-body">
 <footer class="post-info">
     <span class="label label-default">Date</span>
     <span class="published">
-        <i class="fa fa-calendar"></i><time datetime="2017-01-09T00:00:00-07:00"> Mon 09 January 2017</time>
+        <i class="fa fa-calendar"></i><time datetime="2016-12-23T00:00:00-07:00"> Fri 23 December 2016</time>
     </span>
 
         <span class="label label-default">Category</span>
-        <a href="/category/control-theory.html">Control Theory</a>
+        <a href="/category/tips.html">Tips</a>
 
 
 <span class="label label-default">Tags</span>
-	<a href="/tag/verification.html">Verification</a>
-        /
-	<a href="/tag/model-predictive-control.html">Model Predictive Control</a>
+	<a href="/tag/pelican.html">Pelican</a>
     
 </footer><!-- /.post-info -->                    </div>
-                <div class="summary"><p>Surprising overlap between two subfields of control theory</p>
-                    <a class="btn btn-default btn-xs" href="/similarities-between-model-predictive-control-and-verification-theory.html">more ...</a>
                 </div>
-            </article>
-            <hr/>
+                <ul>
+<li>Markdown syntax can be found at 
+  <a href="https://sourceforge.net/p/pelican-edt/wiki/markdown_syntax/#md_ex_lists">SourceForge</a>.</li>
+<li>Commenting:<ul>
+<li>Use the standard HTML comments <code>&lt;!-- COMMENT_GOES_HERE --&gt;</code>. (See this <a href="http://stackoverflow.com/a/4829998/1846549">SO answer</a>)</li>
+<li>Use <code>{# COMMENT_GOES_HERE #}</code> for commenting lines inside the template.</li>
+</ul>
+</li>
+<li>Code highlighting for a particular language can be done by writing the
+  language name after the code block command. The first block was created by
+  encapsulating the code you see in ``` instead of ~~~.</li>
+</ul>
+<div class="highlight"><pre><span></span>~~~python
+# Feed generation
+~~~
+</pre></div>
+<p>generates</p>
+<div class="highlight"><pre><span></span><span class="c1"># Feed generation</span>
+</pre></div>
+<ul>
+<li>Links:<ul>
+<li>For internal linking, use <code>[specifically]({filename}4 - Verification.md)</code>.</li>
+<li>Create HTML tags for navigation within a file as <code>&lt;a
+  name="NAME_YOUR_TAG"&gt;&lt;/a&gt;</code>, and then navigate to it via this markdown
+  code snippet <code>[GO_THERE](#NAME_YOUR_TAG)</code>.</li>
+</ul>
+</li>
+<li>Lists:<ul>
+<li>Skip a line</li>
+<li>Use <code>1.</code> for numbered</li>
+<li>Use <code>+</code> or <code>-</code> for bulleted lists.</li>
+</ul>
+</li>
+<li>Use <code>grep -rnw '/path/to/somewhere/' -e "pattern"</code> to identify any trouble
+  some components inside the template.</li>
+</ul>
+            </div>
+            <!-- /.entry-content -->
+        </article>
+    </section>
 
         </div>
     </div>
 </div>
 <footer>
-      <!-- Use tags/model-predictive-control.html to know the title of the page.-->
-      <hr>
-      <div class="row">
+      <div class="container entry-content">
+      <p>Please send me your questions/comments via <a
+          href="mailto:aby.vinod@gmail.com">email</a> ---
+      <code>aby[dot]vinod[at]gmail[dot]com</code>.</p>
+      </div>
+    </br>
+      <div class="entry-content">
+         <hr>
          <div class="col-xs-10">&copy; 2017 Abraham
             &middot; Powered by <a
                 href="http://docs.getpelican.com/">Pelican</a> and other  <a
-            href="/blogging-using-pelican-conda-github-pages.html">goodies</a>.
+            href="/setMeup.html">goodies</a>.
          </div>
          <div class="col-xs-2"><p class="pull-right"><i class="fa fa-arrow-up"></i> <a href="#">Back to top</a></p></div>
       </div>
