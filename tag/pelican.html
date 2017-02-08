@@ -2,7 +2,7 @@
 <html lang="english"
 >
 <head>
-    <title>Similarities between model predictive control and verification theory - Notes on the margin</title>
+    <title>Pelican - Notes on the margin</title>
     <!-- Using the latest rendering mode for IE -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
@@ -11,12 +11,16 @@
 
     <link href="/images/favicon.ico" rel="icon">
 
-<link rel="canonical" href="/similarities-between-model-predictive-control-and-verification-theory.html">
 
-        <meta name="author" content="Abraham Vinod" />
-        <meta name="keywords" content="Verification,Model Predictive Control" />
-        <meta name="description" content="Surprising overlap between two subfields of control theory" />
+    <meta name="author" content="Abraham" />
+    <meta name="keywords" content="Pelican" />
 
+    <!-- Open Graph tags -->
+        <meta property="og:site_name" content="Notes on the margin" />
+        <meta property="og:type" content="website"/>
+        <meta property="og:title" content="Notes on the margin"/>
+        <meta property="og:url" content=""/>
+        <meta property="og:description" content="Notes on the margin"/>
 
 
     <!-- Bootstrap -->
@@ -58,7 +62,7 @@
                                 class="fa fa-user"></i> About Me</a>
                     </li>
                     <li>
-                        <a href="/tags/my-research.html"><i
+                        <a href="/tag/my-research.html"><i
                                 class="fa fa-flask fa-lg"></i> My Research</a>
                     </li>
                     <!-- Addition of All tags into the header-->
@@ -73,7 +77,7 @@
                     <li>
                         <a href="/feeds/all.rss"><i class="fa fa-rss-square fa-lg"></i> RSS</a>
                     </li>
-                    <!--                        <li class="active">
+                    <!--                        <li >
                             <a href="/category/control-theory.html">Control theory</a>
                         </li>
                         <li >
@@ -96,80 +100,74 @@
     <div class="row">
         <div class="col-lg-12">
 
-    <section id="content">
-        <article>
-            <header class="page-header">
-                <h1>
-                    <a href="/similarities-between-model-predictive-control-and-verification-theory.html"
-                       rel="bookmark"
-                       title="Permalink to Similarities between model predictive control and verification theory">
-                        Similarities between model predictive control and verification theory
-                    </a>
-                </h1>
-            </header>
-            <div class="entry-content">
-                <div class="panel">
-                    <div class="panel-body">
+            <article>
+                <h2><a href="/comments_in_blog.html">Commenting on this blog</a></h2>
+                    <div class="well well-sm">
 <footer class="post-info">
     <span class="label label-default">Date</span>
     <span class="published">
-        <i class="fa fa-calendar"></i><time datetime="2017-01-09T00:00:00-07:00"> Mon 09 January 2017</time>
+        <i class="fa fa-calendar"></i><time datetime="2017-02-05T00:00:00-07:00"> Sun 05 February 2017</time>
     </span>
 
         <span class="label label-default">Category</span>
-        <a href="/category/control-theory.html">Control Theory</a>
+        <a href="/category/how-to.html">How To</a>
 
 
 <span class="label label-default">Tags</span>
-	<a href="/tag/verification.html">Verification</a>
-        /
-	<a href="/tag/model-predictive-control.html">Model Predictive Control</a>
+	<a href="/tag/pelican.html">Pelican</a>
     
 </footer><!-- /.post-info -->                    </div>
+                <div class="summary"><p>I have chosen not to implement a commenting system. You can instead email me your comments. I also describe how to print a custom message based on article title.</p>
+                    <a class="btn btn-default btn-xs" href="/comments_in_blog.html">more ...</a>
                 </div>
-                <p>One of my major research projects is on verification of dynamical systems.
-Specifically, I am interested in characterizing the set of initial conditions
-for a given dynamical system which can be driven such that the state reaches a
-    certain target subset of the state space while avoiding certain unsafe
-    subsets of the state space --- the reach-avoid objective. Needless to say,
-    solving this problem manifests in a lot of real-world challenges where a
-    certificate of task completion and/or safety is required.</p>
-<p>As always, I thought (wrongly) this field was insular in the sense that it is a
-unique problem worked on only by my peers.</p>
-<p>The other day, I was reading an Automatica paper<sup id="fnref-GoulartAutomatica2006"><a class="footnote-ref" href="#fn-GoulartAutomatica2006">1</a></sup>. This well-written paper in the robust MPC literature
-discusses optimal control problems on linear systems with disturbance with a
-reach-avoid like objective (Polytopic target and safe sets).
-<!--- Some interesting results (at least I was not aware of it):
-+ Two parameterizations of the control policies discussed--- Affine state-feedback parameterization (ASFP) and affine disturbance feedback parameterization (ADFP)
-+ ASFP is desired, but the resulting optimal control formulation is generally nonconvex
-+ ADFP is equivalent to ASFP and the resulting optimal control formulation is actually convex (and tractable).
-+ Guarantees of constraint satisfaction for MPC based on open loop control in a receding time horizon requires invariance conditions on the terminal set --- Assumption 1 in the paper.
---></p>
-<p>On the other hand, a similar effort was done in the verification
-side<sup id="fnref-verificationBlogPost"><a class="footnote-ref" href="#fn-verificationBlogPost">3</a></sup> which proposed a time-dependent differential game
-setup to answer the question of reach-avoid objective<sup id="fnref-MitchellTAC2005"><a class="footnote-ref" href="#fn-MitchellTAC2005">2</a></sup>.</p>
-<p>It is interesting to see totally different takes on essentially the same
-problem.</p>
-<div class="footnote">
-<hr>
-<ol>
-<li id="fn-GoulartAutomatica2006">
-<p><a href="http://www.sciencedirect.com/science/article/pii/S0005109806000021">Automatica 2006, Goulart et. al
-</a>&nbsp;<a class="footnote-backref" href="#fnref-GoulartAutomatica2006" title="Jump back to footnote 1 in the text">↩</a></p>
-</li>
-<li id="fn-MitchellTAC2005">
-<p><a href="http://ieeexplore.ieee.org/document/1463302/">Transactions on Automatic Control 2005, Mitchell et. al</a>&nbsp;<a class="footnote-backref" href="#fnref-MitchellTAC2005" title="Jump back to footnote 2 in the text">↩</a></p>
-</li>
-<li id="fn-verificationBlogPost">
-<p>My familiarity is on <a href="/what-is-verification.html">verification from control theory
-point of view</a>.&nbsp;<a class="footnote-backref" href="#fnref-verificationBlogPost" title="Jump back to footnote 3 in the text">↩</a></p>
-</li>
-</ol>
-</hr></div>
-            </div>
-            <!-- /.entry-content -->
-        </article>
-    </section>
+            </article>
+            <hr/>
+            <article>
+                <h2><a href="/setMeup.html">Blogging using Pelican + Conda + GitHub Pages</a></h2>
+                    <div class="well well-sm">
+<footer class="post-info">
+    <span class="label label-default">Date</span>
+    <span class="published">
+        <i class="fa fa-calendar"></i><time datetime="2016-12-23T03:42:00-07:00"> Fri 23 December 2016</time>
+    </span>
+
+        <span class="label label-default">Category</span>
+        <a href="/category/how-to.html">How-To</a>
+
+
+<span class="label label-default">Tags</span>
+	<a href="/tag/pelican.html">Pelican</a>
+        /
+	<a href="/tag/python.html">Python</a>
+    
+</footer><!-- /.post-info -->                    </div>
+                <div class="summary"><p>All the tweaks I did to get my Pelican blog running.</p>
+                    <a class="btn btn-default btn-xs" href="/setMeup.html">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
+                <h2><a href="/syntax.html">General tips regarding Pelican</a></h2>
+                    <div class="well well-sm">
+<footer class="post-info">
+    <span class="label label-default">Date</span>
+    <span class="published">
+        <i class="fa fa-calendar"></i><time datetime="2016-12-23T00:00:00-07:00"> Fri 23 December 2016</time>
+    </span>
+
+        <span class="label label-default">Category</span>
+        <a href="/category/tips.html">Tips</a>
+
+
+<span class="label label-default">Tags</span>
+	<a href="/tag/pelican.html">Pelican</a>
+    
+</footer><!-- /.post-info -->                    </div>
+                <div class="summary"><p>Notes on the margin for using Pelican.</p>
+                    <a class="btn btn-default btn-xs" href="/syntax.html">more ...</a>
+                </div>
+            </article>
+            <hr/>
 
         </div>
     </div>
@@ -181,12 +179,12 @@ point of view</a>.&nbsp;<a class="footnote-backref" href="#fnref-verificationBlo
       <code>aby[dot]vinod[at]gmail[dot]com</code>.</p>
       </div>
     </br>
-      <hr>
-      <div class="row">
+      <div class="entry-content">
+         <hr>
          <div class="col-xs-10">&copy; 2017 Abraham
             &middot; Powered by <a
                 href="http://docs.getpelican.com/">Pelican</a> and other  <a
-            href="/blogging-using-pelican-conda-github-pages.html">goodies</a>.
+            href="/setMeup.html">goodies</a>.
          </div>
          <div class="col-xs-2"><p class="pull-right"><i class="fa fa-arrow-up"></i> <a href="#">Back to top</a></p></div>
       </div>
