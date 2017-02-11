@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="english"
+>
+<head>
+    <title>Git for research work - Notes on the margin</title>
+    <!-- Using the latest rendering mode for IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <link href="/images/favicon.ico" rel="icon">
+
+<link rel="canonical" href="/gitCheatSheet.html">
+
+        <meta name="author" content="Abraham Vinod" />
+        <meta name="keywords" content="Git" />
+        <meta name="description" content="List of useful features (and the corresponding commands in git)" />
+
+
+
+    <!-- Bootstrap -->
+        <link rel="stylesheet" href="/theme/css/bootstrap.cosmo.min.css" type="text/css"/>
+    <link href="/theme/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/theme/css/academicons.min.css" rel="stylesheet" />
+    <link href="/theme/css/pygments/monokai.css" rel="stylesheet">
+    <link rel="stylesheet" href="/theme/css/style.css" type="text/css"/>
+
+        <link href="/feeds/all.rss" type="application/rss+xml" rel="alternate"
+              title="Notes on the margin RSS Feed"/>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+<script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML">
+</script>
+</head>
+<body>
+
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="/" class="navbar-brand">
+<img src="/images/favicon_white.ico" width="20"/> Notes on the margin            </a>
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+                    <!-- Addition of My research tag into the header-->
+                    <li>
+                        <a href="/pages/about-me.html"><i
+                                class="fa fa-user"></i> About Me</a>
+                    </li>
+                    <li>
+                        <a href="/tag/my-research.html"><i
+                                class="fa fa-flask fa-lg"></i> My Research</a>
+                    </li>
+                    <!-- Addition of All tags into the header-->
+                    <li>
+                        <a href="/categories.html"><i
+                                class="fa fa-bookmark fa-lg"></i> Categories</a>
+                    </li>
+                    <li>
+                        <a href="/tags.html"><i class="fa fa-tags
+                                fa-lg"></i> Tags</a>
+                    </li>
+                    <li>
+                        <a href="/feeds/all.rss"><i class="fa fa-rss-square fa-lg"></i> RSS</a>
+                    </li>
+                    <!--                        <li >
+                            <a href="/category/control-theory.html">Control theory</a>
+                        </li>
+                        <li class="active">
+                            <a href="/category/how-to.html">How to</a>
+                        </li>
+                        <li >
+                            <a href="/category/tips.html">Tips</a>
+                        </li>
+-->
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="/archives.html"><i class="fa fa-th-list"></i><span class="icon-label">Archives</span></a></li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+</div> <!-- /.navbar -->
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+
+    <section id="content">
+        <article>
+            <header class="page-header">
+                <h1>
+                    <a href="/gitCheatSheet.html"
+                       rel="bookmark"
+                       title="Permalink to Git for research work">
+                        Git for research work
+                    </a>
+                </h1>
+            </header>
+            <div class="entry-content">
+                <div class="panel">
+                    <div class="panel-body">
+<footer class="post-info">
+    <span class="label label-default">Date</span>
+    <span class="published">
+        <i class="fa fa-calendar"></i><time datetime="2017-02-11T00:00:00-07:00"> Sat 11 February 2017</time>
+    </span>
+
+        <span class="label label-default">Category</span>
+        <a href="/category/how-to.html">How To</a>
+
+
+<span class="label label-default">Tags</span>
+	<a href="/tag/git.html">Git</a>
+    
+</footer><!-- /.post-info -->                    </div>
+                </div>
+                    <div style="border-style: solid;background:lightgrey">
+                        <h3 style="text-align:center"> Table of contents</h3>
+                            <nav class="toc">
+                            <div id="toc"><ul><li><a class="toc-href" href="#" title="Git for research work">Git for research work</a><ul><li><a class="toc-href" href="#what-is-git" title="What is Git?">What is Git?</a><ul><li><a class="toc-href" href="#how-do-i-use-it" title="How do I use it?">How do I use it?</a></li><li><a class="toc-href" href="#incorporating-git-into-your-workflow" title="Incorporating git into your workflow">Incorporating git into your workflow</a></li></ul></li><li><a class="toc-href" href="#answering-the-help-questions_1" title="Answering the help questions">Answering the help questions</a><ul><li><a class="toc-href" href="#keeping-track-of-files-across-computers" title="Keeping track of files across computers">Keeping track of files across computers</a></li><li><a class="toc-href" href="#using-git-with-overleaf" title="Using git with Overleaf">Using git with Overleaf</a><ul><li><a class="toc-href" href="#using-submodules" title="Using submodules">Using submodules</a><ul><li><a class="toc-href" href="#adding-projects" title="Adding projects">Adding projects</a></li><li><a class="toc-href" href="#fetching-submodules-in-other-local-repositories" title="Fetching submodules in other local repositories">Fetching submodules in other local repositories</a></li><li><a class="toc-href" href="#moving-the-git-submodule-around" title="Moving the git submodule around">Moving the git submodule around</a></li><li><a class="toc-href" href="#deleting-a-git-submodule" title="Deleting a git submodule">Deleting a git submodule</a></li></ul></li></ul></li><li><a class="toc-href" href="#using-git-to-merge-codes_2" title="Using git to merge codes">Using git to merge codes</a></li></ul></li></ul></li></ul></div>
+                            </nav>
+                    </div>
+                <p>While diligently doing your research, have you ever felt</p>
+<ul>
+<li>Oh, shoot! I changed the code in my home computer but forgot to email myself a copy so that I run it out in my lab. Help?!</li>
+<li>Oh, shoot! I edited away my code from a point where <em>something</em> was working to a point where <em>nothing</em> is working. Help?!</li>
+<li>Oh, shoot! I was editing a file on <a href="http://www.overleaf.com">Overleaf</a>, and something went wrong. Now, I want to go back, but I don't have a premium account. Help?!</li>
+<li>Oh, shoot! My friend added a new feature to a legacy code, and I added a couple of new features myself, but now we want to combine our forces! I don't want to manually merge the two codes by going over them line by line. Help?!</li>
+</ul>
+<p><a href="https://git-scm.com">Git</a> can solve all these problems for you!!!  The aim of this blog post is <strong>not</strong> to describe how to use git. While I dedicate first three sections on describing the what and how of git, I will leave it to you learn more about git. One of the best online tutorial posts on git which is easy on the eyes is <a href="http://rogerdudler.github.io/git-guide/">http://rogerdudler.github.io/git-guide/</a>.</p>
+<h1 id="what-is-git">What is Git?</h1>
+<p>Quoting from <a href="https://en.wikipedia.org/wiki/Git">Wikipedia</a>, git is a version control system (VCS) for tracking changes in computer files and coordinating work on those files among multiple people. It is primarily used for software development, but it can be used to keep track of changes in any files. As a distributed revision control system it is aimed at speed, data integrity, and support for distributed, non-linear workflows.</p>
+<h2 id="how-do-i-use-it">How do I use it?</h2>
+<p>I will describe how to use it if you are using Windows<sup id="fnref-UnixGit"><a class="footnote-ref" href="#fn-UnixGit">1</a></sup>. You can grab a copy of Git (bash terminal and the software) from <a href="https://git-scm.com/downloads">https://git-scm.com/downloads</a>.</p>
+<p>You will also need an account on <a href="http://www.github.com">http://www.github.com</a> or <a href="http://www.bitbucket.org">http://www.bitbucket.org</a>. These services allow you to configure a remote git repository that serves as a common meeting place for your code distributed across multiple computers.  I prefer <a href="http://www.bitbucket.org/abyvinod">BitBucket</a> since they give unlimited private repositories (you don't want your research code out in public, do you?). <a href="http://www.github.com/abyvinod">Github</a>, on the other hand, provides unlimited public repositories and require a subscription to avail private repositories. Note however that industry prefers Github because it has traditionally been used for open-source software. This blog has been hosted using <a href="https://pages.github.com/">Github</a>.</p>
+<h2 id="incorporating-git-into-your-workflow">Incorporating git into your workflow</h2>
+<p>Learning git isn't very hard. There are just a few commands to do some useful tasks, and once you get the hang of it, it will look intuitive. Here are some cheatsheets available online</p>
+<ul>
+<li><a href="https://www.git-tower.com/blog/git-cheat-sheet/">https://www.git-tower.com/blog/git-cheat-sheet/</a></li>
+<li><a href="http://rogerdudler.github.io/git-guide/files/git_cheat_sheet.pdf">http://rogerdudler.github.io/git-guide/files/git_cheat_sheet.pdf</a></li>
+</ul>
+<p>As I mentioned before, do check out <a href="http://rogerdudler.github.io/git-guide/">http://rogerdudler.github.io/git-guide/</a>.</p>
+<h1 id="answering-the-help-questions_1">Answering the help questions</h1>
+<p>I will answer the first two questions using the next subsection. Others have their own subsections.</p>
+<h2 id="keeping-track-of-files-across-computers">Keeping track of files across computers</h2>
+<p>One of the popular solutions to the first problem is to use Dropbox. It is not a bad solution, but I hate the '.conflicted' reports that keep coming, and I don't think Dropbox provides enough space for us to put all our research data and codes. </p>
+<p>Once you get the hang of git, the answer to this pretty simple. Make a git repository for your research codes. Use it to version control your code between your home computer and work computer. You can even use <code>bash</code> script to automate the "syncing" of the git repositories. Here is my <code>gu</code> script that I run every time I leave a computer to ensure that there are no uncommitted changes in my local repository.</p>
+<div class="highlight"><pre><span></span><span class="nb">echo</span> <span class="s2">" "</span>
+<span class="nb">echo</span> <span class="s2">"================================="</span>
+<span class="nb">echo</span> <span class="s2">" "</span>
+<span class="nb">echo</span> <span class="s2">"Going to Matlab"</span>
+<span class="nb">echo</span> <span class="s2">""</span>
+<span class="nb">echo</span> <span class="s2">" "</span>
+gm                      <span class="c1"># My bash alias for going to my matlab folder</span>
+git status
+git pull
+git submodule foreach git pull
+<span class="nb">echo</span> <span class="s2">" "</span>
+<span class="nb">echo</span> <span class="s2">"================================="</span>
+<span class="nb">echo</span> <span class="s2">" "</span>
+<span class="nb">echo</span> <span class="s2">"Going to vimfiles"</span>
+<span class="nb">echo</span> <span class="s2">" "</span>
+<span class="nb">echo</span> <span class="s2">" "</span>
+gv                      <span class="c1"># My bash alias for going to my vimfiles folder</span>
+git status
+git pull
+git submodule foreach git pull
+</pre></div>
+<p>Git submodules are a cool way to have git repositories inside git repositories.  More details later in this article.</p>
+<p>Of course, this has not completely solved the problem. What happens when I forget to run the gu script <strong>before</strong> leaving the computer??? Well, I use remote desktop connection to connect to my work computer/home computer. :)</p>
+<p><strong>Caution!</strong>: Don't you use git to keep track of data. Depending on your format, it might just consider it as a binary blob or as a txt file, and unecessarily[^Unless], keep track of the incremental changes to data. Use Dropbox or any other cloud storage solutions to store data.</p>
+<p>To answer the second question, use <code>gitk</code> to get a nice GUI on your changes.  <code>git diff</code> is another option. From now, you don't have to worry about accidently changing the code on a late Monday night.</p>
+<h2 id="using-git-with-overleaf">Using git with Overleaf</h2>
+<p>Quoting from <a href="https://www.overleaf.com/about">Overleaf website</a>, Overleaf is a collaborative writing and publishing system that makes the whole process of producing academic papers much quicker for both authors and publishers. It is a free service that lets you create, edit and share your scientific ideas easily online using <a href="https://en.wikipedia.org/wiki/LaTeX">LaTeX</a>, a comprehensive and powerful tool for scientific writing.</p>
+<p>You can read about how to use git to version control your papers on Overleaf from <a href="https://www.overleaf.com/blog/195-new-collaborate-online-and-offline-with-overleaf-and-git-beta">https://www.overleaf.com/blog/195-new-collaborate-online-and-offline-with-overleaf-and-git-beta</a>. In this section, I will explore another feature of git to go a step further.</p>
+<p>Based on the instructions given in the link above, you will have to create a local git repository for every Overleaf paper. An alternative is to use submodules.</p>
+<h3 id="using-submodules">Using submodules</h3>
+<p>A detailed exposition can be found in <a href="https://git-scm.com/book/en/v2/Git-Tools-Submodules">https://git-scm.com/book/en/v2/Git-Tools-Submodules</a>.  I will focus on the important commands.</p>
+<h4 id="adding-projects">Adding projects</h4>
+<p>I add new Overleaf projects into my main git repository via the following command</p>
+<div class="highlight"><pre><span></span>git submodule add https://git.overleaf.com/PROJECT_NUMBER.git PATH_TO_SAVE_THE_PROJECT
+</pre></div>
+<p>The <code>PROJECT_NUMBER</code> can be obtained from the <code>Share</code> button in the menu of your Overleaf project page. This command will clone the git repository for your Overleaf project into your git repository. In this section, I will call my main git repository <code>Parent</code> sitting on the location <code>C:/git</code> and the overleaf project <code>OverleafProject</code>. Hence, the command to clone an existing overleaf project (with project number <code>1234567890123456789</code> as a submodule becomes</p>
+<div class="highlight"><pre><span></span><span class="nb">cd</span> /c/git/Parent
+mkdir Papers
+git submodule add https://git.overleaf.com/1234567890123456789.git Papers/OverleafProject
+</pre></div>
+<p>Running <code>git status</code> shows that new files <code>.gitmodules</code> and <code>Papers/OverleafProject</code> were created. Commit and push the repository to your remote (at Bitbucket/Github) for making this submodule accessible to other computers as well. The git in <code>Parent</code> repository just keeps track of the commit currently the HEAD of <code>Papers/OverleafProject</code> points to.</p>
+<p>If you change directory into <code>Papers/OverleafProject</code> and run <code>gitk</code>, you will see that git sees this folder as an independent git repository with none of the history of the git repository <code>Parent</code> appearing here. Changing codes here needs to be pushed independently, and they will influence your Overleaf project.</p>
+<p><strong> Caution</strong>: Overleaf creates a git repository only when you attempt to clone it for the first time. Their premium account is the only way (I know of) to handle changes that happened before cloning the repository.</p>
+<p>After changing the files inside <code>Paper/OverleafProject</code>, if you change directory back to <code>Parent</code> and type <code>git status</code>, you will see the true power of git submodules. The changes in the submodules are summarized. Pushing these changes in the <code>Parent</code> repository into the remote repository (git repository at Bitbucket/Github) will trigger other local repositories (other computers) linked to this remote repository to update their copies of submodules.</p>
+<h4 id="fetching-submodules-in-other-local-repositories">Fetching submodules in other local repositories</h4>
+<p>The subsection above described how to add submodules to your project and push it to the remote repository. Let us know move to another local repository that is linked to this remote repository. To fetch all the submodule information, do the following</p>
+<div class="highlight"><pre><span></span>git submodule init                          <span class="c1"># Fetch all the submodule information linked to this git repository</span>
+git submodule update                        <span class="c1"># Clone the submodules into their respective locations</span>
+git submodule foreach git checkout master   <span class="c1"># Checkout the master branch in each of these submodules</span>
+</pre></div>
+<p>The last command is to avoid a <code>detached HEAD</code><sup id="fnref-detHEAD"><a class="footnote-ref" href="#fn-detHEAD">3</a></sup>.</p>
+<h4 id="moving-the-git-submodule-around">Moving the git submodule around</h4>
+<p>More often than not, we will reorganize our folders, and we will require the git submodules to be moved from a place to another. Let us say we want to move <code>Papers/OverleafProject</code> and put it in <code>Papers/Done/OverleafProject</code>. Achieve this<sup id="fnref-submmv"><a class="footnote-ref" href="#fn-submmv">2</a></sup> by (no matter where you are currently in the git repository <code>Parent</code>)</p>
+<div class="highlight"><pre><span></span>git mv Papers/OverleafProject Papers/Done/OverleafProject
+</pre></div>
+<p><code>Papers/OverleafProject</code> is the old name (location) of the submodule. Check in <code>Parent/.gitmodules</code> to confirm. Doing a git push will update your remote repositories and subsequent, <code>git pull</code>, <code>git submodule init</code>, and <code>git submodule update</code> at other local computers will change the location for you.</p>
+<h4 id="deleting-a-git-submodule">Deleting a git submodule</h4>
+<p>Once you are done with a research paper, you may want to burn the bridge to the Overleaf project and just retain the files. Do the following<sup id="fnref-submdelete"><a class="footnote-ref" href="#fn-submdelete">4</a></sup></p>
+<div class="highlight"><pre><span></span>mv asubmodule asubmodule_tmp    <span class="c1"># In case, something goes wrong.</span>
+git submodule deinit asubmodule <span class="c1"># Deinits the submodule (opposite of submodule init)   </span>
+<span class="c1"># There are two options for the next step</span>
+<span class="c1"># asubmodule_NAME is the name of the submodule as seen by the parent git repository. Check .gitmodules to confirm.</span>
+git rm asubmodule_NAME          <span class="c1"># Option 1: Remove the submodule from git as well as your storage unit</span>
+git rm --cached asubmodule      <span class="c1"># Option 2: Remove the submodule from git, but leave it on your storage unit</span>
+</pre></div>
+<h2 id="using-git-to-merge-codes_2">Using git to merge codes</h2>
+<p>Let us say we have two codebases --- CB_A and CB_B --- that forked from the legacy code. Let us say the legacy code CB_L has a git repository. If not, create one for it using <code>git init</code>. The key idea will be to use git branching to handle the merging.  Do the following:</p>
+<div class="highlight"><pre><span></span><span class="c1"># Let us say we are on the legacy codebase CB_L's git repository and it is on</span>
+<span class="c1"># the master branch. Create a new git branch named CB_A from the current point</span>
+<span class="c1"># of legacy code. This branch will be used to store the code base CB_A</span>
+git checkout -b CB_A    
+<span class="c1"># Overwrite this branch of legacy code with the code base CB_A (Do your stuff)</span>
+<span class="c1"># Commit your changes in this branch with git commit (Do your stuff)</span>
+<span class="c1"># Go back to the legacy code CB_L</span>
+git checkout master     
+<span class="c1"># Create a new git branch named CB_B from the current point of legacy code. This</span>
+<span class="c1"># branch will be used to store the code base CB_B</span>
+git checkout -b CB_B    
+<span class="c1"># Overwrite this branch of legacy code with the code base CB_B (Do your stuff)</span>
+<span class="c1"># Commit your changes in this branch with git commit (Do your stuff)</span>
+<span class="c1"># Go back to the legacy code CB_L</span>
+git checkout master     
+<span class="c1"># Create a new git branch named CB_merge from the current point of legacy code.</span>
+<span class="c1"># This will store the merged code.</span>
+git checkout -b CB_merge
+<span class="c1"># This will merge CB_A to the branch CB_merge. This should happen without any</span>
+<span class="c1"># hiccups. (Now, CB_A will be identical to CB_merge. Check using gitk)</span>
+git merge CB_A          
+<span class="c1"># Major step: This will merge CB_B to the branch CB_merge containing CB_A</span>
+<span class="c1"># codebase. This will potentially yield conflicts because they share the same</span>
+<span class="c1"># ancestor node but have different changes. However, git will list out the files</span>
+<span class="c1"># that have conflict and also demarcate the lines. Manually fix them, and now you have successfully merged codes with minimal effort form your side.</span>
+git merge CB_B          
+<span class="c1"># In case you want to update the legacy code with your newly merged working code</span>
+git checkout master
+git merge CB_merge          
+</pre></div>
+<div class="footnote">
+<hr>
+<ol>
+<li id="fn-UnixGit">
+<p>If you are in Unix, you can install it using your package manager.&nbsp;<a class="footnote-backref" href="#fnref-UnixGit" title="Jump back to footnote 1 in the text">↩</a></p>
+</li>
+<li id="fn-submmv">
+<p>Source --- <a href="http://stackoverflow.com/a/6310246/1846549">http://stackoverflow.com/a/6310246/1846549</a>&nbsp;<a class="footnote-backref" href="#fnref-submmv" title="Jump back to footnote 2 in the text">↩</a></p>
+</li>
+<li id="fn-detHEAD">
+<p>Read
+<a href="https://www.git-tower.com/learn/git/faq/detached-head-when-checkout-commit">https://www.git-tower.com/learn/git/faq/detached-head-when-checkout-commit</a>
+if you want to know more.&nbsp;<a class="footnote-backref" href="#fnref-detHEAD" title="Jump back to footnote 3 in the text">↩</a></p>
+</li>
+<li id="fn-submdelete">
+<p>Source ---
+<a href="http://stackoverflow.com/a/16162000/1846549">http://stackoverflow.com/a/16162000/1846549</a>&nbsp;<a class="footnote-backref" href="#fnref-submdelete" title="Jump back to footnote 4 in the text">↩</a></p>
+</li>
+</ol>
+</hr></div>
+            </div>
+            <!-- /.entry-content -->
+        </article>
+    </section>
+
+        </div>
+    </div>
+</div>
+<footer>
+      <div class="container entry-content">
+      <p>Please send me your questions/comments via <a
+          href="mailto:aby.vinod@gmail.com">email</a> ---
+      <code>aby[dot]vinod[at]gmail[dot]com</code>.</p>
+      </div>
+    </br>
+      <div class="entry-content">
+         <hr>
+         <div class="col-xs-10">&copy; 2017 Abraham
+            &middot; Powered by <a
+                href="http://docs.getpelican.com/">Pelican</a> and other  <a
+            href="/setMeup.html">goodies</a>.
+         </div>
+         <div class="col-xs-2"><p class="pull-right"><i class="fa fa-arrow-up"></i> <a href="#">Back to top</a></p></div>
+      </div>
+   </div>
+</footer>
+<script src="/theme/js/jquery.min.js"></script>
+
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="/theme/js/bootstrap.min.js"></script>
+
+<!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+<script src="/theme/js/respond.min.js"></script>
+
+</body>
+</html>
