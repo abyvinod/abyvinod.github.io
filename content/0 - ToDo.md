@@ -8,6 +8,7 @@ Status: draft
 
 # To Do
 
++ https://github.com/michael-lynch/reading-time
 + Comment message should appear above the footnote.
 + Navigation tags are covered by the header.
 + [https://developers.google.com/speed/pagespeed/insights/?url=www.unm.edu%2F~abyvinod&tab=desktop](https://developers.google.com/speed/pagespeed/insights/?url=www.unm.edu%2F~abyvinod&tab=desktop)
