@@ -32,10 +32,11 @@ Learning git isn't very hard. There are just a few commands to do some useful ta
 
 + [https://www.git-tower.com/blog/git-cheat-sheet/](https://www.git-tower.com/blog/git-cheat-sheet/)
 + [http://rogerdudler.github.io/git-guide/files/git_cheat_sheet.pdf](http://rogerdudler.github.io/git-guide/files/git_cheat_sheet.pdf)
++ [http://nyuccl.org/pages/gittutorial/](http://nyuccl.org/pages/gittutorial/)
 
 As I mentioned before, do check out [http://rogerdudler.github.io/git-guide/](http://rogerdudler.github.io/git-guide/).
 
-# Answering the help questions
+# Answering the HELPME questions
 
 I will answer the first two questions using the next subsection. Others have their own subsections.
 
