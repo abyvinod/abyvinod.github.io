@@ -17,9 +17,10 @@
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="https://www.git-tower.com/blog/git-cheat-sheet/"&gt;https://www.git-tower.com/blog/git-cheat-sheet/&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://rogerdudler.github.io/git-guide/files/git_cheat_sheet.pdf"&gt;http://rogerdudler.github.io/git-guide/files/git_cheat_sheet.pdf&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://nyuccl.org/pages/gittutorial/"&gt;http://nyuccl.org/pages/gittutorial/&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;As I mentioned before, do check out &lt;a href="http://rogerdudler.github.io/git-guide/"&gt;http://rogerdudler.github.io/git-guide/&lt;/a&gt;.&lt;/p&gt;
-&lt;h1 id="answering-the-help-questions_1"&gt;Answering the help questions&lt;/h1&gt;
+&lt;h1 id="answering-the-helpme-questions_1"&gt;Answering the HELPME questions&lt;/h1&gt;
 &lt;p&gt;I will answer the first two questions using the next subsection. Others have their own subsections.&lt;/p&gt;
 &lt;h2 id="keeping-track-of-files-across-computers"&gt;Keeping track of files across computers&lt;/h2&gt;
 &lt;p&gt;One of the popular solutions to the first problem is to use Dropbox. It is not a bad solution, but I hate the '.conflicted' reports that keep coming, and I don't think Dropbox provides enough space for us to put all our research data and codes. &lt;/p&gt;
