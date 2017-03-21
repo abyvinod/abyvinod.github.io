@@ -119,7 +119,9 @@ DIRECT_TEMPLATES=['index','tags','categories','archives']
 ############################ Plugins ######################################
 PLUGIN_PATHS = ['pelican-plugins']
 
-PLUGINS = ['pelican-toc']#,'tag_cloud'"simple_footnotes", "feed_summary"]
+MARKUP=('md','ipynb')
+PLUGINS = ['pelican-toc','pelican-ipynb.markup']#,'tag_cloud'"simple_footnotes", "feed_summary"]
+IPYNB_IGNORE_CSS=True
 TOC = {
     'TOC_HEADERS' : '^h[1-6]',  # What headers should be included in the generated toc
                                 # Expected format is a regular expression
