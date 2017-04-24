@@ -74,6 +74,9 @@
                         <a href="/feeds/all.rss"><i class="fa fa-rss-square fa-lg"></i> RSS</a>
                     </li>
                     <!--                        <li >
+                            <a href="/category/category.html">Category</a>
+                        </li>
+                        <li >
                             <a href="/category/control-theory.html">Control theory</a>
                         </li>
                         <li class="active">
@@ -157,7 +160,7 @@ Jerome's <a href="http://ntanjerome.org/blog/how-to-setup-github-user-page-with-
 <li><a href="https://github.com/conda/conda">conda</a> for easy python package handling</li>
 </ol>
 <p>The following steps create a virtual environment in conda for Pelican,</p>
-<div class="highlight"><pre><span></span>$ conda create -n blog <span class="nv">python</span><span class="o">=</span>3.5       <span class="c1"># Creates a conda environment blog with Python 3.5</span>
+<div class="highlight"><pre><span></span>$ conda create -n blog <span class="nv">python</span><span class="o">=</span><span class="m">3</span>.5       <span class="c1"># Creates a conda environment blog with Python 3.5</span>
 $ conda install markdown                <span class="c1"># Install markdown</span>
 </pre></div>
 <p>or download the following environment file <a href="stuff/blog.yml">blog</a>, and do</p>
@@ -326,7 +329,7 @@ displayed very big (See <a href="/hscc2017.html">this blog post</a>).--></p>
 <a href="http://fontawesome.io">http://fontawesome.io</a>. If you would like to add this
 icon to your social link XYZ ABC, then add to
 <code>pelican-bootstrap3\static\css\font-awesome.min.css</code> the following lines:</p>
-<div class="highlight"><pre><span></span><span class="nl">.fa-xyz-abc-square:</span><span class="nf">before</span> <span class="err">{</span> <span class="no">content</span><span class="p">:</span> <span class="err">"</span><span class="no">UNICODE_COMES_HERE</span><span class="err">";</span> <span class="err">}</span>
+<div class="highlight"><pre><span></span><span class="nl">.fa-xyz-abc-square:</span><span class="nf">before</span> <span class="err">{</span> <span class="no">content</span><span class="p">:</span> <span class="err">"</span><span class="no">UNICODE_COMES_HERE</span><span class="err">"</span><span class="c">; }</span>
 </pre></div>
 <p>I also have used <a href="http://jpswalsh.github.io/academicons/">Academicons</a> in my
 <code>About Me</code> page. Note that you will have to add the font files and the css files
