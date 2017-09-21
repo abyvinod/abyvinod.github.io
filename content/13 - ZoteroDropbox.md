@@ -4,12 +4,8 @@ tags:
 category: How To
 author: Abraham Vinod
 summary: Use Zotero, ZotFile, GoodNotes, and Dropbox to read, annotate, and curate your research papers and ideas on them.
-status: draft 
-<!-- Check the post with Grammarly | Remove the status line to see it in the
-blog | Remove the comments around the next two lines
-URL:  Short URL for the post. Make it unique
-save_as:  Short URL for the post. Make it unique
--->
+URL: readWritePaperOniPad.html
+save_as: readWritePaperOniPad.html
 
 # What I want to do? #
 
@@ -18,7 +14,7 @@ This is what I would like to do:
 1. A one-click send and retrieval of files from Zotero
 1. Annotate/highlight/draw on the PDF using GoodNotes on my iPad
 
-# Wait! What are these softwares? #
+# Wait! What are these software? #
 
 **Zotero**: Zotero [zoh-TAIR-oh] is a free, easy-to-use tool to help you collect,
 organize, cite, and share your research sources.
@@ -42,14 +38,14 @@ your iPad via Dropbox.
 ## TL;DR ##
 
 1. Install Zotero
-1. Install ZotFile as a Add-On of Zotero
+1. Install ZotFile as an Add-On of Zotero
 1. Play with the settings of ZotFile (Zotero>Tools>ZotFile preferences) 
 1. Make sure the folder ZotFile writes to is a Dropbox folder and the folder is available offline on
 iPad
-1. Right click on a Zotero item > Manage attachments > Send to tablet
+1. Right-click on a Zotero item > Manage attachments > Send to tablet
 1. Import the file on GoodNotes app in your iPad and draw/annotate/highlight to
 your heart's content
-1. Right click on a Zotero item > Manage attachments > Get from tablet
+1. Right-click on a Zotero item > Manage attachments > Get from tablet
 
 <!--
 1.  Download Dropbox to your computer (it will set itself up as a network drive). If you use another form of cloud storage, i.e. OneDrive, Google Drive, SugarSync, or Box, there should be something similar (a drive or folder) that allows you to sync files between your computer and the service.
