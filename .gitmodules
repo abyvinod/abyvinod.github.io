@@ -1,0 +1,138 @@
+[submodule "pelican-plugins/pelican-fontawesome"]
+	path = pelican-plugins/pelican-fontawesome
+	url = https://github.com/kura/pelican-fontawesome.git
+[submodule "pelican-plugins/pelican_youtube"]
+	path = pelican-plugins/pelican_youtube
+	url = https://github.com/kura/pelican_youtube.git
+[submodule "pelican-plugins/pelican_vimeo"]
+	path = pelican-plugins/pelican_vimeo
+	url = https://github.com/kura/pelican_vimeo.git
+[submodule "pelican-plugins/cjk-auto-spacing"]
+	path = pelican-plugins/cjk-auto-spacing
+	url = https://github.com/yuex/cjk-auto-spacing.git
+[submodule "pelican-plugins/pelican-gist"]
+	path = pelican-plugins/pelican-gist
+	url = https://github.com/streeter/pelican-gist.git
+[submodule "pelican-plugins/pelicanfly"]
+	path = pelican-plugins/pelicanfly
+	url = https://github.com/bmcorser/pelicanfly.git
+[submodule "pelican-plugins/pelican-flickr"]
+	path = pelican-plugins/pelican-flickr
+	url = https://github.com/La0/pelican-flickr.git
+[submodule "pelican-plugins/better_code_samples"]
+	path = pelican-plugins/better_code_samples
+	url = https://github.com/ChrislS/better_code_samples.git
+[submodule "pelican-plugins/pin_to_top"]
+	path = pelican-plugins/pin_to_top
+	url = https://github.com/Shaked/pin_to_top.git
+[submodule "pelican-plugins/pelican-githubprojects"]
+	path = pelican-plugins/pelican-githubprojects
+	url = https://github.com/kura/pelican-githubprojects.git
+[submodule "pelican-plugins/pelicanthemes-generator"]
+	path = pelican-plugins/pelicanthemes-generator
+	url = https://github.com/badele/pelicanthemes-generator
+[submodule "pelican-plugins/pelican-page-order"]
+	path = pelican-plugins/pelican-page-order
+	url = https://github.com/akhayyat/pelican-page-order.git
+[submodule "pelican-plugins/pelican-page-hierarchy"]
+	path = pelican-plugins/pelican-page-hierarchy
+	url = https://github.com/akhayyat/pelican-page-hierarchy.git
+[submodule "pelican-plugins/multi_neighbors"]
+	path = pelican-plugins/multi_neighbors
+	url = https://github.com/davidlesieur/multi_neighbors.git
+[submodule "pelican-plugins/pelican-langcategory"]
+	path = pelican-plugins/pelican-langcategory
+	url = https://github.com/CNBorn/pelican-langcategory.git
+[submodule "pelican-plugins/pandoc_reader"]
+	path = pelican-plugins/pandoc_reader
+	url = https://github.com/liob/pandoc_reader.git
+[submodule "pelican-plugins/bootstrapify"]
+	path = pelican-plugins/bootstrapify
+	url = https://github.com/ingwinlu/pelican-bootstrapify.git
+[submodule "pelican-plugins/pelican-jinja2content"]
+	path = pelican-plugins/pelican-jinja2content
+	url = https://github.com/joachimneu/pelican-jinja2content.git
+[submodule "pelican-plugins/panorama"]
+	path = pelican-plugins/panorama
+	url = https://github.com/romainx/panorama.git
+[submodule "pelican-plugins/pelican-genealogy"]
+	path = pelican-plugins/pelican-genealogy
+	url = https://github.com/zappala/pelican-genealogy
+[submodule "pelican-plugins/image_process"]
+	path = pelican-plugins/image_process
+	url = https://github.com/whiskyechobravo/image_process
+[submodule "pelican-plugins/pelican-open_graph"]
+	path = pelican-plugins/pelican-open_graph
+	url = https://github.com/whiskyechobravo/pelican-open_graph.git
+[submodule "pelican-plugins/replacer"]
+	path = pelican-plugins/replacer
+	url = https://github.com/narusemotoki/replacer
+[submodule "pelican-plugins/pelican-toc"]
+	path = pelican-plugins/pelican-toc
+	url = https://github.com/ingwinlu/pelican-toc
+[submodule "pelican-plugins/multimarkdown_reader"]
+	path = pelican-plugins/multimarkdown_reader
+	url = https://github.com/dames57/multimarkdown_reader.git
+[submodule "pelican-plugins/pelican_javascript"]
+	path = pelican-plugins/pelican_javascript
+	url = https://github.com/mortada/pelican_javascript.git
+[submodule "pelican-plugins/loadcsv"]
+	path = pelican-plugins/loadcsv
+	url = https://github.com/e9t/pelican-loadcsv
+[submodule "pelican-plugins/org_pandoc_reader"]
+	path = pelican-plugins/org_pandoc_reader
+	url = https://github.com/jo-tham/org_pandoc_reader.git
+[submodule "pelican-plugins/pdf-img"]
+	path = pelican-plugins/pdf-img
+	url = https://github.com/cmacmackin/pdf-img.git
+[submodule "pelican-plugins/pelican-cite"]
+	path = pelican-plugins/pelican-cite
+	url = https://github.com/cmacmackin/pelican-cite.git
+[submodule "pelican-plugins/figure-ref"]
+	path = pelican-plugins/figure-ref
+	url = https://github.com/cmacmackin/figure-ref
+[submodule "pelican-plugins/encrypt-content"]
+	path = pelican-plugins/encrypt-content
+	url = https://github.com/mindcruzer/pelican-encrypt-content
+[submodule "pelican-plugins/md-metayaml"]
+	path = pelican-plugins/md-metayaml
+	url = https://github.com/joachimneu/pelican-md-metayaml
+[submodule "pelican-plugins/backreftranslate"]
+	path = pelican-plugins/backreftranslate
+	url = https://github.com/daltonmatos/pelican-plugin-backref-translate
+[submodule "pelican-plugins/category_order"]
+	path = pelican-plugins/category_order
+	url = https://github.com/jhshi/pelican.plugins.category_order.git
+[submodule "pelican-plugins/ga_page_view"]
+	path = pelican-plugins/ga_page_view
+	url = https://github.com/jhshi/pelican.plugins.ga_page_view.git
+[submodule "pelican-plugins/post_revision"]
+	path = pelican-plugins/post_revision
+	url = https://github.com/jhshi/pelican.plugins.post_revision
+[submodule "pelican-plugins/linkclass"]
+	path = pelican-plugins/pelican-linkclass
+	url = https://github.com/rlaboiss/pelican-linkclass
+[submodule "pelican-plugins/just_table"]
+	path = pelican-plugins/just_table
+	url = https://github.com/burakkose/just_table
+[submodule "pelican-plugins/ace_editor"]
+	path = pelican-plugins/ace_editor
+	url = https://github.com/mothsART/ace_editor.git
+[submodule "pelican-plugins/mboxreader"]
+	path = pelican-plugins/pelican-mboxreader
+	url = https://github.com/TC01/pelican-mboxreader
+[submodule "pelican-plugins/bootstrap-rst"]
+	path = pelican-plugins/bootstrap-rst
+	url = https://github.com/aqw/bootstrap-rst
+[submodule "pelican-plugins/pelican-version"]
+	path = pelican-plugins/pelican-version
+	url = https://github.com/Shaked/pelican-version
+[submodule "pelican-plugins/lightbox"]
+	path = pelican-plugins/lightbox
+	url = https://github.com/kura/lightbox
+[submodule "pelican-plugins/pelican-ipynb"]
+	path = pelican-plugins/pelican-ipynb
+	url = https://github.com/danielfrg/pelican-ipynb
+[submodule "pelican-plugins/deadlinks"]
+	path = pelican-plugins/deadlinks
+	url = https://github.com/silentlamb/pelican-deadlinks.git
