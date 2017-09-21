@@ -1,6 +1,6 @@
 title: Read and annotate your research papers on your iPad
 date:2017-09-20
-tags: 
+tags: Research Tips, GoodNotes, Zotero, ZotFile, Dropbox
 category: How To
 author: Abraham Vinod
 summary: Use Zotero, ZotFile, GoodNotes, and Dropbox to read, annotate, and curate your research papers and ideas on them.

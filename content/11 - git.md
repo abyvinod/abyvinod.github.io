@@ -84,6 +84,13 @@ You can read about how to use git to version control your papers on Overleaf fro
 
 Based on the instructions given in the link above, you will have to create a local git repository for every Overleaf paper. An alternative is to use submodules.
 
+**Update**: A really good article on submodules is given in
+[https://medium.com/@porteneuve/mastering-git-submodules-34c65e940407](https://medium.com/@porteneuve/mastering-git-submodules-34c65e940407).
+He gives an excellent description of the steps involved while dealing with
+submodules. Look into his
+[TL;DR](https://medium.com/@porteneuve/mastering-git-submodules-34c65e940407#5450)
+section for a quick overview of the steps.
+
 ### Using submodules
 
 A detailed exposition can be found in [https://git-scm.com/book/en/v2/Git-Tools-Submodules](https://git-scm.com/book/en/v2/Git-Tools-Submodules).  I will focus on the important commands.
@@ -96,7 +103,12 @@ I add new Overleaf projects into my main git repository via the following comman
 git submodule add https://git.overleaf.com/PROJECT_NUMBER.git PATH_TO_SAVE_THE_PROJECT
 ~~~
 
-The `PROJECT_NUMBER` can be obtained from the `Share` button in the menu of your Overleaf project page. This command will clone the git repository for your Overleaf project into your git repository. In this section, I will call my main git repository `Parent` sitting on the location `C:/git` and the overleaf project `OverleafProject`. Hence, the command to clone an existing overleaf project (with project number `1234567890123456789` as a submodule becomes
+The `PROJECT_NUMBER` can be obtained from the `Share` button in the menu of your
+Overleaf project page. This command will clone the git repository for your
+Overleaf project into your git repository. In this section, I will call my main
+git repository `Parent` sitting on the location `C:/git` and the overleaf
+project `OverleafProject`. Hence, the command to clone an existing overleaf
+project (with project number `1234567890123456789`) as a submodule becomes
 
 ~~~bash
 cd /c/git/Parent
@@ -117,8 +129,13 @@ After changing the files inside `Paper/OverleafProject`, if you change directory
 The subsection above described how to add submodules to your project and push it to the remote repository. Let us know move to another local repository that is linked to this remote repository. To fetch all the submodule information, do the following
 
 ~~~bash
+# Two options for getting submodules
+# Option 1: Init and then update
 git submodule init                          # Fetch all the submodule information linked to this git repository
 git submodule update                        # Clone the submodules into their respective locations
+# Option 2: Update while init
+git submodule update --init
+# Avoid the detached HEAD (the normal state after checking out a submodule)
 git submodule foreach git checkout master   # Checkout the master branch in each of these submodules
 ~~~
 The last command is to avoid a `detached HEAD`[^detHEAD].
@@ -129,21 +146,42 @@ More often than not, we will reorganize our folders, and we will require the git
 
 ~~~bash
 git mv Papers/OverleafProject Papers/Done/OverleafProject
+# Remove the .git/modules/FOLDER to make the old projectname free for reuse
+rm -rf `.git/modules/Papers/OverleafProject`
 ~~~
 
-`Papers/OverleafProject` is the old name (location) of the submodule. Check in `Parent/.gitmodules` to confirm. Doing a git push will update your remote repositories and subsequent, `git pull`, `git submodule init`, and `git submodule update` at other local computers will change the location for you.
+`Papers/OverleafProject` is the old name (location) of the submodule. Check in `Parent/.gitmodules` to confirm. Doing a git push will update your remote repositories. 
+
+#### Updating the submodules on the other computers
+
+~~~bash
+# Get the changes in the parent repo
+git pull
+# Sync the URL for the local .gitmodules
+git submodule sync --recursive
+# Update the repositories with the latest commit, initialize any new repos if (needed), and do this in a recursive manner
+git submodule update --init --recursive
+# Avoid the detached HEAD (the normal state after checking out a submodule)
+git submodule foreach git checkout master
+~~~
+
+You may have to clean up the submodules that have been moved or deleted. They
+will show up as untracked folders.
+~~~bash
+rm -rf SUBMODULE_FOLDER
+~~~
 
 #### Deleting a git submodule
 
 Once you are done with a research paper, you may want to burn the bridge to the Overleaf project and just retain the files. Do the following[^submdelete]
 
 ~~~bash
-mv asubmodule asubmodule_tmp    # In case, something goes wrong.
-git submodule deinit asubmodule # Deinits the submodule (opposite of submodule init)   
+git submodule deinit SUBMODULE_FOLDER # Deinits the submodule (opposite of submodule init)   
 # There are two options for the next step
-# asubmodule_NAME is the name of the submodule as seen by the parent git repository. Check .gitmodules to confirm.
-git rm asubmodule_NAME          # Option 1: Remove the submodule from git as well as your storage unit
-git rm --cached asubmodule      # Option 2: Remove the submodule from git, but leave it on your storage unit
+git rm PATH/TO/SUBMODULE_FOLDER          # Option 1: Remove the submodule from git as well as your storage unit
+git rm --cached PATH/TO/SUBMODULE_FOLDER      # Option 2: Remove the submodule from git, but leave it on your storage unit
+# Remove the .git/modules/PATH/TO/SUBMODULE_FOLDER to make the old projectname free for reuse
+rm -rf `.git/modules/PATH/TO/SUBMODULE_FOLDER`
 ~~~
 
 ## Using git to merge codes
