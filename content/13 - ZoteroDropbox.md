@@ -34,7 +34,6 @@ Follow the instructions
 to allow a one-click send and retrieval of files from Zotero to GoodNotes on
 your iPad via Dropbox. 
 
-
 ## TL;DR ##
 
 1. Install Zotero

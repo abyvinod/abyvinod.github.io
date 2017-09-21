@@ -1,3 +1,6 @@
+echo ""
+echo "Make sure that latest commits in all submodules are pointing to their respective remotes"
+echo "Your changes must only be in local branches!"
 source activate blog
 git pull
 pubKill
