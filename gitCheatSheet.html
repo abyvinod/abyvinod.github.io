@@ -128,7 +128,7 @@
                     <div style="border-style: solid;background:lightgrey">
                         <h3 style="text-align:center"> Table of contents</h3>
                             <nav class="toc">
-                            <div id="toc"><ul><li><a class="toc-href" href="#" title="Git for research work">Git for research work</a><ul><li><a class="toc-href" href="#what-is-git" title="What is Git?">What is Git?</a><ul><li><a class="toc-href" href="#how-do-i-use-it" title="How do I use it?">How do I use it?</a></li><li><a class="toc-href" href="#incorporating-git-into-your-workflow" title="Incorporating git into your workflow">Incorporating git into your workflow</a></li></ul></li><li><a class="toc-href" href="#answering-the-helpme-questions_1" title="Answering the HELPME questions">Answering the HELPME questions</a><ul><li><a class="toc-href" href="#keeping-track-of-files-across-computers" title="Keeping track of files across computers">Keeping track of files across computers</a></li><li><a class="toc-href" href="#using-git-with-overleaf" title="Using git with Overleaf">Using git with Overleaf</a><ul><li><a class="toc-href" href="#using-submodules" title="Using submodules">Using submodules</a><ul><li><a class="toc-href" href="#adding-projects" title="Adding projects">Adding projects</a></li><li><a class="toc-href" href="#fetching-submodules-in-other-local-repositories" title="Fetching submodules in other local repositories">Fetching submodules in other local repositories</a></li><li><a class="toc-href" href="#moving-the-git-submodule-around" title="Moving the git submodule around">Moving the git submodule around</a></li><li><a class="toc-href" href="#deleting-a-git-submodule" title="Deleting a git submodule">Deleting a git submodule</a></li></ul></li></ul></li><li><a class="toc-href" href="#using-git-to-merge-codes_2" title="Using git to merge codes">Using git to merge codes</a></li></ul></li></ul></li></ul></div>
+                            <div id="toc"><ul><li><a class="toc-href" href="#" title="Git for research work">Git for research work</a><ul><li><a class="toc-href" href="#what-is-git" title="What is Git?">What is Git?</a><ul><li><a class="toc-href" href="#how-do-i-use-it" title="How do I use it?">How do I use it?</a></li><li><a class="toc-href" href="#incorporating-git-into-your-workflow" title="Incorporating git into your workflow">Incorporating git into your workflow</a></li></ul></li><li><a class="toc-href" href="#answering-the-helpme-questions_1" title="Answering the HELPME questions">Answering the HELPME questions</a><ul><li><a class="toc-href" href="#keeping-track-of-files-across-computers" title="Keeping track of files across computers">Keeping track of files across computers</a></li><li><a class="toc-href" href="#using-git-with-overleaf" title="Using git with Overleaf">Using git with Overleaf</a><ul><li><a class="toc-href" href="#using-submodules" title="Using submodules">Using submodules</a><ul><li><a class="toc-href" href="#adding-projects" title="Adding projects">Adding projects</a></li><li><a class="toc-href" href="#fetching-submodules-in-other-local-repositories" title="Fetching submodules in other local repositories">Fetching submodules in other local repositories</a></li><li><a class="toc-href" href="#moving-the-git-submodule-around" title="Moving the git submodule around">Moving the git submodule around</a></li><li><a class="toc-href" href="#updating-the-submodules-on-the-other-computers" title="Updating the submodules on the other computers">Updating the submodules on the other computers</a></li><li><a class="toc-href" href="#deleting-a-git-submodule" title="Deleting a git submodule">Deleting a git submodule</a></li></ul></li></ul></li><li><a class="toc-href" href="#using-git-to-merge-codes_2" title="Using git to merge codes">Using git to merge codes</a></li></ul></li></ul></li></ul></div>
                             </nav>
                     </div>
                 <p>While diligently doing your research, have you ever felt</p>
@@ -186,13 +186,24 @@ git submodule foreach git pull
 <p>Quoting from <a href="https://www.overleaf.com/about">Overleaf website</a>, Overleaf is a collaborative writing and publishing system that makes the whole process of producing academic papers much quicker for both authors and publishers. It is a free service that lets you create, edit and share your scientific ideas easily online using <a href="https://en.wikipedia.org/wiki/LaTeX">LaTeX</a>, a comprehensive and powerful tool for scientific writing.</p>
 <p>You can read about how to use git to version control your papers on Overleaf from <a href="https://www.overleaf.com/blog/195-new-collaborate-online-and-offline-with-overleaf-and-git-beta">https://www.overleaf.com/blog/195-new-collaborate-online-and-offline-with-overleaf-and-git-beta</a>. In this section, I will explore another feature of git to go a step further.</p>
 <p>Based on the instructions given in the link above, you will have to create a local git repository for every Overleaf paper. An alternative is to use submodules.</p>
+<p><strong>Update</strong>: A really good article on submodules is given in
+<a href="https://medium.com/@porteneuve/mastering-git-submodules-34c65e940407">https://medium.com/@porteneuve/mastering-git-submodules-34c65e940407</a>.
+He gives an excellent description of the steps involved while dealing with
+submodules. Look into his
+<a href="https://medium.com/@porteneuve/mastering-git-submodules-34c65e940407#5450">TL;DR</a>
+section for a quick overview of the steps.</p>
 <h3 id="using-submodules">Using submodules</h3>
 <p>A detailed exposition can be found in <a href="https://git-scm.com/book/en/v2/Git-Tools-Submodules">https://git-scm.com/book/en/v2/Git-Tools-Submodules</a>.  I will focus on the important commands.</p>
 <h4 id="adding-projects">Adding projects</h4>
 <p>I add new Overleaf projects into my main git repository via the following command</p>
 <div class="highlight"><pre><span></span>git submodule add https://git.overleaf.com/PROJECT_NUMBER.git PATH_TO_SAVE_THE_PROJECT
 </pre></div>
-<p>The <code>PROJECT_NUMBER</code> can be obtained from the <code>Share</code> button in the menu of your Overleaf project page. This command will clone the git repository for your Overleaf project into your git repository. In this section, I will call my main git repository <code>Parent</code> sitting on the location <code>C:/git</code> and the overleaf project <code>OverleafProject</code>. Hence, the command to clone an existing overleaf project (with project number <code>1234567890123456789</code> as a submodule becomes</p>
+<p>The <code>PROJECT_NUMBER</code> can be obtained from the <code>Share</code> button in the menu of your
+Overleaf project page. This command will clone the git repository for your
+Overleaf project into your git repository. In this section, I will call my main
+git repository <code>Parent</code> sitting on the location <code>C:/git</code> and the overleaf
+project <code>OverleafProject</code>. Hence, the command to clone an existing overleaf
+project (with project number <code>1234567890123456789</code>) as a submodule becomes</p>
 <div class="highlight"><pre><span></span><span class="nb">cd</span> /c/git/Parent
 mkdir Papers
 git submodule add https://git.overleaf.com/1234567890123456789.git Papers/OverleafProject
@@ -203,24 +214,45 @@ git submodule add https://git.overleaf.com/1234567890123456789.git Papers/Overle
 <p>After changing the files inside <code>Paper/OverleafProject</code>, if you change directory back to <code>Parent</code> and type <code>git status</code>, you will see the true power of git submodules. The changes in the submodules are summarized. Pushing these changes in the <code>Parent</code> repository into the remote repository (git repository at Bitbucket/Github) will trigger other local repositories (other computers) linked to this remote repository to update their copies of submodules.</p>
 <h4 id="fetching-submodules-in-other-local-repositories">Fetching submodules in other local repositories</h4>
 <p>The subsection above described how to add submodules to your project and push it to the remote repository. Let us know move to another local repository that is linked to this remote repository. To fetch all the submodule information, do the following</p>
-<div class="highlight"><pre><span></span>git submodule init                          <span class="c1"># Fetch all the submodule information linked to this git repository</span>
+<div class="highlight"><pre><span></span><span class="c1"># Two options for getting submodules</span>
+<span class="c1"># Option 1: Init and then update</span>
+git submodule init                          <span class="c1"># Fetch all the submodule information linked to this git repository</span>
 git submodule update                        <span class="c1"># Clone the submodules into their respective locations</span>
+<span class="c1"># Option 2: Update while init</span>
+git submodule update --init
+<span class="c1"># Avoid the detached HEAD (the normal state after checking out a submodule)</span>
 git submodule foreach git checkout master   <span class="c1"># Checkout the master branch in each of these submodules</span>
 </pre></div>
 <p>The last command is to avoid a <code>detached HEAD</code><sup id="fnref-detHEAD"><a class="footnote-ref" href="#fn-detHEAD">3</a></sup>.</p>
 <h4 id="moving-the-git-submodule-around">Moving the git submodule around</h4>
 <p>More often than not, we will reorganize our folders, and we will require the git submodules to be moved from a place to another. Let us say we want to move <code>Papers/OverleafProject</code> and put it in <code>Papers/Done/OverleafProject</code>. Achieve this<sup id="fnref-submmv"><a class="footnote-ref" href="#fn-submmv">2</a></sup> by (no matter where you are currently in the git repository <code>Parent</code>)</p>
 <div class="highlight"><pre><span></span>git mv Papers/OverleafProject Papers/Done/OverleafProject
+<span class="c1"># Remove the .git/modules/FOLDER to make the old projectname free for reuse</span>
+rm -rf <span class="sb">`</span>.git/modules/Papers/OverleafProject<span class="sb">`</span>
 </pre></div>
-<p><code>Papers/OverleafProject</code> is the old name (location) of the submodule. Check in <code>Parent/.gitmodules</code> to confirm. Doing a git push will update your remote repositories and subsequent, <code>git pull</code>, <code>git submodule init</code>, and <code>git submodule update</code> at other local computers will change the location for you.</p>
+<p><code>Papers/OverleafProject</code> is the old name (location) of the submodule. Check in <code>Parent/.gitmodules</code> to confirm. Doing a git push will update your remote repositories. </p>
+<h4 id="updating-the-submodules-on-the-other-computers">Updating the submodules on the other computers</h4>
+<div class="highlight"><pre><span></span><span class="c1"># Get the changes in the parent repo</span>
+git pull
+<span class="c1"># Sync the URL for the local .gitmodules</span>
+git submodule sync --recursive
+<span class="c1"># Update the repositories with the latest commit, initialize any new repos if (needed), and do this in a recursive manner</span>
+git submodule update --init --recursive
+<span class="c1"># Avoid the detached HEAD (the normal state after checking out a submodule)</span>
+git submodule foreach git checkout master
+</pre></div>
+<p>You may have to clean up the submodules that have been moved or deleted. They
+will show up as untracked folders.</p>
+<div class="highlight"><pre><span></span>rm -rf SUBMODULE_FOLDER
+</pre></div>
 <h4 id="deleting-a-git-submodule">Deleting a git submodule</h4>
 <p>Once you are done with a research paper, you may want to burn the bridge to the Overleaf project and just retain the files. Do the following<sup id="fnref-submdelete"><a class="footnote-ref" href="#fn-submdelete">4</a></sup></p>
-<div class="highlight"><pre><span></span>mv asubmodule asubmodule_tmp    <span class="c1"># In case, something goes wrong.</span>
-git submodule deinit asubmodule <span class="c1"># Deinits the submodule (opposite of submodule init)   </span>
+<div class="highlight"><pre><span></span>git submodule deinit SUBMODULE_FOLDER <span class="c1"># Deinits the submodule (opposite of submodule init)   </span>
 <span class="c1"># There are two options for the next step</span>
-<span class="c1"># asubmodule_NAME is the name of the submodule as seen by the parent git repository. Check .gitmodules to confirm.</span>
-git rm asubmodule_NAME          <span class="c1"># Option 1: Remove the submodule from git as well as your storage unit</span>
-git rm --cached asubmodule      <span class="c1"># Option 2: Remove the submodule from git, but leave it on your storage unit</span>
+git rm PATH/TO/SUBMODULE_FOLDER          <span class="c1"># Option 1: Remove the submodule from git as well as your storage unit</span>
+git rm --cached PATH/TO/SUBMODULE_FOLDER      <span class="c1"># Option 2: Remove the submodule from git, but leave it on your storage unit</span>
+<span class="c1"># Remove the .git/modules/PATH/TO/SUBMODULE_FOLDER to make the old projectname free for reuse</span>
+rm -rf <span class="sb">`</span>.git/modules/PATH/TO/SUBMODULE_FOLDER<span class="sb">`</span>
 </pre></div>
 <h2 id="using-git-to-merge-codes_2">Using git to merge codes</h2>
 <p>Let us say we have two codebases --- CB_A and CB_B --- that forked from the legacy code. Let us say the legacy code CB_L has a git repository. If not, create one for it using <code>git init</code>. The key idea will be to use git branching to handle the merging.  Do the following:</p>
