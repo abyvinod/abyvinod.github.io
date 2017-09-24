@@ -1,5 +1,236 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Notes on the margin - Abraham Vinod</title><link href="/" rel="alternate"></link><link href="/feeds/abraham-vinod.atom.xml" rel="self"></link><id>/</id><updated>2017-09-20T00:00:00-06:00</updated><entry><title>Read and annotate your research papers on your iPad</title><link href="/readWritePaperOniPad.html" rel="alternate"></link><published>2017-09-20T00:00:00-06:00</published><updated>2017-09-20T00:00:00-06:00</updated><author><name>Abraham Vinod</name></author><id>tag:None,2017-09-20:/readWritePaperOniPad.html</id><summary type="html">&lt;p&gt;Use Zotero, ZotFile, GoodNotes, and Dropbox to read, annotate, and curate your research papers and ideas on them.&lt;/p&gt;</summary><content type="html">&lt;h1 id="what-i-want-to-do"&gt;What I want to do?&lt;/h1&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Notes on the margin - Abraham Vinod</title><link href="/" rel="alternate"></link><link href="/feeds/abraham-vinod.atom.xml" rel="self"></link><id>/</id><updated>2017-09-23T00:00:00-06:00</updated><entry><title>Using git submodules to keep track of your Overleaf papers</title><link href="/gitsubmodules.html" rel="alternate"></link><published>2017-09-23T00:00:00-06:00</published><updated>2017-09-23T00:00:00-06:00</updated><author><name>Abraham Vinod</name></author><id>tag:None,2017-09-23:/gitsubmodules.html</id><summary type="html">&lt;p&gt;Git submodules can keep track of your overleaf papers in one place&lt;/p&gt;</summary><content type="html">&lt;h1 id="introduction"&gt;Introduction&lt;/h1&gt;
+&lt;p&gt;In &lt;a href="/gitCheatSheet.html"&gt;a previous blog post&lt;/a&gt;, I described how awesome git is.
+Especially, with Overleaf, doing collaborative editing of papers has become
+extremely easy. However, I don't like using Overleaf editor and do all my edits
+on my computer (&lt;em&gt;vim&lt;/em&gt; FTW). But, this made the task of keeping my local copy of
+papers up-to-date challenging as my number of Overleaf documents
+grew.&lt;/p&gt;
+&lt;p&gt;I wanted to create a single git repository that will:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;serve as a single stop to get all of my papers&lt;/li&gt;
+&lt;li&gt;sync with Overleaf&lt;/li&gt;
+&lt;li&gt;preserve version control powers given by git+Overleaf&lt;sup id="fnref-gitOverleaf"&gt;&lt;a class="footnote-ref" href="#fn-gitOverleaf"&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/li&gt;
+&lt;li&gt;remain portable (easy to transfer/sync across multiple computers)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;For this, I turned to &lt;code&gt;git submodules&lt;/code&gt;. The steps in this article were tested
+for git version of &lt;code&gt;2.13&lt;/code&gt;. However, the &lt;code&gt;git submodules&lt;/code&gt; has its own
+    pitfalls&lt;sup id="fnref-medium"&gt;&lt;a class="footnote-ref" href="#fn-medium"&gt;2&lt;/a&gt;&lt;/sup&gt;.  This blog post is about my custom commands to use git
+    submodules to achieve the tasks listed above.&lt;/p&gt;
+&lt;h3 id="sources-for-this-article"&gt;Sources for this article&lt;/h3&gt;
+&lt;p&gt;This article was driven by an excellent article on submodules by Mr.
+Porteneuve&lt;sup id="fnref-medium"&gt;&lt;a class="footnote-ref" href="#fn-medium"&gt;2&lt;/a&gt;&lt;/sup&gt;.  He gives an excellent description of git submodules, the
+steps to take, and the pitfalls to deal with. Do look into his TL;DR section for
+a quick overview of the steps.  The git documentation&lt;sup id="fnref-gitdoc"&gt;&lt;a class="footnote-ref" href="#fn-gitdoc"&gt;3&lt;/a&gt;&lt;/sup&gt; helped as well.
+So did countless Google searches, and the blog posts and stack-overflow posts they
+led to.&lt;/p&gt;
+&lt;h1 id="what-are-git-submodules_1"&gt;What are git submodules?&lt;/h1&gt;
+&lt;p&gt;Submodules allow you to keep a Git repository as a subdirectory of another Git
+repository. This lets you clone another repository into your project and keep
+your commits separate.  A detailed exposition can be found in git-scm
+book&lt;sup id="fnref-book"&gt;&lt;a class="footnote-ref" href="#fn-book"&gt;4&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+&lt;h1 id="what-are-the-important-tasks-that-i-need-to-handle"&gt;What are the important tasks that I need to handle?&lt;/h1&gt;
+&lt;p&gt;Let the parent repository be &lt;code&gt;Papers&lt;/code&gt;.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Add new Overleaf projects to &lt;code&gt;Papers&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Move Overleaf projects around (renaming or different categorization) within
+&lt;code&gt;Papers&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Update the local copies of the Overleaf projects in &lt;code&gt;Papers&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Delete Overleaf projects from &lt;code&gt;Papers&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Clone &lt;code&gt;Papers&lt;/code&gt; in a different computer.&lt;/li&gt;
+&lt;li&gt;Check if there are any changes in the local copies of the papers.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="task-1-add-new-overleaf-projects-to-the-repository"&gt;Task 1: Add new Overleaf projects to the repository&lt;/h2&gt;
+&lt;p&gt;Overleaf associates a project number to every project. Clicking on &lt;code&gt;SHARE&lt;/code&gt; on
+the topbar gives you a git repository for the same of the format
+&lt;code&gt;https://git.overleaf.com/PROJECT_NUMBER&lt;/code&gt;. Let the &lt;code&gt;OVERLEAF_URL&lt;/code&gt; denote the
+URL.&lt;/p&gt;
+&lt;p&gt;We can add a new Overleaf project into the repository &lt;code&gt;Papers&lt;/code&gt; using &lt;code&gt;git
+submodule add&lt;/code&gt; command. Let &lt;code&gt;PATH_TO_SAVE_THE_PROJECT&lt;/code&gt; be the desired path to
+the local copy (obviously &lt;code&gt;PATH_TO_SAVE_THE_PROJECT&lt;/code&gt; has the structure
+&lt;code&gt;PATH_TO_PAPERS/*&lt;/code&gt;). &lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;NOTE 1&lt;/strong&gt;: The submodule, by default, is checked out into a detached
+head&lt;sup id="fnref-detHEAD"&gt;&lt;a class="footnote-ref" href="#fn-detHEAD"&gt;5&lt;/a&gt;&lt;/sup&gt; to prevent overwrite. 
+&lt;a name="NOTE2"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;NOTE 2&lt;/strong&gt;: Skip steps 2 and 3 if you want to go with the complicated
+alternatives of using &lt;code&gt;git submodule sync&lt;/code&gt; and &lt;code&gt;git submodule update&lt;/code&gt;. These
+options are discussed in their respective tasks.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# Add the project to the repository&lt;/span&gt;
+git submodule add OVERLEAF_URL PATH_TO_SAVE_THE_PROJECT
+&lt;span class="c1"&gt;# Make the parent repository ignore any future commits (Disable git submodule's tracking capabilities)&lt;/span&gt;
+git config submodule.PATH_TO_SAVE_THE_PROJECT.ignore all
+&lt;span class="c1"&gt;# Set ignore=all in .gitmodules to propagate this to remote repository of Papers&lt;/span&gt;
+vim .gitmodules &lt;span class="c1"&gt;# Make appropriate changes&lt;/span&gt;
+&lt;span class="c1"&gt;# Shift to master branch from a detached head state&lt;/span&gt;
+&lt;span class="nb"&gt;cd&lt;/span&gt; PATH_TO_SAVE_THE_PROJECT
+git checkout master
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Running &lt;code&gt;git status&lt;/code&gt; shows that new files &lt;code&gt;.gitmodules&lt;/code&gt; and
+&lt;code&gt;PATH_TO_SAVE_THE_PROJECT&lt;/code&gt; were created. Because we have set &lt;code&gt;ignore&lt;/code&gt; to &lt;code&gt;all&lt;/code&gt;,
+the &lt;code&gt;Papers&lt;/code&gt; repository will ignore any future commits to the repository. &lt;/p&gt;
+&lt;p&gt;Doing a &lt;code&gt;git commit&lt;/code&gt; and &lt;code&gt;git push&lt;/code&gt; after these steps will inform your remote
+repository for &lt;code&gt;Papers&lt;/code&gt; about the new submodule.&lt;/p&gt;
+&lt;h2 id="task-2-move-overleaf-projects-around-within-the-repository"&gt;Task 2: Move Overleaf projects around within the repository&lt;/h2&gt;
+&lt;p&gt;More often than not, we will have to reorganize our folders. We would have to
+move the git submodules from a place to another. &lt;/p&gt;
+&lt;p&gt;Let us say we want to move &lt;code&gt;Papers/OverleafProject&lt;/code&gt; and put it in
+&lt;code&gt;Papers/Done/OverleafProject&lt;/code&gt;. Based on this SO answer&lt;sup id="fnref-submmv"&gt;&lt;a class="footnote-ref" href="#fn-submmv"&gt;6&lt;/a&gt;&lt;/sup&gt;, we have the following steps&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;git mv Papers/OverleafProject Papers/Done/OverleafProject
+&lt;span class="c1"&gt;# Using your favorite editor, edit .gitmodules so that the submodule name and the path variables are the same&lt;/span&gt;
+vim .gitmodules &lt;span class="c1"&gt;# Make appropriate changes&lt;/span&gt;
+&lt;span class="c1"&gt;# Move the .git/modules/FOLDER to the new Project&lt;/span&gt;
+mv .git/modules/Papers/OverleafProject .git/modules/Papers/Done/OverleafProject
+&lt;span class="c1"&gt;# Update your .git/config file on the Papers repo with the updated path for the submodule&lt;/span&gt;
+vim .git/config     &lt;span class="c1"&gt;# Make appropriate changes&lt;/span&gt;
+&lt;span class="c1"&gt;# Using your favorite editor, edit the .git file within the submodule to reflect the updated path&lt;/span&gt;
+&lt;span class="nb"&gt;cd&lt;/span&gt; Papers/Done/OverleafProject
+vim .git &lt;span class="c1"&gt;# Make appropriate changes&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Doing a &lt;code&gt;git commit&lt;/code&gt; and &lt;code&gt;git push&lt;/code&gt; after these steps will inform your remote
+repository for &lt;code&gt;Papers&lt;/code&gt; about the changes in the submodule. &lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;NOTE 3&lt;/strong&gt;: You can edit &lt;code&gt;.gitmodules&lt;/code&gt; and &lt;code&gt;.git/config&lt;/code&gt; files to change the
+remote repository of the submodule as well.&lt;/p&gt;
+&lt;h2 id="task-3-update-the-local-copies-of-the-overleaf-projects-in-the-repository"&gt;Task 3: Update the local copies of the Overleaf projects in the repository&lt;/h2&gt;
+&lt;h3 id="updating-using-custom-command-easy-option"&gt;Updating using custom command (Easy option)&lt;/h3&gt;
+&lt;p&gt;The commands to update submodules are very simple (the main goal of this endeavor).&lt;/p&gt;
+&lt;h4 id="updating-a-specific-submodules"&gt;Updating a specific submodules&lt;/h4&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nb"&gt;cd&lt;/span&gt; PATH_TO_SAVE_THE_PROJECT
+git pull
+&lt;/pre&gt;&lt;/div&gt;
+&lt;h4 id="updating-all-the-submodules"&gt;Updating all the submodules&lt;/h4&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;git submodule foreach git pull
+&lt;/pre&gt;&lt;/div&gt;
+&lt;h3 id="updating-using-git-submodule-update-complicated-alternative_1"&gt;Updating using git submodule update (Complicated alternative)&lt;/h3&gt;
+&lt;p&gt;An alternative is to use &lt;code&gt;git submodule update --init&lt;/code&gt;, the original approach
+via &lt;code&gt;git submodules&lt;/code&gt;. 
+&lt;a name="NOTE4"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;NOTE 4&lt;/strong&gt;: We will make the following assumptions for the complicated alternative.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Papers repository has the latest commit and updated &lt;code&gt;.gitmodules&lt;/code&gt;.
+See&lt;sup id="fnref-mediumSection"&gt;&lt;a class="footnote-ref" href="#fn-mediumSection"&gt;7&lt;/a&gt;&lt;/sup&gt; for the steps. You will have to edit your &lt;code&gt;.git/config&lt;/code&gt; to
+have &lt;code&gt;ignore&lt;/code&gt; key of every submodule set to &lt;code&gt;none&lt;/code&gt;. The default option is &lt;code&gt;none&lt;/code&gt;
+but we changed it to &lt;code&gt;all&lt;/code&gt; in our solution to Task 1 (See &lt;a href="#NOTE2"&gt;&lt;strong&gt;NOTE 2&lt;/strong&gt;&lt;/a&gt;).&lt;/li&gt;
+&lt;li&gt;All submodules have no unpushed commits (Else update step will reset their commits)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;To satisfy the assumptions in &lt;strong&gt;NOTE 4&lt;/strong&gt;, we would have to do two pushes for
+every commit in a submodule&lt;sup id="fnref-mediumSection"&gt;&lt;a class="footnote-ref" href="#fn-mediumSection"&gt;7&lt;/a&gt;&lt;/sup&gt;. This is an overkill for our
+&lt;code&gt;Papers&lt;/code&gt; repo and a pain point (especially when we are on an editing spree).
+Missing a commit of the submodule for the &lt;code&gt;Paper&lt;/code&gt; repo opens up the potential
+danger of dropping the submodule commits done in another machine&lt;sup id="fnref-medium"&gt;&lt;a class="footnote-ref" href="#fn-medium"&gt;2&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# Get the changes in the parent repo&lt;/span&gt;
+git pull
+&lt;span class="c1"&gt;# Sync the URL for the local .gitmodules in case the remote repos of the submodules have changed&lt;/span&gt;
+git submodule sync
+&lt;span class="c1"&gt;# Update the repositories with the latest commit, initialize any new repos if (needed)&lt;/span&gt;
+git submodule update --init
+&lt;span class="c1"&gt;# Avoid the detached HEAD (the normal state after checking out a submodule)&lt;/span&gt;
+git submodule foreach git checkout master
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Adding a &lt;code&gt;--recursive&lt;/code&gt; flag to &lt;code&gt;sync&lt;/code&gt; and &lt;code&gt;update&lt;/code&gt; commands allows git to
+perform these operations for nested submodules.&lt;/p&gt;
+&lt;h2 id="task-4-delete-overleaf-projects-from-the-repository_1"&gt;Task 4: Delete Overleaf projects from the repository&lt;/h2&gt;
+&lt;p&gt;Once you are done with a research paper, you may want to burn the bridge to the Overleaf project and just retain the files. Do the following&lt;sup id="fnref-submdelete"&gt;&lt;a class="footnote-ref" href="#fn-submdelete"&gt;8&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;git submodule deinit SUBMODULE_FOLDER &lt;span class="c1"&gt;# Deinits the submodule (opposite of submodule init)   &lt;/span&gt;
+&lt;span class="c1"&gt;# There are two options for the next step&lt;/span&gt;
+&lt;span class="c1"&gt;# Option 1: Remove the submodule from git as well as your storage unit&lt;/span&gt;
+git rm PATH/TO/SUBMODULE_FOLDER
+&lt;span class="c1"&gt;# Option 2: Remove the submodule from git, but leave it on your storage unit&lt;/span&gt;
+git rm --cached PATH/TO/SUBMODULE_FOLDER
+&lt;span class="c1"&gt;# Make the old project path free for reuse by doing both of the following steps&lt;/span&gt;
+&lt;span class="c1"&gt;# 1. Removing the .git/modules/&amp;lt;Submodule&amp;gt; folder&lt;/span&gt;
+rm -rf &lt;span class="sb"&gt;`&lt;/span&gt;.git/modules/PATH/TO/SUBMODULE_FOLDER&lt;span class="sb"&gt;`&lt;/span&gt;
+&lt;span class="c1"&gt;# 2. Editing the .git/config and erasing any reference to its existence&lt;/span&gt;
+vim .git/config     &lt;span class="c1"&gt;# Make appropriate changes&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;h2 id="task-5-maintaining-repositories-across-different-computers"&gt;Task 5: Maintaining repositories across different computers&lt;/h2&gt;
+&lt;p&gt;Subsections above handled all the desired tasks within a single machine. Now,
+let us discuss how to clone the repository and sync our papers to another machine. &lt;/p&gt;
+&lt;h3 id="using-custom-commands-easy-option"&gt;Using custom commands (Easy option)&lt;/h3&gt;
+&lt;p&gt;Clone the paper repository with all the submodules and update them
+individually&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;git clone --recursive-submodules &amp;lt;PAPERS_REPO_LINK&amp;gt; Papers
+git submodule foreach &lt;span class="s1"&gt;'git checkout master &amp;amp;&amp;amp; git pull'&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;That's all!!! You should now be able to do any of the steps
+mentioned in Tasks 1--4 in the new machine without any hiccups.&lt;/p&gt;
+&lt;h3 id="using-git-submodule-sync-and-git-submodule-update-complicated-alternative"&gt;Using git submodule sync and git submodule update (Complicated alternative)&lt;/h3&gt;
+&lt;p&gt;The assumptions made in &lt;a href="#NOTE4"&gt;&lt;strong&gt;NOTE 4&lt;/strong&gt;&lt;/a&gt; hold here.&lt;/p&gt;
+&lt;h4 id="cloning"&gt;Cloning&lt;/h4&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# Two options for getting submodules&lt;/span&gt;
+&lt;span class="c1"&gt;# Option 1: Clone the paper and then recurse&lt;/span&gt;
+git submodule init                          &lt;span class="c1"&gt;# Fetch all the submodule information linked to this git repository&lt;/span&gt;
+git clone &amp;lt;PAPERS_REPO_LINK&amp;gt; Papers
+&lt;span class="nb"&gt;cd&lt;/span&gt; Papers
+git submodule update --init                 &lt;span class="c1"&gt;# Clone the submodules into their respective locations&lt;/span&gt;
+&lt;span class="c1"&gt;# Option 2: Clone the paper and submodules recursively&lt;/span&gt;
+git clone --recursive-submodules &amp;lt;PAPERS_REPO_LINK&amp;gt; Papers
+&lt;span class="c1"&gt;# Avoid the detached HEAD (the normal state after checking out a submodule) &amp;amp; update all the submodules to their latest commit&lt;/span&gt;
+git submodule foreach &lt;span class="s1"&gt;'git checkout master &amp;amp;&amp;amp; git pull'&lt;/span&gt;   &lt;span class="c1"&gt;# Checkout the master branch in each of these submodules and pull&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;h4 id="updating-changes"&gt;Updating changes&lt;/h4&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# Synchronize your local copy of Papers repository and the submodules based on the .gitmodules&lt;/span&gt;
+git submodule sync --recursive
+&lt;span class="c1"&gt;# Update the repositories&lt;/span&gt;
+git submodule update --init
+&lt;span class="c1"&gt;# Avoid detached state&lt;/span&gt;
+git submodule foreach git checkout master
+&lt;/pre&gt;&lt;/div&gt;
+&lt;h2 id="task-6-see-if-there-are-any-changes-in-the-local-copies_2"&gt;Task 6: See if there are any changes in the local copies&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;git submodule foreach git status    &lt;span class="c1"&gt;# Cycle through all the submodules and print the status&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;This is easily done in the &lt;code&gt;git submodule update,sync&lt;/code&gt; approach (our so-called
+complicated alternative) via &lt;code&gt;git status&lt;/code&gt; on the &lt;code&gt;Paper&lt;/code&gt; repository.&lt;/p&gt;
+&lt;h1 id="comparing-the-two-approaches_1"&gt;Comparing the two approaches&lt;/h1&gt;
+&lt;p&gt;The easy option differs from the complicated alternative in Tasks 1, 3, and 5.&lt;/p&gt;
+&lt;p&gt;The advantages of the easy option are:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Makes Tasks 3 and 5 extremely easy (the most commonly performed tasks)&lt;/li&gt;
+&lt;li&gt;Does not have the pitfalls associated with &lt;code&gt;git submodules&lt;/code&gt;&lt;sup id="fnref-medium"&gt;&lt;a class="footnote-ref" href="#fn-medium"&gt;2&lt;/a&gt;&lt;/sup&gt;. Your changes
+will never be accidentally overwritten. (Phew!)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;The disadvantages of the easy option are:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Task 1 has two additional minor steps.&lt;/li&gt;
+&lt;li&gt;Requires additional scripts to update only certain submodules. It can be done
+with &lt;code&gt;git submodule update,sync&lt;/code&gt; approach but is not easy either. See &lt;em&gt;providing
+pathspec&lt;/em&gt; in git documentation&lt;sup id="fnref-gitdoc"&gt;&lt;a class="footnote-ref" href="#fn-gitdoc"&gt;3&lt;/a&gt;&lt;/sup&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="footnote"&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li id="fn-gitOverleaf"&gt;
+&lt;p&gt;Overleaf now supports git
+&lt;a href="https://www.overleaf.com/blog/195-new-collaborate-online-and-offline-with-overleaf-and-git-beta"&gt;https://www.overleaf.com/blog/195-new-collaborate-online-and-offline-with-overleaf-and-git-beta&lt;/a&gt;.&amp;nbsp;&lt;a class="footnote-backref" href="#fnref-gitOverleaf" title="Jump back to footnote 1 in the text"&gt;↩&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn-medium"&gt;
+&lt;p&gt;Read &lt;a href="https://medium.com/@porteneuve/mastering-git-submodules-34c65e940407"&gt;https://medium.com/@porteneuve/mastering-git-submodules-34c65e940407&lt;/a&gt;&amp;nbsp;&lt;a class="footnote-backref" href="#fnref-medium" title="Jump back to footnote 2 in the text"&gt;↩&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn-gitdoc"&gt;
+&lt;p&gt;Relevant git documentations --- &lt;a href="https://git-scm.com/docs/git-config"&gt;https://git-scm.com/docs/git-config&lt;/a&gt;,
+&lt;a href="https://git-scm.com/docs/git-submodule"&gt;https://git-scm.com/docs/git-submodule&lt;/a&gt;,
+and &lt;a href="https://git-scm.com/docs/gitmodules"&gt;https://git-scm.com/docs/gitmodules&lt;/a&gt;.&amp;nbsp;&lt;a class="footnote-backref" href="#fnref-gitdoc" title="Jump back to footnote 3 in the text"&gt;↩&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn-book"&gt;
+&lt;p&gt;Git-scm book &lt;a href="https://git-scm.com/book/en/v2/Git-Tools-Submodules"&gt;https://git-scm.com/book/en/v2/Git-Tools-Submodules&lt;/a&gt;.  &amp;nbsp;&lt;a class="footnote-backref" href="#fnref-book" title="Jump back to footnote 4 in the text"&gt;↩&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn-detHEAD"&gt;
+&lt;p&gt;Read
+&lt;a href="https://www.git-tower.com/learn/git/faq/detached-head-when-checkout-commit"&gt;https://www.git-tower.com/learn/git/faq/detached-head-when-checkout-commit&lt;/a&gt;
+if you want to know more.&amp;nbsp;&lt;a class="footnote-backref" href="#fnref-detHEAD" title="Jump back to footnote 5 in the text"&gt;↩&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn-submmv"&gt;
+&lt;p&gt;Source --- &lt;a href="http://stackoverflow.com/a/6310246/1846549"&gt;http://stackoverflow.com/a/6310246/1846549&lt;/a&gt;&amp;nbsp;&lt;a class="footnote-backref" href="#fnref-submmv" title="Jump back to footnote 6 in the text"&gt;↩&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn-mediumSection"&gt;
+&lt;p&gt;See section &lt;em&gt;Updating a submodule inside container code&lt;/em&gt;
+in Mr. Porteneuve's article&lt;sup id="fnref-medium"&gt;&lt;a class="footnote-ref" href="#fn-medium"&gt;2&lt;/a&gt;&lt;/sup&gt;. &amp;nbsp;&lt;a class="footnote-backref" href="#fnref-mediumSection" title="Jump back to footnote 7 in the text"&gt;↩&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn-submdelete"&gt;
+&lt;p&gt;Source ---
+&lt;a href="http://stackoverflow.com/a/16162000/1846549"&gt;http://stackoverflow.com/a/16162000/1846549&lt;/a&gt;&amp;nbsp;&lt;a class="footnote-backref" href="#fnref-submdelete" title="Jump back to footnote 8 in the text"&gt;↩&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/hr&gt;&lt;/div&gt;</content><category term="Git"></category><category term="Overleaf"></category><category term="Tips"></category></entry><entry><title>Read and annotate your research papers on your iPad</title><link href="/readWritePaperOniPad.html" rel="alternate"></link><published>2017-09-20T00:00:00-06:00</published><updated>2017-09-20T00:00:00-06:00</updated><author><name>Abraham Vinod</name></author><id>tag:None,2017-09-20:/readWritePaperOniPad.html</id><summary type="html">&lt;p&gt;Use Zotero, ZotFile, GoodNotes, and Dropbox to read, annotate, and curate your research papers and ideas on them.&lt;/p&gt;</summary><content type="html">&lt;h1 id="what-i-want-to-do"&gt;What I want to do?&lt;/h1&gt;
 &lt;p&gt;This is what I would like to do:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;A one-click send and retrieval of files from Zotero&lt;/li&gt;
@@ -59,20 +290,26 @@ Note:  Different PDF reading/annotating apps may provide different functionality
 10.  If you want to continue annotating a document that you have previously annotated, just repeat from Step 5, however instead of right-clicking on the Record name and Manage Annotations -&gt; Send to Tablet  to send it to Dropbox/PDF Expert, you will want to right-click on the annotated version of the PDF. When you download the re-annotated PDF to its Zotero record, it will not replace the previously annotated files: you will now have a second annotated PDF that includes all annotations (this version's title will end with _annotated_annotated.pdf), as well as a second updated Note that includes all extracted annotations that ZotFile was able to extract. 
 
 Note: You will probably want to send the earlier annotated PDF and Note to the Trash to eliminate potential version control issues down the road. You may also want to delete the original PDF to save space; you can always print it out clean without your annotations/markups if you need to, or delete your annotations in your PDF app after the fact (you can also delete annotations made via the PDF Expert app using Adobe Acrobat Reader on your laptop).
----&gt;</content><category term="Research Tips"></category><category term="GoodNotes"></category><category term="Zotero"></category><category term="ZotFile"></category><category term="Dropbox"></category></entry><entry><title>Git for research work</title><link href="/gitCheatSheet.html" rel="alternate"></link><published>2017-02-11T00:00:00-07:00</published><updated>2017-02-11T00:00:00-07:00</updated><author><name>Abraham Vinod</name></author><id>tag:None,2017-02-11:/gitCheatSheet.html</id><summary type="html">&lt;p&gt;List of useful features (and the corresponding commands in git)&lt;/p&gt;</summary><content type="html">&lt;p&gt;While diligently doing your research, have you ever felt&lt;/p&gt;
-&lt;ul&gt;
+---&gt;</content><category term="Research Tips"></category><category term="GoodNotes"></category><category term="Zotero"></category><category term="ZotFile"></category><category term="Dropbox"></category></entry><entry><title>Git for research work</title><link href="/gitCheatSheet.html" rel="alternate"></link><published>2017-02-11T00:00:00-07:00</published><updated>2017-02-11T00:00:00-07:00</updated><author><name>Abraham Vinod</name></author><id>tag:None,2017-02-11:/gitCheatSheet.html</id><summary type="html">&lt;p&gt;List of useful features (and the corresponding commands in git)&lt;/p&gt;</summary><content type="html">&lt;h1 id="introduction"&gt;Introduction&lt;/h1&gt;
+&lt;p&gt;While diligently doing your research, have you ever felt&lt;/p&gt;
+&lt;ol&gt;
 &lt;li&gt;Oh, shoot! I changed the code in my home computer but forgot to email myself a copy so that I run it out in my lab. Help?!&lt;/li&gt;
 &lt;li&gt;Oh, shoot! I edited away my code from a point where &lt;em&gt;something&lt;/em&gt; was working to a point where &lt;em&gt;nothing&lt;/em&gt; is working. Help?!&lt;/li&gt;
-&lt;li&gt;Oh, shoot! I was editing a file on &lt;a href="http://www.overleaf.com"&gt;Overleaf&lt;/a&gt;, and something went wrong. Now, I want to go back, but I don't have a premium account. Help?!&lt;/li&gt;
 &lt;li&gt;Oh, shoot! My friend added a new feature to a legacy code, and I added a couple of new features myself, but now we want to combine our forces! I don't want to manually merge the two codes by going over them line by line. Help?!&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;a href="https://git-scm.com"&gt;Git&lt;/a&gt; can solve all these problems for you!!!  The aim of this blog post is &lt;strong&gt;not&lt;/strong&gt; to describe how to use git. While I dedicate first three sections on describing the what and how of git, I will leave it to you learn more about git. One of the best online tutorial posts on git which is easy on the eyes is &lt;a href="http://rogerdudler.github.io/git-guide/"&gt;http://rogerdudler.github.io/git-guide/&lt;/a&gt;.&lt;/p&gt;
+&lt;li&gt;Oh, shoot! I was editing a file on Overleaf&lt;sup id="fnref-overleaf"&gt;&lt;a class="footnote-ref" href="#fn-overleaf"&gt;3&lt;/a&gt;&lt;/sup&gt;, and something went wrong. Now, I want to go back, but I don't have a premium account. Help?!&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;a href="https://git-scm.com"&gt;Git&lt;/a&gt; can solve all these problems for you!!!  The aim of
+this blog post is &lt;strong&gt;not&lt;/strong&gt; to describe how to use git. I will answer how to solve
+the above problems directly and will leave it to you learn more about git. One
+of the best online tutorial posts on git which is easy on the eyes is
+&lt;a href="http://rogerdudler.github.io/git-guide/"&gt;http://rogerdudler.github.io/git-guide/&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Also, do checkout &lt;a href="/gitsubmodules.html"&gt;this blog post&lt;/a&gt; to learn how I
+use &lt;code&gt;git submodules&lt;/code&gt; with Overleaf to keep track of all my research papers.&lt;/p&gt;
 &lt;h1 id="what-is-git"&gt;What is Git?&lt;/h1&gt;
-&lt;p&gt;Quoting from &lt;a href="https://en.wikipedia.org/wiki/Git"&gt;Wikipedia&lt;/a&gt;, git is a version control system (VCS) for tracking changes in computer files and coordinating work on those files among multiple people. It is primarily used for software development, but it can be used to keep track of changes in any files. As a distributed revision control system it is aimed at speed, data integrity, and support for distributed, non-linear workflows.&lt;/p&gt;
+&lt;p&gt;Git is a version control system (VCS) for tracking changes in computer files and coordinating work on those files among multiple people&lt;sup id="fnref-wikiGit"&gt;&lt;a class="footnote-ref" href="#fn-wikiGit"&gt;2&lt;/a&gt;&lt;/sup&gt;. It is primarily used for software development, but it can be used to keep track of changes in any files. As a distributed revision control system it is aimed at speed, data integrity, and support for distributed, non-linear workflows.&lt;/p&gt;
 &lt;h2 id="how-do-i-use-it"&gt;How do I use it?&lt;/h2&gt;
-&lt;p&gt;I will describe how to use it if you are using Windows&lt;sup id="fnref-UnixGit"&gt;&lt;a class="footnote-ref" href="#fn-UnixGit"&gt;1&lt;/a&gt;&lt;/sup&gt;. You can grab a copy of Git (bash terminal and the software) from &lt;a href="https://git-scm.com/downloads"&gt;https://git-scm.com/downloads&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;If you are using Windows&lt;sup id="fnref-UnixGit"&gt;&lt;a class="footnote-ref" href="#fn-UnixGit"&gt;1&lt;/a&gt;&lt;/sup&gt;, you can grab a copy of Git (bash terminal and the software) from &lt;a href="https://git-scm.com/downloads"&gt;https://git-scm.com/downloads&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;You will also need an account on &lt;a href="http://www.github.com"&gt;http://www.github.com&lt;/a&gt; or &lt;a href="http://www.bitbucket.org"&gt;http://www.bitbucket.org&lt;/a&gt;. These services allow you to configure a remote git repository that serves as a common meeting place for your code distributed across multiple computers.  I prefer &lt;a href="http://www.bitbucket.org/abyvinod"&gt;BitBucket&lt;/a&gt; since they give unlimited private repositories (you don't want your research code out in public, do you?). &lt;a href="http://www.github.com/abyvinod"&gt;Github&lt;/a&gt;, on the other hand, provides unlimited public repositories and require a subscription to avail private repositories. Note however that industry prefers Github because it has traditionally been used for open-source software. This blog has been hosted using &lt;a href="https://pages.github.com/"&gt;Github&lt;/a&gt;.&lt;/p&gt;
-&lt;h2 id="incorporating-git-into-your-workflow"&gt;Incorporating git into your workflow&lt;/h2&gt;
 &lt;p&gt;Learning git isn't very hard. There are just a few commands to do some useful tasks, and once you get the hang of it, it will look intuitive. Here are some cheatsheets available online&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="https://www.git-tower.com/blog/git-cheat-sheet/"&gt;https://www.git-tower.com/blog/git-cheat-sheet/&lt;/a&gt;&lt;/li&gt;
@@ -80,11 +317,12 @@ Note: You will probably want to send the earlier annotated PDF and Note to the T
 &lt;li&gt;&lt;a href="http://nyuccl.org/pages/gittutorial/"&gt;http://nyuccl.org/pages/gittutorial/&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;As I mentioned before, do check out &lt;a href="http://rogerdudler.github.io/git-guide/"&gt;http://rogerdudler.github.io/git-guide/&lt;/a&gt;.&lt;/p&gt;
-&lt;h1 id="answering-the-helpme-questions_1"&gt;Answering the HELPME questions&lt;/h1&gt;
-&lt;p&gt;I will answer the first two questions using the next subsection. Others have their own subsections.&lt;/p&gt;
-&lt;h2 id="keeping-track-of-files-across-computers"&gt;Keeping track of files across computers&lt;/h2&gt;
+&lt;h1 id="solution-to-problem-1-version-control-your-files-across-computers_1"&gt;Solution to Problem 1: Version control your files across computers&lt;/h1&gt;
 &lt;p&gt;One of the popular solutions to the first problem is to use Dropbox. It is not a bad solution, but I hate the '.conflicted' reports that keep coming, and I don't think Dropbox provides enough space for us to put all our research data and codes. &lt;/p&gt;
-&lt;p&gt;Once you get the hang of git, the answer to this pretty simple. Make a git repository for your research codes. Use it to version control your code between your home computer and work computer. You can even use &lt;code&gt;bash&lt;/code&gt; script to automate the "syncing" of the git repositories. Here is my &lt;code&gt;gu&lt;/code&gt; script that I run every time I leave a computer to ensure that there are no uncommitted changes in my local repository.&lt;/p&gt;
+&lt;p&gt;Once you get the hang of git, the answer to this pretty simple. Make a git
+repository for your research codes. Use it to version control your code between
+your home computer and work computer. You can even use &lt;code&gt;bash&lt;/code&gt; script to automate
+the "syncing" of the git repositories. Here is my &lt;code&gt;gua&lt;/code&gt; (git update all) script that I run every time I leave a computer to ensure that there are no uncommitted changes in my local repository.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;" "&lt;/span&gt;
 &lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;"================================="&lt;/span&gt;
 &lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;" "&lt;/span&gt;
@@ -94,7 +332,6 @@ Note: You will probably want to send the earlier annotated PDF and Note to the T
 gm                      &lt;span class="c1"&gt;# My bash alias for going to my matlab folder&lt;/span&gt;
 git status
 git pull
-git submodule foreach git pull
 &lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;" "&lt;/span&gt;
 &lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;"================================="&lt;/span&gt;
 &lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;" "&lt;/span&gt;
@@ -104,85 +341,18 @@ git submodule foreach git pull
 gv                      &lt;span class="c1"&gt;# My bash alias for going to my vimfiles folder&lt;/span&gt;
 git status
 git pull
-git submodule foreach git pull
 &lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Git submodules are a cool way to have git repositories inside git repositories.  More details later in this article.&lt;/p&gt;
-&lt;p&gt;Of course, this has not completely solved the problem. What happens when I forget to run the gu script &lt;strong&gt;before&lt;/strong&gt; leaving the computer??? Well, I use remote desktop connection to connect to my work computer/home computer. :)&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Caution!&lt;/strong&gt;: Don't you use git to keep track of data. Depending on your format, it might just consider it as a binary blob or as a txt file, and unecessarily[^Unless], keep track of the incremental changes to data. Use Dropbox or any other cloud storage solutions to store data.&lt;/p&gt;
-&lt;p&gt;To answer the second question, use &lt;code&gt;gitk&lt;/code&gt; to get a nice GUI on your changes.  &lt;code&gt;git diff&lt;/code&gt; is another option. From now, you don't have to worry about accidently changing the code on a late Monday night.&lt;/p&gt;
-&lt;h2 id="using-git-with-overleaf"&gt;Using git with Overleaf&lt;/h2&gt;
-&lt;p&gt;Quoting from &lt;a href="https://www.overleaf.com/about"&gt;Overleaf website&lt;/a&gt;, Overleaf is a collaborative writing and publishing system that makes the whole process of producing academic papers much quicker for both authors and publishers. It is a free service that lets you create, edit and share your scientific ideas easily online using &lt;a href="https://en.wikipedia.org/wiki/LaTeX"&gt;LaTeX&lt;/a&gt;, a comprehensive and powerful tool for scientific writing.&lt;/p&gt;
-&lt;p&gt;You can read about how to use git to version control your papers on Overleaf from &lt;a href="https://www.overleaf.com/blog/195-new-collaborate-online-and-offline-with-overleaf-and-git-beta"&gt;https://www.overleaf.com/blog/195-new-collaborate-online-and-offline-with-overleaf-and-git-beta&lt;/a&gt;. In this section, I will explore another feature of git to go a step further.&lt;/p&gt;
-&lt;p&gt;Based on the instructions given in the link above, you will have to create a local git repository for every Overleaf paper. An alternative is to use submodules.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Update&lt;/strong&gt;: A really good article on submodules is given in
-&lt;a href="https://medium.com/@porteneuve/mastering-git-submodules-34c65e940407"&gt;https://medium.com/@porteneuve/mastering-git-submodules-34c65e940407&lt;/a&gt;.
-He gives an excellent description of the steps involved while dealing with
-submodules. Look into his
-&lt;a href="https://medium.com/@porteneuve/mastering-git-submodules-34c65e940407#5450"&gt;TL;DR&lt;/a&gt;
-section for a quick overview of the steps.&lt;/p&gt;
-&lt;h3 id="using-submodules"&gt;Using submodules&lt;/h3&gt;
-&lt;p&gt;A detailed exposition can be found in &lt;a href="https://git-scm.com/book/en/v2/Git-Tools-Submodules"&gt;https://git-scm.com/book/en/v2/Git-Tools-Submodules&lt;/a&gt;.  I will focus on the important commands.&lt;/p&gt;
-&lt;h4 id="adding-projects"&gt;Adding projects&lt;/h4&gt;
-&lt;p&gt;I add new Overleaf projects into my main git repository via the following command&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;git submodule add https://git.overleaf.com/PROJECT_NUMBER.git PATH_TO_SAVE_THE_PROJECT
-&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;The &lt;code&gt;PROJECT_NUMBER&lt;/code&gt; can be obtained from the &lt;code&gt;Share&lt;/code&gt; button in the menu of your
-Overleaf project page. This command will clone the git repository for your
-Overleaf project into your git repository. In this section, I will call my main
-git repository &lt;code&gt;Parent&lt;/code&gt; sitting on the location &lt;code&gt;C:/git&lt;/code&gt; and the overleaf
-project &lt;code&gt;OverleafProject&lt;/code&gt;. Hence, the command to clone an existing overleaf
-project (with project number &lt;code&gt;1234567890123456789&lt;/code&gt;) as a submodule becomes&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nb"&gt;cd&lt;/span&gt; /c/git/Parent
-mkdir Papers
-git submodule add https://git.overleaf.com/1234567890123456789.git Papers/OverleafProject
-&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Running &lt;code&gt;git status&lt;/code&gt; shows that new files &lt;code&gt;.gitmodules&lt;/code&gt; and &lt;code&gt;Papers/OverleafProject&lt;/code&gt; were created. Commit and push the repository to your remote (at Bitbucket/Github) for making this submodule accessible to other computers as well. The git in &lt;code&gt;Parent&lt;/code&gt; repository just keeps track of the commit currently the HEAD of &lt;code&gt;Papers/OverleafProject&lt;/code&gt; points to.&lt;/p&gt;
-&lt;p&gt;If you change directory into &lt;code&gt;Papers/OverleafProject&lt;/code&gt; and run &lt;code&gt;gitk&lt;/code&gt;, you will see that git sees this folder as an independent git repository with none of the history of the git repository &lt;code&gt;Parent&lt;/code&gt; appearing here. Changing codes here needs to be pushed independently, and they will influence your Overleaf project.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt; Caution&lt;/strong&gt;: Overleaf creates a git repository only when you attempt to clone it for the first time. Their premium account is the only way (I know of) to handle changes that happened before cloning the repository.&lt;/p&gt;
-&lt;p&gt;After changing the files inside &lt;code&gt;Paper/OverleafProject&lt;/code&gt;, if you change directory back to &lt;code&gt;Parent&lt;/code&gt; and type &lt;code&gt;git status&lt;/code&gt;, you will see the true power of git submodules. The changes in the submodules are summarized. Pushing these changes in the &lt;code&gt;Parent&lt;/code&gt; repository into the remote repository (git repository at Bitbucket/Github) will trigger other local repositories (other computers) linked to this remote repository to update their copies of submodules.&lt;/p&gt;
-&lt;h4 id="fetching-submodules-in-other-local-repositories"&gt;Fetching submodules in other local repositories&lt;/h4&gt;
-&lt;p&gt;The subsection above described how to add submodules to your project and push it to the remote repository. Let us know move to another local repository that is linked to this remote repository. To fetch all the submodule information, do the following&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# Two options for getting submodules&lt;/span&gt;
-&lt;span class="c1"&gt;# Option 1: Init and then update&lt;/span&gt;
-git submodule init                          &lt;span class="c1"&gt;# Fetch all the submodule information linked to this git repository&lt;/span&gt;
-git submodule update                        &lt;span class="c1"&gt;# Clone the submodules into their respective locations&lt;/span&gt;
-&lt;span class="c1"&gt;# Option 2: Update while init&lt;/span&gt;
-git submodule update --init
-&lt;span class="c1"&gt;# Avoid the detached HEAD (the normal state after checking out a submodule)&lt;/span&gt;
-git submodule foreach git checkout master   &lt;span class="c1"&gt;# Checkout the master branch in each of these submodules&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;The last command is to avoid a &lt;code&gt;detached HEAD&lt;/code&gt;&lt;sup id="fnref-detHEAD"&gt;&lt;a class="footnote-ref" href="#fn-detHEAD"&gt;3&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
-&lt;h4 id="moving-the-git-submodule-around"&gt;Moving the git submodule around&lt;/h4&gt;
-&lt;p&gt;More often than not, we will reorganize our folders, and we will require the git submodules to be moved from a place to another. Let us say we want to move &lt;code&gt;Papers/OverleafProject&lt;/code&gt; and put it in &lt;code&gt;Papers/Done/OverleafProject&lt;/code&gt;. Achieve this&lt;sup id="fnref-submmv"&gt;&lt;a class="footnote-ref" href="#fn-submmv"&gt;2&lt;/a&gt;&lt;/sup&gt; by (no matter where you are currently in the git repository &lt;code&gt;Parent&lt;/code&gt;)&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;git mv Papers/OverleafProject Papers/Done/OverleafProject
-&lt;span class="c1"&gt;# Remove the .git/modules/FOLDER to make the old projectname free for reuse&lt;/span&gt;
-rm -rf &lt;span class="sb"&gt;`&lt;/span&gt;.git/modules/Papers/OverleafProject&lt;span class="sb"&gt;`&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;&lt;code&gt;Papers/OverleafProject&lt;/code&gt; is the old name (location) of the submodule. Check in &lt;code&gt;Parent/.gitmodules&lt;/code&gt; to confirm. Doing a git push will update your remote repositories. &lt;/p&gt;
-&lt;h4 id="updating-the-submodules-on-the-other-computers"&gt;Updating the submodules on the other computers&lt;/h4&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# Get the changes in the parent repo&lt;/span&gt;
-git pull
-&lt;span class="c1"&gt;# Sync the URL for the local .gitmodules&lt;/span&gt;
-git submodule sync --recursive
-&lt;span class="c1"&gt;# Update the repositories with the latest commit, initialize any new repos if (needed), and do this in a recursive manner&lt;/span&gt;
-git submodule update --init --recursive
-&lt;span class="c1"&gt;# Avoid the detached HEAD (the normal state after checking out a submodule)&lt;/span&gt;
-git submodule foreach git checkout master
-&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;You may have to clean up the submodules that have been moved or deleted. They
-will show up as untracked folders.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;rm -rf SUBMODULE_FOLDER
-&lt;/pre&gt;&lt;/div&gt;
-&lt;h4 id="deleting-a-git-submodule"&gt;Deleting a git submodule&lt;/h4&gt;
-&lt;p&gt;Once you are done with a research paper, you may want to burn the bridge to the Overleaf project and just retain the files. Do the following&lt;sup id="fnref-submdelete"&gt;&lt;a class="footnote-ref" href="#fn-submdelete"&gt;4&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;git submodule deinit SUBMODULE_FOLDER &lt;span class="c1"&gt;# Deinits the submodule (opposite of submodule init)   &lt;/span&gt;
-&lt;span class="c1"&gt;# There are two options for the next step&lt;/span&gt;
-git rm PATH/TO/SUBMODULE_FOLDER          &lt;span class="c1"&gt;# Option 1: Remove the submodule from git as well as your storage unit&lt;/span&gt;
-git rm --cached PATH/TO/SUBMODULE_FOLDER      &lt;span class="c1"&gt;# Option 2: Remove the submodule from git, but leave it on your storage unit&lt;/span&gt;
-&lt;span class="c1"&gt;# Remove the .git/modules/PATH/TO/SUBMODULE_FOLDER to make the old projectname free for reuse&lt;/span&gt;
-rm -rf &lt;span class="sb"&gt;`&lt;/span&gt;.git/modules/PATH/TO/SUBMODULE_FOLDER&lt;span class="sb"&gt;`&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;h2 id="using-git-to-merge-codes_2"&gt;Using git to merge codes&lt;/h2&gt;
+&lt;p&gt;Of course, this has not completely solved the problem. What happens when I
+forget to run the &lt;code&gt;gua&lt;/code&gt; script &lt;strong&gt;before&lt;/strong&gt; leaving the computer??? Well, I use remote desktop connection to connect to my work computer/home computer. :)&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Caution!&lt;/strong&gt;: Don't you use git to keep track of data. Depending on your format,
+it might just consider it as a binary blob or as a txt file, and unnecessarily
+keep track of the incremental changes to data. Use Dropbox or any other cloud
+storage solutions to store data.&lt;/p&gt;
+&lt;h1 id="solution-to-problem-2-version-control-your-files-across-computers"&gt;Solution to Problem 2: Version control your files across computers&lt;/h1&gt;
+&lt;p&gt;Use &lt;code&gt;gitk&lt;/code&gt; to get a nice GUI on your changes.  &lt;/p&gt;
+&lt;p&gt;&lt;code&gt;git diff&lt;/code&gt; to compare two versions of your codes, drafts, etc.&lt;/p&gt;
+&lt;p&gt;From now, you don't have to worry about accidently changing the code on a late Monday night.&lt;/p&gt;
+&lt;h1 id="solution-to-problem-3-using-git-to-merge-codes"&gt;Solution to Problem 3:  Using git to merge codes&lt;/h1&gt;
 &lt;p&gt;Let us say we have two codebases --- CB_A and CB_B --- that forked from the legacy code. Let us say the legacy code CB_L has a git repository. If not, create one for it using &lt;code&gt;git init&lt;/code&gt;. The key idea will be to use git branching to handle the merging.  Do the following:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# Let us say we are on the legacy codebase CB_L's git repository and it is on&lt;/span&gt;
 &lt;span class="c1"&gt;# the master branch. Create a new git branch named CB_A from the current point&lt;/span&gt;
@@ -214,23 +384,31 @@ git merge CB_B
 git checkout master
 git merge CB_merge          
 &lt;/pre&gt;&lt;/div&gt;
+&lt;h1 id="solution-to-problem-4-using-git-with-overleaf"&gt;Solution to Problem 4: Using git with Overleaf&lt;/h1&gt;
+&lt;p&gt;Overleaf is a collaborative writing and publishing system that makes the whole
+process of producing academic papers much quicker for both authors and
+publishers&lt;sup id="fnref-overleaf"&gt;&lt;a class="footnote-ref" href="#fn-overleaf"&gt;3&lt;/a&gt;&lt;/sup&gt;. It is a free service that lets you create, edit and share
+your scientific ideas easily online using LaTeX&lt;sup id="fnref-latex"&gt;&lt;a class="footnote-ref" href="#fn-latex"&gt;4&lt;/a&gt;&lt;/sup&gt;, a comprehensive and powerful tool for scientific writing.&lt;/p&gt;
+&lt;p&gt;You can read about how to use git to version control your papers on Overleaf from &lt;a href="https://www.overleaf.com/blog/195-new-collaborate-online-and-offline-with-overleaf-and-git-beta"&gt;https://www.overleaf.com/blog/195-new-collaborate-online-and-offline-with-overleaf-and-git-beta&lt;/a&gt;. &lt;/p&gt;
+&lt;p&gt;Based on the instructions given in the link above, you will have to create a
+local git repository for every Overleaf paper. Another alternative is to use
+submodules. See &lt;a href="/gitsubmodules.html"&gt;this blog post&lt;/a&gt; to know how I
+use it to track all my research papers while staying safe from the pain points
+of submodules.&lt;/p&gt;
 &lt;div class="footnote"&gt;
 &lt;hr&gt;
 &lt;ol&gt;
 &lt;li id="fn-UnixGit"&gt;
 &lt;p&gt;If you are in Unix, you can install it using your package manager.&amp;nbsp;&lt;a class="footnote-backref" href="#fnref-UnixGit" title="Jump back to footnote 1 in the text"&gt;↩&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
-&lt;li id="fn-submmv"&gt;
-&lt;p&gt;Source --- &lt;a href="http://stackoverflow.com/a/6310246/1846549"&gt;http://stackoverflow.com/a/6310246/1846549&lt;/a&gt;&amp;nbsp;&lt;a class="footnote-backref" href="#fnref-submmv" title="Jump back to footnote 2 in the text"&gt;↩&lt;/a&gt;&lt;/p&gt;
+&lt;li id="fn-wikiGit"&gt;
+&lt;p&gt;&lt;a href="https://en.wikipedia.org/wiki/Git"&gt;Wikipedia link for git&lt;/a&gt;&amp;nbsp;&lt;a class="footnote-backref" href="#fnref-wikiGit" title="Jump back to footnote 2 in the text"&gt;↩&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
-&lt;li id="fn-detHEAD"&gt;
-&lt;p&gt;Read
-&lt;a href="https://www.git-tower.com/learn/git/faq/detached-head-when-checkout-commit"&gt;https://www.git-tower.com/learn/git/faq/detached-head-when-checkout-commit&lt;/a&gt;
-if you want to know more.&amp;nbsp;&lt;a class="footnote-backref" href="#fnref-detHEAD" title="Jump back to footnote 3 in the text"&gt;↩&lt;/a&gt;&lt;/p&gt;
+&lt;li id="fn-overleaf"&gt;
+&lt;p&gt;&lt;a href="https://www.overleaf.com/about"&gt;Overleaf website&lt;/a&gt;, &amp;nbsp;&lt;a class="footnote-backref" href="#fnref-overleaf" title="Jump back to footnote 3 in the text"&gt;↩&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
-&lt;li id="fn-submdelete"&gt;
-&lt;p&gt;Source ---
-&lt;a href="http://stackoverflow.com/a/16162000/1846549"&gt;http://stackoverflow.com/a/16162000/1846549&lt;/a&gt;&amp;nbsp;&lt;a class="footnote-backref" href="#fnref-submdelete" title="Jump back to footnote 4 in the text"&gt;↩&lt;/a&gt;&lt;/p&gt;
+&lt;li id="fn-latex"&gt;
+&lt;p&gt;&lt;a href="https://en.wikipedia.org/wiki/LaTeX"&gt;Wikipedia link for LaTeX&lt;/a&gt;&amp;nbsp;&lt;a class="footnote-backref" href="#fnref-latex" title="Jump back to footnote 4 in the text"&gt;↩&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;/hr&gt;&lt;/div&gt;</content><category term="Git"></category></entry><entry><title>ACC2017: Computation of forward stochastic reach sets: Application to dynamic obstacle avoidance</title><link href="/acc2017.html" rel="alternate"></link><published>2017-02-08T00:00:00-07:00</published><updated>2017-02-08T00:00:00-07:00</updated><author><name>Abraham Vinod</name></author><id>tag:None,2017-02-08:/acc2017.html</id><summary type="html">&lt;p&gt;Summary of the ACC 2017 paper&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;br/&gt;
