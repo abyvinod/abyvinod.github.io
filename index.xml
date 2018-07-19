@@ -2,56 +2,56 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Abraham P. Vinod on Abraham P. Vinod</title>
-    <link>http://unm.edu/~abyvinod/</link>
+    <link>https://abyvinod.github.io/</link>
     <description>Recent content in Abraham P. Vinod on Abraham P. Vinod</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018</copyright>
     <lastBuildDate>Wed, 20 Apr 2016 00:00:00 -0600</lastBuildDate>
-    <atom:link href="/~abyvinod/" rel="self" type="application/rss+xml" />
+    <atom:link href="/" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Multiple Pursuer-Based Intercept Via Forward Stochastic Reachability</title>
-      <link>http://unm.edu/~abyvinod/publication/acc2018/</link>
+      <link>https://abyvinod.github.io/publication/acc2018/</link>
       <pubDate>Wed, 27 Jun 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://unm.edu/~abyvinod/publication/acc2018/</guid>
+      <guid>https://abyvinod.github.io/publication/acc2018/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Scalable Stochastic Reachability: Theory, Computation, and Control</title>
-      <link>http://unm.edu/~abyvinod/talk/2018-05-berkeley/</link>
+      <link>https://abyvinod.github.io/talk/2018-05-berkeley/</link>
       <pubDate>Tue, 15 May 2018 00:00:00 -0600</pubDate>
       
-      <guid>http://unm.edu/~abyvinod/talk/2018-05-berkeley/</guid>
+      <guid>https://abyvinod.github.io/talk/2018-05-berkeley/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Multiple Pursuer-Based Intercept Via Forward Stochastic Reachability (ACC 2018)</title>
-      <link>http://unm.edu/~abyvinod/talk/2018-06-milwaukee/</link>
+      <link>https://abyvinod.github.io/talk/2018-06-milwaukee/</link>
       <pubDate>Mon, 07 May 2018 00:00:00 -0600</pubDate>
       
-      <guid>http://unm.edu/~abyvinod/talk/2018-06-milwaukee/</guid>
+      <guid>https://abyvinod.github.io/talk/2018-06-milwaukee/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Optimal Trade-Off Analysis for Efficiency and Safety in the Spacecraft Rendezvous and Docking Problem (NAASS 2018)</title>
-      <link>http://unm.edu/~abyvinod/talk/2018-06-santafe/</link>
+      <link>https://abyvinod.github.io/talk/2018-06-santafe/</link>
       <pubDate>Mon, 07 May 2018 00:00:00 -0600</pubDate>
       
-      <guid>http://unm.edu/~abyvinod/talk/2018-06-santafe/</guid>
+      <guid>https://abyvinod.github.io/talk/2018-06-santafe/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Safety for stochastic systems: Terminal stochastic reach-avoid problem</title>
-      <link>http://unm.edu/~abyvinod/post/terminal-stochastic-reach-avoid-problem/</link>
+      <link>https://abyvinod.github.io/post/terminal-stochastic-reach-avoid-problem/</link>
       <pubDate>Sun, 06 May 2018 00:00:00 -0600</pubDate>
       
-      <guid>http://unm.edu/~abyvinod/post/terminal-stochastic-reach-avoid-problem/</guid>
+      <guid>https://abyvinod.github.io/post/terminal-stochastic-reach-avoid-problem/</guid>
       <description>
 
 &lt;p&gt;Automation, typically, refers to the use of an onboard computer to drives a system to optimize some objective.
@@ -96,7 +96,7 @@ It is a special class of &lt;a href=&#34;https://en.wikipedia.org/wiki/Verificat
 
 &lt;figure&gt;
 
-&lt;img src=&#34;http://unm.edu/~abyvinod/~abyvinod/img/posts/cartoonStochasticReachAvoid.png&#34; /&gt;
+&lt;img src=&#34;https://abyvinod.github.io/img/posts/cartoonStochasticReachAvoid.png&#34; /&gt;
 
 
 
@@ -114,7 +114,7 @@ As shown in Figure 2, we have two satellites &amp;mdash; a &amp;ldquo;chief&amp;
 To simplify the study, we consider the dynamics of the deputy satellites relative to the chief satellite, and in contrast to a true mathematical model, we consider a simpler stochastic model to describe the relative dynamics.
 &lt;figure&gt;
 
-&lt;img src=&#34;http://unm.edu/~abyvinod/~abyvinod/img/posts/cwh_sketch.png&#34; /&gt;
+&lt;img src=&#34;https://abyvinod.github.io/img/posts/cwh_sketch.png&#34; /&gt;
 
 
 
@@ -172,10 +172,10 @@ Our safety and performance requirements are:&lt;/p&gt;
     
     <item>
       <title>Scalable stochastic reachability techniques</title>
-      <link>http://unm.edu/~abyvinod/project/sr/</link>
+      <link>https://abyvinod.github.io/project/sr/</link>
       <pubDate>Sat, 05 May 2018 00:00:00 -0600</pubDate>
       
-      <guid>http://unm.edu/~abyvinod/project/sr/</guid>
+      <guid>https://abyvinod.github.io/project/sr/</guid>
       <description>
 
 &lt;h2&gt;Table of Contents&lt;/h2&gt;
@@ -255,28 +255,28 @@ This work has won multiple recognitions:&lt;/p&gt;
     
     <item>
       <title>Stochastic motion planning</title>
-      <link>http://unm.edu/~abyvinod/project/stochastic-motion-planning/</link>
+      <link>https://abyvinod.github.io/project/stochastic-motion-planning/</link>
       <pubDate>Sat, 05 May 2018 00:00:00 -0600</pubDate>
       
-      <guid>http://unm.edu/~abyvinod/project/stochastic-motion-planning/</guid>
+      <guid>https://abyvinod.github.io/project/stochastic-motion-planning/</guid>
       <description></description>
     </item>
     
     <item>
       <title>User-interface design for human-automation systems</title>
-      <link>http://unm.edu/~abyvinod/project/user-interface/</link>
+      <link>https://abyvinod.github.io/project/user-interface/</link>
       <pubDate>Sat, 05 May 2018 00:00:00 -0600</pubDate>
       
-      <guid>http://unm.edu/~abyvinod/project/user-interface/</guid>
+      <guid>https://abyvinod.github.io/project/user-interface/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Scalable Underapproximative Verification of Stochastic LTI Systems Using Convexity and Compactness</title>
-      <link>http://unm.edu/~abyvinod/publication/hscc2018/</link>
+      <link>https://abyvinod.github.io/publication/hscc2018/</link>
       <pubDate>Sun, 01 Apr 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://unm.edu/~abyvinod/publication/hscc2018/</guid>
+      <guid>https://abyvinod.github.io/publication/hscc2018/</guid>
       <description>&lt;p&gt;This paper was a &lt;strong&gt;finalist for the HSCC 2018 best paper award&lt;/strong&gt;.&lt;/p&gt;
 
 &lt;p&gt;The main contributions of this paper was:&lt;/p&gt;
@@ -300,11 +300,11 @@ This work has won multiple recognitions:&lt;/p&gt;
     
     <item>
       <title>Scalable Underapproximation for Stochastic Reach-Avoid Problem for High-Dimensional LTI Systems using Fourier Transforms</title>
-      <link>http://unm.edu/~abyvinod/publication/cssl2017/</link>
+      <link>https://abyvinod.github.io/publication/cssl2017/</link>
       <pubDate>Fri, 01 Dec 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://unm.edu/~abyvinod/publication/cssl2017/</guid>
-      <description>&lt;p&gt;This paper tackles the &lt;a href=&#34;http://unm.edu/~abyvinod/post/terminal-stochastic-reach-avoid-problem/&#34; target=&#34;_blank&#34;&gt;terminal hitting-time stochastic reach-avoid
+      <guid>https://abyvinod.github.io/publication/cssl2017/</guid>
+      <description>&lt;p&gt;This paper tackles the &lt;a href=&#34;https://abyvinod.github.io/post/terminal-stochastic-reach-avoid-problem/&#34; target=&#34;_blank&#34;&gt;terminal hitting-time stochastic reach-avoid
 problem&lt;/a&gt;.
 It proposes:&lt;/p&gt;
 
@@ -319,46 +319,46 @@ It proposes:&lt;/p&gt;
     
     <item>
       <title>Underapproximation of Reach-Avoid Sets for Discrete-Time Stochastic Systems via Lagrangian Methods</title>
-      <link>http://unm.edu/~abyvinod/publication/cdc2017/</link>
+      <link>https://abyvinod.github.io/publication/cdc2017/</link>
       <pubDate>Fri, 01 Dec 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://unm.edu/~abyvinod/publication/cdc2017/</guid>
+      <guid>https://abyvinod.github.io/publication/cdc2017/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Aerial Suppression of Airborne Platforms (ASAP): Coordinated Capture of a Threat UAS via Stochastic Reachability</title>
-      <link>http://unm.edu/~abyvinod/publication/isar2017/</link>
+      <link>https://abyvinod.github.io/publication/isar2017/</link>
       <pubDate>Sat, 01 Jul 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://unm.edu/~abyvinod/publication/isar2017/</guid>
+      <guid>https://abyvinod.github.io/publication/isar2017/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Computation of forward stochastic reach sets: Application to stochastic, dynamic obstacle avoidance</title>
-      <link>http://unm.edu/~abyvinod/publication/acc2017/</link>
+      <link>https://abyvinod.github.io/publication/acc2017/</link>
       <pubDate>Sat, 01 Jul 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://unm.edu/~abyvinod/publication/acc2017/</guid>
+      <guid>https://abyvinod.github.io/publication/acc2017/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Dynamic risk tolerance: Motion planning by balancing short-term and long-term stochastic dynamic predictions</title>
-      <link>http://unm.edu/~abyvinod/publication/icra2017/</link>
+      <link>https://abyvinod.github.io/publication/icra2017/</link>
       <pubDate>Mon, 01 May 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://unm.edu/~abyvinod/publication/icra2017/</guid>
+      <guid>https://abyvinod.github.io/publication/icra2017/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Forward Stochastic Reachability Analysis for Uncontrolled Linear Systems using Fourier Transforms</title>
-      <link>http://unm.edu/~abyvinod/publication/hscc2017/</link>
+      <link>https://abyvinod.github.io/publication/hscc2017/</link>
       <pubDate>Sat, 01 Apr 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://unm.edu/~abyvinod/publication/hscc2017/</guid>
+      <guid>https://abyvinod.github.io/publication/hscc2017/</guid>
       <description></description>
     </item>
     

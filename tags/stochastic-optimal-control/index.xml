@@ -2,40 +2,40 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Stochastic-optimal-control on Abraham P. Vinod</title>
-    <link>http://unm.edu/~abyvinod/tags/stochastic-optimal-control/</link>
+    <link>https://abyvinod.github.io/tags/stochastic-optimal-control/</link>
     <description>Recent content in Stochastic-optimal-control on Abraham P. Vinod</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018</copyright>
     <lastBuildDate>Sun, 06 May 2018 00:00:00 -0600</lastBuildDate>
     
-	<atom:link href="http://unm.edu/~abyvinod/tags/stochastic-optimal-control/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://abyvinod.github.io/tags/stochastic-optimal-control/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Safety for stochastic systems: Terminal stochastic reach-avoid problem</title>
-      <link>http://unm.edu/~abyvinod/post/terminal-stochastic-reach-avoid-problem/</link>
+      <link>https://abyvinod.github.io/post/terminal-stochastic-reach-avoid-problem/</link>
       <pubDate>Sun, 06 May 2018 00:00:00 -0600</pubDate>
       
-      <guid>http://unm.edu/~abyvinod/post/terminal-stochastic-reach-avoid-problem/</guid>
+      <guid>https://abyvinod.github.io/post/terminal-stochastic-reach-avoid-problem/</guid>
       <description>Automation, typically, refers to the use of an onboard computer to drives a system to optimize some objective. It makes our day-to-day life simpler and efficient, for example, in transportation (autopilot systems and self-driving cars), space applications (spacecraft rendezvous and docking problem), biomedical applications, power grid, and the list goes on and on. However, as we hand over more and more control to the automation, we naturally seek guarantees of safety and performance.</description>
     </item>
     
     <item>
       <title>Scalable stochastic reachability techniques</title>
-      <link>http://unm.edu/~abyvinod/project/sr/</link>
+      <link>https://abyvinod.github.io/project/sr/</link>
       <pubDate>Sat, 05 May 2018 00:00:00 -0600</pubDate>
       
-      <guid>http://unm.edu/~abyvinod/project/sr/</guid>
+      <guid>https://abyvinod.github.io/project/sr/</guid>
       <description>Table of Contents  Problem formulation Solutions proposed Awards and recognition Future work   Problem formulation Real-world problems are typically stochasticity and high-dimensional. Stochasticity may arise from human actions, unmodeled phenomena (e.g. weather), and uncertainty in system parameters. As we strive for more automation, it is natural ask for guarantees of safety and performance, which is a hard problem. This project aims to provide scalable and tractable guarantees of safety and performance in real world problems, described as continuous-state discrete-time stochastic models.</description>
     </item>
     
     <item>
       <title>Stochastic motion planning</title>
-      <link>http://unm.edu/~abyvinod/project/stochastic-motion-planning/</link>
+      <link>https://abyvinod.github.io/project/stochastic-motion-planning/</link>
       <pubDate>Sat, 05 May 2018 00:00:00 -0600</pubDate>
       
-      <guid>http://unm.edu/~abyvinod/project/stochastic-motion-planning/</guid>
+      <guid>https://abyvinod.github.io/project/stochastic-motion-planning/</guid>
       <description></description>
     </item>
     

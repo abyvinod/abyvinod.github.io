@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Abraham P. Vinod</title>
-    <link>http://unm.edu/~abyvinod/post/</link>
+    <link>https://abyvinod.github.io/post/</link>
     <description>Recent content in Posts on Abraham P. Vinod</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018</copyright>
     <lastBuildDate>Sun, 01 Jan 2017 00:00:00 -0700</lastBuildDate>
     
-	<atom:link href="http://unm.edu/~abyvinod/post/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://abyvinod.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Safety for stochastic systems: Terminal stochastic reach-avoid problem</title>
-      <link>http://unm.edu/~abyvinod/post/terminal-stochastic-reach-avoid-problem/</link>
+      <link>https://abyvinod.github.io/post/terminal-stochastic-reach-avoid-problem/</link>
       <pubDate>Sun, 06 May 2018 00:00:00 -0600</pubDate>
       
-      <guid>http://unm.edu/~abyvinod/post/terminal-stochastic-reach-avoid-problem/</guid>
+      <guid>https://abyvinod.github.io/post/terminal-stochastic-reach-avoid-problem/</guid>
       <description>Automation, typically, refers to the use of an onboard computer to drives a system to optimize some objective. It makes our day-to-day life simpler and efficient, for example, in transportation (autopilot systems and self-driving cars), space applications (spacecraft rendezvous and docking problem), biomedical applications, power grid, and the list goes on and on. However, as we hand over more and more control to the automation, we naturally seek guarantees of safety and performance.</description>
     </item>
     
