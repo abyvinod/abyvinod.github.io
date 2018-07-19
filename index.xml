@@ -299,6 +299,33 @@ This work has won multiple recognitions:&lt;/p&gt;
     </item>
     
     <item>
+      <title>Scalable Stochastic Reachability: Theory, Computation, and Control</title>
+      <link>https://abyvinod.github.io/talk/2018-03-02-washington/</link>
+      <pubDate>Fri, 02 Mar 2018 00:00:00 -0700</pubDate>
+      
+      <guid>https://abyvinod.github.io/talk/2018-03-02-washington/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Safe autonomy via Stochastic Reachability</title>
+      <link>https://abyvinod.github.io/talk/2018-02-01-austin/</link>
+      <pubDate>Thu, 01 Feb 2018 00:00:00 -0700</pubDate>
+      
+      <guid>https://abyvinod.github.io/talk/2018-02-01-austin/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Safe autonomy via Stochastic Reachability</title>
+      <link>https://abyvinod.github.io/talk/2018-01-10-iisc/</link>
+      <pubDate>Wed, 10 Jan 2018 00:00:00 -0700</pubDate>
+      
+      <guid>https://abyvinod.github.io/talk/2018-01-10-iisc/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Scalable Underapproximation for Stochastic Reach-Avoid Problem for High-Dimensional LTI Systems using Fourier Transforms</title>
       <link>https://abyvinod.github.io/publication/cssl2017/</link>
       <pubDate>Fri, 01 Dec 2017 00:00:00 +0000</pubDate>
@@ -332,33 +359,6 @@ It proposes:&lt;/p&gt;
       <pubDate>Sat, 01 Jul 2017 00:00:00 +0000</pubDate>
       
       <guid>https://abyvinod.github.io/publication/isar2017/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Computation of forward stochastic reach sets: Application to stochastic, dynamic obstacle avoidance</title>
-      <link>https://abyvinod.github.io/publication/acc2017/</link>
-      <pubDate>Sat, 01 Jul 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://abyvinod.github.io/publication/acc2017/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Dynamic risk tolerance: Motion planning by balancing short-term and long-term stochastic dynamic predictions</title>
-      <link>https://abyvinod.github.io/publication/icra2017/</link>
-      <pubDate>Mon, 01 May 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://abyvinod.github.io/publication/icra2017/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Forward Stochastic Reachability Analysis for Uncontrolled Linear Systems using Fourier Transforms</title>
-      <link>https://abyvinod.github.io/publication/hscc2017/</link>
-      <pubDate>Sat, 01 Apr 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://abyvinod.github.io/publication/hscc2017/</guid>
       <description></description>
     </item>
     
