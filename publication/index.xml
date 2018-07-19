@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Publications on Abraham P. Vinod</title>
+    <link>http://unm.edu/~abyvinod/publication/</link>
+    <description>Recent content in Publications on Abraham P. Vinod</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2018</copyright>
+    <lastBuildDate>Sun, 01 Jan 2017 00:00:00 -0700</lastBuildDate>
+    
+	<atom:link href="http://unm.edu/~abyvinod/publication/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Multiple Pursuer-Based Intercept Via Forward Stochastic Reachability</title>
+      <link>http://unm.edu/~abyvinod/publication/acc2018/</link>
+      <pubDate>Wed, 27 Jun 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://unm.edu/~abyvinod/publication/acc2018/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Scalable Underapproximative Verification of Stochastic LTI Systems Using Convexity and Compactness</title>
+      <link>http://unm.edu/~abyvinod/publication/hscc2018/</link>
+      <pubDate>Sun, 01 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://unm.edu/~abyvinod/publication/hscc2018/</guid>
+      <description>This paper was a finalist for the HSCC 2018 best paper award.
+The main contributions of this paper was:
+ Sufficient conditions for the convexity and compactness of the stochastic reach-avoid sets (set of safe1 initial states for stochastic systems under bounded control authority) for LTI systems Tractable and scalable polytopic underapproximation by utilizing the &amp;ldquo;oracle&amp;rdquo; discussed in CSSL 2017 paper Sufficient conditions for bang-bang safe policies.   Safety is defined as being able to reach a target set at the time horizon and stay within the safe set during the rest of the time horizon.</description>
+    </item>
+    
+    <item>
+      <title>Scalable Underapproximation for Stochastic Reach-Avoid Problem for High-Dimensional LTI Systems using Fourier Transforms</title>
+      <link>http://unm.edu/~abyvinod/publication/cssl2017/</link>
+      <pubDate>Fri, 01 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://unm.edu/~abyvinod/publication/cssl2017/</guid>
+      <description>This paper tackles the terminal hitting-time stochastic reach-avoid problem. It proposes:
+ Sufficient conditions under which such a controller exists An oracle that computes an open-loop optimal controller that achieves an (optimized) lower bound &amp;mdash; the open-loop underapproximation &amp;mdash; on the maximum stochastic reach-avoid probability  </description>
+    </item>
+    
+    <item>
+      <title>Underapproximation of Reach-Avoid Sets for Discrete-Time Stochastic Systems via Lagrangian Methods</title>
+      <link>http://unm.edu/~abyvinod/publication/cdc2017/</link>
+      <pubDate>Fri, 01 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://unm.edu/~abyvinod/publication/cdc2017/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Aerial Suppression of Airborne Platforms (ASAP): Coordinated Capture of a Threat UAS via Stochastic Reachability</title>
+      <link>http://unm.edu/~abyvinod/publication/isar2017/</link>
+      <pubDate>Sat, 01 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://unm.edu/~abyvinod/publication/isar2017/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Computation of forward stochastic reach sets: Application to stochastic, dynamic obstacle avoidance</title>
+      <link>http://unm.edu/~abyvinod/publication/acc2017/</link>
+      <pubDate>Sat, 01 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://unm.edu/~abyvinod/publication/acc2017/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Dynamic risk tolerance: Motion planning by balancing short-term and long-term stochastic dynamic predictions</title>
+      <link>http://unm.edu/~abyvinod/publication/icra2017/</link>
+      <pubDate>Mon, 01 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://unm.edu/~abyvinod/publication/icra2017/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Forward Stochastic Reachability Analysis for Uncontrolled Linear Systems using Fourier Transforms</title>
+      <link>http://unm.edu/~abyvinod/publication/hscc2017/</link>
+      <pubDate>Sat, 01 Apr 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://unm.edu/~abyvinod/publication/hscc2017/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Viable set approximation for linear-Gaussian systems with unknown, bounded variance</title>
+      <link>http://unm.edu/~abyvinod/publication/cdc2016/</link>
+      <pubDate>Thu, 01 Dec 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://unm.edu/~abyvinod/publication/cdc2016/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Validation of cognitive models for collaborative hybrid systems with discrete human input</title>
+      <link>http://unm.edu/~abyvinod/publication/iros2016/</link>
+      <pubDate>Sat, 01 Oct 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://unm.edu/~abyvinod/publication/iros2016/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>User-interface design for MIMO LTI human-automation systems through sensor placement</title>
+      <link>http://unm.edu/~abyvinod/publication/acc2016/</link>
+      <pubDate>Fri, 01 Jul 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://unm.edu/~abyvinod/publication/acc2016/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>A Deterministic Attitude Estimation Using a Single Vector Information and Rate Gyros</title>
+      <link>http://unm.edu/~abyvinod/publication/tmech2015/</link>
+      <pubDate>Thu, 01 Oct 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://unm.edu/~abyvinod/publication/tmech2015/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Deterministic Attitude Estimation</title>
+      <link>http://unm.edu/~abyvinod/publication/bookchap_tmech2015/</link>
+      <pubDate>Thu, 01 Oct 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://unm.edu/~abyvinod/publication/bookchap_tmech2015/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>A Deterministic Attitude Estimation Using a Single Vector Information and Rate Gyros</title>
+      <link>http://unm.edu/~abyvinod/publication/thesis_mtech2014/</link>
+      <pubDate>Thu, 01 May 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://unm.edu/~abyvinod/publication/thesis_mtech2014/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

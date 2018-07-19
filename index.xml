@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Abraham P. Vinod on Abraham P. Vinod</title>
+    <link>http://unm.edu/~abyvinod/</link>
+    <description>Recent content in Abraham P. Vinod on Abraham P. Vinod</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2018</copyright>
+    <lastBuildDate>Wed, 20 Apr 2016 00:00:00 -0600</lastBuildDate>
+    <atom:link href="/~abyvinod/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Multiple Pursuer-Based Intercept Via Forward Stochastic Reachability</title>
+      <link>http://unm.edu/~abyvinod/publication/acc2018/</link>
+      <pubDate>Wed, 27 Jun 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://unm.edu/~abyvinod/publication/acc2018/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Scalable Stochastic Reachability: Theory, Computation, and Control</title>
+      <link>http://unm.edu/~abyvinod/talk/2018-05-berkeley/</link>
+      <pubDate>Tue, 15 May 2018 00:00:00 -0600</pubDate>
+      
+      <guid>http://unm.edu/~abyvinod/talk/2018-05-berkeley/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Multiple Pursuer-Based Intercept Via Forward Stochastic Reachability (ACC 2018)</title>
+      <link>http://unm.edu/~abyvinod/talk/2018-06-milwaukee/</link>
+      <pubDate>Mon, 07 May 2018 00:00:00 -0600</pubDate>
+      
+      <guid>http://unm.edu/~abyvinod/talk/2018-06-milwaukee/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Optimal Trade-Off Analysis for Efficiency and Safety in the Spacecraft Rendezvous and Docking Problem (NAASS 2018)</title>
+      <link>http://unm.edu/~abyvinod/talk/2018-06-santafe/</link>
+      <pubDate>Mon, 07 May 2018 00:00:00 -0600</pubDate>
+      
+      <guid>http://unm.edu/~abyvinod/talk/2018-06-santafe/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Safety for stochastic systems: Terminal stochastic reach-avoid problem</title>
+      <link>http://unm.edu/~abyvinod/post/terminal-stochastic-reach-avoid-problem/</link>
+      <pubDate>Sun, 06 May 2018 00:00:00 -0600</pubDate>
+      
+      <guid>http://unm.edu/~abyvinod/post/terminal-stochastic-reach-avoid-problem/</guid>
+      <description>
+
+&lt;p&gt;Automation, typically, refers to the use of an onboard computer to drives a system to optimize some objective.
+It makes our day-to-day life simpler and efficient, for example, in transportation (&lt;a href=&#34;https://en.wikipedia.org/wiki/Autopilot&#34; target=&#34;_blank&#34;&gt;autopilot systems&lt;/a&gt; and &lt;a href=&#34;https://en.wikipedia.org/wiki/Autonomous_car&#34; target=&#34;_blank&#34;&gt;self-driving cars&lt;/a&gt;), space applications (&lt;a href=&#34;https://en.wikipedia.org/wiki/Space_rendezvous&#34; target=&#34;_blank&#34;&gt;spacecraft rendezvous and docking problem&lt;/a&gt;), biomedical applications, power grid, and the list goes on and on.
+However, as we hand over more and more control to the automation, we naturally seek guarantees of safety and performance. After all, we do not want to spend billions of dollar in R&amp;amp;D and develop an automation that may cause harm.&lt;/p&gt;
+
+&lt;!--The goal of these series of blog-posts would to be give an insight on to my PhD work on stochastic reachability with minimal math. --&gt;
+
+&lt;!--1. [Introduction to terminal stochastic reach-avoid problem](./)--&gt;
+
+&lt;!--1. [](./)--&gt;
+
+&lt;!--# Introduction to terminal stochastic reach-avoid problem--&gt;
+
+&lt;h3 id=&#34;why-is-providing-safety-guarantees-in-automated-control-systems-for-real-world-problems-hard&#34;&gt;Why is providing safety guarantees in automated control systems for real-world problems hard?&lt;/h3&gt;
+
+&lt;p&gt;In control theory, we attack real-world problems by formulating a mathematical model and studying its relevant properties.
+The two key challenges in providing the desired safety guarantees for real-world systems are stochasticity and high-dimensionality.&lt;/p&gt;
+
+&lt;p&gt;Stochasticity in our models help us capture human inputs (like actions of the other drivers on the street for the self-driving car problem), disturbance effects (like weather in air navigation/power grid systems), varying parameters (like patient parameters in biomedical devices), and other unmodelled phenomena (like simplifications&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;#fn:2&#34;&gt;1&lt;/a&gt;&lt;/sup&gt; done in complex system models seen in space and power applications).
+High-dimensional systems evolve as a function of a larger set of states, and thereby allowing the mathematical model to be closer to the reality compared to their low-dimensional models.&lt;/p&gt;
+
+&lt;p&gt;We pose the problem of safety as Problem A is:
+&lt;strong&gt;Design a controller that maximizes the probability of satisfaction of the following constraints under bounded control space for the system:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Ensure that the system reaches the target set at a finite time horizon (not before). (Reach constraint)&lt;/li&gt;
+&lt;li&gt;Ensure that the system stays within the safe set at a finite time horizon (not before). (Reach constraint)&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Problem A is accompanied by the following information:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;the initial state of the system,&lt;/li&gt;
+&lt;li&gt;the safe set,&lt;/li&gt;
+&lt;li&gt;the target set,&lt;/li&gt;
+&lt;li&gt;the stochastic system dynamics along with the bounded control space.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Problem A is called the &lt;strong&gt;terminal hitting-time stochastic reach-avoid problem&lt;/strong&gt;&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;#fn:2&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;.
+It is a special class of &lt;a href=&#34;https://en.wikipedia.org/wiki/Verification_and_validation&#34; target=&#34;_blank&#34;&gt;verification&lt;/a&gt; problems, which has been well studied for the past couple of decades in computer science as well as control theory.&lt;/p&gt;
+
+&lt;figure&gt;
+
+&lt;img src=&#34;http://unm.edu/~abyvinod/~abyvinod/img/posts/cartoonStochasticReachAvoid.png&#34; /&gt;
+
+
+
+&lt;figcaption data-pre=&#34;Figure &#34; data-post=&#34;:&#34; class=&#34;numbered&#34;&gt;
+  &lt;h4&gt;Given the initial state, we need to pick $\pi^*$ opposed to $\pi_2$.  Here, growing triangles denote the uncertain trajectories under the application of a control policy $\pi^\ast$ and $\pi_2$, $\mathcal{X}$ refers to the state space, $\mathcal{S}\subseteq \mathcal{X}$ refers to the safe set, and $\mathcal{T}\subseteq \mathcal{X}$ refers to the target set.&lt;/h4&gt;
+  
+&lt;/figcaption&gt;
+
+&lt;/figure&gt;
+
+&lt;h3 id=&#34;safety-verification-explained-via-an-example-the-spacecraft-rendezvous-and-docking-problem&#34;&gt;Safety verification explained via an example: the spacecraft rendezvous and docking problem&lt;/h3&gt;
+
+&lt;p&gt;Consider the spacecraft rendezvous and docking problem.
+As shown in Figure 2, we have two satellites &amp;mdash; a &amp;ldquo;chief&amp;rdquo; satellite and a &amp;ldquo;deputy&amp;rdquo; satellite.
+To simplify the study, we consider the dynamics of the deputy satellites relative to the chief satellite, and in contrast to a true mathematical model, we consider a simpler stochastic model to describe the relative dynamics.
+&lt;figure&gt;
+
+&lt;img src=&#34;http://unm.edu/~abyvinod/~abyvinod/img/posts/cwh_sketch.png&#34; /&gt;
+
+
+
+&lt;figcaption data-pre=&#34;Figure &#34; data-post=&#34;:&#34; class=&#34;numbered&#34;&gt;
+  &lt;h4&gt;Satellite rendezvous and docking problem (picture courtesy: &lt;a href=&#34;http://www.unm.edu/~gleasonj/&#34; target=&#34;_blank&#34;&gt;J. Gleason&lt;/a&gt;)&lt;/h4&gt;
+  
+&lt;/figcaption&gt;
+
+&lt;/figure&gt;
+Our safety and performance requirements are:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Ensure that the deputy satellite reaches the chief satellite at a finite time horizon (not before). (Reach constraint)&lt;/li&gt;
+&lt;li&gt;Ensure that the deputy satellite remains in a line-of-sight cone till it satisfies objective 1. (Avoid constraint)&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;We are interested in solving Problem A: &lt;strong&gt;Design a controller that maximizes the probability of satisfaction of the above objectives &lt;em&gt;1 and 2&lt;/em&gt; under bounded control space for the deputy satellite.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;In this case, we have the following information:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;the initial state of the deputy satellite,&lt;/li&gt;
+&lt;li&gt;the safe set (definition of the line-of-sight cone),&lt;/li&gt;
+&lt;li&gt;the target set (a box around the origin),&lt;/li&gt;
+&lt;li&gt;the relative stochastic dynamics of the deputy satellite with respect to the chief satellite.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Note that the avoid constraint is motivated by the fact that sensing and localization capabilities are limited in space applications.&lt;/p&gt;
+
+&lt;!--My PhD research has focussed on studying various properties of this problem. --&gt;
+
+&lt;!--TODO: link my thesis--&gt;
+
+&lt;!--I have successfully answered the following questions:--&gt;
+
+&lt;!--1. When does a controller exist that can solve Problem P?--&gt;
+
+&lt;!--1. What are the sufficient conditions under which the optimal value function[^4] to the Problem P:--&gt;
+
+&lt;p&gt;&lt;!--1. Upper-semicontinuous?--&gt;
+ &lt;!--1. Log-concave?--&gt;&lt;/p&gt;
+
+&lt;!--[^4]: A function that maps the initial state of the system to the the deputy satellite to the optimal stochastic reach-avoid probability.--&gt;
+&lt;div class=&#34;footnotes&#34;&gt;
+
+&lt;hr /&gt;
+
+&lt;ol&gt;
+&lt;li id=&#34;fn:2&#34;&gt;See Summers, Sean, and John Lygeros. &amp;ldquo;&lt;a href=&#34;https://www.sciencedirect.com/science/article/pii/S0005109810003547&#34; target=&#34;_blank&#34;&gt;Verification of discrete time stochastic hybrid systems: A stochastic reach-avoid decision problem.&lt;/a&gt;&amp;rdquo; Automatica, Vol. 46, No. 12,  2010, pp. 1951-1961.
+ &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:2&#34;&gt;&lt;sup&gt;^&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Scalable stochastic reachability techniques</title>
+      <link>http://unm.edu/~abyvinod/project/sr/</link>
+      <pubDate>Sat, 05 May 2018 00:00:00 -0600</pubDate>
+      
+      <guid>http://unm.edu/~abyvinod/project/sr/</guid>
+      <description>
+
+&lt;h2&gt;Table of Contents&lt;/h2&gt;
+&lt;nav id=&#34;TableOfContents&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#problem-formulation&#34;&gt;Problem formulation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#solutions-proposed&#34;&gt;Solutions proposed&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#awards-and-recognition&#34;&gt;Awards and recognition&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#future-work&#34;&gt;Future work&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/nav&gt;
+
+
+&lt;h1 id=&#34;problem-formulation&#34;&gt;Problem formulation&lt;/h1&gt;
+
+&lt;p&gt;Real-world problems are typically stochasticity and high-dimensional.  Stochasticity may arise from human actions, unmodeled phenomena (e.g. weather), and uncertainty in system parameters.  As we strive for more automation, it is natural ask for guarantees of safety and performance, which is a &lt;a href=&#34;../../post/terminal-stochastic-reach-avoid-problem/#why-is-providing-safety-guarantees-in-automated-control-systems-for-real-world-problems-hard&#34;&gt;hard problem&lt;/a&gt;.  This project aims to provide scalable and tractable guarantees of safety and performance in real world problems, described as &lt;em&gt;continuous-state discrete-time&lt;/em&gt; stochastic models.&lt;/p&gt;
+
+&lt;p&gt;For these models, this project tries to address the following problems:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Forward stochastic reachability problem&lt;/strong&gt;: For an uncontrolled stochastic system and a given initial state, what is:
+
+&lt;ol&gt;
+&lt;li&gt;the set of possible values&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt; of the state in future?&lt;/li&gt;
+&lt;li&gt;the likelihood associated with it?&lt;/li&gt;
+&lt;/ol&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Backward stochastic reachability problem&lt;/strong&gt;: For a stochastic system with bounded control authority and a set of (possibly time-varying) constraints on the state,
+
+&lt;ol&gt;
+&lt;li&gt;What is the maximum likelihood of satisfying these constraints from a given initial state?&lt;/li&gt;
+&lt;li&gt;How can we design a controller that achieves this computed likelihood while satisfying the specified control bounds?&lt;/li&gt;
+&lt;li&gt;What is the set of initial states that can achieve a specified likelihood of safety?&lt;/li&gt;
+&lt;/ol&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Stochastic optimal control with safety as a priority&lt;/strong&gt;: Can we design controllers that maximize safety while simultaneously minimize an additional cost function, for example, fuel costs?&lt;br /&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 id=&#34;solutions-proposed&#34;&gt;Solutions proposed&lt;/h1&gt;
+
+&lt;p&gt;I have used &lt;a href=&#34;https://en.wikipedia.org/wiki/Characteristic_function_(probability_theory)&#34; target=&#34;_blank&#34;&gt;Fourier transforms&lt;/a&gt; to answer &lt;a href=&#34;https://dl.acm.org/citation.cfm?doid=3049797.3049818&#34; target=&#34;_blank&#34;&gt;Problem 1&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;To answer Problem 2, I have proposed:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;a recursion-free, parallelizable, and &lt;a href=&#34;https://en.wikipedia.org/wiki/Anytime_algorithm&#34; target=&#34;_blank&#34;&gt;anytime&lt;/a&gt; approach that relies on &lt;a href=&#34;https://en.wikipedia.org/wiki/Characteristic_function_(probability_theory)&#34; target=&#34;_blank&#34;&gt;Fourier transforms&lt;/a&gt;, &lt;a href=&#34;https://en.wikipedia.org/wiki/Convex_optimization&#34; target=&#34;_blank&#34;&gt;convex optimization&lt;/a&gt;, and &lt;a href=&#34;https://en.wikipedia.org/wiki/Pattern_search_(optimization)&#34; target=&#34;_blank&#34;&gt;gradient-free optimization techniques&lt;/a&gt; to propose an open-loop underapproximation of &lt;a href=&#34;https://ieeexplore.ieee.org/document/7950904/&#34; target=&#34;_blank&#34;&gt;the probability, the controller synthesis&lt;/a&gt;, and the &lt;a href=&#34;http://doi.acm.org/10.1145/3178126.3178148&#34; target=&#34;_blank&#34;&gt;set&lt;/a&gt;, and&lt;/li&gt;
+&lt;li&gt;(&lt;strong&gt;developed in collaboration with &lt;a href=&#34;http://unm.edu/~gleasonj/&#34; target=&#34;_blank&#34;&gt;Joseph Gleason&lt;/a&gt;&lt;/strong&gt;), a set operation-based approach to compute an &lt;a href=&#34;https://ieeexplore.ieee.org/document/8264291/&#34; target=&#34;_blank&#34;&gt;underapproximation of the stochastic reach-avoid&lt;/a&gt; by solving a related &lt;a href=&#34;https://dl.acm.org/citation.cfm?id=2244990&#34; target=&#34;_blank&#34;&gt;robust reach-avoid problem&lt;/a&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;I have used &lt;a href=&#34;../../talk/2018-06-santafe/&#34;&gt;bicriterion optimization techniques&lt;/a&gt; to address Problem 3.&lt;/p&gt;
+
+&lt;h1 id=&#34;awards-and-recognition&#34;&gt;Awards and recognition&lt;/h1&gt;
+
+&lt;p&gt;During my PhD research under the advisement of &lt;a href=&#34;http://unm.edu/~oishi/&#34; target=&#34;_blank&#34;&gt;Dr. Meeko Oishi&lt;/a&gt;, I have developed scalable and grid-free techniques to answer these problems.
+This work has won multiple recognitions:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;http://hscc2017.ece.illinois.edu/Awards.html&#34; target=&#34;_blank&#34;&gt;Best student paper award&lt;/a&gt; at 2017 ACM Proceedings of Hybrid Systems: Computation and Control, Pittsburgh, USA.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.hscc2018.deib.polimi.it/award-finalists-and-winners&#34; target=&#34;_blank&#34;&gt;Finalist for the best paper award&lt;/a&gt; at 2018 ACM Proceedings of Hybrid Systems: Computation and Control, Porto, Portugal.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 id=&#34;future-work&#34;&gt;Future work&lt;/h1&gt;
+
+&lt;ol&gt;
+&lt;li&gt;I am building, in collaboration with &lt;a href=&#34;http://unm.edu/~gleasonj/&#34; target=&#34;_blank&#34;&gt;Joseph Gleason&lt;/a&gt;, a MATLAB toolbox to perform stochastic reachability computations using the proposed methods.&lt;/li&gt;
+&lt;li&gt;I am also extending these results to more richer classes of systems and control policies.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;footnotes&#34;&gt;
+
+&lt;hr /&gt;
+
+&lt;ol&gt;
+&lt;li id=&#34;fn:1&#34;&gt;This set is actually the &lt;a href=&#34;https://en.wikipedia.org/wiki/Support_(mathematics)#In_probability_and_measure_theory&#34; target=&#34;_blank&#34;&gt;support&lt;/a&gt; of the random vector describing the state.
+ &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:1&#34;&gt;&lt;sup&gt;^&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Stochastic motion planning</title>
+      <link>http://unm.edu/~abyvinod/project/stochastic-motion-planning/</link>
+      <pubDate>Sat, 05 May 2018 00:00:00 -0600</pubDate>
+      
+      <guid>http://unm.edu/~abyvinod/project/stochastic-motion-planning/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>User-interface design for human-automation systems</title>
+      <link>http://unm.edu/~abyvinod/project/user-interface/</link>
+      <pubDate>Sat, 05 May 2018 00:00:00 -0600</pubDate>
+      
+      <guid>http://unm.edu/~abyvinod/project/user-interface/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Scalable Underapproximative Verification of Stochastic LTI Systems Using Convexity and Compactness</title>
+      <link>http://unm.edu/~abyvinod/publication/hscc2018/</link>
+      <pubDate>Sun, 01 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://unm.edu/~abyvinod/publication/hscc2018/</guid>
+      <description>&lt;p&gt;This paper was a &lt;strong&gt;finalist for the HSCC 2018 best paper award&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;The main contributions of this paper was:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Sufficient conditions for the convexity and compactness of the stochastic reach-avoid sets (set of &lt;em&gt;safe&lt;/em&gt;&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt; initial states for stochastic systems under bounded control authority) for LTI systems&lt;/li&gt;
+&lt;li&gt;Tractable and scalable polytopic underapproximation by utilizing the &amp;ldquo;oracle&amp;rdquo; discussed in &lt;a href=&#34;../cssl2017/&#34;&gt;CSSL 2017 paper&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Sufficient conditions for bang-bang safe policies.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;footnotes&#34;&gt;
+
+&lt;hr /&gt;
+
+&lt;ol&gt;
+&lt;li id=&#34;fn:1&#34;&gt;Safety is defined as being able to reach a target set at the time horizon and stay within the safe set during the rest of the time horizon.
+ &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:1&#34;&gt;&lt;sup&gt;^&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Scalable Underapproximation for Stochastic Reach-Avoid Problem for High-Dimensional LTI Systems using Fourier Transforms</title>
+      <link>http://unm.edu/~abyvinod/publication/cssl2017/</link>
+      <pubDate>Fri, 01 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://unm.edu/~abyvinod/publication/cssl2017/</guid>
+      <description>&lt;p&gt;This paper tackles the &lt;a href=&#34;http://unm.edu/~abyvinod/post/terminal-stochastic-reach-avoid-problem/&#34; target=&#34;_blank&#34;&gt;terminal hitting-time stochastic reach-avoid
+problem&lt;/a&gt;.
+It proposes:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Sufficient conditions under which such a controller exists&lt;/li&gt;
+&lt;li&gt;An oracle that computes an open-loop optimal controller that achieves an (optimized) lower bound &amp;mdash; the &lt;em&gt;open-loop underapproximation&lt;/em&gt; &amp;mdash; on the maximum stochastic reach-avoid probability&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;!--An open-loop **underapproximation** to this problem that uses numerical integration and gradient-free optimization to c--&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Underapproximation of Reach-Avoid Sets for Discrete-Time Stochastic Systems via Lagrangian Methods</title>
+      <link>http://unm.edu/~abyvinod/publication/cdc2017/</link>
+      <pubDate>Fri, 01 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://unm.edu/~abyvinod/publication/cdc2017/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Aerial Suppression of Airborne Platforms (ASAP): Coordinated Capture of a Threat UAS via Stochastic Reachability</title>
+      <link>http://unm.edu/~abyvinod/publication/isar2017/</link>
+      <pubDate>Sat, 01 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://unm.edu/~abyvinod/publication/isar2017/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Computation of forward stochastic reach sets: Application to stochastic, dynamic obstacle avoidance</title>
+      <link>http://unm.edu/~abyvinod/publication/acc2017/</link>
+      <pubDate>Sat, 01 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://unm.edu/~abyvinod/publication/acc2017/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Dynamic risk tolerance: Motion planning by balancing short-term and long-term stochastic dynamic predictions</title>
+      <link>http://unm.edu/~abyvinod/publication/icra2017/</link>
+      <pubDate>Mon, 01 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://unm.edu/~abyvinod/publication/icra2017/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Forward Stochastic Reachability Analysis for Uncontrolled Linear Systems using Fourier Transforms</title>
+      <link>http://unm.edu/~abyvinod/publication/hscc2017/</link>
+      <pubDate>Sat, 01 Apr 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://unm.edu/~abyvinod/publication/hscc2017/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Talks on Abraham P. Vinod</title>
+    <link>http://unm.edu/~abyvinod/talk/</link>
+    <description>Recent content in Talks on Abraham P. Vinod</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2018</copyright>
+    <lastBuildDate>Sun, 01 Jan 2017 00:00:00 -0700</lastBuildDate>
+    
+	<atom:link href="http://unm.edu/~abyvinod/talk/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Scalable Stochastic Reachability: Theory, Computation, and Control</title>
+      <link>http://unm.edu/~abyvinod/talk/2018-05-berkeley/</link>
+      <pubDate>Tue, 15 May 2018 00:00:00 -0600</pubDate>
+      
+      <guid>http://unm.edu/~abyvinod/talk/2018-05-berkeley/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Multiple Pursuer-Based Intercept Via Forward Stochastic Reachability (ACC 2018)</title>
+      <link>http://unm.edu/~abyvinod/talk/2018-06-milwaukee/</link>
+      <pubDate>Mon, 07 May 2018 00:00:00 -0600</pubDate>
+      
+      <guid>http://unm.edu/~abyvinod/talk/2018-06-milwaukee/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Optimal Trade-Off Analysis for Efficiency and Safety in the Spacecraft Rendezvous and Docking Problem (NAASS 2018)</title>
+      <link>http://unm.edu/~abyvinod/talk/2018-06-santafe/</link>
+      <pubDate>Mon, 07 May 2018 00:00:00 -0600</pubDate>
+      
+      <guid>http://unm.edu/~abyvinod/talk/2018-06-santafe/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,383 +1,1033 @@
+
 <!DOCTYPE html>
-<html lang="english"
->
+<html lang="en-us">
 <head>
-    <title>Notes on the margin</title>
-    <!-- Using the latest rendering mode for IE -->
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="theme" content="hugo-academic">
+  <meta name="generator" content="Hugo 0.44" />
+  <meta name="author" content="Abraham P. Vinod">
+
+  
+  
+  
+  
+  <meta name="description" content="ECE PhD candidate">
+
+  
+  <link rel="alternate" hreflang="en-us" href="http://unm.edu/~abyvinod/">
+
+  
 
 
-    <link href="/images/favicon.ico" rel="icon">
+  
 
-<link rel="canonical" href="">
-        <meta name="author" content="Abraham" />
+  
+  
+  <meta name="theme-color" content="#3f51b5">
+  
+  
+  
+  
+    
+  
+  
+    
+    
+      
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+      
+    
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha512-6MXa8B6uaO18Hid6blRMetEIoPqHf7Ux1tnyIQdpt9qI5OACx7C+O3IVTr98vwGnlcg0LOLa02i9Y1HpVhlfiw==" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" integrity="sha256-ygkqlh3CYSUri3LhQxzdcm0n1EQvH2Y+U5S2idbLtxs=" crossorigin="anonymous">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.2.0/leaflet.css" integrity="sha512-M2wvCLH6DSRazYeZRIm1JnYyh22purTM+FDB5CsyxtQJYeKq83arPe5wgbNmcFXGqiSH2XR8dT/fJISVA1r/zQ==" crossorigin="anonymous">
+  
+  
+  
+  
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:400,700%7cMerriweather%7cRoboto&#43;Mono">
+  
+  <link rel="stylesheet" href="/~abyvinod/styles.css">
+  
 
-    <!-- Open Graph tags -->
-        <meta property="og:site_name" content="Notes on the margin" />
-        <meta property="og:type" content="website"/>
-        <meta property="og:title" content="Notes on the margin"/>
-        <meta property="og:url" content=""/>
-        <meta property="og:description" content="Notes on the margin"/>
+  
+  
+    <script>
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'UA-75850194-1', 'auto');
+      
+      ga('require', 'eventTracker');
+      ga('require', 'outboundLinkTracker');
+      ga('require', 'urlChangeTracker');
+      ga('send', 'pageview');
+    </script>
+    <script async src="//www.google-analytics.com/analytics.js"></script>
+    
+    <script async src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js" integrity="sha512-HUmooslVKj4m6OBu0OgzjXXr+QuFYy/k7eLI5jdeEy/F4RSgMn6XRWRGkFi5IFaFgy7uFTkegp3Z0XnJf3Jq+g==" crossorigin="anonymous"></script>
+    
+  
+  
 
+  
+  <link rel="alternate" href="http://unm.edu/~abyvinod/index.xml" type="application/rss+xml" title="Abraham P. Vinod">
+  <link rel="feed" href="http://unm.edu/~abyvinod/index.xml" type="application/rss+xml" title="Abraham P. Vinod">
+  
 
-    <!-- Bootstrap -->
-        <link rel="stylesheet" href="/theme/css/bootstrap.cosmo.min.css" type="text/css"/>
-    <link href="/theme/css/font-awesome.min.css" rel="stylesheet">
-    <link href="/theme/css/academicons.min.css" rel="stylesheet" />
-    <link href="/theme/css/pygments/monokai.css" rel="stylesheet">
-    <link rel="stylesheet" href="/theme/css/style.css" type="text/css"/>
+  <link rel="manifest" href="/~abyvinod/site.webmanifest">
+  <link rel="icon" type="image/png" href="/~abyvinod/img/icon.png">
+  <link rel="apple-touch-icon" type="image/png" href="/~abyvinod/img/icon-192.png">
 
-        <link href="/feeds/all.rss" type="application/rss+xml" rel="alternate"
-              title="Notes on the margin RSS Feed"/>
+  <link rel="canonical" href="http://unm.edu/~abyvinod/">
 
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
-</script>
-<script type="text/javascript" async
-  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML">
-</script>
+  <meta property="twitter:card" content="summary_large_image">
+  
+  <meta property="og:site_name" content="Abraham P. Vinod">
+  <meta property="og:url" content="http://unm.edu/~abyvinod/">
+  <meta property="og:title" content="Abraham P. Vinod">
+  <meta property="og:description" content="ECE PhD candidate">
+  <meta property="og:locale" content="en-us">
+  
+  <meta property="og:updated_time" content="2016-04-20T00:00:00-06:00">
+  
+
+  
+
+  
+
+  <title>Abraham P. Vinod</title>
+
 </head>
-<body>
+<body id="top" data-spy="scroll" data-target="#navbar-main" data-offset="71" >
 
-<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+<nav class="navbar navbar-default navbar-fixed-top" id="navbar-main">
+  <div class="container">
+
+    
+    <div class="navbar-header">
+      
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+              data-target=".navbar-collapse" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      
+      <a class="navbar-brand" href="/~abyvinod/">Abraham P. Vinod</a>
+    </div>
+
+    
+    <div class="collapse navbar-collapse">
+
+      
+      
+      <ul class="nav navbar-nav navbar-right">
+        
+
+        
+        
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="/~abyvinod/#about" data-target="#about">
+            
+            <span>Home</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+        
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="/~abyvinod/#publications_selected" data-target="#publications_selected">
+            
+            <span>Publications</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+        
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="/~abyvinod/#talks_selected" data-target="#talks_selected">
+            
+            <span>Talks</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+        
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="/~abyvinod/#posts" data-target="#posts">
+            
+            <span>Posts</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+        
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="/~abyvinod/pdf/AbrahamCV.pdf" data-target="pdf/AbrahamCV.pdf">
+            
+            <span>CV</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+        
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="/~abyvinod/#contact" data-target="#contact">
+            
+            <span>Contact</span>
+            
+          </a>
+        </li>
+
+        
+        
+      
+
+      
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+
+
+<span id="homepage" style="display: none"></span>
+
+
+  
+
+
+
+
+
+  
+  
+  
+  <section id="about" class="home-section">
     <div class="container">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a href="/" class="navbar-brand">
-<img src="/images/favicon_white.ico" width="20"/> Notes on the margin            </a>
-        </div>
-        <div class="collapse navbar-collapse navbar-ex1-collapse">
-            <ul class="nav navbar-nav">
-                    <!-- Addition of My research tag into the header-->
-                    <li>
-                        <a href="/pages/about-me.html"><i
-                                class="fa fa-user"></i> About Me</a>
-                    </li>
-                    <li>
-                        <a href="/tag/my-research.html"><i
-                                class="fa fa-flask fa-lg"></i> My Research</a>
-                    </li>
-                    <!-- Addition of All tags into the header-->
-                    <li>
-                        <a href="/categories.html"><i
-                                class="fa fa-bookmark fa-lg"></i> Categories</a>
-                    </li>
-                    <li>
-                        <a href="/tags.html"><i class="fa fa-tags
-                                fa-lg"></i> Tags</a>
-                    </li>
-                    <li>
-                        <a href="/feeds/all.rss"><i class="fa fa-rss-square fa-lg"></i> RSS</a>
-                    </li>
-                    <!--                        <li >
-                            <a href="/category/control-theory.html">Control theory</a>
-                        </li>
-                        <li >
-                            <a href="/category/how-to.html">How to</a>
-                        </li>
-                        <li >
-                            <a href="/category/tips.html">Tips</a>
-                        </li>
--->
-            </ul>
-            <ul class="nav navbar-nav navbar-right">
-                <li><a href="/archives.html"><i class="fa fa-th-list"></i><span class="icon-label">Archives</span></a></li>
-            </ul>
-        </div>
-        <!-- /.navbar-collapse -->
-    </div>
-</div> <!-- /.navbar -->
-
-<div class="container">
-    <div class="row">
-        <div class="col-lg-12">
-
-            <article>
-                <h2><a href="/gitsubmodules.html">Using git submodules to keep track of your Overleaf papers</a></h2>
-                    <div class="well well-sm">
-<footer class="post-info">
-    <span class="label label-default">Date</span>
-    <span class="published">
-        <i class="fa fa-calendar"></i><time datetime="2017-09-23T00:00:00-06:00"> Sat 23 September 2017</time>
-    </span>
-
-        <span class="label label-default">Category</span>
-        <a href="/category/how-to.html">How To</a>
+      
 
 
-<span class="label label-default">Tags</span>
-	<a href="/tag/git.html">Git</a>
-        /
-	<a href="/tag/overleaf.html">Overleaf</a>
-        /
-	<a href="/tag/tips.html">Tips</a>
-    
-</footer><!-- /.post-info -->                    </div>
-                <div class="summary"><p>Git submodules can keep track of your overleaf papers in one place</p>
-                    <a class="btn btn-default btn-xs" href="/gitsubmodules.html">more ...</a>
-                </div>
-            </article>
-            <hr/>
-            <article>
-                <h2><a href="/readWritePaperOniPad.html">Read and annotate your research papers on your iPad</a></h2>
-                    <div class="well well-sm">
-<footer class="post-info">
-    <span class="label label-default">Date</span>
-    <span class="published">
-        <i class="fa fa-calendar"></i><time datetime="2017-09-20T00:00:00-06:00"> Wed 20 September 2017</time>
-    </span>
 
-        <span class="label label-default">Category</span>
-        <a href="/category/how-to.html">How To</a>
+<div class="row" itemprop="author" itemscope itemtype="http://schema.org/Person" itemref="person-email person-address">
+  <div class="col-xs-12 col-md-4">
+    <div id="profile">
 
+      
+      <div class="portrait" style="background-image: url('/~abyvinod/img/myphoto.jpg');"></div>
+      <meta itemprop="image" content="http://unm.edu/~abyvinod/img/myphoto.jpg">
+      
 
-<span class="label label-default">Tags</span>
-	<a href="/tag/research-tips.html">Research Tips</a>
-        /
-	<a href="/tag/goodnotes.html">GoodNotes</a>
-        /
-	<a href="/tag/zotero.html">Zotero</a>
-        /
-	<a href="/tag/zotfile.html">ZotFile</a>
-        /
-	<a href="/tag/dropbox.html">Dropbox</a>
-    
-</footer><!-- /.post-info -->                    </div>
-                <div class="summary"><p>Use Zotero, ZotFile, GoodNotes, and Dropbox to read, annotate, and curate your research papers and ideas on them.</p>
-                    <a class="btn btn-default btn-xs" href="/readWritePaperOniPad.html">more ...</a>
-                </div>
-            </article>
-            <hr/>
-            <article>
-                <h2><a href="/gitCheatSheet.html">Git for research work</a></h2>
-                    <div class="well well-sm">
-<footer class="post-info">
-    <span class="label label-default">Date</span>
-    <span class="published">
-        <i class="fa fa-calendar"></i><time datetime="2017-02-11T00:00:00-07:00"> Sat 11 February 2017</time>
-    </span>
+      <div class="portrait-title">
+        <h2 itemprop="name">Abraham P. Vinod</h2>
+        <h3 itemprop="jobTitle">ECE PhD candidate</h3>
 
-        <span class="label label-default">Category</span>
-        <a href="/category/how-to.html">How To</a>
+        
+        
 
-
-<span class="label label-default">Tags</span>
-	<a href="/tag/git.html">Git</a>
-    
-</footer><!-- /.post-info -->                    </div>
-                <div class="summary"><p>List of useful features (and the corresponding commands in git)</p>
-                    <a class="btn btn-default btn-xs" href="/gitCheatSheet.html">more ...</a>
-                </div>
-            </article>
-            <hr/>
-            <article>
-                <h2><a href="/acc2017.html">ACC2017: Computation of forward stochastic reach sets: Application to dynamic obstacle avoidance</a></h2>
-                    <div class="well well-sm">
-<footer class="post-info">
-    <span class="label label-default">Date</span>
-    <span class="published">
-        <i class="fa fa-calendar"></i><time datetime="2017-02-08T00:00:00-07:00"> Wed 08 February 2017</time>
-    </span>
-
-        <span class="label label-default">Category</span>
-        <a href="/category/control-theory.html">Control theory</a>
-
-
-<span class="label label-default">Tags</span>
-	<a href="/tag/my-research.html">My Research</a>
-        /
-	<a href="/tag/stochastic-reachability.html">Stochastic Reachability</a>
-        /
-	<a href="/tag/obstacle-avoidance.html">Obstacle Avoidance</a>
-        /
-	<a href="/tag/model-predictive-control.html">Model Predictive Control</a>
-    
-</footer><!-- /.post-info -->                    </div>
-                <div class="summary"><p>Summary of the ACC 2017 paper</p>
-                    <a class="btn btn-default btn-xs" href="/acc2017.html">more ...</a>
-                </div>
-            </article>
-            <hr/>
-            <article>
-                <h2><a href="/comments_in_blog.html">Commenting on this blog</a></h2>
-                    <div class="well well-sm">
-<footer class="post-info">
-    <span class="label label-default">Date</span>
-    <span class="published">
-        <i class="fa fa-calendar"></i><time datetime="2017-02-05T00:00:00-07:00"> Sun 05 February 2017</time>
-    </span>
-
-        <span class="label label-default">Category</span>
-        <a href="/category/how-to.html">How To</a>
-
-
-<span class="label label-default">Tags</span>
-	<a href="/tag/pelican.html">Pelican</a>
-    
-</footer><!-- /.post-info -->                    </div>
-                <div class="summary"><p>I have chosen not to implement a commenting system. You can instead email me your comments. I also describe how to print a custom message based on article title.</p>
-                    <a class="btn btn-default btn-xs" href="/comments_in_blog.html">more ...</a>
-                </div>
-            </article>
-            <hr/>
-            <article>
-                <h2><a href="/arxivAdd.html">Adding papers on Arxiv</a></h2>
-                    <div class="well well-sm">
-<footer class="post-info">
-    <span class="label label-default">Date</span>
-    <span class="published">
-        <i class="fa fa-calendar"></i><time datetime="2017-02-03T00:00:00-07:00"> Fri 03 February 2017</time>
-    </span>
-
-        <span class="label label-default">Category</span>
-        <a href="/category/how-to.html">How To</a>
-
-
-<span class="label label-default">Tags</span>
-	<a href="/tag/arxiv.html">Arxiv</a>
-    
-</footer><!-- /.post-info -->                    </div>
-                <div class="summary"><p>Some tips on adding TeX generated papers to Arxiv</p>
-                    <a class="btn btn-default btn-xs" href="/arxivAdd.html">more ...</a>
-                </div>
-            </article>
-            <hr/>
-            <article>
-                <h2><a href="/hscc2017.html">HSCC2017: Forward Stochastic Reachability Analysis for Uncontrolled Linear Systems using Fourier Transforms</a></h2>
-                    <div class="well well-sm">
-<footer class="post-info">
-    <span class="label label-default">Date</span>
-    <span class="published">
-        <i class="fa fa-calendar"></i><time datetime="2017-02-03T00:00:00-07:00"> Fri 03 February 2017</time>
-    </span>
-
-        <span class="label label-default">Category</span>
-        <a href="/category/control-theory.html">Control theory</a>
-
-
-<span class="label label-default">Tags</span>
-	<a href="/tag/my-research.html">My Research</a>
-        /
-	<a href="/tag/stochastic-reachability.html">Stochastic Reachability</a>
-        /
-	<a href="/tag/convex-optimization.html">Convex Optimization</a>
-    
-</footer><!-- /.post-info -->                    </div>
-                <div class="summary"><p>Summary of the HSCC 2017 paper</p>
-                    <a class="btn btn-default btn-xs" href="/hscc2017.html">more ...</a>
-                </div>
-            </article>
-            <hr/>
-            <article>
-                <h2><a href="/bookmarkPDFinclude.html">Create bookmarks when including pdfs using pdflatex</a></h2>
-                    <div class="well well-sm">
-<footer class="post-info">
-    <span class="label label-default">Date</span>
-    <span class="published">
-        <i class="fa fa-calendar"></i><time datetime="2017-01-20T00:00:00-07:00"> Fri 20 January 2017</time>
-    </span>
-
-        <span class="label label-default">Category</span>
-        <a href="/category/how-to.html">How To</a>
-
-
-<span class="label label-default">Tags</span>
-	<a href="/tag/latex.html">Latex</a>
-        /
-	<a href="/tag/python.html">Python</a>
-    
-</footer><!-- /.post-info -->                    </div>
-                <div class="summary"><p>Python code to create bookmarks for latex</p>
-                    <a class="btn btn-default btn-xs" href="/bookmarkPDFinclude.html">more ...</a>
-                </div>
-            </article>
-            <hr/>
-            <article>
-                <h2><a href="/MOOCtips.html">Tips for learning online</a></h2>
-                    <div class="well well-sm">
-<footer class="post-info">
-    <span class="label label-default">Date</span>
-    <span class="published">
-        <i class="fa fa-calendar"></i><time datetime="2017-01-15T00:00:00-07:00"> Sun 15 January 2017</time>
-    </span>
-
-        <span class="label label-default">Category</span>
-        <a href="/category/tips.html">Tips</a>
-
-
-<span class="label label-default">Tags</span>
-	<a href="/tag/mooc.html">MOOC</a>
-    
-</footer><!-- /.post-info -->                    </div>
-                <div class="summary"><p>Some tips I found useful for MOOC-based learning</p>
-                    <a class="btn btn-default btn-xs" href="/MOOCtips.html">more ...</a>
-                </div>
-            </article>
-            <hr/>
-            <article>
-                <h2><a href="/MPCandVerification.html">Similarities between model predictive control and verification theory</a></h2>
-                    <div class="well well-sm">
-<footer class="post-info">
-    <span class="label label-default">Date</span>
-    <span class="published">
-        <i class="fa fa-calendar"></i><time datetime="2017-01-09T00:00:00-07:00"> Mon 09 January 2017</time>
-    </span>
-
-        <span class="label label-default">Category</span>
-        <a href="/category/control-theory.html">Control Theory</a>
-
-
-<span class="label label-default">Tags</span>
-	<a href="/tag/verification.html">Verification</a>
-        /
-	<a href="/tag/model-predictive-control.html">Model Predictive Control</a>
-    
-</footer><!-- /.post-info -->                    </div>
-                <div class="summary"><p>Surprising overlap between two subfields of control theory</p>
-                    <a class="btn btn-default btn-xs" href="/MPCandVerification.html">more ...</a>
-                </div>
-            </article>
-            <hr/>
-
-        <ul class="pagination">
-                <li class="prev disabled"><a href="#">&laquo;</a></li>
-                    <li class="active"><a
-                            href="/index.html">1</a></li>
-                    <li class=""><a
-                            href="/index2.html">2</a></li>
-                <li class="next"><a
-                        href="/index2.html">&raquo;</a></li>
-        </ul>
-        </div>
-    </div>
-</div>
-<footer>
-      <!-- Use index.html to know the title of the page.-->
-      <div class="entry-content">
-         <hr>
-         <div class="col-xs-10">&copy; 2017 Abraham
-            &middot; Powered by <a
-                href="http://docs.getpelican.com/">Pelican</a> and other  <a
-            href="/setMeup.html">goodies</a>.
-         </div>
-         <div class="col-xs-2"><p class="pull-right"><i class="fa fa-arrow-up"></i> <a href="#">Back to top</a></p></div>
+        
+        <h3 itemprop="worksFor" itemscope itemtype="http://schema.org/Organization">
+          <a href="https://hscl.unm.edu" target="_blank" itemprop="url" rel="noopener">
+          <span itemprop="name">Hybrid Systems &amp; Control Lab</span>
+          </a>
+        </h3>
+        
+        <h3 itemprop="worksFor" itemscope itemtype="http://schema.org/Organization">
+          <a href="https://ece.unm.edu" target="_blank" itemprop="url" rel="noopener">
+          <span itemprop="name">Electrical &amp; Computer Engineering</span>
+          </a>
+        </h3>
+        
+        <h3 itemprop="worksFor" itemscope itemtype="http://schema.org/Organization">
+          <a href="https://unm.edu" target="_blank" itemprop="url" rel="noopener">
+          <span itemprop="name">University of New Mexico</span>
+          </a>
+        </h3>
+        
       </div>
-   </div>
+
+      <link itemprop="url" href="http://unm.edu/~abyvinod">
+
+      <ul class="network-icon" aria-hidden="true">
+        
+        
+        <li>
+          <a itemprop="sameAs" href="mailto:aby[dot]vinod[at]gmail[dot]com" target="_blank" rel="noopener">
+            <i class="fa fa-envelope big-icon"></i>
+          </a>
+        </li>
+        
+        
+        <li>
+          <a itemprop="sameAs" href="https://doodle.com/abyvinod" target="_blank" rel="noopener">
+            <i class="fa fa-calendar big-icon"></i>
+          </a>
+        </li>
+        
+        
+        <li>
+          <a itemprop="sameAs" href="https://scholar.google.com/citations?user=yb5Z7AwAAAAJ" target="_blank" rel="noopener">
+            <i class="ai ai-google-scholar big-icon"></i>
+          </a>
+        </li>
+        
+        
+        <li>
+          <a itemprop="sameAs" href="https://scholar.google.com/citations?user=yb5Z7AwAAAAJ" target="_blank" rel="noopener">
+            <i class="ai ai-arxiv big-icon"></i>
+          </a>
+        </li>
+        
+        
+        <li>
+          <a itemprop="sameAs" href="https://github.com/abyvinod" target="_blank" rel="noopener">
+            <i class="fa fa-github big-icon"></i>
+          </a>
+        </li>
+        
+        
+        <li>
+          <a itemprop="sameAs" href="https://bitbucket.org/abyvinod" target="_blank" rel="noopener">
+            <i class="fa fa-bitbucket big-icon"></i>
+          </a>
+        </li>
+        
+        
+        <li>
+          <a itemprop="sameAs" href="https://www.linkedin.com/in/abrahampvinod" target="_blank" rel="noopener">
+            <i class="fa fa-linkedin big-icon"></i>
+          </a>
+        </li>
+        
+      </ul>
+
+    </div>
+  </div>
+  <div class="col-xs-12 col-md-8" itemprop="description">
+
+    
+
+<h1 id="biography">Biography</h1>
+
+<p>Abraham P. Vinod received the B.Tech. and the M.Tech degree in Electrical Engineering from the Indian Institute of Technology, Madras in 2014. He is currently a Ph.D. candidate in the Department of Electrical and Computer Engineering at the University of New Mexico.</p>
+
+<p>His research interests are in the areas of <strong>stochastic control</strong> and <strong>optimization</strong>, specifically in stochastic reachability analysis and ensuring efficient and safe human-automation interactions.
+He has developed an open-sourced MATLAB toolbox for <a href="https://unm-hscl.github.io/SReachTools/" target="_blank">stochastic reachability analysis (SReachTools)</a> with <a href="http://unm.edu/~gleasonj" target="_blank">J. Gleason</a>.</p>
+
+<p>His research has received various recognitions:</p>
+
+<ul>
+<li><a href="http://hscc2017.ece.illinois.edu/Awards.html" target="_blank">Best Student Paper Award</a> in the 2017 ACM Hybrid Systems: Computation and Control Conference,</li>
+<li><a href="https://www.hscc2018.deib.polimi.it/award-finalists-and-winners" target="_blank">Best Paper Award finalist</a> in the 2018 ACM Hybrid Systems: Computation and Control Conference, and</li>
+<li><a href="https://www.iitm.ac.in/sites/default/files/notices/convocation_2014_prize_winners-website.pdf" target="_blank">Prof. Achim Bopp Prize</a> for his M.  Tech thesis.</li>
+</ul>
+
+
+    <div class="row">
+
+      
+      <div class="col-sm-5">
+        <h3>Interests</h3>
+        <ul class="ul-interests">
+          
+          <li>Stochastic reachability</li>
+          
+          <li>Stochastic motion planning</li>
+          
+          <li>Safe human-automation interactions</li>
+          
+          <li>Reinforcement learning</li>
+          
+        </ul>
+      </div>
+      
+
+      
+      <div class="col-sm-7">
+        <h3>Education</h3>
+        <ul class="ul-edu fa-ul">
+          
+          <li>
+            <i class="fa-li fa fa-graduation-cap"></i>
+            <div class="description">
+              <p class="course">PhD in Engineering (ECE: systems &amp; control), 2018 (Expected)</p>
+              <p class="institution">University of New Mexico, Albuquerque, NM, USA</p>
+            </div>
+          </li>
+          
+          <li>
+            <i class="fa-li fa fa-graduation-cap"></i>
+            <div class="description">
+              <p class="course">Dual-degree (B. Tech &amp; M.Tech) in Electrical Engineering, 2014</p>
+              <p class="institution">Indian Institute of Technology Madras, Chennai, TN, India</p>
+            </div>
+          </li>
+          
+        </ul>
+      </div>
+      
+
+    </div>
+  </div>
+</div>
+
+    </div>
+  </section>
+  
+
+  
+  
+  
+  <section id="publications_selected" class="home-section">
+    <div class="container">
+      
+
+
+
+<div class="row">
+  <div class="col-xs-12 col-md-4 section-heading">
+    <h1>Selected Publications</h1>
+    <p>See my (almost) complete list of publications <a href="./publication/">here</a>, or see my <a href="https://scholar.google.com/citations?user=yb5Z7AwAAAAJ" target="_blank">Google Scholar</a> or <a href="https://dblp2.uni-trier.de/pers/hd/v/Vinod:Abraham_P=" target="_blank">DBLP</a> profile page.</p>
+  </div>
+  <div class="col-xs-12 col-md-8">
+    
+
+    
+      
+    
+
+    
+    
+      
+        <div class="pub-list-item card-simple" itemscope itemtype="http://schema.org/CreativeWork">
+
+  
+    
+  
+  
+    <div class="row" style="display: flex; flex-wrap:wrap;align-items:center">
+        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4" >
+          <a href="http://unm.edu/~abyvinod/publication/hscc2018/">
+            
+            
+              <img src="/~abyvinod/img/papers/HSCC2018_thumb.png" class="article-banner" itemprop="image">
+            
+          </a>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
+            <h3 class="article-title" itemprop="name">
+              <a href="http://unm.edu/~abyvinod/publication/hscc2018/" itemprop="url">Scalable Underapproximative Verification of Stochastic LTI Systems Using Convexity and Compactness</a>
+            </h3>
+        </div>
+    </div>
+  
+
+  <div class="pub-abstract" itemprop="text">
+    
+    Sufficient conditions for the convexity and compactness of the stochastic reach-avoid sets (set of safe initial states for stochastic systems under bounded control authority) for LTI systems <strong>|</strong> <em>Scalable and tractable polytopic underapproximation with controller synthesis</em> by using the &ldquo;oracle&rdquo; proposed in our previous <a href="publication/cssl2017/" target="_blank">CSSL 2017 paper</a> <strong>|</strong> Sufficient conditions for bang-bang safe policies <strong>|</strong> Thumbnail shows the underapproximative verification of a Gaussian-perturbed double integrator which is required to stay within the unit-box for 10 time steps. <strong>(Finalist for the best paper award)</strong>
+    
+  </div>
+
+  <div class="pub-authors" itemprop="author">
+    
+    Abraham P. Vinod, Meeko M. K. Oishi
+    
+  </div>
+
+  <div class="pub-publication">
+    
+    In <em>Proceedings of the 21st International Conference on Hybrid Systems: Computation and Control</em> (HSCC),
+    
+    2018
+  </div>
+
+  <div class="pub-links">
+    
+
+
+
+
+<a class="btn btn-primary btn-outline btn-xs" href="http://unm.edu/~abyvinod/pdf/2018VinodHSCC.pdf" target="_blank" rel="noopener">
+  PDF
+</a>
+
+
+
+
+<button type="button" class="btn btn-primary btn-outline btn-xs js-cite-modal"
+        data-filename="/~abyvinod/files/citations/HSCC2018.bib">
+  Cite
+</button>
+
+
+<a class="btn btn-primary btn-outline btn-xs" href="http://unm.edu/~abyvinod/code/2018HSCC.zip" target="_blank" rel="noopener">
+  Code
+</a>
+
+
+
+
+  
+  <a class="btn btn-primary btn-outline btn-xs" href="http://unm.edu/~abyvinod/project/sr/">
+    Project
+  </a>
+  
+
+
+
+
+<a class="btn btn-primary btn-outline btn-xs" href="http://unm.edu/~abyvinod/pdf/2018VinodHSCC_slides.pdf" target="_blank" rel="noopener">
+  Slides
+</a>
+
+
+
+<a class="btn btn-primary btn-outline btn-xs" href="http://doi.acm.org/10.1145/3178126.3178148" target="_blank" rel="noopener">
+  Source Document
+</a>
+
+
+
+  </div>
+</div>
+
+      
+    
+      
+        <div class="pub-list-item card-simple" itemscope itemtype="http://schema.org/CreativeWork">
+
+  
+    
+  
+  
+    <div class="row" style="display: flex; flex-wrap:wrap;align-items:center">
+        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4" >
+          <a href="http://unm.edu/~abyvinod/publication/hscc2017/">
+            
+            
+              <img src="/~abyvinod/img/papers/HSCC2017_thumb.png" class="article-banner" itemprop="image">
+            
+          </a>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
+            <h3 class="article-title" itemprop="name">
+              <a href="http://unm.edu/~abyvinod/publication/hscc2017/" itemprop="url">Forward Stochastic Reachability Analysis for Uncontrolled Linear Systems using Fourier Transforms</a>
+            </h3>
+        </div>
+    </div>
+  
+
+  <div class="pub-abstract" itemprop="text">
+    
+    Fourier transform-based characterization of the probability density/measure of the state for an uncontrolled stochastic system with arbitrary continuous-valued disturbance at a future time of interest <strong>|</strong> Sufficient conditions for log-concavity of the probability measure <strong>|</strong> Applications to stochastic target capture problem <strong>(Best student paper award)</strong>
+    
+  </div>
+
+  <div class="pub-authors" itemprop="author">
+    
+    Abraham P. Vinod, Baisravan HomChaudhuri, Meeko M. K. Oishi
+    
+  </div>
+
+  <div class="pub-publication">
+    
+    In <em>Proceedings of the 20th International Conference on Hybrid Systems: Computation and Control</em> (HSCC),
+    
+    2017
+  </div>
+
+  <div class="pub-links">
+    
+
+
+
+
+<a class="btn btn-primary btn-outline btn-xs" href="http://unm.edu/~abyvinod/pdf/2017VinodHSCC.pdf" target="_blank" rel="noopener">
+  PDF
+</a>
+
+
+
+
+<button type="button" class="btn btn-primary btn-outline btn-xs js-cite-modal"
+        data-filename="/~abyvinod/files/citations/HSCC2017.bib">
+  Cite
+</button>
+
+
+<a class="btn btn-primary btn-outline btn-xs" href="http://unm.edu/~abyvinod/code/2017HSCC.zip" target="_blank" rel="noopener">
+  Code
+</a>
+
+
+
+
+  
+  <a class="btn btn-primary btn-outline btn-xs" href="http://unm.edu/~abyvinod/project/sr/">
+    Project
+  </a>
+  
+
+
+
+
+<a class="btn btn-primary btn-outline btn-xs" href="http://unm.edu/~abyvinod/pdf/2017VinodHSCC_slides.pdf" target="_blank" rel="noopener">
+  Slides
+</a>
+
+
+
+<a class="btn btn-primary btn-outline btn-xs" href="https://dl.acm.org/citation.cfm?doid=3049797.3049818" target="_blank" rel="noopener">
+  Source Document
+</a>
+
+
+
+  </div>
+</div>
+
+      
+    
+
+  </div>
+</div>
+
+    </div>
+  </section>
+  
+
+  
+  
+  
+  <section id="talks_selected" class="home-section">
+    <div class="container">
+      
+
+
+
+
+
+
+
+    
+
+    
+
+    
+
+
+
+    <div class="row">
+      <div class="col-xs-12 col-md-4 section-heading">
+        <h1>Talks</h1>
+        <p>See the list of my talks <a href="./talk/">here</a>.</p>
+      </div>
+      <div class="col-xs-12 col-md-8">
+        
+        
+             
+               <div class="card-simple" itemscope itemtype="http://schema.org/Event">
+
+  
+  
+
+  <h3 class="article-title" itemprop="name">
+    <a href="http://unm.edu/~abyvinod/talk/2018-06-milwaukee/" itemprop="url">Multiple Pursuer-Based Intercept Via Forward Stochastic Reachability (ACC 2018)</a>
+  </h3>
+
+  <div class="talk-metadata">
+    
+      American Control Conference (ACC)
+    
+    
+       — 
+      <span itemprop="location">
+        Milwaukee, USA,
+      </span>
+    
+
+    <span itemprop="startDate">
+      
+      Jun 27, 2018
+      
+        1:30 PM
+      
+    </span>
+  </div>
+
+  <div class="talk-abstract" itemprop="text">
+    
+    Extending forward stochastic reachability-based techniques to the target capture problem with multiple pursuers.
+    
+  </div>
+
+  <div class="talk-links">
+    
+
+
+
+
+
+
+
+  
+  <a class="btn btn-primary btn-outline btn-xs" href="http://unm.edu/~abyvinod/project/sr/">
+    Project
+  </a>
+  
+
+
+
+  </div>
+
+</div>
+
+             
+        
+      </div>
+    </div>
+
+
+    </div>
+  </section>
+  
+
+  
+  
+  
+  <section id="posts" class="home-section">
+    <div class="container">
+      
+
+
+
+
+<div class="row">
+  <div class="col-xs-12 col-md-4 section-heading">
+
+    <h1>Recent Posts</h1>
+    
+    
+
+  </div>
+  <div class="col-xs-12 col-md-8">
+
+    
+
+    
+      
+
+      
+      
+
+        
+
+        
+        
+
+        
+        
+          
+      
+
+      
+      
+        
+        
+          
+
+<div class="card-simple" itemscope itemprop="blogPost" itemtype="http://schema.org/BlogPosting">
+  
+
+<div class="article-metadata">
+
+  
+
+  <span class="article-date">
+    
+        Last updated on
+    
+    <meta content="2018-05-06 00:00:00 -0600 MDT" itemprop="datePublished">
+    <time datetime="2018-05-09 14:07:04 -0600 MDT" itemprop="dateModified">
+      May 9, 2018
+    </time>
+  </span>
+  <span itemscope itemprop="author publisher" itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="Abraham P. Vinod">
+  </span>
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    4 min read
+  </span>
+  
+
+  
+  
+
+  
+
+  
+
+</div>
+
+
+  
+  
+  <h3 class="article-title" itemprop="headline">
+    <a href="http://unm.edu/~abyvinod/post/terminal-stochastic-reach-avoid-problem/" itemprop="url">Safety for stochastic systems: Terminal stochastic reach-avoid problem</a>
+  </h3>
+  <div class="article-style" itemprop="articleBody">
+    
+    <p>Safety problem posed as a terminal stochastic reach-avoid problem, and explained via an example of satellite rendezvous and docking problem.</p>
+    
+  </div>
+  <p class="read-more" itemprop="mainEntityOfPage">
+    <a href="http://unm.edu/~abyvinod/post/terminal-stochastic-reach-avoid-problem/" class="btn btn-primary btn-outline">
+      CONTINUE READING
+    </a>
+  </p>
+</div>
+
+        
+      
+
+      
+    
+
+  </div>
+</div>
+
+    </div>
+  </section>
+  
+
+  
+  
+  
+  <section id="contact" class="home-section">
+    <div class="container">
+      
+
+
+
+
+<div class="row">
+  <div class="col-xs-12 col-md-4 section-heading">
+    <h1>Contact</h1>
+    
+  </div>
+  <div class="col-xs-12 col-md-8">
+    
+
+    <ul class="fa-ul" itemscope>
+
+      
+      <li>
+        <i class="fa-li fa fa-envelope fa-2x" aria-hidden="true"></i>
+        <span id="person-email" itemprop="email">aby[dot]vinod[at]gmail[dot]com</span>
+      </li>
+      
+
+      
+
+      
+
+      
+
+      
+      <li>
+        <i class="fa-li fa fa-skype fa-2x" aria-hidden="true"></i>
+        <span>abraham3815</span>
+      </li>
+      
+
+      
+
+      
+      <li>
+        <i class="fa-li fa fa-map-marker fa-2x" aria-hidden="true"></i>
+        <span id="person-address" itemprop="address">Room# 318A, Department of Electrical & Computer Engineering, MSC01 1100, 1 University of New Mexico Albuquerque, NM, USA 87131-0001</span>
+      </li>
+      
+
+      
+
+    </ul>
+
+    
+    <div class="hidden">
+      <input id="map-provider" value="2">
+      <input id="map-lat" value="35.08314">
+      <input id="map-lng" value="-106.62463">
+      <input id="map-dir" value="Room# 318A, Department of Electrical &amp; Computer Engineering, MSC01 1100, 1 University of New Mexico Albuquerque, NM, USA 87131-0001">
+      <input id="map-zoom" value="15">
+      <input id="map-api-key" value="">
+    </div>
+    <div id="map"></div>
+    
+
+  </div>
+</div>
+
+    </div>
+  </section>
+  
+
+
+
+<footer class="site-footer">
+  <div class="container">
+
+    
+
+    <p class="powered-by">
+
+      &copy; 2018 &middot; 
+
+      Powered by the
+      <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+      <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+
+      <span class="pull-right" aria-hidden="true">
+        <a href="#" id="back_to_top">
+          <span class="button_icon">
+            <i class="fa fa-chevron-up fa-2x"></i>
+          </span>
+        </a>
+      </span>
+
+    </p>
+  </div>
 </footer>
-<script src="/theme/js/jquery.min.js"></script>
 
-<!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="/theme/js/bootstrap.min.js"></script>
 
-<!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
-<script src="/theme/js/respond.min.js"></script>
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close btn-large" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Cite</h4>
+      </div>
+      <div>
+        <pre><code class="modal-body tex"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-primary btn-outline js-copy-cite" href="#" target="_blank">
+          <i class="fa fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-primary btn-outline js-download-cite" href="#" target="_blank">
+          <i class="fa fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
 
-</body>
+    
+
+    
+    
+
+    
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" integrity="sha512-3P8rXCuGJdNZOnUx/03c1jOTnMn3rP63nBip5gOP2qmUh5YAdVAvFZ1E+QLZZbC1rtMrQb+mah3AfYW11RUrWA==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.3/imagesloaded.pkgd.min.js" integrity="sha512-umsR78NN0D23AzgoZ11K7raBD+R6hqKojyBZs1w8WvYlsI+QuKRGBx3LFCwhatzBunCjDuJpDHwxD13sLMbpRA==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha512-iztkobsvnjKfAtTNdHkGVjAYTrrtlC7mGp/54c40wowO7LhURYl3gVzzcEqGl/qKXQltJ2HwMrdLcNUdo+N/RQ==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.4/isotope.pkgd.min.js" integrity="sha512-VDBOIlDbuC4VWxGJNmuFRQ0Li0SKkDpmGyuhAG5LTDLd/dJ/S0WMVxriR2Y+CyPL5gzjpN4f/6iqWVBJlht0tQ==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js" integrity="sha256-X5PoE3KU5l+JcX+w09p/wHl9AzK333C4hJ2I9S5mD4M=" crossorigin="anonymous"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.2.0/leaflet.js" integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log==" crossorigin="anonymous"></script>
+    
+    
+    <script src="/~abyvinod/js/hugo-academic.js"></script>
+    
+
+    
+    
+      
+      
+      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+      
+
+      
+
+      
+
+      <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+    
+
+  </body>
 </html>
+
+

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Human-automation-interaction on Abraham P. Vinod</title>
+    <link>http://unm.edu/~abyvinod/tags/human-automation-interaction/</link>
+    <description>Recent content in Human-automation-interaction on Abraham P. Vinod</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2018</copyright>
+    <lastBuildDate>Sat, 05 May 2018 00:00:00 -0600</lastBuildDate>
+    
+	<atom:link href="http://unm.edu/~abyvinod/tags/human-automation-interaction/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>User-interface design for human-automation systems</title>
+      <link>http://unm.edu/~abyvinod/project/user-interface/</link>
+      <pubDate>Sat, 05 May 2018 00:00:00 -0600</pubDate>
+      
+      <guid>http://unm.edu/~abyvinod/project/user-interface/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

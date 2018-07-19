@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="theme" content="hugo-academic">
+  <meta name="generator" content="Hugo 0.44" />
+  <meta name="author" content="Abraham P. Vinod">
+
+  
+  
+  
+  
+    
+      
+    
+  
+  <meta name="description" content="We study the problem of spacecraft rendezvous and docking, specifically the trade-off between safety and efficiency.  The safety component in this problem is to stay within a line-of-sight cone and reach the target at an appropriate time in the presence of stochastic disturbance due to sensing and modeling errors.  The efficiency component in this problem is our desire to minimize control effort or fuel.  We pose this problem as a bi-criterion optimization problem.  Using our recent convexity results for the stochastic reach-avoid problem when the control policies are restricted to open-loop policies, we show that this bi-criterion optimization problem is convex.  The resulting tractability permits the exploration of the trade-off between safety and efficiency in the stochastic system.  We also show that while increasing the control bounds need not always translate to an increase in the attainable safety guarantees, decreasing the control bounds typically translates to a decrease in the attainable safety guarantees.">
+
+  
+  <link rel="alternate" hreflang="en-us" href="http://unm.edu/~abyvinod/talk/2018-06-santafe/">
+
+  
+
+
+  
+
+  
+  
+  <meta name="theme-color" content="#3f51b5">
+  
+  
+  
+  
+    
+  
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha512-6MXa8B6uaO18Hid6blRMetEIoPqHf7Ux1tnyIQdpt9qI5OACx7C+O3IVTr98vwGnlcg0LOLa02i9Y1HpVhlfiw==" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" integrity="sha256-ygkqlh3CYSUri3LhQxzdcm0n1EQvH2Y+U5S2idbLtxs=" crossorigin="anonymous">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.2.0/leaflet.css" integrity="sha512-M2wvCLH6DSRazYeZRIm1JnYyh22purTM+FDB5CsyxtQJYeKq83arPe5wgbNmcFXGqiSH2XR8dT/fJISVA1r/zQ==" crossorigin="anonymous">
+  
+  
+  
+  
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:400,700%7cMerriweather%7cRoboto&#43;Mono">
+  
+  <link rel="stylesheet" href="/~abyvinod/styles.css">
+  
+
+  
+  
+    <script>
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'UA-75850194-1', 'auto');
+      
+      ga('require', 'eventTracker');
+      ga('require', 'outboundLinkTracker');
+      ga('require', 'urlChangeTracker');
+      ga('send', 'pageview');
+    </script>
+    <script async src="//www.google-analytics.com/analytics.js"></script>
+    
+    <script async src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js" integrity="sha512-HUmooslVKj4m6OBu0OgzjXXr+QuFYy/k7eLI5jdeEy/F4RSgMn6XRWRGkFi5IFaFgy7uFTkegp3Z0XnJf3Jq+g==" crossorigin="anonymous"></script>
+    
+  
+  
+
+  
+  <link rel="alternate" href="http://unm.edu/~abyvinod/index.xml" type="application/rss+xml" title="Abraham P. Vinod">
+  <link rel="feed" href="http://unm.edu/~abyvinod/index.xml" type="application/rss+xml" title="Abraham P. Vinod">
+  
+
+  <link rel="manifest" href="/~abyvinod/site.webmanifest">
+  <link rel="icon" type="image/png" href="/~abyvinod/img/icon.png">
+  <link rel="apple-touch-icon" type="image/png" href="/~abyvinod/img/icon-192.png">
+
+  <link rel="canonical" href="http://unm.edu/~abyvinod/talk/2018-06-santafe/">
+
+  <meta property="twitter:card" content="summary_large_image">
+  
+  <meta property="og:site_name" content="Abraham P. Vinod">
+  <meta property="og:url" content="http://unm.edu/~abyvinod/talk/2018-06-santafe/">
+  <meta property="og:title" content="Optimal Trade-Off Analysis for Efficiency and Safety in the Spacecraft Rendezvous and Docking Problem (NAASS 2018) | Abraham P. Vinod">
+  <meta property="og:description" content="We study the problem of spacecraft rendezvous and docking, specifically the trade-off between safety and efficiency.  The safety component in this problem is to stay within a line-of-sight cone and reach the target at an appropriate time in the presence of stochastic disturbance due to sensing and modeling errors.  The efficiency component in this problem is our desire to minimize control effort or fuel.  We pose this problem as a bi-criterion optimization problem.  Using our recent convexity results for the stochastic reach-avoid problem when the control policies are restricted to open-loop policies, we show that this bi-criterion optimization problem is convex.  The resulting tractability permits the exploration of the trade-off between safety and efficiency in the stochastic system.  We also show that while increasing the control bounds need not always translate to an increase in the attainable safety guarantees, decreasing the control bounds typically translates to a decrease in the attainable safety guarantees.">
+  <meta property="og:locale" content="en-us">
+  
+  <meta property="article:published_time" content="2018-05-07T00:00:00-06:00">
+  
+  <meta property="article:modified_time" content="2018-07-19T10:18:33-06:00">
+  
+
+  
+
+  
+
+  <title>Optimal Trade-Off Analysis for Efficiency and Safety in the Spacecraft Rendezvous and Docking Problem (NAASS 2018) | Abraham P. Vinod</title>
+
+</head>
+<body id="top" data-spy="scroll" data-target="#toc" data-offset="71" >
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navbar-main">
+  <div class="container">
+
+    
+    <div class="navbar-header">
+      
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+              data-target=".navbar-collapse" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      
+      <a class="navbar-brand" href="/~abyvinod/">Abraham P. Vinod</a>
+    </div>
+
+    
+    <div class="collapse navbar-collapse">
+
+      
+      
+      <ul class="nav navbar-nav navbar-right">
+        
+
+        
+        
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="/~abyvinod/#about">
+            
+            <span>Home</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+        
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="/~abyvinod/#publications_selected">
+            
+            <span>Publications</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+        
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="/~abyvinod/#talks_selected">
+            
+            <span>Talks</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+        
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="/~abyvinod/#posts">
+            
+            <span>Posts</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+        
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="/~abyvinod/pdf/AbrahamCV.pdf">
+            
+            <span>CV</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+        
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="/~abyvinod/#contact">
+            
+            <span>Contact</span>
+            
+          </a>
+        </li>
+
+        
+        
+      
+
+      
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+<div class="pub" itemscope itemtype="http://schema.org/Event">
+
+  
+
+
+  <div class="article-container">
+
+    <div class="pub-title">
+      <h1 itemprop="name">Optimal Trade-Off Analysis for Efficiency and Safety in the Spacecraft Rendezvous and Docking Problem (NAASS 2018)</h1>
+      <span class="pub-authors" itemprop="author">
+        
+      </span>
+      <span class="pull-right">
+        
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    <li>
+      <a class="twitter"
+         href="https://twitter.com/intent/tweet?text=Optimal%20Trade-Off%20Analysis%20for%20Efficiency%20and%20Safety%20in%20the%20Spacecraft%20Rendezvous%20and%20Docking%20Problem%20%28NAASS%202018%29&amp;url=http%3a%2f%2funm.edu%2f~abyvinod%2ftalk%2f2018-06-santafe%2f"
+         target="_blank" rel="noopener">
+        <i class="fa fa-twitter"></i>
+      </a>
+    </li>
+    <li>
+      <a class="facebook"
+         href="https://www.facebook.com/sharer.php?u=http%3a%2f%2funm.edu%2f~abyvinod%2ftalk%2f2018-06-santafe%2f"
+         target="_blank" rel="noopener">
+        <i class="fa fa-facebook"></i>
+      </a>
+    </li>
+    <li>
+      <a class="linkedin"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http%3a%2f%2funm.edu%2f~abyvinod%2ftalk%2f2018-06-santafe%2f&amp;title=Optimal%20Trade-Off%20Analysis%20for%20Efficiency%20and%20Safety%20in%20the%20Spacecraft%20Rendezvous%20and%20Docking%20Problem%20%28NAASS%202018%29"
+         target="_blank" rel="noopener">
+        <i class="fa fa-linkedin"></i>
+      </a>
+    </li>
+    <li>
+      <a class="weibo"
+         href="http://service.weibo.com/share/share.php?url=http%3a%2f%2funm.edu%2f~abyvinod%2ftalk%2f2018-06-santafe%2f&amp;title=Optimal%20Trade-Off%20Analysis%20for%20Efficiency%20and%20Safety%20in%20the%20Spacecraft%20Rendezvous%20and%20Docking%20Problem%20%28NAASS%202018%29"
+         target="_blank" rel="noopener">
+        <i class="fa fa-weibo"></i>
+      </a>
+    </li>
+    <li>
+      <a class="email"
+         href="mailto:?subject=Optimal%20Trade-Off%20Analysis%20for%20Efficiency%20and%20Safety%20in%20the%20Spacecraft%20Rendezvous%20and%20Docking%20Problem%20%28NAASS%202018%29&amp;body=http%3a%2f%2funm.edu%2f~abyvinod%2ftalk%2f2018-06-santafe%2f">
+        <i class="fa fa-envelope"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+      </span>
+    </div>
+
+    
+      <h3>Abstract</h3>
+      <p class="pub-abstract" itemprop="text">We study the problem of spacecraft rendezvous and docking, specifically the trade-off between safety and efficiency.  The safety component in this problem is to stay within a line-of-sight cone and reach the target at an appropriate time in the presence of stochastic disturbance due to sensing and modeling errors.  The efficiency component in this problem is our desire to minimize control effort or fuel.  We pose this problem as a bi-criterion optimization problem.  Using our recent convexity results for the stochastic reach-avoid problem when the control policies are restricted to open-loop policies, we show that this bi-criterion optimization problem is convex.  The resulting tractability permits the exploration of the trade-off between safety and efficiency in the stochastic system.  We also show that while increasing the control bounds need not always translate to an increase in the attainable safety guarantees, decreasing the control bounds typically translates to a decrease in the attainable safety guarantees.</p>
+    
+
+    <div class="row">
+      <div class="col-sm-1"></div>
+      <div class="col-sm-10">
+        <div class="row">
+          <div class="col-xs-12 col-sm-3 pub-row-heading">Date</div>
+          <div class="col-xs-12 col-sm-9" itemprop="datePublished">
+            
+            Jun 15, 2018
+            <div class="talk-time">
+              
+                10:15 AM
+                
+                  &mdash; 10:35 AM
+                
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-1"></div>
+    </div>
+    <div class="visible-xs space-below"></div>
+
+    <div class="row">
+      <div class="col-sm-1"></div>
+      <div class="col-sm-10">
+        <div class="row">
+          <div class="col-xs-12 col-sm-3 pub-row-heading">Event</div>
+          <div class="col-xs-12 col-sm-9">
+            <a href="http://acc2018.a2c2.org/" target="_blank" rel="noopener">
+            IFAC Aerospace Controls TC Workshop Networked &amp; Autonomous Air &amp; Space Systems (NAASS)
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-1"></div>
+    </div>
+    <div class="visible-xs space-below"></div>
+
+    
+    <div class="row">
+      <div class="col-sm-1"></div>
+      <div class="col-sm-10">
+        <div class="row">
+          <div class="col-xs-12 col-sm-3 pub-row-heading">Location</div>
+          <div class="col-xs-12 col-sm-9">Santa Fe, NM, USA</div>
+        </div>
+      </div>
+      <div class="col-sm-1"></div>
+    </div>
+    <div class="visible-xs space-below"></div>
+    
+
+    
+    <div class="row" style="padding-top: 10px">
+      <div class="col-sm-1"></div>
+      <div class="col-sm-10">
+        <div class="row">
+          <div class="col-xs-12 col-sm-3 pub-row-heading" style="line-height:34px;">Links</div>
+          <div class="col-xs-12 col-sm-9">
+
+            
+
+
+
+
+
+
+
+  
+  <a class="btn btn-primary btn-outline" href="http://unm.edu/~abyvinod/project/sr/">
+    Project
+  </a>
+  
+
+
+
+
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-1"></div>
+    </div>
+    <div class="visible-xs space-below"></div>
+    
+
+    <div class="space-below"></div>
+
+    <div class="article-style">
+      
+    </div>
+
+    
+
+
+  </div>
+</div>
+
+
+
+<footer class="site-footer">
+  <div class="container">
+
+    
+
+    <p class="powered-by">
+
+      &copy; 2018 &middot; 
+
+      Powered by the
+      <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+      <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+
+      <span class="pull-right" aria-hidden="true">
+        <a href="#" id="back_to_top">
+          <span class="button_icon">
+            <i class="fa fa-chevron-up fa-2x"></i>
+          </span>
+        </a>
+      </span>
+
+    </p>
+  </div>
+</footer>
+
+
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close btn-large" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Cite</h4>
+      </div>
+      <div>
+        <pre><code class="modal-body tex"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-primary btn-outline js-copy-cite" href="#" target="_blank">
+          <i class="fa fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-primary btn-outline js-download-cite" href="#" target="_blank">
+          <i class="fa fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+    
+
+    
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" integrity="sha512-3P8rXCuGJdNZOnUx/03c1jOTnMn3rP63nBip5gOP2qmUh5YAdVAvFZ1E+QLZZbC1rtMrQb+mah3AfYW11RUrWA==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.3/imagesloaded.pkgd.min.js" integrity="sha512-umsR78NN0D23AzgoZ11K7raBD+R6hqKojyBZs1w8WvYlsI+QuKRGBx3LFCwhatzBunCjDuJpDHwxD13sLMbpRA==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha512-iztkobsvnjKfAtTNdHkGVjAYTrrtlC7mGp/54c40wowO7LhURYl3gVzzcEqGl/qKXQltJ2HwMrdLcNUdo+N/RQ==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.4/isotope.pkgd.min.js" integrity="sha512-VDBOIlDbuC4VWxGJNmuFRQ0Li0SKkDpmGyuhAG5LTDLd/dJ/S0WMVxriR2Y+CyPL5gzjpN4f/6iqWVBJlht0tQ==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js" integrity="sha256-X5PoE3KU5l+JcX+w09p/wHl9AzK333C4hJ2I9S5mD4M=" crossorigin="anonymous"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.2.0/leaflet.js" integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log==" crossorigin="anonymous"></script>
+    
+    
+    <script src="/~abyvinod/js/hugo-academic.js"></script>
+    
+
+    
+    
+
+    
+    
+
+  </body>
+</html>
+

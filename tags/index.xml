@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Abraham P. Vinod</title>
+    <link>http://unm.edu/~abyvinod/tags/</link>
+    <description>Recent content in Tags on Abraham P. Vinod</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2018</copyright>
+    <lastBuildDate>Sat, 05 May 2018 00:00:00 -0600</lastBuildDate>
+    
+	<atom:link href="http://unm.edu/~abyvinod/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Human-automation-interaction</title>
+      <link>http://unm.edu/~abyvinod/tags/human-automation-interaction/</link>
+      <pubDate>Sat, 05 May 2018 00:00:00 -0600</pubDate>
+      
+      <guid>http://unm.edu/~abyvinod/tags/human-automation-interaction/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Stochastic-optimal-control</title>
+      <link>http://unm.edu/~abyvinod/tags/stochastic-optimal-control/</link>
+      <pubDate>Sun, 06 May 2018 00:00:00 -0600</pubDate>
+      
+      <guid>http://unm.edu/~abyvinod/tags/stochastic-optimal-control/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
