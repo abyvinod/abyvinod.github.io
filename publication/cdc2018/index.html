@@ -17,10 +17,10 @@
       
     
   
-  <meta name="description" content="We discuss the multiple pursuer-based intercept of a threat unmanned aerial system (UAS) with stochastic dynamics via multiple pursuing UASs, using forward stochastic reachability and receding horizon control techniques. We formulate a stochastic model for the threat that can emulate the potentially adversarial behavior and is amenable to the existing scalable results in forward stochastic reachability literature. The optimal state for the intercept for each individual pursuer is obtained via a log-concave optimization problem, and the open-loop control paths are obtained via a convex optimization problem.  With stochasticity modeled as a Gaussian process, we can approximate the optimization problem as a quadratic program, to enable real-time path planning.  We also incorporate real-time sensing into the path planning by using a receding horizon controller, to improve the intercept probabilities.  We validate the proposed framework via hardware experiments.">
+  <meta name="description" content="We propose a method for real-time motion planning in stochastic, dynamic environments via a receding horizon framework that exploits computationally efficient algorithms for forward stochastic reachability analysis and non-convex optimization.  Our method constructs a dynamically feasible trajectory for a robot, modeled as an LTI dynamical system, while ensuring 1) a desired probabilistic collision-avoidance guarantee is achieved, 2) state and control constraints are satisfied, and 3) a convex performance objective is minimized.  We first compute ``keep-out&#39;&#39; regions at each time instant to assure a probabilistic collision avoidance guarantee.  These keep-out regions are convex and compact, and can be tightly overapproximated by ellipsoids which may be computed in a grid-free, recursion-free, and sample-free manner.  The regions are constraints in a non-convex optimization problem, solved via    successive convexification. This algorithm uses interior point methods for real-time implementation.  We present numerical simulations to demonstrate the efficacy of the approach.">
 
   
-  <link rel="alternate" hreflang="en-us" href="https://abyvinod.github.io/publication/acc2018/">
+  <link rel="alternate" hreflang="en-us" href="https://abyvinod.github.io/publication/cdc2018/">
 
   
 
@@ -80,17 +80,17 @@
   <link rel="icon" type="image/png" href="/img/icon.png">
   <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
 
-  <link rel="canonical" href="https://abyvinod.github.io/publication/acc2018/">
+  <link rel="canonical" href="https://abyvinod.github.io/publication/cdc2018/">
 
   <meta property="twitter:card" content="summary_large_image">
   
   <meta property="og:site_name" content="Abraham P. Vinod">
-  <meta property="og:url" content="https://abyvinod.github.io/publication/acc2018/">
-  <meta property="og:title" content="Multiple Pursuer-Based Intercept Via Forward Stochastic Reachability | Abraham P. Vinod">
-  <meta property="og:description" content="We discuss the multiple pursuer-based intercept of a threat unmanned aerial system (UAS) with stochastic dynamics via multiple pursuing UASs, using forward stochastic reachability and receding horizon control techniques. We formulate a stochastic model for the threat that can emulate the potentially adversarial behavior and is amenable to the existing scalable results in forward stochastic reachability literature. The optimal state for the intercept for each individual pursuer is obtained via a log-concave optimization problem, and the open-loop control paths are obtained via a convex optimization problem.  With stochasticity modeled as a Gaussian process, we can approximate the optimization problem as a quadratic program, to enable real-time path planning.  We also incorporate real-time sensing into the path planning by using a receding horizon controller, to improve the intercept probabilities.  We validate the proposed framework via hardware experiments.">
+  <meta property="og:url" content="https://abyvinod.github.io/publication/cdc2018/">
+  <meta property="og:title" content="Stochastic Motion Planning Using Successive Convexification and Probabilistic Occupancy Functions | Abraham P. Vinod">
+  <meta property="og:description" content="We propose a method for real-time motion planning in stochastic, dynamic environments via a receding horizon framework that exploits computationally efficient algorithms for forward stochastic reachability analysis and non-convex optimization.  Our method constructs a dynamically feasible trajectory for a robot, modeled as an LTI dynamical system, while ensuring 1) a desired probabilistic collision-avoidance guarantee is achieved, 2) state and control constraints are satisfied, and 3) a convex performance objective is minimized.  We first compute ``keep-out&#39;&#39; regions at each time instant to assure a probabilistic collision avoidance guarantee.  These keep-out regions are convex and compact, and can be tightly overapproximated by ellipsoids which may be computed in a grid-free, recursion-free, and sample-free manner.  The regions are constraints in a non-convex optimization problem, solved via    successive convexification. This algorithm uses interior point methods for real-time implementation.  We present numerical simulations to demonstrate the efficacy of the approach.">
   <meta property="og:locale" content="en-us">
   
-  <meta property="article:published_time" content="2018-06-27T00:00:00&#43;00:00">
+  <meta property="article:published_time" content="2018-09-20T00:00:00&#43;00:00">
   
   <meta property="article:modified_time" content="2018-09-27T13:01:14-06:00">
   
@@ -99,7 +99,7 @@
 
   
 
-  <title>Multiple Pursuer-Based Intercept Via Forward Stochastic Reachability | Abraham P. Vinod</title>
+  <title>Stochastic Motion Planning Using Successive Convexification and Probabilistic Occupancy Functions | Abraham P. Vinod</title>
 
 </head>
 <body id="top" data-spy="scroll" data-target="#toc" data-offset="71" >
@@ -257,10 +257,10 @@
 
 
   <div class="article-container">
-    <h1 itemprop="name">Multiple Pursuer-Based Intercept Via Forward Stochastic Reachability</h1>
+    <h1 itemprop="name">Stochastic Motion Planning Using Successive Convexification and Probabilistic Occupancy Functions</h1>
     <span class="pub-authors" itemprop="author">
       
-      <strong>Abraham P. Vinod</strong>, Baisravan HomChaudhuri, Christoph Hintz, Anup Parikh, Stephen P. Buerger, Meeko M. K. Oishi, Gregory Brunson, Shakeeb Ahmad, Rafael Fierro
+      <strong>Abraham P. Vinod</strong>*, Sean Rice*, Yuanqi Mao, Meeko M. K. Oishi, Behcet Acikmese
       
     </span>
     <span class="pull-right">
@@ -269,35 +269,35 @@
   <ul class="share">
     <li>
       <a class="twitter"
-         href="https://twitter.com/intent/tweet?text=Multiple%20Pursuer-Based%20Intercept%20Via%20Forward%20Stochastic%20Reachability&amp;url=https%3a%2f%2fabyvinod.github.io%2fpublication%2facc2018%2f"
+         href="https://twitter.com/intent/tweet?text=Stochastic%20Motion%20Planning%20Using%20Successive%20Convexification%20and%20Probabilistic%20Occupancy%20Functions&amp;url=https%3a%2f%2fabyvinod.github.io%2fpublication%2fcdc2018%2f"
          target="_blank" rel="noopener">
         <i class="fa fa-twitter"></i>
       </a>
     </li>
     <li>
       <a class="facebook"
-         href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fabyvinod.github.io%2fpublication%2facc2018%2f"
+         href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fabyvinod.github.io%2fpublication%2fcdc2018%2f"
          target="_blank" rel="noopener">
         <i class="fa fa-facebook"></i>
       </a>
     </li>
     <li>
       <a class="linkedin"
-         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fabyvinod.github.io%2fpublication%2facc2018%2f&amp;title=Multiple%20Pursuer-Based%20Intercept%20Via%20Forward%20Stochastic%20Reachability"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fabyvinod.github.io%2fpublication%2fcdc2018%2f&amp;title=Stochastic%20Motion%20Planning%20Using%20Successive%20Convexification%20and%20Probabilistic%20Occupancy%20Functions"
          target="_blank" rel="noopener">
         <i class="fa fa-linkedin"></i>
       </a>
     </li>
     <li>
       <a class="weibo"
-         href="http://service.weibo.com/share/share.php?url=https%3a%2f%2fabyvinod.github.io%2fpublication%2facc2018%2f&amp;title=Multiple%20Pursuer-Based%20Intercept%20Via%20Forward%20Stochastic%20Reachability"
+         href="http://service.weibo.com/share/share.php?url=https%3a%2f%2fabyvinod.github.io%2fpublication%2fcdc2018%2f&amp;title=Stochastic%20Motion%20Planning%20Using%20Successive%20Convexification%20and%20Probabilistic%20Occupancy%20Functions"
          target="_blank" rel="noopener">
         <i class="fa fa-weibo"></i>
       </a>
     </li>
     <li>
       <a class="email"
-         href="mailto:?subject=Multiple%20Pursuer-Based%20Intercept%20Via%20Forward%20Stochastic%20Reachability&amp;body=https%3a%2f%2fabyvinod.github.io%2fpublication%2facc2018%2f">
+         href="mailto:?subject=Stochastic%20Motion%20Planning%20Using%20Successive%20Convexification%20and%20Probabilistic%20Occupancy%20Functions&amp;body=https%3a%2f%2fabyvinod.github.io%2fpublication%2fcdc2018%2f">
         <i class="fa fa-envelope"></i>
       </a>
     </li>
@@ -311,7 +311,7 @@
 
     
     <h3>Abstract</h3>
-    <p class="pub-abstract" itemprop="text">We discuss the multiple pursuer-based intercept of a threat unmanned aerial system (UAS) with stochastic dynamics via multiple pursuing UASs, using forward stochastic reachability and receding horizon control techniques. We formulate a stochastic model for the threat that can emulate the potentially adversarial behavior and is amenable to the existing scalable results in forward stochastic reachability literature. The optimal state for the intercept for each individual pursuer is obtained via a log-concave optimization problem, and the open-loop control paths are obtained via a convex optimization problem.  With stochasticity modeled as a Gaussian process, we can approximate the optimization problem as a quadratic program, to enable real-time path planning.  We also incorporate real-time sensing into the path planning by using a receding horizon controller, to improve the intercept probabilities.  We validate the proposed framework via hardware experiments.</p>
+    <p class="pub-abstract" itemprop="text">We propose a method for real-time motion planning in stochastic, dynamic environments via a receding horizon framework that exploits computationally efficient algorithms for forward stochastic reachability analysis and non-convex optimization.  Our method constructs a dynamically feasible trajectory for a robot, modeled as an LTI dynamical system, while ensuring 1) a desired probabilistic collision-avoidance guarantee is achieved, 2) state and control constraints are satisfied, and 3) a convex performance objective is minimized.  We first compute ``keep-out&rdquo; regions at each time instant to assure a probabilistic collision avoidance guarantee.  These keep-out regions are convex and compact, and can be tightly overapproximated by ellipsoids which may be computed in a grid-free, recursion-free, and sample-free manner.  The regions are constraints in a non-convex optimization problem, solved via    successive convexification. This algorithm uses interior point methods for real-time implementation.  We present numerical simulations to demonstrate the efficacy of the approach.</p>
     
 
     
@@ -340,7 +340,7 @@
       <div class="col-sm-10">
         <div class="row">
           <div class="col-xs-12 col-sm-3 pub-row-heading">Publication</div>
-          <div class="col-xs-12 col-sm-9">In <em>Proceedings of the American Control Conference</em> (ACC)</div>
+          <div class="col-xs-12 col-sm-9">In <em>Proceedings of the IEEE Conference on Decision and Control</em> (CDC)</div>
         </div>
       </div>
       <div class="col-sm-1"></div>
@@ -354,7 +354,7 @@
         <div class="row">
           <div class="col-xs-12 col-sm-3 pub-row-heading">Date</div>
           <div class="col-xs-12 col-sm-9" itemprop="datePublished">
-            June, 2018
+            September, 2018
           </div>
         </div>
       </div>
@@ -374,7 +374,7 @@
 
 
 
-<a class="btn btn-primary btn-outline" href="https://abyvinod.github.io/pdf/2018VinodACC.pdf" target="_blank" rel="noopener">
+<a class="btn btn-primary btn-outline" href="https://abyvinod.github.io/pdf/2018VinodCDC.pdf" target="_blank" rel="noopener">
   PDF
 </a>
 
@@ -382,7 +382,7 @@
 
 
 <button type="button" class="btn btn-primary btn-outline js-cite-modal"
-        data-filename="/files/citations/ACC2018.bib">
+        data-filename="/files/citations/CDC2018.bib">
   Cite
 </button>
 
@@ -399,15 +399,7 @@
 
 
 
-<a class="btn btn-primary btn-outline" href="https://abyvinod.github.io/pdf/2018VinodACC_slides.pdf" target="_blank" rel="noopener">
-  Slides
-</a>
 
-
-
-<a class="btn btn-primary btn-outline" href="https://ieeexplore.ieee.org/document/8431308" target="_blank" rel="noopener">
-  Source Document
-</a>
 
 
 

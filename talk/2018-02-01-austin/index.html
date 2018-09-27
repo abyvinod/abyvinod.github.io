@@ -17,10 +17,10 @@
       
     
   
-  <meta name="description" content="We discuss the multiple pursuer-based intercept of a threat unmanned aerial system (UAS) with stochastic dynamics via multiple pursuing UASs, using forward stochastic reachability and receding horizon control techniques. We formulate a stochastic model for the threat that can emulate the potentially adversarial behavior and is amenable to the existing scalable results in forward stochastic reachability literature. The optimal state for the intercept for each individual pursuer is obtained via a log-concave optimization problem, and the open-loop control paths are obtained via a convex optimization problem.  With stochasticity modeled as a Gaussian process, we can approximate the optimization problem as a quadratic program, to enable real-time path planning.  We also incorporate real-time sensing into the path planning by using a receding horizon controller, to improve the intercept probabilities.  We validate the proposed framework via hardware experiments.">
+  <meta name="description" content="Deploying autonomy in expensive safety-critical or high-risk systems require guarantees of safety. Two major challenges in providing these assurances are the stochasticity and the high dimensionality of the system. Stochasticity may capture human actions, disturbance effects, and mitigate the inevitable limitations in mathematical models; and high-dimensionality is inevitable as model fidelity improves. The desired guarantee may be obtained by solving the stochastic reach-avoid problem, a stochastic optimal control problem with a multiplicative cost function. Existing approaches provide approximations and suffer from the curse of dimensionality. We propose scalable algorithms to underapproximate the stochastic reach-avoid probability and the associated sets using convex optimization and Fourier analysis. Our approach is grid-free and recursion-free and enables verification of high-dimensional stochastic dynamical systems. We apply our method to problems in stochastic target capture using quadrotors and satellite rendezvous and docking.">
 
   
-  <link rel="alternate" hreflang="en-us" href="https://abyvinod.github.io/publication/acc2018/">
+  <link rel="alternate" hreflang="en-us" href="https://abyvinod.github.io/talk/2018-02-01-austin/">
 
   
 
@@ -36,6 +36,13 @@
   
     
   
+  
+    
+    
+      
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+      
+    
   
   
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha512-6MXa8B6uaO18Hid6blRMetEIoPqHf7Ux1tnyIQdpt9qI5OACx7C+O3IVTr98vwGnlcg0LOLa02i9Y1HpVhlfiw==" crossorigin="anonymous">
@@ -80,26 +87,26 @@
   <link rel="icon" type="image/png" href="/img/icon.png">
   <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
 
-  <link rel="canonical" href="https://abyvinod.github.io/publication/acc2018/">
+  <link rel="canonical" href="https://abyvinod.github.io/talk/2018-02-01-austin/">
 
   <meta property="twitter:card" content="summary_large_image">
   
   <meta property="og:site_name" content="Abraham P. Vinod">
-  <meta property="og:url" content="https://abyvinod.github.io/publication/acc2018/">
-  <meta property="og:title" content="Multiple Pursuer-Based Intercept Via Forward Stochastic Reachability | Abraham P. Vinod">
-  <meta property="og:description" content="We discuss the multiple pursuer-based intercept of a threat unmanned aerial system (UAS) with stochastic dynamics via multiple pursuing UASs, using forward stochastic reachability and receding horizon control techniques. We formulate a stochastic model for the threat that can emulate the potentially adversarial behavior and is amenable to the existing scalable results in forward stochastic reachability literature. The optimal state for the intercept for each individual pursuer is obtained via a log-concave optimization problem, and the open-loop control paths are obtained via a convex optimization problem.  With stochasticity modeled as a Gaussian process, we can approximate the optimization problem as a quadratic program, to enable real-time path planning.  We also incorporate real-time sensing into the path planning by using a receding horizon controller, to improve the intercept probabilities.  We validate the proposed framework via hardware experiments.">
+  <meta property="og:url" content="https://abyvinod.github.io/talk/2018-02-01-austin/">
+  <meta property="og:title" content="Safe autonomy via Stochastic Reachability | Abraham P. Vinod">
+  <meta property="og:description" content="Deploying autonomy in expensive safety-critical or high-risk systems require guarantees of safety. Two major challenges in providing these assurances are the stochasticity and the high dimensionality of the system. Stochasticity may capture human actions, disturbance effects, and mitigate the inevitable limitations in mathematical models; and high-dimensionality is inevitable as model fidelity improves. The desired guarantee may be obtained by solving the stochastic reach-avoid problem, a stochastic optimal control problem with a multiplicative cost function. Existing approaches provide approximations and suffer from the curse of dimensionality. We propose scalable algorithms to underapproximate the stochastic reach-avoid probability and the associated sets using convex optimization and Fourier analysis. Our approach is grid-free and recursion-free and enables verification of high-dimensional stochastic dynamical systems. We apply our method to problems in stochastic target capture using quadrotors and satellite rendezvous and docking.">
   <meta property="og:locale" content="en-us">
   
-  <meta property="article:published_time" content="2018-06-27T00:00:00&#43;00:00">
+  <meta property="article:published_time" content="2018-02-01T00:00:00-07:00">
   
-  <meta property="article:modified_time" content="2018-09-27T13:01:14-06:00">
-  
-
+  <meta property="article:modified_time" content="2018-07-19T14:58:36-06:00">
   
 
   
 
-  <title>Multiple Pursuer-Based Intercept Via Forward Stochastic Reachability | Abraham P. Vinod</title>
+  
+
+  <title>Safe autonomy via Stochastic Reachability | Abraham P. Vinod</title>
 
 </head>
 <body id="top" data-spy="scroll" data-target="#toc" data-offset="71" >
@@ -251,53 +258,53 @@
   </div>
 </nav>
 
-<div class="pub" itemscope itemtype="http://schema.org/CreativeWork">
+<div class="pub" itemscope itemtype="http://schema.org/Event">
 
   
 
 
   <div class="article-container">
-    <h1 itemprop="name">Multiple Pursuer-Based Intercept Via Forward Stochastic Reachability</h1>
-    <span class="pub-authors" itemprop="author">
-      
-      <strong>Abraham P. Vinod</strong>, Baisravan HomChaudhuri, Christoph Hintz, Anup Parikh, Stephen P. Buerger, Meeko M. K. Oishi, Gregory Brunson, Shakeeb Ahmad, Rafael Fierro
-      
-    </span>
-    <span class="pull-right">
-      
+
+    <div class="pub-title">
+      <h1 itemprop="name">Safe autonomy via Stochastic Reachability</h1>
+      <span class="pub-authors" itemprop="author">
+        
+      </span>
+      <span class="pull-right">
+        
 <div class="share-box" aria-hidden="true">
   <ul class="share">
     <li>
       <a class="twitter"
-         href="https://twitter.com/intent/tweet?text=Multiple%20Pursuer-Based%20Intercept%20Via%20Forward%20Stochastic%20Reachability&amp;url=https%3a%2f%2fabyvinod.github.io%2fpublication%2facc2018%2f"
+         href="https://twitter.com/intent/tweet?text=Safe%20autonomy%20via%20Stochastic%20Reachability&amp;url=https%3a%2f%2fabyvinod.github.io%2ftalk%2f2018-02-01-austin%2f"
          target="_blank" rel="noopener">
         <i class="fa fa-twitter"></i>
       </a>
     </li>
     <li>
       <a class="facebook"
-         href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fabyvinod.github.io%2fpublication%2facc2018%2f"
+         href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fabyvinod.github.io%2ftalk%2f2018-02-01-austin%2f"
          target="_blank" rel="noopener">
         <i class="fa fa-facebook"></i>
       </a>
     </li>
     <li>
       <a class="linkedin"
-         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fabyvinod.github.io%2fpublication%2facc2018%2f&amp;title=Multiple%20Pursuer-Based%20Intercept%20Via%20Forward%20Stochastic%20Reachability"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fabyvinod.github.io%2ftalk%2f2018-02-01-austin%2f&amp;title=Safe%20autonomy%20via%20Stochastic%20Reachability"
          target="_blank" rel="noopener">
         <i class="fa fa-linkedin"></i>
       </a>
     </li>
     <li>
       <a class="weibo"
-         href="http://service.weibo.com/share/share.php?url=https%3a%2f%2fabyvinod.github.io%2fpublication%2facc2018%2f&amp;title=Multiple%20Pursuer-Based%20Intercept%20Via%20Forward%20Stochastic%20Reachability"
+         href="http://service.weibo.com/share/share.php?url=https%3a%2f%2fabyvinod.github.io%2ftalk%2f2018-02-01-austin%2f&amp;title=Safe%20autonomy%20via%20Stochastic%20Reachability"
          target="_blank" rel="noopener">
         <i class="fa fa-weibo"></i>
       </a>
     </li>
     <li>
       <a class="email"
-         href="mailto:?subject=Multiple%20Pursuer-Based%20Intercept%20Via%20Forward%20Stochastic%20Reachability&amp;body=https%3a%2f%2fabyvinod.github.io%2fpublication%2facc2018%2f">
+         href="mailto:?subject=Safe%20autonomy%20via%20Stochastic%20Reachability&amp;body=https%3a%2f%2fabyvinod.github.io%2ftalk%2f2018-02-01-austin%2f">
         <i class="fa fa-envelope"></i>
       </a>
     </li>
@@ -305,47 +312,12 @@
 </div>
 
 
-    </span>
-
-    
-
-    
-    <h3>Abstract</h3>
-    <p class="pub-abstract" itemprop="text">We discuss the multiple pursuer-based intercept of a threat unmanned aerial system (UAS) with stochastic dynamics via multiple pursuing UASs, using forward stochastic reachability and receding horizon control techniques. We formulate a stochastic model for the threat that can emulate the potentially adversarial behavior and is amenable to the existing scalable results in forward stochastic reachability literature. The optimal state for the intercept for each individual pursuer is obtained via a log-concave optimization problem, and the open-loop control paths are obtained via a convex optimization problem.  With stochasticity modeled as a Gaussian process, we can approximate the optimization problem as a quadratic program, to enable real-time path planning.  We also incorporate real-time sensing into the path planning by using a receding horizon controller, to improve the intercept probabilities.  We validate the proposed framework via hardware experiments.</p>
-    
-
-    
-    <div class="row">
-      <div class="col-sm-1"></div>
-      <div class="col-sm-10">
-        <div class="row">
-          <div class="col-xs-12 col-sm-3 pub-row-heading">Type</div>
-          <div class="col-xs-12 col-sm-9">
-            
-            <a href="https://abyvinod.github.io/publication/#1">
-              Conference paper
-            </a>
-            
-          </div>
-        </div>
-      </div>
-      <div class="col-sm-1"></div>
+      </span>
     </div>
-    <div class="visible-xs space-below"></div>
-    
 
     
-    <div class="row">
-      <div class="col-sm-1"></div>
-      <div class="col-sm-10">
-        <div class="row">
-          <div class="col-xs-12 col-sm-3 pub-row-heading">Publication</div>
-          <div class="col-xs-12 col-sm-9">In <em>Proceedings of the American Control Conference</em> (ACC)</div>
-        </div>
-      </div>
-      <div class="col-sm-1"></div>
-    </div>
-    <div class="visible-xs space-below"></div>
+      <h3>Abstract</h3>
+      <p class="pub-abstract" itemprop="text">Deploying autonomy in expensive safety-critical or high-risk systems require guarantees of safety. Two major challenges in providing these assurances are the stochasticity and the high dimensionality of the system. Stochasticity may capture human actions, disturbance effects, and mitigate the inevitable limitations in mathematical models; and high-dimensionality is inevitable as model fidelity improves. The desired guarantee may be obtained by solving the stochastic reach-avoid problem, a stochastic optimal control problem with a multiplicative cost function. Existing approaches provide approximations and suffer from the curse of dimensionality. We propose scalable algorithms to underapproximate the stochastic reach-avoid probability and the associated sets using convex optimization and Fourier analysis. Our approach is grid-free and recursion-free and enables verification of high-dimensional stochastic dynamical systems. We apply our method to problems in stochastic target capture using quadrotors and satellite rendezvous and docking.</p>
     
 
     <div class="row">
@@ -354,7 +326,16 @@
         <div class="row">
           <div class="col-xs-12 col-sm-3 pub-row-heading">Date</div>
           <div class="col-xs-12 col-sm-9" itemprop="datePublished">
-            June, 2018
+            
+            Feb 1, 2018
+            <div class="talk-time">
+              
+                10:45 AM
+                
+                  &mdash; 11:30 AM
+                
+              
+            </div>
           </div>
         </div>
       </div>
@@ -362,6 +343,37 @@
     </div>
     <div class="visible-xs space-below"></div>
 
+    <div class="row">
+      <div class="col-sm-1"></div>
+      <div class="col-sm-10">
+        <div class="row">
+          <div class="col-xs-12 col-sm-3 pub-row-heading">Event</div>
+          <div class="col-xs-12 col-sm-9">
+            
+            Invited talk
+            
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-1"></div>
+    </div>
+    <div class="visible-xs space-below"></div>
+
+    
+    <div class="row">
+      <div class="col-sm-1"></div>
+      <div class="col-sm-10">
+        <div class="row">
+          <div class="col-xs-12 col-sm-3 pub-row-heading">Location</div>
+          <div class="col-xs-12 col-sm-9">Institute for Computational Engineering and Sciences, University of Texas, Austin, TX, USA</div>
+        </div>
+      </div>
+      <div class="col-sm-1"></div>
+    </div>
+    <div class="visible-xs space-below"></div>
+    
+
+    
     <div class="row" style="padding-top: 10px">
       <div class="col-sm-1"></div>
       <div class="col-sm-10">
@@ -374,40 +386,14 @@
 
 
 
-<a class="btn btn-primary btn-outline" href="https://abyvinod.github.io/pdf/2018VinodACC.pdf" target="_blank" rel="noopener">
-  PDF
-</a>
-
-
-
-
-<button type="button" class="btn btn-primary btn-outline js-cite-modal"
-        data-filename="/files/citations/ACC2018.bib">
-  Cite
-</button>
-
-
 
 
 
   
-  <a class="btn btn-primary btn-outline" href="https://abyvinod.github.io/project/stochastic-motion-planning/">
+  <a class="btn btn-primary btn-outline" href="https://abyvinod.github.io/project/sr/">
     Project
   </a>
   
-
-
-
-
-<a class="btn btn-primary btn-outline" href="https://abyvinod.github.io/pdf/2018VinodACC_slides.pdf" target="_blank" rel="noopener">
-  Slides
-</a>
-
-
-
-<a class="btn btn-primary btn-outline" href="https://ieeexplore.ieee.org/document/8431308" target="_blank" rel="noopener">
-  Source Document
-</a>
 
 
 
@@ -418,10 +404,13 @@
       <div class="col-sm-1"></div>
     </div>
     <div class="visible-xs space-below"></div>
+    
 
     <div class="space-below"></div>
 
-    <div class="article-style"></div>
+    <div class="article-style">
+      
+    </div>
 
     
 
@@ -502,7 +491,30 @@
 
     
     
+      
+      
+      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+      
 
+      
+
+      
+
+      <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+    
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        CommonHTML: { linebreaks: { automatic: true } },
+        tex2jax: { inlineMath: [ ['$', '$'], ['\\(','\\)'] ], displayMath: [ ['$$','$$'], ['\\[', '\\]'] ], processEscapes: false },
+        TeX: { noUndefined: { attributes: { mathcolor: 'red', mathbackground: '#FFEEEE', mathsize: '90%' } } },
+        messageStyle: 'none'
+      });
+    </script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS_CHTML-full" integrity="sha256-GhM+5JHb6QUzOQPXSJLEWP7R73CbkisjzK5Eyij4U9w=" crossorigin="anonymous"></script>
     
     
 
