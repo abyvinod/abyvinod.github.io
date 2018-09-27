@@ -352,45 +352,5 @@ This work has won multiple recognitions:&lt;/p&gt;
       <description></description>
     </item>
     
-<<<<<<< HEAD
-=======
-    <item>
-      <title>Scalable Underapproximation for Stochastic Reach-Avoid Problem for High-Dimensional LTI Systems using Fourier Transforms</title>
-      <link>https://abyvinod.github.io/publication/cssl2017/</link>
-      <pubDate>Fri, 01 Dec 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://abyvinod.github.io/publication/cssl2017/</guid>
-      <description>&lt;p&gt;This paper tackles the &lt;a href=&#34;https://abyvinod.github.io/post/terminal-stochastic-reach-avoid-problem/&#34; target=&#34;_blank&#34;&gt;terminal hitting-time stochastic reach-avoid
-problem&lt;/a&gt;.
-It proposes:&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Sufficient conditions under which such a controller exists&lt;/li&gt;
-&lt;li&gt;An oracle that computes an open-loop optimal controller that achieves an (optimized) lower bound &amp;mdash; the &lt;em&gt;open-loop underapproximation&lt;/em&gt; &amp;mdash; on the maximum stochastic reach-avoid probability&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;!--An open-loop **underapproximation** to this problem that uses numerical integration and gradient-free optimization to c--&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Underapproximation of Reach-Avoid Sets for Discrete-Time Stochastic Systems via Lagrangian Methods</title>
-      <link>https://abyvinod.github.io/publication/cdc2017/</link>
-      <pubDate>Fri, 01 Dec 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://abyvinod.github.io/publication/cdc2017/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Aerial Suppression of Airborne Platforms (ASAP): Coordinated Capture of a Threat UAS via Stochastic Reachability</title>
-      <link>https://abyvinod.github.io/publication/isar2017/</link>
-      <pubDate>Sat, 01 Jul 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://abyvinod.github.io/publication/isar2017/</guid>
-      <description></description>
-    </item>
-    
->>>>>>> 595b53c424540d5034b837af1b14955d7592fbd0
   </channel>
 </rss>
