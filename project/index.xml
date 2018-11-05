@@ -18,7 +18,7 @@
       <pubDate>Sat, 05 May 2018 00:00:00 -0600</pubDate>
       
       <guid>https://abyvinod.github.io/project/sr/</guid>
-      <description>Table of Contents Problem formulation Solutions proposed Awards and recognition Future work  Problem formulation Real-world problems are typically stochasticity and high-dimensional. Stochasticity may arise from human actions, unmodeled phenomena (e.g. weather), and uncertainty in system parameters. As we strive for more automation, it is natural ask for guarantees of safety and performance, which is a hard problem. This project aims to provide scalable and tractable guarantees of safety and performance in real world problems, described as continuous-state discrete-time stochastic models.</description>
+      <description>Table of Contents  Problem formulation Solutions proposed Awards and recognition Future work   Problem formulation Real-world problems are typically stochasticity and high-dimensional. Stochasticity may arise from human actions, unmodeled phenomena (e.g. weather), and uncertainty in system parameters. As we strive for more automation, it is natural ask for guarantees of safety and performance, which is a hard problem. This project aims to provide scalable and tractable guarantees of safety and performance in real world problems, described as continuous-state discrete-time stochastic models.</description>
     </item>
     
     <item>
