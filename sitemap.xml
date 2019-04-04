@@ -1,105 +1,62 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
-    <url>
-    
-      <loc>https://abyvinod.github.io/post/sreachtools/</loc>
-      <lastmod>2019-04-04T12:37:07-05:00</lastmod>
-    </url>
-  
-    <url>
-    
-      <loc>https://abyvinod.github.io/project/stochreach/</loc>
-      <lastmod>2019-04-04T12:37:07-05:00</lastmod>
-    </url>
-  
-    <url>
-    
-      <loc>https://abyvinod.github.io/post/stochmotion/</loc>
-      <lastmod>2019-04-04T12:37:07-05:00</lastmod>
-    </url>
-  
-    <url>
-    
-      <loc>https://abyvinod.github.io/post/stochtarget/</loc>
-      <lastmod>2019-04-04T12:37:07-05:00</lastmod>
-    </url>
-  
-    <url>
-    
-      <loc>https://abyvinod.github.io/post/spacecraft/</loc>
-      <lastmod>2019-04-04T12:37:07-05:00</lastmod>
-    </url>
-  
-    <url>
-    
-      <loc>https://abyvinod.github.io/project/proboccup/</loc>
-      <lastmod>2019-04-04T12:37:07-05:00</lastmod>
-    </url>
-  
-    <url>
-    
-      <loc>https://abyvinod.github.io/publication/</loc>
-      <lastmod>2019-03-26T00:32:19-05:00</lastmod>
-    </url>
-  
-    <url>
-    
-      <loc>https://abyvinod.github.io/author/admin/</loc>
-      <lastmod>2019-04-04T13:02:28-05:00</lastmod>
-    </url>
-  
-    <url>
-    
-      <loc>https://abyvinod.github.io/</loc>
-      <lastmod>2019-04-04T12:37:07-05:00</lastmod>
-      <priority>0</priority>
-    </url>
-  
-    <url>
-    
-      <loc>https://abyvinod.github.io/author/</loc>
-      <priority>0</priority>
-    </url>
-  
-    <url>
-    
-      <loc>https://abyvinod.github.io/categories/</loc>
-      <priority>0</priority>
-    </url>
-  
-    <url>
-    
-      <loc>https://abyvinod.github.io/post/</loc>
-      <lastmod>2019-04-04T12:37:07-05:00</lastmod>
-      <priority>0</priority>
-    </url>
-  
-    <url>
-    
-      <loc>https://abyvinod.github.io/project/</loc>
-      <lastmod>2019-04-04T12:37:07-05:00</lastmod>
-      <priority>0</priority>
-    </url>
-  
-    <url>
-    
-      <loc>https://abyvinod.github.io/tags/</loc>
-      <priority>0</priority>
-    </url>
-  
-    <url>
-    
-      <loc>https://abyvinod.github.io/tags/stochastic-optimal-control/</loc>
-      <lastmod>2019-04-04T12:37:07-05:00</lastmod>
-      <priority>0</priority>
-    </url>
-  
-    <url>
-    
-      <loc>https://abyvinod.github.io/tags/stochastic-reachability/</loc>
-      <lastmod>2019-04-04T12:37:07-05:00</lastmod>
-      <priority>0</priority>
-    </url>
-  
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://abyvinod.github.io/</loc>
+  <lastmod>2019-04-04T18:05:26+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://abyvinod.github.io/post/sreachtools/</loc>
+  <lastmod>2019-04-04T18:05:27+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://abyvinod.github.io/post/stochmotion/</loc>
+  <lastmod>2019-04-04T18:05:27+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://abyvinod.github.io/post/stochtarget/</loc>
+  <lastmod>2019-04-04T18:05:27+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://abyvinod.github.io/post/</loc>
+  <lastmod>2019-04-04T18:05:27+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://abyvinod.github.io/project/stochreach/</loc>
+  <lastmod>2019-04-04T18:05:27+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://abyvinod.github.io/project/proboccup/</loc>
+  <lastmod>2019-04-04T18:05:27+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://abyvinod.github.io/post/spacecraft/</loc>
+  <lastmod>2019-04-04T18:05:27+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://abyvinod.github.io/tags/stochastic-optimal-control/</loc>
+  <lastmod>2019-04-04T18:05:27+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://abyvinod.github.io/tags/stochastic-reachability/</loc>
+  <lastmod>2019-04-04T18:05:27+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+
+
 </urlset>
