@@ -17,10 +17,9 @@
       
       <guid>https://abyvinod.github.io/post/sreachtools/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://unm-hscl.github.io/SReachTools/&#34; target=&#34;_blank&#34;&gt;SReachTools&lt;/a&gt; is an open-source (GPLv3)
-stochastic reachability toolbox, written in MATLAB. See &lt;a href=&#34;../stochreach/&#34;&gt;my post on safety
-guarantees via stochastic reachability&lt;/a&gt; to know more about this
-mathematical framework for generating probabilistic guarantees of safety and
-performance.&lt;/p&gt;
+stochastic reachability toolbox, written in MATLAB. See &lt;a href=&#34;https://abyvinod.github.io/project/stochreach/&#34;&gt;this
+project post&lt;/a&gt; to know more about this mathematical framework
+for generating probabilistic guarantees of safety and performance.&lt;/p&gt;
 
 &lt;p&gt;For safety-critical applications, it is important that we construct either exact
 or underapproximations of the set of safe initial states. We do not want to be
@@ -548,6 +547,42 @@ stochastic dynamics&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://abyvinod.github.io/post/stochtarget/&#34;&gt;Stochastic target capture&lt;/a&gt;: Capture a stochastically moving
 target using a controller robot&lt;/li&gt;
 &lt;/ol&gt;
+</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://abyvinod.github.io/author/admin/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://abyvinod.github.io/author/admin/</guid>
+      <description>&lt;p&gt;I am a researcher with experience in &lt;strong&gt;control&lt;/strong&gt;, &lt;strong&gt;optimization&lt;/strong&gt;, and
+&lt;strong&gt;reinforcement learning&lt;/strong&gt;.  My research goal is to develop safe autonomy under
+uncertainty and constraints using minimal computational effort. Safe autonomy
+can have wide impact ranging from bio-medical devices and transportation to
+space applications.&lt;/p&gt;
+
+&lt;p&gt;Currently, I am a Postdoctoral Research Fellow at &lt;a href=&#34;https://www.ices.utexas.edu/&#34; target=&#34;_blank&#34;&gt;the Institute for
+Computational Engineering and Sciences&lt;/a&gt;, &lt;a href=&#34;https://www.utexas.edu/&#34; target=&#34;_blank&#34;&gt;the
+University of Texas at Austin&lt;/a&gt; with &lt;a href=&#34;https://www.ae.utexas.edu/faculty/faculty-directory/topcu&#34; target=&#34;_blank&#34;&gt;Dr.
+Ufuk Topcu&lt;/a&gt;. I
+received my PhD in Engineering (Systems and Control) at the &lt;a href=&#34;https://www.unm.edu&#34; target=&#34;_blank&#34;&gt;University of New
+Mexico&lt;/a&gt;, with &lt;a href=&#34;https://www.unm.edu/~oishi/&#34; target=&#34;_blank&#34;&gt;Dr.  Meeko
+Oishi&lt;/a&gt; as my PhD advisor. My PhD work focused on
+theory and algorithms for &lt;a href=&#34;https://digitalrepository.unm.edu/cgi/viewcontent.cgi?article=1461&amp;amp;context=ece_etds&#34; target=&#34;_blank&#34;&gt;probabilistic safety and stochastic optimal control
+design under constraints&lt;/a&gt;. Along with &lt;a href=&#34;https://unm.edu/~gleasonj&#34; target=&#34;_blank&#34;&gt;J.
+Gleason&lt;/a&gt;, I have implemented a significant part of my
+PhD work in &lt;a href=&#34;https://unm-hscl.github.io/SReachTools/&#34; target=&#34;_blank&#34;&gt;SReachTools&lt;/a&gt;, which is an open-source, repeatability-tested, MATLAB toolbox.  I obtained my B.Tech.
+and M.Tech degrees in Electrical Engineering from the &lt;a href=&#34;https://www.iitm.ac.in&#34; target=&#34;_blank&#34;&gt;Indian Institute of
+Technology, Madras&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;My research has received various recognitions:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://hscc2017.ece.illinois.edu/Awards.html&#34; target=&#34;_blank&#34;&gt;Best Student Paper Award&lt;/a&gt; in the 2017 ACM Hybrid Systems: Computation and Control Conference,&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.hscc2018.deib.polimi.it/award-finalists-and-winners&#34; target=&#34;_blank&#34;&gt;Best Paper Award finalist&lt;/a&gt; in the 2018 ACM Hybrid Systems: Computation and Control Conference, and&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.iitm.ac.in/sites/default/files/notices/convocation_2014_prize_winners-website.pdf&#34; target=&#34;_blank&#34;&gt;Prof. Achim Bopp Prize&lt;/a&gt; for my M.  Tech thesis.&lt;/li&gt;
+&lt;/ul&gt;
 </description>
     </item>
     

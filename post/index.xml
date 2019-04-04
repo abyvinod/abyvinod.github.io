@@ -18,7 +18,7 @@
       <pubDate>Thu, 04 Apr 2019 00:00:00 -0500</pubDate>
       
       <guid>https://abyvinod.github.io/post/sreachtools/</guid>
-      <description>SReachTools is an open-source (GPLv3) stochastic reachability toolbox, written in MATLAB. See my post on safety guarantees via stochastic reachability to know more about this mathematical framework for generating probabilistic guarantees of safety and performance.
+      <description>SReachTools is an open-source (GPLv3) stochastic reachability toolbox, written in MATLAB. See this project post to know more about this mathematical framework for generating probabilistic guarantees of safety and performance.
 For safety-critical applications, it is important that we construct either exact or underapproximations of the set of safe initial states. We do not want to be over-confident in our safety declarations, i.e., declare an initial state safe when it is not really safe.</description>
     </item>
     
