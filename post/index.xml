@@ -6,19 +6,50 @@
     <description>Recent content in Posts on Abraham P. Vinod</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>&amp;copy; 2018</copyright>
-    <lastBuildDate>Sun, 01 Jan 2017 00:00:00 -0700</lastBuildDate>
+    <copyright>&amp;copy; 2019</copyright>
+    <lastBuildDate>Thu, 04 Apr 2019 00:00:00 -0500</lastBuildDate>
     
 	<atom:link href="https://abyvinod.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Safety for stochastic systems: Terminal stochastic reach-avoid problem</title>
-      <link>https://abyvinod.github.io/post/terminal-stochastic-reach-avoid-problem/</link>
-      <pubDate>Sun, 06 May 2018 00:00:00 -0600</pubDate>
+      <title>SReachTools: A MATLAB Toolbox for stochastic reachability computation</title>
+      <link>https://abyvinod.github.io/post/sreachtools/</link>
+      <pubDate>Thu, 04 Apr 2019 00:00:00 -0500</pubDate>
       
-      <guid>https://abyvinod.github.io/post/terminal-stochastic-reach-avoid-problem/</guid>
-      <description>Automation, typically, refers to the use of an onboard computer to drives a system to optimize some objective. It makes our day-to-day life simpler and efficient, for example, in transportation (autopilot systems and self-driving cars), space applications (spacecraft rendezvous and docking problem), biomedical applications, power grid, and the list goes on and on. However, as we hand over more and more control to the automation, we naturally seek guarantees of safety and performance.</description>
+      <guid>https://abyvinod.github.io/post/sreachtools/</guid>
+      <description>SReachTools is an open-source (GPLv3) stochastic reachability toolbox, written in MATLAB. See my post on safety guarantees via stochastic reachability to know more about this mathematical framework for generating probabilistic guarantees of safety and performance.
+For safety-critical applications, it is important that we construct either exact or underapproximations of the set of safe initial states. We do not want to be over-confident in our safety declarations, i.e., declare an initial state safe when it is not really safe.</description>
+    </item>
+    
+    <item>
+      <title>Stochastic motion planning via probabilistic occupancy function</title>
+      <link>https://abyvinod.github.io/post/stochmotion/</link>
+      <pubDate>Sat, 30 Mar 2019 00:00:00 -0500</pubDate>
+      
+      <guid>https://abyvinod.github.io/post/stochmotion/</guid>
+      <description>The video below shows the example discussed in our CDC 2018 paper. The successive convexification-based planner computes these trajectories within $0.25$ seconds (sampling time). The obstacle motion prediction is done on-the-fly using my work on probabilistic occupancy function.
+ The colored circles are obstacles that we must avoid. The obstacles have known stochastic dynamics. The figure on the right shows the $\alpha$-probability occupied sets. The black dot is the current robot location.</description>
+    </item>
+    
+    <item>
+      <title>Stochastic target capture via forward stochastic reachability</title>
+      <link>https://abyvinod.github.io/post/stochtarget/</link>
+      <pubDate>Sat, 30 Mar 2019 00:00:00 -0500</pubDate>
+      
+      <guid>https://abyvinod.github.io/post/stochtarget/</guid>
+      <description>Given a stochastic model for a (non-adversarial) threat quadrotor, we utilize forward stochastic reachability to construct trajectories with maximum probability of capture for a pursuer quadrotor.
+Experiment 1: Robustness to threat quadrotor  You may want to mute the YouTube video to avoid the sound of the quadrotors
+    Experiment 2: Open-loop control vs receding horizon control  You may want to mute the YouTube video to avoid the sound of the quadrotors</description>
+    </item>
+    
+    <item>
+      <title>Spacecraft rendezvous problem</title>
+      <link>https://abyvinod.github.io/post/spacecraft/</link>
+      <pubDate>Fri, 15 Mar 2019 00:00:00 -0500</pubDate>
+      
+      <guid>https://abyvinod.github.io/post/spacecraft/</guid>
+      <description>High-level description We wish to drive a spacecraft (Deputy) towards another spacecraft (Chief) for docking. This problem is known as the spacecraft rendezvous and docking problem. It is a common requirement for maintenance and resupply missions in space applications. Due to sensing constraints, we wish that the Deputy stays within a line-of-sight cone with respect to Chief. Further, we wish to achieve the docking in a pre-specified time interval while obeying the physical laws that govern the system and constraints on actuation (limited thrust).</description>
     </item>
     
   </channel>

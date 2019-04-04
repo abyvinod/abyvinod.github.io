@@ -1,393 +1,105 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
-    
-    
     <url>
     
-      <loc>https://abyvinod.github.io/publication/cdc2018/</loc>
-      <lastmod>2018-09-27T13:01:14-06:00</lastmod>
+      <loc>https://abyvinod.github.io/post/sreachtools/</loc>
+      <lastmod>2019-04-04T12:37:07-05:00</lastmod>
     </url>
-    
   
-    
-    
     <url>
     
-      <loc>https://abyvinod.github.io/publication/arch2018/</loc>
-      <lastmod>2018-09-30T12:15:20-06:00</lastmod>
+      <loc>https://abyvinod.github.io/project/stochreach/</loc>
+      <lastmod>2019-04-04T12:37:07-05:00</lastmod>
     </url>
-    
   
-    
-    
     <url>
     
-      <loc>https://abyvinod.github.io/publication/acc2018/</loc>
-      <lastmod>2018-09-27T13:01:14-06:00</lastmod>
+      <loc>https://abyvinod.github.io/post/stochmotion/</loc>
+      <lastmod>2019-04-04T12:37:07-05:00</lastmod>
     </url>
-    
   
-    
-    
     <url>
     
-      <loc>https://abyvinod.github.io/talk/2018-05-berkeley/</loc>
-      <lastmod>2018-07-19T12:51:59-06:00</lastmod>
+      <loc>https://abyvinod.github.io/post/stochtarget/</loc>
+      <lastmod>2019-04-04T12:37:07-05:00</lastmod>
     </url>
-    
   
-    
-    
     <url>
     
-      <loc>https://abyvinod.github.io/talk/2018-06-milwaukee/</loc>
-      <lastmod>2018-07-19T10:18:33-06:00</lastmod>
+      <loc>https://abyvinod.github.io/post/spacecraft/</loc>
+      <lastmod>2019-04-04T12:37:07-05:00</lastmod>
     </url>
-    
   
-    
-    
     <url>
     
-      <loc>https://abyvinod.github.io/talk/2018-06-santafe/</loc>
-      <lastmod>2018-07-19T10:18:33-06:00</lastmod>
+      <loc>https://abyvinod.github.io/project/proboccup/</loc>
+      <lastmod>2019-04-04T12:37:07-05:00</lastmod>
     </url>
-    
   
-    
-    
-    <url>
-    
-      <loc>https://abyvinod.github.io/post/terminal-stochastic-reach-avoid-problem/</loc>
-      <lastmod>2018-05-09T14:07:04-06:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://abyvinod.github.io/project/sr/</loc>
-      <lastmod>2018-05-27T19:23:16-06:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://abyvinod.github.io/project/stochastic-motion-planning/</loc>
-      <lastmod>2018-05-07T01:38:10-06:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://abyvinod.github.io/project/user-interface/</loc>
-      <lastmod>2018-05-06T21:59:09-06:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://abyvinod.github.io/publication/naass2018/</loc>
-      <lastmod>2018-09-27T13:01:14-06:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://abyvinod.github.io/publication/hscc2018/</loc>
-      <lastmod>2018-07-19T13:57:56-06:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://abyvinod.github.io/talk/2018-03-02-washington/</loc>
-      <lastmod>2018-07-19T14:58:36-06:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://abyvinod.github.io/talk/2018-02-01-austin/</loc>
-      <lastmod>2018-07-19T14:58:36-06:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://abyvinod.github.io/talk/2018-01-10-iisc/</loc>
-      <lastmod>2018-07-19T14:58:36-06:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://abyvinod.github.io/publication/cssl2017/</loc>
-      <lastmod>2018-07-19T13:57:56-06:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://abyvinod.github.io/publication/cdc2017/</loc>
-      <lastmod>2018-07-19T13:57:56-06:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://abyvinod.github.io/publication/isar2017/</loc>
-      <lastmod>2018-07-19T13:57:56-06:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://abyvinod.github.io/publication/acc2017/</loc>
-      <lastmod>2018-07-19T13:57:56-06:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://abyvinod.github.io/publication/icra2017/</loc>
-      <lastmod>2018-07-19T13:57:56-06:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://abyvinod.github.io/publication/hscc2017/</loc>
-      <lastmod>2018-07-19T13:57:56-06:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://abyvinod.github.io/post/</loc>
-      <lastmod>2018-05-05T20:05:01-06:00</lastmod>
-    </url>
-    
-  
-    
-    
     <url>
     
       <loc>https://abyvinod.github.io/publication/</loc>
-      <lastmod>2018-05-09T13:19:02-06:00</lastmod>
+      <lastmod>2019-03-26T00:32:19-05:00</lastmod>
     </url>
-    
   
-    
-    
     <url>
     
-      <loc>https://abyvinod.github.io/talk/</loc>
-      <lastmod>2018-07-19T15:05:10-06:00</lastmod>
+      <loc>https://abyvinod.github.io/author/admin/</loc>
+      <lastmod>2019-04-04T12:37:07-05:00</lastmod>
     </url>
-    
   
-    
-    
-    <url>
-    
-      <loc>https://abyvinod.github.io/publication/cdc2016/</loc>
-      <lastmod>2018-07-19T13:57:56-06:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://abyvinod.github.io/publication/iros2016/</loc>
-      <lastmod>2018-07-19T13:57:56-06:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://abyvinod.github.io/publication/acc2016/</loc>
-      <lastmod>2018-07-19T13:57:56-06:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://abyvinod.github.io/publication/tmech2015/</loc>
-      <lastmod>2018-07-19T13:57:56-06:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://abyvinod.github.io/publication/bookchap_tmech2015/</loc>
-      <lastmod>2018-07-19T13:57:56-06:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://abyvinod.github.io/publication/thesis_mtech2014/</loc>
-      <lastmod>2018-07-19T13:57:56-06:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://abyvinod.github.io/publication_types/1/</loc>
-      <lastmod>2018-09-27T13:01:14-06:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://abyvinod.github.io/publication_types/2/</loc>
-      <lastmod>2018-07-19T13:57:56-06:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://abyvinod.github.io/publication_types/3/</loc>
-      <lastmod>2018-07-19T13:57:56-06:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://abyvinod.github.io/publication_types/4/</loc>
-      <lastmod>2018-09-30T12:15:20-06:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://abyvinod.github.io/publication_types/6/</loc>
-      <lastmod>2018-07-19T13:57:56-06:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    
     <url>
     
       <loc>https://abyvinod.github.io/</loc>
-      <lastmod>2018-07-19T10:18:33-06:00</lastmod>
+      <lastmod>2019-04-04T12:37:07-05:00</lastmod>
       <priority>0</priority>
     </url>
-    
   
+    <url>
     
-    
+      <loc>https://abyvinod.github.io/author/</loc>
+      <priority>0</priority>
+    </url>
+  
     <url>
     
       <loc>https://abyvinod.github.io/categories/</loc>
       <priority>0</priority>
     </url>
-    
   
-    
-    
     <url>
     
-      <loc>https://abyvinod.github.io/tags/human-automation-interaction/</loc>
-      <lastmod>2018-05-06T21:59:09-06:00</lastmod>
+      <loc>https://abyvinod.github.io/post/</loc>
+      <lastmod>2019-04-04T12:37:07-05:00</lastmod>
       <priority>0</priority>
     </url>
-    
   
-    
-    
     <url>
     
       <loc>https://abyvinod.github.io/project/</loc>
-      <lastmod>2018-05-27T19:23:16-06:00</lastmod>
+      <lastmod>2019-04-04T12:37:07-05:00</lastmod>
       <priority>0</priority>
     </url>
-    
   
-    
-    
-    <url>
-    
-      <loc>https://abyvinod.github.io/publication_types/</loc>
-      <lastmod>2018-09-27T13:01:14-06:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://abyvinod.github.io/tags/stochastic-optimal-control/</loc>
-      <lastmod>2018-05-09T14:07:04-06:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    
     <url>
     
       <loc>https://abyvinod.github.io/tags/</loc>
-      <lastmod>2018-05-06T21:59:09-06:00</lastmod>
       <priority>0</priority>
     </url>
+  
+    <url>
     
+      <loc>https://abyvinod.github.io/tags/stochastic-optimal-control/</loc>
+      <lastmod>2019-04-04T12:37:07-05:00</lastmod>
+      <priority>0</priority>
+    </url>
+  
+    <url>
+    
+      <loc>https://abyvinod.github.io/tags/stochastic-reachability/</loc>
+      <lastmod>2019-04-04T12:37:07-05:00</lastmod>
+      <priority>0</priority>
+    </url>
   
 </urlset>
