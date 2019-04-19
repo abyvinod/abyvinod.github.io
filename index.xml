@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Abraham P. Vinod on Abraham P. Vinod</title>
@@ -7,16 +6,16 @@
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2019</copyright>
-    <lastBuildDate>Thu, 04 Apr 2019 00:00:00 -0500</lastBuildDate>
+    <lastBuildDate>Thu, 04 Apr 2019 00:00:00 -0400</lastBuildDate>
     <atom:link href="/" rel="self" type="application/rss+xml" />
     
     <item>
       <title>SReachTools: A MATLAB Toolbox for stochastic reachability computation</title>
       <link>https://abyvinod.github.io/post/sreachtools/</link>
-      <pubDate>Thu, 04 Apr 2019 00:00:00 -0500</pubDate>
+      <pubDate>Thu, 04 Apr 2019 00:00:00 -0400</pubDate>
       
       <guid>https://abyvinod.github.io/post/sreachtools/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://unm-hscl.github.io/SReachTools/&#34; target=&#34;_blank&#34;&gt;SReachTools&lt;/a&gt; is an open-source (GPLv3)
+      <description>&lt;p&gt;&lt;a href=&#34;https://sreachtools.github.io/&#34; target=&#34;_blank&#34;&gt;SReachTools&lt;/a&gt; is an open-source (GPLv3)
 stochastic reachability toolbox, written in MATLAB. See &lt;a href=&#34;https://abyvinod.github.io/project/stochreach/&#34;&gt;this
 project post&lt;/a&gt; to know more about this mathematical framework
 for generating probabilistic guarantees of safety and performance.&lt;/p&gt;
@@ -40,9 +39,9 @@ developed in collaboration with &lt;a href=&#34;https://unm.edu/~gleasonj&#34; t
 
 &lt;ul&gt;
 &lt;li&gt;Project website &amp;mdash;
-&lt;a href=&#34;https://unm-hscl.github.io/SReachTools/&#34; target=&#34;_blank&#34;&gt;https://unm-hscl.github.io/SReachTools/&lt;/a&gt;&lt;/li&gt;
+&lt;a href=&#34;https://sreachtools.github.io/&#34; target=&#34;_blank&#34;&gt;https://sreachtools.github.io/&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Code repository &amp;mdash;
-&lt;a href=&#34;https://github.com/unm-hscl/SReachTools&#34; target=&#34;_blank&#34;&gt;https://github.com/unm-hscl/SReachTools&lt;/a&gt;&lt;/li&gt;
+&lt;a href=&#34;https://github.com/sreachtools/SReachTools&#34; target=&#34;_blank&#34;&gt;https://github.com/sreachtools/SReachTools&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;See this toolbox in action:
 
 &lt;ul&gt;
@@ -59,7 +58,7 @@ reach-avoid problem where we wish to dock two spacecrafts safely
     <item>
       <title>Safety under uncertainty and constraints</title>
       <link>https://abyvinod.github.io/project/stochreach/</link>
-      <pubDate>Thu, 04 Apr 2019 00:00:00 -0500</pubDate>
+      <pubDate>Thu, 04 Apr 2019 00:00:00 -0400</pubDate>
       
       <guid>https://abyvinod.github.io/project/stochreach/</guid>
       <description>
@@ -68,20 +67,8 @@ reach-avoid problem where we wish to dock two spacecrafts safely
 It makes our day-to-day life simpler and efficient, for example, in transportation (&lt;a href=&#34;https://en.wikipedia.org/wiki/Autopilot&#34; target=&#34;_blank&#34;&gt;autopilot systems&lt;/a&gt; and &lt;a href=&#34;https://en.wikipedia.org/wiki/Autonomous_car&#34; target=&#34;_blank&#34;&gt;self-driving cars&lt;/a&gt;), &lt;a href=&#34;../spacecraft/&#34;&gt;space applications&lt;/a&gt;, biomedical applications, power grid, and the list goes on and on.
 However, as we hand over more and more control to the automation, we naturally seek guarantees of safety and performance. After all, we do not want to spend billions of dollar in R&amp;amp;D and develop an automation that may cause harm.&lt;/p&gt;
 
-&lt;h2&gt;Table of Contents&lt;/h2&gt;
-&lt;nav id=&#34;TableOfContents&#34;&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#why-is-providing-safety-guarantees-in-automated-control-systems-for-real-world-problems-hard&#34;&gt;Why is providing safety guarantees in automated control systems for real-world problems hard?&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#how-do-we-formally-obtain-a-safety-guarantee-terminal-stochastic-reach-avoid-problem&#34;&gt;How do we formally obtain a safety guarantee? Terminal stochastic reach-avoid problem&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#stochastic-reachability-of-a-target-tube-a-general-framework-for-safety&#34;&gt;Stochastic reachability of a target tube: A general framework for safety&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#sreachtools&#34;&gt;SReachTools&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#applications&#34;&gt;Applications&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/nav&gt;
-
+&lt;p&gt;&lt;h2&gt;Table of Contents&lt;/h2&gt;
+&lt;/p&gt;
 
 &lt;h2 id=&#34;why-is-providing-safety-guarantees-in-automated-control-systems-for-real-world-problems-hard&#34;&gt;Why is providing safety guarantees in automated control systems for real-world problems hard?&lt;/h2&gt;
 
@@ -212,7 +199,7 @@ tube&lt;/a&gt; for more details.&lt;/p&gt;
     <item>
       <title>Stochastic motion planning via probabilistic occupancy function</title>
       <link>https://abyvinod.github.io/post/stochmotion/</link>
-      <pubDate>Sat, 30 Mar 2019 00:00:00 -0500</pubDate>
+      <pubDate>Sat, 30 Mar 2019 00:00:00 -0400</pubDate>
       
       <guid>https://abyvinod.github.io/post/stochmotion/</guid>
       <description>&lt;p&gt;The video below shows the example discussed in our &lt;a href=&#34;https://ieeexplore.ieee.org/document/8618921&#34; target=&#34;_blank&#34;&gt;CDC 2018
@@ -283,7 +270,7 @@ We apply the same code to an environment with more obstacles.
     <item>
       <title>Stochastic target capture via forward stochastic reachability</title>
       <link>https://abyvinod.github.io/post/stochtarget/</link>
-      <pubDate>Sat, 30 Mar 2019 00:00:00 -0500</pubDate>
+      <pubDate>Sat, 30 Mar 2019 00:00:00 -0400</pubDate>
       
       <guid>https://abyvinod.github.io/post/stochtarget/</guid>
       <description>
@@ -304,12 +291,12 @@ probability of capture&lt;/em&gt; for a pursuer quadrotor.&lt;/p&gt;
 
 &lt;div class=&#34;alert alert-warning&#34;&gt;
   &lt;div&gt;
-    &lt;p&gt;You may want to &lt;strong&gt;mute&lt;/strong&gt; the YouTube video to avoid the sound of
-the quadrotors&lt;/p&gt;
+    
+You may want to **mute** the YouTube video to avoid the sound of
+the quadrotors
 
   &lt;/div&gt;
 &lt;/div&gt;
-
 
 
 &lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
@@ -321,12 +308,12 @@ the quadrotors&lt;/p&gt;
 
 &lt;div class=&#34;alert alert-warning&#34;&gt;
   &lt;div&gt;
-    &lt;p&gt;You may want to &lt;strong&gt;mute&lt;/strong&gt; the YouTube video to avoid the sound of
-the quadrotors&lt;/p&gt;
+    
+You may want to **mute** the YouTube video to avoid the sound of
+the quadrotors
 
   &lt;/div&gt;
 &lt;/div&gt;
-
 
 
 &lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
@@ -339,7 +326,7 @@ the quadrotors&lt;/p&gt;
     <item>
       <title>Spacecraft rendezvous problem</title>
       <link>https://abyvinod.github.io/post/spacecraft/</link>
-      <pubDate>Fri, 15 Mar 2019 00:00:00 -0500</pubDate>
+      <pubDate>Fri, 15 Mar 2019 00:00:00 -0400</pubDate>
       
       <guid>https://abyvinod.github.io/post/spacecraft/</guid>
       <description>
@@ -403,14 +390,14 @@ likelihood threshold. Such initial states will be declared &lt;strong&gt;safe&lt
 
 &lt;div class=&#34;alert alert-note&#34;&gt;
   &lt;div&gt;
-    &lt;p&gt;For safety-critical applications, it is important that we construct either exact
+    
+For safety-critical applications, it is important that we construct either exact
 or underapproximations of the set of safe initial states. We do not want to be
 over-confident in our safety declarations, i.e., declare an initial state safe
-when it is not really safe.&lt;/p&gt;
+when it is not really safe.
 
   &lt;/div&gt;
 &lt;/div&gt;
-
 
 &lt;h3 id=&#34;results&#34;&gt;Results&lt;/h3&gt;
 
@@ -484,24 +471,13 @@ terminal velocity constraints).&lt;/p&gt;
     <item>
       <title>Probabilistic occupancy via forward stochastic reachability</title>
       <link>https://abyvinod.github.io/project/proboccup/</link>
-      <pubDate>Fri, 30 Mar 2018 00:00:00 -0500</pubDate>
+      <pubDate>Fri, 30 Mar 2018 00:00:00 -0400</pubDate>
       
       <guid>https://abyvinod.github.io/project/proboccup/</guid>
       <description>
 
-&lt;h2&gt;Table of Contents&lt;/h2&gt;
-&lt;nav id=&#34;TableOfContents&#34;&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#high-level-description&#34;&gt;High-level description&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#existing-methods&#34;&gt;Existing methods&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#proposed-solution&#34;&gt;Proposed solution&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#applications&#34;&gt;Applications&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/nav&gt;
-
+&lt;p&gt;&lt;h2&gt;Table of Contents&lt;/h2&gt;
+HAHAHUGOSHORTCODE-TOC0-HBHB&lt;/p&gt;
 
 &lt;h2 id=&#34;high-level-description&#34;&gt;High-level description&lt;/h2&gt;
 
@@ -572,7 +548,7 @@ Oishi&lt;/a&gt; as my PhD advisor. My PhD work focused on
 theory and algorithms for &lt;a href=&#34;https://digitalrepository.unm.edu/cgi/viewcontent.cgi?article=1461&amp;amp;context=ece_etds&#34; target=&#34;_blank&#34;&gt;probabilistic safety and stochastic optimal control
 design under constraints&lt;/a&gt;. Along with &lt;a href=&#34;https://unm.edu/~gleasonj&#34; target=&#34;_blank&#34;&gt;J.
 Gleason&lt;/a&gt;, I have implemented a significant part of my
-PhD work in &lt;a href=&#34;https://unm-hscl.github.io/SReachTools/&#34; target=&#34;_blank&#34;&gt;SReachTools&lt;/a&gt;, which is an open-source, repeatability-tested, MATLAB toolbox.  I obtained my B.Tech.
+PhD work in &lt;a href=&#34;https://sreachtools.github.io/&#34; target=&#34;_blank&#34;&gt;SReachTools&lt;/a&gt;, which is an open-source, repeatability-tested, MATLAB toolbox.  I obtained my B.Tech.
 and M.Tech degrees in Electrical Engineering from the &lt;a href=&#34;https://www.iitm.ac.in&#34; target=&#34;_blank&#34;&gt;Indian Institute of
 Technology, Madras&lt;/a&gt;.&lt;/p&gt;
 

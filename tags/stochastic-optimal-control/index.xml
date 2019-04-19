@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2019</copyright>
-    <lastBuildDate>Thu, 04 Apr 2019 00:00:00 -0500</lastBuildDate>
+    <lastBuildDate>Thu, 04 Apr 2019 00:00:00 -0400</lastBuildDate>
     
 	<atom:link href="https://abyvinod.github.io/tags/stochastic-optimal-control/index.xml" rel="self" type="application/rss+xml" />
     
@@ -15,60 +15,55 @@
     <item>
       <title>SReachTools: A MATLAB Toolbox for stochastic reachability computation</title>
       <link>https://abyvinod.github.io/post/sreachtools/</link>
-      <pubDate>Thu, 04 Apr 2019 00:00:00 -0500</pubDate>
+      <pubDate>Thu, 04 Apr 2019 00:00:00 -0400</pubDate>
       
       <guid>https://abyvinod.github.io/post/sreachtools/</guid>
-      <description>SReachTools is an open-source (GPLv3) stochastic reachability toolbox, written in MATLAB. See this project post to know more about this mathematical framework for generating probabilistic guarantees of safety and performance.
-For safety-critical applications, it is important that we construct either exact or underapproximations of the set of safe initial states. We do not want to be over-confident in our safety declarations, i.e., declare an initial state safe when it is not really safe.</description>
+      <description>A repeatability-tested, open-source, MATLAB toolbox for scalable stochastic reachability computation for stochastic linear systems</description>
     </item>
     
     <item>
       <title>Safety under uncertainty and constraints</title>
       <link>https://abyvinod.github.io/project/stochreach/</link>
-      <pubDate>Thu, 04 Apr 2019 00:00:00 -0500</pubDate>
+      <pubDate>Thu, 04 Apr 2019 00:00:00 -0400</pubDate>
       
       <guid>https://abyvinod.github.io/project/stochreach/</guid>
-      <description>Automation, typically, refers to the use of an onboard computer to drives a system to optimize some objective. It makes our day-to-day life simpler and efficient, for example, in transportation (autopilot systems and self-driving cars), space applications, biomedical applications, power grid, and the list goes on and on. However, as we hand over more and more control to the automation, we naturally seek guarantees of safety and performance. After all, we do not want to spend billions of dollar in R&amp;amp;D and develop an automation that may cause harm.</description>
+      <description>Providing guarantees of safety and synthesis of admissible controllers for stochastic dynamical systems using optimization, Fourier transforms, and computational geometry</description>
     </item>
     
     <item>
       <title>Stochastic motion planning via probabilistic occupancy function</title>
       <link>https://abyvinod.github.io/post/stochmotion/</link>
-      <pubDate>Sat, 30 Mar 2019 00:00:00 -0500</pubDate>
+      <pubDate>Sat, 30 Mar 2019 00:00:00 -0400</pubDate>
       
       <guid>https://abyvinod.github.io/post/stochmotion/</guid>
-      <description>The video below shows the example discussed in our CDC 2018 paper. The successive convexification-based planner computes these trajectories within $0.25$ seconds (sampling time). The obstacle motion prediction is done on-the-fly using my work on probabilistic occupancy function.
- The colored circles are obstacles that we must avoid. The obstacles have known stochastic dynamics. The figure on the right shows the $\alpha$-probability occupied sets. The black dot is the current robot location.</description>
+      <description>A sampling-free estimation of collision probability and motion planning using successive convexification</description>
     </item>
     
     <item>
       <title>Stochastic target capture via forward stochastic reachability</title>
       <link>https://abyvinod.github.io/post/stochtarget/</link>
-      <pubDate>Sat, 30 Mar 2019 00:00:00 -0500</pubDate>
+      <pubDate>Sat, 30 Mar 2019 00:00:00 -0400</pubDate>
       
       <guid>https://abyvinod.github.io/post/stochtarget/</guid>
-      <description>Given a stochastic model for a (non-adversarial) threat quadrotor, we utilize forward stochastic reachability to construct trajectories with maximum probability of capture for a pursuer quadrotor.
-Experiment 1: Robustness to threat quadrotor  You may want to mute the YouTube video to avoid the sound of the quadrotors
-    Experiment 2: Open-loop control vs receding horizon control  You may want to mute the YouTube video to avoid the sound of the quadrotors</description>
+      <description>A grid-free, recursion-free, and sampling-free estimation of events with convexity guarantees</description>
     </item>
     
     <item>
       <title>Spacecraft rendezvous problem</title>
       <link>https://abyvinod.github.io/post/spacecraft/</link>
-      <pubDate>Fri, 15 Mar 2019 00:00:00 -0500</pubDate>
+      <pubDate>Fri, 15 Mar 2019 00:00:00 -0400</pubDate>
       
       <guid>https://abyvinod.github.io/post/spacecraft/</guid>
-      <description>High-level description We wish to drive a spacecraft (Deputy) towards another spacecraft (Chief) for docking. This problem is known as the spacecraft rendezvous and docking problem. It is a common requirement for maintenance and resupply missions in space applications. Due to sensing constraints, we wish that the Deputy stays within a line-of-sight cone with respect to Chief. Further, we wish to achieve the docking in a pre-specified time interval while obeying the physical laws that govern the system and constraints on actuation (limited thrust).</description>
+      <description>Demonstration of stochastic reachability analysis</description>
     </item>
     
     <item>
       <title>Probabilistic occupancy via forward stochastic reachability</title>
       <link>https://abyvinod.github.io/project/proboccup/</link>
-      <pubDate>Fri, 30 Mar 2018 00:00:00 -0500</pubDate>
+      <pubDate>Fri, 30 Mar 2018 00:00:00 -0400</pubDate>
       
       <guid>https://abyvinod.github.io/project/proboccup/</guid>
-      <description>Table of Contents    High-level description Existing methods Proposed solution Applications    High-level description For reliable autonomy under uncertainty, we must have efficient ways to estimate event likelihood given a stochastic system model.
-Existing methods  Use sampling-based methods like Monte-Carlo simulation. Hoever, this approach only have asymptotic convergence guarantees. Compute the probability density via convolutions when the dynamics is linear. However, this iterative method requires gridding for numerical evalution of the convolution integral.</description>
+      <description>A grid-free, recursion-free, and sampling-free estimation of events with convexity guarantees</description>
     </item>
     
   </channel>
