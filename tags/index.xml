@@ -2,31 +2,30 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Abraham P. Vinod</title>
-    <link>https://abyvinod.github.io/tags/</link>
+    <link>http://abyvinod.github.io/tags/</link>
     <description>Recent content in Tags on Abraham P. Vinod</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>&amp;copy; 2019</copyright>
     <lastBuildDate>Thu, 04 Apr 2019 00:00:00 -0500</lastBuildDate>
     
-	<atom:link href="https://abyvinod.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://abyvinod.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>stochastic-optimal-control</title>
-      <link>https://abyvinod.github.io/tags/stochastic-optimal-control/</link>
+      <title>Stochastic Optimal Control</title>
+      <link>http://abyvinod.github.io/tags/stochastic-optimal-control/</link>
       <pubDate>Thu, 04 Apr 2019 00:00:00 -0500</pubDate>
       
-      <guid>https://abyvinod.github.io/tags/stochastic-optimal-control/</guid>
+      <guid>http://abyvinod.github.io/tags/stochastic-optimal-control/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>stochastic-reachability</title>
-      <link>https://abyvinod.github.io/tags/stochastic-reachability/</link>
+      <title>Stochastic Reachability</title>
+      <link>http://abyvinod.github.io/tags/stochastic-reachability/</link>
       <pubDate>Thu, 04 Apr 2019 00:00:00 -0500</pubDate>
       
-      <guid>https://abyvinod.github.io/tags/stochastic-reachability/</guid>
+      <guid>http://abyvinod.github.io/tags/stochastic-reachability/</guid>
       <description></description>
     </item>
     
