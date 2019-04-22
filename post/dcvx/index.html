@@ -28,10 +28,10 @@
   
     
   
-  <meta name="description" content="A grid-free, recursion-free, and sampling-free estimation of events with convexity guarantees">
+  <meta name="description" content="We discuss the use of difference of convex programming to perform nonlinear non-convex optimization">
 
   
-  <link rel="alternate" hreflang="en-us" href="https://abyvinod.github.io/post/stochtarget/">
+  <link rel="alternate" hreflang="en-us" href="https://abyvinod.github.io/post/dcvx/">
 
   
 
@@ -108,7 +108,7 @@
   <link rel="icon" type="image/png" href="/img/icon.png">
   <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
 
-  <link rel="canonical" href="https://abyvinod.github.io/post/stochtarget/">
+  <link rel="canonical" href="https://abyvinod.github.io/post/dcvx/">
 
   
   
@@ -120,21 +120,21 @@
   <meta property="twitter:card" content="summary">
   
   <meta property="og:site_name" content="Abraham P. Vinod">
-  <meta property="og:url" content="https://abyvinod.github.io/post/stochtarget/">
-  <meta property="og:title" content="Stochastic target capture via forward stochastic reachability | Abraham P. Vinod">
-  <meta property="og:description" content="A grid-free, recursion-free, and sampling-free estimation of events with convexity guarantees"><meta property="og:image" content="https://abyvinod.github.io/img/icon-192.png">
+  <meta property="og:url" content="https://abyvinod.github.io/post/dcvx/">
+  <meta property="og:title" content="A gentle tutorial to the difference of convex optimization | Abraham P. Vinod">
+  <meta property="og:description" content="We discuss the use of difference of convex programming to perform nonlinear non-convex optimization"><meta property="og:image" content="https://abyvinod.github.io/img/icon-192.png">
   <meta property="og:locale" content="en-us">
   
-  <meta property="article:published_time" content="2019-03-30T00:00:00-05:00">
+  <meta property="article:published_time" content="2019-04-21T18:46:36-05:00">
   
-  <meta property="article:modified_time" content="2019-04-04T12:37:07-05:00">
-  
-
+  <meta property="article:modified_time" content="2019-04-21T18:46:36-05:00">
   
 
   
 
-  <title>Stochastic target capture via forward stochastic reachability | Abraham P. Vinod</title>
+  
+
+  <title>A gentle tutorial to the difference of convex optimization | Abraham P. Vinod</title>
 
 </head>
 <body id="top" data-spy="scroll" data-target="#TableOfContents" data-offset="71" >
@@ -353,7 +353,7 @@
   
   
 <div class="article-container pt-3">
-  <h1 itemprop="name">Stochastic target capture via forward stochastic reachability</h1>
+  <h1 itemprop="name">A gentle tutorial to the difference of convex optimization</h1>
 
   
 
@@ -362,8 +362,8 @@
 
 
 
-<meta content="2019-03-30 00:00:00 -0500 CDT" itemprop="datePublished">
-<meta content="2019-04-04 12:37:07 -0500 CDT" itemprop="dateModified">
+<meta content="2019-04-21 18:46:36 -0500 CDT" itemprop="datePublished">
+<meta content="2019-04-21 18:46:36 -0500 CDT" itemprop="dateModified">
 
 <div class="article-metadata">
 
@@ -375,10 +375,8 @@
     
     
       
-          Last updated on
-      
     
-    <time>Apr 4, 2019</time>
+    <time>Apr 21, 2019</time>
   </span>
   
 
@@ -402,35 +400,35 @@
   <ul class="share">
     <li>
       <a class="twitter"
-         href="https://twitter.com/intent/tweet?text=Stochastic%20target%20capture%20via%20forward%20stochastic%20reachability&amp;url=https%3a%2f%2fabyvinod.github.io%2fpost%2fstochtarget%2f"
+         href="https://twitter.com/intent/tweet?text=A%20gentle%20tutorial%20to%20the%20difference%20of%20convex%20optimization&amp;url=https%3a%2f%2fabyvinod.github.io%2fpost%2fdcvx%2f"
          target="_blank" rel="noopener">
         <i class="fab fa-twitter"></i>
       </a>
     </li>
     <li>
       <a class="facebook"
-         href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fabyvinod.github.io%2fpost%2fstochtarget%2f"
+         href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fabyvinod.github.io%2fpost%2fdcvx%2f"
          target="_blank" rel="noopener">
         <i class="fab fa-facebook-f"></i>
       </a>
     </li>
     <li>
       <a class="linkedin"
-         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fabyvinod.github.io%2fpost%2fstochtarget%2f&amp;title=Stochastic%20target%20capture%20via%20forward%20stochastic%20reachability"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fabyvinod.github.io%2fpost%2fdcvx%2f&amp;title=A%20gentle%20tutorial%20to%20the%20difference%20of%20convex%20optimization"
          target="_blank" rel="noopener">
         <i class="fab fa-linkedin-in"></i>
       </a>
     </li>
     <li>
       <a class="weibo"
-         href="http://service.weibo.com/share/share.php?url=https%3a%2f%2fabyvinod.github.io%2fpost%2fstochtarget%2f&amp;title=Stochastic%20target%20capture%20via%20forward%20stochastic%20reachability"
+         href="http://service.weibo.com/share/share.php?url=https%3a%2f%2fabyvinod.github.io%2fpost%2fdcvx%2f&amp;title=A%20gentle%20tutorial%20to%20the%20difference%20of%20convex%20optimization"
          target="_blank" rel="noopener">
         <i class="fab fa-weibo"></i>
       </a>
     </li>
     <li>
       <a class="email"
-         href="mailto:?subject=Stochastic%20target%20capture%20via%20forward%20stochastic%20reachability&amp;body=https%3a%2f%2fabyvinod.github.io%2fpost%2fstochtarget%2f">
+         href="mailto:?subject=A%20gentle%20tutorial%20to%20the%20difference%20of%20convex%20optimization&amp;body=https%3a%2f%2fabyvinod.github.io%2fpost%2fdcvx%2f">
         <i class="fas fa-envelope"></i>
       </a>
     </li>
@@ -466,66 +464,29 @@
   <div class="article-container">
 
     <div class="article-style" itemprop="articleBody">
-      
+      <p>This Jupyter notebook-based blog post can be setup in your local machine as
+follows:</p>
 
-<!-- TODO Add text -->
+<ol>
+<li><a href="/code/dcvx/dcvx.ipynb">Jupyter notebook</a> (Use right click and &lsquo;Save Link as&rsquo;)</li>
+<li><a href="/code/dcvx/dcvx.yml">Conda environment file</a></li>
+</ol>
 
-<p>Given a stochastic model for a (non-adversarial) threat quadrotor, we utilize
-forward stochastic reachability to construct trajectories with <em>maximum
-probability of capture</em> for a pursuer quadrotor.</p>
+<p>It uses the problem of placing a fixed number of round smaller circles in a
+large circle as a nonlinear (non-convex) optimization problem. It was through
+setting up and solving the resulting difference of convex optimization problem
+using <a href="https://www.cvxpy.org/" target="_blank">CVXPY</a>.</p>
 
-<!--The theory of the paper was discussed in my award winning HSCC 2017 paper.-->
-
-<!--The experimental validation was discussed in ACC 2018 paper.-->
-
-<h3 id="experiment-1-robustness-to-threat-quadrotor">Experiment 1: Robustness to threat quadrotor</h3>
-
-<!--TODO: Fix videos-->
-
-<div class="alert alert-warning">
-  <div>
-    
-You may want to **mute** the YouTube video to avoid the sound of
-the quadrotors
-
-  </div>
-</div>
-
-
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="//www.youtube.com/embed/eFGg7U7gEQw" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
-
-
-<h3 id="experiment-2-open-loop-control-vs-receding-horizon-control">Experiment 2: Open-loop control vs receding horizon control</h3>
-
-<div class="alert alert-warning">
-  <div>
-    
-You may want to **mute** the YouTube video to avoid the sound of
-the quadrotors
-
-  </div>
-</div>
-
-
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="//www.youtube.com/embed/H0BZrk9Goxg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
-
+<iframe
+    src="/code/dcvx/dcvx.html"
+    width="100%"
+    height="2000px"
+    style="border:none;overflow: scroll">
+</iframe>
 
     </div>
 
     
-
-
-<div class="article-tags">
-  
-  <a class="badge badge-light" href="/tags/stochastic-optimal-control/">stochastic-optimal-control</a>
-  
-</div>
-
-
 
 
     
@@ -662,20 +623,6 @@ the quadrotors
 
       
       
-      <div class="article-widget">
-        <div class="hr-light"></div>
-        <h3>Related</h3>
-        <ul>
-          
-          <li><a href="/post/stochmotion/">Stochastic motion planning via probabilistic occupancy function</a></li>
-          
-          <li><a href="/post/spacecraft/">Spacecraft rendezvous problem</a></li>
-          
-          <li><a href="/project/proboccup/">Probabilistic occupancy via forward stochastic reachability</a></li>
-          
-        </ul>
-      </div>
-      
     
 
     
@@ -741,9 +688,6 @@ the quadrotors
 
     
     
-    
-    <script src="/js/mathjax-config.js"></script>
-    
 
     
     
@@ -761,8 +705,6 @@ the quadrotors
       
 
       
-      
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS_CHTML-full" integrity="sha256-GhM+5JHb6QUzOQPXSJLEWP7R73CbkisjzK5Eyij4U9w=" crossorigin="anonymous" async></script>
       
     
 

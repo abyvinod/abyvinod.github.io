@@ -6,13 +6,41 @@
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2019</copyright>
-    <lastBuildDate>Thu, 04 Apr 2019 00:00:00 -0400</lastBuildDate>
+    <lastBuildDate>Sun, 21 Apr 2019 18:46:36 -0500</lastBuildDate>
     <atom:link href="/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>A gentle tutorial to the difference of convex optimization</title>
+      <link>https://abyvinod.github.io/post/dcvx/</link>
+      <pubDate>Sun, 21 Apr 2019 18:46:36 -0500</pubDate>
+      
+      <guid>https://abyvinod.github.io/post/dcvx/</guid>
+      <description>&lt;p&gt;This Jupyter notebook-based blog post can be setup in your local machine as
+follows:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;https://abyvinod.github.io/code/dcvx/dcvx.ipynb&#34;&gt;Jupyter notebook&lt;/a&gt; (Use right click and &amp;lsquo;Save Link as&amp;rsquo;)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://abyvinod.github.io/code/dcvx/dcvx.yml&#34;&gt;Conda environment file&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;It uses the problem of placing a fixed number of round smaller circles in a
+large circle as a nonlinear (non-convex) optimization problem. It was through
+setting up and solving the resulting difference of convex optimization problem
+using &lt;a href=&#34;https://www.cvxpy.org/&#34; target=&#34;_blank&#34;&gt;CVXPY&lt;/a&gt;.&lt;/p&gt;
+
+&lt;iframe
+    src=&#34;https://abyvinod.github.io/code/dcvx/dcvx.html&#34;
+    width=&#34;100%&#34;
+    height=&#34;2000px&#34;
+    style=&#34;border:none;overflow: scroll&#34;&gt;
+&lt;/iframe&gt;
+</description>
+    </item>
     
     <item>
       <title>SReachTools: A MATLAB Toolbox for stochastic reachability computation</title>
       <link>https://abyvinod.github.io/post/sreachtools/</link>
-      <pubDate>Thu, 04 Apr 2019 00:00:00 -0400</pubDate>
+      <pubDate>Thu, 04 Apr 2019 00:00:00 -0500</pubDate>
       
       <guid>https://abyvinod.github.io/post/sreachtools/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://sreachtools.github.io/&#34; target=&#34;_blank&#34;&gt;SReachTools&lt;/a&gt; is an open-source (GPLv3)
@@ -58,7 +86,7 @@ reach-avoid problem where we wish to dock two spacecrafts safely
     <item>
       <title>Safety under uncertainty and constraints</title>
       <link>https://abyvinod.github.io/project/stochreach/</link>
-      <pubDate>Thu, 04 Apr 2019 00:00:00 -0400</pubDate>
+      <pubDate>Thu, 04 Apr 2019 00:00:00 -0500</pubDate>
       
       <guid>https://abyvinod.github.io/project/stochreach/</guid>
       <description>
@@ -199,7 +227,7 @@ tube&lt;/a&gt; for more details.&lt;/p&gt;
     <item>
       <title>Stochastic motion planning via probabilistic occupancy function</title>
       <link>https://abyvinod.github.io/post/stochmotion/</link>
-      <pubDate>Sat, 30 Mar 2019 00:00:00 -0400</pubDate>
+      <pubDate>Sat, 30 Mar 2019 00:00:00 -0500</pubDate>
       
       <guid>https://abyvinod.github.io/post/stochmotion/</guid>
       <description>&lt;p&gt;The video below shows the example discussed in our &lt;a href=&#34;https://ieeexplore.ieee.org/document/8618921&#34; target=&#34;_blank&#34;&gt;CDC 2018
@@ -270,7 +298,7 @@ We apply the same code to an environment with more obstacles.
     <item>
       <title>Stochastic target capture via forward stochastic reachability</title>
       <link>https://abyvinod.github.io/post/stochtarget/</link>
-      <pubDate>Sat, 30 Mar 2019 00:00:00 -0400</pubDate>
+      <pubDate>Sat, 30 Mar 2019 00:00:00 -0500</pubDate>
       
       <guid>https://abyvinod.github.io/post/stochtarget/</guid>
       <description>
@@ -326,7 +354,7 @@ the quadrotors
     <item>
       <title>Spacecraft rendezvous problem</title>
       <link>https://abyvinod.github.io/post/spacecraft/</link>
-      <pubDate>Fri, 15 Mar 2019 00:00:00 -0400</pubDate>
+      <pubDate>Fri, 15 Mar 2019 00:00:00 -0500</pubDate>
       
       <guid>https://abyvinod.github.io/post/spacecraft/</guid>
       <description>
@@ -471,7 +499,7 @@ terminal velocity constraints).&lt;/p&gt;
     <item>
       <title>Probabilistic occupancy via forward stochastic reachability</title>
       <link>https://abyvinod.github.io/project/proboccup/</link>
-      <pubDate>Fri, 30 Mar 2018 00:00:00 -0400</pubDate>
+      <pubDate>Fri, 30 Mar 2018 00:00:00 -0500</pubDate>
       
       <guid>https://abyvinod.github.io/project/proboccup/</guid>
       <description>
