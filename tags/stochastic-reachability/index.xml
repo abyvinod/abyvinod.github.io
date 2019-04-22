@@ -1,24 +1,23 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>stochastic-reachability on Abraham P. Vinod</title>
-    <link>https://abyvinod.github.io/tags/stochastic-reachability/</link>
-    <description>Recent content in stochastic-reachability on Abraham P. Vinod</description>
+    <title>Stochastic Reachability on Abraham P. Vinod</title>
+    <link>http://abyvinod.github.io/tags/stochastic-reachability/</link>
+    <description>Recent content in Stochastic Reachability on Abraham P. Vinod</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>&amp;copy; 2019</copyright>
     <lastBuildDate>Thu, 04 Apr 2019 00:00:00 -0500</lastBuildDate>
     
-	<atom:link href="https://abyvinod.github.io/tags/stochastic-reachability/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://abyvinod.github.io/tags/stochastic-reachability/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Safety under uncertainty and constraints</title>
-      <link>https://abyvinod.github.io/project/stochreach/</link>
+      <link>http://abyvinod.github.io/project/stochreach/</link>
       <pubDate>Thu, 04 Apr 2019 00:00:00 -0500</pubDate>
       
-      <guid>https://abyvinod.github.io/project/stochreach/</guid>
-      <description>Providing guarantees of safety and synthesis of admissible controllers for stochastic dynamical systems using optimization, Fourier transforms, and computational geometry</description>
+      <guid>http://abyvinod.github.io/project/stochreach/</guid>
+      <description>Automation, typically, refers to the use of an onboard computer to drives a system to optimize some objective. It makes our day-to-day life simpler and efficient, for example, in transportation (autopilot systems and self-driving cars), space applications, biomedical applications, power grid, and the list goes on and on. However, as we hand over more and more control to the automation, we naturally seek guarantees of safety and performance. After all, we do not want to spend billions of dollar in R&amp;amp;D and develop an automation that may cause harm.</description>
     </item>
     
   </channel>
