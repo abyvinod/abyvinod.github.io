@@ -1,96 +1,594 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Abraham P. Vinod</title>
-    <link>http://abyvinod.github.io/</link>
-    <description>Recent content on Abraham P. Vinod</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <title>Abraham P. Vinod on Abraham P. Vinod</title>
+    <link>https://abyvinod.github.io/</link>
+    <description>Recent content in Abraham P. Vinod on Abraham P. Vinod</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
+    <copyright>&amp;copy; 2019</copyright>
     <lastBuildDate>Sun, 21 Apr 2019 18:46:36 -0500</lastBuildDate>
-    
-	<atom:link href="http://abyvinod.github.io/index.xml" rel="self" type="application/rss+xml" />
-    
+    <atom:link href="/" rel="self" type="application/rss+xml" />
     
     <item>
       <title>A gentle tutorial to the difference of convex optimization</title>
-      <link>http://abyvinod.github.io/post/dcvx/</link>
+      <link>https://abyvinod.github.io/post/dcvx/</link>
       <pubDate>Sun, 21 Apr 2019 18:46:36 -0500</pubDate>
       
-      <guid>http://abyvinod.github.io/post/dcvx/</guid>
-      <description>This Jupyter notebook-based blog post can be setup in your local machine as follows:
- Jupyter notebook (Use right click and &amp;lsquo;Save Link as&amp;rsquo;) Conda environment file  It uses the problem of placing a fixed number of round smaller circles in a large circle as a nonlinear (non-convex) optimization problem. It was through setting up and solving the resulting difference of convex optimization problem using CVXPY.
- </description>
+      <guid>https://abyvinod.github.io/post/dcvx/</guid>
+      <description>&lt;p&gt;This Jupyter notebook-based blog post can be setup in your local machine as
+follows:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;https://abyvinod.github.io/code/dcvx/dcvx.ipynb&#34;&gt;Jupyter notebook&lt;/a&gt; (Use right click and &amp;lsquo;Save Link as&amp;rsquo;)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://abyvinod.github.io/code/dcvx/dcvx.yml&#34;&gt;Conda environment file&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;It uses the problem of placing a fixed number of round smaller circles in a
+large circle as a nonlinear (non-convex) optimization problem. It was through
+setting up and solving the resulting &lt;a href=&#34;http://web.stanford.edu/~boyd/papers/pdf/cvx_ccv.pdf&#34; target=&#34;_blank&#34;&gt;difference of convex optimization
+problem&lt;/a&gt; using
+&lt;a href=&#34;https://www.cvxpy.org/&#34; target=&#34;_blank&#34;&gt;CVXPY&lt;/a&gt;.&lt;/p&gt;
+
+&lt;iframe
+    src=&#34;https://abyvinod.github.io/code/dcvx/dcvx.html&#34;
+    width=&#34;100%&#34;
+    height=&#34;2000px&#34;
+    style=&#34;border:none;overflow: scroll&#34;&gt;
+&lt;/iframe&gt;
+</description>
     </item>
     
     <item>
       <title>SReachTools: A MATLAB Toolbox for stochastic reachability computation</title>
-      <link>http://abyvinod.github.io/post/sreachtools/</link>
+      <link>https://abyvinod.github.io/post/sreachtools/</link>
       <pubDate>Thu, 04 Apr 2019 00:00:00 -0500</pubDate>
       
-      <guid>http://abyvinod.github.io/post/sreachtools/</guid>
-      <description>SReachTools is an open-source (GPLv3) stochastic reachability toolbox, written in MATLAB. See this project post to know more about this mathematical framework for generating probabilistic guarantees of safety and performance.
-For safety-critical applications, it is important that we construct either exact or underapproximations of the set of safe initial states. We do not want to be over-confident in our safety declarations, i.e., declare an initial state safe when it is not really safe.</description>
+      <guid>https://abyvinod.github.io/post/sreachtools/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://sreachtools.github.io/&#34; target=&#34;_blank&#34;&gt;SReachTools&lt;/a&gt; is an open-source (GPLv3)
+stochastic reachability toolbox, written in MATLAB. See &lt;a href=&#34;https://abyvinod.github.io/project/stochreach/&#34;&gt;this
+project post&lt;/a&gt; to know more about this mathematical framework
+for generating probabilistic guarantees of safety and performance.&lt;/p&gt;
+
+&lt;p&gt;For safety-critical applications, it is important that we construct either exact
+or underapproximations of the set of safe initial states. We do not want to be
+over-confident in our safety declarations, i.e., declare an initial state safe
+when it is not really safe. SReachTools utilizes convex optimization, stochastic
+optimization, Fourier transforms, and computational geometry to construct
+underapproximations of the set of safe initial states and controllers that
+satisfy hard control bounds. Further, by being grid-free, SReachTools does not
+directly suffer from the curse of dimensionality that plagues the
+state-of-the-art dynamic programming-based solutions.&lt;/p&gt;
+
+&lt;p&gt;SReachTools has been &lt;a href=&#34;http://hscc2019.eecs.umich.edu/papers.html&#34; target=&#34;_blank&#34;&gt;repeatability-evaluated at the Hybrid Systems:
+Computation and Control, 2019&lt;/a&gt;. It
+implements all the algorithms I developed as part of my PhD work. It was
+developed in collaboration with &lt;a href=&#34;https://unm.edu/~gleasonj&#34; target=&#34;_blank&#34;&gt;J.  Gleason&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Links:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Project website &amp;mdash;
+&lt;a href=&#34;https://sreachtools.github.io/&#34; target=&#34;_blank&#34;&gt;https://sreachtools.github.io/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Code repository &amp;mdash;
+&lt;a href=&#34;https://github.com/sreachtools/SReachTools&#34; target=&#34;_blank&#34;&gt;https://github.com/sreachtools/SReachTools&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;See this toolbox in action:
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;../spacecraft/&#34;&gt;Spacecraft rendezvous problem&lt;/a&gt; &amp;mdash; a stochastic
+reach-avoid problem where we wish to dock two spacecrafts safely
+&lt;!--* Automated Anesthesia--&gt;
+&lt;!--* Building automation system--&gt;
+&lt;!--TODO: Add CodeOcean links--&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
     </item>
     
     <item>
       <title>Safety under uncertainty and constraints</title>
-      <link>http://abyvinod.github.io/project/stochreach/</link>
+      <link>https://abyvinod.github.io/project/stochreach/</link>
       <pubDate>Thu, 04 Apr 2019 00:00:00 -0500</pubDate>
       
-      <guid>http://abyvinod.github.io/project/stochreach/</guid>
-      <description>Automation, typically, refers to the use of an onboard computer to drives a system to optimize some objective. It makes our day-to-day life simpler and efficient, for example, in transportation (autopilot systems and self-driving cars), space applications, biomedical applications, power grid, and the list goes on and on. However, as we hand over more and more control to the automation, we naturally seek guarantees of safety and performance. After all, we do not want to spend billions of dollar in R&amp;amp;D and develop an automation that may cause harm.</description>
+      <guid>https://abyvinod.github.io/project/stochreach/</guid>
+      <description>
+
+&lt;p&gt;Automation, typically, refers to the use of an onboard computer to drives a system to optimize some objective.
+It makes our day-to-day life simpler and efficient, for example, in transportation (&lt;a href=&#34;https://en.wikipedia.org/wiki/Autopilot&#34; target=&#34;_blank&#34;&gt;autopilot systems&lt;/a&gt; and &lt;a href=&#34;https://en.wikipedia.org/wiki/Autonomous_car&#34; target=&#34;_blank&#34;&gt;self-driving cars&lt;/a&gt;), &lt;a href=&#34;../spacecraft/&#34;&gt;space applications&lt;/a&gt;, biomedical applications, power grid, and the list goes on and on.
+However, as we hand over more and more control to the automation, we naturally seek guarantees of safety and performance. After all, we do not want to spend billions of dollar in R&amp;amp;D and develop an automation that may cause harm.&lt;/p&gt;
+
+&lt;p&gt;&lt;h2&gt;Table of Contents&lt;/h2&gt;
+&lt;/p&gt;
+
+&lt;h2 id=&#34;why-is-providing-safety-guarantees-in-automated-control-systems-for-real-world-problems-hard&#34;&gt;Why is providing safety guarantees in automated control systems for real-world problems hard?&lt;/h2&gt;
+
+&lt;!-- TODO: Add a picture --&gt;
+
+&lt;p&gt;In control theory, we attack real-world problems by formulating a mathematical
+model and studying its relevant properties.  The two key challenges in providing
+the desired safety guarantees for real-world systems are &lt;strong&gt;stochasticity&lt;/strong&gt; and
+&lt;strong&gt;high-dimensionality&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Stochasticity in our models help us capture human inputs (like actions of the
+other drivers on the street for the self-driving car problem), disturbance
+effects (like weather in air navigation/power grid systems), varying parameters
+(like patient parameters in biomedical devices), and other unmodelled phenomena.
+For example, we can describe
+the error between our simplified model and the more complicated true
+mathematical model via a stochastic error term.&lt;/p&gt;
+
+&lt;p&gt;High-dimensional systems evolve as a function of a larger set of states, and
+thereby allowing the mathematical model to be closer to the reality compared to
+their low-dimensional models.&lt;/p&gt;
+
+&lt;h2 id=&#34;how-do-we-formally-obtain-a-safety-guarantee-terminal-stochastic-reach-avoid-problem&#34;&gt;How do we formally obtain a safety guarantee? Terminal stochastic reach-avoid problem&lt;/h2&gt;
+
+&lt;p&gt;The following information is required:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;the stochastic system dynamics along with the bounded control space,&lt;/li&gt;
+&lt;li&gt;the safe set,  and&lt;/li&gt;
+&lt;li&gt;the target set.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;We wish to satisfy the following specification:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Ensure that the system reaches the target set at a finite time horizon (not before). (Reach constraint)&lt;/li&gt;
+&lt;li&gt;Ensure that the system stays within the safe set during the time interval. (Safety constraint)&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;We seek to address the following verification problem[^2]:&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Identify the set of initial states and design an admissible controller that
+maximizes the probability of satisfaction of a specification.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Such a specification is called a &lt;strong&gt;terminal hitting-time stochastic reach-avoid
+problem&lt;/strong&gt;.  It is a special class of
+&lt;a href=&#34;https://en.wikipedia.org/wiki/Verification_and_validation&#34; target=&#34;_blank&#34;&gt;verification&lt;/a&gt;
+problems, which has been well studied for the past couple of decades in computer
+science as well as control theory. See this
+&lt;a href=&#34;https://www.sciencedirect.com/science/article/pii/S0005109810003547&#34; target=&#34;_blank&#34;&gt;paper&lt;/a&gt; by
+Sean Summers and John Lygeros for more details.&lt;/p&gt;
+
+&lt;!-- TODO: What is the current state of the art? --&gt;
+
+
+
+
+&lt;figure&gt;
+
+&lt;img src=&#34;https://abyvinod.github.io/img/project/sreach/cartoonStochasticReachAvoid.png&#34; /&gt;
+
+
+
+&lt;figcaption data-pre=&#34;Figure &#34; data-post=&#34;:&#34; class=&#34;numbered&#34;&gt;
+  &lt;h4&gt;Given the initial state, we need to pick $\pi^*$ opposed to $\pi_2$.  Here, growing triangles denote the uncertain trajectories under the application of a control policy $\pi^\ast$ and $\pi_2$, $\mathcal{X}$ refers to the state space, $\mathcal{S}\subseteq \mathcal{X}$ refers to the safe set, and $\mathcal{T}\subseteq \mathcal{X}$ refers to the target set.&lt;/h4&gt;
+  
+&lt;/figcaption&gt;
+
+&lt;/figure&gt;
+
+&lt;h2 id=&#34;stochastic-reachability-of-a-target-tube-a-general-framework-for-safety&#34;&gt;Stochastic reachability of a target tube: A general framework for safety&lt;/h2&gt;
+
+&lt;p&gt;This problem can be generalized to a time-varying collection of safe sets.
+Motivated by the classical work of Bertsekas, we call this problem the
+stochastic reachability of a target tube. This problem is illustrated in Figure
+2.&lt;/p&gt;
+
+&lt;!--Here, the problem is the following:--&gt;
+
+&lt;!--*maximize the probability of staying with a collection of time-varying target sets*.--&gt;
+
+
+
+
+&lt;figure&gt;
+
+&lt;img src=&#34;https://abyvinod.github.io/img/project/sreach/stochTubeCartoon.png&#34; /&gt;
+
+
+
+&lt;figcaption data-pre=&#34;Figure &#34; data-post=&#34;:&#34; class=&#34;numbered&#34;&gt;
+  &lt;h4&gt;Design controllers that maximize the probability of staying within the target tube {$\mathcal{T}_i$}, and characterize the set of initial states $\mathscr{L}_{\mathrm{SR}}(⋅)$ that satisfy a minimum reach probability. Image licensed under a &lt;a href=&#34;http://creativecommons.org/licenses/by-sa/4.0/&#34; target=&#34;_blank&#34;&gt;Creative Commons Attribution-ShareAlike 4.0 International License&lt;/a&gt;.&lt;/h4&gt;
+  
+&lt;/figcaption&gt;
+
+&lt;/figure&gt;
+
+&lt;p&gt;See &lt;a href=&#34;https://arxiv.org/abs/1810.05217v1&#34; target=&#34;_blank&#34;&gt;my paper on stochastic reachability of a target
+tube&lt;/a&gt; for more details.&lt;/p&gt;
+
+&lt;h2 id=&#34;sreachtools&#34;&gt;SReachTools&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://abyvinod.github.io/post/sreachtools/&#34;&gt;SReachTools&lt;/a&gt; is a user-friendly, open-sourced MATLAB toolbox that address these questions.&lt;/p&gt;
+
+&lt;h2 id=&#34;applications&#34;&gt;Applications&lt;/h2&gt;
+
+&lt;p&gt;See the following posts for safety guarantees obtained for various applications:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;https://abyvinod.github.io/post/spacecraft/&#34;&gt;Spacecraft rendezvous and docking problem&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://abyvinod.github.io/post/automatedanes/&#34;&gt;Automated anesthesia delivery system&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://abyvinod.github.io/post/bas/&#34;&gt;Building automation system&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;!--TODO: link my thesis--&gt;
+
+&lt;!--I have successfully answered the following questions:--&gt;
+
+&lt;!--1. When does a controller exist that can solve Problem P?--&gt;
+
+&lt;!--1. What are the sufficient conditions under which the optimal value function[^4] to the Problem P:--&gt;
+
+&lt;p&gt;&lt;!--1. Upper-semicontinuous?--&gt;
+ &lt;!--1. Log-concave?--&gt;&lt;/p&gt;
+</description>
     </item>
     
     <item>
       <title>Stochastic motion planning via probabilistic occupancy function</title>
-      <link>http://abyvinod.github.io/post/stochmotion/</link>
+      <link>https://abyvinod.github.io/post/stochmotion/</link>
       <pubDate>Sat, 30 Mar 2019 00:00:00 -0500</pubDate>
       
-      <guid>http://abyvinod.github.io/post/stochmotion/</guid>
-      <description>The video below shows the example discussed in our CDC 2018 paper. The successive convexification-based planner computes these trajectories within $0.25$ seconds (sampling time). The obstacle motion prediction is done on-the-fly using my work on probabilistic occupancy function.
- The colored circles are obstacles that we must avoid. The obstacles have known stochastic dynamics. The figure on the right shows the $\alpha$-probability occupied sets. The black dot is the current robot location.</description>
+      <guid>https://abyvinod.github.io/post/stochmotion/</guid>
+      <description>&lt;p&gt;The video below shows the example discussed in our &lt;a href=&#34;https://ieeexplore.ieee.org/document/8618921&#34; target=&#34;_blank&#34;&gt;CDC 2018
+paper&lt;/a&gt;. The &lt;a href=&#34;https://www.sciencedirect.com/science/article/pii/S2405896317312405&#34; target=&#34;_blank&#34;&gt;successive
+convexification-based
+planner&lt;/a&gt;
+computes these trajectories within $0.25$ seconds (sampling time). The obstacle
+motion prediction is done on-the-fly using &lt;a href=&#34;https://arxiv.org/abs/1803.07180&#34; target=&#34;_blank&#34;&gt;my work on probabilistic occupancy
+function&lt;/a&gt;.&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;The colored circles are obstacles that we must avoid. The obstacles have
+known stochastic dynamics. The figure on the right shows the
+$\alpha$-probability occupied sets.&lt;/li&gt;
+&lt;li&gt;The black dot is the current robot location.&lt;/li&gt;
+&lt;li&gt;The blue asterisks show the planner&amp;rsquo;s intended future trajectory.
+
+
+
+
+  
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+&lt;video controls &gt;
+  &lt;source src=&#34;https://abyvinod.github.io/img/paper/cdc2018/paperVideo.mp4&#34; type=&#34;video/mp4&#34;&gt;
+&lt;/video&gt;
+We apply the same code to an environment with more obstacles.
+
+
+
+
+  
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+&lt;video controls &gt;
+  &lt;source src=&#34;https://abyvinod.github.io/img/paper/cdc2018/pushing.mp4&#34; type=&#34;video/mp4&#34;&gt;
+&lt;/video&gt;&lt;/li&gt;
+&lt;/ol&gt;
+</description>
     </item>
     
     <item>
       <title>Stochastic target capture via forward stochastic reachability</title>
-      <link>http://abyvinod.github.io/post/stochtarget/</link>
+      <link>https://abyvinod.github.io/post/stochtarget/</link>
       <pubDate>Sat, 30 Mar 2019 00:00:00 -0500</pubDate>
       
-      <guid>http://abyvinod.github.io/post/stochtarget/</guid>
-      <description>Given a stochastic model for a (non-adversarial) threat quadrotor, we utilize forward stochastic reachability to construct trajectories with maximum probability of capture for a pursuer quadrotor.
-Experiment 1: Robustness to threat quadrotor {{% alert warning %}} You may want to mute the YouTube video to avoid the sound of the quadrotors {{% /alert %}}
-{{&amp;lt; youtube eFGg7U7gEQw &amp;gt;}}
-Experiment 2: Open-loop control vs receding horizon control {{% alert warning %}} You may want to mute the YouTube video to avoid the sound of the quadrotors {{% /alert %}}</description>
+      <guid>https://abyvinod.github.io/post/stochtarget/</guid>
+      <description>
+
+&lt;!-- TODO Add text --&gt;
+
+&lt;p&gt;Given a stochastic model for a (non-adversarial) threat quadrotor, we utilize
+forward stochastic reachability to construct trajectories with &lt;em&gt;maximum
+probability of capture&lt;/em&gt; for a pursuer quadrotor.&lt;/p&gt;
+
+&lt;!--The theory of the paper was discussed in my award winning HSCC 2017 paper.--&gt;
+
+&lt;!--The experimental validation was discussed in ACC 2018 paper.--&gt;
+
+&lt;h3 id=&#34;experiment-1-robustness-to-threat-quadrotor&#34;&gt;Experiment 1: Robustness to threat quadrotor&lt;/h3&gt;
+
+&lt;!--TODO: Fix videos--&gt;
+
+&lt;div class=&#34;alert alert-warning&#34;&gt;
+  &lt;div&gt;
+    
+You may want to **mute** the YouTube video to avoid the sound of
+the quadrotors
+
+  &lt;/div&gt;
+&lt;/div&gt;
+
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;//www.youtube.com/embed/eFGg7U7gEQw&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+
+&lt;h3 id=&#34;experiment-2-open-loop-control-vs-receding-horizon-control&#34;&gt;Experiment 2: Open-loop control vs receding horizon control&lt;/h3&gt;
+
+&lt;div class=&#34;alert alert-warning&#34;&gt;
+  &lt;div&gt;
+    
+You may want to **mute** the YouTube video to avoid the sound of
+the quadrotors
+
+  &lt;/div&gt;
+&lt;/div&gt;
+
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;//www.youtube.com/embed/H0BZrk9Goxg&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+</description>
     </item>
     
     <item>
       <title>Spacecraft rendezvous problem</title>
-      <link>http://abyvinod.github.io/post/spacecraft/</link>
+      <link>https://abyvinod.github.io/post/spacecraft/</link>
       <pubDate>Fri, 15 Mar 2019 00:00:00 -0500</pubDate>
       
-      <guid>http://abyvinod.github.io/post/spacecraft/</guid>
-      <description>High-level description We wish to drive a spacecraft (Deputy) towards another spacecraft (Chief) for docking. This problem is known as the spacecraft rendezvous and docking problem. It is a common requirement for maintenance and resupply missions in space applications. Due to sensing constraints, we wish that the Deputy stays within a line-of-sight cone with respect to Chief. Further, we wish to achieve the docking in a pre-specified time interval while obeying the physical laws that govern the system and constraints on actuation (limited thrust).</description>
+      <guid>https://abyvinod.github.io/post/spacecraft/</guid>
+      <description>
+
+&lt;h3 id=&#34;high-level-description&#34;&gt;High-level description&lt;/h3&gt;
+
+&lt;p&gt;We wish to drive a spacecraft (Deputy) towards another spacecraft (Chief) for
+docking. This problem is known as the &lt;a href=&#34;https://en.wikipedia.org/wiki/Space_rendezvous&#34; target=&#34;_blank&#34;&gt;spacecraft rendezvous and docking
+problem&lt;/a&gt;. It is a common
+requirement for maintenance and resupply missions in space applications. Due to
+sensing constraints, we wish that the Deputy stays within a line-of-sight cone
+with respect to Chief. Further, we wish to achieve the docking in a
+pre-specified time interval while obeying the physical laws that govern the
+system and constraints on actuation (limited thrust).&lt;/p&gt;
+
+
+
+
+&lt;figure&gt;
+
+&lt;img src=&#34;https://abyvinod.github.io/img/project/sreach/cwh_sketch.png&#34; /&gt;
+
+
+
+&lt;figcaption data-pre=&#34;Figure &#34; data-post=&#34;:&#34; class=&#34;numbered&#34;&gt;
+  &lt;h4&gt;Satellite rendezvous and docking problem&lt;/h4&gt;
+  
+&lt;/figcaption&gt;
+
+&lt;/figure&gt;
+
+&lt;p&gt;We model the Deputy satellite dynamics in the relative coordinate frame of the
+Chief. Loosely, we have the following constraints we wish to satisfy apart from
+the dynamics and control constraints,&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Reach&lt;/strong&gt; constraint: Reaching a target set centered at the
+origin. This set can encode relative velocity constraints (should dock
+slowly) and tolerances in relative position at the time of rendezvous.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Avoid&lt;/strong&gt; constraint: We wish to stay within a safe set, given by a
+stationary cone (line-of-sight cone) with the tip at the origin.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&#34;formal-specification&#34;&gt;Formal specification&lt;/h3&gt;
+
+&lt;p&gt;Drive the Deputy satellite such that it&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;reaches the target set at a pre-specified time,&lt;/li&gt;
+&lt;li&gt;stays within the safe set (staying out of the avoid set) during the time
+interval,&lt;/li&gt;
+&lt;li&gt;satisfies the dynamics constraints, and&lt;/li&gt;
+&lt;li&gt;satisfies the control constraints.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&#34;safety-problem&#34;&gt;Safety problem&lt;/h3&gt;
+
+&lt;p&gt;Identify the set of initial states and synthesize an admissible controller that
+achieves the given specification with a probability above a pre-specified
+likelihood threshold. Such initial states will be declared &lt;strong&gt;safe&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    
+For safety-critical applications, it is important that we construct either exact
+or underapproximations of the set of safe initial states. We do not want to be
+over-confident in our safety declarations, i.e., declare an initial state safe
+when it is not really safe.
+
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&#34;results&#34;&gt;Results&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&#34;../sreachtools/&#34;&gt;SReachTools&lt;/a&gt; can address this question, and generate
+underapproximations of the set of safe initial states.&lt;/p&gt;
+
+
+
+
+&lt;figure&gt;
+
+&lt;img src=&#34;https://abyvinod.github.io/img/project/sreach/cwh-example.png&#34; /&gt;
+
+
+
+&lt;figcaption data-pre=&#34;Figure &#34; data-post=&#34;:&#34; class=&#34;numbered&#34;&gt;
+  &lt;h4&gt;Various underapproximations of the set of initial locations with probability of satisfying the specification greater than 0.8. A Monte-Carlo simulation of the resulting trajectory from one of the safe initial states is also shown.&lt;/h4&gt;
+  
+&lt;/figcaption&gt;
+
+&lt;/figure&gt;
+
+&lt;p&gt;Figure 2 shows various underapproximations of the set of initial locations
+obtained using &lt;a href=&#34;../sreachtools/&#34;&gt;SReachTools&lt;/a&gt;. These are the safe initial states
+from which the Deputy can be driven to satisfy the specification with a
+likelihood &lt;strong&gt;no smaller&lt;/strong&gt; than 0.8. A Monte-Carlo simulation of the safe
+trajectory is shown from one of the safe initial states under the synthesized
+controller. Out of 5 randomly chosen trajectories, only one fails (violates
+terminal velocity constraints).&lt;/p&gt;
+
+&lt;!-- TODO: Put the CodeOcean link --&gt;
+
+&lt;!-- TODO: Add the compute times --&gt;
+
+&lt;!-- Figure 5 in *A. Vinod, J. Gleason, and M. Oishi, &#39;&#39;SReachTools: A MATLAB Stochastic Reachability Toolbox&#39;&#39;, in Proceedings of Hybrid Systems: Computation and Control, 2019*.--&gt;
+
+&lt;!--Consider the spacecraft rendezvous and docking problem. --&gt;
+
+&lt;!--As shown in Figure 2, we have two satellites --- a &#34;chief&#34; satellite and a--&gt;
+
+&lt;!--&#34;deputy&#34; satellite.  To simplify the study, we consider the dynamics of the--&gt;
+
+&lt;!--deputy satellites relative to the chief satellite, and in contrast to a true--&gt;
+
+&lt;!--mathematical model, we consider a simpler stochastic model to describe the--&gt;
+
+&lt;p&gt;&lt;!--relative dynamics.  
+&lt;!-- figure src=&#34;https://abyvinod.github.io/img/project/sreach/cwh_sketch.png&#34;--&gt; &lt;!--title=&#34;Satellite rendezvous and docking problem (picture courtesy: [J.--&gt; &lt;!--Gleason](http://www.unm.edu/~gleasonj/))&#34; numbered=&#34;true&#34;&gt;}} --&gt;
+&lt;!--Our safety and performance requirements are:--&gt;&lt;/p&gt;
+
+&lt;!--1. Ensure that the deputy satellite reaches the chief satellite at a finite time horizon (not before). (Reach constraint)--&gt;
+
+&lt;!--1. Ensure that the deputy satellite remains in a line-of-sight cone till it satisfies objective 1. (Avoid constraint)--&gt;
+
+&lt;!--We are interested in solving Problem A: **Design a controller that maximizes the probability of satisfaction of the above objectives _1 and 2_ under bounded control space for the deputy satellite.** --&gt;
+
+&lt;!--In this case, we have the following information:--&gt;
+
+&lt;!--1. the initial state of the deputy satellite, --&gt;
+
+&lt;!--1. the safe set (definition of the line-of-sight cone), --&gt;
+
+&lt;!--1. the target set (a box around the origin), --&gt;
+
+&lt;!--1. the relative stochastic dynamics of the deputy satellite with respect to the chief satellite.--&gt;
+
+&lt;!--Note that the avoid constraint is motivated by the fact that sensing and localization capabilities are limited in space applications. --&gt;
+</description>
     </item>
     
     <item>
       <title>Probabilistic occupancy via forward stochastic reachability</title>
-      <link>http://abyvinod.github.io/project/proboccup/</link>
+      <link>https://abyvinod.github.io/project/proboccup/</link>
       <pubDate>Fri, 30 Mar 2018 00:00:00 -0500</pubDate>
       
-      <guid>http://abyvinod.github.io/project/proboccup/</guid>
-      <description>{{% toc %}}
-High-level description For reliable autonomy under uncertainty, we must have efficient ways to estimate event likelihood given a stochastic system model.
-Existing methods  Use sampling-based methods like Monte-Carlo simulation. Hoever, this approach only have asymptotic convergence guarantees. Compute the probability density via convolutions when the dynamics is linear. However, this iterative method requires gridding for numerical evalution of the convolution integral. Further, its accuracy degrades over long time horizons.</description>
+      <guid>https://abyvinod.github.io/project/proboccup/</guid>
+      <description>
+
+&lt;p&gt;&lt;h2&gt;Table of Contents&lt;/h2&gt;
+HAHAHUGOSHORTCODE-TOC0-HBHB&lt;/p&gt;
+
+&lt;h2 id=&#34;high-level-description&#34;&gt;High-level description&lt;/h2&gt;
+
+&lt;p&gt;For reliable autonomy under uncertainty, we must have efficient ways to estimate
+event likelihood given a stochastic system model.&lt;/p&gt;
+
+&lt;h2 id=&#34;existing-methods&#34;&gt;Existing methods&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Use sampling-based methods like Monte-Carlo simulation. Hoever, this approach
+only have asymptotic convergence guarantees.&lt;/li&gt;
+&lt;li&gt;Compute the probability density via convolutions when the dynamics is linear.
+However, this iterative method requires gridding for numerical evalution of
+the convolution integral. Further, its accuracy degrades over long time
+horizons.&lt;/li&gt;
+&lt;li&gt;Use concentration inequalities like moment-based bounds to obtain crude
+estimates of the event probability&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&#34;proposed-solution&#34;&gt;Proposed solution&lt;/h2&gt;
+
+&lt;p&gt;Use Fourier transformation to obtain a grid-free, recursion-free, and
+sampling-free method to compute the probability density function. The event
+likelihood, which we call the &lt;strong&gt;probablistic occupancy function&lt;/strong&gt;, can be
+computed via numerical integration. The $\alpha$-super level sets of the
+probabilitistic occupancy functions, which we call the &lt;strong&gt;$\alpha$-probability
+occupied sets&lt;/strong&gt;, are precisely the set of states for which the event likelihood
+is above a pre-specified threshold.&lt;/p&gt;
+
+&lt;!--TODO: Add figure--&gt;
+
+&lt;p&gt;See &lt;a href=&#34;https://arxiv.org/abs/1803.07180&#34; target=&#34;_blank&#34;&gt;my paper on probabilistic occupancy via forward stochastic
+reachability&lt;/a&gt; for more details.&lt;/p&gt;
+
+&lt;!--as well as convexity and compactness results enabling tractable computation.--&gt;
+
+&lt;h2 id=&#34;applications&#34;&gt;Applications&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;https://abyvinod.github.io/post/stochmotion/&#34;&gt;Stochastic motion planning&lt;/a&gt;: Navigate a robot in an
+environment with obtacles that have geometric shapes and uncontrolled
+stochastic dynamics&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://abyvinod.github.io/post/stochtarget/&#34;&gt;Stochastic target capture&lt;/a&gt;: Capture a stochastically moving
+target using a controller robot&lt;/li&gt;
+&lt;/ol&gt;
+</description>
     </item>
     
     <item>
       <title></title>
-      <link>http://abyvinod.github.io/author/admin/</link>
+      <link>https://abyvinod.github.io/author/admin/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://abyvinod.github.io/author/admin/</guid>
-      <description>I am a researcher with experience in control, optimization, and reinforcement learning. My research goal is to develop safe autonomy under uncertainty and constraints using minimal computational effort. Safe autonomy can have wide impact ranging from bio-medical devices and transportation to space applications.
-Currently, I am a Postdoctoral Research Fellow at the Institute for Computational Engineering and Sciences, the University of Texas at Austin with Dr. Ufuk Topcu. I received my PhD in Engineering (Systems and Control) at the University of New Mexico, with Dr.</description>
+      <guid>https://abyvinod.github.io/author/admin/</guid>
+      <description>&lt;p&gt;I am a researcher with experience in &lt;strong&gt;control&lt;/strong&gt;, &lt;strong&gt;optimization&lt;/strong&gt;, and
+&lt;strong&gt;reinforcement learning&lt;/strong&gt;.  My research goal is to develop safe autonomy under
+uncertainty and constraints using minimal computational effort. Safe autonomy
+can have wide impact ranging from bio-medical devices and transportation to
+space applications.&lt;/p&gt;
+
+&lt;p&gt;Currently, I am a Postdoctoral Research Fellow at &lt;a href=&#34;https://www.ices.utexas.edu/&#34; target=&#34;_blank&#34;&gt;the Institute for
+Computational Engineering and Sciences&lt;/a&gt;, &lt;a href=&#34;https://www.utexas.edu/&#34; target=&#34;_blank&#34;&gt;the
+University of Texas at Austin&lt;/a&gt; with &lt;a href=&#34;https://www.ae.utexas.edu/faculty/faculty-directory/topcu&#34; target=&#34;_blank&#34;&gt;Dr.
+Ufuk Topcu&lt;/a&gt;. I
+received my PhD in Engineering (Systems and Control) at the &lt;a href=&#34;https://www.unm.edu&#34; target=&#34;_blank&#34;&gt;University of New
+Mexico&lt;/a&gt;, with &lt;a href=&#34;https://www.unm.edu/~oishi/&#34; target=&#34;_blank&#34;&gt;Dr.  Meeko
+Oishi&lt;/a&gt; as my PhD advisor. My PhD work focused on
+theory and algorithms for &lt;a href=&#34;https://digitalrepository.unm.edu/cgi/viewcontent.cgi?article=1461&amp;amp;context=ece_etds&#34; target=&#34;_blank&#34;&gt;probabilistic safety and stochastic optimal control
+design under constraints&lt;/a&gt;. Along with &lt;a href=&#34;https://unm.edu/~gleasonj&#34; target=&#34;_blank&#34;&gt;J.
+Gleason&lt;/a&gt;, I have implemented a significant part of my
+PhD work in &lt;a href=&#34;https://sreachtools.github.io/&#34; target=&#34;_blank&#34;&gt;SReachTools&lt;/a&gt;, which is an open-source, repeatability-tested, MATLAB toolbox.  I obtained my B.Tech.
+and M.Tech degrees in Electrical Engineering from the &lt;a href=&#34;https://www.iitm.ac.in&#34; target=&#34;_blank&#34;&gt;Indian Institute of
+Technology, Madras&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;My research has received various recognitions:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://hscc2017.ece.illinois.edu/Awards.html&#34; target=&#34;_blank&#34;&gt;Best Student Paper Award&lt;/a&gt; in the 2017 ACM Hybrid Systems: Computation and Control Conference,&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.hscc2018.deib.polimi.it/award-finalists-and-winners&#34; target=&#34;_blank&#34;&gt;Best Paper Award finalist&lt;/a&gt; in the 2018 ACM Hybrid Systems: Computation and Control Conference, and&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.iitm.ac.in/sites/default/files/notices/convocation_2014_prize_winners-website.pdf&#34; target=&#34;_blank&#34;&gt;Prof. Achim Bopp Prize&lt;/a&gt; for my M.  Tech thesis.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
     </item>
     
   </channel>

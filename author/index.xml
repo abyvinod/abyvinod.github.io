@@ -2,20 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Authors on Abraham P. Vinod</title>
-    <link>http://abyvinod.github.io/author/</link>
+    <link>https://abyvinod.github.io/author/</link>
     <description>Recent content in Authors on Abraham P. Vinod</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <copyright>&amp;copy; 2019</copyright>
     
-	<atom:link href="http://abyvinod.github.io/author/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://abyvinod.github.io/author/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title></title>
-      <link>http://abyvinod.github.io/author/admin/</link>
+      <link>https://abyvinod.github.io/author/admin/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://abyvinod.github.io/author/admin/</guid>
+      <guid>https://abyvinod.github.io/author/admin/</guid>
       <description>I am a researcher with experience in control, optimization, and reinforcement learning. My research goal is to develop safe autonomy under uncertainty and constraints using minimal computational effort. Safe autonomy can have wide impact ranging from bio-medical devices and transportation to space applications.
 Currently, I am a Postdoctoral Research Fellow at the Institute for Computational Engineering and Sciences, the University of Texas at Austin with Dr. Ufuk Topcu. I received my PhD in Engineering (Systems and Control) at the University of New Mexico, with Dr.</description>
     </item>

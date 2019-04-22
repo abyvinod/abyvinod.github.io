@@ -2,33 +2,32 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Projects on Abraham P. Vinod</title>
-    <link>http://abyvinod.github.io/project/</link>
+    <link>https://abyvinod.github.io/project/</link>
     <description>Recent content in Projects on Abraham P. Vinod</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <copyright>&amp;copy; 2019</copyright>
     <lastBuildDate>Thu, 04 Apr 2019 00:00:00 -0500</lastBuildDate>
     
-	<atom:link href="http://abyvinod.github.io/project/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://abyvinod.github.io/project/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Safety under uncertainty and constraints</title>
-      <link>http://abyvinod.github.io/project/stochreach/</link>
+      <link>https://abyvinod.github.io/project/stochreach/</link>
       <pubDate>Thu, 04 Apr 2019 00:00:00 -0500</pubDate>
       
-      <guid>http://abyvinod.github.io/project/stochreach/</guid>
-      <description>Automation, typically, refers to the use of an onboard computer to drives a system to optimize some objective. It makes our day-to-day life simpler and efficient, for example, in transportation (autopilot systems and self-driving cars), space applications, biomedical applications, power grid, and the list goes on and on. However, as we hand over more and more control to the automation, we naturally seek guarantees of safety and performance. After all, we do not want to spend billions of dollar in R&amp;amp;D and develop an automation that may cause harm.</description>
+      <guid>https://abyvinod.github.io/project/stochreach/</guid>
+      <description>Providing guarantees of safety and synthesis of admissible controllers for stochastic dynamical systems using optimization, Fourier transforms, and computational geometry</description>
     </item>
     
     <item>
       <title>Probabilistic occupancy via forward stochastic reachability</title>
-      <link>http://abyvinod.github.io/project/proboccup/</link>
+      <link>https://abyvinod.github.io/project/proboccup/</link>
       <pubDate>Fri, 30 Mar 2018 00:00:00 -0500</pubDate>
       
-      <guid>http://abyvinod.github.io/project/proboccup/</guid>
-      <description>{{% toc %}}
-High-level description For reliable autonomy under uncertainty, we must have efficient ways to estimate event likelihood given a stochastic system model.
-Existing methods  Use sampling-based methods like Monte-Carlo simulation. Hoever, this approach only have asymptotic convergence guarantees. Compute the probability density via convolutions when the dynamics is linear. However, this iterative method requires gridding for numerical evalution of the convolution integral. Further, its accuracy degrades over long time horizons.</description>
+      <guid>https://abyvinod.github.io/project/proboccup/</guid>
+      <description>A grid-free, recursion-free, and sampling-free estimation of events with convexity guarantees</description>
     </item>
     
   </channel>
