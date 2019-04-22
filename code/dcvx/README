@@ -1,3 +1,24 @@
+# How to setup/run the notebook
+
+1. Command to create the conda environment
+```
+$ conda env create -n dcvx -f dcvx.yml
+```
+    1. One can create the yml file by `conda env export -n dcvx -f dcvx.yml`
+1. Run `jupyter notebook`
+```
+$ jupyter notebook
+```
+1. Opening the `dcvx.ipynb` notebook, and running all the cells again will
+produce the desired output
+1. Exporting the notebook to the html
+(`--NbConvertApp.output_files_dir=../../../static/html`)
+```
+jupyter nbconvert dcvx.ipynb --to html 
+```
+
+# Sources for information
+
 https://docs.scipy.org/doc/numpy-1.13.0/user/numpy-for-matlab-users.html
 https://docs.scipy.org/doc/numpy/reference/routines.linalg.html
 https://stackoverflow.com/questions/9215658/plot-a-circle-with-pyplot
