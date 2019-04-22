@@ -25,8 +25,9 @@ follows:&lt;/p&gt;
 
 &lt;p&gt;It uses the problem of placing a fixed number of round smaller circles in a
 large circle as a nonlinear (non-convex) optimization problem. It was through
-setting up and solving the resulting difference of convex optimization problem
-using &lt;a href=&#34;https://www.cvxpy.org/&#34; target=&#34;_blank&#34;&gt;CVXPY&lt;/a&gt;.&lt;/p&gt;
+setting up and solving the resulting &lt;a href=&#34;http://web.stanford.edu/~boyd/papers/pdf/cvx_ccv.pdf&#34; target=&#34;_blank&#34;&gt;difference of convex optimization
+problem&lt;/a&gt; using
+&lt;a href=&#34;https://www.cvxpy.org/&#34; target=&#34;_blank&#34;&gt;CVXPY&lt;/a&gt;.&lt;/p&gt;
 
 &lt;iframe
     src=&#34;https://abyvinod.github.io/code/dcvx/dcvx.html&#34;
