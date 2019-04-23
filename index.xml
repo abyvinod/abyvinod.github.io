@@ -26,20 +26,14 @@ installation instructions
 &lt;ol&gt;
 &lt;li&gt;Download the environment file and the jupyter notebook.&lt;/li&gt;
 &lt;li&gt;Recreate the conda environment I used in your machine by the following
-command
-&lt;code&gt;
-$ conda env create -f myenv.yml
-&lt;/code&gt;
+command &lt;/br&gt;
+&lt;code&gt;$ conda env create -f myenv.yml&lt;/code&gt;&lt;/br&gt;
 This environment will have the &lt;code&gt;jupyter&lt;/code&gt; installed.&lt;/li&gt;
-&lt;li&gt;Run the jupyter notebook by the following command
-&lt;code&gt;
-$ jupyter notebook
-&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Run the jupyter notebook by the following command&lt;/br&gt;
+&lt;code&gt;$ jupyter notebook&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;Run the notebook using the menu options.&lt;/li&gt;
-&lt;li&gt;Obtain the html page included in the webpages using the command
-&lt;code&gt;
-$ jupyter nbconvert notebook.ipynb
-&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Obtain the html page included in the webpages using the command&lt;/br&gt;&lt;code&gt;$
+jupyter nbconvert notebook.ipynb&lt;/code&gt;&lt;/li&gt;
 &lt;/ol&gt;
 </description>
     </item>
