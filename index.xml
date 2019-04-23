@@ -1,13 +1,16 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Abraham P. Vinod on Abraham P. Vinod</title>
+    <title>Abraham P. Vinod</title>
     <link>https://abyvinod.github.io/</link>
-    <description>Recent content in Abraham P. Vinod on Abraham P. Vinod</description>
+    <description>Recent content on Abraham P. Vinod</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2019</copyright>
     <lastBuildDate>Mon, 22 Apr 2019 22:23:28 -0500</lastBuildDate>
-    <atom:link href="/" rel="self" type="application/rss+xml" />
+    
+	    <atom:link href="https://abyvinod.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Repeatability using Jupyter notebook and Conda</title>
@@ -350,10 +353,8 @@ probability of capture&lt;/em&gt; for a pursuer quadrotor.&lt;/p&gt;
 
 &lt;div class=&#34;alert alert-warning&#34;&gt;
   &lt;div&gt;
-    
-You may want to **mute** the YouTube video to avoid the sound of
+    You may want to &lt;strong&gt;mute&lt;/strong&gt; the YouTube video to avoid the sound of
 the quadrotors
-
   &lt;/div&gt;
 &lt;/div&gt;
 
@@ -367,10 +368,8 @@ the quadrotors
 
 &lt;div class=&#34;alert alert-warning&#34;&gt;
   &lt;div&gt;
-    
-You may want to **mute** the YouTube video to avoid the sound of
+    You may want to &lt;strong&gt;mute&lt;/strong&gt; the YouTube video to avoid the sound of
 the quadrotors
-
   &lt;/div&gt;
 &lt;/div&gt;
 
@@ -449,12 +448,10 @@ likelihood threshold. Such initial states will be declared &lt;strong&gt;safe&lt
 
 &lt;div class=&#34;alert alert-note&#34;&gt;
   &lt;div&gt;
-    
-For safety-critical applications, it is important that we construct either exact
+    For safety-critical applications, it is important that we construct either exact
 or underapproximations of the set of safe initial states. We do not want to be
 over-confident in our safety declarations, i.e., declare an initial state safe
 when it is not really safe.
-
   &lt;/div&gt;
 &lt;/div&gt;
 
