@@ -28,15 +28,20 @@ installation instructions
 
 &lt;ol&gt;
 &lt;li&gt;Download the environment file and the jupyter notebook.&lt;/li&gt;
-&lt;li&gt;Recreate the conda environment I used in your machine by the following
-command &lt;/br&gt;
-&lt;code&gt;$ conda env create -f myenv.yml&lt;/code&gt;&lt;/br&gt;
-This environment will have the &lt;code&gt;jupyter&lt;/code&gt; installed.&lt;/li&gt;
-&lt;li&gt;Run the jupyter notebook by the following command&lt;/br&gt;
-&lt;code&gt;$ jupyter notebook&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Run the notebook using the menu options.&lt;/li&gt;
-&lt;li&gt;Obtain the html page included in the webpages using the command&lt;/br&gt;&lt;code&gt;$
-jupyter nbconvert notebook.ipynb&lt;/code&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Recreate the conda environment I used in your machine by the following
+command &lt;/br&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-$&#34;&gt;This environment will have the `jupyter` installed.
+1. Run the jupyter notebook by the following command&amp;lt;/br&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;$ jupyter notebook```&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Run the notebook using the menu options.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Obtain the html page included in the webpages using the command&lt;/br&gt;&lt;code&gt;$
+jupyter nbconvert notebook.ipynb&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 </description>
     </item>
@@ -68,70 +73,6 @@ problem&lt;/a&gt; using
     height=&#34;2000px&#34;
     style=&#34;border:none;overflow: scroll&#34;&gt;
 &lt;/iframe&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>SReachTools: A MATLAB Toolbox for stochastic reachability computation</title>
-      <link>https://abyvinod.github.io/post/sreachtools/</link>
-      <pubDate>Thu, 04 Apr 2019 00:00:00 -0500</pubDate>
-      
-      <guid>https://abyvinod.github.io/post/sreachtools/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://sreachtools.github.io/&#34; target=&#34;_blank&#34;&gt;SReachTools&lt;/a&gt; is an open-source (GPLv3)
-stochastic reachability toolbox, written in MATLAB.  SReachTools has been
-&lt;a href=&#34;http://hscc2019.eecs.umich.edu/papers.html&#34; target=&#34;_blank&#34;&gt;repeatability-evaluated at the Hybrid Systems: Computation and Control,
-2019&lt;/a&gt;. It implements all the
-algorithms I developed as part of my PhD work. It was developed in collaboration
-with &lt;a href=&#34;https://unm.edu/~gleasonj&#34; target=&#34;_blank&#34;&gt;J.  Gleason&lt;/a&gt;.&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Toolbox details
-
-&lt;ul&gt;
-&lt;li&gt;Project website &lt;a href=&#34;https://sreachtools.github.io/&#34; target=&#34;_blank&#34;&gt;https://sreachtools.github.io/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Code repository &amp;mdash;
-&lt;a href=&#34;https://github.com/sreachtools/SReachTools&#34; target=&#34;_blank&#34;&gt;https://github.com/sreachtools/SReachTools&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;See this toolbox in action &amp;mdash; &lt;a href=&#34;../spacecraft/&#34;&gt;Spacecraft rendezvous
-problem&lt;/a&gt;, a stochastic reach-avoid problem where we wish to
-dock two spacecrafts safely&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://arxiv.org/abs/1810.05217v1&#34; target=&#34;_blank&#34;&gt;My paper on stochastic reachability of a target
-tube&lt;/a&gt; summarizes the theoretical
-properties and (some of the) computational algorithms used.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://abyvinod.github.io/project/stochreach/&#34;&gt;A project post&lt;/a&gt; detailing this mathematical framework
-for generating probabilistic guarantees of safety and performance.
-&lt;!--* Automated Anesthesia--&gt;
-&lt;!--* Building automation system--&gt;
-&lt;!--TODO: Add CodeOcean links--&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-
-
-
-&lt;figure&gt;
-
-&lt;img src=&#34;https://abyvinod.github.io/img/project/sreach/stochTubeCartoon.png&#34; /&gt;
-
-
-
-&lt;figcaption data-pre=&#34;Figure &#34; data-post=&#34;:&#34; class=&#34;numbered&#34;&gt;
-  &lt;h4&gt;Given a stochastic dynamical system, design controllers that maximize the probability of staying within the target tube {$\mathcal{T}_i$}, and characterize the set of initial states $\mathscr{L}_{\mathrm{SR}}(⋅)$ that satisfy a minimum reach probability. Image licensed under a &lt;a href=&#34;http://creativecommons.org/licenses/by-sa/4.0/&#34; target=&#34;_blank&#34;&gt;Creative Commons Attribution-ShareAlike 4.0 International License&lt;/a&gt;.&lt;/h4&gt;
-  
-&lt;/figcaption&gt;
-
-&lt;/figure&gt;
-
-&lt;p&gt;For safety-critical applications, it is important that we construct either exact
-or underapproximations of the set of safe initial states. We do not want to be
-over-confident in our safety declarations, i.e., declare an initial state safe
-when it is not really safe.&lt;/p&gt;
-
-&lt;p&gt;SReachTools utilizes convex optimization, stochastic
-optimization, Fourier transforms, and computational geometry to construct
-underapproximations of the set of safe initial states and controllers that
-satisfy hard control bounds. Further, by being grid-free, SReachTools does not
-directly suffer from the curse of dimensionality that plagues the
-state-of-the-art dynamic programming-based solutions.&lt;/p&gt;
 </description>
     </item>
     
@@ -273,6 +214,70 @@ tube&lt;/a&gt; for more details.&lt;/p&gt;
 
 &lt;p&gt;&lt;!--1. Upper-semicontinuous?--&gt;
  &lt;!--1. Log-concave?--&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>SReachTools: A MATLAB Toolbox for stochastic reachability computation</title>
+      <link>https://abyvinod.github.io/post/sreachtools/</link>
+      <pubDate>Thu, 04 Apr 2019 00:00:00 -0500</pubDate>
+      
+      <guid>https://abyvinod.github.io/post/sreachtools/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://sreachtools.github.io/&#34; target=&#34;_blank&#34;&gt;SReachTools&lt;/a&gt; is an open-source (GPLv3)
+stochastic reachability toolbox, written in MATLAB.  SReachTools has been
+&lt;a href=&#34;http://hscc2019.eecs.umich.edu/papers.html&#34; target=&#34;_blank&#34;&gt;repeatability-evaluated at the Hybrid Systems: Computation and Control,
+2019&lt;/a&gt;. It implements all the
+algorithms I developed as part of my PhD work. It was developed in collaboration
+with &lt;a href=&#34;https://unm.edu/~gleasonj&#34; target=&#34;_blank&#34;&gt;J.  Gleason&lt;/a&gt;.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Toolbox details
+
+&lt;ul&gt;
+&lt;li&gt;Project website &lt;a href=&#34;https://sreachtools.github.io/&#34; target=&#34;_blank&#34;&gt;https://sreachtools.github.io/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Code repository &amp;mdash;
+&lt;a href=&#34;https://github.com/sreachtools/SReachTools&#34; target=&#34;_blank&#34;&gt;https://github.com/sreachtools/SReachTools&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;See this toolbox in action &amp;mdash; &lt;a href=&#34;../spacecraft/&#34;&gt;Spacecraft rendezvous
+problem&lt;/a&gt;, a stochastic reach-avoid problem where we wish to
+dock two spacecrafts safely&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://arxiv.org/abs/1810.05217v1&#34; target=&#34;_blank&#34;&gt;My paper on stochastic reachability of a target
+tube&lt;/a&gt; summarizes the theoretical
+properties and (some of the) computational algorithms used.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://abyvinod.github.io/project/stochreach/&#34;&gt;A project post&lt;/a&gt; detailing this mathematical framework
+for generating probabilistic guarantees of safety and performance.
+&lt;!--* Automated Anesthesia--&gt;
+&lt;!--* Building automation system--&gt;
+&lt;!--TODO: Add CodeOcean links--&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+
+
+
+&lt;figure&gt;
+
+&lt;img src=&#34;https://abyvinod.github.io/img/project/sreach/stochTubeCartoon.png&#34; /&gt;
+
+
+
+&lt;figcaption data-pre=&#34;Figure &#34; data-post=&#34;:&#34; class=&#34;numbered&#34;&gt;
+  &lt;h4&gt;Given a stochastic dynamical system, design controllers that maximize the probability of staying within the target tube {$\mathcal{T}_i$}, and characterize the set of initial states $\mathscr{L}_{\mathrm{SR}}(⋅)$ that satisfy a minimum reach probability. Image licensed under a &lt;a href=&#34;http://creativecommons.org/licenses/by-sa/4.0/&#34; target=&#34;_blank&#34;&gt;Creative Commons Attribution-ShareAlike 4.0 International License&lt;/a&gt;.&lt;/h4&gt;
+  
+&lt;/figcaption&gt;
+
+&lt;/figure&gt;
+
+&lt;p&gt;For safety-critical applications, it is important that we construct either exact
+or underapproximations of the set of safe initial states. We do not want to be
+over-confident in our safety declarations, i.e., declare an initial state safe
+when it is not really safe.&lt;/p&gt;
+
+&lt;p&gt;SReachTools utilizes convex optimization, stochastic
+optimization, Fourier transforms, and computational geometry to construct
+underapproximations of the set of safe initial states and controllers that
+satisfy hard control bounds. Further, by being grid-free, SReachTools does not
+directly suffer from the curse of dimensionality that plagues the
+state-of-the-art dynamic programming-based solutions.&lt;/p&gt;
 </description>
     </item>
     
