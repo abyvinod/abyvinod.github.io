@@ -29,19 +29,25 @@ installation instructions
 &lt;ol&gt;
 &lt;li&gt;Download the environment file and the jupyter notebook.&lt;/li&gt;
 
-&lt;li&gt;&lt;p&gt;Recreate the conda environment I used in your machine by the following
-command &lt;/br&gt;&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;Recreate the conda environment I used in your machine:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-$&#34;&gt;This environment will have the `jupyter` installed.
-1. Run the jupyter notebook by the following command&amp;lt;/br&amp;gt;
+&lt;pre&gt;&lt;code&gt; $ conda env create -f myenv.yml
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;$ jupyter notebook```&lt;/p&gt;&lt;/li&gt;
+&lt;p&gt;This environment has &lt;code&gt;jupyter&lt;/code&gt; installed.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Run the jupyter notebook:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ jupyter notebook
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
 
 &lt;li&gt;&lt;p&gt;Run the notebook using the menu options.&lt;/p&gt;&lt;/li&gt;
 
-&lt;li&gt;&lt;p&gt;Obtain the html page included in the webpages using the command&lt;/br&gt;&lt;code&gt;$
-jupyter nbconvert notebook.ipynb&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Obtain the html page included in the webpages using the
+command&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ jupyter nbconvert notebook.ipynb
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
 &lt;/ol&gt;
 </description>
     </item>
