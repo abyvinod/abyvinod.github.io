@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2019</copyright>
-    <lastBuildDate>Thu, 04 Apr 2019 00:00:00 -0500</lastBuildDate>
+    <lastBuildDate>Thu, 04 Apr 2019 00:00:00 -0400</lastBuildDate>
     
 	<atom:link href="https://abyvinod.github.io/tags/stochastic-optimal-control/index.xml" rel="self" type="application/rss+xml" />
     
@@ -15,7 +15,7 @@
     <item>
       <title>Safety under uncertainty and constraints</title>
       <link>https://abyvinod.github.io/project/stochreach/</link>
-      <pubDate>Thu, 04 Apr 2019 00:00:00 -0500</pubDate>
+      <pubDate>Thu, 04 Apr 2019 00:00:00 -0400</pubDate>
       
       <guid>https://abyvinod.github.io/project/stochreach/</guid>
       <description>Providing guarantees of safety and synthesis of admissible controllers for stochastic dynamical systems using optimization, Fourier transforms, and computational geometry</description>
@@ -24,7 +24,7 @@
     <item>
       <title>SReachTools: A MATLAB Toolbox for stochastic reachability computation</title>
       <link>https://abyvinod.github.io/post/sreachtools/</link>
-      <pubDate>Thu, 04 Apr 2019 00:00:00 -0500</pubDate>
+      <pubDate>Thu, 04 Apr 2019 00:00:00 -0400</pubDate>
       
       <guid>https://abyvinod.github.io/post/sreachtools/</guid>
       <description>A repeatability-tested, open-source, MATLAB toolbox for scalable stochastic reachability computation for stochastic linear systems</description>
@@ -33,7 +33,7 @@
     <item>
       <title>Stochastic motion planning via probabilistic occupancy function</title>
       <link>https://abyvinod.github.io/post/stochmotion/</link>
-      <pubDate>Sat, 30 Mar 2019 00:00:00 -0500</pubDate>
+      <pubDate>Sat, 30 Mar 2019 00:00:00 -0400</pubDate>
       
       <guid>https://abyvinod.github.io/post/stochmotion/</guid>
       <description>A sampling-free estimation of collision probability and motion planning using successive convexification</description>
@@ -42,7 +42,7 @@
     <item>
       <title>Stochastic target capture via forward stochastic reachability</title>
       <link>https://abyvinod.github.io/post/stochtarget/</link>
-      <pubDate>Sat, 30 Mar 2019 00:00:00 -0500</pubDate>
+      <pubDate>Sat, 30 Mar 2019 00:00:00 -0400</pubDate>
       
       <guid>https://abyvinod.github.io/post/stochtarget/</guid>
       <description>A grid-free, recursion-free, and sampling-free estimation of events with convexity guarantees</description>
@@ -51,7 +51,7 @@
     <item>
       <title>Spacecraft rendezvous problem</title>
       <link>https://abyvinod.github.io/post/spacecraft/</link>
-      <pubDate>Fri, 15 Mar 2019 00:00:00 -0500</pubDate>
+      <pubDate>Fri, 15 Mar 2019 00:00:00 -0400</pubDate>
       
       <guid>https://abyvinod.github.io/post/spacecraft/</guid>
       <description>Demonstration of stochastic reachability analysis</description>
@@ -60,7 +60,7 @@
     <item>
       <title>Probabilistic occupancy via forward stochastic reachability</title>
       <link>https://abyvinod.github.io/project/proboccup/</link>
-      <pubDate>Fri, 30 Mar 2018 00:00:00 -0500</pubDate>
+      <pubDate>Fri, 30 Mar 2018 00:00:00 -0400</pubDate>
       
       <guid>https://abyvinod.github.io/project/proboccup/</guid>
       <description>A grid-free, recursion-free, and sampling-free estimation of events with convexity guarantees</description>
