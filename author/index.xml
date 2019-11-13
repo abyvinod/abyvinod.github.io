@@ -17,8 +17,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://abyvinod.github.io/author/admin/</guid>
-      <description>I am a researcher with experience in control, optimization, and reinforcement learning. My research goal is to develop safe autonomy under uncertainty and constraints using minimal computational effort. Safe autonomy can have wide impact ranging from bio-medical devices and transportation to space applications.
-Currently, I am a Postdoctoral Research Fellow, working with Dr. Ufuk Topcu at the University of Texas at Austin. I received my PhD in Engineering (Systems and Control) at the University of New Mexico, with Dr.</description>
+      <description>My research dream is to enable autonomy for physical systems &amp;mdash; the autonomous agent must provide verifiable guarantees of safety and performance in the presence of uncertainties and limitations on data availability. These agents must also interact with other agents and humans present in the environment effectively. Addressing these challenges with tractable approaches is crucial for safe deployment of autonomy. My research work uses \emph{optimization}, \emph{control theory}, and \emph{learning} to achieve this goal.</description>
     </item>
     
   </channel>
