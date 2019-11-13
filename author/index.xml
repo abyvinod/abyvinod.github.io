@@ -17,7 +17,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://abyvinod.github.io/author/admin/</guid>
-      <description>My research dream is to enable autonomy for physical systems &amp;mdash; the autonomous agent must provide verifiable guarantees of safety and performance in the presence of uncertainties and limitations on data availability. These agents must also interact with other agents and humans present in the environment effectively. Addressing these challenges with tractable approaches is crucial for safe deployment of autonomy. My research work uses \emph{optimization}, \emph{control theory}, and \emph{learning} to achieve this goal.</description>
+      <description>My research dream is to enable autonomy for physical systems &amp;mdash; the autonomous agent must provide verifiable guarantees of performance in the presence of uncertainties and limitations on data availability. These agents must also interact with other agents and humans present in the environment effectively. Addressing these challenges with tractable approaches is crucial for safe deployment of autonomy. My research work uses optimization, control theory, and learning to achieve this goal.</description>
     </item>
     
   </channel>
