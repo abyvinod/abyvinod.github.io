@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2019</copyright>
-    <lastBuildDate>Thu, 04 Apr 2019 00:00:00 -0400</lastBuildDate>
+    <lastBuildDate>Thu, 04 Apr 2019 00:00:00 -0500</lastBuildDate>
     
 	<atom:link href="https://abyvinod.github.io/project/index.xml" rel="self" type="application/rss+xml" />
     
@@ -15,7 +15,7 @@
     <item>
       <title>Safety under uncertainty and constraints</title>
       <link>https://abyvinod.github.io/project/stochreach/</link>
-      <pubDate>Thu, 04 Apr 2019 00:00:00 -0400</pubDate>
+      <pubDate>Thu, 04 Apr 2019 00:00:00 -0500</pubDate>
       
       <guid>https://abyvinod.github.io/project/stochreach/</guid>
       <description>Providing guarantees of safety and synthesis of admissible controllers for stochastic dynamical systems using optimization, Fourier transforms, and computational geometry</description>
@@ -24,7 +24,7 @@
     <item>
       <title>Probabilistic occupancy via forward stochastic reachability</title>
       <link>https://abyvinod.github.io/project/proboccup/</link>
-      <pubDate>Fri, 30 Mar 2018 00:00:00 -0400</pubDate>
+      <pubDate>Fri, 30 Mar 2018 00:00:00 -0500</pubDate>
       
       <guid>https://abyvinod.github.io/project/proboccup/</guid>
       <description>A grid-free, recursion-free, and sampling-free estimation of events with convexity guarantees</description>

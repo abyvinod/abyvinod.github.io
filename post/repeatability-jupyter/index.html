@@ -377,8 +377,8 @@
 
 
 
-<meta content="2019-04-22 22:23:28 -0500 -0500" itemprop="datePublished">
-<meta content="2019-09-05 11:15:53 -0500 -0500" itemprop="dateModified">
+<meta content="2019-04-22 22:23:28 -0500 CDT" itemprop="datePublished">
+<meta content="2019-09-05 11:15:53 -0500 CDT" itemprop="dateModified">
 
 <div class="article-metadata">
 
@@ -446,31 +446,21 @@
       <p>In the interest of repeatable coding, I will strive to share Jupyter notebooks
 for Python code used in this blog, as well as the Conda environment file to
 generate the environment.</p>
-
 <p>I will assume that you have installed conda in your machine. See the
 installation instructions
-<a href="https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html" target="_blank">here</a>.</p>
-
+<a href="https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html">here</a>.</p>
 <ol>
 <li>Download the environment file and the jupyter notebook.</li>
-
-<li><p>Recreate the conda environment I used in your machine:</p>
-
-<pre><code> $ conda env create -f myenv.yml
-</code></pre>
-
-<p>This environment has <code>jupyter</code> installed.</p></li>
-
-<li><p>Run the jupyter notebook:</p>
-
+<li>Recreate the conda environment I used in your machine:
+<pre><code>$ conda env create -f myenv.yml
+</code></pre><p>This environment has <code>jupyter</code> installed.</p>
+</li>
+<li>Run the jupyter notebook:
 <pre><code>$ jupyter notebook
 </code></pre></li>
-
-<li><p>Run the notebook using the menu options.</p></li>
-
-<li><p>Obtain the html page included in the webpages using the
-command</p>
-
+<li>Run the notebook using the menu options.</li>
+<li>Obtain the html page included in the webpages using the
+command
 <pre><code>$ jupyter nbconvert notebook.ipynb
 </code></pre></li>
 </ol>
@@ -629,7 +619,7 @@ command</p>
   
 
   <p class="powered-by">
-    &copy; 2019 &middot; 
+    © 2019 &middot; 
 
     Powered by the
     <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for

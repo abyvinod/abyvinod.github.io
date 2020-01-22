@@ -121,7 +121,7 @@
   <meta property="og:description" content="Providing guarantees of safety and synthesis of admissible controllers for stochastic dynamical systems using optimization, Fourier transforms, and computational geometry"><meta property="og:image" content="https://abyvinod.github.io/img/icon-192.png">
   <meta property="og:locale" content="en-us">
   
-  <meta property="article:published_time" content="2019-04-04T00:00:00-04:00">
+  <meta property="article:published_time" content="2019-04-04T00:00:00-05:00">
   
   <meta property="article:modified_time" content="2019-04-04T12:37:07-05:00">
   
@@ -377,8 +377,8 @@
 
 
 
-<meta content="2019-04-04 00:00:00 -0400 EDT" itemprop="datePublished">
-<meta content="2019-04-04 12:37:07 -0500 -0500" itemprop="dateModified">
+<meta content="2019-04-04 00:00:00 -0500 CDT" itemprop="datePublished">
+<meta content="2019-04-04 12:37:07 -0500 CDT" itemprop="dateModified">
 
 <div class="article-metadata">
 
@@ -440,35 +440,16 @@
   <div class="article-container">
 
     <div class="article-style" itemprop="articleBody">
-      
-
-<p>Automation, typically, refers to the use of an onboard computer to drives a system to optimize some objective.
-It makes our day-to-day life simpler and efficient, for example, in transportation (<a href="https://en.wikipedia.org/wiki/Autopilot" target="_blank">autopilot systems</a> and <a href="https://en.wikipedia.org/wiki/Autonomous_car" target="_blank">self-driving cars</a>), <a href="../spacecraft/">space applications</a>, biomedical applications, power grid, and the list goes on and on.
+      <p>Automation, typically, refers to the use of an onboard computer to drives a system to optimize some objective.
+It makes our day-to-day life simpler and efficient, for example, in transportation (<a href="https://en.wikipedia.org/wiki/Autopilot">autopilot systems</a> and <a href="https://en.wikipedia.org/wiki/Autonomous_car">self-driving cars</a>), <a href="../spacecraft/">space applications</a>, biomedical applications, power grid, and the list goes on and on.
 However, as we hand over more and more control to the automation, we naturally seek guarantees of safety and performance. After all, we do not want to spend billions of dollar in R&amp;D and develop an automation that may cause harm.</p>
-
-<p><h2>Table of Contents</h2>
-<nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li><a href="#why-is-providing-safety-guarantees-in-automated-control-systems-for-real-world-problems-hard">Why is providing safety guarantees in automated control systems for real-world problems hard?</a></li>
-<li><a href="#how-do-we-formally-obtain-a-safety-guarantee-terminal-stochastic-reach-avoid-problem">How do we formally obtain a safety guarantee? Terminal stochastic reach-avoid problem</a></li>
-<li><a href="#stochastic-reachability-of-a-target-tube-a-general-framework-for-safety">Stochastic reachability of a target tube: A general framework for safety</a></li>
-<li><a href="#sreachtools">SReachTools</a></li>
-<li><a href="#applications">Applications</a></li>
-</ul></li>
-</ul>
-</nav></p>
-
+<!-- raw HTML omitted -->
 <h2 id="why-is-providing-safety-guarantees-in-automated-control-systems-for-real-world-problems-hard">Why is providing safety guarantees in automated control systems for real-world problems hard?</h2>
-
-<!-- TODO: Add a picture -->
-
+<!-- raw HTML omitted -->
 <p>In control theory, we attack real-world problems by formulating a mathematical
 model and studying its relevant properties.  The two key challenges in providing
 the desired safety guarantees for real-world systems are <strong>stochasticity</strong> and
 <strong>high-dimensionality</strong>.</p>
-
 <p>Stochasticity in our models help us capture human inputs (like actions of the
 other drivers on the street for the self-driving car problem), disturbance
 effects (like weather in air navigation/power grid systems), varying parameters
@@ -476,43 +457,32 @@ effects (like weather in air navigation/power grid systems), varying parameters
 For example, we can describe
 the error between our simplified model and the more complicated true
 mathematical model via a stochastic error term.</p>
-
 <p>High-dimensional systems evolve as a function of a larger set of states, and
 thereby allowing the mathematical model to be closer to the reality compared to
 their low-dimensional models.</p>
-
 <h2 id="how-do-we-formally-obtain-a-safety-guarantee-terminal-stochastic-reach-avoid-problem">How do we formally obtain a safety guarantee? Terminal stochastic reach-avoid problem</h2>
-
 <p>The following information is required:</p>
-
 <ol>
 <li>the stochastic system dynamics along with the bounded control space,</li>
 <li>the safe set,  and</li>
 <li>the target set.</li>
 </ol>
-
 <p>We wish to satisfy the following specification:</p>
-
 <ol>
 <li>Ensure that the system reaches the target set at a finite time horizon (not before). (Reach constraint)</li>
 <li>Ensure that the system stays within the safe set during the time interval. (Safety constraint)</li>
 </ol>
-
 <p>We seek to address the following verification problem[^2]:</p>
-
 <p><em>Identify the set of initial states and design an admissible controller that
 maximizes the probability of satisfaction of a specification.</em></p>
-
 <p>Such a specification is called a <strong>terminal hitting-time stochastic reach-avoid
 problem</strong>.  It is a special class of
-<a href="https://en.wikipedia.org/wiki/Verification_and_validation" target="_blank">verification</a>
+<a href="https://en.wikipedia.org/wiki/Verification_and_validation">verification</a>
 problems, which has been well studied for the past couple of decades in computer
 science as well as control theory. See this
-<a href="https://www.sciencedirect.com/science/article/pii/S0005109810003547" target="_blank">paper</a> by
+<a href="https://www.sciencedirect.com/science/article/pii/S0005109810003547">paper</a> by
 Sean Summers and John Lygeros for more details.</p>
-
-<!-- TODO: What is the current state of the art? -->
-
+<!-- raw HTML omitted -->
 
 
 
@@ -528,18 +498,13 @@ Sean Summers and John Lygeros for more details.</p>
 </figcaption>
 
 </figure>
-
 <h2 id="stochastic-reachability-of-a-target-tube-a-general-framework-for-safety">Stochastic reachability of a target tube: A general framework for safety</h2>
-
 <p>This problem can be generalized to a time-varying collection of safe sets.
 Motivated by the classical work of Bertsekas, we call this problem the
 stochastic reachability of a target tube. This problem is illustrated in Figure
 2.</p>
-
-<!--Here, the problem is the following:-->
-
-<!--*maximize the probability of staying with a collection of time-varying target sets*.-->
-
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
 
 
 
@@ -550,39 +515,28 @@ stochastic reachability of a target tube. This problem is illustrated in Figure
 
 
 <figcaption data-pre="Figure " data-post=":" class="numbered">
-  <h4>Design controllers that maximize the probability of staying within the target tube {$\mathcal{T}_i$}, and characterize the set of initial states $\mathscr{L}_{\mathrm{SR}}(⋅)$ that satisfy a minimum reach probability. Image licensed under a <a href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative Commons Attribution-ShareAlike 4.0 International License</a>.</h4>
+  <h4>Design controllers that maximize the probability of staying within the target tube {$\mathcal{T}_i$}, and characterize the set of initial states $\mathscr{L}_{\mathrm{SR}}(⋅)$ that satisfy a minimum reach probability. Image licensed under a <a href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.</h4>
   
 </figcaption>
 
 </figure>
-
-<p>See <a href="https://arxiv.org/abs/1810.05217v1" target="_blank">my paper on stochastic reachability of a target
+<p>See <a href="https://arxiv.org/abs/1810.05217v1">my paper on stochastic reachability of a target
 tube</a> for more details.</p>
-
 <h2 id="sreachtools">SReachTools</h2>
-
 <p><a href="/post/sreachtools/">SReachTools</a> is a user-friendly, open-sourced MATLAB toolbox that address these questions.</p>
-
 <h2 id="applications">Applications</h2>
-
 <p>See the following posts for safety guarantees obtained for various applications:</p>
-
 <ol>
 <li><a href="/post/spacecraft/">Spacecraft rendezvous and docking problem</a></li>
 <li><a href="/post/automatedanes/">Automated anesthesia delivery system</a></li>
 <li><a href="/post/bas/">Building automation system</a></li>
 </ol>
-
-<!--TODO: link my thesis-->
-
-<!--I have successfully answered the following questions:-->
-
-<!--1. When does a controller exist that can solve Problem P?-->
-
-<!--1. What are the sufficient conditions under which the optimal value function[^4] to the Problem P:-->
-
-<p><!--1. Upper-semicontinuous?-->
- <!--1. Log-concave?--></p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
 
     </div>
 
@@ -756,7 +710,7 @@ tube</a> for more details.</p>
   
 
   <p class="powered-by">
-    &copy; 2019 &middot; 
+    © 2019 &middot; 
 
     Powered by the
     <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
