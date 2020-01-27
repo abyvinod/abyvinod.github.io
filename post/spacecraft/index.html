@@ -443,19 +443,15 @@
   <div class="article-container">
 
     <div class="article-style" itemprop="articleBody">
-      
-
-<h3 id="high-level-description">High-level description</h3>
-
+      <h3 id="high-level-description">High-level description</h3>
 <p>We wish to drive a spacecraft (Deputy) towards another spacecraft (Chief) for
-docking. This problem is known as the <a href="https://en.wikipedia.org/wiki/Space_rendezvous" target="_blank">spacecraft rendezvous and docking
+docking. This problem is known as the <a href="https://en.wikipedia.org/wiki/Space_rendezvous">spacecraft rendezvous and docking
 problem</a>. It is a common
 requirement for maintenance and resupply missions in space applications. Due to
 sensing constraints, we wish that the Deputy stays within a line-of-sight cone
 with respect to Chief. Further, we wish to achieve the docking in a
 pre-specified time interval while obeying the physical laws that govern the
 system and constraints on actuation (limited thrust).</p>
-
 
 
 
@@ -471,11 +467,9 @@ system and constraints on actuation (limited thrust).</p>
 </figcaption>
 
 </figure>
-
 <p>We model the Deputy satellite dynamics in the relative coordinate frame of the
 Chief. Loosely, we have the following constraints we wish to satisfy apart from
 the dynamics and control constraints,</p>
-
 <ol>
 <li><strong>Reach</strong> constraint: Reaching a target set centered at the
 origin. This set can encode relative velocity constraints (should dock
@@ -483,11 +477,8 @@ slowly) and tolerances in relative position at the time of rendezvous.</li>
 <li><strong>Avoid</strong> constraint: We wish to stay within a safe set, given by a
 stationary cone (line-of-sight cone) with the tip at the origin.</li>
 </ol>
-
 <h3 id="formal-specification">Formal specification</h3>
-
 <p>Drive the Deputy satellite such that it</p>
-
 <ol>
 <li>reaches the target set at a pre-specified time,</li>
 <li>stays within the safe set (staying out of the avoid set) during the time
@@ -495,27 +486,14 @@ interval,</li>
 <li>satisfies the dynamics constraints, and</li>
 <li>satisfies the control constraints.</li>
 </ol>
-
 <h3 id="safety-problem">Safety problem</h3>
-
 <p>Identify the set of initial states and synthesize an admissible controller that
 achieves the given specification with a probability above a pre-specified
 likelihood threshold. Such initial states will be declared <strong>safe</strong>.</p>
-
-<div class="alert alert-note">
-  <div>
-    For safety-critical applications, it is important that we construct either exact
-or underapproximations of the set of safe initial states. We do not want to be
-over-confident in our safety declarations, i.e., declare an initial state safe
-when it is not really safe.
-  </div>
-</div>
-
+<!-- raw HTML omitted -->
 <h3 id="results">Results</h3>
-
 <p><a href="../sreachtools/">SReachTools</a> can address this question, and generate
 underapproximations of the set of safe initial states.</p>
-
 
 
 
@@ -531,7 +509,6 @@ underapproximations of the set of safe initial states.</p>
 </figcaption>
 
 </figure>
-
 <p>Figure 2 shows various underapproximations of the set of initial locations
 obtained using <a href="../sreachtools/">SReachTools</a>. These are the safe initial states
 from which the Deputy can be driven to satisfy the specification with a
@@ -539,44 +516,26 @@ likelihood <strong>no smaller</strong> than 0.8. A Monte-Carlo simulation of the
 trajectory is shown from one of the safe initial states under the synthesized
 controller. Out of 5 randomly chosen trajectories, only one fails (violates
 terminal velocity constraints).</p>
-
-<!-- TODO: Put the CodeOcean link -->
-
-<!-- TODO: Add the compute times -->
-
-<!-- Figure 5 in *A. Vinod, J. Gleason, and M. Oishi, ''SReachTools: A MATLAB Stochastic Reachability Toolbox'', in Proceedings of Hybrid Systems: Computation and Control, 2019*.-->
-
-<!--Consider the spacecraft rendezvous and docking problem. -->
-
-<!--As shown in Figure 2, we have two satellites --- a "chief" satellite and a-->
-
-<!--"deputy" satellite.  To simplify the study, we consider the dynamics of the-->
-
-<!--deputy satellites relative to the chief satellite, and in contrast to a true-->
-
-<!--mathematical model, we consider a simpler stochastic model to describe the-->
-
-<p><!--relative dynamics.  
-<!-- figure src="/img/project/sreach/cwh_sketch.png"--> <!--title="Satellite rendezvous and docking problem (picture courtesy: [J.--> <!--Gleason](http://www.unm.edu/~gleasonj/))" numbered="true">}} -->
-<!--Our safety and performance requirements are:--></p>
-
-<!--1. Ensure that the deputy satellite reaches the chief satellite at a finite time horizon (not before). (Reach constraint)-->
-
-<!--1. Ensure that the deputy satellite remains in a line-of-sight cone till it satisfies objective 1. (Avoid constraint)-->
-
-<!--We are interested in solving Problem A: **Design a controller that maximizes the probability of satisfaction of the above objectives _1 and 2_ under bounded control space for the deputy satellite.** -->
-
-<!--In this case, we have the following information:-->
-
-<!--1. the initial state of the deputy satellite, -->
-
-<!--1. the safe set (definition of the line-of-sight cone), -->
-
-<!--1. the target set (a box around the origin), -->
-
-<!--1. the relative stochastic dynamics of the deputy satellite with respect to the chief satellite.-->
-
-<!--Note that the avoid constraint is motivated by the fact that sensing and localization capabilities are limited in space applications. -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
 
     </div>
 
@@ -751,7 +710,7 @@ terminal velocity constraints).</p>
   
 
   <p class="powered-by">
-    &copy; 2019 &middot; 
+    © 2019 &middot; 
 
     Powered by the
     <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
@@ -897,7 +856,7 @@ terminal velocity constraints).</p>
     
     
     
-    <script src="/js/academic.min.eeda67bb2d1f96265d85659d1edc7a5e.js"></script>
+    <script src="/js/academic.min.f579f291d0f0c7da58aa872f9aba5215.js"></script>
 
   </body>
 </html>
