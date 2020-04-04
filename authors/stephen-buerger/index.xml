@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Stephen Buerger | Abraham P. Vinod</title>
+    <link>https://abyvinod.github.io/authors/stephen-buerger/</link>
+      <atom:link href="https://abyvinod.github.io/authors/stephen-buerger/index.xml" rel="self" type="application/rss+xml" />
+    <description>Stephen Buerger</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2020</copyright><lastBuildDate>Sun, 01 Jan 2017 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://abyvinod.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
+      <title>Stephen Buerger</title>
+      <link>https://abyvinod.github.io/authors/stephen-buerger/</link>
+    </image>
+    
+    <item>
+      <title>Aerial Suppression of Airborne Platforms (ASAP): Coordinated Capture of a Threat UAS via Stochastic Reachability.</title>
+      <link>https://abyvinod.github.io/publication/vinod-2017-aerial/</link>
+      <pubDate>Sun, 01 Jan 2017 00:00:00 +0000</pubDate>
+      <guid>https://abyvinod.github.io/publication/vinod-2017-aerial/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Reachable Set Computation and Tracking with Multiple Pursuers for the ASAP Counter-UAS Capability.</title>
+      <link>https://abyvinod.github.io/publication/buerger-2016-reachable/</link>
+      <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+      <guid>https://abyvinod.github.io/publication/buerger-2016-reachable/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

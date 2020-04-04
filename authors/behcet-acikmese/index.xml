@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Behçet Açikmeşe | Abraham P. Vinod</title>
+    <link>https://abyvinod.github.io/authors/behcet-acikmese/</link>
+      <atom:link href="https://abyvinod.github.io/authors/behcet-acikmese/index.xml" rel="self" type="application/rss+xml" />
+    <description>Behçet Açikmeşe</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2020</copyright><lastBuildDate>Tue, 01 Jan 2019 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://abyvinod.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
+      <title>Behçet Açikmeşe</title>
+      <link>https://abyvinod.github.io/authors/behcet-acikmese/</link>
+    </image>
+    
+    <item>
+      <title>Voronoi Partition-based Scenario Reduction for Fast Sampling-based Stochastic Reachability Computation of Linear Systems</title>
+      <link>https://abyvinod.github.io/publication/sartipizadeh-2019-voronoi/</link>
+      <pubDate>Tue, 01 Jan 2019 00:00:00 +0000</pubDate>
+      <guid>https://abyvinod.github.io/publication/sartipizadeh-2019-voronoi/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Yuqing Tang | Abraham P. Vinod</title>
+    <link>https://abyvinod.github.io/authors/yuqing-tang/</link>
+      <atom:link href="https://abyvinod.github.io/authors/yuqing-tang/index.xml" rel="self" type="application/rss+xml" />
+    <description>Yuqing Tang</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2020</copyright><lastBuildDate>Fri, 01 Jan 2016 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://abyvinod.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
+      <title>Yuqing Tang</title>
+      <link>https://abyvinod.github.io/authors/yuqing-tang/</link>
+    </image>
+    
+    <item>
+      <title>Validation of cognitive models for collaborative hybrid systems with discrete human input</title>
+      <link>https://abyvinod.github.io/publication/vinod-2016-validation/</link>
+      <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+      <guid>https://abyvinod.github.io/publication/vinod-2016-validation/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
