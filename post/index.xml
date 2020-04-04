@@ -1,69 +1,519 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on Abraham P. Vinod</title>
+    <title>Posts | Abraham P. Vinod</title>
     <link>https://abyvinod.github.io/post/</link>
-    <description>Recent content in Posts on Abraham P. Vinod</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>&amp;copy; 2019</copyright>
-    <lastBuildDate>Mon, 22 Apr 2019 22:23:28 -0500</lastBuildDate>
-    
-	<atom:link href="https://abyvinod.github.io/post/index.xml" rel="self" type="application/rss+xml" />
-    
+      <atom:link href="https://abyvinod.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <description>Posts</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2020</copyright><lastBuildDate>Sun, 01 Jan 2017 00:00:00 -0600</lastBuildDate>
+    <image>
+      <url>https://abyvinod.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
+      <title>Posts</title>
+      <link>https://abyvinod.github.io/post/</link>
+    </image>
     
     <item>
       <title>Repeatability using Jupyter notebook and Conda</title>
       <link>https://abyvinod.github.io/post/repeatability-jupyter/</link>
       <pubDate>Mon, 22 Apr 2019 22:23:28 -0500</pubDate>
-      
       <guid>https://abyvinod.github.io/post/repeatability-jupyter/</guid>
-      <description>Repeatability instructions for codes distributed in this blog</description>
+      <description>&lt;p&gt;In the interest of repeatable coding, I will strive to share Jupyter notebooks
+for Python code used in this blog, as well as the Conda environment file to
+generate the environment.&lt;/p&gt;
+&lt;p&gt;I will assume that you have installed conda in your machine. See the
+installation instructions
+
+&lt;a href=&#34;https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Download the environment file and the jupyter notebook.&lt;/li&gt;
+&lt;li&gt;Recreate the conda environment I used in your machine:
+&lt;pre&gt;&lt;code&gt;$ conda env create -f myenv.yml
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;This environment has &lt;code&gt;jupyter&lt;/code&gt; installed.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;Run the jupyter notebook:
+&lt;pre&gt;&lt;code&gt;$ jupyter notebook
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;Run the notebook using the menu options.&lt;/li&gt;
+&lt;li&gt;Obtain the html page included in the webpages using the
+command
+&lt;pre&gt;&lt;code&gt;$ jupyter nbconvert notebook.ipynb
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;/ol&gt;
+</description>
     </item>
     
     <item>
-      <title>A gentle tutorial to the difference of convex optimization</title>
+      <title>Cupcake placement via difference of convex optimization</title>
       <link>https://abyvinod.github.io/post/dcvx/</link>
       <pubDate>Sun, 21 Apr 2019 18:46:36 -0500</pubDate>
-      
       <guid>https://abyvinod.github.io/post/dcvx/</guid>
-      <description>We discuss the use of difference of convex programming to perform nonlinear non-convex optimization</description>
+      <description>&lt;p&gt;This Jupyter notebook-based blog post can be setup in your local machine as
+follows (see 
+&lt;a href=&#34;https://abyvinod.github.io/post/repeatability-jupyter&#34;&gt;this post&lt;/a&gt; for repeatability
+instructions):&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://abyvinod.github.io/code/dcvx/dcvx.ipynb&#34;&gt;Jupyter notebook&lt;/a&gt; (Use right click and &amp;lsquo;Save Link as&amp;rsquo;)&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://abyvinod.github.io/code/dcvx/dcvx.yml&#34;&gt;Conda environment file&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;It uses the problem of placing a fixed number of round smaller circles in a
+large circle as a nonlinear (non-convex) optimization problem. It was through
+setting up and solving the resulting 
+&lt;a href=&#34;http://web.stanford.edu/~boyd/papers/pdf/cvx_ccv.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;difference of convex optimization
+problem&lt;/a&gt; using
+
+&lt;a href=&#34;https://www.cvxpy.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CVXPY&lt;/a&gt;.&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>My checklist for uploading papers to ArXiV</title>
+      <link>https://abyvinod.github.io/post/arxiv/</link>
+      <pubDate>Sun, 21 Apr 2019 18:46:36 -0500</pubDate>
+      <guid>https://abyvinod.github.io/post/arxiv/</guid>
+      <description>&lt;h2 id=&#34;setup&#34;&gt;Setup&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Define &lt;code&gt;arxiv_generic/&lt;/code&gt; folder and copy over the relevant
+files.&lt;/li&gt;
+&lt;li&gt;Get the generic template for arxiv from
+
+&lt;a href=&#34;https://github.com/kourgeorge/arxiv-style&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://github.com/kourgeorge/arxiv-style&lt;/a&gt;.
+&lt;ol&gt;
+&lt;li&gt;Copy over the &lt;code&gt;arxiv.sty&lt;/code&gt; into the &lt;code&gt;arxiv_generic/&lt;/code&gt;
+folder.&lt;/li&gt;
+&lt;li&gt;You can get the &lt;code&gt;sty&lt;/code&gt; file directly by using the link
+
+&lt;a href=&#34;https://github.com/kourgeorge/arxiv-style/raw/master/arxiv.sty&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://github.com/kourgeorge/arxiv-style/raw/master/arxiv.sty&lt;/a&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;Copy over the &lt;code&gt;tex&lt;/code&gt; files into the &lt;code&gt;arxiv_generic/&lt;/code&gt;
+folder. Rename the main file as &lt;code&gt;main.tex&lt;/code&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;tex-edits&#34;&gt;Tex edits&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Preamble: Instead of &lt;code&gt;\documentclass[twocolumn]{autart}&lt;/code&gt;
+or any other conference/journal specific commands,
+use the following preamble
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-tex&#34; data-lang=&#34;tex&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;\documentclass&lt;/span&gt;{article}    &lt;span style=&#34;color:#75715e&#34;&gt;%
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;\usepackage&lt;/span&gt;{arxiv}
+   
+&lt;span style=&#34;color:#66d9ef&#34;&gt;\usepackage&lt;/span&gt;{bookmark}
+&lt;span style=&#34;color:#66d9ef&#34;&gt;\usepackage&lt;/span&gt;{amsthm,amssymb,amsmath}
+&lt;span style=&#34;color:#66d9ef&#34;&gt;\newtheorem&lt;/span&gt;{thm}{Theorem}
+&lt;span style=&#34;color:#66d9ef&#34;&gt;\newtheorem&lt;/span&gt;{cor}[thm]{Corollary}
+&lt;span style=&#34;color:#66d9ef&#34;&gt;\newtheorem&lt;/span&gt;{lem}[thm]{Lemma}
+&lt;span style=&#34;color:#66d9ef&#34;&gt;\newtheorem&lt;/span&gt;{assum}[thm]{Assumption}
+&lt;span style=&#34;color:#66d9ef&#34;&gt;\newtheorem&lt;/span&gt;{prop}[thm]{Proposition}
+&lt;span style=&#34;color:#66d9ef&#34;&gt;\theoremstyle&lt;/span&gt;{definition}
+&lt;span style=&#34;color:#66d9ef&#34;&gt;\newtheorem&lt;/span&gt;{defn}[thm]{Definition}
+&lt;span style=&#34;color:#66d9ef&#34;&gt;\newtheorem&lt;/span&gt;{exmp}[thm]{Example}
+&lt;span style=&#34;color:#66d9ef&#34;&gt;\newtheorem&lt;/span&gt;{rem}[thm]{Remark}
+&lt;span style=&#34;color:#66d9ef&#34;&gt;\newtheorem&lt;/span&gt;{prob}[thm]{Problem}
+&lt;span style=&#34;color:#66d9ef&#34;&gt;\newtheorem&lt;/span&gt;{alg}{Algorithm}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;Document heading
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-tex&#34; data-lang=&#34;tex&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;\title&lt;/span&gt;{TITLE OF THE PAPER}
+&lt;span style=&#34;color:#66d9ef&#34;&gt;\author&lt;/span&gt;{Author 1 &lt;span style=&#34;color:#66d9ef&#34;&gt;\\&lt;/span&gt;
+    Address &lt;span style=&#34;color:#66d9ef&#34;&gt;\\&lt;/span&gt;
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;\texttt&lt;/span&gt;{Email}&lt;span style=&#34;color:#66d9ef&#34;&gt;\\&lt;/span&gt;
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;\And&lt;/span&gt;
+    Author 2 &lt;span style=&#34;color:#66d9ef&#34;&gt;\\&lt;/span&gt;
+    Address &lt;span style=&#34;color:#66d9ef&#34;&gt;\\&lt;/span&gt;
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;\texttt&lt;/span&gt;{Email}&lt;span style=&#34;color:#66d9ef&#34;&gt;\\&lt;/span&gt;
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;\thanks&lt;/span&gt;{Foot information}
+}
+&lt;span style=&#34;color:#66d9ef&#34;&gt;\date&lt;/span&gt;{}
+&lt;span style=&#34;color:#66d9ef&#34;&gt;\renewcommand&lt;/span&gt;{&lt;span style=&#34;color:#66d9ef&#34;&gt;\headeright&lt;/span&gt;}{}    &lt;span style=&#34;color:#75715e&#34;&gt;% To remove the Preprint
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;\renewcommand&lt;/span&gt;{&lt;span style=&#34;color:#66d9ef&#34;&gt;\undertitle&lt;/span&gt;}{}    &lt;span style=&#34;color:#75715e&#34;&gt;% To remove the Preprint
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;   
+&lt;span style=&#34;color:#66d9ef&#34;&gt;\begin&lt;/span&gt;{document}
+&lt;span style=&#34;color:#66d9ef&#34;&gt;\maketitle&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;Keyword
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-tex&#34; data-lang=&#34;tex&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;\begin&lt;/span&gt;{keyword}                         
+    Stochastic reachability;
+    chance constrained optimization;
+    convex optimization;
+    stochastic optimal control
+&lt;span style=&#34;color:#66d9ef&#34;&gt;\end&lt;/span&gt;{keyword}                            
+&lt;span style=&#34;color:#75715e&#34;&gt;% changes to
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;\keywords&lt;/span&gt;{Stochastic reachability &lt;span style=&#34;color:#66d9ef&#34;&gt;\and&lt;/span&gt; chance constrained
+    optimization &lt;span style=&#34;color:#66d9ef&#34;&gt;\and&lt;/span&gt; convex optimization &lt;span style=&#34;color:#66d9ef&#34;&gt;\and&lt;/span&gt; stochastic
+optimal control}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;Bibliography
+&lt;ol&gt;
+&lt;li&gt;Copy over &lt;code&gt;original_tex_file.bbl&lt;/code&gt; into the &lt;code&gt;arxiv&lt;/code&gt;
+folder.  &lt;em&gt;Avoid using the same file name as the
+&lt;code&gt;main.tex&lt;/code&gt; to avoid &lt;code&gt;latexmk&lt;/code&gt; from overwriting it.&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;Add &lt;code&gt;\input{original_tex_file.bbl}&lt;/code&gt; to the end of the
+file instead of the bibliography commands.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;other-considerations&#34;&gt;Other considerations&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Figures:
+&lt;ol&gt;
+&lt;li&gt;Make sure figures are placed correctly. Sometimes
+figures that were forced to below each other can now
+be placed side-by-side.&lt;/li&gt;
+&lt;li&gt;Remove all &lt;code&gt;.fig&lt;/code&gt; and &lt;code&gt;.svg&lt;/code&gt; files&lt;/li&gt;
+&lt;li&gt;Remove any extraneous files.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;Make sure equations are single lined, when possible, to
+reduce the page length.&lt;/li&gt;
+&lt;li&gt;Use &lt;code&gt;\adjustbox{width=DESIRED_WIDTH}{BLAHBLAH}&lt;/code&gt; to resize
+tables to the desired shape.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;cleaning-up-the-files-for-arxiv-upload&#34;&gt;Cleaning up the files for arXiv upload&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Clone the git repository
+&lt;code&gt;https://github.com/google-research/arxiv-latex-cleaner&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Do &lt;code&gt;python setup.py install&lt;/code&gt; to make it like a command
+line`&lt;/li&gt;
+&lt;li&gt;Run &lt;code&gt;arxiv_latex_cleaner /path/to/arxiv_generic&lt;/code&gt; to
+generate a folder &lt;code&gt;/path/to/arxiv_generic_arXiv&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;You may have to copy over all the figures again, since
+&lt;code&gt;arxiv_latex_cleaner&lt;/code&gt; may do some unnecessary image
+manipulation.&lt;/li&gt;
+&lt;li&gt;Remove the &lt;code&gt;.fls&lt;/code&gt; and &lt;code&gt;.fdb_latexmk&lt;/code&gt; files from the
+&lt;code&gt;arxiv_generic_arXiv&lt;/code&gt; folder.&lt;/li&gt;
+&lt;li&gt;Zip the folder &lt;code&gt;arxiv_generic_arXiv&lt;/code&gt; and upload.&lt;/li&gt;
+&lt;/ol&gt;
+</description>
     </item>
     
     <item>
       <title>SReachTools: A MATLAB Toolbox for stochastic reachability computation</title>
       <link>https://abyvinod.github.io/post/sreachtools/</link>
-      <pubDate>Thu, 04 Apr 2019 00:00:00 -0500</pubDate>
-      
+      <pubDate>Thu, 04 Apr 2019 00:00:00 +0000</pubDate>
       <guid>https://abyvinod.github.io/post/sreachtools/</guid>
-      <description>A repeatability-tested, open-source, MATLAB toolbox for scalable stochastic reachability computation for stochastic linear systems</description>
+      <description>&lt;p&gt;
+&lt;a href=&#34;https://sreachtools.github.io/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;SReachTools&lt;/a&gt; is an open-source (GPLv3)
+stochastic reachability toolbox, written in MATLAB.  SReachTools has been
+
+&lt;a href=&#34;http://hscc2019.eecs.umich.edu/papers.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;repeatability-evaluated at the Hybrid Systems: Computation and Control,
+2019&lt;/a&gt;. It implements all the
+algorithms I developed as part of my PhD work. It was developed in collaboration
+with 
+&lt;a href=&#34;https://unm.edu/~gleasonj&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;J.  Gleason&lt;/a&gt;.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Toolbox details
+&lt;ul&gt;
+&lt;li&gt;Project website 
+&lt;a href=&#34;https://sreachtools.github.io/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://sreachtools.github.io/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Code repository &amp;mdash;
+
+&lt;a href=&#34;https://github.com/sreachtools/SReachTools&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://github.com/sreachtools/SReachTools&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;See this toolbox in action &amp;mdash; 
+&lt;a href=&#34;../spacecraft/&#34;&gt;Spacecraft rendezvous
+problem&lt;/a&gt;, a stochastic reach-avoid problem where we wish to
+dock two spacecrafts safely&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://arxiv.org/abs/1810.05217v1&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;My paper on stochastic reachability of a target
+tube&lt;/a&gt; summarizes the theoretical
+properties and (some of the) computational algorithms used.&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://abyvinod.github.io/project/stochreach/&#34;&gt;A project post&lt;/a&gt; detailing this mathematical framework
+for generating probabilistic guarantees of safety and performance.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-given-a-stochastic-dynamical-system-design-controllers-that-maximize-the-probability-of-staying-within-the-target-tube-mathcalt_i-and-characterize-the-set-of-initial-states-mathscrl_mathrmsr-that-satisfy-a-minimum-reach-probability-image-licensed-under-a-creative-commons-attribution-sharealike-40-international-licensehttpcreativecommonsorglicensesby-sa40&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;https://abyvinod.github.io/img/project/sreach/stochTubeCartoon.png&#34; data-caption=&#34;Given a stochastic dynamical system, design controllers that maximize the probability of staying within the target tube {$\mathcal{T}_i$}, and characterize the set of initial states $\mathscr{L}_{\mathrm{SR}}(⋅)$ that satisfy a minimum reach probability. Image licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.&#34;&gt;
+
+
+  &lt;img src=&#34;https://abyvinod.github.io/img/project/sreach/stochTubeCartoon.png&#34; alt=&#34;&#34;  &gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption data-pre=&#34;Figure &#34; data-post=&#34;:&#34; class=&#34;numbered&#34;&gt;
+    Given a stochastic dynamical system, design controllers that maximize the probability of staying within the target tube {$\mathcal{T}_i$}, and characterize the set of initial states $\mathscr{L}_{\mathrm{SR}}(⋅)$ that satisfy a minimum reach probability. Image licensed under a &lt;a href=&#34;http://creativecommons.org/licenses/by-sa/4.0/&#34;&gt;Creative Commons Attribution-ShareAlike 4.0 International License&lt;/a&gt;.
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;p&gt;For safety-critical applications, it is important that we construct either exact
+or underapproximations of the set of safe initial states. We do not want to be
+over-confident in our safety declarations, i.e., declare an initial state safe
+when it is not really safe.&lt;/p&gt;
+&lt;p&gt;SReachTools utilizes convex optimization, stochastic
+optimization, Fourier transforms, and computational geometry to construct
+underapproximations of the set of safe initial states and controllers that
+satisfy hard control bounds. Further, by being grid-free, SReachTools does not
+directly suffer from the curse of dimensionality that plagues the
+state-of-the-art dynamic programming-based solutions.&lt;/p&gt;
+</description>
     </item>
     
     <item>
       <title>Stochastic motion planning via probabilistic occupancy function</title>
       <link>https://abyvinod.github.io/post/stochmotion/</link>
-      <pubDate>Sat, 30 Mar 2019 00:00:00 -0500</pubDate>
-      
+      <pubDate>Sat, 30 Mar 2019 00:00:00 +0000</pubDate>
       <guid>https://abyvinod.github.io/post/stochmotion/</guid>
-      <description>A sampling-free estimation of collision probability and motion planning using successive convexification</description>
+      <description>&lt;p&gt;The video below shows the example discussed in our 
+&lt;a href=&#34;https://ieeexplore.ieee.org/document/8618921&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CDC 2018
+paper&lt;/a&gt;. The 
+&lt;a href=&#34;https://www.sciencedirect.com/science/article/pii/S2405896317312405&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;successive
+convexification-based
+planner&lt;/a&gt;
+computes these trajectories within $0.25$ seconds (sampling time). The obstacle
+motion prediction is done on-the-fly using 
+&lt;a href=&#34;https://arxiv.org/abs/1803.07180&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;my work on probabilistic occupancy
+function&lt;/a&gt;.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;The colored circles are obstacles that we must avoid. The obstacles have
+known stochastic dynamics. The figure on the right shows the
+$\alpha$-probability occupied sets.&lt;/li&gt;
+&lt;li&gt;The black dot is the current robot location.&lt;/li&gt;
+&lt;li&gt;The blue asterisks show the planner&amp;rsquo;s intended future trajectory.
+
+
+
+
+  
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+&lt;video controls &gt;
+  &lt;source src=&#34;https://abyvinod.github.io/img/paper/cdc2018/paperVideo.mp4&#34; type=&#34;video/mp4&#34;&gt;
+&lt;/video&gt;
+We apply the same code to an environment with more obstacles.
+
+
+
+
+  
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+&lt;video controls &gt;
+  &lt;source src=&#34;https://abyvinod.github.io/img/paper/cdc2018/pushing.mp4&#34; type=&#34;video/mp4&#34;&gt;
+&lt;/video&gt;&lt;/li&gt;
+&lt;/ol&gt;
+</description>
     </item>
     
     <item>
       <title>Stochastic target capture via forward stochastic reachability</title>
       <link>https://abyvinod.github.io/post/stochtarget/</link>
-      <pubDate>Sat, 30 Mar 2019 00:00:00 -0500</pubDate>
-      
+      <pubDate>Sat, 30 Mar 2019 00:00:00 +0000</pubDate>
       <guid>https://abyvinod.github.io/post/stochtarget/</guid>
-      <description>A grid-free, recursion-free, and sampling-free estimation of events with convexity guarantees</description>
+      <description>&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;Given a stochastic model for a (non-adversarial) threat quadrotor, we utilize
+forward stochastic reachability to construct trajectories with &lt;em&gt;maximum
+probability of capture&lt;/em&gt; for a pursuer quadrotor.&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h3 id=&#34;experiment-1-robustness-to-threat-quadrotor&#34;&gt;Experiment 1: Robustness to threat quadrotor&lt;/h3&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/eFGg7U7gEQw&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&#34;experiment-2-open-loop-control-vs-receding-horizon-control&#34;&gt;Experiment 2: Open-loop control vs receding horizon control&lt;/h3&gt;
+&lt;!-- raw HTML omitted --&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/H0BZrk9Goxg&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+</description>
     </item>
     
     <item>
       <title>Spacecraft rendezvous problem</title>
       <link>https://abyvinod.github.io/post/spacecraft/</link>
-      <pubDate>Fri, 15 Mar 2019 00:00:00 -0500</pubDate>
-      
+      <pubDate>Fri, 15 Mar 2019 00:00:00 +0000</pubDate>
       <guid>https://abyvinod.github.io/post/spacecraft/</guid>
-      <description>Demonstration of stochastic reachability analysis</description>
+      <description>&lt;h3 id=&#34;high-level-description&#34;&gt;High-level description&lt;/h3&gt;
+&lt;p&gt;We wish to drive a spacecraft (Deputy) towards another spacecraft (Chief) for
+docking. This problem is known as the 
+&lt;a href=&#34;https://en.wikipedia.org/wiki/Space_rendezvous&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;spacecraft rendezvous and docking
+problem&lt;/a&gt;. It is a common
+requirement for maintenance and resupply missions in space applications. Due to
+sensing constraints, we wish that the Deputy stays within a line-of-sight cone
+with respect to Chief. Further, we wish to achieve the docking in a
+pre-specified time interval while obeying the physical laws that govern the
+system and constraints on actuation (limited thrust).&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-satellite-rendezvous-and-docking-problem&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;https://abyvinod.github.io/img/project/sreach/cwh_sketch.png&#34; data-caption=&#34;Satellite rendezvous and docking problem&#34;&gt;
+
+
+  &lt;img src=&#34;https://abyvinod.github.io/img/project/sreach/cwh_sketch.png&#34; alt=&#34;&#34;  &gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption data-pre=&#34;Figure &#34; data-post=&#34;:&#34; class=&#34;numbered&#34;&gt;
+    Satellite rendezvous and docking problem
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;p&gt;We model the Deputy satellite dynamics in the relative coordinate frame of the
+Chief. Loosely, we have the following constraints we wish to satisfy apart from
+the dynamics and control constraints,&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Reach&lt;/strong&gt; constraint: Reaching a target set centered at the
+origin. This set can encode relative velocity constraints (should dock
+slowly) and tolerances in relative position at the time of rendezvous.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Avoid&lt;/strong&gt; constraint: We wish to stay within a safe set, given by a
+stationary cone (line-of-sight cone) with the tip at the origin.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;formal-specification&#34;&gt;Formal specification&lt;/h3&gt;
+&lt;p&gt;Drive the Deputy satellite such that it&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;reaches the target set at a pre-specified time,&lt;/li&gt;
+&lt;li&gt;stays within the safe set (staying out of the avoid set) during the time
+interval,&lt;/li&gt;
+&lt;li&gt;satisfies the dynamics constraints, and&lt;/li&gt;
+&lt;li&gt;satisfies the control constraints.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;safety-problem&#34;&gt;Safety problem&lt;/h3&gt;
+&lt;p&gt;Identify the set of initial states and synthesize an admissible controller that
+achieves the given specification with a probability above a pre-specified
+likelihood threshold. Such initial states will be declared &lt;strong&gt;safe&lt;/strong&gt;.&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h3 id=&#34;results&#34;&gt;Results&lt;/h3&gt;
+&lt;p&gt;
+&lt;a href=&#34;../sreachtools/&#34;&gt;SReachTools&lt;/a&gt; can address this question, and generate
+underapproximations of the set of safe initial states.&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-various-underapproximations-of-the-set-of-initial-locations-with-probability-of-satisfying-the-specification-greater-than-08-a-monte-carlo-simulation-of-the-resulting-trajectory-from-one-of-the-safe-initial-states-is-also-shown&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;https://abyvinod.github.io/img/project/sreach/cwh-example.png&#34; data-caption=&#34;Various underapproximations of the set of initial locations with probability of satisfying the specification greater than 0.8. A Monte-Carlo simulation of the resulting trajectory from one of the safe initial states is also shown.&#34;&gt;
+
+
+  &lt;img src=&#34;https://abyvinod.github.io/img/project/sreach/cwh-example.png&#34; alt=&#34;&#34;  &gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption data-pre=&#34;Figure &#34; data-post=&#34;:&#34; class=&#34;numbered&#34;&gt;
+    Various underapproximations of the set of initial locations with probability of satisfying the specification greater than 0.8. A Monte-Carlo simulation of the resulting trajectory from one of the safe initial states is also shown.
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;p&gt;Figure 2 shows various underapproximations of the set of initial locations
+obtained using 
+&lt;a href=&#34;../sreachtools/&#34;&gt;SReachTools&lt;/a&gt;. These are the safe initial states
+from which the Deputy can be driven to satisfy the specification with a
+likelihood &lt;strong&gt;no smaller&lt;/strong&gt; than 0.8. A Monte-Carlo simulation of the safe
+trajectory is shown from one of the safe initial states under the synthesized
+controller. Out of 5 randomly chosen trajectories, only one fails (violates
+terminal velocity constraints).&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+</description>
     </item>
     
   </channel>

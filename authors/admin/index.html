@@ -28,10 +28,10 @@
   
     
   
-  <meta name="description" content="Repeatability instructions for codes distributed in this blog">
+  <meta name="description" content="Abraham P. Vinod&#39;s website">
 
   
-  <link rel="alternate" hreflang="en-us" href="https://abyvinod.github.io/post/repeatability-jupyter/">
+  <link rel="alternate" hreflang="en-us" href="https://abyvinod.github.io/authors/admin/">
 
   
 
@@ -210,12 +210,14 @@
 
 
   
+  <link rel="alternate" href="/authors/admin/index.xml" type="application/rss+xml" title="Abraham P. Vinod">
+  
 
   <link rel="manifest" href="/index.webmanifest">
   <link rel="icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_32x32_fill_lanczos_center_2.png">
   <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_2.png">
 
-  <link rel="canonical" href="https://abyvinod.github.io/post/repeatability-jupyter/">
+  <link rel="canonical" href="https://abyvinod.github.io/authors/admin/">
 
   
   
@@ -229,65 +231,17 @@
   <meta property="twitter:card" content="summary">
   
   <meta property="og:site_name" content="Abraham P. Vinod">
-  <meta property="og:url" content="https://abyvinod.github.io/post/repeatability-jupyter/">
-  <meta property="og:title" content="Repeatability using Jupyter notebook and Conda | Abraham P. Vinod">
-  <meta property="og:description" content="Repeatability instructions for codes distributed in this blog"><meta property="og:image" content="https://abyvinod.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png">
+  <meta property="og:url" content="https://abyvinod.github.io/authors/admin/">
+  <meta property="og:title" content="Abraham P. Vinod | Abraham P. Vinod">
+  <meta property="og:description" content="Abraham P. Vinod&#39;s website"><meta property="og:image" content="https://abyvinod.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png">
   <meta property="twitter:image" content="https://abyvinod.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png"><meta property="og:locale" content="en-us">
   
     
-      <meta property="article:published_time" content="2019-04-22T22:23:28-05:00">
-    
-    <meta property="article:modified_time" content="2019-04-22T22:23:28-05:00">
   
 
   
 
 
-    
-
-
-
-
-
-
-  
-
-
-
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BlogPosting",
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "https://abyvinod.github.io/post/repeatability-jupyter/"
-  },
-  "headline": "Repeatability using Jupyter notebook and Conda",
-  
-  "datePublished": "2019-04-22T22:23:28-05:00",
-  "dateModified": "2019-04-22T22:23:28-05:00",
-  
-  "author": {
-    "@type": "Person",
-    "name": "Abraham P. Vinod"
-  },
-  
-  "publisher": {
-    "@type": "Organization",
-    "name": "Abraham P. Vinod",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://abyvinod.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_2.png"
-    }
-  },
-  "description": "Repeatability instructions for codes distributed in this blog"
-}
-</script>
-
-  
-
-  
 
 
   
@@ -299,7 +253,7 @@
 
 
 
-  <title>Repeatability using Jupyter notebook and Conda | Abraham P. Vinod</title>
+  <title>Abraham P. Vinod | Abraham P. Vinod</title>
 
 </head>
 
@@ -587,364 +541,270 @@
 </nav>
 
 
-  <article class="article">
-
   
 
 
 
 
-
-
-
-
-
-
-
-
-  
-
-  
-  
-  
-<div class="article-container pt-3">
-  <h1>Repeatability using Jupyter notebook and Conda</h1>
-
-  
-
-  
-    
-
-
-<div class="article-metadata">
-
-  
-  
-
-  
-  <span class="article-date">
+<section id="profile-page" class="pt-5">
+  <div class="container">
     
     
       
-    
-    Apr 22, 2019
-  </span>
-  
-
-  
-
-  
-  <span class="middot-divider"></span>
-  <span class="article-reading-time">
-    1 min read
-  </span>
-  
-
-  
-  
-  
-
-  
-  
-
-</div>
-
-    
-
-
-
-
-
-
-
-
-
-
+      
+      
+      
 
 
 
 
   
-</div>
 
 
 
-  <div class="article-container">
 
-    <div class="article-style">
-      <p>In the interest of repeatable coding, I will strive to share Jupyter notebooks
-for Python code used in this blog, as well as the Conda environment file to
-generate the environment.</p>
-<p>I will assume that you have installed conda in your machine. See the
-installation instructions
 
-<a href="https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html" target="_blank" rel="noopener">here</a>.</p>
-<ol>
-<li>Download the environment file and the jupyter notebook.</li>
-<li>Recreate the conda environment I used in your machine:
-<pre><code>$ conda env create -f myenv.yml
-</code></pre><p>This environment has <code>jupyter</code> installed.</p>
-</li>
-<li>Run the jupyter notebook:
-<pre><code>$ jupyter notebook
-</code></pre></li>
-<li>Run the notebook using the menu options.</li>
-<li>Obtain the html page included in the webpages using the
-command
-<pre><code>$ jupyter nbconvert notebook.ipynb
-</code></pre></li>
-</ol>
+
+
+
+
+
+<div class="row">
+  <div class="col-12 col-lg-4">
+    <div id="profile">
+
+      
+      
+      <img class="avatar avatar-circle" src="/authors/admin/avatar_hu3819183ff7a0f23306c189454ee777fb_336089_270x270_fill_q90_lanczos_center.jpg" alt="Avatar">
+      
+
+      <div class="portrait-title">
+        <h2>Abraham P. Vinod</h2>
+        <h3>Postdoctoral Research Fellow</h3>
+
+        
+        <h3>
+          <a href="https://www.oden.utexas.edu/" target="_blank" rel="noopener">
+          <span>Oden Institute for Computational Engineering and Sciences</span>
+          </a>
+        </h3>
+        
+        <h3>
+          <a href="https://www.utexas.edu/" target="_blank" rel="noopener">
+          <span>The University of Texas at Austin</span>
+          </a>
+        </h3>
+        
+      </div>
+
+      <ul class="network-icon" aria-hidden="true">
+        
+        
+        
+        
+          
+        
+        
+        
+        
+        
+          
+        
+        <li>
+          <a href="/#contact" >
+            <i class="fas fa-envelope big-icon"></i>
+          </a>
+        </li>
+        
+        
+        
+        
+          
+        
+        
+        
+        
+        
+          
+        
+        <li>
+          <a href="https://doodle.com/abyvinod" target="_blank" rel="noopener">
+            <i class="fas fa-calendar big-icon"></i>
+          </a>
+        </li>
+        
+        
+        
+        
+        
+        
+        
+        
+          
+        
+        <li>
+          <a href="https://scholar.google.com/citations?user=yb5Z7AwAAAAJ" target="_blank" rel="noopener">
+            <i class="ai ai-google-scholar big-icon"></i>
+          </a>
+        </li>
+        
+        
+        
+        
+        
+        
+        
+        
+          
+        
+        <li>
+          <a href="https://arxiv.org/a/vinod_a_1.html" target="_blank" rel="noopener">
+            <i class="ai ai-arxiv big-icon"></i>
+          </a>
+        </li>
+        
+        
+        
+        
+          
+        
+        
+        
+        
+        
+          
+        
+        <li>
+          <a href="https://github.com/abyvinod" target="_blank" rel="noopener">
+            <i class="fab fa-github big-icon"></i>
+          </a>
+        </li>
+        
+        
+        
+        
+          
+        
+        
+        
+        
+        
+          
+        
+        <li>
+          <a href="https://www.linkedin.com/in/abrahampvinod" target="_blank" rel="noopener">
+            <i class="fab fa-linkedin big-icon"></i>
+          </a>
+        </li>
+        
+      </ul>
 
     </div>
+  </div>
+  <div class="col-12 col-lg-8">
 
     
-
-
-
-
-
-<div class="share-box" aria-hidden="true">
-  <ul class="share">
-    
-      
-      
-      
-        
-      
-      
-      
-      <li>
-        <a href="https://twitter.com/intent/tweet?url=https://abyvinod.github.io/post/repeatability-jupyter/&amp;text=Repeatability%20using%20Jupyter%20notebook%20and%20Conda" target="_blank" rel="noopener" class="share-btn-twitter">
-          <i class="fab fa-twitter"></i>
-        </a>
-      </li>
-    
-      
-      
-      
-        
-      
-      
-      
-      <li>
-        <a href="https://www.facebook.com/sharer.php?u=https://abyvinod.github.io/post/repeatability-jupyter/&amp;t=Repeatability%20using%20Jupyter%20notebook%20and%20Conda" target="_blank" rel="noopener" class="share-btn-facebook">
-          <i class="fab fa-facebook"></i>
-        </a>
-      </li>
-    
-      
-      
-      
-        
-      
-      
-      
-      <li>
-        <a href="mailto:?subject=Repeatability%20using%20Jupyter%20notebook%20and%20Conda&amp;body=https://abyvinod.github.io/post/repeatability-jupyter/" target="_blank" rel="noopener" class="share-btn-email">
-          <i class="fas fa-envelope"></i>
-        </a>
-      </li>
-    
-      
-      
-      
-        
-      
-      
-      
-      <li>
-        <a href="https://www.linkedin.com/shareArticle?url=https://abyvinod.github.io/post/repeatability-jupyter/&amp;title=Repeatability%20using%20Jupyter%20notebook%20and%20Conda" target="_blank" rel="noopener" class="share-btn-linkedin">
-          <i class="fab fa-linkedin-in"></i>
-        </a>
-      </li>
-    
-      
-      
-      
-        
-      
-      
-      
-      <li>
-        <a href="https://web.whatsapp.com/send?text=Repeatability%20using%20Jupyter%20notebook%20and%20Conda%20https://abyvinod.github.io/post/repeatability-jupyter/" target="_blank" rel="noopener" class="share-btn-whatsapp">
-          <i class="fab fa-whatsapp"></i>
-        </a>
-      </li>
-    
-      
-      
-      
-        
-      
-      
-      
-      <li>
-        <a href="https://service.weibo.com/share/share.php?url=https://abyvinod.github.io/post/repeatability-jupyter/&amp;title=Repeatability%20using%20Jupyter%20notebook%20and%20Conda" target="_blank" rel="noopener" class="share-btn-weibo">
-          <i class="fab fa-weibo"></i>
-        </a>
-      </li>
-    
-  </ul>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  
-
-
-
-
-
-  
-  
-  
-    
-  
-  
-  
-  <div class="media author-card content-widget-hr">
-    
-      
-      <img class="avatar mr-3 avatar-circle" src="/authors/admin/avatar_hu3819183ff7a0f23306c189454ee777fb_336089_270x270_fill_q90_lanczos_center.jpg" alt="Avatar">
     
 
-    <div class="media-body">
-      <h5 class="card-title"><a href="https://abyvinod.github.io/">Abraham P. Vinod</a></h5>
-      <h6 class="card-subtitle">Postdoctoral Research Fellow</h6>
-      <p class="card-text">Researcher with experience in optimization, control, stochastic modeling, and reinforcement learning</p>
-      <ul class="network-icon" aria-hidden="true">
-  
-    
-    
-    
-      
-    
-    
-    
-    
-    
-      
-    
-    <li>
-      <a href="/#contact" >
-        <i class="fas fa-envelope"></i>
-      </a>
-    </li>
-  
-    
-    
-    
-      
-    
-    
-    
-    
-    
-      
-    
-    <li>
-      <a href="https://doodle.com/abyvinod" target="_blank" rel="noopener">
-        <i class="fas fa-calendar"></i>
-      </a>
-    </li>
-  
-    
-    
-    
-    
-    
-    
-    
-      
-    
-    <li>
-      <a href="https://scholar.google.com/citations?user=yb5Z7AwAAAAJ" target="_blank" rel="noopener">
-        <i class="ai ai-google-scholar"></i>
-      </a>
-    </li>
-  
-    
-    
-    
-    
-    
-    
-    
-      
-    
-    <li>
-      <a href="https://arxiv.org/a/vinod_a_1.html" target="_blank" rel="noopener">
-        <i class="ai ai-arxiv"></i>
-      </a>
-    </li>
-  
-    
-    
-    
-      
-    
-    
-    
-    
-    
-      
-    
-    <li>
-      <a href="https://github.com/abyvinod" target="_blank" rel="noopener">
-        <i class="fab fa-github"></i>
-      </a>
-    </li>
-  
-    
-    
-    
-      
-    
-    
-    
-    
-    
-      
-    
-    <li>
-      <a href="https://www.linkedin.com/in/abrahampvinod" target="_blank" rel="noopener">
-        <i class="fab fa-linkedin"></i>
-      </a>
-    </li>
-  
+    <p>My research dream is to enable <strong>autonomy for physical
+systems</strong> &mdash; the autonomous agent must provide <strong>verifiable
+guarantees of performance</strong> in the <strong>presence of
+uncertainties</strong> and <strong>limitations on data availability</strong>.
+These agents must also interact with other agents and humans
+present in the environment effectively. Addressing these
+challenges with tractable approaches is crucial for safe
+deployment of autonomy. My research work uses
+<em>optimization</em>, <em>control theory</em>, and <em>learning</em> to achieve
+this goal.</p>
+<p>Currently, I am a Postdoctoral Research Fellow, working with 
+<a href="https://www.ae.utexas.edu/faculty/faculty-directory/topcu" target="_blank" rel="noopener">Dr.  Ufuk
+Topcu</a> at 
+<a href="https://www.utexas.edu/" target="_blank" rel="noopener">the
+University of Texas at Austin</a>. I received my PhD in
+Engineering (Systems and Control) at the 
+<a href="https://www.unm.edu" target="_blank" rel="noopener">University of New
+Mexico</a>, with 
+<a href="https://www.unm.edu/~oishi/" target="_blank" rel="noopener">Dr.  Meeko
+Oishi</a> as my PhD advisor. My PhD work focused on
+theory and scalable algorithms for 
+<a href="https://digitalrepository.unm.edu/cgi/viewcontent.cgi?article=1461&amp;context=ece_etds" target="_blank" rel="noopener">probabilistic safety and stochastic optimal
+control design under
+constraints</a>.
+Along with 
+<a href="https://unm.edu/~gleasonj" target="_blank" rel="noopener">J.  Gleason</a>, I have implemented a
+significant part of my PhD work in
+
+<a href="https://sreachtools.github.io/" target="_blank" rel="noopener">SReachTools</a>, which is an open-source,
+repeatability-tested, MATLAB toolbox.  I obtained my B.Tech.  and M.Tech degrees
+in Electrical Engineering from the 
+<a href="https://www.iitm.ac.in" target="_blank" rel="noopener">Indian Institute of Technology,
+Madras</a>.</p>
+<p>My research has received various recognitions:</p>
+<ul>
+<li>
+<a href="http://hscc2017.ece.illinois.edu/Awards.html" target="_blank" rel="noopener">Best Student Paper Award</a> in the 2017 ACM Hybrid Systems: Computation and Control Conference,</li>
+<li>
+<a href="https://www.hscc2018.deib.polimi.it/award-finalists-and-winners" target="_blank" rel="noopener">Best Paper Award finalist</a> in the 2018 ACM Hybrid Systems: Computation and Control Conference, and</li>
+<li>
+<a href="https://www.iitm.ac.in/sites/default/files/notices/convocation_2014_prize_winners-website.pdf" target="_blank" rel="noopener">Prof. Achim Bopp Prize</a> for my M.  Tech thesis.</li>
 </ul>
 
+
+    <div class="row">
+
+      
+      <div class="col-md-5">
+        <h3>Interests</h3>
+        <ul class="ul-interests">
+          
+          <li>Constrained control of dynamical systems</li>
+          
+          <li>Reinforcement learning</li>
+          
+          <li>Optimization</li>
+          
+          <li>Verification and controller synthesis</li>
+          
+        </ul>
+      </div>
+      
+
+      
+      <div class="col-md-7">
+        <h3>Education</h3>
+        <ul class="ul-edu fa-ul">
+          
+          <li>
+            <i class="fa-li fas fa-graduation-cap"></i>
+            <div class="description">
+              <p class="course">PhD in Engineering, 2018</p>
+              <p class="institution">The University of New Mexico, Albuquerque, NM, USA</p>
+            </div>
+          </li>
+          
+          <li>
+            <i class="fa-li fas fa-graduation-cap"></i>
+            <div class="description">
+              <p class="course">Dual-degree (B. Tech &amp; M.Tech) in Electrical Engineering, 2014</p>
+              <p class="institution">Indian Institute of Technology Madras, Chennai, TN, India</p>
+            </div>
+          </li>
+          
+        </ul>
+      </div>
+      
+
     </div>
   </div>
+</div>
 
+    
 
-
-
-
-
-
-
-
-
-
-
-  
-  
-
-
-
+    
+    
+    
   </div>
-</article>
+</section>
 
       
 
