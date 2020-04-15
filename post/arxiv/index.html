@@ -230,7 +230,7 @@
   
   <meta property="og:site_name" content="Abraham P. Vinod">
   <meta property="og:url" content="https://abyvinod.github.io/post/arxiv/">
-  <meta property="og:title" content="My checklist for uploading papers to ArXiV | Abraham P. Vinod">
+  <meta property="og:title" content="Uploading papers to ArXiV | Abraham P. Vinod">
   <meta property="og:description" content="Steps for uploading paper on arxiv"><meta property="og:image" content="https://abyvinod.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png">
   <meta property="twitter:image" content="https://abyvinod.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png"><meta property="og:locale" content="en-us">
   
@@ -263,7 +263,7 @@
     "@type": "WebPage",
     "@id": "https://abyvinod.github.io/post/arxiv/"
   },
-  "headline": "My checklist for uploading papers to ArXiV",
+  "headline": "Uploading papers to ArXiV",
   
   "datePublished": "2019-04-21T18:46:36-05:00",
   "dateModified": "2019-04-21T18:46:36-05:00",
@@ -299,7 +299,7 @@
 
 
 
-  <title>My checklist for uploading papers to ArXiV | Abraham P. Vinod</title>
+  <title>Uploading papers to ArXiV | Abraham P. Vinod</title>
 
 </head>
 
@@ -608,7 +608,7 @@
   
   
 <div class="article-container pt-3">
-  <h1>My checklist for uploading papers to ArXiV</h1>
+  <h1>Uploading papers to ArXiV</h1>
 
   
 
@@ -636,7 +636,7 @@
   
   <span class="middot-divider"></span>
   <span class="article-reading-time">
-    2 min read
+    3 min read
   </span>
   
 
@@ -672,90 +672,107 @@
   <div class="article-container">
 
     <div class="article-style">
-      <h2 id="setup">Setup</h2>
+      <h2 id="quick-overview">Quick overview</h2>
 <ol>
-<li>Define <code>arxiv_generic/</code> folder and copy over the relevant
-files.</li>
+<li>Make sure <code>arxiv_latex_cleaner</code> is installed (see section
+2)</li>
+<li>Copy all the relevant files into a folder, say
+<code>public_relevant_files</code>
+<ol>
+<li>Rerun the latex to make sure the new set of files
+produce the same pdf.</li>
+</ol>
+</li>
+<li>Run <code>python -m arxiv_latex_cleaner /path/to/public_relevant_files</code> to generate a folder
+<code>/path/to/public_relevant_files_arXiv</code>. This folder will
+contain the comments stripped tex files and a filtering
+of the files relevant for arXiv upload.</li>
+<li>Rerun the latex in the folder <code>public_relevant_files</code> to
+make sure the new set of files produce the same pdf as in
+<code>public_relevant_files</code>.
+<ol>
+<li>You may have to copy over all the figures again,
+since <code>arxiv_latex_cleaner</code> may do some unnecessary
+image manipulation.</li>
+</ol>
+</li>
+<li>Make arXiv-specific edits (see section 3)</li>
+<li>Produce the arXiv-ready PDF</li>
+<li>Check the arXiv-ready PDF (see section 4)</li>
+<li>Perform <code>latexmk -C</code> in the new folder to remove
+irrelevant figures.</li>
+<li>Zip the folder <code>arxiv_generic_arXiv</code> and upload.</li>
+<li>Delete the <code>public_relevant_files</code> folder if needed</li>
+</ol>
+<h2 id="setup">Setup</h2>
+<ol>
+<li>Clone the git repository
+<code>https://github.com/google-research/arxiv-latex-cleaner</code></li>
+<li>Do <code>python setup.py install</code> to make it like a command
+line`</li>
+</ol>
+<h2 id="arxiv-specific-edits-in-public_relevant_files_arxiv-folder">arXiv-specific edits in public_relevant_files_arXiv folder</h2>
+<ol>
 <li>Get the generic template for arxiv from
 
 <a href="https://github.com/kourgeorge/arxiv-style" target="_blank" rel="noopener">https://github.com/kourgeorge/arxiv-style</a>.
 <ol>
-<li>Copy over the <code>arxiv.sty</code> into the <code>arxiv_generic/</code>
-folder.</li>
-<li>You can get the <code>sty</code> file directly by using the link
+<li>Note that you can get the <code>sty</code> file directly by
+using the link
 
 <a href="https://github.com/kourgeorge/arxiv-style/raw/master/arxiv.sty" target="_blank" rel="noopener">https://github.com/kourgeorge/arxiv-style/raw/master/arxiv.sty</a>.</li>
+<li>Copy over the <code>arxiv.sty</code> into the
+<code>public_relevant_files_arXiv</code> folder.</li>
 </ol>
 </li>
-<li>Copy over the <code>tex</code> files into the <code>arxiv_generic/</code>
-folder. Rename the main file as <code>main.tex</code>.</li>
-</ol>
-<h2 id="tex-edits">Tex edits</h2>
-<ol>
-<li>Preamble: Instead of <code>\documentclass[twocolumn]{autart}</code>
-or any other conference/journal specific commands,
-use the following preamble
+<li>Preamble: Instead of the conference/journal specific
+commands, use the following preamble
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-tex" data-lang="tex"><span style="color:#66d9ef">\documentclass</span>{article}    <span style="color:#75715e">%
 </span><span style="color:#75715e"></span><span style="color:#66d9ef">\usepackage</span>{arxiv}
-   
 <span style="color:#66d9ef">\usepackage</span>{bookmark}
-<span style="color:#66d9ef">\usepackage</span>{amsthm,amssymb,amsmath}
-<span style="color:#66d9ef">\newtheorem</span>{thm}{Theorem}
-<span style="color:#66d9ef">\newtheorem</span>{cor}[thm]{Corollary}
-<span style="color:#66d9ef">\newtheorem</span>{lem}[thm]{Lemma}
-<span style="color:#66d9ef">\newtheorem</span>{assum}[thm]{Assumption}
-<span style="color:#66d9ef">\newtheorem</span>{prop}[thm]{Proposition}
-<span style="color:#66d9ef">\theoremstyle</span>{definition}
-<span style="color:#66d9ef">\newtheorem</span>{defn}[thm]{Definition}
-<span style="color:#66d9ef">\newtheorem</span>{exmp}[thm]{Example}
-<span style="color:#66d9ef">\newtheorem</span>{rem}[thm]{Remark}
-<span style="color:#66d9ef">\newtheorem</span>{prob}[thm]{Problem}
-<span style="color:#66d9ef">\newtheorem</span>{alg}{Algorithm}
 </code></pre></div></li>
 <li>Document heading
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-tex" data-lang="tex"><span style="color:#66d9ef">\title</span>{TITLE OF THE PAPER}
-<span style="color:#66d9ef">\author</span>{Author 1 <span style="color:#66d9ef">\\</span>
-    Address <span style="color:#66d9ef">\\</span>
-    <span style="color:#66d9ef">\texttt</span>{Email}<span style="color:#66d9ef">\\</span>
-    <span style="color:#66d9ef">\And</span>
-    Author 2 <span style="color:#66d9ef">\\</span>
-    Address <span style="color:#66d9ef">\\</span>
-    <span style="color:#66d9ef">\texttt</span>{Email}<span style="color:#66d9ef">\\</span>
-    <span style="color:#66d9ef">\thanks</span>{Foot information}
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-tex" data-lang="tex"><span style="color:#66d9ef">\title</span>{TITLE OF THE PAPER<span style="color:#66d9ef">\thanks</span>{Funding blurb}}
+<span style="color:#66d9ef">\author</span>{
+    Author 1<span style="color:#66d9ef">\thanks</span>{Author 1 info} , 
+    <span style="color:#75715e">% Spacing helps the symbol
+</span><span style="color:#75715e"></span>    Author 2<span style="color:#66d9ef">\thanks</span>{Author 2 info} , and
+    Author 3<span style="color:#66d9ef">\thanks</span>{Author 3 info} 
 }
 <span style="color:#66d9ef">\date</span>{}
-<span style="color:#66d9ef">\renewcommand</span>{<span style="color:#66d9ef">\headeright</span>}{}    <span style="color:#75715e">% To remove the Preprint
+<span style="color:#66d9ef">\chead</span>{SHORT TITLE}    <span style="color:#75715e">% Otherwise thanks will ruin it
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">\renewcommand</span>{<span style="color:#66d9ef">\headeright</span>}{}    <span style="color:#75715e">% To remove the Preprint
 </span><span style="color:#75715e"></span><span style="color:#66d9ef">\renewcommand</span>{<span style="color:#66d9ef">\undertitle</span>}{}    <span style="color:#75715e">% To remove the Preprint
 </span><span style="color:#75715e"></span>   
 <span style="color:#66d9ef">\begin</span>{document}
 <span style="color:#66d9ef">\maketitle</span>
 </code></pre></div></li>
 <li>Keyword
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-tex" data-lang="tex"><span style="color:#66d9ef">\begin</span>{keyword}                         
-    Stochastic reachability;
-    chance constrained optimization;
-    convex optimization;
-    stochastic optimal control
-<span style="color:#66d9ef">\end</span>{keyword}                            
-<span style="color:#75715e">% changes to
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">\keywords</span>{Stochastic reachability <span style="color:#66d9ef">\and</span> chance constrained
-    optimization <span style="color:#66d9ef">\and</span> convex optimization <span style="color:#66d9ef">\and</span> stochastic
-optimal control}
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-tex" data-lang="tex"><span style="color:#66d9ef">\keywords</span>{KEYWORD1 <span style="color:#66d9ef">\and</span> KEYWORD2 <span style="color:#66d9ef">\and</span> KEYWORD3}
 </code></pre></div></li>
 <li>Bibliography
 <ol>
-<li>Copy over <code>original_tex_file.bbl</code> into the <code>arxiv</code>
-folder.  <em>Avoid using the same file name as the
-<code>main.tex</code> to avoid <code>latexmk</code> from overwriting it.</em></li>
-<li>Add <code>\input{original_tex_file.bbl}</code> to the end of the
-file instead of the bibliography commands.</li>
+<li>Copy over <code>original_tex_file.bbl</code> into the
+<code>public_relevant_files_arXiv</code>
+folder as <code>arxiv.bbl</code>.</li>
+<li>Add <code>\input{arxiv.bbl}</code> to the end of the file
+instead of the bibliography commands.</li>
+<li>We avoid using the same file name as the
+<code>original_tex_file.bbl</code> to avoid <code>latexmk</code> from
+overwriting it.</li>
 </ol>
 </li>
 </ol>
-<h2 id="other-considerations">Other considerations</h2>
+<h2 id="checks">Checks</h2>
 <ol>
+<li>Make sure linebreaks that were built-in for
+two-column format are now removed</li>
+<li>Make sure equations are single lined, when possible, to
+reduce the page length.</li>
 <li>Figures:
 <ol>
+<li>Tikz-based figures might have to replaced with
+screenshots of the original paper.</li>
 <li>Make sure figures are placed correctly. Sometimes
 figures that were forced to below each other can now
 be placed side-by-side.</li>
@@ -763,26 +780,17 @@ be placed side-by-side.</li>
 <li>Remove any extraneous files.</li>
 </ol>
 </li>
-<li>Make sure equations are single lined, when possible, to
-reduce the page length.</li>
 <li>Use <code>\adjustbox{width=DESIRED_WIDTH}{BLAHBLAH}</code> to resize
 tables to the desired shape.</li>
 </ol>
-<h2 id="cleaning-up-the-files-for-arxiv-upload">Cleaning up the files for arXiv upload</h2>
-<ol>
-<li>Clone the git repository
-<code>https://github.com/google-research/arxiv-latex-cleaner</code></li>
-<li>Do <code>python setup.py install</code> to make it like a command
-line`</li>
-<li>Run <code>arxiv_latex_cleaner /path/to/arxiv_generic</code> to
-generate a folder <code>/path/to/arxiv_generic_arXiv</code>.</li>
-<li>You may have to copy over all the figures again, since
-<code>arxiv_latex_cleaner</code> may do some unnecessary image
-manipulation.</li>
-<li>Remove the <code>.fls</code> and <code>.fdb_latexmk</code> files from the
-<code>arxiv_generic_arXiv</code> folder.</li>
-<li>Zip the folder <code>arxiv_generic_arXiv</code> and upload.</li>
-</ol>
+<h2 id="creating-a-diff-pdf">Creating a diff pdf</h2>
+<p>Use
+<code>latexdiff --type=BOLD initial_subm.tex revised_subm.tex &gt; diff.tex</code>
+to create a diff file that only highlights the new changes, and ignores deletion.</p>
+<p>To change from <strong>bold</strong> to color, use</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-tex" data-lang="tex"><span style="color:#66d9ef">\providecommand</span>{<span style="color:#66d9ef">\DIFadd</span>}[1]{{<span style="color:#66d9ef">\protect\color</span>{blue}#1}}
+</code></pre></div><p>instead of the generated <code>\DIFadd</code> command in the
+<code>diff.tex</code>. Source: <a href="https://tex.stackexchange.com/questions/315914/customizing-latexdiff-default-underline-output-styling">https://tex.stackexchange.com/questions/315914/customizing-latexdiff-default-underline-output-styling</a></p>
 
     </div>
 
@@ -803,7 +811,7 @@ manipulation.</li>
       
       
       <li>
-        <a href="https://twitter.com/intent/tweet?url=https://abyvinod.github.io/post/arxiv/&amp;text=My%20checklist%20for%20uploading%20papers%20to%20ArXiV" target="_blank" rel="noopener" class="share-btn-twitter">
+        <a href="https://twitter.com/intent/tweet?url=https://abyvinod.github.io/post/arxiv/&amp;text=Uploading%20papers%20to%20ArXiV" target="_blank" rel="noopener" class="share-btn-twitter">
           <i class="fab fa-twitter"></i>
         </a>
       </li>
@@ -816,7 +824,7 @@ manipulation.</li>
       
       
       <li>
-        <a href="https://www.facebook.com/sharer.php?u=https://abyvinod.github.io/post/arxiv/&amp;t=My%20checklist%20for%20uploading%20papers%20to%20ArXiV" target="_blank" rel="noopener" class="share-btn-facebook">
+        <a href="https://www.facebook.com/sharer.php?u=https://abyvinod.github.io/post/arxiv/&amp;t=Uploading%20papers%20to%20ArXiV" target="_blank" rel="noopener" class="share-btn-facebook">
           <i class="fab fa-facebook"></i>
         </a>
       </li>
@@ -829,7 +837,7 @@ manipulation.</li>
       
       
       <li>
-        <a href="mailto:?subject=My%20checklist%20for%20uploading%20papers%20to%20ArXiV&amp;body=https://abyvinod.github.io/post/arxiv/" target="_blank" rel="noopener" class="share-btn-email">
+        <a href="mailto:?subject=Uploading%20papers%20to%20ArXiV&amp;body=https://abyvinod.github.io/post/arxiv/" target="_blank" rel="noopener" class="share-btn-email">
           <i class="fas fa-envelope"></i>
         </a>
       </li>
@@ -842,7 +850,7 @@ manipulation.</li>
       
       
       <li>
-        <a href="https://www.linkedin.com/shareArticle?url=https://abyvinod.github.io/post/arxiv/&amp;title=My%20checklist%20for%20uploading%20papers%20to%20ArXiV" target="_blank" rel="noopener" class="share-btn-linkedin">
+        <a href="https://www.linkedin.com/shareArticle?url=https://abyvinod.github.io/post/arxiv/&amp;title=Uploading%20papers%20to%20ArXiV" target="_blank" rel="noopener" class="share-btn-linkedin">
           <i class="fab fa-linkedin-in"></i>
         </a>
       </li>
@@ -855,7 +863,7 @@ manipulation.</li>
       
       
       <li>
-        <a href="https://web.whatsapp.com/send?text=My%20checklist%20for%20uploading%20papers%20to%20ArXiV%20https://abyvinod.github.io/post/arxiv/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+        <a href="https://web.whatsapp.com/send?text=Uploading%20papers%20to%20ArXiV%20https://abyvinod.github.io/post/arxiv/" target="_blank" rel="noopener" class="share-btn-whatsapp">
           <i class="fab fa-whatsapp"></i>
         </a>
       </li>
@@ -868,7 +876,7 @@ manipulation.</li>
       
       
       <li>
-        <a href="https://service.weibo.com/share/share.php?url=https://abyvinod.github.io/post/arxiv/&amp;title=My%20checklist%20for%20uploading%20papers%20to%20ArXiV" target="_blank" rel="noopener" class="share-btn-weibo">
+        <a href="https://service.weibo.com/share/share.php?url=https://abyvinod.github.io/post/arxiv/&amp;title=Uploading%20papers%20to%20ArXiV" target="_blank" rel="noopener" class="share-btn-weibo">
           <i class="fab fa-weibo"></i>
         </a>
       </li>

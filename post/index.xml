@@ -70,94 +70,111 @@ problem&lt;/a&gt; using
     </item>
     
     <item>
-      <title>My checklist for uploading papers to ArXiV</title>
+      <title>Uploading papers to ArXiV</title>
       <link>https://abyvinod.github.io/post/arxiv/</link>
       <pubDate>Sun, 21 Apr 2019 18:46:36 -0500</pubDate>
       <guid>https://abyvinod.github.io/post/arxiv/</guid>
-      <description>&lt;h2 id=&#34;setup&#34;&gt;Setup&lt;/h2&gt;
+      <description>&lt;h2 id=&#34;quick-overview&#34;&gt;Quick overview&lt;/h2&gt;
 &lt;ol&gt;
-&lt;li&gt;Define &lt;code&gt;arxiv_generic/&lt;/code&gt; folder and copy over the relevant
-files.&lt;/li&gt;
+&lt;li&gt;Make sure &lt;code&gt;arxiv_latex_cleaner&lt;/code&gt; is installed (see section
+2)&lt;/li&gt;
+&lt;li&gt;Copy all the relevant files into a folder, say
+&lt;code&gt;public_relevant_files&lt;/code&gt;
+&lt;ol&gt;
+&lt;li&gt;Rerun the latex to make sure the new set of files
+produce the same pdf.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;Run &lt;code&gt;python -m arxiv_latex_cleaner /path/to/public_relevant_files&lt;/code&gt; to generate a folder
+&lt;code&gt;/path/to/public_relevant_files_arXiv&lt;/code&gt;. This folder will
+contain the comments stripped tex files and a filtering
+of the files relevant for arXiv upload.&lt;/li&gt;
+&lt;li&gt;Rerun the latex in the folder &lt;code&gt;public_relevant_files&lt;/code&gt; to
+make sure the new set of files produce the same pdf as in
+&lt;code&gt;public_relevant_files&lt;/code&gt;.
+&lt;ol&gt;
+&lt;li&gt;You may have to copy over all the figures again,
+since &lt;code&gt;arxiv_latex_cleaner&lt;/code&gt; may do some unnecessary
+image manipulation.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;Make arXiv-specific edits (see section 3)&lt;/li&gt;
+&lt;li&gt;Produce the arXiv-ready PDF&lt;/li&gt;
+&lt;li&gt;Check the arXiv-ready PDF (see section 4)&lt;/li&gt;
+&lt;li&gt;Perform &lt;code&gt;latexmk -C&lt;/code&gt; in the new folder to remove
+irrelevant figures.&lt;/li&gt;
+&lt;li&gt;Zip the folder &lt;code&gt;arxiv_generic_arXiv&lt;/code&gt; and upload.&lt;/li&gt;
+&lt;li&gt;Delete the &lt;code&gt;public_relevant_files&lt;/code&gt; folder if needed&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;setup&#34;&gt;Setup&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Clone the git repository
+&lt;code&gt;https://github.com/google-research/arxiv-latex-cleaner&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Do &lt;code&gt;python setup.py install&lt;/code&gt; to make it like a command
+line`&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;arxiv-specific-edits-in-public_relevant_files_arxiv-folder&#34;&gt;arXiv-specific edits in public_relevant_files_arXiv folder&lt;/h2&gt;
+&lt;ol&gt;
 &lt;li&gt;Get the generic template for arxiv from
 
 &lt;a href=&#34;https://github.com/kourgeorge/arxiv-style&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://github.com/kourgeorge/arxiv-style&lt;/a&gt;.
 &lt;ol&gt;
-&lt;li&gt;Copy over the &lt;code&gt;arxiv.sty&lt;/code&gt; into the &lt;code&gt;arxiv_generic/&lt;/code&gt;
-folder.&lt;/li&gt;
-&lt;li&gt;You can get the &lt;code&gt;sty&lt;/code&gt; file directly by using the link
+&lt;li&gt;Note that you can get the &lt;code&gt;sty&lt;/code&gt; file directly by
+using the link
 
 &lt;a href=&#34;https://github.com/kourgeorge/arxiv-style/raw/master/arxiv.sty&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://github.com/kourgeorge/arxiv-style/raw/master/arxiv.sty&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Copy over the &lt;code&gt;arxiv.sty&lt;/code&gt; into the
+&lt;code&gt;public_relevant_files_arXiv&lt;/code&gt; folder.&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/li&gt;
-&lt;li&gt;Copy over the &lt;code&gt;tex&lt;/code&gt; files into the &lt;code&gt;arxiv_generic/&lt;/code&gt;
-folder. Rename the main file as &lt;code&gt;main.tex&lt;/code&gt;.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2 id=&#34;tex-edits&#34;&gt;Tex edits&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;Preamble: Instead of &lt;code&gt;\documentclass[twocolumn]{autart}&lt;/code&gt;
-or any other conference/journal specific commands,
-use the following preamble
+&lt;li&gt;Preamble: Instead of the conference/journal specific
+commands, use the following preamble
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-tex&#34; data-lang=&#34;tex&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;\documentclass&lt;/span&gt;{article}    &lt;span style=&#34;color:#75715e&#34;&gt;%
 &lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;\usepackage&lt;/span&gt;{arxiv}
-   
 &lt;span style=&#34;color:#66d9ef&#34;&gt;\usepackage&lt;/span&gt;{bookmark}
-&lt;span style=&#34;color:#66d9ef&#34;&gt;\usepackage&lt;/span&gt;{amsthm,amssymb,amsmath}
-&lt;span style=&#34;color:#66d9ef&#34;&gt;\newtheorem&lt;/span&gt;{thm}{Theorem}
-&lt;span style=&#34;color:#66d9ef&#34;&gt;\newtheorem&lt;/span&gt;{cor}[thm]{Corollary}
-&lt;span style=&#34;color:#66d9ef&#34;&gt;\newtheorem&lt;/span&gt;{lem}[thm]{Lemma}
-&lt;span style=&#34;color:#66d9ef&#34;&gt;\newtheorem&lt;/span&gt;{assum}[thm]{Assumption}
-&lt;span style=&#34;color:#66d9ef&#34;&gt;\newtheorem&lt;/span&gt;{prop}[thm]{Proposition}
-&lt;span style=&#34;color:#66d9ef&#34;&gt;\theoremstyle&lt;/span&gt;{definition}
-&lt;span style=&#34;color:#66d9ef&#34;&gt;\newtheorem&lt;/span&gt;{defn}[thm]{Definition}
-&lt;span style=&#34;color:#66d9ef&#34;&gt;\newtheorem&lt;/span&gt;{exmp}[thm]{Example}
-&lt;span style=&#34;color:#66d9ef&#34;&gt;\newtheorem&lt;/span&gt;{rem}[thm]{Remark}
-&lt;span style=&#34;color:#66d9ef&#34;&gt;\newtheorem&lt;/span&gt;{prob}[thm]{Problem}
-&lt;span style=&#34;color:#66d9ef&#34;&gt;\newtheorem&lt;/span&gt;{alg}{Algorithm}
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
 &lt;li&gt;Document heading
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-tex&#34; data-lang=&#34;tex&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;\title&lt;/span&gt;{TITLE OF THE PAPER}
-&lt;span style=&#34;color:#66d9ef&#34;&gt;\author&lt;/span&gt;{Author 1 &lt;span style=&#34;color:#66d9ef&#34;&gt;\\&lt;/span&gt;
-    Address &lt;span style=&#34;color:#66d9ef&#34;&gt;\\&lt;/span&gt;
-    &lt;span style=&#34;color:#66d9ef&#34;&gt;\texttt&lt;/span&gt;{Email}&lt;span style=&#34;color:#66d9ef&#34;&gt;\\&lt;/span&gt;
-    &lt;span style=&#34;color:#66d9ef&#34;&gt;\And&lt;/span&gt;
-    Author 2 &lt;span style=&#34;color:#66d9ef&#34;&gt;\\&lt;/span&gt;
-    Address &lt;span style=&#34;color:#66d9ef&#34;&gt;\\&lt;/span&gt;
-    &lt;span style=&#34;color:#66d9ef&#34;&gt;\texttt&lt;/span&gt;{Email}&lt;span style=&#34;color:#66d9ef&#34;&gt;\\&lt;/span&gt;
-    &lt;span style=&#34;color:#66d9ef&#34;&gt;\thanks&lt;/span&gt;{Foot information}
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-tex&#34; data-lang=&#34;tex&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;\title&lt;/span&gt;{TITLE OF THE PAPER&lt;span style=&#34;color:#66d9ef&#34;&gt;\thanks&lt;/span&gt;{Funding blurb}}
+&lt;span style=&#34;color:#66d9ef&#34;&gt;\author&lt;/span&gt;{
+    Author 1&lt;span style=&#34;color:#66d9ef&#34;&gt;\thanks&lt;/span&gt;{Author 1 info} , 
+    &lt;span style=&#34;color:#75715e&#34;&gt;% Spacing helps the symbol
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;    Author 2&lt;span style=&#34;color:#66d9ef&#34;&gt;\thanks&lt;/span&gt;{Author 2 info} , and
+    Author 3&lt;span style=&#34;color:#66d9ef&#34;&gt;\thanks&lt;/span&gt;{Author 3 info} 
 }
 &lt;span style=&#34;color:#66d9ef&#34;&gt;\date&lt;/span&gt;{}
-&lt;span style=&#34;color:#66d9ef&#34;&gt;\renewcommand&lt;/span&gt;{&lt;span style=&#34;color:#66d9ef&#34;&gt;\headeright&lt;/span&gt;}{}    &lt;span style=&#34;color:#75715e&#34;&gt;% To remove the Preprint
+&lt;span style=&#34;color:#66d9ef&#34;&gt;\chead&lt;/span&gt;{SHORT TITLE}    &lt;span style=&#34;color:#75715e&#34;&gt;% Otherwise thanks will ruin it
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;\renewcommand&lt;/span&gt;{&lt;span style=&#34;color:#66d9ef&#34;&gt;\headeright&lt;/span&gt;}{}    &lt;span style=&#34;color:#75715e&#34;&gt;% To remove the Preprint
 &lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;\renewcommand&lt;/span&gt;{&lt;span style=&#34;color:#66d9ef&#34;&gt;\undertitle&lt;/span&gt;}{}    &lt;span style=&#34;color:#75715e&#34;&gt;% To remove the Preprint
 &lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;   
 &lt;span style=&#34;color:#66d9ef&#34;&gt;\begin&lt;/span&gt;{document}
 &lt;span style=&#34;color:#66d9ef&#34;&gt;\maketitle&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
 &lt;li&gt;Keyword
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-tex&#34; data-lang=&#34;tex&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;\begin&lt;/span&gt;{keyword}                         
-    Stochastic reachability;
-    chance constrained optimization;
-    convex optimization;
-    stochastic optimal control
-&lt;span style=&#34;color:#66d9ef&#34;&gt;\end&lt;/span&gt;{keyword}                            
-&lt;span style=&#34;color:#75715e&#34;&gt;% changes to
-&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;\keywords&lt;/span&gt;{Stochastic reachability &lt;span style=&#34;color:#66d9ef&#34;&gt;\and&lt;/span&gt; chance constrained
-    optimization &lt;span style=&#34;color:#66d9ef&#34;&gt;\and&lt;/span&gt; convex optimization &lt;span style=&#34;color:#66d9ef&#34;&gt;\and&lt;/span&gt; stochastic
-optimal control}
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-tex&#34; data-lang=&#34;tex&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;\keywords&lt;/span&gt;{KEYWORD1 &lt;span style=&#34;color:#66d9ef&#34;&gt;\and&lt;/span&gt; KEYWORD2 &lt;span style=&#34;color:#66d9ef&#34;&gt;\and&lt;/span&gt; KEYWORD3}
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
 &lt;li&gt;Bibliography
 &lt;ol&gt;
-&lt;li&gt;Copy over &lt;code&gt;original_tex_file.bbl&lt;/code&gt; into the &lt;code&gt;arxiv&lt;/code&gt;
-folder.  &lt;em&gt;Avoid using the same file name as the
-&lt;code&gt;main.tex&lt;/code&gt; to avoid &lt;code&gt;latexmk&lt;/code&gt; from overwriting it.&lt;/em&gt;&lt;/li&gt;
-&lt;li&gt;Add &lt;code&gt;\input{original_tex_file.bbl}&lt;/code&gt; to the end of the
-file instead of the bibliography commands.&lt;/li&gt;
+&lt;li&gt;Copy over &lt;code&gt;original_tex_file.bbl&lt;/code&gt; into the
+&lt;code&gt;public_relevant_files_arXiv&lt;/code&gt;
+folder as &lt;code&gt;arxiv.bbl&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Add &lt;code&gt;\input{arxiv.bbl}&lt;/code&gt; to the end of the file
+instead of the bibliography commands.&lt;/li&gt;
+&lt;li&gt;We avoid using the same file name as the
+&lt;code&gt;original_tex_file.bbl&lt;/code&gt; to avoid &lt;code&gt;latexmk&lt;/code&gt; from
+overwriting it.&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;h2 id=&#34;other-considerations&#34;&gt;Other considerations&lt;/h2&gt;
+&lt;h2 id=&#34;checks&#34;&gt;Checks&lt;/h2&gt;
 &lt;ol&gt;
+&lt;li&gt;Make sure linebreaks that were built-in for
+two-column format are now removed&lt;/li&gt;
+&lt;li&gt;Make sure equations are single lined, when possible, to
+reduce the page length.&lt;/li&gt;
 &lt;li&gt;Figures:
 &lt;ol&gt;
+&lt;li&gt;Tikz-based figures might have to replaced with
+screenshots of the original paper.&lt;/li&gt;
 &lt;li&gt;Make sure figures are placed correctly. Sometimes
 figures that were forced to below each other can now
 be placed side-by-side.&lt;/li&gt;
@@ -165,26 +182,17 @@ be placed side-by-side.&lt;/li&gt;
 &lt;li&gt;Remove any extraneous files.&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/li&gt;
-&lt;li&gt;Make sure equations are single lined, when possible, to
-reduce the page length.&lt;/li&gt;
 &lt;li&gt;Use &lt;code&gt;\adjustbox{width=DESIRED_WIDTH}{BLAHBLAH}&lt;/code&gt; to resize
 tables to the desired shape.&lt;/li&gt;
 &lt;/ol&gt;
-&lt;h2 id=&#34;cleaning-up-the-files-for-arxiv-upload&#34;&gt;Cleaning up the files for arXiv upload&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;Clone the git repository
-&lt;code&gt;https://github.com/google-research/arxiv-latex-cleaner&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Do &lt;code&gt;python setup.py install&lt;/code&gt; to make it like a command
-line`&lt;/li&gt;
-&lt;li&gt;Run &lt;code&gt;arxiv_latex_cleaner /path/to/arxiv_generic&lt;/code&gt; to
-generate a folder &lt;code&gt;/path/to/arxiv_generic_arXiv&lt;/code&gt;.&lt;/li&gt;
-&lt;li&gt;You may have to copy over all the figures again, since
-&lt;code&gt;arxiv_latex_cleaner&lt;/code&gt; may do some unnecessary image
-manipulation.&lt;/li&gt;
-&lt;li&gt;Remove the &lt;code&gt;.fls&lt;/code&gt; and &lt;code&gt;.fdb_latexmk&lt;/code&gt; files from the
-&lt;code&gt;arxiv_generic_arXiv&lt;/code&gt; folder.&lt;/li&gt;
-&lt;li&gt;Zip the folder &lt;code&gt;arxiv_generic_arXiv&lt;/code&gt; and upload.&lt;/li&gt;
-&lt;/ol&gt;
+&lt;h2 id=&#34;creating-a-diff-pdf&#34;&gt;Creating a diff pdf&lt;/h2&gt;
+&lt;p&gt;Use
+&lt;code&gt;latexdiff --type=BOLD initial_subm.tex revised_subm.tex &amp;gt; diff.tex&lt;/code&gt;
+to create a diff file that only highlights the new changes, and ignores deletion.&lt;/p&gt;
+&lt;p&gt;To change from &lt;strong&gt;bold&lt;/strong&gt; to color, use&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-tex&#34; data-lang=&#34;tex&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;\providecommand&lt;/span&gt;{&lt;span style=&#34;color:#66d9ef&#34;&gt;\DIFadd&lt;/span&gt;}[1]{{&lt;span style=&#34;color:#66d9ef&#34;&gt;\protect\color&lt;/span&gt;{blue}#1}}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;instead of the generated &lt;code&gt;\DIFadd&lt;/code&gt; command in the
+&lt;code&gt;diff.tex&lt;/code&gt;. Source: &lt;a href=&#34;https://tex.stackexchange.com/questions/315914/customizing-latexdiff-default-underline-output-styling&#34;&gt;https://tex.stackexchange.com/questions/315914/customizing-latexdiff-default-underline-output-styling&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     
