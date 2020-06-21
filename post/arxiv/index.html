@@ -39,7 +39,7 @@
   
   
   
-  <meta name="theme-color" content="hsl(339, 90%, 68%)">
+  <meta name="theme-color" content="#EF525B">
   
 
   
@@ -63,8 +63,8 @@
       
       
         
-          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/github.min.css" crossorigin="anonymous" title="hl-light" disabled>
-          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/github.min.css" crossorigin="anonymous" title="hl-light">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" disabled>
         
       
     
@@ -192,7 +192,7 @@
   
   
   
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CRoboto:400,400italic,700%7CRoboto+Mono&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cutive+Mono%7CLora:400,700%7CRoboto:400,700&display=swap">
   
 
   
@@ -303,7 +303,7 @@
 
 </head>
 
-<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="dark">
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" >
 
   <aside class="search-results" id="search">
   <div class="container">
@@ -789,8 +789,22 @@ tables to the desired shape.</li>
 to create a diff file that only highlights the new changes, and ignores deletion.</p>
 <p>To change from <strong>bold</strong> to color, use</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-tex" data-lang="tex"><span style="color:#66d9ef">\providecommand</span>{<span style="color:#66d9ef">\DIFadd</span>}[1]{{<span style="color:#66d9ef">\protect\color</span>{blue}#1}}
-</code></pre></div><p>instead of the generated <code>\DIFadd</code> command in the
-<code>diff.tex</code>. Source: <a href="https://tex.stackexchange.com/questions/315914/customizing-latexdiff-default-underline-output-styling">https://tex.stackexchange.com/questions/315914/customizing-latexdiff-default-underline-output-styling</a></p>
+<span style="color:#75715e">%instead of
+</span><span style="color:#75715e">%\providecommand{\DIFadd}[1]{{\bf #1}} %DIF PREAMBLE
+</span></code></pre></div><p>instead of the generated <code>\DIFadd</code> command in the
+<code>diff.tex</code>.</p>
+<p>Similarly, to see the removed parts, use</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-tex" data-lang="tex"><span style="color:#66d9ef">\providecommand</span>{<span style="color:#66d9ef">\DIFdel</span>}[1]{{<span style="color:#66d9ef">\protect\color</span>{red}#1}} <span style="color:#75715e">%DIF PREAMBLE
+</span><span style="color:#75715e">%instead of
+</span><span style="color:#75715e">%\providecommand{\DIFdel}[1]{} %DIF PREAMBLE
+</span></code></pre></div><h2 id="biography-photos">Biography photos</h2>
+<p>Using GIMP 2.8 to satisfy IEEE photos</p>
+<ol>
+<li>Image &gt; Mode &gt; Grayscale</li>
+<li>Image &gt; Scale image (Correct for dpi and photo size)</li>
+<li>Image &gt; Canvas size (Crop and reposition)</li>
+</ol>
+<p>Source: <a href="https://tex.stackexchange.com/questions/315914/customizing-latexdiff-default-underline-output-styling">https://tex.stackexchange.com/questions/315914/customizing-latexdiff-default-underline-output-styling</a></p>
 
     </div>
 
@@ -912,7 +926,7 @@ to create a diff file that only highlights the new changes, and ignores deletion
   <div class="media author-card content-widget-hr">
     
       
-      <img class="avatar mr-3 avatar-circle" src="/authors/admin/avatar_hu3819183ff7a0f23306c189454ee777fb_336089_270x270_fill_q90_lanczos_center.jpg" alt="Avatar">
+      <img class="avatar mr-3 avatar-circle" src="/authors/admin/avatar_hu2b1b4802166b31516d828723972d7232_538656_270x270_fill_q90_lanczos_center.jpg" alt="Avatar">
     
 
     <div class="media-body">
@@ -1075,7 +1089,7 @@ to create a diff file that only highlights the new changes, and ignores deletion
 
     
     
-    <script>const isSiteThemeDark = true;</script>
+    <script>const isSiteThemeDark = false;</script>
     
 
     

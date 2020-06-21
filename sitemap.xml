@@ -1,514 +1,62 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-  xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
-  <url>
-    <loc>https://abyvinod.github.io/publication_types/1/</loc>
-    <lastmod>2020-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://abyvinod.github.io/authors/abraham-p.-vinod/</loc>
-    <lastmod>2020-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://abyvinod.github.io/</loc>
-    <lastmod>2020-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://abyvinod.github.io/authors/arie-israel/</loc>
-    <lastmod>2020-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://abyvinod.github.io/authors/</loc>
-    <lastmod>2020-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://abyvinod.github.io/categories/</loc>
-    <lastmod>2020-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://abyvinod.github.io/publication/vinod-2020-convexified/</loc>
-    <lastmod>2020-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://abyvinod.github.io/categories/featured_pub/</loc>
-    <lastmod>2020-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://abyvinod.github.io/publication/bharadwaj-2020-nearoptimal/</loc>
-    <lastmod>2020-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://abyvinod.github.io/publication_types/</loc>
-    <lastmod>2020-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://abyvinod.github.io/publication/</loc>
-    <lastmod>2020-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://abyvinod.github.io/authors/rayna-dimitrova/</loc>
-    <lastmod>2020-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://abyvinod.github.io/authors/suda-bharadwaj/</loc>
-    <lastmod>2020-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://abyvinod.github.io/authors/ufuk-topcu/</loc>
-    <lastmod>2020-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://abyvinod.github.io/post/repeatability-jupyter/</loc>
-    <lastmod>2019-04-22T22:23:28-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://abyvinod.github.io/post/dcvx/</loc>
-    <lastmod>2019-04-21T18:46:36-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://abyvinod.github.io/post/arxiv/</loc>
-    <lastmod>2019-04-21T18:46:36-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://abyvinod.github.io/project/</loc>
-    <lastmod>2019-04-04T00:00:00-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://abyvinod.github.io/project/stochreach/</loc>
-    <lastmod>2019-04-04T00:00:00-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://abyvinod.github.io/tags/stochastic-optimal-control/</loc>
-    <lastmod>2019-04-04T00:00:00-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://abyvinod.github.io/tags/stochastic-reachability/</loc>
-    <lastmod>2019-04-04T00:00:00-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://abyvinod.github.io/tags/</loc>
-    <lastmod>2019-04-04T00:00:00-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://abyvinod.github.io/post/sreachtools/</loc>
-    <lastmod>2019-04-04T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://abyvinod.github.io/post/stochmotion/</loc>
-    <lastmod>2019-03-30T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://abyvinod.github.io/post/stochtarget/</loc>
-    <lastmod>2019-03-30T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://abyvinod.github.io/post/spacecraft/</loc>
-    <lastmod>2019-03-15T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://abyvinod.github.io/authors/others/</loc>
-    <lastmod>2019-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://abyvinod.github.io/publication_types/4/</loc>
-    <lastmod>2019-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://abyvinod.github.io/publication/vinod-2019-affine/</loc>
-    <lastmod>2019-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://abyvinod.github.io/authors/alessandro-abate/</loc>
-    <lastmod>2019-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://abyvinod.github.io/publication/abate-2019-arch/</loc>
-    <lastmod>2019-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://abyvinod.github.io/authors/behcet-acikmese/</loc>
-    <lastmod>2019-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://abyvinod.github.io/authors/hossein-sartipizadeh/</loc>
-    <lastmod>2019-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://abyvinod.github.io/authors/inseok-hwang/</loc>
-    <lastmod>2019-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://abyvinod.github.io/authors/john-a.-richards/</loc>
-    <lastmod>2019-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://abyvinod.github.io/authors/joseph-d-gleason/</loc>
-    <lastmod>2019-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://abyvinod.github.io/authors/meeko-m.-k.-oishi/</loc>
-    <lastmod>2019-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://abyvinod.github.io/authors/milad-khaledyan/</loc>
-    <lastmod>2019-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://abyvinod.github.io/authors/omanshu-thapliyal/</loc>
-    <lastmod>2019-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://abyvinod.github.io/publication/khaledyan-2019-optimal/</loc>
-    <lastmod>2019-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://abyvinod.github.io/publication/vinod-2019-piecewise/</loc>
-    <lastmod>2019-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://abyvinod.github.io/publication/sivaramakrishnan-2019-predicting/</loc>
-    <lastmod>2019-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://abyvinod.github.io/publication/vinod-2019-sampling/</loc>
-    <lastmod>2019-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://abyvinod.github.io/publication/vinod-2019-sreachtools/</loc>
-    <lastmod>2019-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://abyvinod.github.io/publication/vinod-2019-sreachtoolsdemo/</loc>
-    <lastmod>2019-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://abyvinod.github.io/publication/gleason-2019-maximal/</loc>
-    <lastmod>2019-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://abyvinod.github.io/authors/vignesh-sivaramakrishnan/</loc>
-    <lastmod>2019-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://abyvinod.github.io/publication/sartipizadeh-2019-voronoi/</loc>
-    <lastmod>2019-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://abyvinod.github.io/project/proboccup/</loc>
-    <lastmod>2018-03-30T00:00:00-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://abyvinod.github.io/publication_types/2/</loc>
-    <lastmod>2018-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://abyvinod.github.io/publication_types/7/</loc>
-    <lastmod>2018-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://abyvinod.github.io/authors/anup-parikh/</loc>
-    <lastmod>2018-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://abyvinod.github.io/publication/abate-2018-arch/</loc>
-    <lastmod>2018-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://abyvinod.github.io/authors/baisravan-homchaudhuri/</loc>
-    <lastmod>2018-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://abyvinod.github.io/authors/behcet-ac%C4%B1kmese/</loc>
-    <lastmod>2018-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://abyvinod.github.io/authors/christoph-hintz/</loc>
-    <lastmod>2018-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://abyvinod.github.io/authors/greg-brunson/</loc>
-    <lastmod>2018-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://abyvinod.github.io/publication/gleason-2018-lagrangian/</loc>
-    <lastmod>2018-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://abyvinod.github.io/publication/vinod-2018-multiple/</loc>
-    <lastmod>2018-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://abyvinod.github.io/publication/vinod-2018-optimal/</loc>
-    <lastmod>2018-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://abyvinod.github.io/publication/vinod-2018-probabilistic/</loc>
-    <lastmod>2018-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://abyvinod.github.io/authors/rafael-fierro/</loc>
-    <lastmod>2018-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://abyvinod.github.io/publication/vinod-2018-thesis/</loc>
-    <lastmod>2018-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://abyvinod.github.io/publication/vinod-2018-scalable/</loc>
-    <lastmod>2018-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://abyvinod.github.io/authors/sean-rice/</loc>
-    <lastmod>2018-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://abyvinod.github.io/authors/shakeeb-ahmad/</loc>
-    <lastmod>2018-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://abyvinod.github.io/authors/stephen-p.-buerger/</loc>
-    <lastmod>2018-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://abyvinod.github.io/publication/vinod-2018-scvx/</loc>
-    <lastmod>2018-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://abyvinod.github.io/publication/vinod-2018-stochastic/</loc>
-    <lastmod>2018-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://abyvinod.github.io/authors/yuanqi-mao/</loc>
-    <lastmod>2018-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://abyvinod.github.io/post/</loc>
-    <lastmod>2017-01-01T00:00:00-06:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://abyvinod.github.io/publication/vinod-2017-aerial/</loc>
-    <lastmod>2017-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://abyvinod.github.io/publication/homchaudhuri-2017-computation/</loc>
-    <lastmod>2017-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://abyvinod.github.io/publication/chiang-2017-dynamic/</loc>
-    <lastmod>2017-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://abyvinod.github.io/publication/vinod-2017-forward/</loc>
-    <lastmod>2017-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://abyvinod.github.io/authors/hao-tien-lewis-chiang/</loc>
-    <lastmod>2017-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://abyvinod.github.io/authors/lydia-tapia/</loc>
-    <lastmod>2017-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://abyvinod.github.io/publication/vinod-2017-scalable/</loc>
-    <lastmod>2017-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://abyvinod.github.io/authors/stephen-buerger/</loc>
-    <lastmod>2017-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://abyvinod.github.io/publication/gleason-2017-underapproximation/</loc>
-    <lastmod>2017-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://abyvinod.github.io/publication_types/6/</loc>
-    <lastmod>2016-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://abyvinod.github.io/authors/arun-d-mahindrakar/</loc>
-    <lastmod>2016-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://abyvinod.github.io/authors/christian-lebiere/</loc>
-    <lastmod>2016-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://abyvinod.github.io/authors/david-k-novick/</loc>
-    <lastmod>2016-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://abyvinod.github.io/publication/vinod-2016-deterministic/</loc>
-    <lastmod>2016-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://abyvinod.github.io/authors/jonathan-r-salton/</loc>
-    <lastmod>2016-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://abyvinod.github.io/authors/joseph-gleason/</loc>
-    <lastmod>2016-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://abyvinod.github.io/authors/katia-sycara/</loc>
-    <lastmod>2016-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://abyvinod.github.io/authors/michael-lewis/</loc>
-    <lastmod>2016-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://abyvinod.github.io/authors/r.-scott-erwin/</loc>
-    <lastmod>2016-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://abyvinod.github.io/publication/buerger-2016-reachable/</loc>
-    <lastmod>2016-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://abyvinod.github.io/authors/tyler-h.-summers/</loc>
-    <lastmod>2016-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://abyvinod.github.io/publication/vinod-2016-user/</loc>
-    <lastmod>2016-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://abyvinod.github.io/publication/vinod-2016-validation/</loc>
-    <lastmod>2016-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://abyvinod.github.io/publication/gleason-2016-viable/</loc>
-    <lastmod>2016-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://abyvinod.github.io/authors/yuqing-tang/</loc>
-    <lastmod>2016-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://abyvinod.github.io/publication/vinod-2015-deterministic/</loc>
-    <lastmod>2015-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://abyvinod.github.io/authors/arun-d.-mahindrakar/</loc>
-    <lastmod>2015-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://abyvinod.github.io/publication/vinod-2015-report/</loc>
-    <lastmod>2015-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://abyvinod.github.io/authors/sandipan-bandyopadhyay/</loc>
-    <lastmod>2015-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://abyvinod.github.io/authors/vijay-muralidharan/</loc>
-    <lastmod>2015-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://abyvinod.github.io/authors/admin/</loc>
-  </url>
-  
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://abyvinod.github.io/</loc>
+  <lastmod>2019-04-04T18:05:26+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://abyvinod.github.io/post/sreachtools/</loc>
+  <lastmod>2019-04-04T18:05:27+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://abyvinod.github.io/post/stochmotion/</loc>
+  <lastmod>2019-04-04T18:05:27+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://abyvinod.github.io/post/stochtarget/</loc>
+  <lastmod>2019-04-04T18:05:27+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://abyvinod.github.io/post/</loc>
+  <lastmod>2019-04-04T18:05:27+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://abyvinod.github.io/project/stochreach/</loc>
+  <lastmod>2019-04-04T18:05:27+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://abyvinod.github.io/project/proboccup/</loc>
+  <lastmod>2019-04-04T18:05:27+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://abyvinod.github.io/post/spacecraft/</loc>
+  <lastmod>2019-04-04T18:05:27+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://abyvinod.github.io/tags/stochastic-optimal-control/</loc>
+  <lastmod>2019-04-04T18:05:27+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://abyvinod.github.io/tags/stochastic-reachability/</loc>
+  <lastmod>2019-04-04T18:05:27+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+
+
 </urlset>
