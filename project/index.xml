@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Projects | Abraham P. Vinod</title>
+    <link>https://abyvinod.github.io/project/</link>
+      <atom:link href="https://abyvinod.github.io/project/index.xml" rel="self" type="application/rss+xml" />
+    <description>Projects</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2020</copyright><lastBuildDate>Thu, 04 Apr 2019 00:00:00 -0500</lastBuildDate>
+    <image>
+      <url>https://abyvinod.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
+      <title>Projects</title>
+      <link>https://abyvinod.github.io/project/</link>
+    </image>
+    
+    <item>
+      <title>Safety under uncertainty and constraints</title>
+      <link>https://abyvinod.github.io/project/stochreach/</link>
+      <pubDate>Thu, 04 Apr 2019 00:00:00 -0500</pubDate>
+      <guid>https://abyvinod.github.io/project/stochreach/</guid>
+      <description>&lt;p&gt;Automation, typically, refers to the use of an onboard computer to drives a system to optimize some objective.
+It makes our day-to-day life simpler and efficient, for example, in transportation (
+&lt;a href=&#34;https://en.wikipedia.org/wiki/Autopilot&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;autopilot systems&lt;/a&gt; and 
+&lt;a href=&#34;https://en.wikipedia.org/wiki/Autonomous_car&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;self-driving cars&lt;/a&gt;), 
+&lt;a href=&#34;../spacecraft/&#34;&gt;space applications&lt;/a&gt;, biomedical applications, power grid, and the list goes on and on.
+However, as we hand over more and more control to the automation, we naturally seek guarantees of safety and performance. After all, we do not want to spend billions of dollar in R&amp;amp;D and develop an automation that may cause harm.&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h2 id=&#34;why-is-providing-safety-guarantees-in-automated-control-systems-for-real-world-problems-hard&#34;&gt;Why is providing safety guarantees in automated control systems for real-world problems hard?&lt;/h2&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;In control theory, we attack real-world problems by formulating a mathematical
+model and studying its relevant properties.  The two key challenges in providing
+the desired safety guarantees for real-world systems are &lt;strong&gt;stochasticity&lt;/strong&gt; and
+&lt;strong&gt;high-dimensionality&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Stochasticity in our models help us capture human inputs (like actions of the
+other drivers on the street for the self-driving car problem), disturbance
+effects (like weather in air navigation/power grid systems), varying parameters
+(like patient parameters in biomedical devices), and other unmodelled phenomena.
+For example, we can describe
+the error between our simplified model and the more complicated true
+mathematical model via a stochastic error term.&lt;/p&gt;
+&lt;p&gt;High-dimensional systems evolve as a function of a larger set of states, and
+thereby allowing the mathematical model to be closer to the reality compared to
+their low-dimensional models.&lt;/p&gt;
+&lt;h2 id=&#34;how-do-we-formally-obtain-a-safety-guarantee-terminal-stochastic-reach-avoid-problem&#34;&gt;How do we formally obtain a safety guarantee? Terminal stochastic reach-avoid problem&lt;/h2&gt;
+&lt;p&gt;The following information is required:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;the stochastic system dynamics along with the bounded control space,&lt;/li&gt;
+&lt;li&gt;the safe set,  and&lt;/li&gt;
+&lt;li&gt;the target set.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;We wish to satisfy the following specification:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Ensure that the system reaches the target set at a finite time horizon (not before). (Reach constraint)&lt;/li&gt;
+&lt;li&gt;Ensure that the system stays within the safe set during the time interval. (Safety constraint)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;We seek to address the following verification problem[^2]:&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Identify the set of initial states and design an admissible controller that
+maximizes the probability of satisfaction of a specification.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Such a specification is called a &lt;strong&gt;terminal hitting-time stochastic reach-avoid
+problem&lt;/strong&gt;.  It is a special class of
+
+&lt;a href=&#34;https://en.wikipedia.org/wiki/Verification_and_validation&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;verification&lt;/a&gt;
+problems, which has been well studied for the past couple of decades in computer
+science as well as control theory. See this
+
+&lt;a href=&#34;https://www.sciencedirect.com/science/article/pii/S0005109810003547&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;paper&lt;/a&gt; by
+Sean Summers and John Lygeros for more details.&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-given-the-initial-state-we-need-to-pick-pi-opposed-to-pi_2--here-growing-triangles-denote-the-uncertain-trajectories-under-the-application-of-a-control-policy-piast-and-pi_2-mathcalx-refers-to-the-state-space-mathcalssubseteq-mathcalx-refers-to-the-safe-set-and-mathcaltsubseteq-mathcalx-refers-to-the-target-set&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;https://abyvinod.github.io/img/project/sreach/cartoonStochasticReachAvoid.png&#34; data-caption=&#34;Given the initial state, we need to pick $\pi^*$ opposed to $\pi_2$.  Here, growing triangles denote the uncertain trajectories under the application of a control policy $\pi^\ast$ and $\pi_2$, $\mathcal{X}$ refers to the state space, $\mathcal{S}\subseteq \mathcal{X}$ refers to the safe set, and $\mathcal{T}\subseteq \mathcal{X}$ refers to the target set.&#34;&gt;
+
+
+  &lt;img src=&#34;https://abyvinod.github.io/img/project/sreach/cartoonStochasticReachAvoid.png&#34; alt=&#34;&#34;  &gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption data-pre=&#34;Figure &#34; data-post=&#34;:&#34; class=&#34;numbered&#34;&gt;
+    Given the initial state, we need to pick $\pi^*$ opposed to $\pi_2$.  Here, growing triangles denote the uncertain trajectories under the application of a control policy $\pi^\ast$ and $\pi_2$, $\mathcal{X}$ refers to the state space, $\mathcal{S}\subseteq \mathcal{X}$ refers to the safe set, and $\mathcal{T}\subseteq \mathcal{X}$ refers to the target set.
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;h2 id=&#34;stochastic-reachability-of-a-target-tube-a-general-framework-for-safety&#34;&gt;Stochastic reachability of a target tube: A general framework for safety&lt;/h2&gt;
+&lt;p&gt;This problem can be generalized to a time-varying collection of safe sets.
+Motivated by the classical work of Bertsekas, we call this problem the
+stochastic reachability of a target tube. This problem is illustrated in Figure
+2.&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-design-controllers-that-maximize-the-probability-of-staying-within-the-target-tube-mathcalt_i-and-characterize-the-set-of-initial-states-mathscrl_mathrmsr-that-satisfy-a-minimum-reach-probability-image-licensed-under-a-creative-commons-attribution-sharealike-40-international-licensehttpcreativecommonsorglicensesby-sa40&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;https://abyvinod.github.io/img/project/sreach/stochTubeCartoon.png&#34; data-caption=&#34;Design controllers that maximize the probability of staying within the target tube {$\mathcal{T}_i$}, and characterize the set of initial states $\mathscr{L}_{\mathrm{SR}}(⋅)$ that satisfy a minimum reach probability. Image licensed under a &amp;lt;a href=&amp;#34;http://creativecommons.org/licenses/by-sa/4.0/&amp;#34;&amp;gt;Creative Commons Attribution-ShareAlike 4.0 International License&amp;lt;/a&amp;gt;.&#34;&gt;
+
+
+  &lt;img src=&#34;https://abyvinod.github.io/img/project/sreach/stochTubeCartoon.png&#34; alt=&#34;&#34;  &gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption data-pre=&#34;Figure &#34; data-post=&#34;:&#34; class=&#34;numbered&#34;&gt;
+    Design controllers that maximize the probability of staying within the target tube {$\mathcal{T}_i$}, and characterize the set of initial states $\mathscr{L}_{\mathrm{SR}}(⋅)$ that satisfy a minimum reach probability. Image licensed under a &lt;a href=&#34;http://creativecommons.org/licenses/by-sa/4.0/&#34;&gt;Creative Commons Attribution-ShareAlike 4.0 International License&lt;/a&gt;.
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;p&gt;See 
+&lt;a href=&#34;https://arxiv.org/abs/1810.05217v1&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;my paper on stochastic reachability of a target
+tube&lt;/a&gt; for more details.&lt;/p&gt;
+&lt;h2 id=&#34;sreachtools&#34;&gt;SReachTools&lt;/h2&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://abyvinod.github.io/post/sreachtools/&#34;&gt;SReachTools&lt;/a&gt; is a user-friendly, open-sourced MATLAB toolbox that address these questions.&lt;/p&gt;
+&lt;h2 id=&#34;applications&#34;&gt;Applications&lt;/h2&gt;
+&lt;p&gt;See the following posts for safety guarantees obtained for various applications:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://abyvinod.github.io/post/spacecraft/&#34;&gt;Spacecraft rendezvous and docking problem&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://abyvinod.github.io/post/automatedanes/&#34;&gt;Automated anesthesia delivery system&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://abyvinod.github.io/post/bas/&#34;&gt;Building automation system&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Probabilistic occupancy via forward stochastic reachability</title>
+      <link>https://abyvinod.github.io/project/proboccup/</link>
+      <pubDate>Fri, 30 Mar 2018 00:00:00 -0500</pubDate>
+      <guid>https://abyvinod.github.io/project/proboccup/</guid>
+      <description>&lt;!-- raw HTML omitted --&gt;
+&lt;h2 id=&#34;high-level-description&#34;&gt;High-level description&lt;/h2&gt;
+&lt;p&gt;For reliable autonomy under uncertainty, we must have efficient ways to estimate
+event likelihood given a stochastic system model.&lt;/p&gt;
+&lt;h2 id=&#34;existing-methods&#34;&gt;Existing methods&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Use sampling-based methods like Monte-Carlo simulation. Hoever, this approach
+only have asymptotic convergence guarantees.&lt;/li&gt;
+&lt;li&gt;Compute the probability density via convolutions when the dynamics is linear.
+However, this iterative method requires gridding for numerical evalution of
+the convolution integral. Further, its accuracy degrades over long time
+horizons.&lt;/li&gt;
+&lt;li&gt;Use concentration inequalities like moment-based bounds to obtain crude
+estimates of the event probability&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;proposed-solution&#34;&gt;Proposed solution&lt;/h2&gt;
+&lt;p&gt;Use Fourier transformation to obtain a grid-free, recursion-free, and
+sampling-free method to compute the probability density function. The event
+likelihood, which we call the &lt;strong&gt;probablistic occupancy function&lt;/strong&gt;, can be
+computed via numerical integration. The $\alpha$-super level sets of the
+probabilitistic occupancy functions, which we call the &lt;strong&gt;$\alpha$-probability
+occupied sets&lt;/strong&gt;, are precisely the set of states for which the event likelihood
+is above a pre-specified threshold.&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;See 
+&lt;a href=&#34;https://arxiv.org/abs/1803.07180&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;my paper on probabilistic occupancy via forward stochastic
+reachability&lt;/a&gt; for more details.&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h2 id=&#34;applications&#34;&gt;Applications&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://abyvinod.github.io/post/stochmotion/&#34;&gt;Stochastic motion planning&lt;/a&gt;: Navigate a robot in an
+environment with obtacles that have geometric shapes and uncontrolled
+stochastic dynamics&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://abyvinod.github.io/post/stochtarget/&#34;&gt;Stochastic target capture&lt;/a&gt;: Capture a stochastically moving
+target using a controller robot&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

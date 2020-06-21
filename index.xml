@@ -207,8 +207,22 @@ tables to the desired shape.&lt;/li&gt;
 to create a diff file that only highlights the new changes, and ignores deletion.&lt;/p&gt;
 &lt;p&gt;To change from &lt;strong&gt;bold&lt;/strong&gt; to color, use&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-tex&#34; data-lang=&#34;tex&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;\providecommand&lt;/span&gt;{&lt;span style=&#34;color:#66d9ef&#34;&gt;\DIFadd&lt;/span&gt;}[1]{{&lt;span style=&#34;color:#66d9ef&#34;&gt;\protect\color&lt;/span&gt;{blue}#1}}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;instead of the generated &lt;code&gt;\DIFadd&lt;/code&gt; command in the
-&lt;code&gt;diff.tex&lt;/code&gt;. Source: &lt;a href=&#34;https://tex.stackexchange.com/questions/315914/customizing-latexdiff-default-underline-output-styling&#34;&gt;https://tex.stackexchange.com/questions/315914/customizing-latexdiff-default-underline-output-styling&lt;/a&gt;&lt;/p&gt;
+&lt;span style=&#34;color:#75715e&#34;&gt;%instead of
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;%\providecommand{\DIFadd}[1]{{\bf #1}} %DIF PREAMBLE
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;instead of the generated &lt;code&gt;\DIFadd&lt;/code&gt; command in the
+&lt;code&gt;diff.tex&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Similarly, to see the removed parts, use&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-tex&#34; data-lang=&#34;tex&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;\providecommand&lt;/span&gt;{&lt;span style=&#34;color:#66d9ef&#34;&gt;\DIFdel&lt;/span&gt;}[1]{{&lt;span style=&#34;color:#66d9ef&#34;&gt;\protect\color&lt;/span&gt;{red}#1}} &lt;span style=&#34;color:#75715e&#34;&gt;%DIF PREAMBLE
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;%instead of
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;%\providecommand{\DIFdel}[1]{} %DIF PREAMBLE
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;biography-photos&#34;&gt;Biography photos&lt;/h2&gt;
+&lt;p&gt;Using GIMP 2.8 to satisfy IEEE photos&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Image &amp;gt; Mode &amp;gt; Grayscale&lt;/li&gt;
+&lt;li&gt;Image &amp;gt; Scale image (Correct for dpi and photo size)&lt;/li&gt;
+&lt;li&gt;Image &amp;gt; Canvas size (Crop and reposition)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Source: &lt;a href=&#34;https://tex.stackexchange.com/questions/315914/customizing-latexdiff-default-underline-output-styling&#34;&gt;https://tex.stackexchange.com/questions/315914/customizing-latexdiff-default-underline-output-styling&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -324,7 +338,7 @@ stochastic reachability of a target tube. This problem is illustrated in Figure
 &lt;figure id=&#34;figure-design-controllers-that-maximize-the-probability-of-staying-within-the-target-tube-mathcalt_i-and-characterize-the-set-of-initial-states-mathscrl_mathrmsr-that-satisfy-a-minimum-reach-probability-image-licensed-under-a-creative-commons-attribution-sharealike-40-international-licensehttpcreativecommonsorglicensesby-sa40&#34;&gt;
 
 
-  &lt;a data-fancybox=&#34;&#34; href=&#34;https://abyvinod.github.io/img/project/sreach/stochTubeCartoon.png&#34; data-caption=&#34;Design controllers that maximize the probability of staying within the target tube {$\mathcal{T}_i$}, and characterize the set of initial states $\mathscr{L}_{\mathrm{SR}}(⋅)$ that satisfy a minimum reach probability. Image licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.&#34;&gt;
+  &lt;a data-fancybox=&#34;&#34; href=&#34;https://abyvinod.github.io/img/project/sreach/stochTubeCartoon.png&#34; data-caption=&#34;Design controllers that maximize the probability of staying within the target tube {$\mathcal{T}_i$}, and characterize the set of initial states $\mathscr{L}_{\mathrm{SR}}(⋅)$ that satisfy a minimum reach probability. Image licensed under a &amp;lt;a href=&amp;#34;http://creativecommons.org/licenses/by-sa/4.0/&amp;#34;&amp;gt;Creative Commons Attribution-ShareAlike 4.0 International License&amp;lt;/a&amp;gt;.&#34;&gt;
 
 
   &lt;img src=&#34;https://abyvinod.github.io/img/project/sreach/stochTubeCartoon.png&#34; alt=&#34;&#34;  &gt;
@@ -422,7 +436,7 @@ for generating probabilistic guarantees of safety and performance.&lt;/li&gt;
 &lt;figure id=&#34;figure-given-a-stochastic-dynamical-system-design-controllers-that-maximize-the-probability-of-staying-within-the-target-tube-mathcalt_i-and-characterize-the-set-of-initial-states-mathscrl_mathrmsr-that-satisfy-a-minimum-reach-probability-image-licensed-under-a-creative-commons-attribution-sharealike-40-international-licensehttpcreativecommonsorglicensesby-sa40&#34;&gt;
 
 
-  &lt;a data-fancybox=&#34;&#34; href=&#34;https://abyvinod.github.io/img/project/sreach/stochTubeCartoon.png&#34; data-caption=&#34;Given a stochastic dynamical system, design controllers that maximize the probability of staying within the target tube {$\mathcal{T}_i$}, and characterize the set of initial states $\mathscr{L}_{\mathrm{SR}}(⋅)$ that satisfy a minimum reach probability. Image licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.&#34;&gt;
+  &lt;a data-fancybox=&#34;&#34; href=&#34;https://abyvinod.github.io/img/project/sreach/stochTubeCartoon.png&#34; data-caption=&#34;Given a stochastic dynamical system, design controllers that maximize the probability of staying within the target tube {$\mathcal{T}_i$}, and characterize the set of initial states $\mathscr{L}_{\mathrm{SR}}(⋅)$ that satisfy a minimum reach probability. Image licensed under a &amp;lt;a href=&amp;#34;http://creativecommons.org/licenses/by-sa/4.0/&amp;#34;&amp;gt;Creative Commons Attribution-ShareAlike 4.0 International License&amp;lt;/a&amp;gt;.&#34;&gt;
 
 
   &lt;img src=&#34;https://abyvinod.github.io/img/project/sreach/stochTubeCartoon.png&#34; alt=&#34;&#34;  &gt;

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Baisravan HomChaudhuri | Abraham P. Vinod</title>
+    <link>https://abyvinod.github.io/authors/baisravan-homchaudhuri/</link>
+      <atom:link href="https://abyvinod.github.io/authors/baisravan-homchaudhuri/index.xml" rel="self" type="application/rss+xml" />
+    <description>Baisravan HomChaudhuri</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2020</copyright><lastBuildDate>Mon, 01 Jan 2018 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://abyvinod.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
+      <title>Baisravan HomChaudhuri</title>
+      <link>https://abyvinod.github.io/authors/baisravan-homchaudhuri/</link>
+    </image>
+    
+    <item>
+      <title>Multiple Pursuer-Based Intercept via Forward Stochastic Reachability</title>
+      <link>https://abyvinod.github.io/publication/vinod-2018-multiple/</link>
+      <pubDate>Mon, 01 Jan 2018 00:00:00 +0000</pubDate>
+      <guid>https://abyvinod.github.io/publication/vinod-2018-multiple/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Aerial Suppression of Airborne Platforms (ASAP): Coordinated Capture of a Threat UAS via Stochastic Reachability.</title>
+      <link>https://abyvinod.github.io/publication/vinod-2017-aerial/</link>
+      <pubDate>Sun, 01 Jan 2017 00:00:00 +0000</pubDate>
+      <guid>https://abyvinod.github.io/publication/vinod-2017-aerial/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Computation of forward stochastic reach sets: Application to stochastic, dynamic obstacle avoidance</title>
+      <link>https://abyvinod.github.io/publication/homchaudhuri-2017-computation/</link>
+      <pubDate>Sun, 01 Jan 2017 00:00:00 +0000</pubDate>
+      <guid>https://abyvinod.github.io/publication/homchaudhuri-2017-computation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Dynamic risk tolerance: Motion planning by balancing short-term and long-term stochastic dynamic predictions</title>
+      <link>https://abyvinod.github.io/publication/chiang-2017-dynamic/</link>
+      <pubDate>Sun, 01 Jan 2017 00:00:00 +0000</pubDate>
+      <guid>https://abyvinod.github.io/publication/chiang-2017-dynamic/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Forward stochastic reachability analysis for uncontrolled linear systems using Fourier Transforms</title>
+      <link>https://abyvinod.github.io/publication/vinod-2017-forward/</link>
+      <pubDate>Sun, 01 Jan 2017 00:00:00 +0000</pubDate>
+      <guid>https://abyvinod.github.io/publication/vinod-2017-forward/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Reachable Set Computation and Tracking with Multiple Pursuers for the ASAP Counter-UAS Capability.</title>
+      <link>https://abyvinod.github.io/publication/buerger-2016-reachable/</link>
+      <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+      <guid>https://abyvinod.github.io/publication/buerger-2016-reachable/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
