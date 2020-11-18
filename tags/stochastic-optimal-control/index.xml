@@ -5,7 +5,7 @@
     <link>https://abyvinod.github.io/tags/stochastic-optimal-control/</link>
       <atom:link href="https://abyvinod.github.io/tags/stochastic-optimal-control/index.xml" rel="self" type="application/rss+xml" />
     <description>stochastic-optimal-control</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2020</copyright><lastBuildDate>Thu, 04 Apr 2019 00:00:00 -0500</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2020</copyright><lastBuildDate>Thu, 04 Apr 2019 00:00:00 -0400</lastBuildDate>
     <image>
       <url>https://abyvinod.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
       <title>stochastic-optimal-control</title>
@@ -15,7 +15,7 @@
     <item>
       <title>Safety under uncertainty and constraints</title>
       <link>https://abyvinod.github.io/project/stochreach/</link>
-      <pubDate>Thu, 04 Apr 2019 00:00:00 -0500</pubDate>
+      <pubDate>Thu, 04 Apr 2019 00:00:00 -0400</pubDate>
       <guid>https://abyvinod.github.io/project/stochreach/</guid>
       <description>&lt;p&gt;Automation, typically, refers to the use of an onboard computer to drives a system to optimize some objective.
 It makes our day-to-day life simpler and efficient, for example, in transportation (
@@ -424,7 +424,15 @@ interval,&lt;/li&gt;
 &lt;p&gt;Identify the set of initial states and synthesize an admissible controller that
 achieves the given specification with a probability above a pre-specified
 likelihood threshold. Such initial states will be declared &lt;strong&gt;safe&lt;/strong&gt;.&lt;/p&gt;
-&lt;!-- raw HTML omitted --&gt;
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    For safety-critical applications, it is important that we construct either exact
+or underapproximations of the set of safe initial states. We do not want to be
+over-confident in our safety declarations, i.e., declare an initial state safe
+when it is not really safe.
+  &lt;/div&gt;
+&lt;/div&gt;
+
 &lt;h3 id=&#34;results&#34;&gt;Results&lt;/h3&gt;
 &lt;p&gt;
 &lt;a href=&#34;../sreachtools/&#34;&gt;SReachTools&lt;/a&gt; can address this question, and generate
@@ -497,7 +505,7 @@ terminal velocity constraints).&lt;/p&gt;
     <item>
       <title>Probabilistic occupancy via forward stochastic reachability</title>
       <link>https://abyvinod.github.io/project/proboccup/</link>
-      <pubDate>Fri, 30 Mar 2018 00:00:00 -0500</pubDate>
+      <pubDate>Fri, 30 Mar 2018 00:00:00 -0400</pubDate>
       <guid>https://abyvinod.github.io/project/proboccup/</guid>
       <description>&lt;!-- raw HTML omitted --&gt;
 &lt;h2 id=&#34;high-level-description&#34;&gt;High-level description&lt;/h2&gt;
